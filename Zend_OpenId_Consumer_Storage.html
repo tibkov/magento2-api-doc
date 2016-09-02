@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_OpenId_Consumer_Storage | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_OpenId_Consumer_Storage" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_OpenId_Consumer_Storage
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_OpenId_Consumer_Storage</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Abstract class to implement external storage for OpenID consumer</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addAssociation">addAssociation</a>(string $url, string $handle, string $macFunc, string $secret, long $expires)
+        
+                                            <p>Stores information about association identified by $url/$handle</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAssociation">getAssociation</a>(string $url, string $handle, string $macFunc, string $secret, long $expires)
+        
+                                            <p>Gets information about association identified by $url
+Returns true if given association found and not expired and false
+otherwise</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAssociationByHandle">getAssociationByHandle</a>(string $handle, string $url, string $macFunc, string $secret, long $expires)
+        
+                                            <p>Gets information about association identified by $handle
+Returns true if given association found and not expired and false
+othverwise</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delAssociation">delAssociation</a>(string $url)
+        
+                                            <p>Deletes association identified by $url</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addDiscoveryInfo">addDiscoveryInfo</a>(string $id, string $realId, string $server, float $version, long $expires)
+        
+                                            <p>Stores information discovered from identity $id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDiscoveryInfo">getDiscoveryInfo</a>(string $id, string $realId, string $server, float $version, long $expires)
+        
+                                            <p>Gets information discovered from identity $id
+Returns true if such information exists and false otherwise</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delDiscoveryInfo">delDiscoveryInfo</a>(string $id)
+        
+                                            <p>Removes cached information discovered from identity $id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isUniqueNonce">isUniqueNonce</a>(string $provider, string $nonce)
+        
+                                            <p>The function checks the uniqueness of openid.response_nonce</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_purgeNonces">purgeNonces</a>(string $date = null)
+        
+                                            <p>Removes data from the uniqueness database that is older then given date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_addAssociation">
+        <div class="location">at line         line 46</div>
+        <code>    abstract                void
+    <strong>addAssociation</strong>(string $url, string $handle, string $macFunc, string $secret, long $expires)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Stores information about association identified by $url/$handle</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>OpenID server URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handle</td>
+                <td>assiciation handle</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$macFunc</td>
+                <td>HMAC function (sha1 or sha256)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$secret</td>
+                <td>shared secret</td>
+            </tr>
+                    <tr>
+                <td>long</td>
+                <td>$expires</td>
+                <td>expiration UNIX time</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAssociation">
+        <div class="location">at line         line 60</div>
+        <code>    abstract                bool
+    <strong>getAssociation</strong>(string $url, string $handle, string $macFunc, string $secret, long $expires)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets information about association identified by $url
+Returns true if given association found and not expired and false
+otherwise</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>OpenID server URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handle</td>
+                <td>&amp;$handle assiciation handle</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$macFunc</td>
+                <td>&amp;$macFunc HMAC function (sha1 or sha256)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$secret</td>
+                <td>&amp;$secret shared secret</td>
+            </tr>
+                    <tr>
+                <td>long</td>
+                <td>$expires</td>
+                <td>&amp;$expires expiration UNIX time</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAssociationByHandle">
+        <div class="location">at line         line 74</div>
+        <code>    abstract                bool
+    <strong>getAssociationByHandle</strong>(string $handle, string $url, string $macFunc, string $secret, long $expires)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets information about association identified by $handle
+Returns true if given association found and not expired and false
+othverwise</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$handle</td>
+                <td>assiciation handle</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>&amp;$url OpenID server URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$macFunc</td>
+                <td>&amp;$macFunc HMAC function (sha1 or sha256)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$secret</td>
+                <td>&amp;$secret shared secret</td>
+            </tr>
+                    <tr>
+                <td>long</td>
+                <td>$expires</td>
+                <td>&amp;$expires expiration UNIX time</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delAssociation">
+        <div class="location">at line         line 82</div>
+        <code>    abstract                void
+    <strong>delAssociation</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Deletes association identified by $url</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>OpenID server URL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDiscoveryInfo">
+        <div class="location">at line         line 94</div>
+        <code>    abstract                void
+    <strong>addDiscoveryInfo</strong>(string $id, string $realId, string $server, float $version, long $expires)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Stores information discovered from identity $id</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>identity</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$realId</td>
+                <td>discovered real identity URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$server</td>
+                <td>discovered OpenID server URL</td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$version</td>
+                <td>discovered OpenID protocol version</td>
+            </tr>
+                    <tr>
+                <td>long</td>
+                <td>$expires</td>
+                <td>expiration UNIX time</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDiscoveryInfo">
+        <div class="location">at line         line 107</div>
+        <code>    abstract                bool
+    <strong>getDiscoveryInfo</strong>(string $id, string $realId, string $server, float $version, long $expires)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets information discovered from identity $id
+Returns true if such information exists and false otherwise</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>identity</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$realId</td>
+                <td>&amp;$realId discovered real identity URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$server</td>
+                <td>&amp;$server discovered OpenID server URL</td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$version</td>
+                <td>&amp;$version discovered OpenID protocol version</td>
+            </tr>
+                    <tr>
+                <td>long</td>
+                <td>$expires</td>
+                <td>&amp;$expires expiration UNIX time</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delDiscoveryInfo">
+        <div class="location">at line         line 115</div>
+        <code>    abstract                bool
+    <strong>delDiscoveryInfo</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Removes cached information discovered from identity $id</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>identity</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isUniqueNonce">
+        <div class="location">at line         line 124</div>
+        <code>    abstract                bool
+    <strong>isUniqueNonce</strong>(string $provider, string $nonce)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The function checks the uniqueness of openid.response_nonce</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$provider</td>
+                <td>openid.openid<em>op</em>endpoint field from authentication response</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$nonce</td>
+                <td>openid.response_nonce field from authentication response</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_purgeNonces">
+        <div class="location">at line         line 131</div>
+        <code>    abstract                
+    <strong>purgeNonces</strong>(string $date = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Removes data from the uniqueness database that is older then given date</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td>Date of expired data</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

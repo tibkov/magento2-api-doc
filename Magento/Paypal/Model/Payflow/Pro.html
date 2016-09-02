@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Paypal\Model\Payflow\Pro | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Paypal_Model_Payflow_Pro" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../Magento/Paypal.html">Paypal</a></li>
+                                        <li><a href="../../../../Magento/Paypal/Model.html">Model</a></li>
+                                        <li><a href="../../../../Magento/Paypal/Model/Payflow.html">Payflow</a></li>
+    
+                <li>Pro</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Pro
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Pro</strong>        extends <a href="../../../../Magento/Paypal/Model/Pro.html"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>PayPal Website Payments Pro (Payflow Edition) implementation for payment method instances
+This model was created because right now PayPal Direct and PayPal Express payment
+(Payflow Edition) methods cannot have same abstract</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>PAYMENT_REVIEW_ACCEPT</td>
+                <td class="last">
+                    <p><em>Possible payment review actions (for FMF only)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_REVIEW_DENY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRANSPORT_PAYFLOW_TXN_ID</td>
+                <td class="last">
+                    <p><em>Payflow trx_id key in transaction info</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Magento/Paypal/Model/Config/Factory.html"><abbr title="Magento\Paypal\Model\Config\Factory">Factory</abbr></a> $configFactory, <a href="../../../../Magento/Paypal/Model/Api/Type/Factory.html"><abbr title="Magento\Paypal\Model\Api\Type\Factory">Factory</abbr></a> $apiFactory, <abbr title="Magento\Paypal\Model\InfoFactory">InfoFactory</abbr> $infoFactory, <a href="../../../../Magento/Sales/Api/TransactionRepositoryInterface.html"><abbr title="Magento\Sales\Api\TransactionRepositoryInterface">TransactionRepositoryInterface</abbr></a> $transactionRepository)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method___construct"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMethod">setMethod</a>(string $code, int|null $storeId = null)
+        
+                                            <p>Payment method code setter. Also instantiates/updates config</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_setMethod"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setConfig">setConfig</a>(<a href="../../../../Magento/Paypal/Model/Config.html"><abbr title="Magento\Paypal\Model\Config">Config</abbr></a> $instance, $storeId = null)
+        
+                                            <p>Config instance setter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_setConfig"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Paypal/Model/Config.html"><abbr title="Magento\Paypal\Model\Config">Config</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConfig">getConfig</a>()
+        
+                                            <p>Config instance getter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_getConfig"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Paypal/Model/Api/Nvp.html"><abbr title="Magento\Paypal\Model\Api\Nvp">Nvp</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getApi">getApi</a>()
+        
+                                            <p>API instance getter
+Sets current store id to current config instance and passes it to API</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_getApi"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetApi">resetApi</a>()
+        
+                                            <p>Destroy existing NVP Api object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_resetApi"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Paypal/Model/Info.html"><abbr title="Magento\Paypal\Model\Info">Info</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInfo">getInfo</a>()
+        
+                                            <p>Instantiate and return info model</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_getInfo"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_importPaymentInfo">importPaymentInfo</a>(<a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $from, <a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a> $to)
+        
+                                            <p>Transfer transaction/payment information from API instance to order payment</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_importPaymentInfo"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_void">void</a>(<a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $payment)
+        
+                                            <p>Void transaction</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_void"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\false">false</abbr>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_capture">capture</a>(<a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $payment, float $amount)
+        
+                                            <p>Attempt to capture payment
+Will return false if the payment is not supposed to be captured</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_capture"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_refund">refund</a>(<a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $payment, float $amount)
+        
+                                            <p>Refund a capture transaction</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cancel">cancel</a>(<a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $payment)
+        
+                                            <p>Cancel payment</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_cancel"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_canReviewPayment">canReviewPayment</a>(<a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a> $payment)
+        
+                                            <p>Check whether can do payment review</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_canReviewPayment"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reviewPayment">reviewPayment</a>(<a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a> $payment, string $action)
+        
+                                            <p>Perform the payment review</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Pro.html#method_reviewPayment"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetchTransactionInfo">fetchTransactionInfo</a>(<a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a> $payment, string $transactionId)
+        
+                                            <p>Fetch transaction details info method does not exists in Payflow</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method___construct"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 89</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../Magento/Paypal/Model/Config/Factory.html"><abbr title="Magento\Paypal\Model\Config\Factory">Factory</abbr></a> $configFactory, <a href="../../../../Magento/Paypal/Model/Api/Type/Factory.html"><abbr title="Magento\Paypal\Model\Api\Type\Factory">Factory</abbr></a> $apiFactory, <abbr title="Magento\Paypal\Model\InfoFactory">InfoFactory</abbr> $infoFactory, <a href="../../../../Magento/Sales/Api/TransactionRepositoryInterface.html"><abbr title="Magento\Sales\Api\TransactionRepositoryInterface">TransactionRepositoryInterface</abbr></a> $transactionRepository)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Paypal/Model/Config/Factory.html"><abbr title="Magento\Paypal\Model\Config\Factory">Factory</abbr></a></td>
+                <td>$configFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Paypal/Model/Api/Type/Factory.html"><abbr title="Magento\Paypal\Model\Api\Type\Factory">Factory</abbr></a></td>
+                <td>$apiFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Paypal\Model\InfoFactory">InfoFactory</abbr></td>
+                <td>$infoFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Sales/Api/TransactionRepositoryInterface.html"><abbr title="Magento\Sales\Api\TransactionRepositoryInterface">TransactionRepositoryInterface</abbr></a></td>
+                <td>$transactionRepository</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMethod">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_setMethod"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 108</div>
+        <code>                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+    <strong>setMethod</strong>(string $code, int|null $storeId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Payment method code setter. Also instantiates/updates config</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_setConfig"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 132</div>
+        <code>                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+    <strong>setConfig</strong>(<a href="../../../../Magento/Paypal/Model/Config.html"><abbr title="Magento\Paypal\Model\Config">Config</abbr></a> $instance, $storeId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Config instance setter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Paypal/Model/Config.html"><abbr title="Magento\Paypal\Model\Config">Config</abbr></a></td>
+                <td>$instance</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_getConfig"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 146</div>
+        <code>                    <a href="../../../../Magento/Paypal/Model/Config.html"><abbr title="Magento\Paypal\Model\Config">Config</abbr></a>
+    <strong>getConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Config instance getter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Paypal/Model/Config.html"><abbr title="Magento\Paypal\Model\Config">Config</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getApi">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_getApi"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 157</div>
+        <code>                    <a href="../../../../Magento/Paypal/Model/Api/Nvp.html"><abbr title="Magento\Paypal\Model\Api\Nvp">Nvp</abbr></a>
+    <strong>getApi</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>API instance getter
+Sets current store id to current config instance and passes it to API</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Paypal/Model/Api/Nvp.html"><abbr title="Magento\Paypal\Model\Api\Nvp">Nvp</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetApi">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_resetApi"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 171</div>
+        <code>                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+    <strong>resetApi</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destroy existing NVP Api object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInfo">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_getInfo"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 183</div>
+        <code>                    <a href="../../../../Magento/Paypal/Model/Info.html"><abbr title="Magento\Paypal\Model\Info">Info</abbr></a>
+    <strong>getInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Instantiate and return info model</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Paypal/Model/Info.html"><abbr title="Magento\Paypal\Model\Info">Info</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_importPaymentInfo">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_importPaymentInfo"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 198</div>
+        <code>                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+    <strong>importPaymentInfo</strong>(<a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $from, <a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a> $to)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Transfer transaction/payment information from API instance to order payment</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a></td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_void">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_void"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 231</div>
+        <code>                    void
+    <strong>void</strong>(<a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $payment)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Void transaction</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$payment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_capture">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_capture"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 253</div>
+        <code>                    <abbr title="Magento\Paypal\Model\false">false</abbr>|null
+    <strong>capture</strong>(<a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $payment, float $amount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attempt to capture payment
+Will return false if the payment is not supposed to be captured</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$payment</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$amount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\false">false</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_refund">
+        <div class="location">at line         line 41</div>
+        <code>                    void
+    <strong>refund</strong>(<a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $payment, float $amount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Refund a capture transaction</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$payment</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$amount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancel">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_cancel"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 320</div>
+        <code>                    void
+    <strong>cancel</strong>(<a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $payment)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cancel payment</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$payment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canReviewPayment">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_canReviewPayment"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 333</div>
+        <code>                    bool
+    <strong>canReviewPayment</strong>(<a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a> $payment)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether can do payment review</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a></td>
+                <td>$payment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reviewPayment">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Pro.html#method_reviewPayment"><abbr title="Magento\Paypal\Model\Pro">Pro</abbr></a> at line         line 359</div>
+        <code>                    bool
+    <strong>reviewPayment</strong>(<a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a> $payment, string $action)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Perform the payment review</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a></td>
+                <td>$payment</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchTransactionInfo">
+        <div class="location">at line         line 111</div>
+        <code>                    array
+    <strong>fetchTransactionInfo</strong>(<a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a> $payment, string $transactionId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fetch transaction details info method does not exists in Payflow</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Payment/Model/InfoInterface.html"><abbr title="Magento\Payment\Model\InfoInterface">InfoInterface</abbr></a></td>
+                <td>$payment</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$transactionId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

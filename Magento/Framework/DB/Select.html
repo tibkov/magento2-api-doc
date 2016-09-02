@@ -1,0 +1,2766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Framework\DB\Select | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Framework_DB_Select" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Framework.html">Framework</a></li>
+                                        <li><a href="../../../Magento/Framework/DB.html">DB</a></li>
+    
+                <li>Select</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Select
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Select</strong>        extends <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class for SQL SELECT generation and results.</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>DISTINCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COLUMNS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FROM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WHERE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GROUP</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HAVING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LIMIT_COUNT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LIMIT_OFFSET</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FOR_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INNER_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LEFT_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RIGHT_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FULL_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CROSS_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NATURAL_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_WILDCARD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_SELECT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_UNION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_UNION_ALL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_FROM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_WHERE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_DISTINCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_GROUP_BY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_ORDER_BY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_HAVING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_FOR_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_AND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_AS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_OR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_ON</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_ASC</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_DESC</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REGEX_COLUMN_EXPR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_CONDITION</td>
+                <td class="last">
+                    <p><em>Condition type</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>STRAIGHT_JOIN</td>
+                <td class="last">
+                    <p><em>Straight join key</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_STRAIGHT_JOIN</td>
+                <td class="last">
+                    <p><em>Sql straight join</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a> $adapter, <a href="../../../Magento/Framework/DB/Select/SelectRenderer.html"><abbr title="Magento\Framework\DB\Select\SelectRenderer">SelectRenderer</abbr></a> $selectRenderer, array $parts = array())
+        
+                                            <p>Class constructor
+Add straight join support</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBind">getBind</a>()
+        
+                                            <p>Get bind variables</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Zend_Db_Select.html#method_getBind">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_bind">bind</a>(mixed $bind)
+        
+                                            <p>Set bind variables</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Zend_Db_Select.html#method_bind">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_distinct">distinct</a>($flag = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_from">from</a>($name, $cols = &#039;*&#039;, $schema = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_columns">columns</a>($cols = &#039;*&#039;, $correlationName = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_union">union</a>($select = array(), $type = self::SQL_UNION)
+        
+                                            <p>Adds a UNION clause to the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Zend_Db_Select.html#method_union">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_join">join</a>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinInner">joinInner</a>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinLeft">joinLeft</a>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinRight">joinRight</a>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinFull">joinFull</a>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinCross">joinCross</a>($name, $cols = &#039;*&#039;, $schema = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinNatural">joinNatural</a>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_where">where</a>(string $cond, mixed $value = null, int $type = null)
+        
+                                            <p>Adds a WHERE condition to the query by AND.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orWhere">orWhere</a>($cond, $value = null, $type = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_group">group</a>($spec)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_having">having</a>(string $cond, mixed $value = null, int $type = null)
+        
+                                            <p>Adds a HAVING condition to the query by AND.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Zend_Db_Select.html#method_having">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orHaving">orHaving</a>(string $cond, mixed $value = null, int $type = null)
+        
+                                            <p>Adds a HAVING condition to the query by OR.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Zend_Db_Select.html#method_orHaving">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_order">order</a>($spec)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_limit">limit</a>(int $count = null, int $offset = null)
+        
+                                            <p>Sets a limit count and offset to the query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_limitPage">limitPage</a>($page, $rowCount)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_forUpdate">forUpdate</a>($flag = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPart">getPart</a>(string $part)
+        
+                                            <p>Get part of the structured information for the current query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Zend_Db_Select.html#method_getPart">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    PDO_Statement|<a href="../../../Zend_Db_Statement.html">Zend_Db_Statement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_query">query</a>(integer $fetchMode = null, mixed $bind = array())
+        
+                                            <p>Executes the current select object and returns the result</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Zend_Db_Select.html#method_query">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_assemble">assemble</a>()
+        
+                                            <p>Converts this object to an SQL SELECT string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reset">reset</a>($part = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAdapter">getAdapter</a>()
+        
+                                            <p>Gets the Zend<em>Db</em>Adapter<em>Abstract for this
+particular Zend</em>Db_Select object.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Zend_Db_Select.html#method_getAdapter">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__joinUsing">_joinUsing</a>($type, $name, $cond, $cols = &#039;*&#039;, $schema = null)
+        
+                                            <p>Handle JOIN.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Zend_Db_Select.html#method__joinUsing">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $args)
+        
+                                            <p>Turn magic function calls into non-magic function calls
+for joinUsing syntax</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Zend_Db_Select.html#method___call">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Implements magic method.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Zend_Db_Select.html#method___toString">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\DB\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetJoinLeft">resetJoinLeft</a>()
+        
+                                            <p>Reset unused LEFT JOIN(s)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_crossUpdateFromSelect">crossUpdateFromSelect</a>(string|array $table)
+        
+                                            <p>Cross Table Update From Current select</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insertFromSelect">insertFromSelect</a>(string $tableName, array $fields = array(), bool $onDuplicate = true)
+        
+                                            <p>Insert to table from current select</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insertIgnoreFromSelect">insertIgnoreFromSelect</a>(string $tableName, array $fields = array())
+        
+                                            <p>Generate INSERT IGNORE query to the table from current select</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteFromSelect">deleteFromSelect</a>(string $table)
+        
+                                            <p>Retrieve DELETE query from select</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\DB\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPart">setPart</a>(string $part, mixed $value)
+        
+                                            <p>Modify (hack) part of the structured information for the current query</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\DB\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_useStraightJoin">useStraightJoin</a>(bool $flag = true)
+        
+                                            <p>Use a STRAIGHT_JOIN for the SQL Select</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\DB\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orderRand">orderRand</a>(string $field = null)
+        
+                                            <p>Adds the random order to query</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\DB\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exists">exists</a>(<a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a> $select, string $joinCondition, bool $isExists = true)
+        
+                                            <p>Add EXISTS clause</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DB/Adapter/AdapterInterface.html"><abbr title="Magento\Framework\DB\Adapter\AdapterInterface">AdapterInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConnection">getConnection</a>()
+        
+                                            <p>Get adapter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___sleep">__sleep</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___wakeup">__wakeup</a>()
+        
+                                            <p>Init not serializable fields</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 58</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a> $adapter, <a href="../../../Magento/Framework/DB/Select/SelectRenderer.html"><abbr title="Magento\Framework\DB\Select\SelectRenderer">SelectRenderer</abbr></a> $selectRenderer, array $parts = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Class constructor
+Add straight join support</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a></td>
+                <td>$adapter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/DB/Select/SelectRenderer.html"><abbr title="Magento\Framework\DB\Select\SelectRenderer">SelectRenderer</abbr></a></td>
+                <td>$selectRenderer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parts</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBind">
+        <div class="location">in <a href="../../../Zend_Db_Select.html#method_getBind">Zend_Db_Select</a> at line         line 176</div>
+        <code>                    array
+    <strong>getBind</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get bind variables</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bind">
+        <div class="location">in <a href="../../../Zend_Db_Select.html#method_bind">Zend_Db_Select</a> at line         line 187</div>
+        <code>                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>bind</strong>(mixed $bind)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set bind variables</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$bind</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_distinct">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>distinct</strong>($flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_from">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>from</strong>($name, $cols = &#039;*&#039;, $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cols</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_columns">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>columns</strong>($cols = &#039;*&#039;, $correlationName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$cols</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$correlationName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_union">
+        <div class="location">in <a href="../../../Zend_Db_Select.html#method_union">Zend_Db_Select</a> at line         line 282</div>
+        <code>                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>union</strong>($select = array(), $type = self::SQL_UNION)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a UNION clause to the query.</p>                    <p>The first parameter has to be an array of Zend<em>Db</em>Select or
+sql query strings.</p>
+
+<p><code>
+$sql1 = $db->select();
+$sql2 = "SELECT ...";
+$select = $db->select()
+     ->union(array($sql1, $sql2))
+     ->order("id");
+</code></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$select</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_join">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>join</strong>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cond</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cols</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinInner">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>joinInner</strong>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cond</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cols</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinLeft">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>joinLeft</strong>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cond</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cols</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinRight">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>joinRight</strong>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cond</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cols</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinFull">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>joinFull</strong>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cond</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cols</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinCross">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>joinCross</strong>($name, $cols = &#039;*&#039;, $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cols</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinNatural">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>joinNatural</strong>($name, $cond, $cols = &#039;*&#039;, $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cond</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cols</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_where">
+        <div class="location">at line         line 104</div>
+        <code>                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>where</strong>(string $cond, mixed $value = null, int $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a WHERE condition to the query by AND.</p>                    <p>If a value is passed as the second param, it will be quoted
+and replaced into the condition wherever a question-mark
+appears. Array values are quoted and comma-separated.</p>
+
+<p><code>
+// simplest but non-secure
+$select->where("id = $id");</p>
+
+<p>// secure (ID is quoted but matched anyway)
+$select->where('id = ?', $id);</p>
+
+<p>// alternatively, with named binding
+$select->where('id = :id');
+</code></p>
+
+<p>Note that it is more correct to use named bindings in your
+queries for values other than strings. When you use named
+bindings, don't forget to pass the values when actually
+making a query:</p>
+
+<p><code>
+$db->fetchAll($select, array('id' => 5));
+</code></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>The WHERE condition.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>OPTIONAL The value to quote into the condition.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>OPTIONAL The type of the given value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orWhere">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>orWhere</strong>($cond, $value = null, $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$cond</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_group">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>group</strong>($spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_having">
+        <div class="location">in <a href="../../../Zend_Db_Select.html#method_having">Zend_Db_Select</a> at line         line 535</div>
+        <code>                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>having</strong>(string $cond, mixed $value = null, int $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a HAVING condition to the query by AND.</p>                    <p>If a value is passed as the second param, it will be quoted
+and replaced into the condition wherever a question-mark
+appears. See {@link where()} for an example</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>The HAVING condition.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>OPTIONAL The value to quote into the condition.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>OPTIONAL The type of the given value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orHaving">
+        <div class="location">in <a href="../../../Zend_Db_Select.html#method_orHaving">Zend_Db_Select</a> at line         line 562</div>
+        <code>                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>orHaving</strong>(string $cond, mixed $value = null, int $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a HAVING condition to the query by OR.</p>                    <p>Otherwise identical to orHaving().</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>The HAVING condition.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>OPTIONAL The value to quote into the condition.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>OPTIONAL The type of the given value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>having()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_order">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>order</strong>($spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_limit">
+        <div class="location">at line         line 303</div>
+        <code>                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>limit</strong>(int $count = null, int $offset = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets a limit count and offset to the query.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td>OPTIONAL The number of rows to return.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td>OPTIONAL Start returning after this many rows.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_limitPage">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>limitPage</strong>($page, $rowCount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$page</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$rowCount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forUpdate">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>forUpdate</strong>($flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPart">
+        <div class="location">in <a href="../../../Zend_Db_Select.html#method_getPart">Zend_Db_Select</a> at line         line 665</div>
+        <code>                    mixed
+    <strong>getPart</strong>(string $part)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get part of the structured information for the current query.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$part</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Zend_Db_Select_Exception.html">Zend_Db_Select_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_query">
+        <div class="location">in <a href="../../../Zend_Db_Select.html#method_query">Zend_Db_Select</a> at line         line 682</div>
+        <code>                    PDO_Statement|<a href="../../../Zend_Db_Statement.html">Zend_Db_Statement</a>
+    <strong>query</strong>(integer $fetchMode = null, mixed $bind = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Executes the current select object and returns the result</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$fetchMode</td>
+                <td>OPTIONAL</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$bind</td>
+                <td>An array of data to bind to the placeholders.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>PDO_Statement|<a href="../../../Zend_Db_Statement.html">Zend_Db_Statement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assemble">
+        <div class="location">at line         line 501</div>
+        <code>                    string|null
+    <strong>assemble</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts this object to an SQL SELECT string.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>This object as a SELECT string. (or null if a string cannot be produced.)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">at line         line 33</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a>
+    <strong>reset</strong>($part = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$part</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdapter">
+        <div class="location">in <a href="../../../Zend_Db_Select.html#method_getAdapter">Zend_Db_Select</a> at line         line 735</div>
+        <code>                    <a href="../../../Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a>
+    <strong>getAdapter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the Zend<em>Db</em>Adapter<em>Abstract for this
+particular Zend</em>Db_Select object.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__joinUsing">
+        <div class="location">in <a href="../../../Zend_Db_Select.html#method__joinUsing">Zend_Db_Select</a> at line         line 875</div>
+        <code>                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>_joinUsing</strong>($type, $name, $cond, $cols = &#039;*&#039;, $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handle JOIN.</p>                    <p>.. USING... syntax</p>
+
+<p>This is functionality identical to the existing JOIN methods, however
+the join condition can be passed as a single column name. This method
+then completes the ON condition by using the same field for the FROM
+table and the JOIN table.</p>
+
+<p><code>
+$select = $db->select()->from('table1')
+                       ->joinUsing('table2', 'column1');</p>
+
+<p>// SELECT * FROM table1 JOIN table2 ON table1.column1 = table2.column2
+</code></p>
+
+<p>These joins are called by the developer simply by adding 'Using' to the
+method name. E.g.
+* joinUsing
+* joinInnerUsing
+* joinFullUsing
+* joinRightUsing
+* joinLeftUsing</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cond</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cols</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../Zend_Db_Select.html#method___call">Zend_Db_Select</a> at line         line 1309</div>
+        <code>                    <a href="../../../Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>__call</strong>(string $method, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Turn magic function calls into non-magic function calls
+for joinUsing syntax</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>OPTIONAL Zend<em>Db</em>Table_Select query modifier</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Zend_Db_Select_Exception.html">Zend_Db_Select_Exception</a></td>
+                <td>If an invalid method is called.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">in <a href="../../../Zend_Db_Select.html#method___toString">Zend_Db_Select</a> at line         line 1347</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implements magic method.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>This object as a SELECT string.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetJoinLeft">
+        <div class="location">at line         line 125</div>
+        <code>                    <abbr title="Magento\Framework\DB\$this">$this</abbr>
+    <strong>resetJoinLeft</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reset unused LEFT JOIN(s)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\DB\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_crossUpdateFromSelect">
+        <div class="location">at line         line 324</div>
+        <code>                    string
+    <strong>crossUpdateFromSelect</strong>(string|array $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cross Table Update From Current select</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insertFromSelect">
+        <div class="location">at line         line 337</div>
+        <code>                    string
+    <strong>insertFromSelect</strong>(string $tableName, array $fields = array(), bool $onDuplicate = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Insert to table from current select</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$onDuplicate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insertIgnoreFromSelect">
+        <div class="location">at line         line 350</div>
+        <code>                    string
+    <strong>insertIgnoreFromSelect</strong>(string $tableName, array $fields = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate INSERT IGNORE query to the table from current select</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteFromSelect">
+        <div class="location">at line         line 361</div>
+        <code>                    string
+    <strong>deleteFromSelect</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve DELETE query from select</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>The table name or alias</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPart">
+        <div class="location">at line         line 374</div>
+        <code>                    <abbr title="Magento\Framework\DB\$this">$this</abbr>
+    <strong>setPart</strong>(string $part, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Modify (hack) part of the structured information for the current query</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$part</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\DB\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Zend_Db_Select_Exception.html">Zend_Db_Select_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_useStraightJoin">
+        <div class="location">at line         line 390</div>
+        <code>                    <abbr title="Magento\Framework\DB\$this">$this</abbr>
+    <strong>useStraightJoin</strong>(bool $flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Use a STRAIGHT_JOIN for the SQL Select</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td>Whether or not the SELECT use STRAIGHT_JOIN (default true).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\DB\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orderRand">
+        <div class="location">at line         line 442</div>
+        <code>                    <abbr title="Magento\Framework\DB\$this">$this</abbr>
+    <strong>orderRand</strong>(string $field = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds the random order to query</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td>integer field name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\DB\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exists">
+        <div class="location">at line         line 471</div>
+        <code>                    <abbr title="Magento\Framework\DB\$this">$this</abbr>
+    <strong>exists</strong>(<a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a> $select, string $joinCondition, bool $isExists = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add EXISTS clause</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/DB/Select.html"><abbr title="Magento\Framework\DB\Select">Select</abbr></a></td>
+                <td>$select</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$joinCondition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isExists</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\DB\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConnection">
+        <div class="location">at line         line 491</div>
+        <code>                    <a href="../../../Magento/Framework/DB/Adapter/AdapterInterface.html"><abbr title="Magento\Framework\DB\Adapter\AdapterInterface">AdapterInterface</abbr></a>
+    <strong>getConnection</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get adapter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DB/Adapter/AdapterInterface.html"><abbr title="Magento\Framework\DB\Adapter\AdapterInterface">AdapterInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___sleep">
+        <div class="location">at line         line 509</div>
+        <code>                    string[]
+    <strong>__sleep</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___wakeup">
+        <div class="location">at line         line 527</div>
+        <code>                    void
+    <strong>__wakeup</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Init not serializable fields</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Tax\Model\Sales\Total\Quote\CommonTaxCollector | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/sami.css">
+        <script src="../../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Tax_Model_Sales_Total_Quote_CommonTaxCollector" data-root-path="../../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../../../Magento/Tax.html">Tax</a></li>
+                                        <li><a href="../../../../../../Magento/Tax/Model.html">Model</a></li>
+                                        <li><a href="../../../../../../Magento/Tax/Model/Sales.html">Sales</a></li>
+                                        <li><a href="../../../../../../Magento/Tax/Model/Sales/Total.html">Total</a></li>
+                                        <li><a href="../../../../../../Magento/Tax/Model/Sales/Total/Quote.html">Quote</a></li>
+    
+                <li>CommonTaxCollector</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            CommonTaxCollector
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>CommonTaxCollector</strong>        extends <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Tax totals calculation model</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>ITEM_TYPE_SHIPPING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ITEM_TYPE_PRODUCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ITEM_CODE_SHIPPING</td>
+                <td class="last">
+                    <p><em>Constant for shipping item code</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_ITEM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_BASE_ITEM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_ASSOCIATED_TAXABLE_TYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_ASSOCIATED_TAXABLE_CODE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_ASSOCIATED_TAXABLE_UNIT_PRICE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_ASSOCIATED_TAXABLE_BASE_UNIT_PRICE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_ASSOCIATED_TAXABLE_QUANTITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_ASSOCIATED_TAXABLE_TAX_CLASS_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_ASSOCIATED_TAXABLE_PRICE_INCLUDES_TAX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_ASSOCIATED_TAXABLE_ASSOCIATION_ITEM_CODE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ASSOCIATION_ITEM_CODE_FOR_QUOTE</td>
+                <td class="last">
+                    <p><em>When an extra taxable item is associated with quote and not with an item, this value
+is used as associated item code</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_TYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_CODE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_PRICE_EXCL_TAX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_BASE_PRICE_EXCL_TAX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_PRICE_INCL_TAX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_BASE_PRICE_INCL_TAX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_ROW_TOTAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_BASE_ROW_TOTAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_ROW_TOTAL_INCL_TAX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_BASE_ROW_TOTAL_INCL_TAX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_TAX_PERCENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_ROW_TAX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_BASE_ROW_TAX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>KEY_TAX_DETAILS_APPLIED_TAXES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Quote\Model\Quote\Address\Total\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCode">setCode</a>(string $code)
+        
+                                            <p>Set total code code name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_setCode"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCode">getCode</a>()
+        
+                                            <p>Retrieve total code name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_getCode"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLabel">getLabel</a>()
+        
+                                            <p>Label getter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_getLabel"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/CollectorInterface.html"><abbr title="Magento\Quote\Model\Quote\Address\Total\CollectorInterface">CollectorInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_collect">collect</a>(<a href="../../../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a> $quote, <a href="../../../../../../Magento/Quote/Api/Data/ShippingAssignmentInterface.html"><abbr title="Magento\Quote\Api\Data\ShippingAssignmentInterface">ShippingAssignmentInterface</abbr></a> $shippingAssignment, <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a> $total)
+        
+                                            <p>Collect totals process.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_collect"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    []
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetch">fetch</a>(<a href="../../../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a> $quote, <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a> $total)
+        
+                                            <p>Fetch (Retrieve data as array)</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_fetch"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Quote\Model\Quote\Address\Total\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__setTotal">_setTotal</a>(<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a> $total)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method__setTotal"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getItemRowTotal">getItemRowTotal</a>(<a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item)
+        
+                                            <p>Getter for row default total</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_getItemRowTotal"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getItemBaseRowTotal">getItemBaseRowTotal</a>(<a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item)
+        
+                                            <p>Getter for row default base total</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_getItemBaseRowTotal"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIsItemRowTotalCompoundable">getIsItemRowTotalCompoundable</a>(<a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item)
+        
+                                            <p>Whether the item row total may be compounded with others</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_getIsItemRowTotalCompoundable"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processConfigArray">processConfigArray</a>(array $config, <abbr title="Magento\Quote\Model\Quote\Address\Total\store">store</abbr> $store)
+        
+                                            <p>Process model configuration array.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_processConfigArray"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../Magento/Tax/Model/Config.html"><abbr title="Magento\Tax\Model\Config">Config</abbr></a> $taxConfig, <a href="../../../../../../Magento/Tax/Api/TaxCalculationInterface.html"><abbr title="Magento\Tax\Api\TaxCalculationInterface">TaxCalculationInterface</abbr></a> $taxCalculationService, <abbr title="Magento\Tax\Api\Data\QuoteDetailsInterfaceFactory">QuoteDetailsInterfaceFactory</abbr> $quoteDetailsDataObjectFactory, <abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterfaceFactory">QuoteDetailsItemInterfaceFactory</abbr> $quoteDetailsItemDataObjectFactory, <abbr title="Magento\Tax\Api\Data\TaxClassKeyInterfaceFactory">TaxClassKeyInterfaceFactory</abbr> $taxClassKeyDataObjectFactory, <abbr title="Magento\Customer\Api\Data\AddressInterfaceFactory">AddressInterfaceFactory</abbr> $customerAddressFactory, <abbr title="Magento\Customer\Api\Data\RegionInterfaceFactory">RegionInterfaceFactory</abbr> $customerAddressRegionFactory)
+        
+                                            <p>Class constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Customer/Api/Data/AddressInterface.html"><abbr title="Magento\Customer\Api\Data\AddressInterface">AddressInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mapAddress">mapAddress</a>(<a href="../../../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a> $address)
+        
+                                            <p>Map quote address to customer address</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mapItem">mapItem</a>(<abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterfaceFactory">QuoteDetailsItemInterfaceFactory</abbr> $itemDataObjectFactory, <a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item, bool $priceIncludesTax, bool $useBaseCurrency, string $parentCode = null)
+        
+                                            <p>Map an item to item data object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mapItemExtraTaxables">mapItemExtraTaxables</a>(<abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterfaceFactory">QuoteDetailsItemInterfaceFactory</abbr> $itemDataObjectFactory, <a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item, bool $priceIncludesTax, bool $useBaseCurrency)
+        
+                                            <p>Map item extra taxables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mapItems">mapItems</a>(<a href="../../../../../../Magento/Quote/Api/Data/ShippingAssignmentInterface.html"><abbr title="Magento\Quote\Api\Data\ShippingAssignmentInterface">ShippingAssignmentInterface</abbr></a> $shippingAssignment, $priceIncludesTax, $useBaseCurrency)
+        
+                                            <p>Add quote items</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsInterface">QuoteDetailsInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_populateAddressData">populateAddressData</a>(<a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsInterface">QuoteDetailsInterface</abbr></a> $quoteDetails, <a href="../../../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a> $address)
+        
+                                            <p>Populate the quote details with address information</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShippingDataObject">getShippingDataObject</a>(<a href="../../../../../../Magento/Quote/Api/Data/ShippingAssignmentInterface.html"><abbr title="Magento\Quote\Api\Data\ShippingAssignmentInterface">ShippingAssignmentInterface</abbr></a> $shippingAssignment, <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a> $total, bool $useBaseCurrency)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Tax\Model\Sales\Total\Quote\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateItemTaxInfo">updateItemTaxInfo</a>(<a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $quoteItem, <a href="../../../../../../Magento/Tax/Api/Data/TaxDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\TaxDetailsItemInterface">TaxDetailsItemInterface</abbr></a> $itemTaxDetails, <a href="../../../../../../Magento/Tax/Api/Data/TaxDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\TaxDetailsItemInterface">TaxDetailsItemInterface</abbr></a> $baseItemTaxDetails, <a href="../../../../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a> $store)
+        
+                                            <p>Update tax related fields for quote item</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertAppliedTaxes">convertAppliedTaxes</a>(<a href="../../../../../../Magento/Tax/Api/Data/AppliedTaxInterface.html"><abbr title="Magento\Tax\Api\Data\AppliedTaxInterface">AppliedTaxInterface</abbr></a>[] $appliedTaxes, <a href="../../../../../../Magento/Tax/Api/Data/AppliedTaxInterface.html"><abbr title="Magento\Tax\Api\Data\AppliedTaxInterface">AppliedTaxInterface</abbr></a>[] $baseAppliedTaxes, array $extraInfo = array())
+        
+                                            <p>Convert appliedTax data object from tax calculation service to internal array format</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setCode">
+        <div class="location">in <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_setCode"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a> at line         line 53</div>
+        <code>                    <abbr title="Magento\Quote\Model\Quote\Address\Total\$this">$this</abbr>
+    <strong>setCode</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set total code code name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Quote\Model\Quote\Address\Total\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCode">
+        <div class="location">in <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_getCode"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a> at line         line 64</div>
+        <code>                    string
+    <strong>getCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve total code name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLabel">
+        <div class="location">in <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_getLabel"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a> at line         line 74</div>
+        <code>                    string
+    <strong>getLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Label getter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_collect">
+        <div class="location">in <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_collect"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a> at line         line 87</div>
+        <code>                    <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/CollectorInterface.html"><abbr title="Magento\Quote\Model\Quote\Address\Total\CollectorInterface">CollectorInterface</abbr></a>
+    <strong>collect</strong>(<a href="../../../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a> $quote, <a href="../../../../../../Magento/Quote/Api/Data/ShippingAssignmentInterface.html"><abbr title="Magento\Quote\Api\Data\ShippingAssignmentInterface">ShippingAssignmentInterface</abbr></a> $shippingAssignment, <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a> $total)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Collect totals process.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a></td>
+                <td>$quote</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Api/Data/ShippingAssignmentInterface.html"><abbr title="Magento\Quote\Api\Data\ShippingAssignmentInterface">ShippingAssignmentInterface</abbr></a></td>
+                <td>$shippingAssignment</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a></td>
+                <td>$total</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/CollectorInterface.html"><abbr title="Magento\Quote\Model\Quote\Address\Total\CollectorInterface">CollectorInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetch">
+        <div class="location">in <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_fetch"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a> at line         line 110</div>
+        <code>                    []
+    <strong>fetch</strong>(<a href="../../../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a> $quote, <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a> $total)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fetch (Retrieve data as array)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a></td>
+                <td>$quote</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a></td>
+                <td>$total</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__setTotal">
+        <div class="location">in <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method__setTotal"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a> at line         line 150</div>
+        <code>                    <abbr title="Magento\Quote\Model\Quote\Address\Total\$this">$this</abbr>
+    <strong>_setTotal</strong>(<a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a> $total)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a></td>
+                <td>$total</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Quote\Model\Quote\Address\Total\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemRowTotal">
+        <div class="location">in <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_getItemRowTotal"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a> at line         line 238</div>
+        <code>                    float|int
+    <strong>getItemRowTotal</strong>(<a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Getter for row default total</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemBaseRowTotal">
+        <div class="location">in <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_getItemBaseRowTotal"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a> at line         line 252</div>
+        <code>                    float|int
+    <strong>getItemBaseRowTotal</strong>(<a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Getter for row default base total</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIsItemRowTotalCompoundable">
+        <div class="location">in <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_getIsItemRowTotalCompoundable"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a> at line         line 267</div>
+        <code>                    bool
+    <strong>getIsItemRowTotalCompoundable</strong>(<a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Whether the item row total may be compounded with others</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processConfigArray">
+        <div class="location">in <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html#method_processConfigArray"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a> at line         line 284</div>
+        <code>                    array
+    <strong>processConfigArray</strong>(array $config, <abbr title="Magento\Quote\Model\Quote\Address\Total\store">store</abbr> $store)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Process model configuration array.</p>                    <p>This method can be used for changing models apply sort order</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Quote\Model\Quote\Address\Total\store">store</abbr></td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 149</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../../../Magento/Tax/Model/Config.html"><abbr title="Magento\Tax\Model\Config">Config</abbr></a> $taxConfig, <a href="../../../../../../Magento/Tax/Api/TaxCalculationInterface.html"><abbr title="Magento\Tax\Api\TaxCalculationInterface">TaxCalculationInterface</abbr></a> $taxCalculationService, <abbr title="Magento\Tax\Api\Data\QuoteDetailsInterfaceFactory">QuoteDetailsInterfaceFactory</abbr> $quoteDetailsDataObjectFactory, <abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterfaceFactory">QuoteDetailsItemInterfaceFactory</abbr> $quoteDetailsItemDataObjectFactory, <abbr title="Magento\Tax\Api\Data\TaxClassKeyInterfaceFactory">TaxClassKeyInterfaceFactory</abbr> $taxClassKeyDataObjectFactory, <abbr title="Magento\Customer\Api\Data\AddressInterfaceFactory">AddressInterfaceFactory</abbr> $customerAddressFactory, <abbr title="Magento\Customer\Api\Data\RegionInterfaceFactory">RegionInterfaceFactory</abbr> $customerAddressRegionFactory)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Class constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Tax/Model/Config.html"><abbr title="Magento\Tax\Model\Config">Config</abbr></a></td>
+                <td>$taxConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Tax/Api/TaxCalculationInterface.html"><abbr title="Magento\Tax\Api\TaxCalculationInterface">TaxCalculationInterface</abbr></a></td>
+                <td>$taxCalculationService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Tax\Api\Data\QuoteDetailsInterfaceFactory">QuoteDetailsInterfaceFactory</abbr></td>
+                <td>$quoteDetailsDataObjectFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterfaceFactory">QuoteDetailsItemInterfaceFactory</abbr></td>
+                <td>$quoteDetailsItemDataObjectFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Tax\Api\Data\TaxClassKeyInterfaceFactory">TaxClassKeyInterfaceFactory</abbr></td>
+                <td>$taxClassKeyDataObjectFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Customer\Api\Data\AddressInterfaceFactory">AddressInterfaceFactory</abbr></td>
+                <td>$customerAddressFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Customer\Api\Data\RegionInterfaceFactory">RegionInterfaceFactory</abbr></td>
+                <td>$customerAddressRegionFactory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mapAddress">
+        <div class="location">at line         line 173</div>
+        <code>                    <a href="../../../../../../Magento/Customer/Api/Data/AddressInterface.html"><abbr title="Magento\Customer\Api\Data\AddressInterface">AddressInterface</abbr></a>
+    <strong>mapAddress</strong>(<a href="../../../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a> $address)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Map quote address to customer address</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a></td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Customer/Api/Data/AddressInterface.html"><abbr title="Magento\Customer\Api\Data\AddressInterface">AddressInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mapItem">
+        <div class="location">at line         line 197</div>
+        <code>                    <a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a>
+    <strong>mapItem</strong>(<abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterfaceFactory">QuoteDetailsItemInterfaceFactory</abbr> $itemDataObjectFactory, <a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item, bool $priceIncludesTax, bool $useBaseCurrency, string $parentCode = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Map an item to item data object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterfaceFactory">QuoteDetailsItemInterfaceFactory</abbr></td>
+                <td>$itemDataObjectFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$priceIncludesTax</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$useBaseCurrency</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$parentCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mapItemExtraTaxables">
+        <div class="location">at line         line 248</div>
+        <code>                    <a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a>[]
+    <strong>mapItemExtraTaxables</strong>(<abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterfaceFactory">QuoteDetailsItemInterfaceFactory</abbr> $itemDataObjectFactory, <a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item, bool $priceIncludesTax, bool $useBaseCurrency)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Map item extra taxables</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterfaceFactory">QuoteDetailsItemInterfaceFactory</abbr></td>
+                <td>$itemDataObjectFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$priceIncludesTax</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$useBaseCurrency</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mapItems">
+        <div class="location">at line         line 296</div>
+        <code>                    <a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a>[]
+    <strong>mapItems</strong>(<a href="../../../../../../Magento/Quote/Api/Data/ShippingAssignmentInterface.html"><abbr title="Magento\Quote\Api\Data\ShippingAssignmentInterface">ShippingAssignmentInterface</abbr></a> $shippingAssignment, $priceIncludesTax, $useBaseCurrency)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add quote items</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Api/Data/ShippingAssignmentInterface.html"><abbr title="Magento\Quote\Api\Data\ShippingAssignmentInterface">ShippingAssignmentInterface</abbr></a></td>
+                <td>$shippingAssignment</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$priceIncludesTax</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$useBaseCurrency</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_populateAddressData">
+        <div class="location">at line         line 357</div>
+        <code>                    <a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsInterface">QuoteDetailsInterface</abbr></a>
+    <strong>populateAddressData</strong>(<a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsInterface">QuoteDetailsInterface</abbr></a> $quoteDetails, <a href="../../../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a> $address)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Populate the quote details with address information</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsInterface">QuoteDetailsInterface</abbr></a></td>
+                <td>$quoteDetails</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a></td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsInterface">QuoteDetailsInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShippingDataObject">
+        <div class="location">at line         line 370</div>
+        <code>                    <a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a>
+    <strong>getShippingDataObject</strong>(<a href="../../../../../../Magento/Quote/Api/Data/ShippingAssignmentInterface.html"><abbr title="Magento\Quote\Api\Data\ShippingAssignmentInterface">ShippingAssignmentInterface</abbr></a> $shippingAssignment, <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a> $total, bool $useBaseCurrency)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Api/Data/ShippingAssignmentInterface.html"><abbr title="Magento\Quote\Api\Data\ShippingAssignmentInterface">ShippingAssignmentInterface</abbr></a></td>
+                <td>$shippingAssignment</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html"><abbr title="Magento\Quote\Model\Quote\Address\Total">Total</abbr></a></td>
+                <td>$total</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$useBaseCurrency</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Tax/Api/Data/QuoteDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\QuoteDetailsItemInterface">QuoteDetailsItemInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateItemTaxInfo">
+        <div class="location">at line         line 629</div>
+        <code>                    <abbr title="Magento\Tax\Model\Sales\Total\Quote\$this">$this</abbr>
+    <strong>updateItemTaxInfo</strong>(<a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $quoteItem, <a href="../../../../../../Magento/Tax/Api/Data/TaxDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\TaxDetailsItemInterface">TaxDetailsItemInterface</abbr></a> $itemTaxDetails, <a href="../../../../../../Magento/Tax/Api/Data/TaxDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\TaxDetailsItemInterface">TaxDetailsItemInterface</abbr></a> $baseItemTaxDetails, <a href="../../../../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a> $store)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update tax related fields for quote item</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a></td>
+                <td>$quoteItem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Tax/Api/Data/TaxDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\TaxDetailsItemInterface">TaxDetailsItemInterface</abbr></a></td>
+                <td>$itemTaxDetails</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Tax/Api/Data/TaxDetailsItemInterface.html"><abbr title="Magento\Tax\Api\Data\TaxDetailsItemInterface">TaxDetailsItemInterface</abbr></a></td>
+                <td>$baseItemTaxDetails</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a></td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Tax\Model\Sales\Total\Quote\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertAppliedTaxes">
+        <div class="location">at line         line 706</div>
+        <code>                    array
+    <strong>convertAppliedTaxes</strong>(<a href="../../../../../../Magento/Tax/Api/Data/AppliedTaxInterface.html"><abbr title="Magento\Tax\Api\Data\AppliedTaxInterface">AppliedTaxInterface</abbr></a>[] $appliedTaxes, <a href="../../../../../../Magento/Tax/Api/Data/AppliedTaxInterface.html"><abbr title="Magento\Tax\Api\Data\AppliedTaxInterface">AppliedTaxInterface</abbr></a>[] $baseAppliedTaxes, array $extraInfo = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert appliedTax data object from tax calculation service to internal array format</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Tax/Api/Data/AppliedTaxInterface.html"><abbr title="Magento\Tax\Api\Data\AppliedTaxInterface">AppliedTaxInterface</abbr></a>[]</td>
+                <td>$appliedTaxes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Tax/Api/Data/AppliedTaxInterface.html"><abbr title="Magento\Tax\Api\Data\AppliedTaxInterface">AppliedTaxInterface</abbr></a>[]</td>
+                <td>$baseAppliedTaxes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

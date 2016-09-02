@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\ProductAlert\Model\Observer | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_ProductAlert_Model_Observer" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/ProductAlert.html">ProductAlert</a></li>
+                                        <li><a href="../../../Magento/ProductAlert/Model.html">Model</a></li>
+    
+                <li>Observer</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Observer
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Observer</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>ProductAlert observer</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XML_PATH_ERROR_TEMPLATE</td>
+                <td class="last">
+                    <p><em>Error email template configuration</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_ERROR_IDENTITY</td>
+                <td class="last">
+                    <p><em>Error email identity configuration</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_ERROR_RECIPIENT</td>
+                <td class="last">
+                    <p><em>'Send error emails to' configuration</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_PRICE_ALLOW</td>
+                <td class="last">
+                    <p><em>Allow price alert</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_STOCK_ALLOW</td>
+                <td class="last">
+                    <p><em>Allow stock alert</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Catalog/Helper/Data.html"><abbr title="Magento\Catalog\Helper\Data">Data</abbr></a> $catalogData, <a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <abbr title="Magento\ProductAlert\Model\ResourceModel\Price\CollectionFactory">CollectionFactory</abbr> $priceColFactory, <a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository, <a href="../../../Magento/Catalog/Api/ProductRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductRepositoryInterface">ProductRepositoryInterface</abbr></a> $productRepository, <abbr title="Magento\Framework\Stdlib\DateTime\DateTimeFactory">DateTimeFactory</abbr> $dateFactory, <abbr title="Magento\ProductAlert\Model\ResourceModel\Stock\CollectionFactory">CollectionFactory</abbr> $stockColFactory, <a href="../../../Magento/Framework/Mail/Template/TransportBuilder.html"><abbr title="Magento\Framework\Mail\Template\TransportBuilder">TransportBuilder</abbr></a> $transportBuilder, <abbr title="Magento\ProductAlert\Model\EmailFactory">EmailFactory</abbr> $emailFactory, <a href="../../../Magento/Framework/Translate/Inline/StateInterface.html"><abbr title="Magento\Framework\Translate\Inline\StateInterface">StateInterface</abbr></a> $inlineTranslation)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\ProductAlert\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_process">process</a>()
+        
+                                            <p>Run process send product alerts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 130</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Catalog/Helper/Data.html"><abbr title="Magento\Catalog\Helper\Data">Data</abbr></a> $catalogData, <a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <abbr title="Magento\ProductAlert\Model\ResourceModel\Price\CollectionFactory">CollectionFactory</abbr> $priceColFactory, <a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository, <a href="../../../Magento/Catalog/Api/ProductRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductRepositoryInterface">ProductRepositoryInterface</abbr></a> $productRepository, <abbr title="Magento\Framework\Stdlib\DateTime\DateTimeFactory">DateTimeFactory</abbr> $dateFactory, <abbr title="Magento\ProductAlert\Model\ResourceModel\Stock\CollectionFactory">CollectionFactory</abbr> $stockColFactory, <a href="../../../Magento/Framework/Mail/Template/TransportBuilder.html"><abbr title="Magento\Framework\Mail\Template\TransportBuilder">TransportBuilder</abbr></a> $transportBuilder, <abbr title="Magento\ProductAlert\Model\EmailFactory">EmailFactory</abbr> $emailFactory, <a href="../../../Magento/Framework/Translate/Inline/StateInterface.html"><abbr title="Magento\Framework\Translate\Inline\StateInterface">StateInterface</abbr></a> $inlineTranslation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Helper/Data.html"><abbr title="Magento\Catalog\Helper\Data">Data</abbr></a></td>
+                <td>$catalogData</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a></td>
+                <td>$scopeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\ProductAlert\Model\ResourceModel\Price\CollectionFactory">CollectionFactory</abbr></td>
+                <td>$priceColFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a></td>
+                <td>$customerRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Api/ProductRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductRepositoryInterface">ProductRepositoryInterface</abbr></a></td>
+                <td>$productRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Framework\Stdlib\DateTime\DateTimeFactory">DateTimeFactory</abbr></td>
+                <td>$dateFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\ProductAlert\Model\ResourceModel\Stock\CollectionFactory">CollectionFactory</abbr></td>
+                <td>$stockColFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Mail/Template/TransportBuilder.html"><abbr title="Magento\Framework\Mail\Template\TransportBuilder">TransportBuilder</abbr></a></td>
+                <td>$transportBuilder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\ProductAlert\Model\EmailFactory">EmailFactory</abbr></td>
+                <td>$emailFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Translate/Inline/StateInterface.html"><abbr title="Magento\Framework\Translate\Inline\StateInterface">StateInterface</abbr></a></td>
+                <td>$inlineTranslation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_process">
+        <div class="location">at line         line 404</div>
+        <code>                    <abbr title="Magento\ProductAlert\Model\$this">$this</abbr>
+    <strong>process</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run process send product alerts</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\ProductAlert\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

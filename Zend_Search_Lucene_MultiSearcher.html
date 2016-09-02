@@ -1,0 +1,2348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Search_Lucene_MultiSearcher | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Search_Lucene_MultiSearcher" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Search_Lucene_MultiSearcher
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Search_Lucene_MultiSearcher</strong>        implements
+        <a href="Zend_Search_Lucene_Interface.html">Zend_Search_Lucene_Interface</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Multisearcher allows to search through several independent indexes.</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $indices = array())
+        
+                                            <p>Object constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addIndex">addIndex</a>(<a href="Zend_Search_Lucene_Interface.html">Zend_Search_Lucene_Interface</a> $index)
+        
+                                            <p>Add index for searching.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getActualGeneration">getActualGeneration</a>(<a href="Zend_Search_Lucene_Storage_Directory.html">Zend_Search_Lucene_Storage_Directory</a> $directory)
+        
+                                            <p>Get current generation number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSegmentFileName">getSegmentFileName</a>(integer $generation)
+        
+                                            <p>Get segments file name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFormatVersion">getFormatVersion</a>()
+        
+                                            <p>Get index format version</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFormatVersion">setFormatVersion</a>(int $formatVersion)
+        
+                                            <p>Set index format version.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Search_Lucene_Storage_Directory.html">Zend_Search_Lucene_Storage_Directory</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDirectory">getDirectory</a>()
+        
+                                            <p>Returns the Zend<em>Search</em>Lucene<em>Storage</em>Directory instance for this index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>()
+        
+                                            <p>Returns the total number of documents in this index (including deleted documents).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_maxDoc">maxDoc</a>()
+        
+                                            <p>Returns one greater than the largest possible document number.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_numDocs">numDocs</a>()
+        
+                                            <p>Returns the total number of non-deleted documents in this index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDeleted">isDeleted</a>(integer $id)
+        
+                                            <p>Checks, that document is deleted</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultSearchField">setDefaultSearchField</a>(string $fieldName)
+        
+                                            <p>Set default search field.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultSearchField">getDefaultSearchField</a>()
+        
+                                            <p>Get default search field.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setResultSetLimit">setResultSetLimit</a>(integer $limit)
+        
+                                            <p>Set result set limit.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResultSetLimit">getResultSetLimit</a>()
+        
+                                            <p>Set result set limit.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMaxBufferedDocs">getMaxBufferedDocs</a>()
+        
+                                            <p>Retrieve index maxBufferedDocs option</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMaxBufferedDocs">setMaxBufferedDocs</a>(integer $maxBufferedDocs)
+        
+                                            <p>Set index maxBufferedDocs option</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMaxMergeDocs">getMaxMergeDocs</a>()
+        
+                                            <p>Retrieve index maxMergeDocs option</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMaxMergeDocs">setMaxMergeDocs</a>(integer $maxMergeDocs)
+        
+                                            <p>Set index maxMergeDocs option</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMergeFactor">getMergeFactor</a>()
+        
+                                            <p>Retrieve index mergeFactor option</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMergeFactor">setMergeFactor</a>($mergeFactor)
+        
+                                            <p>Set index mergeFactor option</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_find">find</a>(mixed $query)
+        
+                                            <p>Performs a query against the index and returns an array
+of Zend<em>Search</em>Lucene<em>Search</em>QueryHit objects.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFieldNames">getFieldNames</a>(boolean $indexed = false)
+        
+                                            <p>Returns a list of all unique field names that exist in this index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Search_Lucene_Document.html">Zend_Search_Lucene_Document</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDocument">getDocument</a>(integer|<a href="Zend_Search_Lucene_Search_QueryHit.html">Zend_Search_Lucene_Search_QueryHit</a> $id)
+        
+                                            <p>Returns a Zend<em>Search</em>Lucene_Document object for the document
+number $id in this index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasTerm">hasTerm</a>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term)
+        
+                                            <p>Returns true if index contain documents with specified term.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_termDocs">termDocs</a>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term, <a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null $docsFilter = null)
+        
+                                            <p>Returns IDs of all the documents containing term.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_termDocsFilter">termDocsFilter</a>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term, <a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null $docsFilter = null)
+        
+                                            <p>Returns documents filter for all documents containing term.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_termFreqs">termFreqs</a>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term, <a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null $docsFilter = null)
+        
+                                            <p>Returns an array of all term freqs.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_termPositions">termPositions</a>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term, <a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null $docsFilter = null)
+        
+                                            <p>Returns an array of all term positions in the documents.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_docFreq">docFreq</a>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term)
+        
+                                            <p>Returns the number of documents in this index containing the $term.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Search_Lucene_Search_Similarity.html">Zend_Search_Lucene_Search_Similarity</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSimilarity">getSimilarity</a>()
+        
+                                            <p>Retrive similarity used by index reader</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_norm">norm</a>(integer $id, string $fieldName)
+        
+                                            <p>Returns a normalization factor for "field, document" pair.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasDeletions">hasDeletions</a>()
+        
+                                            <p>Returns true if any documents have been deleted from this index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>(integer|<a href="Zend_Search_Lucene_Search_QueryHit.html">Zend_Search_Lucene_Search_QueryHit</a> $id)
+        
+                                            <p>Deletes a document from the index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDocumentDistributorCallback">setDocumentDistributorCallback</a>(callback $callback)
+        
+                                            <p>Set callback for choosing target index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callback
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDocumentDistributorCallback">getDocumentDistributorCallback</a>()
+        
+                                            <p>Get callback for choosing target index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addDocument">addDocument</a>(<a href="Zend_Search_Lucene_Document.html">Zend_Search_Lucene_Document</a> $document)
+        
+                                            <p>Adds a document to this index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_commit">commit</a>()
+        
+                                            <p>Commit changes resulting from delete() or undeleteAll() operations.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_optimize">optimize</a>()
+        
+                                            <p>Optimize index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_terms">terms</a>()
+        
+                                            <p>Returns an array of all terms in this index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetTermsStream">resetTermsStream</a>()
+        
+                                            <p>Reset terms stream.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_skipTo">skipTo</a>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $prefix)
+        
+                                            <p>Skip terms stream up to specified term preffix.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nextTerm">nextTerm</a>()
+        
+                                            <p>Scans terms dictionary and returns next term</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_currentTerm">currentTerm</a>()
+        
+                                            <p>Returns term in current position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_closeTermsStream">closeTermsStream</a>()
+        
+                                            <p>Close terms stream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_undeleteAll">undeleteAll</a>()
+        
+                                            <p>Undeletes all documents currently marked as deleted in this index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addReference">addReference</a>()
+        
+                                            <p>Add reference to the index object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeReference">removeReference</a>()
+        
+                                            <p>Remove reference from the index object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 56</div>
+        <code>                    
+    <strong>__construct</strong>(array $indices = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Object constructor.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$indices</td>
+                <td>Arrays of indices for search</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addIndex">
+        <div class="location">at line         line 73</div>
+        <code>                    
+    <strong>addIndex</strong>(<a href="Zend_Search_Lucene_Interface.html">Zend_Search_Lucene_Interface</a> $index)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add index for searching.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Interface.html">Zend_Search_Lucene_Interface</a></td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActualGeneration">
+        <div class="location">at line         line 90</div>
+        <code>        static            integer
+    <strong>getActualGeneration</strong>(<a href="Zend_Search_Lucene_Storage_Directory.html">Zend_Search_Lucene_Storage_Directory</a> $directory)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current generation number</p>                    <p>Returns generation number
+0 means pre-2.1 index format
+-1 means there are no segments files.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Storage_Directory.html">Zend_Search_Lucene_Storage_Directory</a></td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSegmentFileName">
+        <div class="location">at line         line 102</div>
+        <code>        static            string
+    <strong>getSegmentFileName</strong>(integer $generation)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get segments file name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$generation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormatVersion">
+        <div class="location">at line         line 113</div>
+        <code>                    integer
+    <strong>getFormatVersion</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get index format version</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFormatVersion">
+        <div class="location">at line         line 125</div>
+        <code>                    
+    <strong>setFormatVersion</strong>(int $formatVersion)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set index format version.</p>                    <p>Index is converted to this format at the nearest upfdate time</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$formatVersion</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDirectory">
+        <div class="location">at line         line 137</div>
+        <code>                    <a href="Zend_Search_Lucene_Storage_Directory.html">Zend_Search_Lucene_Storage_Directory</a>
+    <strong>getDirectory</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the Zend<em>Search</em>Lucene<em>Storage</em>Directory instance for this index.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Search_Lucene_Storage_Directory.html">Zend_Search_Lucene_Storage_Directory</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">at line         line 148</div>
+        <code>                    integer
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the total number of documents in this index (including deleted documents).</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_maxDoc">
+        <div class="location">at line         line 166</div>
+        <code>                    integer
+    <strong>maxDoc</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns one greater than the largest possible document number.</p>                    <p>This may be used to, e.g., determine how big to allocate a structure which will have
+an element for every document number in an index.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_numDocs">
+        <div class="location">at line         line 176</div>
+        <code>                    integer
+    <strong>numDocs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the total number of non-deleted documents in this index.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDeleted">
+        <div class="location">at line         line 194</div>
+        <code>                    boolean
+    <strong>isDeleted</strong>(integer $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks, that document is deleted</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td>Exception is thrown if $id is out of the range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultSearchField">
+        <div class="location">at line         line 219</div>
+        <code>        static            
+    <strong>setDefaultSearchField</strong>(string $fieldName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set default search field.</p>                    <p>Null means, that search is performed through all fields by default</p>
+
+<p>Default value is null</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultSearchField">
+        <div class="location">at line         line 235</div>
+        <code>        static            string
+    <strong>getDefaultSearchField</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get default search field.</p>                    <p>Null means, that search is performed through all fields by default</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setResultSetLimit">
+        <div class="location">at line         line 261</div>
+        <code>        static            
+    <strong>setResultSetLimit</strong>(integer $limit)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set result set limit.</p>                    <p>0 (default) means no limit</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResultSetLimit">
+        <div class="location">at line         line 276</div>
+        <code>        static            integer
+    <strong>getResultSetLimit</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set result set limit.</p>                    <p>0 means no limit</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMaxBufferedDocs">
+        <div class="location">at line         line 306</div>
+        <code>                    integer
+    <strong>getMaxBufferedDocs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve index maxBufferedDocs option</p>                    <p>maxBufferedDocs is a minimal number of documents required before
+the buffered in-memory documents are written into a new Segment</p>
+
+<p>Default value is 10</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMaxBufferedDocs">
+        <div class="location">at line         line 335</div>
+        <code>                    
+    <strong>setMaxBufferedDocs</strong>(integer $maxBufferedDocs)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set index maxBufferedDocs option</p>                    <p>maxBufferedDocs is a minimal number of documents required before
+the buffered in-memory documents are written into a new Segment</p>
+
+<p>Default value is 10</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$maxBufferedDocs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMaxMergeDocs">
+        <div class="location">at line         line 355</div>
+        <code>                    integer
+    <strong>getMaxMergeDocs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve index maxMergeDocs option</p>                    <p>maxMergeDocs is a largest number of documents ever merged by addDocument().
+Small values (e.g., less than 10,000) are best for interactive indexing,
+as this limits the length of pauses while indexing to a few seconds.
+Larger values are best for batched indexing and speedier searches.</p>
+
+<p>Default value is PHP<em>INT</em>MAX</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMaxMergeDocs">
+        <div class="location">at line         line 386</div>
+        <code>                    
+    <strong>setMaxMergeDocs</strong>(integer $maxMergeDocs)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set index maxMergeDocs option</p>                    <p>maxMergeDocs is a largest number of documents ever merged by addDocument().
+Small values (e.g., less than 10,000) are best for interactive indexing,
+as this limits the length of pauses while indexing to a few seconds.
+Larger values are best for batched indexing and speedier searches.</p>
+
+<p>Default value is PHP<em>INT</em>MAX</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$maxMergeDocs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMergeFactor">
+        <div class="location">at line         line 411</div>
+        <code>                    integer
+    <strong>getMergeFactor</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve index mergeFactor option</p>                    <p>mergeFactor determines how often segment indices are merged by addDocument().
+With smaller values, less RAM is used while indexing,
+and searches on unoptimized indices are faster,
+but indexing speed is slower.
+With larger values, more RAM is used during indexing,
+and while searches on unoptimized indices are slower,
+indexing is faster.
+Thus larger values (> 10) are best for batch index creation,
+and smaller values (&lt; 10) for indices that are interactively maintained.</p>
+
+<p>Default value is 10</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMergeFactor">
+        <div class="location">at line         line 447</div>
+        <code>                    
+    <strong>setMergeFactor</strong>($mergeFactor)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set index mergeFactor option</p>                    <p>mergeFactor determines how often segment indices are merged by addDocument().
+With smaller values, less RAM is used while indexing,
+and searches on unoptimized indices are faster,
+but indexing speed is slower.
+With larger values, more RAM is used during indexing,
+and while searches on unoptimized indices are slower,
+indexing is faster.
+Thus larger values (> 10) are best for batch index creation,
+and smaller values (&lt; 10) for indices that are interactively maintained.</p>
+
+<p>Default value is 10</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$mergeFactor</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_find">
+        <div class="location">at line         line 463</div>
+        <code>                    array
+    <strong>find</strong>(mixed $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Performs a query against the index and returns an array
+of Zend<em>Search</em>Lucene<em>Search</em>QueryHit objects.</p>                    <p>Input is a string or Zend<em>Search</em>Lucene<em>Search</em>Query.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Zend<em>Search</em>Lucene<em>Search</em>QueryHit</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFieldNames">
+        <div class="location">at line         line 496</div>
+        <code>                    array
+    <strong>getFieldNames</strong>(boolean $indexed = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a list of all unique field names that exist in this index.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$indexed</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDocument">
+        <div class="location">at line         line 515</div>
+        <code>                    <a href="Zend_Search_Lucene_Document.html">Zend_Search_Lucene_Document</a>
+    <strong>getDocument</strong>(integer|<a href="Zend_Search_Lucene_Search_QueryHit.html">Zend_Search_Lucene_Search_QueryHit</a> $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a Zend<em>Search</em>Lucene_Document object for the document
+number $id in this index.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|<a href="Zend_Search_Lucene_Search_QueryHit.html">Zend_Search_Lucene_Search_QueryHit</a></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Search_Lucene_Document.html">Zend_Search_Lucene_Document</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td>Exception is thrown if $id is out of the range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasTerm">
+        <div class="location">at line         line 544</div>
+        <code>                    boolean
+    <strong>hasTerm</strong>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if index contain documents with specified term.</p>                    <p>Is used for query optimization.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a></td>
+                <td>$term</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_termDocs">
+        <div class="location">at line         line 563</div>
+        <code>                    array
+    <strong>termDocs</strong>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term, <a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null $docsFilter = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns IDs of all the documents containing term.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a></td>
+                <td>$term</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null</td>
+                <td>$docsFilter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_termDocsFilter">
+        <div class="location">at line         line 600</div>
+        <code>                    <a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>
+    <strong>termDocsFilter</strong>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term, <a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null $docsFilter = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns documents filter for all documents containing term.</p>                    <p>It performs the same operation as termDocs, but return result as
+Zend<em>Search</em>Lucene<em>Index</em>DocsFilter object</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a></td>
+                <td>$term</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null</td>
+                <td>$docsFilter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_termFreqs">
+        <div class="location">at line         line 615</div>
+        <code>                    integer
+    <strong>termFreqs</strong>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term, <a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null $docsFilter = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array of all term freqs.</p>                    <p>Return array structure: array( docId => freq, ...)</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a></td>
+                <td>$term</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null</td>
+                <td>$docsFilter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_termPositions">
+        <div class="location">at line         line 653</div>
+        <code>                    array
+    <strong>termPositions</strong>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term, <a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null $docsFilter = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array of all term positions in the documents.</p>                    <p>Return array structure: array( docId => array( pos1, pos2, ...), ...)</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a></td>
+                <td>$term</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Index_DocsFilter.html">Zend_Search_Lucene_Index_DocsFilter</a>|null</td>
+                <td>$docsFilter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_docFreq">
+        <div class="location">at line         line 688</div>
+        <code>                    integer
+    <strong>docFreq</strong>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $term)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the number of documents in this index containing the $term.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a></td>
+                <td>$term</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSimilarity">
+        <div class="location">at line         line 705</div>
+        <code>                    <a href="Zend_Search_Lucene_Search_Similarity.html">Zend_Search_Lucene_Search_Similarity</a>
+    <strong>getSimilarity</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrive similarity used by index reader</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Search_Lucene_Search_Similarity.html">Zend_Search_Lucene_Search_Similarity</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_norm">
+        <div class="location">at line         line 731</div>
+        <code>                    float
+    <strong>norm</strong>(integer $id, string $fieldName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a normalization factor for "field, document" pair.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasDeletions">
+        <div class="location">at line         line 751</div>
+        <code>                    boolean
+    <strong>hasDeletions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if any documents have been deleted from this index.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at line         line 769</div>
+        <code>                    
+    <strong>delete</strong>(integer|<a href="Zend_Search_Lucene_Search_QueryHit.html">Zend_Search_Lucene_Search_QueryHit</a> $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Deletes a document from the index.</p>                    <p>$id is an internal document id</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|<a href="Zend_Search_Lucene_Search_QueryHit.html">Zend_Search_Lucene_Search_QueryHit</a></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDocumentDistributorCallback">
+        <div class="location">at line         line 805</div>
+        <code>                    
+    <strong>setDocumentDistributorCallback</strong>(callback $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set callback for choosing target index.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callback</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDocumentDistributorCallback">
+        <div class="location">at line         line 820</div>
+        <code>                    callback
+    <strong>getDocumentDistributorCallback</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get callback for choosing target index.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callback</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDocument">
+        <div class="location">at line         line 831</div>
+        <code>                    
+    <strong>addDocument</strong>(<a href="Zend_Search_Lucene_Document.html">Zend_Search_Lucene_Document</a> $document)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a document to this index.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Document.html">Zend_Search_Lucene_Document</a></td>
+                <td>$document</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Exception.html">Zend_Search_Lucene_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commit">
+        <div class="location">at line         line 845</div>
+        <code>                    
+    <strong>commit</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Commit changes resulting from delete() or undeleteAll() operations.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_optimize">
+        <div class="location">at line         line 857</div>
+        <code>                    
+    <strong>optimize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Optimize index.</p>                    <p>Merges all segments into one</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_terms">
+        <div class="location">at line         line 869</div>
+        <code>                    array
+    <strong>terms</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array of all terms in this index.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetTermsStream">
+        <div class="location">at line         line 891</div>
+        <code>                    
+    <strong>resetTermsStream</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reset terms stream.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_skipTo">
+        <div class="location">at line         line 910</div>
+        <code>                    
+    <strong>skipTo</strong>(<a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a> $prefix)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Skip terms stream up to specified term preffix.</p>                    <p>Prefix contains fully specified field info and portion of searched term</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a></td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextTerm">
+        <div class="location">at line         line 920</div>
+        <code>                    <a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a>|null
+    <strong>nextTerm</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Scans terms dictionary and returns next term</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentTerm">
+        <div class="location">at line         line 930</div>
+        <code>                    <a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a>|null
+    <strong>currentTerm</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns term in current position</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Search_Lucene_Index_Term.html">Zend_Search_Lucene_Index_Term</a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_closeTermsStream">
+        <div class="location">at line         line 940</div>
+        <code>                    
+    <strong>closeTermsStream</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Close terms stream</p>                    <p>Should be used for resources clean up if stream is not read up to the end</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_undeleteAll">
+        <div class="location">at line         line 950</div>
+        <code>                    
+    <strong>undeleteAll</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Undeletes all documents currently marked as deleted in this index.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addReference">
+        <div class="location">at line         line 963</div>
+        <code>                    
+    <strong>addReference</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add reference to the index object</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeReference">
+        <div class="location">at line         line 975</div>
+        <code>                    
+    <strong>removeReference</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove reference from the index object</p>                    <p>When reference count becomes zero, index is closed and resources are cleaned up</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

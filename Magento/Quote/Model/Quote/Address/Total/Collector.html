@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Quote\Model\Quote\Address\Total\Collector | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/sami.css">
+        <script src="../../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Quote_Model_Quote_Address_Total_Collector" data-root-path="../../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../../../Magento/Quote.html">Quote</a></li>
+                                        <li><a href="../../../../../../Magento/Quote/Model.html">Model</a></li>
+                                        <li><a href="../../../../../../Magento/Quote/Model/Quote.html">Quote</a></li>
+                                        <li><a href="../../../../../../Magento/Quote/Model/Quote/Address.html">Address</a></li>
+                                        <li><a href="../../../../../../Magento/Quote/Model/Quote/Address/Total.html">Total</a></li>
+    
+                <li>Collector</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Collector
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Collector</strong>        extends <a href="../../../../../../Magento/Sales/Model/Config/Ordered.html"><abbr title="Magento\Sales\Model\Config\Ordered">Ordered</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Address Total Collector model</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XML_PATH_SALES_TOTALS_SORT</td>
+                <td class="last">
+                    <p><em>Path to sort order values of checkout totals</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_instances">
+                    static                                                            <a href="../../../../../../Magento/Framework/App/Config/Base.html"><abbr title="Magento\Framework\App\Config\Base">Base</abbr></a>[]
+                </td>
+                <td>$instances</td>
+                <td class="last">List of instances</td>
+                <td><small>from&nbsp;<a href="../../../../../../Magento/Framework/App/Config/Base.html#property_instances"><abbr title="Magento\Framework\App\Config\Base">Base</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../Magento/Framework/App/Cache/Type/Config.html"><abbr title="Magento\Framework\App\Cache\Type\Config">Config</abbr></a> $configCacheType, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../../../Magento/Sales/Model/Config.html"><abbr title="Magento\Sales\Model\Config">Config</abbr></a> $salesConfig, <a href="../../../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../../../Magento/Quote/Model/Quote/Address/TotalFactory.html"><abbr title="Magento\Quote\Model\Quote\Address\TotalFactory">TotalFactory</abbr></a> $totalFactory, string|<a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a> $sourceData = null, mixed $store = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setXml">setXml</a>(<a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a> $node)
+        
+                                            <p>Sets xml for this configuration</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setXml"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a>|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNode">getNode</a>(string $path = null)
+        
+                                            <p>Returns node found by the $path</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getNode"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a>[]|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getXpath">getXpath</a>(string $xpath)
+        
+                                            <p>Returns nodes found by xpath expression</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getXpath"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCache">setCache</a>(<a href="../../../../../../Magento/Framework/Simplexml/Config/Cache/AbstractCache.html"><abbr title="Magento\Framework\Simplexml\Config\Cache\AbstractCache">AbstractCache</abbr></a> $cache)
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCache"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Framework/Simplexml/Config/Cache/AbstractCache.html"><abbr title="Magento\Framework\Simplexml\Config\Cache\AbstractCache">AbstractCache</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCache">getCache</a>()
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCache"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCacheSaved">setCacheSaved</a>(boolean $flag)
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCacheSaved"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheSaved">getCacheSaved</a>()
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheSaved"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCacheId">setCacheId</a>(string $id)
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCacheId"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheId">getCacheId</a>()
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheId"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCacheTags">setCacheTags</a>(array $tags)
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCacheTags"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheTags">getCacheTags</a>()
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheTags"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCacheLifetime">setCacheLifetime</a>(int $lifetime)
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCacheLifetime"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheLifetime">getCacheLifetime</a>()
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheLifetime"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCacheChecksum">setCacheChecksum</a>(string $data)
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCacheChecksum"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateCacheChecksum">updateCacheChecksum</a>(string $data)
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_updateCacheChecksum"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheChecksum">getCacheChecksum</a>()
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheChecksum"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheChecksumId">getCacheChecksumId</a>()
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheChecksumId"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetchCacheChecksum">fetchCacheChecksum</a>()
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_fetchCacheChecksum"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateCacheChecksum">validateCacheChecksum</a>()
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_validateCacheChecksum"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadCache">loadCache</a>()
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_loadCache"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveCache">saveCache</a>(array $tags = null)
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_saveCache"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getXmlString">getXmlString</a>()
+        
+                                            <p>Return Xml of node as string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getXmlString"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeCache">removeCache</a>()
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_removeCache"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadFile">loadFile</a>(string $filePath)
+        
+                                            <p>Imports XML file</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_loadFile"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadString">loadString</a>(string $string)
+        
+                                            <p>Imports XML string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_loadString"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadDom">loadDom</a>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $dom)
+        
+                                            <p>Imports DOM node</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_loadDom"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setNode">setNode</a>(string $path, string $value, boolean $overwrite = true)
+        
+                                            <p>Create node by $path and set its value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setNode"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_applyExtends">applyExtends</a>()
+        
+                                            <p>Process configuration xml</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_applyExtends"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processFileData">processFileData</a>(string $text)
+        
+                                            <p>Stub method for processing file data right after loading the file text</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_processFileData"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extend">extend</a>(<a href="../../../../../../Magento/Framework/Simplexml/Config.html"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> $config, boolean $overwrite = true)
+        
+                                            <p>Enter description here.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_extend"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+        
+                                            <p>Cleanup circular references</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/Simplexml/Config.html#method___destruct"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_destroy">destroy</a>()
+        
+                                            <p>Cleanup objects because of simplexml memory leak</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/App/Config/Base.html#method_destroy"><abbr title="Magento\Framework\App\Config\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCollectors">getCollectors</a>()
+        
+                                            <p>Get total models array ordered for right calculation logic</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRetrievers">getRetrievers</a>()
+        
+                                            <p>Get total models array ordered for right display sequence</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 73</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../../../Magento/Framework/App/Cache/Type/Config.html"><abbr title="Magento\Framework\App\Cache\Type\Config">Config</abbr></a> $configCacheType, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../../../Magento/Sales/Model/Config.html"><abbr title="Magento\Sales\Model\Config">Config</abbr></a> $salesConfig, <a href="../../../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../../../Magento/Quote/Model/Quote/Address/TotalFactory.html"><abbr title="Magento\Quote\Model\Quote\Address\TotalFactory">TotalFactory</abbr></a> $totalFactory, string|<a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a> $sourceData = null, mixed $store = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Framework/App/Cache/Type/Config.html"><abbr title="Magento\Framework\App\Cache\Type\Config">Config</abbr></a></td>
+                <td>$configCacheType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Sales/Model/Config.html"><abbr title="Magento\Sales\Model\Config">Config</abbr></a></td>
+                <td>$salesConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a></td>
+                <td>$scopeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Quote/Model/Quote/Address/TotalFactory.html"><abbr title="Magento\Quote\Model\Quote\Address\TotalFactory">TotalFactory</abbr></a></td>
+                <td>$totalFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|<a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a></td>
+                <td>$sourceData</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setXml">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setXml"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 106</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>setXml</strong>(<a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a> $node)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets xml for this configuration</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a></td>
+                <td>$node</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNode">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getNode"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 119</div>
+        <code>                    <a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a>|bool
+    <strong>getNode</strong>(string $path = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns node found by the $path</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a>|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Magento\Framework\Simplexml\Element::descend</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getXpath">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getXpath"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 136</div>
+        <code>                    <a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a>[]|bool
+    <strong>getXpath</strong>(string $xpath)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns nodes found by xpath expression</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xpath</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Framework/Simplexml/Element.html"><abbr title="Magento\Framework\Simplexml\Element">Element</abbr></a>[]|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCache">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCache"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 156</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>setCache</strong>(<a href="../../../../../../Magento/Framework/Simplexml/Config/Cache/AbstractCache.html"><abbr title="Magento\Framework\Simplexml\Config\Cache\AbstractCache">AbstractCache</abbr></a> $cache)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Framework/Simplexml/Config/Cache/AbstractCache.html"><abbr title="Magento\Framework\Simplexml\Config\Cache\AbstractCache">AbstractCache</abbr></a></td>
+                <td>$cache</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCache">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCache"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 167</div>
+        <code>                    <a href="../../../../../../Magento/Framework/Simplexml/Config/Cache/AbstractCache.html"><abbr title="Magento\Framework\Simplexml\Config\Cache\AbstractCache">AbstractCache</abbr></a>
+    <strong>getCache</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Framework/Simplexml/Config/Cache/AbstractCache.html"><abbr title="Magento\Framework\Simplexml\Config\Cache\AbstractCache">AbstractCache</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheSaved">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCacheSaved"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 178</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>setCacheSaved</strong>(boolean $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheSaved">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheSaved"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 190</div>
+        <code>                    boolean
+    <strong>getCacheSaved</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheId">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCacheId"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 201</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>setCacheId</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheId">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheId"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 212</div>
+        <code>                    string
+    <strong>getCacheId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheTags">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCacheTags"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 223</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>setCacheTags</strong>(array $tags)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tags</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheTags">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheTags"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 234</div>
+        <code>                    array
+    <strong>getCacheTags</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheLifetime">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCacheLifetime"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 245</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>setCacheLifetime</strong>(int $lifetime)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$lifetime</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheLifetime">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheLifetime"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 256</div>
+        <code>                    int
+    <strong>getCacheLifetime</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheChecksum">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setCacheChecksum"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 267</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>setCacheChecksum</strong>(string $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateCacheChecksum">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_updateCacheChecksum"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 285</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>updateCacheChecksum</strong>(string $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheChecksum">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheChecksum"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 303</div>
+        <code>                    string
+    <strong>getCacheChecksum</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheChecksumId">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getCacheChecksumId"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 313</div>
+        <code>                    string
+    <strong>getCacheChecksumId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchCacheChecksum">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_fetchCacheChecksum"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 323</div>
+        <code>                    boolean
+    <strong>fetchCacheChecksum</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateCacheChecksum">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_validateCacheChecksum"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 333</div>
+        <code>                    boolean
+    <strong>validateCacheChecksum</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadCache">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_loadCache"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 351</div>
+        <code>                    boolean
+    <strong>loadCache</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveCache">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_saveCache"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 372</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>saveCache</strong>(array $tags = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tags</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getXmlString">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_getXmlString"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 397</div>
+        <code>                    string
+    <strong>getXmlString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return Xml of node as string</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeCache">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_removeCache"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 407</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>removeCache</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadFile">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_loadFile"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 457</div>
+        <code>                    boolean
+    <strong>loadFile</strong>(string $filePath)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Imports XML file</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filePath</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadString">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_loadString"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 475</div>
+        <code>                    boolean
+    <strong>loadString</strong>(string $string)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Imports XML string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadDom">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_loadDom"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 493</div>
+        <code>                    bool
+    <strong>loadDom</strong>(<a target="_blank" href="http://php.net/DOMNode">DOMNode</a> $dom)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Imports DOM node</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMNode">DOMNode</a></td>
+                <td>$dom</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setNode">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_setNode"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 512</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>setNode</strong>(string $path, string $value, boolean $overwrite = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create node by $path and set its value.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>separated by slashes</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$overwrite</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_applyExtends">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_applyExtends"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 523</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>applyExtends</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Process configuration xml</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processFileData">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_processFileData"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 549</div>
+        <code>                    string
+    <strong>processFileData</strong>(string $text)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Stub method for processing file data right after loading the file text</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extend">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method_extend"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 561</div>
+        <code>                    <abbr title="Magento\Framework\Simplexml\$this">$this</abbr>
+    <strong>extend</strong>(<a href="../../../../../../Magento/Framework/Simplexml/Config.html"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> $config, boolean $overwrite = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enter description here.</p>                    <p>..</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Framework/Simplexml/Config.html"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a></td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$overwrite</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Simplexml\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">in <a href="../../../../../../Magento/Framework/Simplexml/Config.html#method___destruct"><abbr title="Magento\Framework\Simplexml\Config">Config</abbr></a> at line         line 575</div>
+        <code>                    void
+    <strong>__destruct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cleanup circular references</p>                    <p>Destructor should be called explicitly in order to work around the PHP bug
+https://bugs.php.net/bug.php?id=62468</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroy">
+        <div class="location">in <a href="../../../../../../Magento/Framework/App/Config/Base.html#method_destroy"><abbr title="Magento\Framework\App\Config\Base">Base</abbr></a> at line         line 35</div>
+        <code>        static            void
+    <strong>destroy</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cleanup objects because of simplexml memory leak</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCollectors">
+        <div class="location">at line         line 95</div>
+        <code>                    array
+    <strong>getCollectors</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get total models array ordered for right calculation logic</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRetrievers">
+        <div class="location">at line         line 105</div>
+        <code>                    <a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a>[]
+    <strong>getRetrievers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get total models array ordered for right display sequence</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Quote/Model/Quote/Address/Total/AbstractTotal.html"><abbr title="Magento\Quote\Model\Quote\Address\Total\AbstractTotal">AbstractTotal</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

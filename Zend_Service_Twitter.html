@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_Twitter | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_Twitter" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_Twitter
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_Twitter</strong>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>API_BASE_URI</td>
+                <td class="last">
+                    <p><em>Base URI for all API calls</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OAUTH_BASE_URI</td>
+                <td class="last">
+                    <p><em>OAuth Endpoint</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>STATUS_MAX_CHARACTERS</td>
+                <td class="last">
+                    <p><em>246 is the current limit for a status message, 140 characters are displayed
+initially, with the remainder linked from the web UI or client. The limit is
+applied to a html encoded UTF-8 string (i.e. entities are counted in the limit
+which may appear unusual but is a security measure).</em></p>
+                    <p>This should be reviewed in the future...</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(null|array|<a href="Zend_Config.html">Zend_Config</a> $options = null, <a href="Zend_Oauth_Consumer.html">Zend_Oauth_Consumer</a> $consumer = null, <a href="Zend_Http_Client.html">Zend_Http_Client</a> $httpClient = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Twitter
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $type)
+        
+                                            <p>Proxy service methods</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $params)
+        
+                                            <p>Method overloading</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter.html">Zend_Service_Twitter</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHttpClient">setHttpClient</a>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $client)
+        
+                                            <p>Set HTTP client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpClient">getHttpClient</a>()
+        
+                                            <p>Get the HTTP client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUsername">getUsername</a>()
+        
+                                            <p>Retrieve username</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter.html">Zend_Service_Twitter</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUsername">setUsername</a>(string $value)
+        
+                                            <p>Set username</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAuthorised">isAuthorised</a>()
+        
+                                            <p>Checks for an authorised state</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_accountVerifyCredentials">accountVerifyCredentials</a>()
+        
+                                            <p>Verify Account Credentials</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_applicationRateLimitStatus">applicationRateLimitStatus</a>()
+        
+                                            <p>Returns the number of api requests you have left per hour.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_blocksCreate">blocksCreate</a>(integer|string $id)
+        
+                                            <p>Blocks the user specified in the ID parameter as the authenticating user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_blocksDestroy">blocksDestroy</a>(integer|string $id)
+        
+                                            <p>Un-blocks the user specified in the ID parameter for the authenticating user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_blocksIds">blocksIds</a>(integer $cursor = -1)
+        
+                                            <p>Returns an array of user ids that the authenticating user is blocking</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_blocksList">blocksList</a>(integer $cursor = -1)
+        
+                                            <p>Returns an array of user objects that the authenticating user is blocking</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_directMessagesDestroy">directMessagesDestroy</a>(int $id)
+        
+                                            <p>Destroy a direct message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_directMessagesMessages">directMessagesMessages</a>(array $options = array())
+        
+                                            <p>Retrieve direct messages for the current user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_directMessagesNew">directMessagesNew</a>(int|string $user, string $text)
+        
+                                            <p>Send a direct message to a user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_directMessagesSent">directMessagesSent</a>(array $options = array())
+        
+                                            <p>Retrieve list of direct messages sent by current user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_favoritesCreate">favoritesCreate</a>(int $id)
+        
+                                            <p>Mark a status as a favorite</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_favoritesDestroy">favoritesDestroy</a>(int $id)
+        
+                                            <p>Remove a favorite</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_favoritesList">favoritesList</a>(array $options = array())
+        
+                                            <p>Fetch favorites</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_friendshipsCreate">friendshipsCreate</a>(int|string $id, array $params = array())
+        
+                                            <p>Create friendship</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_friendshipsDestroy">friendshipsDestroy</a>(int|string $id)
+        
+                                            <p>Destroy friendship</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_searchTweets">searchTweets</a>(string $query, array $options = array())
+        
+                                            <p>Search tweets</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_statusesDestroy">statusesDestroy</a>(int $id)
+        
+                                            <p>Destroy a status message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_statusesHomeTimeline">statusesHomeTimeline</a>(array $options = array())
+        
+                                            <p>Friend Timeline Status</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_statusesMentionsTimeline">statusesMentionsTimeline</a>(array $options = array())
+        
+                                            <p>Get status replies</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_statusesSample">statusesSample</a>()
+        
+                                            <p>Public Timeline status</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_statusesShow">statusesShow</a>(int $id)
+        
+                                            <p>Show a single status</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_statusesUpdate">statusesUpdate</a>(string $status, null|int $inReplyToStatusId = null)
+        
+                                            <p>Update user's current status</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_statusesUserTimeline">statusesUserTimeline</a>(array $options = array())
+        
+                                            <p>User Timeline status</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_usersSearch">usersSearch</a>(string $query, array $options = array())
+        
+                                            <p>Search users</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_usersShow">usersShow</a>(int|string $id)
+        
+                                            <p>Show extended information on a user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 146</div>
+        <code>                    
+    <strong>__construct</strong>(null|array|<a href="Zend_Config.html">Zend_Config</a> $options = null, <a href="Zend_Oauth_Consumer.html">Zend_Oauth_Consumer</a> $consumer = null, <a href="Zend_Http_Client.html">Zend_Http_Client</a> $httpClient = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|array|<a href="Zend_Config.html">Zend_Config</a></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Oauth_Consumer.html">Zend_Oauth_Consumer</a></td>
+                <td>$consumer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+                <td>$httpClient</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">at line         line 224</div>
+        <code>                    Twitter
+    <strong>__get</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Proxy service methods</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Twitter</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>If method not in method types list</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at line         line 246</div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Method overloading</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Exception\BadMethodCallException">BadMethodCallException</abbr></td>
+                <td>if unable to find method</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHttpClient">
+        <div class="location">at line         line 280</div>
+        <code>                    <a href="Zend_Service_Twitter.html">Zend_Service_Twitter</a>
+    <strong>setHttpClient</strong>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $client)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set HTTP client</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter.html">Zend_Service_Twitter</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpClient">
+        <div class="location">at line         line 294</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>getHttpClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the HTTP client</p>                    <p>Lazy loads one if none present</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUsername">
+        <div class="location">at line         line 307</div>
+        <code>                    string
+    <strong>getUsername</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve username</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUsername">
+        <div class="location">at line         line 318</div>
+        <code>                    <a href="Zend_Service_Twitter.html">Zend_Service_Twitter</a>
+    <strong>setUsername</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set username</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter.html">Zend_Service_Twitter</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAuthorised">
+        <div class="location">at line         line 329</div>
+        <code>                    bool
+    <strong>isAuthorised</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks for an authorised state</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_accountVerifyCredentials">
+        <div class="location">at line         line 344</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>accountVerifyCredentials</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Verify Account Credentials</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_applicationRateLimitStatus">
+        <div class="location">at line         line 359</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>applicationRateLimitStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the number of api requests you have left per hour.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_blocksCreate">
+        <div class="location">at line         line 374</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>blocksCreate</strong>(integer|string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Blocks the user specified in the ID parameter as the authenticating user.</p>                    <p>Destroys a friendship to the blocked user if it exists.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|string</td>
+                <td>$id</td>
+                <td>The ID or screen name of a user to block.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_blocksDestroy">
+        <div class="location">at line         line 390</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>blocksDestroy</strong>(integer|string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Un-blocks the user specified in the ID parameter for the authenticating user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|string</td>
+                <td>$id</td>
+                <td>The ID or screen_name of the user to un-block.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_blocksIds">
+        <div class="location">at line         line 406</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>blocksIds</strong>(integer $cursor = -1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array of user ids that the authenticating user is blocking</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$cursor</td>
+                <td>Optional. Specifies the cursor position at which to begin listing ids; defaults to first "page" of results.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_blocksList">
+        <div class="location">at line         line 421</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>blocksList</strong>(integer $cursor = -1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array of user objects that the authenticating user is blocking</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$cursor</td>
+                <td>Optional. Specifies the cursor position at which to begin listing ids; defaults to first "page" of results.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_directMessagesDestroy">
+        <div class="location">at line         line 437</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>directMessagesDestroy</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destroy a direct message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>ID of message to destroy</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_directMessagesMessages">
+        <div class="location">at line         line 461</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>directMessagesMessages</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve direct messages for the current user</p>                    <p>$options may include one or more of the following keys
+- count: return page X of results
+- since<em>id: return statuses only greater than the one specified
+- max</em>id: return statuses with an ID less than (older than) or equal to that specified
+- include<em>entities: setting to false will disable embedded entities
+- skip</em>status:setting to true, "t", or 1 will omit the status in returned users</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_directMessagesNew">
+        <div class="location">at line         line 502</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>directMessagesNew</strong>(int|string $user, string $text)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send a direct message to a user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|string</td>
+                <td>$user</td>
+                <td>User to whom to send message</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td>Message to send to user</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Exception\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if message is empty</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if message is too long</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_directMessagesSent">
+        <div class="location">at line         line 541</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>directMessagesSent</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve list of direct messages sent by current user</p>                    <p>$options may include one or more of the following keys
+- count: return page X of results
+- page: return starting at page
+- since<em>id: return statuses only greater than the one specified
+- max</em>id: return statuses with an ID less than (older than) or equal to that specified
+- include_entities: setting to false will disable embedded entities</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_favoritesCreate">
+        <div class="location">at line         line 579</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>favoritesCreate</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mark a status as a favorite</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>Status ID you want to mark as a favorite</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_favoritesDestroy">
+        <div class="location">at line         line 596</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>favoritesDestroy</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a favorite</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>Status ID you want to de-list as a favorite</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_favoritesList">
+        <div class="location">at line         line 621</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>favoritesList</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fetch favorites</p>                    <p>$options may contain one or more of the following:
+- user<em>id: Id of a user for whom to fetch favorites
+- screen</em>name: Screen name of a user for whom to fetch favorites
+- count: number of tweets to attempt to retrieve, up to 200
+- since<em>id: return results only after the specified tweet id
+- max</em>id: return results with an ID less than (older than) or equal to the specified ID
+- include_entities: when set to false, entities member will be omitted</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_friendshipsCreate">
+        <div class="location">at line         line 663</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>friendshipsCreate</strong>(int|string $id, array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create friendship</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|string</td>
+                <td>$id</td>
+                <td>User ID or name of new friend</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>Additional parameters to pass</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_friendshipsDestroy">
+        <div class="location">at line         line 686</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>friendshipsDestroy</strong>(int|string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destroy friendship</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|string</td>
+                <td>$id</td>
+                <td>User ID or name of friend to remove</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_searchTweets">
+        <div class="location">at line         line 715</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>searchTweets</strong>(string $query, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Search tweets</p>                    <p>$options may include any of the following:
+- geocode: a string of the form "latitude, longitude, radius"
+- lang: restrict tweets to the two-letter language code
+- locale: query is in the given two-letter language code
+- result<em>type: what type of results to receive: mixed, recent, or popular
+- count: number of tweets to return per page; up to 100
+- until: return tweets generated before the given date
+- since</em>id: return resutls with an ID greater than (more recent than) the given ID
+- max<em>id: return results with an ID less than (older than) the given ID
+- include</em>entities: whether or not to include embedded entities</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusesDestroy">
+        <div class="location">at line         line 822</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>statusesDestroy</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destroy a status message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>ID of status to destroy</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusesHomeTimeline">
+        <div class="location">at line         line 847</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>statusesHomeTimeline</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Friend Timeline Status</p>                    <p>$options may include one or more of the following keys
+- count: number of tweets to attempt to retrieve, up to 200
+- since<em>id: return results only after the specified tweet id
+- max</em>id: return results with an ID less than (older than) or equal to the specified ID
+- trim<em>user: when set to true, "t", or 1, user object in tweets will include only author's ID.
+- contributor</em>details: when set to true, includes screen<em>name of each contributor
+- include</em>entities: when set to false, entities member will be omitted
+- exclude_replies: when set to true, will strip replies appearing in the timeline</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusesMentionsTimeline">
+        <div class="location">at line         line 904</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>statusesMentionsTimeline</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get status replies</p>                    <p>$options may include one or more of the following keys
+- count: number of tweets to attempt to retrieve, up to 200
+- since<em>id: return results only after the specified tweet id
+- max</em>id: return results with an ID less than (older than) or equal to the specified ID
+- trim<em>user: when set to true, "t", or 1, user object in tweets will include only author's ID.
+- contributor</em>details: when set to true, includes screen<em>name of each contributor
+- include</em>entities: when set to false, entities member will be omitted</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusesSample">
+        <div class="location">at line         line 949</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>statusesSample</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Public Timeline status</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusesShow">
+        <div class="location">at line         line 965</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>statusesShow</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Show a single status</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>Id of status to show</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusesUpdate">
+        <div class="location">at line         line 985</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>statusesUpdate</strong>(string $status, null|int $inReplyToStatusId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update user's current status</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>null|int</td>
+                <td>$inReplyToStatusId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if message is too long</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if message is empty</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusesUserTimeline">
+        <div class="location">at line         line 1031</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>statusesUserTimeline</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>User Timeline status</p>                    <p>$options may include one or more of the following keys
+- user<em>id: Id of a user for whom to fetch favorites
+- screen</em>name: Screen name of a user for whom to fetch favorites
+- count: number of tweets to attempt to retrieve, up to 200
+- since<em>id: return results only after the specified tweet id
+- max</em>id: return results with an ID less than (older than) or equal to the specified ID
+- trim<em>user: when set to true, "t", or 1, user object in tweets will include only author's ID.
+- exclude</em>replies: when set to true, will strip replies appearing in the timeline
+- contributor<em>details: when set to true, includes screen</em>name of each contributor
+- include_rts: when set to false, will strip native retweets</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_usersSearch">
+        <div class="location">at line         line 1092</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>usersSearch</strong>(string $query, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Search users</p>                    <p>$options may include any of the following:
+- page: the page of results to retrieve
+- count: the number of users to retrieve per page; max is 20
+- include_entities: if set to boolean true, include embedded entities</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_usersShow">
+        <div class="location">at line         line 1141</div>
+        <code>                    <a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a>
+    <strong>usersShow</strong>(int|string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Show extended information on a user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|string</td>
+                <td>$id</td>
+                <td>User ID or name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Twitter_Response.html">Zend_Service_Twitter_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td>if HTTP request fails or times out</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Exception\DomainException">DomainException</abbr></td>
+                <td>if unable to decode JSON payload</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

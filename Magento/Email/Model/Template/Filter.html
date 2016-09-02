@@ -1,0 +1,2037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Email\Model\Template\Filter | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Email_Model_Template_Filter" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../Magento/Email.html">Email</a></li>
+                                        <li><a href="../../../../Magento/Email/Model.html">Model</a></li>
+                                        <li><a href="../../../../Magento/Email/Model/Template.html">Template</a></li>
+    
+                <li>Filter</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Filter
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Filter</strong>        extends <a href="../../../../Magento/Framework/Filter/Template.html"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Core Email Template Filter Model</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>CONSTRUCTION_PATTERN</td>
+                <td class="last">
+                    <p><em>Construction regular expression</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONSTRUCTION_DEPEND_PATTERN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONSTRUCTION_IF_PATTERN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONSTRUCTION_TEMPLATE_PATTERN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRANS_DIRECTIVE_NAME</td>
+                <td class="last">
+                    <p><em>The name used in the {{trans}} directive</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRANS_DIRECTIVE_REGEX</td>
+                <td class="last">
+                    <p><em>The regex to match interior portion of a {{trans "foo"}} translation directive</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Magento/Framework/Stdlib/StringUtils.html"><abbr title="Magento\Framework\Stdlib\StringUtils">StringUtils</abbr></a> $string, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../Magento/Framework/Escaper.html"><abbr title="Magento\Framework\Escaper">Escaper</abbr></a> $escaper, <a href="../../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a> $assetRepo, <a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <abbr title="Magento\Variable\Model\VariableFactory">VariableFactory</abbr> $coreVariableFactory, <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../Magento/Framework/View/LayoutInterface.html"><abbr title="Magento\Framework\View\LayoutInterface">LayoutInterface</abbr></a> $layout, <a href="../../../../Magento/Framework/View/LayoutFactory.html"><abbr title="Magento\Framework\View\LayoutFactory">LayoutFactory</abbr></a> $layoutFactory, <a href="../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a> $appState, <a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a> $urlModel, <abbr title="Pelago\Emogrifier">Emogrifier</abbr> $emogrifier, <a href="../../../../Magento/Email/Model/Source/Variables.html"><abbr title="Magento\Email\Model\Source\Variables">Variables</abbr></a> $configVariables, array $variables = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Filter/Template.html"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setVariables">setVariables</a>(array $variables)
+        
+                                            <p>Sets template variables that's can be called through {var .</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/Filter/Template.html#method_setVariables"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Filter\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTemplateProcessor">setTemplateProcessor</a>(callable $callback)
+        
+                                            <p>Sets the processor for template directive.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/Filter/Template.html#method_setTemplateProcessor"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTemplateProcessor">getTemplateProcessor</a>()
+        
+                                            <p>Sets the processor for template directive.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/Filter/Template.html#method_getTemplateProcessor"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_filter">filter</a>(mixed $value)
+        
+                                            <p>Filter the string as template</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Filter\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addAfterFilterCallback">addAfterFilterCallback</a>(callable $afterFilterCallback)
+        
+                                            <p>Adds a callback to run after main filtering has happened. Callback must accept a single argument and return
+a string of the processed value.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/Filter/Template.html#method_addAfterFilterCallback"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_varDirective">varDirective</a>(string[] $construction)
+        
+                                            <p>Var directive with modifiers support</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_templateDirective">templateDirective</a>(string[] $construction)
+        
+                                            <p>Allows templates to be included inside other templates</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/Filter/Template.html#method_templateDirective"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dependDirective">dependDirective</a>(string[] $construction)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/Filter/Template.html#method_dependDirective"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_ifDirective">ifDirective</a>(string[] $construction)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/Filter/Template.html#method_ifDirective"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUseAbsoluteLinks">setUseAbsoluteLinks</a>(bool $flag)
+        
+                                            <p>Set use absolute links flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUseSessionInUrl">setUseSessionInUrl</a>(bool $flag)
+        
+                                            <p>Setter whether SID is allowed in store directive</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPlainTemplateMode">setPlainTemplateMode</a>(bool $plainTemplateMode)
+        
+                                            <p>Setter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isPlainTemplateMode">isPlainTemplateMode</a>()
+        
+                                            <p>Check whether template is plain</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setIsChildTemplate">setIsChildTemplate</a>(bool $isChildTemplate)
+        
+                                            <p>Set whether template being filtered is child of another template</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isChildTemplate">isChildTemplate</a>()
+        
+                                            <p>Get whether template being filtered is child of another template</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setStoreId">setStoreId</a>(int $storeId)
+        
+                                            <p>Setter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDesignParams">setDesignParams</a>(array $designParams)
+        
+                                            <p>Set design parameters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDesignParams">getDesignParams</a>()
+        
+                                            <p>Get design parameters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStoreId">getStoreId</a>()
+        
+                                            <p>Getter. If $_storeId is null, return design store id.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_blockDirective">blockDirective</a>(array $construction)
+        
+                                            <p>Retrieve Block html directive</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_layoutDirective">layoutDirective</a>(string[] $construction)
+        
+                                            <p>Retrieve layout html directive</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_emulateAreaCallback">emulateAreaCallback</a>()
+        
+                                            <p>Retrieve layout html directive callback</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_viewDirective">viewDirective</a>(string[] $construction)
+        
+                                            <p>Retrieve View URL directive</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mediaDirective">mediaDirective</a>(string[] $construction)
+        
+                                            <p>Retrieve media file URL directive</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_storeDirective">storeDirective</a>(string[] $construction)
+        
+                                            <p>Retrieve store URL directive
+Support url and direct_url properties</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUrlModel">setUrlModel</a>(<a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a> $urlModel)
+        
+                                            <p>Set current URL model, which will be used for URLs generation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_transDirective">transDirective</a>(string[] $construction)
+        
+                                            <p>Trans directive for localized strings support</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifierEscape">modifierEscape</a>(string $value, string $type = &#039;html&#039;)
+        
+                                            <p>Escape specified string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_protocolDirective">protocolDirective</a>(string[] $construction)
+        
+                                            <p>HTTP Protocol directive</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_configDirective">configDirective</a>(string[] $construction)
+        
+                                            <p>Store config directive</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_customvarDirective">customvarDirective</a>(string[] $construction)
+        
+                                            <p>Custom Variable directive</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cssDirective">cssDirective</a>(string[] $construction)
+        
+                                            <p>Load and return the contents of a CSS file</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_inlinecssDirective">inlinecssDirective</a>(string[] $construction)
+        
+                                            <p>Set file to apply as inline CSS</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCssFilesContent">getCssFilesContent</a>(array $files)
+        
+                                            <p>Load CSS file from materialized static view directory</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_applyInlineCss">applyInlineCss</a>(string $html)
+        
+                                            <p>Merge HTML and CSS and return HTML that has CSS styles applied "inline" to the HTML tags. This is necessary
+in order to support all email clients.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 174</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../Magento/Framework/Stdlib/StringUtils.html"><abbr title="Magento\Framework\Stdlib\StringUtils">StringUtils</abbr></a> $string, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../Magento/Framework/Escaper.html"><abbr title="Magento\Framework\Escaper">Escaper</abbr></a> $escaper, <a href="../../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a> $assetRepo, <a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <abbr title="Magento\Variable\Model\VariableFactory">VariableFactory</abbr> $coreVariableFactory, <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../Magento/Framework/View/LayoutInterface.html"><abbr title="Magento\Framework\View\LayoutInterface">LayoutInterface</abbr></a> $layout, <a href="../../../../Magento/Framework/View/LayoutFactory.html"><abbr title="Magento\Framework\View\LayoutFactory">LayoutFactory</abbr></a> $layoutFactory, <a href="../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a> $appState, <a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a> $urlModel, <abbr title="Pelago\Emogrifier">Emogrifier</abbr> $emogrifier, <a href="../../../../Magento/Email/Model/Source/Variables.html"><abbr title="Magento\Email\Model\Source\Variables">Variables</abbr></a> $configVariables, array $variables = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Stdlib/StringUtils.html"><abbr title="Magento\Framework\Stdlib\StringUtils">StringUtils</abbr></a></td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Escaper.html"><abbr title="Magento\Framework\Escaper">Escaper</abbr></a></td>
+                <td>$escaper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a></td>
+                <td>$assetRepo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a></td>
+                <td>$scopeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Variable\Model\VariableFactory">VariableFactory</abbr></td>
+                <td>$coreVariableFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/LayoutInterface.html"><abbr title="Magento\Framework\View\LayoutInterface">LayoutInterface</abbr></a></td>
+                <td>$layout</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/LayoutFactory.html"><abbr title="Magento\Framework\View\LayoutFactory">LayoutFactory</abbr></a></td>
+                <td>$layoutFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a></td>
+                <td>$appState</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a></td>
+                <td>$urlModel</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Pelago\Emogrifier">Emogrifier</abbr></td>
+                <td>$emogrifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Email/Model/Source/Variables.html"><abbr title="Magento\Email\Model\Source\Variables">Variables</abbr></a></td>
+                <td>$configVariables</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$variables</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setVariables">
+        <div class="location">in <a href="../../../../Magento/Framework/Filter/Template.html#method_setVariables"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a> at line         line 72</div>
+        <code>                    <a href="../../../../Magento/Framework/Filter/Template.html"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a>
+    <strong>setVariables</strong>(array $variables)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets template variables that's can be called through {var .</p>                    <p>..} statement</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$variables</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Filter/Template.html"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTemplateProcessor">
+        <div class="location">in <a href="../../../../Magento/Framework/Filter/Template.html#method_setTemplateProcessor"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a> at line         line 86</div>
+        <code>                    <abbr title="Magento\Framework\Filter\$this">$this</abbr>
+    <strong>setTemplateProcessor</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the processor for template directive.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td>it must return string</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Filter\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTemplateProcessor">
+        <div class="location">in <a href="../../../../Magento/Framework/Filter/Template.html#method_getTemplateProcessor"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a> at line         line 97</div>
+        <code>                    callable|null
+    <strong>getTemplateProcessor</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the processor for template directive.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_filter">
+        <div class="location">at line         line 962</div>
+        <code>                    mixed
+    <strong>filter</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Filter the string as template</p>                    <p>Overrides parent method in order to handle exceptions</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addAfterFilterCallback">
+        <div class="location">in <a href="../../../../Magento/Framework/Filter/Template.html#method_addAfterFilterCallback"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a> at line         line 177</div>
+        <code>                    <abbr title="Magento\Framework\Filter\$this">$this</abbr>
+    <strong>addAfterFilterCallback</strong>(callable $afterFilterCallback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a callback to run after main filtering has happened. Callback must accept a single argument and return
+a string of the processed value.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$afterFilterCallback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Filter\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_varDirective">
+        <div class="location">at line         line 579</div>
+        <code>                    string
+    <strong>varDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Var directive with modifiers support</p>                    <p>The |escape modifier is applied by default, use |raw to override</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_templateDirective">
+        <div class="location">in <a href="../../../../Magento/Framework/Filter/Template.html#method_templateDirective"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a> at line         line 227</div>
+        <code>                    mixed
+    <strong>templateDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allows templates to be included inside other templates</p>                    <p>Usage:</p>
+
+<pre><code>{{template config_path="&lt;PATH&gt;"}}
+</code></pre>
+
+<p><PATH> equals the XPATH to the system configuration value that contains the value of the template.
+This directive is useful to include things like a global header/footer.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dependDirective">
+        <div class="location">in <a href="../../../../Magento/Framework/Filter/Template.html#method_dependDirective"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a> at line         line 248</div>
+        <code>                    string
+    <strong>dependDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ifDirective">
+        <div class="location">in <a href="../../../../Magento/Framework/Filter/Template.html#method_ifDirective"><abbr title="Magento\Framework\Filter\Template">Template</abbr></a> at line         line 266</div>
+        <code>                    string
+    <strong>ifDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUseAbsoluteLinks">
+        <div class="location">at line         line 212</div>
+        <code>                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+    <strong>setUseAbsoluteLinks</strong>(bool $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set use absolute links flag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Email\Model\Template\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUseSessionInUrl">
+        <div class="location">at line         line 224</div>
+        <code>                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+    <strong>setUseSessionInUrl</strong>(bool $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter whether SID is allowed in store directive</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Email\Model\Template\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPlainTemplateMode">
+        <div class="location">at line         line 236</div>
+        <code>                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+    <strong>setPlainTemplateMode</strong>(bool $plainTemplateMode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$plainTemplateMode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Email\Model\Template\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPlainTemplateMode">
+        <div class="location">at line         line 247</div>
+        <code>                    bool
+    <strong>isPlainTemplateMode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether template is plain</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIsChildTemplate">
+        <div class="location">at line         line 258</div>
+        <code>                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+    <strong>setIsChildTemplate</strong>(bool $isChildTemplate)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set whether template being filtered is child of another template</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$isChildTemplate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Email\Model\Template\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isChildTemplate">
+        <div class="location">at line         line 269</div>
+        <code>                    bool
+    <strong>isChildTemplate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get whether template being filtered is child of another template</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setStoreId">
+        <div class="location">at line         line 280</div>
+        <code>                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+    <strong>setStoreId</strong>(int $storeId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Email\Model\Template\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDesignParams">
+        <div class="location">at line         line 292</div>
+        <code>                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+    <strong>setDesignParams</strong>(array $designParams)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set design parameters</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$designParams</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Email\Model\Template\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDesignParams">
+        <div class="location">at line         line 303</div>
+        <code>                    array
+    <strong>getDesignParams</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get design parameters</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStoreId">
+        <div class="location">at line         line 313</div>
+        <code>                    integer
+    <strong>getStoreId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Getter. If $_storeId is null, return design store id.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_blockDirective">
+        <div class="location">at line         line 329</div>
+        <code>                    string
+    <strong>blockDirective</strong>(array $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Block html directive</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_layoutDirective">
+        <div class="location">at line         line 375</div>
+        <code>                    string
+    <strong>layoutDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve layout html directive</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_emulateAreaCallback">
+        <div class="location">at line         line 396</div>
+        <code>                    string
+    <strong>emulateAreaCallback</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve layout html directive callback</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_viewDirective">
+        <div class="location">at line         line 454</div>
+        <code>                    string
+    <strong>viewDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve View URL directive</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mediaDirective">
+        <div class="location">at line         line 467</div>
+        <code>                    string
+    <strong>mediaDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve media file URL directive</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_storeDirective">
+        <div class="location">at line         line 481</div>
+        <code>                    string
+    <strong>storeDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve store URL directive
+Support url and direct_url properties</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUrlModel">
+        <div class="location">at line         line 517</div>
+        <code>                    <abbr title="Magento\Email\Model\Template\$this">$this</abbr>
+    <strong>setUrlModel</strong>(<a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a> $urlModel)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set current URL model, which will be used for URLs generation.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a></td>
+                <td>$urlModel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Email\Model\Template\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_transDirective">
+        <div class="location">at line         line 536</div>
+        <code>                    string
+    <strong>transDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Trans directive for localized strings support</p>                    <p>Usage:</p>
+
+<p>{{trans "string to translate"}}
+  {{trans "string to %var" var="$variable"}}</p>
+
+<p>The |escape modifier is applied by default, use |raw to override</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifierEscape">
+        <div class="location">at line         line 649</div>
+        <code>                    string
+    <strong>modifierEscape</strong>(string $value, string $type = &#039;html&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Escape specified string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_protocolDirective">
+        <div class="location">at line         line 678</div>
+        <code>                    string
+    <strong>protocolDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>HTTP Protocol directive</p>                    <p>Usage:</p>
+
+<pre><code>{{protocol}} - current protocol http or https
+{{protocol url="www.domain.com/"}} - domain URL with current protocol
+{{protocol http="http://url" https="https://url"}}
+{{protocol store="1"}} - Optional parameter which gets protocol from provide store based on store ID or code
+</code></pre>
+</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Exception/MailException.html"><abbr title="Magento\Framework\Exception\MailException">MailException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configDirective">
+        <div class="location">at line         line 711</div>
+        <code>                    string
+    <strong>configDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store config directive</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_customvarDirective">
+        <div class="location">at line         line 746</div>
+        <code>                    string
+    <strong>customvarDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Custom Variable directive</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cssDirective">
+        <div class="location">at line         line 778</div>
+        <code>                    string
+    <strong>cssDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load and return the contents of a CSS file</p>                    <p>Usage:</p>
+
+<pre><code>{{css file="css/filename.css"}} - Load file from theme directory
+{{css file="Magento_Sales::css/filename.css"}} - Load file from module directory or module directory in theme
+</code></pre>
+</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inlinecssDirective">
+        <div class="location">at line         line 821</div>
+        <code>                    string
+    <strong>inlinecssDirective</strong>(string[] $construction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set file to apply as inline CSS</p>                    <p>This directive will cause CSS files to be applied inline to the HTML in the email template.
+This directive does not inline the CSS itself, but adds the files to the parent template model so that the model
+can handle the inlining at a later point, once all HTML has been assembled.</p>
+
+<p>Usage:</p>
+
+<pre><code>{{inlinecss file="css/filename.css"}} - Load file from theme directory
+{{inlinecss file="Magento_Sales::css/filename.css"}} - Load file from module directory or module
+                                                       directory in theme
+</code></pre>
+</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$construction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Exception/MailException.html"><abbr title="Magento\Framework\Exception\MailException">MailException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCssFilesContent">
+        <div class="location">at line         line 877</div>
+        <code>                    string
+    <strong>getCssFilesContent</strong>(array $files)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load CSS file from materialized static view directory</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Exception/MailException.html"><abbr title="Magento\Framework\Exception\MailException">MailException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_applyInlineCss">
+        <div class="location">at line         line 911</div>
+        <code>                    string
+    <strong>applyInlineCss</strong>(string $html)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Merge HTML and CSS and return HTML that has CSS styles applied "inline" to the HTML tags. This is necessary
+in order to support all email clients.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$html</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Exception/MailException.html"><abbr title="Magento\Framework\Exception\MailException">MailException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

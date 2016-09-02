@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_OpenId_Provider | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_OpenId_Provider" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_OpenId_Provider
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_OpenId_Provider</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>OpenID provider (server) implementation</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $loginUrl = null, string $trustUrl = null, <a href="Zend_OpenId_Provider_User.html">Zend_OpenId_Provider_User</a> $user = null, <a href="Zend_OpenId_Provider_Storage.html">Zend_OpenId_Provider_Storage</a> $storage = null, integer $sessionTtl = 3600)
+        
+                                            <p>Constructs a Zend<em>OpenId</em>Provider object with given parameters.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOpEndpoint">setOpEndpoint</a>(string $url)
+        
+                                            <p>Sets the OP Endpoint URL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_register">register</a>(string $id, string $password)
+        
+                                            <p>Registers a new user with given $id and $password
+Returns true in case of success and false if user with given $id already
+exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasUser">hasUser</a>(string $id)
+        
+                                            <p>Returns true if user with given $id exists and false otherwise</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_login">login</a>(string $id, string $password)
+        
+                                            <p>Performs login of user with given $id and $password
+Returns true in case of success and false otherwise</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_logout">logout</a>()
+        
+                                            <p>Performs logout. Clears information about logged in user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLoggedInUser">getLoggedInUser</a>()
+        
+                                            <p>Returns identity URL of current logged in user or false</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSiteRoot">getSiteRoot</a>(array $params)
+        
+                                            <p>Retrieve consumer's root URL from request query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_allowSite">allowSite</a>(string $root, mixed $extensions = null)
+        
+                                            <p>Allows consumer with given root URL to authenticate current logged
+in user. Returns true on success and false on error.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_denySite">denySite</a>(string $root)
+        
+                                            <p>Prohibit consumer with given root URL to authenticate current logged
+in user. Returns true on success and false on error.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delSite">delSite</a>(string $root)
+        
+                                            <p>Delete consumer with given root URL from known sites of current logged
+in user. Next time this consumer will try to authenticate the user,
+Provider will ask user's confirmation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTrustedSites">getTrustedSites</a>()
+        
+                                            <p>Returns list of known consumers for current logged in user or false
+if he is not logged in.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handle">handle</a>(array $params = null, mixed $extensions = null, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response = null)
+        
+                                            <p>Handles HTTP request from consumer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_respondToConsumer">respondToConsumer</a>(array $params, mixed $extensions = null, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response = null)
+        
+                                            <p>Perepares information to send back to consumer's authentication request,
+signs it using shared secret and send back through HTTP redirection</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 107</div>
+        <code>                    
+    <strong>__construct</strong>(string $loginUrl = null, string $trustUrl = null, <a href="Zend_OpenId_Provider_User.html">Zend_OpenId_Provider_User</a> $user = null, <a href="Zend_OpenId_Provider_Storage.html">Zend_OpenId_Provider_Storage</a> $storage = null, integer $sessionTtl = 3600)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructs a Zend<em>OpenId</em>Provider object with given parameters.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$loginUrl</td>
+                <td>is an URL that provides login screen for
+ end-user (by default it is the same URL with additional GET variable
+ openid.action=login)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$trustUrl</td>
+                <td>is an URL that shows a question if end-user
+ trust to given consumer (by default it is the same URL with additional
+ GET variable openid.action=trust)</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_OpenId_Provider_User.html">Zend_OpenId_Provider_User</a></td>
+                <td>$user</td>
+                <td>is an object for communication
+ with User-Agent and store information about logged-in user (it is a
+ Zend<em>OpenId</em>Provider<em>User</em>Session object by default)</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_OpenId_Provider_Storage.html">Zend_OpenId_Provider_Storage</a></td>
+                <td>$storage</td>
+                <td>is an object for keeping
+ persistent database (it is a Zend<em>OpenId</em>Provider<em>Storage</em>File object
+ by default)</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$sessionTtl</td>
+                <td>is a default time to live for association
+  session in seconds (1 hour by default). Consumer must reestablish
+  association after that time.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOpEndpoint">
+        <div class="location">at line         line 146</div>
+        <code>                    null
+    <strong>setOpEndpoint</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the OP Endpoint URL</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>the OP Endpoint URL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_register">
+        <div class="location">at line         line 160</div>
+        <code>                    bool
+    <strong>register</strong>(string $id, string $password)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Registers a new user with given $id and $password
+Returns true in case of success and false if user with given $id already
+exists</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>user identity URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>encoded user password</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasUser">
+        <div class="location">at line         line 174</div>
+        <code>                    bool
+    <strong>hasUser</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if user with given $id exists and false otherwise</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>user identity URL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_login">
+        <div class="location">at line         line 189</div>
+        <code>                    bool
+    <strong>login</strong>(string $id, string $password)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Performs login of user with given $id and $password
+Returns true in case of success and false otherwise</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>user identity URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>user password</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logout">
+        <div class="location">at line         line 206</div>
+        <code>                    void
+    <strong>logout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Performs logout. Clears information about logged in user.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLoggedInUser">
+        <div class="location">at line         line 217</div>
+        <code>                    mixed
+    <strong>getLoggedInUser</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns identity URL of current logged in user or false</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSiteRoot">
+        <div class="location">at line         line 228</div>
+        <code>                    mixed
+    <strong>getSiteRoot</strong>(array $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve consumer's root URL from request query.</p>                    <p>Returns URL or false in case of failure</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>query arguments</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allowSite">
+        <div class="location">at line         line 258</div>
+        <code>                    bool
+    <strong>allowSite</strong>(string $root, mixed $extensions = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allows consumer with given root URL to authenticate current logged
+in user. Returns true on success and false on error.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$root</td>
+                <td>root URL</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$extensions</td>
+                <td>extension object or array of extensions objects</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_denySite">
+        <div class="location">at line         line 281</div>
+        <code>                    bool
+    <strong>denySite</strong>(string $root)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prohibit consumer with given root URL to authenticate current logged
+in user. Returns true on success and false on error.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$root</td>
+                <td>root URL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delSite">
+        <div class="location">at line         line 300</div>
+        <code>                    bool
+    <strong>delSite</strong>(string $root)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete consumer with given root URL from known sites of current logged
+in user. Next time this consumer will try to authenticate the user,
+Provider will ask user's confirmation.</p>                    <p>Returns true on success and false on error.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$root</td>
+                <td>root URL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTrustedSites">
+        <div class="location">at line         line 316</div>
+        <code>                    mixed
+    <strong>getTrustedSites</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns list of known consumers for current logged in user or false
+if he is not logged in.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handle">
+        <div class="location">at line         line 336</div>
+        <code>                    mixed
+    <strong>handle</strong>(array $params = null, mixed $extensions = null, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handles HTTP request from consumer</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>GET or POST variables. If this parameter is omited
+ or set to null, then $<em>GET or $</em>POST superglobal variable is used
+ according to REQUEST_METHOD.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$extensions</td>
+                <td>extension object or array of extensions objects</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+                <td>$response</td>
+                <td>an optional response
+ object to perform HTTP or HTML form redirection</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_respondToConsumer">
+        <div class="location">at line         line 645</div>
+        <code>                    bool
+    <strong>respondToConsumer</strong>(array $params, mixed $extensions = null, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Perepares information to send back to consumer's authentication request,
+signs it using shared secret and send back through HTTP redirection</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>GET or POST request variables</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$extensions</td>
+                <td>extension object or array of extensions objects</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+                <td>$response</td>
+                <td>an optional response
+ object to perform HTTP or HTML form redirection</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

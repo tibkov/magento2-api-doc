@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Locale_Format | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Locale_Format" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Locale_Format
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Locale_Format</strong>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>STANDARD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOptions">setOptions</a>(array $options = array())
+        
+                                            <p>Sets class wide options, if no option was given, the actual set options will be returned
+The 'precision' option of a value is used to truncate or stretch extra digits. -1 means not to touch the extra digits.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertNumerals">convertNumerals</a>(string $input, string $from, string $to = null)
+        
+                                            <p>Changes the numbers/digits within a given string from one script to another
+'Decimal' representated the stardard numbers 0-9, if a script does not exist
+an exception will be thrown.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNumber">getNumber</a>(string $input, array $options = array())
+        
+                                            <p>Returns the normalized number from a localized one
+Parsing depends on given locale (grouping and decimal)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toNumber">toNumber</a>(string $value, array $options = array())
+        
+                                            <p>Returns a locale formatted number depending on the given options.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isNumber">isNumber</a>(string $input, array $options = array())
+        
+                                            <p>Checks if the input contains a normalized or localized number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFloat">getFloat</a>(string $input, array $options = array())
+        
+                                            <p>Alias for getNumber</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toFloat">toFloat</a>(string $value, array $options = array())
+        
+                                            <p>Returns a locale formatted integer number
+Alias for toNumber()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isFloat">isFloat</a>(string $value, array $options = array())
+        
+                                            <p>Returns if a float was found
+Alias for isNumber()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInteger">getInteger</a>(string $input, array $options = array())
+        
+                                            <p>Returns the first found integer from an string
+Parsing depends on given locale (grouping and decimal)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toInteger">toInteger</a>(string $value, array $options = array())
+        
+                                            <p>Returns a localized number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isInteger">isInteger</a>(string $value, array $options = array())
+        
+                                            <p>Returns if a integer was found</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertPhpToIsoFormat">convertPhpToIsoFormat</a>(string $format)
+        
+                                            <p>Converts a format string from PHP's date format to ISO format
+Remember that Zend Date always returns localized string, so a month name which returns the english
+month in php's date() will return the translated month name with this function.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDateFormat">getDateFormat</a>(string|<a href="Zend_Locale.html">Zend_Locale</a> $locale = null)
+        
+                                            <p>Returns the default date format for $locale.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDate">getDate</a>(string $date, array $options = array())
+        
+                                            <p>Returns an array with the normalized date from an locale date
+a input of 10.01.2006 without a $locale would return:
+array ('day' => 10, 'month' => 1, 'year' => 2006)
+The 'locale' option is only used to convert human readable day
+and month names to their numeric equivalents.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkDateFormat">checkDateFormat</a>(string $date, array $options = array())
+        
+                                            <p>Returns if the given datestring contains all date parts from the given format.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTimeFormat">getTimeFormat</a>(string|<a href="Zend_Locale.html">Zend_Locale</a> $locale = null)
+        
+                                            <p>Returns the default time format for $locale.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTime">getTime</a>(string $time, array $options = array())
+        
+                                            <p>Returns an array with 'hour', 'minute', and 'second' elements extracted from $time
+according to the order described in $format.  For a format of 'H:i:s', and
+an input of 11:20:55, getTime() would return:
+array ('hour' => 11, 'minute' => 20, 'second' => 55)
+The optional $locale parameter may be used to help extract times from strings
+containing both a time and a day or month name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDateTimeFormat">getDateTimeFormat</a>(string|<a href="Zend_Locale.html">Zend_Locale</a> $locale = null)
+        
+                                            <p>Returns the default datetime format for $locale.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDateTime">getDateTime</a>(string $datetime, array $options = array())
+        
+                                            <p>Returns an array with 'year', 'month', 'day', 'hour', 'minute', and 'second' elements
+extracted from $datetime according to the order described in $format.  For a format of 'd.M.y H:i:s',
+and an input of 10.05.1985 11:20:55, getDateTime() would return:
+array ('year' => 1985, 'month' => 5, 'day' => 10, 'hour' => 11, 'minute' => 20, 'second' => 55)
+The optional $locale parameter may be used to help extract times from strings
+containing both a time and a day or month name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setOptions">
+        <div class="location">at line         line 64</div>
+        <code>        static            array
+    <strong>setOptions</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets class wide options, if no option was given, the actual set options will be returned
+The 'precision' option of a value is used to truncate or stretch extra digits. -1 means not to touch the extra digits.</p>                    <p>The 'locale' option helps when parsing numbers and dates using separators and month names.
+The date format 'format<em>type' option selects between CLDR/ISO date format specifier tokens and PHP's date() tokens.
+The 'fix</em>date' option enables or disables heuristics that attempt to correct invalid dates.
+The 'number<em>format' option can be used to specify a default number format string
+The 'date</em>format' option can be used to specify a default date format string, but beware of using getDate(),
+checkDateFormat() and getTime() after using setOptions() with a 'format'.  To use these four methods
+with the default date format for a locale, use array('date_format' => null, 'locale' => $locale) for their options.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Array of options, keyed by option name: format<em>type = 'iso' | 'php', fix</em>date = true | false,
+                         locale = Zend_Locale | locale string, precision = whole number between -1 and 30</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>if no option was given</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Locale_Exception.html">Zend_Locale_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertNumerals">
+        <div class="location">at line         line 198</div>
+        <code>        static            string
+    <strong>convertNumerals</strong>(string $input, string $from, string $to = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Changes the numbers/digits within a given string from one script to another
+'Decimal' representated the stardard numbers 0-9, if a script does not exist
+an exception will be thrown.</p>                    <p>Examples for conversion from Arabic to Latin numerals:
+  convertNumerals('١١٠ Tests', 'Arab'); -> returns '100 Tests'
+Example for conversion from Latin to Arabic numerals:
+  convertNumerals('100 Tests', 'Latn', 'Arab'); -> returns '١١٠ Tests'</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$input</td>
+                <td>String to convert</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td>Script to parse, see {@link Zend_Locale::getScriptList()} for details.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td>OPTIONAL Script to convert to</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Returns the converted input</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Locale_Exception.html">Zend_Locale_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNumber">
+        <div class="location">at line         line 246</div>
+        <code>        static            string
+    <strong>getNumber</strong>(string $input, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the normalized number from a localized one
+Parsing depends on given locale (grouping and decimal)</p>                    <p>Examples for input:
+'2345.4356,1234' = 23455456.1234
+'+23,3452.123' = 233452.123
+'12343 ' = 12343
+'-9456' = -9456
+'0' = 0</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$input</td>
+                <td>Input string to parse for numbers</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: locale, precision. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Returns the extracted number</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Locale_Exception.html">Zend_Locale_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toNumber">
+        <div class="location">at line         line 300</div>
+        <code>        static            string
+    <strong>toNumber</strong>(string $value, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a locale formatted number depending on the given options.</p>                    <p>The seperation and fraction sign is used from the set locale.</p>
+
+<h2>0.#  -> 12345.12345 -> 12345.12345</h2>
+
+<h2>0.00 -> 12345.12345 -> 12345.12</h2>
+
+<h2>,##0.00 -> 12345.12345 -> 12,345.12</h2>
+</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Localized number string</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: number_format, locale, precision. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>locale formatted number</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Locale_Exception.html">Zend_Locale_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isNumber">
+        <div class="location">at line         line 510</div>
+        <code>        static            boolean
+    <strong>isNumber</strong>(string $input, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if the input contains a normalized or localized number</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$input</td>
+                <td>Localized number string</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: locale. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>Returns true if a number was found</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFloat">
+        <div class="location">at line         line 646</div>
+        <code>        static            float
+    <strong>getFloat</strong>(string $input, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Alias for getNumber</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$input</td>
+                <td>Number to localize</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: locale, precision. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toFloat">
+        <div class="location">at line         line 659</div>
+        <code>        static            string
+    <strong>toFloat</strong>(string $value, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a locale formatted integer number
+Alias for toNumber()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Number to normalize</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: locale, precision. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Locale formatted number</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isFloat">
+        <div class="location">at line         line 673</div>
+        <code>        static            boolean
+    <strong>isFloat</strong>(string $value, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns if a float was found
+Alias for isNumber()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Localized number string</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: locale. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>Returns true if a number was found</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInteger">
+        <div class="location">at line         line 694</div>
+        <code>        static            integer
+    <strong>getInteger</strong>(string $input, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the first found integer from an string
+Parsing depends on given locale (grouping and decimal)</p>                    <p>Examples for input:
+'  2345.4356,1234' = 23455456
+'+23,3452.123' = 233452
+' 12343 ' = 12343
+'-9456km' = -9456
+'0' = 0
+'(-){0,1}(\d+(&#46;){0,1})*(\,){0,1})\d+'</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$input</td>
+                <td>Input string to parse for numbers</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: locale. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>Returns the extracted number</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toInteger">
+        <div class="location">at line         line 707</div>
+        <code>        static            string
+    <strong>toInteger</strong>(string $value, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a localized number</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Number to normalize</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: locale. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Locale formatted number</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isInteger">
+        <div class="location">at line         line 721</div>
+        <code>        static            boolean
+    <strong>isInteger</strong>(string $value, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns if a integer was found</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Localized number string</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: locale. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>Returns true if a integer was found</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertPhpToIsoFormat">
+        <div class="location">at line         line 746</div>
+        <code>        static            string
+    <strong>convertPhpToIsoFormat</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts a format string from PHP's date format to ISO format
+Remember that Zend Date always returns localized string, so a month name which returns the english
+month in php's date() will return the translated month name with this function.</p>                    <p>.. use 'en' as locale
+if you are in need of the original english names</p>
+
+<p>The conversion has the following restrictions:
+'a', 'A' - Meridiem is not explicit upper/lowercase, you have to upper/lowercase the translated value yourself</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>Format string in PHP's date format</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Format string in ISO format</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDateFormat">
+        <div class="location">at line         line 1130</div>
+        <code>        static            string
+    <strong>getDateFormat</strong>(string|<a href="Zend_Locale.html">Zend_Locale</a> $locale = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the default date format for $locale.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Locale.html">Zend_Locale</a></td>
+                <td>$locale</td>
+                <td>OPTIONAL Locale of $number, possibly in string form (e.g. 'de_AT')</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>format</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Locale_Exception.html">Zend_Locale_Exception</a></td>
+                <td>throws an exception when locale data is broken</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDate">
+        <div class="location">at line         line 1154</div>
+        <code>        static            array
+    <strong>getDate</strong>(string $date, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array with the normalized date from an locale date
+a input of 10.01.2006 without a $locale would return:
+array ('day' => 10, 'month' => 1, 'year' => 2006)
+The 'locale' option is only used to convert human readable day
+and month names to their numeric equivalents.</p>                    <p>The 'format' option allows specification of self-defined date formats,
+when not using the default format for the 'locale'.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td>Date string</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: format<em>type, fix</em>date, locale, date_format. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Possible array members: day, month, year, hour, minute, second, fixed, format</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkDateFormat">
+        <div class="location">at line         line 1174</div>
+        <code>        static            boolean
+    <strong>checkDateFormat</strong>(string $date, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns if the given datestring contains all date parts from the given format.</p>                    <p>If no format is given, the default date format from the locale is used
+If you want to check if the date is a proper date you should use Zend_Date::isDate()</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td>Date string</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: format<em>type, fix</em>date, locale, date_format. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTimeFormat">
+        <div class="location">at line         line 1230</div>
+        <code>        static            string
+    <strong>getTimeFormat</strong>(string|<a href="Zend_Locale.html">Zend_Locale</a> $locale = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the default time format for $locale.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Locale.html">Zend_Locale</a></td>
+                <td>$locale</td>
+                <td>OPTIONAL Locale of $number, possibly in string form (e.g. 'de_AT')</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>format</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Locale_Exception.html">Zend_Locale_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTime">
+        <div class="location">at line         line 1252</div>
+        <code>        static            array
+    <strong>getTime</strong>(string $time, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array with 'hour', 'minute', and 'second' elements extracted from $time
+according to the order described in $format.  For a format of 'H:i:s', and
+an input of 11:20:55, getTime() would return:
+array ('hour' => 11, 'minute' => 20, 'second' => 55)
+The optional $locale parameter may be used to help extract times from strings
+containing both a time and a day or month name.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$time</td>
+                <td>Time string</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: format<em>type, fix</em>date, locale, date_format. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Possible array members: day, month, year, hour, minute, second, fixed, format</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDateTimeFormat">
+        <div class="location">at line         line 1269</div>
+        <code>        static            string
+    <strong>getDateTimeFormat</strong>(string|<a href="Zend_Locale.html">Zend_Locale</a> $locale = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the default datetime format for $locale.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Locale.html">Zend_Locale</a></td>
+                <td>$locale</td>
+                <td>OPTIONAL Locale of $number, possibly in string form (e.g. 'de_AT')</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>format</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Locale_Exception.html">Zend_Locale_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDateTime">
+        <div class="location">at line         line 1291</div>
+        <code>        static            array
+    <strong>getDateTime</strong>(string $datetime, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array with 'year', 'month', 'day', 'hour', 'minute', and 'second' elements
+extracted from $datetime according to the order described in $format.  For a format of 'd.M.y H:i:s',
+and an input of 10.05.1985 11:20:55, getDateTime() would return:
+array ('year' => 1985, 'month' => 5, 'day' => 10, 'hour' => 11, 'minute' => 20, 'second' => 55)
+The optional $locale parameter may be used to help extract times from strings
+containing both a time and a day or month name.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$datetime</td>
+                <td>DateTime string</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options: format<em>type, fix</em>date, locale, date_format. See {@link setOptions()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Possible array members: day, month, year, hour, minute, second, fixed, format</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

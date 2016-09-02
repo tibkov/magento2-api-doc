@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_Ebay_Finding_Search_Item | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_Ebay_Finding_Search_Item" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_Ebay_Finding_Search_Item
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_Ebay_Finding_Search_Item</strong>        extends <a href="Zend_Service_Ebay_Finding_Abstract.html">Zend_Service_Ebay_Finding_Abstract</a>
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_autoPay">
+                                                                                boolean
+                </td>
+                <td>$autoPay</td>
+                <td class="last">If true, the seller requires immediate payment for the item. If false (or
+not specified), immediate payment is not requested. Buyers must have a
+PayPal account to purchase items that require immediate payment.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_charityId">
+                                                                                integer
+                </td>
+                <td>$charityId</td>
+                <td class="last">A unique identification number assigned by eBay to registered nonprofit
+charity organizations.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_country">
+                                                                                string
+                </td>
+                <td>$country</td>
+                <td class="last">Two-letter ISO 3166 country code to indicate the country where the item
+is located.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_distance">
+                                                                                float
+                </td>
+                <td>$distance</td>
+                <td class="last">The distance that the item is from the buyer, calculated usin
+ buyerPostalCode.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_galleryPlusPictureURL">
+                                                                                string[]
+                </td>
+                <td>$galleryPlusPictureURL</td>
+                <td class="last">URL for the Gallery Plus image.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_galleryURL">
+                                                                                string
+                </td>
+                <td>$galleryURL</td>
+                <td class="last">URL for the Gallery thumbnail image.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_globalId">
+                                                                                string
+                </td>
+                <td>$globalId</td>
+                <td class="last">The identifier for the site on which the item is listed.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_itemId">
+                                                                                string
+                </td>
+                <td>$itemId</td>
+                <td class="last">The ID that uniquely identifies the item listing.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_listingInfo">
+                                                                                <a href="Zend_Service_Ebay_Finding_ListingInfo.html">Zend_Service_Ebay_Finding_ListingInfo</a>
+                </td>
+                <td>$listingInfo</td>
+                <td class="last">The format type of the listing, such as online auction, fixed price, or
+advertisement.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_location">
+                                                                                string
+                </td>
+                <td>$location</td>
+                <td class="last">Physical location of the item, as specified by the seller.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_paymentMethod">
+                                                                                string[]
+                </td>
+                <td>$paymentMethod</td>
+                <td class="last">Identifies the payment method (or methods) the seller will accept for the
+item (such as PayPal).</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_postalCode">
+                                                                                string
+                </td>
+                <td>$postalCode</td>
+                <td class="last">The postal code where the listed item is located.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_primaryCategory">
+                                                                                <a href="Zend_Service_Ebay_Finding_Category.html">Zend_Service_Ebay_Finding_Category</a>
+                </td>
+                <td>$primaryCategory</td>
+                <td class="last">Details about the first (or only) category in which the item is listed.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_productId">
+                                                                                string
+                </td>
+                <td>$productId</td>
+                <td class="last">Unique identifier for the eBay catalog product with which the item was
+listed.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_secondaryCategory">
+                                                                                <a href="Zend_Service_Ebay_Finding_Category.html">Zend_Service_Ebay_Finding_Category</a>
+                </td>
+                <td>$secondaryCategory</td>
+                <td class="last">Details about the second category in which the item is listed.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sellerInfo">
+                                                                                <a href="Zend_Service_Ebay_Finding_SellerInfo.html">Zend_Service_Ebay_Finding_SellerInfo</a>
+                </td>
+                <td>$sellerInfo</td>
+                <td class="last">Information about the item's seller.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sellingStatus">
+                                                                                <a href="Zend_Service_Ebay_Finding_SellingStatus.html">Zend_Service_Ebay_Finding_SellingStatus</a>
+                </td>
+                <td>$sellingStatus</td>
+                <td class="last">Specifies the item's selling status with regards to eBay's processing
+workflow.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shippingInfo">
+                                                                                <a href="Zend_Service_Ebay_Finding_ShippingInfo.html">Zend_Service_Ebay_Finding_ShippingInfo</a>
+                </td>
+                <td>$shippingInfo</td>
+                <td class="last">Container for data about a listing's shipping details.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_storeInfo">
+                                                                                <a href="Zend_Service_Ebay_Finding_Storefront.html">Zend_Service_Ebay_Finding_Storefront</a>
+                </td>
+                <td>$storeInfo</td>
+                <td class="last">Information about the eBay store in which the item is listed.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_subtitle">
+                                                                                string
+                </td>
+                <td>$subtitle</td>
+                <td class="last">Subtitle of the item.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_title">
+                                                                                string
+                </td>
+                <td>$title</td>
+                <td class="last">Name of the item as it appears in the listing title, or in search and
+browse results.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_viewItemURL">
+                                                                                string
+                </td>
+                <td>$viewItemURL</td>
+                <td class="last">The URL to view this specific listing on eBay.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $dom)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Ebay_Finding_Abstract.html#method___construct">Zend_Service_Ebay_Finding_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attributes">attributes</a>(string $tag, string $attribute = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Ebay_Finding_Abstract.html#method_attributes">Zend_Service_Ebay_Finding_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDom">getDom</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Ebay_Finding_Abstract.html#method_getDom">Zend_Service_Ebay_Finding_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/DOMXPath">DOMXPath</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getXPath">getXPath</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Ebay_Finding_Abstract.html#method_getXPath">Zend_Service_Ebay_Finding_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Ebay_Finding_Response_Items.html">Zend_Service_Ebay_Finding_Response_Items</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_findItemsByProduct">findItemsByProduct</a>(<a href="Zend_Service_Ebay_Finding.html">Zend_Service_Ebay_Finding</a> $proxy, <a href="Zend_Config.html">Zend_Config</a>|array $options = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="Zend_Service_Ebay_Finding_Abstract.html#method___construct">Zend_Service_Ebay_Finding_Abstract</a> at line         line 61</div>
+        <code>                    void
+    <strong>__construct</strong>(<a target="_blank" href="http://php.net/DOMElement">DOMElement</a> $dom)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+                <td>$dom</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attributes">
+        <div class="location">in <a href="Zend_Service_Ebay_Finding_Abstract.html#method_attributes">Zend_Service_Ebay_Finding_Abstract</a> at line         line 73</div>
+        <code>                    mixed
+    <strong>attributes</strong>(string $tag, string $attribute = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$attribute</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDom">
+        <div class="location">in <a href="Zend_Service_Ebay_Finding_Abstract.html#method_getDom">Zend_Service_Ebay_Finding_Abstract</a> at line         line 124</div>
+        <code>                    <a target="_blank" href="http://php.net/DOMElement">DOMElement</a>
+    <strong>getDom</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMElement">DOMElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getXPath">
+        <div class="location">in <a href="Zend_Service_Ebay_Finding_Abstract.html#method_getXPath">Zend_Service_Ebay_Finding_Abstract</a> at line         line 132</div>
+        <code>                    <a target="_blank" href="http://php.net/DOMXPath">DOMXPath</a>
+    <strong>getXPath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DOMXPath">DOMXPath</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findItemsByProduct">
+        <div class="location">at line         line 389</div>
+        <code>                    <a href="Zend_Service_Ebay_Finding_Response_Items.html">Zend_Service_Ebay_Finding_Response_Items</a>
+    <strong>findItemsByProduct</strong>(<a href="Zend_Service_Ebay_Finding.html">Zend_Service_Ebay_Finding</a> $proxy, <a href="Zend_Config.html">Zend_Config</a>|array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Ebay_Finding.html">Zend_Service_Ebay_Finding</a></td>
+                <td>$proxy</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Config.html">Zend_Config</a>|array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Ebay_Finding_Response_Items.html">Zend_Service_Ebay_Finding_Response_Items</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

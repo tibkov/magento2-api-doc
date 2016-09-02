@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Store\Model\StoreManager | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Store_Model_StoreManager" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Store.html">Store</a></li>
+                                        <li><a href="../../../Magento/Store/Model.html">Model</a></li>
+    
+                <li>StoreManager</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            StoreManager
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>StoreManager</strong>        implements
+        <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>PARAM_RUN_CODE</td>
+                <td class="last">
+                    <p><em>Application run code</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARAM_RUN_TYPE</td>
+                <td class="last">
+                    <p><em>Application run type (store|website)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_SINGLE_STORE_MODE_ENABLED</td>
+                <td class="last">
+                    <p><em>Wether single store mode enabled or not</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Store/Api/StoreRepositoryInterface.html"><abbr title="Magento\Store\Api\StoreRepositoryInterface">StoreRepositoryInterface</abbr></a> $storeRepository, <a href="../../../Magento/Store/Api/GroupRepositoryInterface.html"><abbr title="Magento\Store\Api\GroupRepositoryInterface">GroupRepositoryInterface</abbr></a> $groupRepository, <a href="../../../Magento/Store/Api/WebsiteRepositoryInterface.html"><abbr title="Magento\Store\Api\WebsiteRepositoryInterface">WebsiteRepositoryInterface</abbr></a> $websiteRepository, <a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../Magento/Store/Api/StoreResolverInterface.html"><abbr title="Magento\Store\Api\StoreResolverInterface">StoreResolverInterface</abbr></a> $storeResolver, <a href="../../../Magento/Framework/Cache/FrontendInterface.html"><abbr title="Magento\Framework\Cache\FrontendInterface">FrontendInterface</abbr></a> $cache, bool $isSingleStoreAllowed = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCurrentStore">setCurrentStore</a>(string $store)
+        
+                                            <p>Set current default store</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setIsSingleStoreModeAllowed">setIsSingleStoreModeAllowed</a>(bool $value)
+        
+                                            <p>Allow or disallow single store mode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasSingleStore">hasSingleStore</a>()
+        
+                                            <p>Check if store has only one store view</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isSingleStoreMode">isSingleStoreMode</a>()
+        
+                                            <p>Check if system is run in the single store mode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStore">getStore</a>(null|string|bool|int|<a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a> $storeId = null)
+        
+                                            <p>Retrieve application store object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStores">getStores</a>(bool $withDefault = false, bool $codeKey = false)
+        
+                                            <p>Retrieve stores array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Store/Api/Data/WebsiteInterface.html"><abbr title="Magento\Store\Api\Data\WebsiteInterface">WebsiteInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWebsite">getWebsite</a>(null|bool|int|string|<a href="../../../Magento/Store/Api/Data/WebsiteInterface.html"><abbr title="Magento\Store\Api\Data\WebsiteInterface">WebsiteInterface</abbr></a> $websiteId = null)
+        
+                                            <p>Retrieve application website object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Store/Api/Data/WebsiteInterface.html"><abbr title="Magento\Store\Api\Data\WebsiteInterface">WebsiteInterface</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWebsites">getWebsites</a>(bool $withDefault = false, bool $codeKey = false)
+        
+                                            <p>Get loaded websites</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reinitStores">reinitStores</a>()
+        
+                                            <p>Reinitialize store list</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultStoreView">getDefaultStoreView</a>()
+        
+                                            <p>Retrieve default store for default group and website</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Store/Api/Data/GroupInterface.html"><abbr title="Magento\Store\Api\Data\GroupInterface">GroupInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGroup">getGroup</a>(null|<a href="../../../Magento/Store/Api/Data/GroupInterface.html"><abbr title="Magento\Store\Api\Data\GroupInterface">GroupInterface</abbr></a>|string $groupId = null)
+        
+                                            <p>Retrieve application store group object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Store/Api/Data/GroupInterface.html"><abbr title="Magento\Store\Api\Data\GroupInterface">GroupInterface</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGroups">getGroups</a>(bool $withDefault = false)
+        
+                                            <p>Prepare array of store groups</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 92</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Store/Api/StoreRepositoryInterface.html"><abbr title="Magento\Store\Api\StoreRepositoryInterface">StoreRepositoryInterface</abbr></a> $storeRepository, <a href="../../../Magento/Store/Api/GroupRepositoryInterface.html"><abbr title="Magento\Store\Api\GroupRepositoryInterface">GroupRepositoryInterface</abbr></a> $groupRepository, <a href="../../../Magento/Store/Api/WebsiteRepositoryInterface.html"><abbr title="Magento\Store\Api\WebsiteRepositoryInterface">WebsiteRepositoryInterface</abbr></a> $websiteRepository, <a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../Magento/Store/Api/StoreResolverInterface.html"><abbr title="Magento\Store\Api\StoreResolverInterface">StoreResolverInterface</abbr></a> $storeResolver, <a href="../../../Magento/Framework/Cache/FrontendInterface.html"><abbr title="Magento\Framework\Cache\FrontendInterface">FrontendInterface</abbr></a> $cache, bool $isSingleStoreAllowed = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Store/Api/StoreRepositoryInterface.html"><abbr title="Magento\Store\Api\StoreRepositoryInterface">StoreRepositoryInterface</abbr></a></td>
+                <td>$storeRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Api/GroupRepositoryInterface.html"><abbr title="Magento\Store\Api\GroupRepositoryInterface">GroupRepositoryInterface</abbr></a></td>
+                <td>$groupRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Api/WebsiteRepositoryInterface.html"><abbr title="Magento\Store\Api\WebsiteRepositoryInterface">WebsiteRepositoryInterface</abbr></a></td>
+                <td>$websiteRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a></td>
+                <td>$scopeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Api/StoreResolverInterface.html"><abbr title="Magento\Store\Api\StoreResolverInterface">StoreResolverInterface</abbr></a></td>
+                <td>$storeResolver</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Cache/FrontendInterface.html"><abbr title="Magento\Framework\Cache\FrontendInterface">FrontendInterface</abbr></a></td>
+                <td>$cache</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isSingleStoreAllowed</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCurrentStore">
+        <div class="location">at line         line 113</div>
+        <code>                    void
+    <strong>setCurrentStore</strong>(string $store)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set current default store</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIsSingleStoreModeAllowed">
+        <div class="location">at line         line 121</div>
+        <code>                    void
+    <strong>setIsSingleStoreModeAllowed</strong>(bool $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allow or disallow single store mode</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasSingleStore">
+        <div class="location">at line         line 129</div>
+        <code>                    bool
+    <strong>hasSingleStore</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if store has only one store view</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSingleStoreMode">
+        <div class="location">at line         line 138</div>
+        <code>                    bool
+    <strong>isSingleStoreMode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if system is run in the single store mode</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStore">
+        <div class="location">at line         line 146</div>
+        <code>                    <a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a>
+    <strong>getStore</strong>(null|string|bool|int|<a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a> $storeId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve application store object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|string|bool|int|<a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a></td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStores">
+        <div class="location">at line         line 170</div>
+        <code>                    <a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a>[]
+    <strong>getStores</strong>(bool $withDefault = false, bool $codeKey = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve stores array</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$withDefault</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$codeKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWebsite">
+        <div class="location">at line         line 189</div>
+        <code>                    <a href="../../../Magento/Store/Api/Data/WebsiteInterface.html"><abbr title="Magento\Store\Api\Data\WebsiteInterface">WebsiteInterface</abbr></a>
+    <strong>getWebsite</strong>(null|bool|int|string|<a href="../../../Magento/Store/Api/Data/WebsiteInterface.html"><abbr title="Magento\Store\Api\Data\WebsiteInterface">WebsiteInterface</abbr></a> $websiteId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve application website object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|bool|int|string|<a href="../../../Magento/Store/Api/Data/WebsiteInterface.html"><abbr title="Magento\Store\Api\Data\WebsiteInterface">WebsiteInterface</abbr></a></td>
+                <td>$websiteId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Store/Api/Data/WebsiteInterface.html"><abbr title="Magento\Store\Api\Data\WebsiteInterface">WebsiteInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWebsites">
+        <div class="location">at line         line 206</div>
+        <code>                    <a href="../../../Magento/Store/Api/Data/WebsiteInterface.html"><abbr title="Magento\Store\Api\Data\WebsiteInterface">WebsiteInterface</abbr></a>[]
+    <strong>getWebsites</strong>(bool $withDefault = false, bool $codeKey = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get loaded websites</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$withDefault</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$codeKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Store/Api/Data/WebsiteInterface.html"><abbr title="Magento\Store\Api\Data\WebsiteInterface">WebsiteInterface</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reinitStores">
+        <div class="location">at line         line 225</div>
+        <code>                    void
+    <strong>reinitStores</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reinitialize store list</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultStoreView">
+        <div class="location">at line         line 237</div>
+        <code>                    <a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a>|null
+    <strong>getDefaultStoreView</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve default store for default group and website</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Store/Api/Data/StoreInterface.html"><abbr title="Magento\Store\Api\Data\StoreInterface">StoreInterface</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGroup">
+        <div class="location">at line         line 247</div>
+        <code>                    <a href="../../../Magento/Store/Api/Data/GroupInterface.html"><abbr title="Magento\Store\Api\Data\GroupInterface">GroupInterface</abbr></a>
+    <strong>getGroup</strong>(null|<a href="../../../Magento/Store/Api/Data/GroupInterface.html"><abbr title="Magento\Store\Api\Data\GroupInterface">GroupInterface</abbr></a>|string $groupId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve application store group object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|<a href="../../../Magento/Store/Api/Data/GroupInterface.html"><abbr title="Magento\Store\Api\Data\GroupInterface">GroupInterface</abbr></a>|string</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Store/Api/Data/GroupInterface.html"><abbr title="Magento\Store\Api\Data\GroupInterface">GroupInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGroups">
+        <div class="location">at line         line 262</div>
+        <code>                    <a href="../../../Magento/Store/Api/Data/GroupInterface.html"><abbr title="Magento\Store\Api\Data\GroupInterface">GroupInterface</abbr></a>[]
+    <strong>getGroups</strong>(bool $withDefault = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepare array of store groups</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$withDefault</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Store/Api/Data/GroupInterface.html"><abbr title="Magento\Store\Api\Data\GroupInterface">GroupInterface</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

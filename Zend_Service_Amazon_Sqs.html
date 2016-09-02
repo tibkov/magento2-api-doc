@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_Amazon_Sqs | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_Amazon_Sqs" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_Amazon_Sqs
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_Amazon_Sqs</strong>        extends <a href="Zend_Service_Amazon_Abstract.html">Zend_Service_Amazon_Abstract</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class for connecting to the Amazon Simple Queue Service (SQS)</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>CREATE_TIMEOUT_DEFAULT</td>
+                <td class="last">
+                    <p><em>Default timeout for createQueue() function</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHttpClient">setHttpClient</a>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $httpClient)
+        
+                                            <p>Sets the HTTP client object to use for retrieving the feeds.  If none
+is set, the default Zend<em>Http</em>Client will be used.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Abstract.html#method_setHttpClient">Zend_Service_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpClient">getHttpClient</a>()
+        
+                                            <p>Gets the HTTP client object.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Abstract.html#method_getHttpClient">Zend_Service_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setKeys">setKeys</a>($accessKey, $secretKey)
+        
+                                            <p>Set the keys to use when accessing SQS.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Amazon_Abstract.html#method_setKeys">Zend_Service_Amazon_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>($accessKey = null, $secretKey = null, string $region = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEndpoint">setEndpoint</a>(string $region)
+        
+                                            <p>Set SQS endpoint</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEndpoint">getEndpoint</a>()
+        
+                                            <p>Get the SQS endpoint</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEndpoints">getEndpoints</a>()
+        
+                                            <p>Get possible SQS endpoints</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_create">create</a>(string $queue_name, integer $timeout = null)
+        
+                                            <p>Create a new queue</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>(string $queue_url)
+        
+                                            <p>Delete a queue and all of it's messages</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQueues">getQueues</a>()
+        
+                                            <p>Get an array of all available queues</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>(string $queue_url)
+        
+                                            <p>Return the approximate number of messages in the queue</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>(string $queue_url, string $message)
+        
+                                            <p>Send a message to the queue</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_receive">receive</a>(string $queue_url, integer $max_messages = null, integer $timeout = null)
+        
+                                            <p>Get messages in the queue</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteMessage">deleteMessage</a>(string $queue_url, string $handle)
+        
+                                            <p>Delete a message from the queue</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttribute">getAttribute</a>(string $queue_url, string $attribute = &#039;All&#039;)
+        
+                                            <p>Get the attributes for the queue</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setHttpClient">
+        <div class="location">in <a href="Zend_Service_Abstract.html#method_setHttpClient">Zend_Service_Abstract</a> at line         line 51</div>
+        <code>final        static            
+    <strong>setHttpClient</strong>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $httpClient)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the HTTP client object to use for retrieving the feeds.  If none
+is set, the default Zend<em>Http</em>Client will be used.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+                <td>$httpClient</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpClient">
+        <div class="location">in <a href="Zend_Service_Abstract.html#method_getHttpClient">Zend_Service_Abstract</a> at line         line 62</div>
+        <code>final        static            <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>getHttpClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the HTTP client object.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKeys">
+        <div class="location">in <a href="Zend_Service_Amazon_Abstract.html#method_setKeys">Zend_Service_Amazon_Abstract</a> at line         line 68</div>
+        <code>        static            void
+    <strong>setKeys</strong>($accessKey, $secretKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the keys to use when accessing SQS.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$accessKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$secretKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 85</div>
+        <code>                    void
+    <strong>__construct</strong>($accessKey = null, $secretKey = null, string $region = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                    <p>The default region is us-east-1. Use the region to set it to one of the regions that is build-in into ZF.
+To add a new AWS region use the setEndpoint() method.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$accessKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$secretKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$region</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEndpoint">
+        <div class="location">at line         line 120</div>
+        <code>                    
+    <strong>setEndpoint</strong>(string $region)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set SQS endpoint</p>                    <p>You can set SQS to on of the build-in regions. If the region does not exsist it will be added.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$region</td>
+                <td>region</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Amazon_Sqs_Exception.html">Zend_Service_Amazon_Sqs_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEndpoint">
+        <div class="location">at line         line 139</div>
+        <code>                    string
+    <strong>getEndpoint</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the SQS endpoint</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEndpoints">
+        <div class="location">at line         line 154</div>
+        <code>                    array
+    <strong>getEndpoints</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get possible SQS endpoints</p>                    <p>Since there is not an SQS webserive to get all possible endpoints, a hardcoded list is available.
+For the actual region list please check:
+http://docs.amazonwebservices.com/AWSSimpleQueueService/2009-02-01/APIReference/index.html?QueueServiceWsdlArticle.html</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location">at line         line 172</div>
+        <code>                    string|boolean
+    <strong>create</strong>(string $queue_name, integer $timeout = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new queue</p>                    <p>Visibility timeout is how long a message is left in the queue "invisible"
+to other readers.  If the message is acknowleged (deleted) before the
+timeout, then the message is deleted.  However, if the timeout expires
+then the message will be made available to other queue readers.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queue_name</td>
+                <td>queue name</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$timeout</td>
+                <td>default visibility timeout</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Amazon_Sqs_Exception.html">Zend_Service_Amazon_Sqs_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at line         line 217</div>
+        <code>                    boolean
+    <strong>delete</strong>(string $queue_url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete a queue and all of it's messages</p>                    <p>Returns false if the queue is not found, true if the queue exists</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queue_url</td>
+                <td>queue URL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Amazon_Sqs_Exception.html">Zend_Service_Amazon_Sqs_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueues">
+        <div class="location">at line         line 235</div>
+        <code>                    array
+    <strong>getQueues</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an array of all available queues</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Amazon_Sqs_Exception.html">Zend_Service_Amazon_Sqs_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">at line         line 265</div>
+        <code>                    integer
+    <strong>count</strong>(string $queue_url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the approximate number of messages in the queue</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queue_url</td>
+                <td>Queue URL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Amazon_Sqs_Exception.html">Zend_Service_Amazon_Sqs_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">at line         line 278</div>
+        <code>                    string
+    <strong>send</strong>(string $queue_url, string $message)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send a message to the queue</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queue_url</td>
+                <td>Queue URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>Message to send to the queue</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Message ID</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Amazon_Sqs_Exception.html">Zend_Service_Amazon_Sqs_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_receive">
+        <div class="location">at line         line 309</div>
+        <code>                    array
+    <strong>receive</strong>(string $queue_url, integer $max_messages = null, integer $timeout = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get messages in the queue</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queue_url</td>
+                <td>Queue name</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$max_messages</td>
+                <td>Maximum number of messages to return</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$timeout</td>
+                <td>Visibility timeout for these messages</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Amazon_Sqs_Exception.html">Zend_Service_Amazon_Sqs_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteMessage">
+        <div class="location">at line         line 361</div>
+        <code>                    boolean
+    <strong>deleteMessage</strong>(string $queue_url, string $handle)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete a message from the queue</p>                    <p>Returns true if the message is deleted, false if the deletion is
+unsuccessful.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queue_url</td>
+                <td>Queue URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$handle</td>
+                <td>Message handle as returned by SQS</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Amazon_Sqs_Exception.html">Zend_Service_Amazon_Sqs_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttribute">
+        <div class="location">at line         line 386</div>
+        <code>                    string
+    <strong>getAttribute</strong>(string $queue_url, string $attribute = &#039;All&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the attributes for the queue</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queue_url</td>
+                <td>Queue URL</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$attribute</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Amazon_Sqs_Exception.html">Zend_Service_Amazon_Sqs_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

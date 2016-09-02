@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Mail_Protocol_Imap | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Mail_Protocol_Imap" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Mail_Protocol_Imap
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Mail_Protocol_Imap</strong>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>TIMEOUT_CONNECTION</td>
+                <td class="last">
+                    <p><em>Default timeout in seconds for initiating session</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $host = &#039;&#039;, int|null $port = null, bool $ssl = false)
+        
+                                            <p>Public constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+        
+                                            <p>Public destructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_connect">connect</a>(string $host, int|null $port = null, string|bool $ssl = false)
+        
+                                            <p>Open connection to IMAP server</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_readLine">readLine</a>(array|string $tokens = array(), string $wantedTag = &#039;*&#039;, bool $dontParse = false)
+        
+                                            <p>read a response "line" (could also be more than one real line if response has {.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null|bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_readResponse">readResponse</a>($tag, $dontParse = false)
+        
+                                            <p>read all lines of response until given tag is found (last line of response)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendRequest">sendRequest</a>(string $command, array $tokens = array(), string $tag = null)
+        
+                                            <p>send a request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_requestAndResponse">requestAndResponse</a>(string $command, array $tokens = array(), bool $dontParse = false)
+        
+                                            <p>send a request and get response at once</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_escapeString">escapeString</a>(string|array $string)
+        
+                                            <p>escape one or more literals i.e. for sendRequest</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_escapeList">escapeList</a>(array $list)
+        
+                                            <p>escape a list with literals or lists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_login">login</a>(string $user, string $password)
+        
+                                            <p>Login to IMAP server.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_logout">logout</a>()
+        
+                                            <p>logout of imap server</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_capability">capability</a>()
+        
+                                            <p>Get capabilities from IMAP server</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_examineOrSelect">examineOrSelect</a>(string $command = &#039;EXAMINE&#039;, string $box = &#039;INBOX&#039;)
+        
+                                            <p>Examine and select have the same response. The common code for both
+is in this method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_select">select</a>(string $box = &#039;INBOX&#039;)
+        
+                                            <p>change folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_examine">examine</a>(string $box = &#039;INBOX&#039;)
+        
+                                            <p>examine folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetch">fetch</a>(string|array $items, int $from, int|null $to = null)
+        
+                                            <p>fetch one or more items of one or more messages</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listMailbox">listMailbox</a>(string $reference = &#039;&#039;, string $mailbox = &#039;*&#039;)
+        
+                                            <p>get mailbox list</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_store">store</a>(array $flags, int $from, int|null $to = null, string|null $mode = null, bool $silent = true)
+        
+                                            <p>set flags</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_append">append</a>(string $folder, string $message, array $flags = null, string $date = null)
+        
+                                            <p>append a new message to given folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copy">copy</a>($folder, $from, $to = null)
+        
+                                            <p>copy message set from current folder to other folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_create">create</a>(string $folder)
+        
+                                            <p>create a new folder (and parent folders if needed)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rename">rename</a>(string $old, string $new)
+        
+                                            <p>rename an existing folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>(string $folder)
+        
+                                            <p>remove a folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_expunge">expunge</a>()
+        
+                                            <p>permanently remove messages</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_noop">noop</a>()
+        
+                                            <p>send noop</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_search">search</a>(array $params)
+        
+                                            <p>do a search request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 58</div>
+        <code>                    
+    <strong>__construct</strong>(string $host = &#039;&#039;, int|null $port = null, bool $ssl = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Public constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$host</td>
+                <td>hostname or IP address of IMAP server, if given connect() is called</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$port</td>
+                <td>port of IMAP server, null for default (143 or 993 for ssl)</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$ssl</td>
+                <td>use ssl? 'SSL', 'TLS' or false</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">at line         line 68</div>
+        <code>                    
+    <strong>__destruct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Public destructor</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_connect">
+        <div class="location">at line         line 82</div>
+        <code>                    string
+    <strong>connect</strong>(string $host, int|null $port = null, string|bool $ssl = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Open connection to IMAP server</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$host</td>
+                <td>hostname or IP address of IMAP server</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$port</td>
+                <td>of IMAP server, default is 143 (993 for ssl)</td>
+            </tr>
+                    <tr>
+                <td>string|bool</td>
+                <td>$ssl</td>
+                <td>use 'SSL', 'TLS' or false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>welcome message</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_readLine">
+        <div class="location">at line         line 283</div>
+        <code>                    bool
+    <strong>readLine</strong>(array|string $tokens = array(), string $wantedTag = &#039;*&#039;, bool $dontParse = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>read a response "line" (could also be more than one real line if response has {.</p>                    <p>.}<NL>)
+and do a simple decode</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$tokens</td>
+                <td>decoded tokens are returned by reference, if $dontParse
+                                 is true the unparsed line is returned here</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$wantedTag</td>
+                <td>check for this tag for response code. Default '*' is
+                                 continuation tag.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$dontParse</td>
+                <td>if true only the unparsed line is returned $tokens</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>if returned tag matches wanted tag</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_readResponse">
+        <div class="location">at line         line 307</div>
+        <code>                    null|bool|array
+    <strong>readResponse</strong>($tag, $dontParse = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>read all lines of response until given tag is found (last line of response)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$dontParse</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|bool|array</td>
+            <td>tokens if success, false if error, null if bad request</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendRequest">
+        <div class="location">at line         line 336</div>
+        <code>                    null
+    <strong>sendRequest</strong>(string $command, array $tokens = array(), string $tag = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>send a request</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$command</td>
+                <td>your request command</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td>additional parameters to command, use escapeString() to prepare</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td>provide a tag otherwise an autogenerated is returned</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_requestAndResponse">
+        <div class="location">at line         line 385</div>
+        <code>                    mixed
+    <strong>requestAndResponse</strong>(string $command, array $tokens = array(), bool $dontParse = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>send a request and get response at once</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$command</td>
+                <td>command as in sendRequest()</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tokens</td>
+                <td>parameters as in sendRequest()</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$dontParse</td>
+                <td>if true unparsed lines are returned instead of tokens</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>response as in readResponse()</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_escapeString">
+        <div class="location">at line         line 400</div>
+        <code>                    string|array
+    <strong>escapeString</strong>(string|array $string)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>escape one or more literals i.e. for sendRequest</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$string</td>
+                <td>the literal/-s</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td>escape literals, literals with newline ar returned
+                     as array('{size}', 'string');</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_escapeList">
+        <div class="location">at line         line 422</div>
+        <code>                    string
+    <strong>escapeList</strong>(array $list)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>escape a list with literals or lists</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$list</td>
+                <td>list with literals or lists as PHP array</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>escaped list for imap</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_login">
+        <div class="location">at line         line 444</div>
+        <code>                    bool
+    <strong>login</strong>(string $user, string $password)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Login to IMAP server.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$user</td>
+                <td>username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>password</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>success</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logout">
+        <div class="location">at line         line 454</div>
+        <code>                    bool
+    <strong>logout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>logout of imap server</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>success</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_capability">
+        <div class="location">at line         line 476</div>
+        <code>                    array
+    <strong>capability</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get capabilities from IMAP server</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>list of capabilities</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_examineOrSelect">
+        <div class="location">at line         line 501</div>
+        <code>                    bool|array
+    <strong>examineOrSelect</strong>(string $command = &#039;EXAMINE&#039;, string $box = &#039;INBOX&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Examine and select have the same response. The common code for both
+is in this method</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$command</td>
+                <td>can be 'EXAMINE' or 'SELECT' and this is used as command</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$box</td>
+                <td>which folder to change to or examine</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td>false if error, array with returned information
+                   otherwise (flags, exists, recent, uidvalidity)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_select">
+        <div class="location">at line         line 538</div>
+        <code>                    bool|array
+    <strong>select</strong>(string $box = &#039;INBOX&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>change folder</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$box</td>
+                <td>change to this folder</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td>see examineOrselect()</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_examine">
+        <div class="location">at line         line 550</div>
+        <code>                    bool|array
+    <strong>examine</strong>(string $box = &#039;INBOX&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>examine folder</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$box</td>
+                <td>examine this folder</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td>see examineOrselect()</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetch">
+        <div class="location">at line         line 569</div>
+        <code>                    string|array
+    <strong>fetch</strong>(string|array $items, int $from, int|null $to = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>fetch one or more items of one or more messages</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$items</td>
+                <td>items to fetch from message(s) as string (if only one item)
+                            or array of strings</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$from</td>
+                <td>message for items or start message if $to !== null</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$to</td>
+                <td>if null only one message ($from) is fetched, else it's the
+                            last message, INF means last message avaible</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td>if only one item of one message is fetched it's returned as string
+                     if items of one message are fetched it's returned as (name => value)
+                     if one items of messages are fetched it's returned as (msgno => value)
+                     if items of messages are fetchted it's returned as (msgno => (name => value))</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listMailbox">
+        <div class="location">at line         line 649</div>
+        <code>                    array
+    <strong>listMailbox</strong>(string $reference = &#039;&#039;, string $mailbox = &#039;*&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>get mailbox list</p>                    <p>this method can't be named after the IMAP command 'LIST', as list is a reserved keyword</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$reference</td>
+                <td>mailbox reference for list</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$mailbox</td>
+                <td>mailbox name match with wildcards</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>mailboxes that matched $mailbox as array(globalName => array('delim' => .., 'flags' => ..))</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_store">
+        <div class="location">at line         line 679</div>
+        <code>                    bool|array
+    <strong>store</strong>(array $flags, int $from, int|null $to = null, string|null $mode = null, bool $silent = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>set flags</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$flags</td>
+                <td>flags to set, add or remove - see $mode</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$from</td>
+                <td>message for items or start message if $to !== null</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$to</td>
+                <td>if null only one message ($from) is fetched, else it's the
+                            last message, INF means last message avaible</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$mode</td>
+                <td>'+' to add flags, '-' to remove flags, everything else sets the flags as given</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$silent</td>
+                <td>if false the return values are the new flags for the wanted messages</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td>new flags if $silent is false, else true or false depending on success</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_append">
+        <div class="location">at line         line 723</div>
+        <code>                    bool
+    <strong>append</strong>(string $folder, string $message, array $flags = null, string $date = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>append a new message to given folder</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$folder</td>
+                <td>name of target folder</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>full message content</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$flags</td>
+                <td>flags for new message</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td>date for new message</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>success</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copy">
+        <div class="location">at line         line 747</div>
+        <code>                    bool
+    <strong>copy</strong>($folder, $from, $to = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>copy message set from current folder to other folder</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$folder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>success</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location">at line         line 763</div>
+        <code>                    bool
+    <strong>create</strong>(string $folder)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>create a new folder (and parent folders if needed)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$folder</td>
+                <td>folder name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>success</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rename">
+        <div class="location">at line         line 775</div>
+        <code>                    bool
+    <strong>rename</strong>(string $old, string $new)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>rename an existing folder</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$old</td>
+                <td>old name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$new</td>
+                <td>new name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>success</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at line         line 786</div>
+        <code>                    bool
+    <strong>delete</strong>(string $folder)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>remove a folder</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$folder</td>
+                <td>folder name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>success</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expunge">
+        <div class="location">at line         line 796</div>
+        <code>                    bool
+    <strong>expunge</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>permanently remove messages</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>success</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_noop">
+        <div class="location">at line         line 807</div>
+        <code>                    bool
+    <strong>noop</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>send noop</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>success</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_search">
+        <div class="location">at line         line 822</div>
+        <code>                    array
+    <strong>search</strong>(array $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>do a search request</p>                    <p>This method is currently marked as internal as the API might change and is not
+safe if you don't take precautions.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>message ids</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

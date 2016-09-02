@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Session_Namespace | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Session_Namespace" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Session_Namespace
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Session_Namespace</strong>        extends <a href="Zend_Session_Abstract.html">Zend_Session_Abstract</a>        implements
+        <a target="_blank" href="http://php.net/IteratorAggregate">IteratorAggregate</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Zend<em>Session</em>Namespace</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>_THROW_NOT_WRITABLE_MSG</td>
+                <td class="last">
+                    <p><em>Error message thrown when an action requires modification,
+but current Zend_Session has been marked as read-only.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>_THROW_NOT_READABLE_MSG</td>
+                <td class="last">
+                    <p><em>Error message thrown when an action requires reading session data,
+but current Zend_Session is not marked as readable.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SINGLE_INSTANCE</td>
+                <td class="last">
+                    <p><em>used as option to constructor to prevent additional instances to the same namespace</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetSingleInstance">resetSingleInstance</a>(string $namespaceName = null)
+        
+                                            <p>resetSingleInstance()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $namespace = &#039;Default&#039;, bool $singleInstance = false)
+        
+                                            <p>__construct() - Returns an instance object bound to a particular, isolated section
+of the session, identified by $namespace name (defaulting to 'Default').</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/ArrayObject">ArrayObject</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIterator">getIterator</a>()
+        
+                                            <p>getIterator() - return an iteratable object for use in foreach and the like,
+this completes the IteratorAggregate interface</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lock">lock</a>()
+        
+                                            <p>lock() - mark a session/namespace as readonly</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unlock">unlock</a>()
+        
+                                            <p>unlock() - unmark a session/namespace to enable read &amp; write</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unlockAll">unlockAll</a>()
+        
+                                            <p>unlockAll() - unmark all session/namespaces to enable read &amp; write</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isLocked">isLocked</a>()
+        
+                                            <p>isLocked() - return lock status, true if, and only if, read-only</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    true
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsetAll">unsetAll</a>()
+        
+                                            <p>unsetAll() - unset all variables in this namespace</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $name)
+        
+                                            <p>__get() - method to get a variable in this object's current namespace</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    true
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___set">__set</a>(string $name, mixed $value)
+        
+                                            <p>__set() - method to set a variable/value in this object's namespace</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_apply">apply</a>(string|array $callback)
+        
+                                            <p>apply() - enables applying user-selected function, such as array_merge() to the namespace
+Parameters following the $callback argument are passed to the callback function.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_applySet">applySet</a>(string|array $callback)
+        
+                                            <p>applySet() - enables applying user-selected function, and sets entire namespace to the result
+Result of $callback must be an array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___isset">__isset</a>(string $name)
+        
+                                            <p>__isset() - determine if a variable in this object's namespace is set</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    true
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___unset">__unset</a>(string $name)
+        
+                                            <p>__unset() - unset a variable in this object's namespace.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setExpirationSeconds">setExpirationSeconds</a>(int $seconds, mixed $variables = null)
+        
+                                            <p>setExpirationSeconds() - expire the namespace, or specific variables after a specified
+number of seconds</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setExpirationHops">setExpirationHops</a>(int $hops, mixed $variables = null, boolean $hopCountOnUsageOnly = false)
+        
+                                            <p>setExpirationHops() - expire the namespace, or specific variables after a specified
+number of page hops</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNamespace">getNamespace</a>()
+        
+                                            <p>Returns the namespace name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_resetSingleInstance">
+        <div class="location">at line         line 79</div>
+        <code>        static            null
+    <strong>resetSingleInstance</strong>(string $namespaceName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>resetSingleInstance()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$namespaceName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 102</div>
+        <code>                    void
+    <strong>__construct</strong>(string $namespace = &#039;Default&#039;, bool $singleInstance = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>__construct() - Returns an instance object bound to a particular, isolated section
+of the session, identified by $namespace name (defaulting to 'Default').</p>                    <p>The optional argument $singleInstance will prevent construction of additional
+instance objects acting as accessors to this $namespace.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td><ul>
+<li>programmatic name of the requested namespace</li>
+</ul>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$singleInstance</td>
+                <td><ul>
+<li>prevent creation of additional accessor instance objects for this namespace</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIterator">
+        <div class="location">at line         line 210</div>
+        <code>                    <a target="_blank" href="http://php.net/ArrayObject">ArrayObject</a>
+    <strong>getIterator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>getIterator() - return an iteratable object for use in foreach and the like,
+this completes the IteratorAggregate interface</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/ArrayObject">ArrayObject</a></td>
+            <td><ul>
+<li>iteratable container of the namespace contents</li>
+</ul>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lock">
+        <div class="location">at line         line 221</div>
+        <code>                    void
+    <strong>lock</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>lock() - mark a session/namespace as readonly</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unlock">
+        <div class="location">at line         line 232</div>
+        <code>                    void
+    <strong>unlock</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>unlock() - unmark a session/namespace to enable read &amp; write</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unlockAll">
+        <div class="location">at line         line 243</div>
+        <code>        static            void
+    <strong>unlockAll</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>unlockAll() - unmark all session/namespaces to enable read &amp; write</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isLocked">
+        <div class="location">at line         line 254</div>
+        <code>                    bool
+    <strong>isLocked</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>isLocked() - return lock status, true if, and only if, read-only</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsetAll">
+        <div class="location">at line         line 265</div>
+        <code>                    true
+    <strong>unsetAll</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>unsetAll() - unset all variables in this namespace</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>true</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">at line         line 277</div>
+        <code>                    mixed
+    <strong>__get</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>__get() - method to get a variable in this object's current namespace</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><ul>
+<li>programmatic name of a key, in a &lt;key,value> pair in the current namespace</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___set">
+        <div class="location">at line         line 299</div>
+        <code>                    true
+    <strong>__set</strong>(string $name, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>__set() - method to set a variable/value in this object's namespace</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><ul>
+<li>programmatic name of a key, in a &lt;key,value> pair in the current namespace</li>
+</ul>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td><ul>
+<li>value in the &lt;key,value> pair to assign to the $name key</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>true</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Session_Exception.html">Zend_Session_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_apply">
+        <div class="location">at line         line 342</div>
+        <code>                    
+    <strong>apply</strong>(string|array $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>apply() - enables applying user-selected function, such as array_merge() to the namespace
+Parameters following the $callback argument are passed to the callback function.</p>                    <p>Caveat: ignores members expiring now.</p>
+
+<p>Example:
+  $namespace->apply('array_merge', array('tree' => 'apple', 'fruit' => 'peach'), array('flower' => 'rose'));
+  $namespace->apply('count');</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$callback</td>
+                <td><ul>
+<li>callback function</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_applySet">
+        <div class="location">at line         line 361</div>
+        <code>                    
+    <strong>applySet</strong>(string|array $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>applySet() - enables applying user-selected function, and sets entire namespace to the result
+Result of $callback must be an array.</p>                    <p>Parameters following the $callback argument are passed to the callback function.
+Caveat: ignores members expiring now.</p>
+
+<p>Example:
+  $namespace->applySet('array_merge', array('tree' => 'apple', 'fruit' => 'peach'), array('flower' => 'rose'));</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$callback</td>
+                <td><ul>
+<li>callback function</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">at line         line 384</div>
+        <code>                    bool
+    <strong>__isset</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>__isset() - determine if a variable in this object's namespace is set</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><ul>
+<li>programmatic name of a key, in a &lt;key,value> pair in the current namespace</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___unset">
+        <div class="location">at line         line 404</div>
+        <code>                    true
+    <strong>__unset</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>__unset() - unset a variable in this object's namespace.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td><ul>
+<li>programmatic name of a key, in a &lt;key,value> pair in the current namespace</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>true</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setExpirationSeconds">
+        <div class="location">at line         line 427</div>
+        <code>                    void
+    <strong>setExpirationSeconds</strong>(int $seconds, mixed $variables = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>setExpirationSeconds() - expire the namespace, or specific variables after a specified
+number of seconds</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$seconds</td>
+                <td><ul>
+<li>expires in this many seconds</li>
+</ul>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$variables</td>
+                <td><ul>
+<li>OPTIONAL list of variables to expire (defaults to all)</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Session_Exception.html">Zend_Session_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setExpirationHops">
+        <div class="location">at line         line 475</div>
+        <code>                    void
+    <strong>setExpirationHops</strong>(int $hops, mixed $variables = null, boolean $hopCountOnUsageOnly = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>setExpirationHops() - expire the namespace, or specific variables after a specified
+number of page hops</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$hops</td>
+                <td><ul>
+<li>how many "hops" (number of subsequent requests) before expiring</li>
+</ul>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$variables</td>
+                <td><ul>
+<li>OPTIONAL list of variables to expire (defaults to all)</li>
+</ul>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$hopCountOnUsageOnly</td>
+                <td><ul>
+<li>OPTIONAL if set, only count a hop/request if this namespace is used</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Session_Exception.html">Zend_Session_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNamespace">
+        <div class="location">at line         line 525</div>
+        <code>                    string
+    <strong>getNamespace</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the namespace name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

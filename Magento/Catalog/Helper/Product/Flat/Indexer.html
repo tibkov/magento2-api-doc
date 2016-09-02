@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Catalog\Helper\Product\Flat\Indexer | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
+        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Catalog_Helper_Product_Flat_Indexer" data-root-path="../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../../Magento/Catalog.html">Catalog</a></li>
+                                        <li><a href="../../../../../Magento/Catalog/Helper.html">Helper</a></li>
+                                        <li><a href="../../../../../Magento/Catalog/Helper/Product.html">Product</a></li>
+                                        <li><a href="../../../../../Magento/Catalog/Helper/Product/Flat.html">Flat</a></li>
+    
+                <li>Indexer</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Indexer
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Indexer</strong>        extends <a href="../../../../../Magento/Framework/App/Helper/AbstractHelper.html"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Catalog Product Flat Indexer Helper</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XML_NODE_ATTRIBUTE_NODES</td>
+                <td class="last">
+                    <p><em>Path to list of attributes used for flat indexer</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BATCH_SIZE</td>
+                <td class="last">
+                    <p><em>Size of ids batch for reindex</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../../../Magento/Framework/App/ResourceConnection.html"><abbr title="Magento\Framework\App\ResourceConnection">ResourceConnection</abbr></a> $resource, <a href="../../../../../Magento/Eav/Model/Config.html"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> $eavConfig, <a href="../../../../../Magento/Catalog/Model/Attribute/Config.html"><abbr title="Magento\Catalog\Model\Attribute\Config">Config</abbr></a> $attributeConfig, <abbr title="Magento\Catalog\Model\ResourceModel\ConfigFactory">ConfigFactory</abbr> $configFactory, <abbr title="Magento\Eav\Model\Entity\AttributeFactory">AttributeFactory</abbr> $attributeFactory, <a href="../../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../../Magento/Framework/Mview/View/Changelog.html"><abbr title="Magento\Framework\Mview\View\Changelog">Changelog</abbr></a> $changelog, bool $addFilterableAttrs = false, bool $addChildData = false, array $flatAttributeGroups = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isModuleOutputEnabled">isModuleOutputEnabled</a>(string $moduleName = null)
+        
+                                            <p>Check whether or not the module output is enabled in Configuration</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFlatColumnsDdlDefinition">getFlatColumnsDdlDefinition</a>()
+        
+                                            <p>Retrieve catalog product flat columns array in DDL format</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAddFilterableAttributes">isAddFilterableAttributes</a>()
+        
+                                            <p>Check whether filterable attributes should be added</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAddChildData">isAddChildData</a>()
+        
+                                            <p>Check whether child data should be added</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFlatColumns">getFlatColumns</a>()
+        
+                                            <p>Retrieve catalog product flat table columns array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEntityType">getEntityType</a>()
+        
+                                            <p>Retrieve entity type</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEntityTypeId">getEntityTypeId</a>()
+        
+                                            <p>Retrieve Catalog Entity Type Id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributes">getAttributes</a>()
+        
+                                            <p>Retrieve attribute objects for flat</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributeCodes">getAttributeCodes</a>()
+        
+                                            <p>Retrieve attribute codes using for flat</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFlatIndexes">getFlatIndexes</a>()
+        
+                                            <p>Retrieve catalog product flat table indexes array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTablesStructure">getTablesStructure</a>(array $attributes)
+        
+                                            <p>Get table structure for temporary eav tables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTable">getTable</a>(string|array $name)
+        
+                                            <p>Returns table name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFlatTableName">getFlatTableName</a>(int $storeId)
+        
+                                            <p>Retrieve Catalog Product Flat Table name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Magento/Eav/Model/Entity/Attribute.html"><abbr title="Magento\Eav\Model\Entity\Attribute">Attribute</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttribute">getAttribute</a>(string $attributeCode)
+        
+                                            <p>Retrieve loaded attribute by code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteAbandonedStoreFlatTables">deleteAbandonedStoreFlatTables</a>()
+        
+                                            <p>Delete all product flat tables for not existing stores</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 139</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../../../Magento/Framework/App/ResourceConnection.html"><abbr title="Magento\Framework\App\ResourceConnection">ResourceConnection</abbr></a> $resource, <a href="../../../../../Magento/Eav/Model/Config.html"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> $eavConfig, <a href="../../../../../Magento/Catalog/Model/Attribute/Config.html"><abbr title="Magento\Catalog\Model\Attribute\Config">Config</abbr></a> $attributeConfig, <abbr title="Magento\Catalog\Model\ResourceModel\ConfigFactory">ConfigFactory</abbr> $configFactory, <abbr title="Magento\Eav\Model\Entity\AttributeFactory">AttributeFactory</abbr> $attributeFactory, <a href="../../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../../Magento/Framework/Mview/View/Changelog.html"><abbr title="Magento\Framework\Mview\View\Changelog">Changelog</abbr></a> $changelog, bool $addFilterableAttrs = false, bool $addChildData = false, array $flatAttributeGroups = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a></td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/App/ResourceConnection.html"><abbr title="Magento\Framework\App\ResourceConnection">ResourceConnection</abbr></a></td>
+                <td>$resource</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Eav/Model/Config.html"><abbr title="Magento\Eav\Model\Config">Config</abbr></a></td>
+                <td>$eavConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Catalog/Model/Attribute/Config.html"><abbr title="Magento\Catalog\Model\Attribute\Config">Config</abbr></a></td>
+                <td>$attributeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Catalog\Model\ResourceModel\ConfigFactory">ConfigFactory</abbr></td>
+                <td>$configFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Eav\Model\Entity\AttributeFactory">AttributeFactory</abbr></td>
+                <td>$attributeFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Mview/View/Changelog.html"><abbr title="Magento\Framework\Mview\View\Changelog">Changelog</abbr></a></td>
+                <td>$changelog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$addFilterableAttrs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$addChildData</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$flatAttributeGroups</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isModuleOutputEnabled">
+        <div class="location">in <a href="../../../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a> at line         line 130</div>
+        <code>                    boolean
+    <strong>isModuleOutputEnabled</strong>(string $moduleName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether or not the module output is enabled in Configuration</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$moduleName</td>
+                <td>Full module name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>use \Magento\Framework\Module\Manager::isOutputEnabled()</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFlatColumnsDdlDefinition">
+        <div class="location">at line         line 170</div>
+        <code>                    array
+    <strong>getFlatColumnsDdlDefinition</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve catalog product flat columns array in DDL format</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAddFilterableAttributes">
+        <div class="location">at line         line 225</div>
+        <code>                    bool
+    <strong>isAddFilterableAttributes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether filterable attributes should be added</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAddChildData">
+        <div class="location">at line         line 235</div>
+        <code>                    bool
+    <strong>isAddChildData</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether child data should be added</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFlatColumns">
+        <div class="location">at line         line 245</div>
+        <code>                    array
+    <strong>getFlatColumns</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve catalog product flat table columns array</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEntityType">
+        <div class="location">at line         line 269</div>
+        <code>                    string
+    <strong>getEntityType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve entity type</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEntityTypeId">
+        <div class="location">at line         line 279</div>
+        <code>                    int
+    <strong>getEntityTypeId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Catalog Entity Type Id</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributes">
+        <div class="location">at line         line 292</div>
+        <code>                    array
+    <strong>getAttributes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve attribute objects for flat</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeCodes">
+        <div class="location">at line         line 325</div>
+        <code>                    array
+    <strong>getAttributeCodes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve attribute codes using for flat</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFlatIndexes">
+        <div class="location">at line         line 377</div>
+        <code>                    array
+    <strong>getFlatIndexes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve catalog product flat table indexes array</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTablesStructure">
+        <div class="location">at line         line 430</div>
+        <code>                    array
+    <strong>getTablesStructure</strong>(array $attributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get table structure for temporary eav tables</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTable">
+        <div class="location">at line         line 451</div>
+        <code>                    string
+    <strong>getTable</strong>(string|array $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns table name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFlatTableName">
+        <div class="location">at line         line 462</div>
+        <code>                    string
+    <strong>getFlatTableName</strong>(int $storeId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Catalog Product Flat Table name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttribute">
+        <div class="location">at line         line 474</div>
+        <code>                    <a href="../../../../../Magento/Eav/Model/Entity/Attribute.html"><abbr title="Magento\Eav\Model\Entity\Attribute">Attribute</abbr></a>
+    <strong>getAttribute</strong>(string $attributeCode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve loaded attribute by code</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attributeCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Magento/Eav/Model/Entity/Attribute.html"><abbr title="Magento\Eav\Model\Entity\Attribute">Attribute</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteAbandonedStoreFlatTables">
+        <div class="location">at line         line 495</div>
+        <code>                    void
+    <strong>deleteAbandonedStoreFlatTables</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete all product flat tables for not existing stores</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

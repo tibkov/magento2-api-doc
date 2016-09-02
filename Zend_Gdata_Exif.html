@@ -1,0 +1,2541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Gdata_Exif | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Gdata_Exif" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Gdata_Exif
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Gdata_Exif</strong>        extends <a href="Zend_Gdata.html">Zend_Gdata</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Service class for interacting with the services which use the EXIF extensions</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>DEFAULT_MAJOR_PROTOCOL_VERSION</td>
+                <td class="last">
+                    <p><em>Default major protocol version.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_MINOR_PROTOCOL_VERSION</td>
+                <td class="last">
+                    <p><em>Default minor protocol version.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AUTH_SERVICE_NAME</td>
+                <td class="last">
+                    <p><em>Service name for use with Google's authentication mechanisms</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_namespaces">
+                    static                                                            array
+                </td>
+                <td>$namespaces</td>
+                <td class="last">Namespaces used for Zend<em>Gdata</em>Exif</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $client = null, string $applicationId = &#039;MyCompany-MyApp-1.0&#039;)
+        
+                                            <p>Create Zend<em>Gdata</em>Exif object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerPackage">registerPackage</a>(string $name)
+        
+                                            <p>Adds a Zend Framework package to the $_registeredPackages array.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_registerPackage">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFeed">getFeed</a>(mixed $location, string $className = &#039;Zend_Gdata_Feed&#039;)
+        
+                                            <p>Retrieve feed as string or object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata.html#method_getFeed">Zend_Gdata</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|<a href="Zend_Gdata_App_Entry.html">Zend_Gdata_App_Entry</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEntry">getEntry</a>($location, string $className = &#039;Zend_Gdata_Entry&#039;)
+        
+                                            <p>Retrieve entry as string or object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata.html#method_getEntry">Zend_Gdata</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpClient">getHttpClient</a>()
+        
+                                            <p>Get the Zend<em>Http</em>Client object used for communication</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_getHttpClient">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Gdata_App.html">Zend_Gdata_App</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHttpClient">setHttpClient</a>($client, $applicationId = &#039;MyCompany-MyApp-1.0&#039;)
+        
+                                            <p>Set the Zend<em>Http</em>Client object used for communication</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_setHttpClient">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setStaticHttpClient">setStaticHttpClient</a>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $httpClient)
+        
+                                            <p>Set the static HTTP client instance</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_setStaticHttpClient">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStaticHttpClient">getStaticHttpClient</a>()
+        
+                                            <p>Gets the HTTP client object. If none is set, a new Zend<em>Http</em>Client will be used.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_getStaticHttpClient">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHttpMethodOverride">setHttpMethodOverride</a>(boolean $override = true)
+        
+                                            <p>Toggle using POST instead of PUT and DELETE HTTP methods</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_setHttpMethodOverride">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpMethodOverride">getHttpMethodOverride</a>()
+        
+                                            <p>Get the HTTP override state</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_getHttpMethodOverride">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setGzipEnabled">setGzipEnabled</a>(boolean $enabled = false)
+        
+                                            <p>Toggle requesting gzip encoded responses</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_setGzipEnabled">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGzipEnabled">getGzipEnabled</a>()
+        
+                                            <p>Get the HTTP override state</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_getGzipEnabled">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVerboseExceptionMessages">getVerboseExceptionMessages</a>()
+        
+                                            <p>Get whether to use verbose exception messages</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_getVerboseExceptionMessages">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setVerboseExceptionMessages">setVerboseExceptionMessages</a>(boolean $verbose)
+        
+                                            <p>Set whether to use verbose exception messages</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_setVerboseExceptionMessages">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMaxRedirects">setMaxRedirects</a>(int $maxRedirects)
+        
+                                            <p>Set the maximum number of redirects to follow during HTTP operations</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_setMaxRedirects">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMaxRedirects">getMaxRedirects</a>()
+        
+                                            <p>Get the maximum number of redirects to follow during HTTP operations</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_getMaxRedirects">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMajorProtocolVersion">setMajorProtocolVersion</a>(int $value)
+        
+                                            <p>Set the major protocol version that should be used. Values &lt; 1 will
+cause a Zend<em>Gdata</em>App_InvalidArgumentException to be thrown.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_setMajorProtocolVersion">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMajorProtocolVersion">getMajorProtocolVersion</a>()
+        
+                                            <p>Get the major protocol version that is in use.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_getMajorProtocolVersion">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMinorProtocolVersion">setMinorProtocolVersion</a>((int|NULL) $value)
+        
+                                            <p>Set the minor protocol version that should be used. If set to NULL, no
+minor protocol version will be sent to the server. Values &lt; 0 will
+cause a Zend<em>Gdata</em>App_InvalidArgumentException to be thrown.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_setMinorProtocolVersion">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    (int|NULL)
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMinorProtocolVersion">getMinorProtocolVersion</a>()
+        
+                                            <p>Get the minor protocol version that is in use.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_getMinorProtocolVersion">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareRequest">prepareRequest</a>(string $method, string $url = null, array $headers = array(), mixed $data = null, string $contentTypeOverride = null)
+        
+                                            <p>Provides pre-processing for HTTP requests to APP services.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_prepareRequest">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_performHttpRequest">performHttpRequest</a>(string $method, string $url, array $headers = array(), string $body = null, string $contentType = null, int $remainingRedirects = null)
+        
+                                            <p>Performs a HTTP request using the specified method.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata.html#method_performHttpRequest">Zend_Gdata</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_import">import</a>(string $uri, <a href="Zend_Http_Client.html">Zend_Http_Client</a> $client = null, string $className = &#039;Zend_Gdata_Feed&#039;, bool $useObjectMapping = true)
+        
+                                            <p>Imports a feed located at $uri.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata.html#method_import">Zend_Gdata</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_importUrl">importUrl</a>(string $url, string $className = &#039;Zend_Gdata_App_Feed&#039;, array $extraHeaders = array())
+        
+                                            <p>Imports the specified URL (non-statically).</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_importUrl">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_importString">importString</a>($string, $className = &#039;Zend_Gdata_App_Feed&#039;, $majorProtocolVersion = null, $minorProtocolVersion = null)
+        
+                                            <p>Imports a feed represented by $string.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_importString">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_importFile">importFile</a>(string $filename, string $className = &#039;Zend_Gdata_App_Feed&#039;, string $useIncludePath = false)
+        
+                                            <p>Imports a feed from a file located at $filename.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_importFile">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string $uri, array $extraHeaders = array())
+        
+                                            <p>GET a URI using client object.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_get">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_post">post</a>($data, $uri = null, $remainingRedirects = null, $contentType = null, $extraHeaders = null)
+        
+                                            <p>POST data with client object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_post">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_put">put</a>($data, $uri = null, $remainingRedirects = null, $contentType = null, $extraHeaders = null)
+        
+                                            <p>PUT data with client object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_put">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>($data, $remainingRedirects = null)
+        
+                                            <p>DELETE entry with client object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_delete">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Gdata_App_Entry.html">Zend_Gdata_App_Entry</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insertEntry">insertEntry</a>(mixed $data, string $uri, string $className = &#039;Zend_Gdata_App_Entry&#039;, array $extraHeaders = array())
+        
+                                            <p>Inserts an entry to a given URI and returns the response as a
+fully formed Entry.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_insertEntry">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Gdata_App_Entry.html">Zend_Gdata_App_Entry</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateEntry">updateEntry</a>(mixed $data, string|null $uri = null, string|null $className = null, array $extraHeaders = array())
+        
+                                            <p>Update an entry</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_updateEntry">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $args)
+        
+                                            <p>Provides a magic factory method to instantiate new objects with
+shorter syntax than would otherwise be required by the Zend Framework
+naming conventions.  For instance, to construct a new
+Zend<em>Gdata</em>Calendar<em>Extension</em>Color, a developer simply needs to do
+$gCal->newColor().  For this magic constructor, packages are searched
+in the same order as which they appear in the $_registeredPackages
+array</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method___call">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_retrieveAllEntriesForFeed">retrieveAllEntriesForFeed</a>(object $feed)
+        
+                                            <p>Retrieve all entries for a feed, iterating through pages as necessary.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_retrieveAllEntriesForFeed">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_enableRequestDebugLogging">enableRequestDebugLogging</a>(string $logfile)
+        
+                                            <p>This method enables logging of requests by changing the
+Zend<em>Http</em>Client_Adapter used for performing the requests.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_enableRequestDebugLogging">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNextFeed">getNextFeed</a>(<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a> $feed, string $className = null)
+        
+                                            <p>Retrieve next set of results based on a given feed.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_getNextFeed">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPreviousFeed">getPreviousFeed</a>(<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a> $feed, string $className = null)
+        
+                                            <p>Retrieve previous set of results based on a given feed.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_getPreviousFeed">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generateIfMatchHeaderData">generateIfMatchHeaderData</a>($data, $allowWeek)
+        
+                                            <p>Returns the data for an If-Match header based on the current Etag
+property. If Etags are not supported by the server or cannot be
+extracted from the data, then null will be returned.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_generateIfMatchHeaderData">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_usingObjectMapping">usingObjectMapping</a>()
+        
+                                            <p>Determine whether service object is using XML to object mapping.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_usingObjectMapping">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_useObjectMapping">useObjectMapping</a>(boolean $value)
+        
+                                            <p>Enable/disable the use of XML to object mapping.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata_App.html#method_useObjectMapping">Zend_Gdata_App</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAuthenticated">isAuthenticated</a>()
+        
+                                            <p>Determines whether service object is authenticated.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Gdata.html#method_isAuthenticated">Zend_Gdata</a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 58</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $client = null, string $applicationId = &#039;MyCompany-MyApp-1.0&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create Zend<em>Gdata</em>Exif object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$applicationId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerPackage">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_registerPackage">Zend_Gdata_App</a> at line         line 196</div>
+        <code>                    void
+    <strong>registerPackage</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a Zend Framework package to the $_registeredPackages array.</p>                    <p>This array is searched when using the magic __call method below
+to instantiante new objects.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The name of the package (eg Zend<em>Gdata</em>App)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFeed">
+        <div class="location">in <a href="Zend_Gdata.html#method_getFeed">Zend_Gdata</a> at line         line 150</div>
+        <code>                    string|<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>
+    <strong>getFeed</strong>(mixed $location, string $className = &#039;Zend_Gdata_Feed&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve feed as string or object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$location</td>
+                <td>The location as string or Zend<em>Gdata</em>Query</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>The class which is used as the return type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></td>
+            <td>Returns string only if the object
+                                   mapping has been disabled explicitly
+                                   by passing false to the
+                                   useObjectMapping() function.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_InvalidArgumentException.html">Zend_Gdata_App_InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEntry">
+        <div class="location">in <a href="Zend_Gdata.html#method_getEntry">Zend_Gdata</a> at line         line 175</div>
+        <code>                    string|<a href="Zend_Gdata_App_Entry.html">Zend_Gdata_App_Entry</a>
+    <strong>getEntry</strong>($location, string $className = &#039;Zend_Gdata_Entry&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve entry as string or object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>The class which is used as the return type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|<a href="Zend_Gdata_App_Entry.html">Zend_Gdata_App_Entry</a></td>
+            <td>Returns string only if the object
+                                    mapping has been disabled explicitly
+                                    by passing false to the
+                                    useObjectMapping() function.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_InvalidArgumentException.html">Zend_Gdata_App_InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpClient">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_getHttpClient">Zend_Gdata_App</a> at line         line 236</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>getHttpClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Zend<em>Http</em>Client object used for communication</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHttpClient">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_setHttpClient">Zend_Gdata_App</a> at line         line 248</div>
+        <code>                    <a href="Zend_Gdata_App.html">Zend_Gdata_App</a>
+    <strong>setHttpClient</strong>($client, $applicationId = &#039;MyCompany-MyApp-1.0&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the Zend<em>Http</em>Client object used for communication</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$applicationId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Gdata_App.html">Zend_Gdata_App</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_HttpException.html">Zend_Gdata_App_HttpException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setStaticHttpClient">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_setStaticHttpClient">Zend_Gdata_App</a> at line         line 279</div>
+        <code>        static            void
+    <strong>setStaticHttpClient</strong>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $httpClient)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the static HTTP client instance</p>                    <p>Sets the static HTTP client object to use for retrieving the feed.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+                <td>$httpClient</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStaticHttpClient">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_getStaticHttpClient">Zend_Gdata_App</a> at line         line 290</div>
+        <code>        static            <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>getStaticHttpClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the HTTP client object. If none is set, a new Zend<em>Http</em>Client will be used.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHttpMethodOverride">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_setHttpMethodOverride">Zend_Gdata_App</a> at line         line 318</div>
+        <code>        static            void
+    <strong>setHttpMethodOverride</strong>(boolean $override = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Toggle using POST instead of PUT and DELETE HTTP methods</p>                    <p>Some feed implementations do not accept PUT and DELETE HTTP
+methods, or they can't be used because of proxies or other
+measures. This allows turning on using POST where PUT and
+DELETE would normally be used; in addition, an
+X-Method-Override header will be sent with a value of PUT or
+DELETE as appropriate.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$override</td>
+                <td>Whether to override PUT and DELETE with POST.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpMethodOverride">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_getHttpMethodOverride">Zend_Gdata_App</a> at line         line 328</div>
+        <code>        static            boolean
+    <strong>getHttpMethodOverride</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the HTTP override state</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setGzipEnabled">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_setGzipEnabled">Zend_Gdata_App</a> at line         line 339</div>
+        <code>        static            void
+    <strong>setGzipEnabled</strong>(boolean $enabled = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Toggle requesting gzip encoded responses</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$enabled</td>
+                <td>Whether or not to enable gzipped responses</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGzipEnabled">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_getGzipEnabled">Zend_Gdata_App</a> at line         line 356</div>
+        <code>        static            boolean
+    <strong>getGzipEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the HTTP override state</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVerboseExceptionMessages">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_getVerboseExceptionMessages">Zend_Gdata_App</a> at line         line 369</div>
+        <code>        static            boolean
+    <strong>getVerboseExceptionMessages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get whether to use verbose exception messages</p>                    <p>In the case of HTTP errors,  use the body of the HTTP response
+in the exception message.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setVerboseExceptionMessages">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_setVerboseExceptionMessages">Zend_Gdata_App</a> at line         line 382</div>
+        <code>        static            
+    <strong>setVerboseExceptionMessages</strong>(boolean $verbose)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set whether to use verbose exception messages</p>                    <p>In the case of HTTP errors, use the body of the HTTP response
+in the exception message.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$verbose</td>
+                <td>Whether to use verbose exception messages</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMaxRedirects">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_setMaxRedirects">Zend_Gdata_App</a> at line         line 393</div>
+        <code>        static            void
+    <strong>setMaxRedirects</strong>(int $maxRedirects)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the maximum number of redirects to follow during HTTP operations</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$maxRedirects</td>
+                <td>Maximum number of redirects to follow</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMaxRedirects">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_getMaxRedirects">Zend_Gdata_App</a> at line         line 403</div>
+        <code>        static            int
+    <strong>getMaxRedirects</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the maximum number of redirects to follow during HTTP operations</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>Maximum number of redirects to follow</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMajorProtocolVersion">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_setMajorProtocolVersion">Zend_Gdata_App</a> at line         line 416</div>
+        <code>                    
+    <strong>setMajorProtocolVersion</strong>(int $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the major protocol version that should be used. Values &lt; 1 will
+cause a Zend<em>Gdata</em>App_InvalidArgumentException to be thrown.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$value</td>
+                <td>The major protocol version to use.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_InvalidArgumentException.html">Zend_Gdata_App_InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>_majorProtocolVersion</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMajorProtocolVersion">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_getMajorProtocolVersion">Zend_Gdata_App</a> at line         line 432</div>
+        <code>                    int
+    <strong>getMajorProtocolVersion</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the major protocol version that is in use.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>The major protocol version in use.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>_majorProtocolVersion</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMinorProtocolVersion">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_setMinorProtocolVersion">Zend_Gdata_App</a> at line         line 446</div>
+        <code>                    
+    <strong>setMinorProtocolVersion</strong>((int|NULL) $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the minor protocol version that should be used. If set to NULL, no
+minor protocol version will be sent to the server. Values &lt; 0 will
+cause a Zend<em>Gdata</em>App_InvalidArgumentException to be thrown.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>(int|NULL)</td>
+                <td>$value</td>
+                <td>The minor protocol version to use.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_InvalidArgumentException.html">Zend_Gdata_App_InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>_minorProtocolVersion</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMinorProtocolVersion">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_getMinorProtocolVersion">Zend_Gdata_App</a> at line         line 463</div>
+        <code>                    (int|NULL)
+    <strong>getMinorProtocolVersion</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the minor protocol version that is in use.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>(int|NULL)</td>
+            <td>The major protocol version in use, or NULL if no
+        minor version is specified.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>_minorProtocolVersion</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareRequest">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_prepareRequest">Zend_Gdata_App</a> at line         line 491</div>
+        <code>                    array
+    <strong>prepareRequest</strong>(string $method, string $url = null, array $headers = array(), mixed $data = null, string $contentTypeOverride = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Provides pre-processing for HTTP requests to APP services.</p>                    <p><ol>
+<li>Checks the $data element and, if it's an entry, extracts the XML,
+multipart data, edit link (PUT,DELETE), etc.</li>
+<li>If $data is a string, sets the default content-type  header as
+'application/atom+xml' if it's not already been set.</li>
+<li>Adds a x-http-method override header and changes the HTTP method
+to 'POST' if necessary as per getHttpMethodOverride()</li>
+</ol>
+</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>The HTTP method for the request - 'GET', 'POST',
+                      'PUT', 'DELETE'</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>The URL to which this request is being performed,
+                   or null if found in $data</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>An associative array of HTTP headers for this
+                      request</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>The Zend<em>Gdata</em>App_Entry or XML for the
+                   body of the request</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$contentTypeOverride</td>
+                <td>The override value for the
+                                   content type of the request body</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>An associative array containing the determined
+              'method', 'url', 'data', 'headers', 'contentType'</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_performHttpRequest">
+        <div class="location">in <a href="Zend_Gdata.html#method_performHttpRequest">Zend_Gdata</a> at line         line 210</div>
+        <code>                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+    <strong>performHttpRequest</strong>(string $method, string $url, array $headers = array(), string $body = null, string $contentType = null, int $remainingRedirects = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Performs a HTTP request using the specified method.</p>                    <p>Overrides the definition in the parent (Zend<em>Gdata</em>App)
+and uses the Zend<em>Gdata</em>HttpClient functionality
+to filter the HTTP requests and responses.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>The HTTP method for the request - 'GET', 'POST',
+                      'PUT', 'DELETE'</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>The URL to which this request is being performed</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>An associative array of HTTP headers
+                      for this request</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td>The body of the HTTP request</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$contentType</td>
+                <td>The value for the content type
+                               of the request body</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$remainingRedirects</td>
+                <td>Number of redirects to follow if request
+                             s results in one</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Response.html">Zend_Http_Response</a></td>
+            <td>The response object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_import">
+        <div class="location">in <a href="Zend_Gdata.html#method_import">Zend_Gdata</a> at line         line 123</div>
+        <code>        static            string|<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>
+    <strong>import</strong>(string $uri, <a href="Zend_Http_Client.html">Zend_Http_Client</a> $client = null, string $className = &#039;Zend_Gdata_Feed&#039;, bool $useObjectMapping = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Imports a feed located at $uri.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uri</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+                <td>$client</td>
+                <td>The client used for communication</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>The class which is used as the return type</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$useObjectMapping</td>
+                <td>Enable/disable the use of XML to object mapping.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></td>
+            <td>Returns string only if the fourth
+                                   parameter ($useObjectMapping) is set
+                                   to false.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_Exception.html">Zend_Gdata_App_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_importUrl">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_importUrl">Zend_Gdata_App</a> at line         line 768</div>
+        <code>                    string|<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>
+    <strong>importUrl</strong>(string $url, string $className = &#039;Zend_Gdata_App_Feed&#039;, array $extraHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Imports the specified URL (non-statically).</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>The URL to import</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>The class which is used as the return type</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraHeaders</td>
+                <td>Extra headers to add to the request, as an
+       array of string-based key/value pairs.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></td>
+            <td>Returns string only if the object
+                                   mapping has been disabled explicitly
+                                   by passing false to the
+                                   useObjectMapping() function.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_Exception.html">Zend_Gdata_App_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_importString">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_importString">Zend_Gdata_App</a> at line         line 816</div>
+        <code>        static            <a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>
+    <strong>importString</strong>($string, $className = &#039;Zend_Gdata_App_Feed&#039;, $majorProtocolVersion = null, $minorProtocolVersion = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Imports a feed represented by $string.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$className</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$majorProtocolVersion</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$minorProtocolVersion</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_Exception.html">Zend_Gdata_App_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_importFile">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_importFile">Zend_Gdata_App</a> at line         line 855</div>
+        <code>        static            <a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>
+    <strong>importFile</strong>(string $filename, string $className = &#039;Zend_Gdata_App_Feed&#039;, string $useIncludePath = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Imports a feed from a file located at $filename.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>The class which is used as the return type</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$useIncludePath</td>
+                <td>Whether the include_path should be searched</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_Exception.html">Zend_Gdata_App_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_get">Zend_Gdata_App</a> at line         line 878</div>
+        <code>                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+    <strong>get</strong>(string $uri, array $extraHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>GET a URI using client object.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uri</td>
+                <td>GET URI</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraHeaders</td>
+                <td>Extra headers to add to the request, as an
+       array of string-based key/value pairs.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Response.html">Zend_Http_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_HttpException.html">Zend_Gdata_App_HttpException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_post">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_post">Zend_Gdata_App</a> at line         line 900</div>
+        <code>                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+    <strong>post</strong>($data, $uri = null, $remainingRedirects = null, $contentType = null, $extraHeaders = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>POST data with client object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$uri</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$remainingRedirects</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$extraHeaders</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Response.html">Zend_Http_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_Exception.html">Zend_Gdata_App_Exception</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Gdata_App_HttpException.html">Zend_Gdata_App_HttpException</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Gdata_App_InvalidArgumentException.html">Zend_Gdata_App_InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_put">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_put">Zend_Gdata_App</a> at line         line 925</div>
+        <code>                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+    <strong>put</strong>($data, $uri = null, $remainingRedirects = null, $contentType = null, $extraHeaders = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>PUT data with client object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$uri</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$remainingRedirects</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$extraHeaders</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Response.html">Zend_Http_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_Exception.html">Zend_Gdata_App_Exception</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Gdata_App_HttpException.html">Zend_Gdata_App_HttpException</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Gdata_App_InvalidArgumentException.html">Zend_Gdata_App_InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_delete">Zend_Gdata_App</a> at line         line 945</div>
+        <code>                    void
+    <strong>delete</strong>($data, $remainingRedirects = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DELETE entry with client object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$remainingRedirects</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_Exception.html">Zend_Gdata_App_Exception</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Gdata_App_HttpException.html">Zend_Gdata_App_HttpException</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Gdata_App_InvalidArgumentException.html">Zend_Gdata_App_InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insertEntry">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_insertEntry">Zend_Gdata_App</a> at line         line 975</div>
+        <code>                    <a href="Zend_Gdata_App_Entry.html">Zend_Gdata_App_Entry</a>
+    <strong>insertEntry</strong>(mixed $data, string $uri, string $className = &#039;Zend_Gdata_App_Entry&#039;, array $extraHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Inserts an entry to a given URI and returns the response as a
+fully formed Entry.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>The Zend<em>Gdata</em>App_Entry or XML to post</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$uri</td>
+                <td>POST URI</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>The class of entry to be returned.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraHeaders</td>
+                <td>Extra headers to add to the request, as an
+       array of string-based key/value pairs.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Gdata_App_Entry.html">Zend_Gdata_App_Entry</a></td>
+            <td>The entry returned by the service after
+        insertion.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateEntry">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_updateEntry">Zend_Gdata_App</a> at line         line 1010</div>
+        <code>                    <a href="Zend_Gdata_App_Entry.html">Zend_Gdata_App_Entry</a>
+    <strong>updateEntry</strong>(mixed $data, string|null $uri = null, string|null $className = null, array $extraHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update an entry</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>Zend<em>Gdata</em>App_Entry or XML (w/ID and link rel='edit')</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$uri</td>
+                <td>The URI to send requests to, or null if $data
+       contains the URI.</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$className</td>
+                <td>The name of the class that should be deserialized
+       from the server response. If null, then 'Zend<em>Gdata</em>App_Entry'
+       will be used.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$extraHeaders</td>
+                <td>Extra headers to add to the request, as an
+       array of string-based key/value pairs.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Gdata_App_Entry.html">Zend_Gdata_App_Entry</a></td>
+            <td>The entry returned from the server</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_Exception.html">Zend_Gdata_App_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="Zend_Gdata_App.html#method___call">Zend_Gdata_App</a> at line         line 1049</div>
+        <code>                    
+    <strong>__call</strong>(string $method, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Provides a magic factory method to instantiate new objects with
+shorter syntax than would otherwise be required by the Zend Framework
+naming conventions.  For instance, to construct a new
+Zend<em>Gdata</em>Calendar<em>Extension</em>Color, a developer simply needs to do
+$gCal->newColor().  For this magic constructor, packages are searched
+in the same order as which they appear in the $_registeredPackages
+array</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>The method name being called</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>The arguments passed to the call</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_Exception.html">Zend_Gdata_App_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_retrieveAllEntriesForFeed">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_retrieveAllEntriesForFeed">Zend_Gdata_App</a> at line         line 1105</div>
+        <code>                    mixed
+    <strong>retrieveAllEntriesForFeed</strong>(object $feed)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve all entries for a feed, iterating through pages as necessary.</p>                    <p>Be aware that calling this function on a large dataset will take a
+significant amount of time to complete. In some cases this may cause
+execution to timeout without proper precautions in place.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$feed</td>
+                <td>The feed to iterate through.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>A new feed of the same type as the one originally
+         passed in, containing all relevent entries.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enableRequestDebugLogging">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_enableRequestDebugLogging">Zend_Gdata_App</a> at line         line 1133</div>
+        <code>                    
+    <strong>enableRequestDebugLogging</strong>(string $logfile)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>This method enables logging of requests by changing the
+Zend<em>Http</em>Client_Adapter used for performing the requests.</p>                    <p>NOTE: This will not work if you have customized the adapter
+already to use a proxy server or other interface.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$logfile</td>
+                <td>The logfile to use when logging the requests</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNextFeed">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_getNextFeed">Zend_Gdata_App</a> at line         line 1153</div>
+        <code>                    <a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>|null
+    <strong>getNextFeed</strong>(<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a> $feed, string $className = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve next set of results based on a given feed.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></td>
+                <td>$feed</td>
+                <td>The feed from which to
+         retreive the next set of results.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>(optional) The class of feed to be returned.
+         If null, the next feed (if found) will be the same class as
+         the feed that was given as the first argument.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>|null</td>
+            <td>Returns a
+         Zend<em>Gdata</em>App_Feed or null if no next set of results
+         exists.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPreviousFeed">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_getPreviousFeed">Zend_Gdata_App</a> at line         line 1180</div>
+        <code>                    <a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>|null
+    <strong>getPreviousFeed</strong>(<a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a> $feed, string $className = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve previous set of results based on a given feed.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a></td>
+                <td>$feed</td>
+                <td>The feed from which to
+         retreive the previous set of results.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>(optional) The class of feed to be returned.
+         If null, the previous feed (if found) will be the same class as
+         the feed that was given as the first argument.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Gdata_App_Feed.html">Zend_Gdata_App_Feed</a>|null</td>
+            <td>Returns a
+         Zend<em>Gdata</em>App_Feed or null if no previous set of results
+         exists.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateIfMatchHeaderData">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_generateIfMatchHeaderData">Zend_Gdata_App</a> at line         line 1204</div>
+        <code>                    string|null
+    <strong>generateIfMatchHeaderData</strong>($data, $allowWeek)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the data for an If-Match header based on the current Etag
+property. If Etags are not supported by the server or cannot be
+extracted from the data, then null will be returned.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$allowWeek</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>$data</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_usingObjectMapping">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_usingObjectMapping">Zend_Gdata_App</a> at line         line 1225</div>
+        <code>                    boolean
+    <strong>usingObjectMapping</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine whether service object is using XML to object mapping.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>True if service object is using XML to object mapping,
+                false otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_useObjectMapping">
+        <div class="location">in <a href="Zend_Gdata_App.html#method_useObjectMapping">Zend_Gdata_App</a> at line         line 1237</div>
+        <code>                    void
+    <strong>useObjectMapping</strong>(boolean $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enable/disable the use of XML to object mapping.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$value</td>
+                <td>Pass in true to use the XML to object mapping.
+                      Pass in false or null to disable it.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAuthenticated">
+        <div class="location">in <a href="Zend_Gdata.html#method_isAuthenticated">Zend_Gdata</a> at line         line 230</div>
+        <code>                    boolean
+    <strong>isAuthenticated</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determines whether service object is authenticated.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>True if service object is authenticated, false otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

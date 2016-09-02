@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Controller_Front | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Controller_Front" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Controller_Front
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Controller_Front</strong>
+</p>
+
+        
+    
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInstance">getInstance</a>()
+        
+                                            <p>Singleton instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetInstance">resetInstance</a>()
+        
+                                            <p>Resets all object properties of the singleton instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_run">run</a>(string|array $controllerDirectory)
+        
+                                            <p>Convenience feature, calls setControllerDirectory()->setRouter()->dispatch()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addControllerDirectory">addControllerDirectory</a>(string $directory, string $module = null)
+        
+                                            <p>Add a controller directory to the controller directory stack</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setControllerDirectory">setControllerDirectory</a>(string|array $directory, string $module = null)
+        
+                                            <p>Set controller directory</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getControllerDirectory">getControllerDirectory</a>(string $name = null)
+        
+                                            <p>Retrieve controller directory</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeControllerDirectory">removeControllerDirectory</a>(string $module)
+        
+                                            <p>Remove a controller directory by module name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addModuleDirectory">addModuleDirectory</a>(string $path)
+        
+                                            <p>Specify a directory as containing modules</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModuleDirectory">getModuleDirectory</a>(string $module = null)
+        
+                                            <p>Return the path to a module directory (but not the controllers directory within)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setModuleControllerDirectoryName">setModuleControllerDirectoryName</a>(string $name = &#039;controllers&#039;)
+        
+                                            <p>Set the directory name within a module containing controllers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModuleControllerDirectoryName">getModuleControllerDirectoryName</a>()
+        
+                                            <p>Return the directory name within a module containing controllers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultControllerName">setDefaultControllerName</a>(string $controller)
+        
+                                            <p>Set the default controller (unformatted string)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultControllerName">getDefaultControllerName</a>()
+        
+                                            <p>Retrieve the default controller (unformatted string)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultAction">setDefaultAction</a>(string $action)
+        
+                                            <p>Set the default action (unformatted string)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultAction">getDefaultAction</a>()
+        
+                                            <p>Retrieve the default action (unformatted string)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultModule">setDefaultModule</a>(string $module)
+        
+                                            <p>Set the default module name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultModule">getDefaultModule</a>()
+        
+                                            <p>Retrieve the default module</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRequest">setRequest</a>(string|<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a> $request)
+        
+                                            <p>Set request class/object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null|<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequest">getRequest</a>()
+        
+                                            <p>Return the request object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRouter">setRouter</a>(string|<a href="Zend_Controller_Router_Interface.html">Zend_Controller_Router_Interface</a> $router)
+        
+                                            <p>Set router class/object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Router_Interface.html">Zend_Controller_Router_Interface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRouter">getRouter</a>()
+        
+                                            <p>Return the router object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBaseUrl">setBaseUrl</a>(string $base = null)
+        
+                                            <p>Set the base URL used for requests</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseUrl">getBaseUrl</a>()
+        
+                                            <p>Retrieve the currently set base URL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDispatcher">setDispatcher</a>(<a href="Zend_Controller_Dispatcher_Interface.html">Zend_Controller_Dispatcher_Interface</a> $dispatcher)
+        
+                                            <p>Set the dispatcher object.  The dispatcher is responsible for
+taking a Zend<em>Controller</em>Dispatcher_Token object, instantiating the controller, and
+call the action method of the controller.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Dispatcher_Interface.html">Zend_Controller_Dispatcher_Interface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDispatcher">getDispatcher</a>()
+        
+                                            <p>Return the dispatcher object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setResponse">setResponse</a>(string|<a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response)
+        
+                                            <p>Set response class/object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null|<a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResponse">getResponse</a>()
+        
+                                            <p>Return the response object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParam">setParam</a>(string $name, mixed $value)
+        
+                                            <p>Add or modify a parameter to use when instantiating an action controller</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParams">setParams</a>(array $params)
+        
+                                            <p>Set parameters to pass to action controller constructors</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParam">getParam</a>(string $name)
+        
+                                            <p>Retrieve a single parameter from the controller parameter stack</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParams">getParams</a>()
+        
+                                            <p>Retrieve action controller instantiation parameters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearParams">clearParams</a>(null|string|array $name = null)
+        
+                                            <p>Clear the controller parameter stack</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerPlugin">registerPlugin</a>(<a href="Zend_Controller_Plugin_Abstract.html">Zend_Controller_Plugin_Abstract</a> $plugin, int $stackIndex = null)
+        
+                                            <p>Register a plugin.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unregisterPlugin">unregisterPlugin</a>(string|<a href="Zend_Controller_Plugin_Abstract.html">Zend_Controller_Plugin_Abstract</a> $plugin)
+        
+                                            <p>Unregister a plugin.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasPlugin">hasPlugin</a>(string $class)
+        
+                                            <p>Is a particular plugin registered?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    false|<a href="Zend_Controller_Plugin_Abstract.html">Zend_Controller_Plugin_Abstract</a>|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPlugin">getPlugin</a>(string $class)
+        
+                                            <p>Retrieve a plugin or plugins by class</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPlugins">getPlugins</a>()
+        
+                                            <p>Retrieve all plugins</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean|<a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_throwExceptions">throwExceptions</a>(boolean $flag = null)
+        
+                                            <p>Set the throwExceptions flag and retrieve current status</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean|<a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_returnResponse">returnResponse</a>(boolean $flag = null)
+        
+                                            <p>Set whether {@link dispatch()} should return the response without first
+rendering output. By default, output is rendered and dispatch() returns
+nothing.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void|<a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dispatch">dispatch</a>(<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a> $request = null, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response = null)
+        
+                                            <p>Dispatch an HTTP request to a controller/action.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getInstance">
+        <div class="location">at line         line 149</div>
+        <code>        static            <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>getInstance</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Singleton instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetInstance">
+        <div class="location">at line         line 167</div>
+        <code>                    void
+    <strong>resetInstance</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resets all object properties of the singleton instance</p>                    <p>Primarily used for testing; could be used to chain front controllers.</p>
+
+<p>Also resets action helper broker, clearing all registered helpers.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_run">
+        <div class="location">at line         line 208</div>
+        <code>        static            void
+    <strong>run</strong>(string|array $controllerDirectory)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convenience feature, calls setControllerDirectory()->setRouter()->dispatch()</p>                    <p>In PHP 5.1.x, a call to a static method never populates $this -- so run()
+may actually be called after setting up your front controller.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$controllerDirectory</td>
+                <td>Path to Zend<em>Controller</em>Action
+controller classes or array of such paths</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Exception.html">Zend_Controller_Exception</a></td>
+                <td>if called from an object instance</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addControllerDirectory">
+        <div class="location">at line         line 226</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>addControllerDirectory</strong>(string $directory, string $module = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a controller directory to the controller directory stack</p>                    <p>If $args is presented and is a string, uses it for the array key mapping
+to the directory specified.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td>Optional argument; module with which to associate directory. If none provided, assumes 'default'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Exception.html">Zend_Controller_Exception</a></td>
+                <td>if directory not found or readable</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setControllerDirectory">
+        <div class="location">at line         line 243</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setControllerDirectory</strong>(string|array $directory, string $module = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set controller directory</p>                    <p>Stores controller directory(ies) in dispatcher. May be an array of
+directories or a string containing a single directory.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$directory</td>
+                <td>Path to Zend<em>Controller</em>Action controller
+classes or array of such paths</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td>Optional module name to use with string $directory</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getControllerDirectory">
+        <div class="location">at line         line 260</div>
+        <code>                    array|string|null
+    <strong>getControllerDirectory</strong>(string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve controller directory</p>                    <p>Retrieves:
+- Array of all controller directories if no $name passed
+- String path if $name passed and exists as a key in controller directory array
+- null if $name passed but does not exist in controller directory keys</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Default null</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeControllerDirectory">
+        <div class="location">at line         line 271</div>
+        <code>                    bool
+    <strong>removeControllerDirectory</strong>(string $module)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a controller directory by module name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addModuleDirectory">
+        <div class="location">at line         line 286</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>addModuleDirectory</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify a directory as containing modules</p>                    <p>Iterates through the directory, adding any subdirectories as modules;
+the subdirectory within each module named after {@link $_moduleControllerDirectoryName}
+will be used as the controller directory path.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModuleDirectory">
+        <div class="location">at line         line 319</div>
+        <code>                    string|null
+    <strong>getModuleDirectory</strong>(string $module = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the path to a module directory (but not the controllers directory within)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setModuleControllerDirectoryName">
+        <div class="location">at line         line 346</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setModuleControllerDirectoryName</strong>(string $name = &#039;controllers&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the directory name within a module containing controllers</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModuleControllerDirectoryName">
+        <div class="location">at line         line 358</div>
+        <code>                    string
+    <strong>getModuleControllerDirectoryName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the directory name within a module containing controllers</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultControllerName">
+        <div class="location">at line         line 369</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setDefaultControllerName</strong>(string $controller)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default controller (unformatted string)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultControllerName">
+        <div class="location">at line         line 381</div>
+        <code>                    string
+    <strong>getDefaultControllerName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the default controller (unformatted string)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultAction">
+        <div class="location">at line         line 392</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setDefaultAction</strong>(string $action)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default action (unformatted string)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultAction">
+        <div class="location">at line         line 404</div>
+        <code>                    string
+    <strong>getDefaultAction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the default action (unformatted string)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultModule">
+        <div class="location">at line         line 415</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setDefaultModule</strong>(string $module)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default module name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultModule">
+        <div class="location">at line         line 427</div>
+        <code>                    string
+    <strong>getDefaultModule</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the default module</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequest">
+        <div class="location">at line         line 443</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setRequest</strong>(string|<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set request class/object</p>                    <p>Set the request object.  The request holds the request environment.</p>
+
+<p>If a class name is provided, it will instantiate it</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Exception.html">Zend_Controller_Exception</a></td>
+                <td>if invalid request class</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">at line         line 467</div>
+        <code>                    null|<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a>
+    <strong>getRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the request object.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRouter">
+        <div class="location">at line         line 485</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setRouter</strong>(string|<a href="Zend_Controller_Router_Interface.html">Zend_Controller_Router_Interface</a> $router)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set router class/object</p>                    <p>Set the router object.  The router is responsible for mapping
+the request to a controller and action.</p>
+
+<p>If a class name is provided, instantiates router with any parameters
+registered via {@link setParam()} or {@link setParams()}.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Controller_Router_Interface.html">Zend_Controller_Router_Interface</a></td>
+                <td>$router</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Exception.html">Zend_Controller_Exception</a></td>
+                <td>if invalid router class</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRouter">
+        <div class="location">at line         line 513</div>
+        <code>                    <a href="Zend_Controller_Router_Interface.html">Zend_Controller_Router_Interface</a>
+    <strong>getRouter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the router object.</p>                    <p>Instantiates a Zend<em>Controller</em>Router_Rewrite object if no router currently set.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Router_Interface.html">Zend_Controller_Router_Interface</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseUrl">
+        <div class="location">at line         line 543</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setBaseUrl</strong>(string $base = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the base URL used for requests</p>                    <p>Use to set the base URL segment of the REQUEST<em>URI to use when
+determining PATH</em>INFO, etc. Examples:
+- /admin
+- /myapp
+- /subdir/index.php</p>
+
+<p>Note that the URL should not include the full URI. Do not use:
+- http://example.com/admin
+- http://example.com/myapp
+- http://example.com/subdir/index.php</p>
+
+<p>If a null value is passed, this can be used as well for autodiscovery (default).</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$base</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Exception.html">Zend_Controller_Exception</a></td>
+                <td>for non-string $base</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseUrl">
+        <div class="location">at line         line 564</div>
+        <code>                    string
+    <strong>getBaseUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the currently set base URL</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDispatcher">
+        <div class="location">at line         line 582</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setDispatcher</strong>(<a href="Zend_Controller_Dispatcher_Interface.html">Zend_Controller_Dispatcher_Interface</a> $dispatcher)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the dispatcher object.  The dispatcher is responsible for
+taking a Zend<em>Controller</em>Dispatcher_Token object, instantiating the controller, and
+call the action method of the controller.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Dispatcher_Interface.html">Zend_Controller_Dispatcher_Interface</a></td>
+                <td>$dispatcher</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDispatcher">
+        <div class="location">at line         line 593</div>
+        <code>                    <a href="Zend_Controller_Dispatcher_Interface.html">Zend_Controller_Dispatcher_Interface</a>
+    <strong>getDispatcher</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the dispatcher object.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Dispatcher_Interface.html">Zend_Controller_Dispatcher_Interface</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setResponse">
+        <div class="location">at line         line 617</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setResponse</strong>(string|<a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set response class/object</p>                    <p>Set the response object.  The response is a container for action
+responses and headers. Usage is optional.</p>
+
+<p>If a class name is provided, instantiates a response object.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Exception.html">Zend_Controller_Exception</a></td>
+                <td>if invalid response class</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponse">
+        <div class="location">at line         line 641</div>
+        <code>                    null|<a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+    <strong>getResponse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the response object.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|<a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParam">
+        <div class="location">at line         line 653</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setParam</strong>(string $name, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add or modify a parameter to use when instantiating an action controller</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParams">
+        <div class="location">at line         line 666</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>setParams</strong>(array $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set parameters to pass to action controller constructors</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParam">
+        <div class="location">at line         line 678</div>
+        <code>                    mixed
+    <strong>getParam</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve a single parameter from the controller parameter stack</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParams">
+        <div class="location">at line         line 692</div>
+        <code>                    array
+    <strong>getParams</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve action controller instantiation parameters</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearParams">
+        <div class="location">at line         line 707</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>clearParams</strong>(null|string|array $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear the controller parameter stack</p>                    <p>By default, clears all parameters. If a parameter name is given, clears
+only that parameter; if an array of parameter names is provided, clears
+each.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|string|array</td>
+                <td>$name</td>
+                <td>single key or array of keys for params to clear</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerPlugin">
+        <div class="location">at line         line 731</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>registerPlugin</strong>(<a href="Zend_Controller_Plugin_Abstract.html">Zend_Controller_Plugin_Abstract</a> $plugin, int $stackIndex = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a plugin.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Plugin_Abstract.html">Zend_Controller_Plugin_Abstract</a></td>
+                <td>$plugin</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$stackIndex</td>
+                <td>Optional; stack index for plugin</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unregisterPlugin">
+        <div class="location">at line         line 743</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>unregisterPlugin</strong>(string|<a href="Zend_Controller_Plugin_Abstract.html">Zend_Controller_Plugin_Abstract</a> $plugin)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unregister a plugin.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Controller_Plugin_Abstract.html">Zend_Controller_Plugin_Abstract</a></td>
+                <td>$plugin</td>
+                <td>Plugin class or object to unregister</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasPlugin">
+        <div class="location">at line         line 755</div>
+        <code>                    bool
+    <strong>hasPlugin</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is a particular plugin registered?</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlugin">
+        <div class="location">at line         line 766</div>
+        <code>                    false|<a href="Zend_Controller_Plugin_Abstract.html">Zend_Controller_Plugin_Abstract</a>|array
+    <strong>getPlugin</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve a plugin or plugins by class</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>false|<a href="Zend_Controller_Plugin_Abstract.html">Zend_Controller_Plugin_Abstract</a>|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlugins">
+        <div class="location">at line         line 776</div>
+        <code>                    array
+    <strong>getPlugins</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve all plugins</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_throwExceptions">
+        <div class="location">at line         line 797</div>
+        <code>                    boolean|<a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>throwExceptions</strong>(boolean $flag = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the throwExceptions flag and retrieve current status</p>                    <p>Set whether exceptions encounted in the dispatch loop should be thrown
+or caught and trapped in the response object.</p>
+
+<p>Default behaviour is to trap them in the response object; call this
+method to have them thrown.</p>
+
+<p>Passing no value will return the current value of the flag; passing a
+boolean true or false value will set the flag and return the current
+object instance.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td>Defaults to null (return flag state)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean|<a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td>Used as a setter, returns object; as a getter, returns boolean</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_returnResponse">
+        <div class="location">at line         line 815</div>
+        <code>                    boolean|<a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>returnResponse</strong>(boolean $flag = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set whether {@link dispatch()} should return the response without first
+rendering output. By default, output is rendered and dispatch() returns
+nothing.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean|<a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td>Used as a setter, returns object; as a getter, returns boolean</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dispatch">
+        <div class="location">at line         line 835</div>
+        <code>                    void|<a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+    <strong>dispatch</strong>(<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a> $request = null, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dispatch an HTTP request to a controller/action.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void|<a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+            <td>Returns response object if returnResponse() is true</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

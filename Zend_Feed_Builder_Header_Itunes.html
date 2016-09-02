@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Feed_Builder_Header_Itunes | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Feed_Builder_Header_Itunes" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Feed_Builder_Header_Itunes
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Feed_Builder_Header_Itunes</strong>        extends <a target="_blank" href="http://php.net/ArrayObject">ArrayObject</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>ITunes rss extension</p>            <p>Classes used to describe the itunes channel extension</p>        </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $categories)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCategories">setCategories</a>(array $categories)
+        
+                                            <p>Sets the categories column and in iTunes Music Store Browse
+$categories must conform to the following format:
+<code>
+array(array('main' => 'main category',
+            'sub' => 'sub category' // optionnal
+           ),
+      // up to 3 rows
+     )
+</code></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAuthor">setAuthor</a>(string $author)
+        
+                                            <p>Sets the artist value, default to the feed's author value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOwner">setOwner</a>(string $name = &#039;&#039;, string $email = &#039;&#039;)
+        
+                                            <p>Sets the owner of the postcast</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setImage">setImage</a>(string $image)
+        
+                                            <p>Sets the album/podcast art picture
+Default to the feed's image value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSubtitle">setSubtitle</a>(string $subtitle)
+        
+                                            <p>Sets the short description of the podcast
+Default to the feed's description</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSummary">setSummary</a>(string $summary)
+        
+                                            <p>Sets the longer description of the podcast
+Default to the feed's description</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBlock">setBlock</a>(string $block)
+        
+                                            <p>Prevent a feed from appearing</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setExplicit">setExplicit</a>(string $explicit)
+        
+                                            <p>Configuration of the parental advisory graphic</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setKeywords">setKeywords</a>(string $keywords)
+        
+                                            <p>Sets a comma separated list of 12 keywords maximum</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setNewFeedUrl">setNewFeedUrl</a>(string $url)
+        
+                                            <p>Sets the new feed URL location</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $name)
+        
+                                            <p>Read only properties accessor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___set">__set</a>(string $name, mixed $value)
+        
+                                            <p>Write properties accessor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___isset">__isset</a>(string $key)
+        
+                                            <p>Isset accessor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___unset">__unset</a>(string $key)
+        
+                                            <p>Unset accessor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 42</div>
+        <code>                    void
+    <strong>__construct</strong>(array $categories)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$categories</td>
+                <td>Categories columns and in iTunes Music Store Browse</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCategories">
+        <div class="location">at line         line 62</div>
+        <code>                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+    <strong>setCategories</strong>(array $categories)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the categories column and in iTunes Music Store Browse
+$categories must conform to the following format:
+<code>
+array(array('main' => 'main category',
+            'sub' => 'sub category' // optionnal
+           ),
+      // up to 3 rows
+     )
+</code></p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$categories</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Feed_Builder_Exception.html">Zend_Feed_Builder_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAuthor">
+        <div class="location">at line         line 98</div>
+        <code>                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+    <strong>setAuthor</strong>(string $author)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the artist value, default to the feed's author value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$author</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOwner">
+        <div class="location">at line         line 112</div>
+        <code>                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+    <strong>setOwner</strong>(string $name = &#039;&#039;, string $email = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the owner of the postcast</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>default to the feed's author value</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td>default to the feed's email value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Feed_Builder_Exception.html">Zend_Feed_Builder_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setImage">
+        <div class="location">at line         line 139</div>
+        <code>                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+    <strong>setImage</strong>(string $image)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the album/podcast art picture
+Default to the feed's image value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$image</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSubtitle">
+        <div class="location">at line         line 152</div>
+        <code>                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+    <strong>setSubtitle</strong>(string $subtitle)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the short description of the podcast
+Default to the feed's description</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subtitle</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSummary">
+        <div class="location">at line         line 165</div>
+        <code>                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+    <strong>setSummary</strong>(string $summary)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the longer description of the podcast
+Default to the feed's description</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$summary</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBlock">
+        <div class="location">at line         line 178</div>
+        <code>                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+    <strong>setBlock</strong>(string $block)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prevent a feed from appearing</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$block</td>
+                <td>can be 'yes' or 'no'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Feed_Builder_Exception.html">Zend_Feed_Builder_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setExplicit">
+        <div class="location">at line         line 199</div>
+        <code>                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+    <strong>setExplicit</strong>(string $explicit)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Configuration of the parental advisory graphic</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$explicit</td>
+                <td>can be 'yes', 'no' or 'clean'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Feed_Builder_Exception.html">Zend_Feed_Builder_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKeywords">
+        <div class="location">at line         line 219</div>
+        <code>                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+    <strong>setKeywords</strong>(string $keywords)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets a comma separated list of 12 keywords maximum</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$keywords</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setNewFeedUrl">
+        <div class="location">at line         line 231</div>
+        <code>                    <a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a>
+    <strong>setNewFeedUrl</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the new feed URL location</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Feed_Builder_Header_Itunes.html">Zend_Feed_Builder_Header_Itunes</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">at line         line 243</div>
+        <code>                    mixed
+    <strong>__get</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Read only properties accessor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>property to read</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___set">
+        <div class="location">at line         line 259</div>
+        <code>                    void
+    <strong>__set</strong>(string $name, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Write properties accessor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>name of the property to set</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>value to set</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">at line         line 270</div>
+        <code>                    boolean
+    <strong>__isset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Isset accessor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___unset">
+        <div class="location">at line         line 281</div>
+        <code>                    void
+    <strong>__unset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unset accessor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

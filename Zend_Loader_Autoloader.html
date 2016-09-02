@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Loader_Autoloader | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Loader_Autoloader" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Loader_Autoloader
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Loader_Autoloader</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Autoloader stack and namespace autoloader</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInstance">getInstance</a>()
+        
+                                            <p>Retrieve singleton instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetInstance">resetInstance</a>()
+        
+                                            <p>Reset the singleton instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_autoload">autoload</a>(string $class)
+        
+                                            <p>Autoload a class</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultAutoloader">setDefaultAutoloader</a>(string|array $callback)
+        
+                                            <p>Set the default autoloader implementation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultAutoloader">getDefaultAutoloader</a>()
+        
+                                            <p>Retrieve the default autoloader callback</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAutoloaders">setAutoloaders</a>(array $autoloaders)
+        
+                                            <p>Set several autoloader callbacks at once</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAutoloaders">getAutoloaders</a>()
+        
+                                            <p>Get attached autoloader implementations</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNamespaceAutoloaders">getNamespaceAutoloaders</a>(string $namespace)
+        
+                                            <p>Return all autoloaders for a given namespace</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerNamespace">registerNamespace</a>(string|array $namespace)
+        
+                                            <p>Register a namespace to autoload</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unregisterNamespace">unregisterNamespace</a>(string|array $namespace)
+        
+                                            <p>Unload a registered autoload namespace</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRegisteredNamespaces">getRegisteredNamespaces</a>()
+        
+                                            <p>Get a list of registered autoload namespaces</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setZfPath">setZfPath</a>($spec, $version = &#039;latest&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getZfPath">getZfPath</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|<a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_suppressNotFoundWarnings">suppressNotFoundWarnings</a>(null|bool $flag = null)
+        
+                                            <p>Get or set the value of the "suppress not found warnings" flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFallbackAutoloader">setFallbackAutoloader</a>(bool $flag)
+        
+                                            <p>Indicate whether or not this autoloader should be a fallback autoloader</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isFallbackAutoloader">isFallbackAutoloader</a>()
+        
+                                            <p>Is this instance acting as a fallback autoloader?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getClassAutoloaders">getClassAutoloaders</a>(string $class)
+        
+                                            <p>Get autoloaders to use when matching class</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unshiftAutoloader">unshiftAutoloader</a>(object|array|string $callback, string|array $namespace = &#039;&#039;)
+        
+                                            <p>Add an autoloader to the beginning of the stack</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pushAutoloader">pushAutoloader</a>(object|array|string $callback, string|array $namespace = &#039;&#039;)
+        
+                                            <p>Append an autoloader to the autoloader stack</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeAutoloader">removeAutoloader</a>(object|array|string $callback, null|string|array $namespace = null)
+        
+                                            <p>Remove an autoloader from the autoloader stack</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getInstance">
+        <div class="location">at line         line 90</div>
+        <code>        static            <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+    <strong>getInstance</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve singleton instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetInstance">
+        <div class="location">at line         line 103</div>
+        <code>        static            void
+    <strong>resetInstance</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reset the singleton instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_autoload">
+        <div class="location">at line         line 114</div>
+        <code>        static            bool
+    <strong>autoload</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Autoload a class</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultAutoloader">
+        <div class="location">at line         line 143</div>
+        <code>                    void
+    <strong>setDefaultAutoloader</strong>(string|array $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default autoloader implementation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$callback</td>
+                <td>PHP callback</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultAutoloader">
+        <div class="location">at line         line 158</div>
+        <code>                    string|array
+    <strong>getDefaultAutoloader</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the default autoloader callback</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td>PHP Callback</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAutoloaders">
+        <div class="location">at line         line 169</div>
+        <code>                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+    <strong>setAutoloaders</strong>(array $autoloaders)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set several autoloader callbacks at once</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$autoloaders</td>
+                <td>Array of PHP callbacks (or Zend<em>Loader</em>Autoloader_Interface implementations) to act as autoloaders</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAutoloaders">
+        <div class="location">at line         line 180</div>
+        <code>                    array
+    <strong>getAutoloaders</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get attached autoloader implementations</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNamespaceAutoloaders">
+        <div class="location">at line         line 191</div>
+        <code>                    array
+    <strong>getNamespaceAutoloaders</strong>(string $namespace)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return all autoloaders for a given namespace</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerNamespace">
+        <div class="location">at line         line 206</div>
+        <code>                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+    <strong>registerNamespace</strong>(string|array $namespace)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a namespace to autoload</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unregisterNamespace">
+        <div class="location">at line         line 228</div>
+        <code>                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+    <strong>unregisterNamespace</strong>(string|array $namespace)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unload a registered autoload namespace</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRegisteredNamespaces">
+        <div class="location">at line         line 249</div>
+        <code>                    array
+    <strong>getRegisteredNamespaces</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a list of registered autoload namespaces</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setZfPath">
+        <div class="location">at line         line 254</div>
+        <code>                    
+    <strong>setZfPath</strong>($spec, $version = &#039;latest&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getZfPath">
+        <div class="location">at line         line 275</div>
+        <code>                    
+    <strong>getZfPath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_suppressNotFoundWarnings">
+        <div class="location">at line         line 286</div>
+        <code>                    bool|<a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+    <strong>suppressNotFoundWarnings</strong>(null|bool $flag = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get or set the value of the "suppress not found warnings" flag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|bool</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|<a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a></td>
+            <td>Returns boolean if no argument is passed, object instance otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFallbackAutoloader">
+        <div class="location">at line         line 301</div>
+        <code>                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+    <strong>setFallbackAutoloader</strong>(bool $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate whether or not this autoloader should be a fallback autoloader</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isFallbackAutoloader">
+        <div class="location">at line         line 312</div>
+        <code>                    bool
+    <strong>isFallbackAutoloader</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is this instance acting as a fallback autoloader?</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClassAutoloaders">
+        <div class="location">at line         line 327</div>
+        <code>                    array
+    <strong>getClassAutoloaders</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get autoloaders to use when matching class</p>                    <p>Determines if the class matches a registered namespace, and, if so,
+returns only the autoloaders for that namespace. Otherwise, it returns
+all non-namespaced autoloaders.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Array of autoloaders to use</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unshiftAutoloader">
+        <div class="location">at line         line 378</div>
+        <code>                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+    <strong>unshiftAutoloader</strong>(object|array|string $callback, string|array $namespace = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an autoloader to the beginning of the stack</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$callback</td>
+                <td>PHP callback or Zend<em>Loader</em>Autoloader_Interface implementation</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$namespace</td>
+                <td>Specific namespace(s) under which to register callback</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pushAutoloader">
+        <div class="location">at line         line 401</div>
+        <code>                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+    <strong>pushAutoloader</strong>(object|array|string $callback, string|array $namespace = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append an autoloader to the autoloader stack</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$callback</td>
+                <td>PHP callback or Zend<em>Loader</em>Autoloader_Interface implementation</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$namespace</td>
+                <td>Specific namespace(s) under which to register callback</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeAutoloader">
+        <div class="location">at line         line 424</div>
+        <code>                    <a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a>
+    <strong>removeAutoloader</strong>(object|array|string $callback, null|string|array $namespace = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove an autoloader from the autoloader stack</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$callback</td>
+                <td>PHP callback or Zend<em>Loader</em>Autoloader_Interface implementation</td>
+            </tr>
+                    <tr>
+                <td>null|string|array</td>
+                <td>$namespace</td>
+                <td>Specific namespace(s) from which to remove autoloader</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_Autoloader.html">Zend_Loader_Autoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

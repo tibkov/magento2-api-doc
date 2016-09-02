@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Rest_Controller | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Rest_Controller" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Rest_Controller
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Rest_Controller</strong>        extends <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>An abstract class to guide implementation of action controllers for use with
+Zend<em>Rest</em>Route.</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_viewSuffix">
+                                                                                string
+                </td>
+                <td>$viewSuffix</td>
+                <td class="last">View script suffix; defaults to 'phtml'</td>
+                <td><small>from&nbsp;<a href="Zend_Controller_Action.html#property_viewSuffix">Zend_Controller_Action</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_view">
+                                                                                <a href="Zend_View_Interface.html">Zend_View_Interface</a>
+                </td>
+                <td>$view</td>
+                <td class="last">View object</td>
+                <td><small>from&nbsp;<a href="Zend_Controller_Action.html#property_view">Zend_Controller_Action</a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a> $request, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response, array $invokeArgs = array())
+        
+                                            <p>Class constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method___construct">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Initialize object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_init">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Interface.html">Zend_View_Interface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initView">initView</a>()
+        
+                                            <p>Initialize View object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_initView">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>(string|null $action = null, string|null $name = null, bool $noController = false)
+        
+                                            <p>Render a view</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_render">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderScript">renderScript</a>(string $script, string $name = null)
+        
+                                            <p>Render a given view script</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_renderScript">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getViewScript">getViewScript</a>(string $action = null, bool $noController = null)
+        
+                                            <p>Construct view script path</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_getViewScript">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequest">getRequest</a>()
+        
+                                            <p>Return the Request object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_getRequest">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRequest">setRequest</a>(<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a> $request)
+        
+                                            <p>Set the Request object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_setRequest">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResponse">getResponse</a>()
+        
+                                            <p>Return the Response object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_getResponse">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setResponse">setResponse</a>(<a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response)
+        
+                                            <p>Set the Response object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_setResponse">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInvokeArgs">getInvokeArgs</a>()
+        
+                                            <p>Return the array of constructor arguments (minus the Request object)</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_getInvokeArgs">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInvokeArg">getInvokeArg</a>(string $key)
+        
+                                            <p>Return a single invocation argument</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_getInvokeArg">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_Abstract.html">Zend_Controller_Action_Helper_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHelper">getHelper</a>(string $helperName)
+        
+                                            <p>Get a helper by name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_getHelper">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_Abstract.html">Zend_Controller_Action_Helper_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHelperCopy">getHelperCopy</a>(string $helperName)
+        
+                                            <p>Get a clone of a helper by name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_getHelperCopy">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFrontController">setFrontController</a>(<a href="Zend_Controller_Front.html">Zend_Controller_Front</a> $front)
+        
+                                            <p>Set the front controller instance</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_setFrontController">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFrontController">getFrontController</a>()
+        
+                                            <p>Retrieve Front Controller</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_getFrontController">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_preDispatch">preDispatch</a>()
+        
+                                            <p>Pre-dispatch routines</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_preDispatch">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postDispatch">postDispatch</a>()
+        
+                                            <p>Post-dispatch routines</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_postDispatch">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $methodName, array $args)
+        
+                                            <p>Proxy for undefined methods.  Default behavior is to throw an
+exception on undefined methods, however this function can be
+overridden to implement magic (dynamic) actions, or provide run-time
+dispatching.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method___call">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dispatch">dispatch</a>(string $action)
+        
+                                            <p>Dispatch the requested action</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_dispatch">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_run">run</a>(<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a> $request = null, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response = null)
+        
+                                            <p>Call the action specified in the request object, and return a response</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_run">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParam">getParam</a>(string $paramName, mixed $default = null)
+        
+                                            <p>Gets a parameter from the {@link $_request Request object}.  If the
+parameter does not exist, NULL will be returned.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_getParam">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParam">setParam</a>(string $paramName, mixed $value)
+        
+                                            <p>Set a parameter in the {@link $_request Request object}.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_setParam">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasParam">hasParam</a>(string $paramName)
+        
+                                            <p>Determine whether a given parameter exists in the
+{@link $_request Request object}.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_hasParam">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAllParams">getAllParams</a>()
+        
+                                            <p>Return all parameters in the {@link $_request Request object}
+as an associative array.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_getAllParams">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_forward">forward</a>(string $action, string $controller = null, string $module = null, array $params = null)
+        
+                                            <p>Forward to another controller/action.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_forward">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_redirect">redirect</a>(string $url, array $options = array())
+        
+                                            <p>Redirect to another URL</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action.html#method_redirect">Zend_Controller_Action</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_indexAction">indexAction</a>()
+        
+                                            <p>The index action handles index/list requests; it should respond with a
+list of the requested resources.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAction">getAction</a>()
+        
+                                            <p>The get action handles GET requests and receives an 'id' parameter; it
+should respond with the server resource state of the resource identified
+by the 'id' value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_headAction">headAction</a>()
+        
+                                            <p>The head action handles HEAD requests and receives an 'id' parameter; it
+should respond with the server resource state of the resource identified
+by the 'id' value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postAction">postAction</a>()
+        
+                                            <p>The post action handles POST requests; it should accept and digest a
+POSTed resource representation and persist the resource state.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putAction">putAction</a>()
+        
+                                            <p>The put action handles PUT requests and receives an 'id' parameter; it
+should update the server resource state of the resource identified by
+the 'id' value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteAction">deleteAction</a>()
+        
+                                            <p>The delete action handles DELETE requests and receives an 'id'
+parameter; it should update the server resource state of the resource
+identified by the 'id' value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="Zend_Controller_Action.html#method___construct">Zend_Controller_Action</a> at line         line 127</div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a> $request, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response, array $invokeArgs = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Class constructor</p>                    <p>The request and response objects should be registered with the
+controller, as should be any additional optional arguments; these will be
+available via {@link getRequest()}, {@link getResponse()}, and
+{@link getInvokeArgs()}, respectively.</p>
+
+<p>When overriding the constructor, please consider this usage as a best
+practice and ensure that each is registered appropriately; the easiest
+way to do so is to simply call parent::__construct($request, $response,
+$invokeArgs).</p>
+
+<p>After the request, response, and invokeArgs are set, the
+{@link $_helper helper broker} is initialized.</p>
+
+<p>Finally, {@link init()} is called as the final action of
+instantiation, and may be safely overridden to perform initialization
+tasks; as a general rule, override {@link init()} instead of the
+constructor to customize an action controller's instantiation.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$invokeArgs</td>
+                <td>Any additional invocation arguments</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_init">Zend_Controller_Action</a> at line         line 143</div>
+        <code>                    void
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize object</p>                    <p>Called from {@link __construct()} as final step of object instantiation.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initView">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_initView">Zend_Controller_Action</a> at line         line 163</div>
+        <code>                    <a href="Zend_View_Interface.html">Zend_View_Interface</a>
+    <strong>initView</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize View object</p>                    <p>Initializes {@link $view} if not otherwise a Zend<em>View</em>Interface.</p>
+
+<p>If {@link $view} is not otherwise set, instantiates a new Zend_View
+object, using the 'views' subdirectory at the same level as the
+controller directory for the current module as the base directory.
+It uses this to set the following:
+- script path = views/scripts/
+- helper path = views/helpers/
+- filter path = views/filters/</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Interface.html">Zend_View_Interface</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Exception.html">Zend_Controller_Exception</a></td>
+                <td>if base view directory does not exist</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_render">Zend_Controller_Action</a> at line         line 209</div>
+        <code>                    void
+    <strong>render</strong>(string|null $action = null, string|null $name = null, bool $noController = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render a view</p>                    <p>Renders a view. By default, views are found in the view script path as
+<controller>/<action>.phtml. You may change the script suffix by
+resetting {@link $viewSuffix}. You may omit the controller directory
+prefix by specifying boolean true for $noController.</p>
+
+<p>By default, the rendered contents are appended to the response. You may
+specify the named body content segment to set by specifying a $name.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$action</td>
+                <td>Defaults to action registered in request object</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td>Response object named path segment to use; defaults to null</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$noController</td>
+                <td>Defaults to false; i.e. use controller name as subdir in which to search for view script</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Zend_Controller_Response_Abstract::appendBody()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderScript">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_renderScript">Zend_Controller_Action</a> at line         line 240</div>
+        <code>                    void
+    <strong>renderScript</strong>(string $script, string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render a given view script</p>                    <p>Similar to {@link render()}, this method renders a view script. Unlike render(),
+however, it does not autodetermine the view script via {@link getViewScript()},
+but instead renders the script passed to it. Use this if you know the
+exact view script name and path you wish to use, or if using paths that do not
+conform to the spec defined with getViewScript().</p>
+
+<p>By default, the rendered contents are appended to the response. You may
+specify the named body content segment to set by specifying a $name.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getViewScript">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_getViewScript">Zend_Controller_Action</a> at line         line 263</div>
+        <code>                    string
+    <strong>getViewScript</strong>(string $action = null, bool $noController = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Construct view script path</p>                    <p>Used by render() to determine the path to the view script.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td>Defaults to action registered in request object</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$noController</td>
+                <td>Defaults to false; i.e. use controller name as subdir in which to search for view script</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Exception.html">Zend_Controller_Exception</a></td>
+                <td>with bad $action</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_getRequest">Zend_Controller_Action</a> at line         line 305</div>
+        <code>                    <a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a>
+    <strong>getRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the Request object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequest">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_setRequest">Zend_Controller_Action</a> at line         line 316</div>
+        <code>                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+    <strong>setRequest</strong>(<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the Request object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action.html">Zend_Controller_Action</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponse">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_getResponse">Zend_Controller_Action</a> at line         line 327</div>
+        <code>                    <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+    <strong>getResponse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the Response object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setResponse">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_setResponse">Zend_Controller_Action</a> at line         line 338</div>
+        <code>                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+    <strong>setResponse</strong>(<a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the Response object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action.html">Zend_Controller_Action</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInvokeArgs">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_getInvokeArgs">Zend_Controller_Action</a> at line         line 361</div>
+        <code>                    array
+    <strong>getInvokeArgs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the array of constructor arguments (minus the Request object)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInvokeArg">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_getInvokeArg">Zend_Controller_Action</a> at line         line 372</div>
+        <code>                    mixed
+    <strong>getInvokeArg</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a single invocation argument</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHelper">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_getHelper">Zend_Controller_Action</a> at line         line 387</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_Abstract.html">Zend_Controller_Action_Helper_Abstract</a>
+    <strong>getHelper</strong>(string $helperName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a helper by name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$helperName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_Abstract.html">Zend_Controller_Action_Helper_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHelperCopy">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_getHelperCopy">Zend_Controller_Action</a> at line         line 398</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_Abstract.html">Zend_Controller_Action_Helper_Abstract</a>
+    <strong>getHelperCopy</strong>(string $helperName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a clone of a helper by name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$helperName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_Abstract.html">Zend_Controller_Action_Helper_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFrontController">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_setFrontController">Zend_Controller_Action</a> at line         line 409</div>
+        <code>                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+    <strong>setFrontController</strong>(<a href="Zend_Controller_Front.html">Zend_Controller_Front</a> $front)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the front controller instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+                <td>$front</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action.html">Zend_Controller_Action</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFrontController">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_getFrontController">Zend_Controller_Action</a> at line         line 420</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>getFrontController</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Front Controller</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preDispatch">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_preDispatch">Zend_Controller_Action</a> at line         line 448</div>
+        <code>                    void
+    <strong>preDispatch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pre-dispatch routines</p>                    <p>Called before action method. If using class with
+{@link Zend<em>Controller</em>Front}, it may modify the
+{@link $_request Request object} and reset its dispatched flag in order
+to skip processing the current action.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postDispatch">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_postDispatch">Zend_Controller_Action</a> at line         line 465</div>
+        <code>                    void
+    <strong>postDispatch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Post-dispatch routines</p>                    <p>Called after action method execution. If using class with
+{@link Zend<em>Controller</em>Front}, it may modify the
+{@link $_request Request object} and reset its dispatched flag in order
+to process an additional action.</p>
+
+<p>Common usages for postDispatch() include rendering content in a sitewide
+template, link url correction, setting headers, etc.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="Zend_Controller_Action.html#method___call">Zend_Controller_Action</a> at line         line 480</div>
+        <code>                    void
+    <strong>__call</strong>(string $methodName, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Proxy for undefined methods.  Default behavior is to throw an
+exception on undefined methods, however this function can be
+overridden to implement magic (dynamic) actions, or provide run-time
+dispatching.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dispatch">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_dispatch">Zend_Controller_Action</a> at line         line 497</div>
+        <code>                    void
+    <strong>dispatch</strong>(string $action)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dispatch the requested action</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td>Method name of action</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_run">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_run">Zend_Controller_Action</a> at line         line 549</div>
+        <code>                    <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+    <strong>run</strong>(<a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a> $request = null, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Call the action specified in the request object, and return a response</p>                    <p>Not used in the Action Controller implementation, but left for usage in
+Page Controller implementations. Dispatches a method based on the
+request.</p>
+
+<p>Returns a Zend<em>Controller</em>Response_Abstract object, instantiating one
+prior to execution if none exists in the controller.</p>
+
+<p>{@link preDispatch()} is called prior to the action,
+{@link postDispatch()} is called following it.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a></td>
+                <td>$request</td>
+                <td>Optional request
+object to use</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+                <td>$response</td>
+                <td>Optional response
+object to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParam">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_getParam">Zend_Controller_Action</a> at line         line 600</div>
+        <code>                    mixed
+    <strong>getParam</strong>(string $paramName, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets a parameter from the {@link $_request Request object}.  If the
+parameter does not exist, NULL will be returned.</p>                    <p>If the parameter does not exist and $default is set, then
+$default will be returned instead of NULL.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$paramName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParam">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_setParam">Zend_Controller_Action</a> at line         line 631</div>
+        <code>                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+    <strong>setParam</strong>(string $paramName, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a parameter in the {@link $_request Request object}.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$paramName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action.html">Zend_Controller_Action</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasParam">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_hasParam">Zend_Controller_Action</a> at line         line 659</div>
+        <code>                    boolean
+    <strong>hasParam</strong>(string $paramName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine whether a given parameter exists in the
+{@link $_request Request object}.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$paramName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllParams">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_getAllParams">Zend_Controller_Action</a> at line         line 683</div>
+        <code>                    array
+    <strong>getAllParams</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return all parameters in the {@link $_request Request object}
+as an associative array.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forward">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_forward">Zend_Controller_Action</a> at line         line 748</div>
+        <code>final                    void
+    <strong>forward</strong>(string $action, string $controller = null, string $module = null, array $params = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Forward to another controller/action.</p>                    <p>It is important to supply the unformatted names, i.e. "article"
+rather than "ArticleController".  The dispatcher will do the
+appropriate formatting when the request is received.</p>
+
+<p>If only an action name is provided, forwards to that action in this
+controller.</p>
+
+<p>If an action and controller are specified, forwards to that action and
+controller in this module.</p>
+
+<p>Specifying an action, controller, and module is the most specific way to
+forward.</p>
+
+<p>A fourth argument, $params, will be used to set the request parameters.
+If either the controller or module are unnecessary for forwarding,
+simply pass null values for them before specifying the parameters.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_redirect">
+        <div class="location">in <a href="Zend_Controller_Action.html#method_redirect">Zend_Controller_Action</a> at line         line 794</div>
+        <code>                    void
+    <strong>redirect</strong>(string $url, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Redirect to another URL</p>                    <p>Proxies to {@link Zend<em>Controller</em>Action<em>Helper</em>Redirector::gotoUrl()}.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options to be used when redirecting</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_indexAction">
+        <div class="location">at line         line 41</div>
+        <code>    abstract                
+    <strong>indexAction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The index action handles index/list requests; it should respond with a
+list of the requested resources.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAction">
+        <div class="location">at line         line 48</div>
+        <code>    abstract                
+    <strong>getAction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The get action handles GET requests and receives an 'id' parameter; it
+should respond with the server resource state of the resource identified
+by the 'id' value.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_headAction">
+        <div class="location">at line         line 55</div>
+        <code>    abstract                
+    <strong>headAction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The head action handles HEAD requests and receives an 'id' parameter; it
+should respond with the server resource state of the resource identified
+by the 'id' value.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postAction">
+        <div class="location">at line         line 61</div>
+        <code>    abstract                
+    <strong>postAction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The post action handles POST requests; it should accept and digest a
+POSTed resource representation and persist the resource state.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putAction">
+        <div class="location">at line         line 68</div>
+        <code>    abstract                
+    <strong>putAction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The put action handles PUT requests and receives an 'id' parameter; it
+should update the server resource state of the resource identified by
+the 'id' value.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteAction">
+        <div class="location">at line         line 75</div>
+        <code>    abstract                
+    <strong>deleteAction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The delete action handles DELETE requests and receives an 'id'
+parameter; it should update the server resource state of the resource
+identified by the 'id' value.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

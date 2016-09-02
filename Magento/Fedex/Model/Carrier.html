@@ -1,0 +1,3658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Fedex\Model\Carrier | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Fedex_Model_Carrier" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Fedex.html">Fedex</a></li>
+                                        <li><a href="../../../Magento/Fedex/Model.html">Model</a></li>
+    
+                <li>Carrier</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Carrier
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Carrier</strong>        extends <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a>        implements
+        <a href="../../../Magento/Shipping/Model/Carrier/CarrierInterface.html"><abbr title="Magento\Shipping\Model\Carrier\CarrierInterface">CarrierInterface</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Fedex shipping implementation</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>DEBUG_KEYS_MASK</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>USA_COUNTRY_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CANADA_COUNTRY_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MEXICO_COUNTRY_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HANDLING_TYPE_PERCENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HANDLING_TYPE_FIXED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HANDLING_ACTION_PERPACKAGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HANDLING_ACTION_PERORDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PUERTORICO_COUNTRY_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GUAM_COUNTRY_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GUAM_REGION_CODE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CODE</td>
+                <td class="last">
+                    <p><em>Code of the carrier</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RATE_REQUEST_GENERAL</td>
+                <td class="last">
+                    <p><em>Purpose of rate request</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RATE_REQUEST_SMARTPOST</td>
+                <td class="last">
+                    <p><em>Purpose of rate request</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <abbr title="Magento\Quote\Model\Quote\Address\RateResult\ErrorFactory">ErrorFactory</abbr> $rateErrorFactory, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../Magento/Framework/Xml/Security.html"><abbr title="Magento\Framework\Xml\Security">Security</abbr></a> $xmlSecurity, <abbr title="Magento\Shipping\Model\Simplexml\ElementFactory">ElementFactory</abbr> $xmlElFactory, <abbr title="Magento\Shipping\Model\Rate\ResultFactory">ResultFactory</abbr> $rateFactory, <abbr title="Magento\Quote\Model\Quote\Address\RateResult\MethodFactory">MethodFactory</abbr> $rateMethodFactory, <abbr title="Magento\Shipping\Model\Tracking\ResultFactory">ResultFactory</abbr> $trackFactory, <abbr title="Magento\Shipping\Model\Tracking\Result\ErrorFactory">ErrorFactory</abbr> $trackErrorFactory, <abbr title="Magento\Shipping\Model\Tracking\Result\StatusFactory">StatusFactory</abbr> $trackStatusFactory, <a href="../../../Magento/Directory/Model/RegionFactory.html"><abbr title="Magento\Directory\Model\RegionFactory">RegionFactory</abbr></a> $regionFactory, <a href="../../../Magento/Directory/Model/CountryFactory.html"><abbr title="Magento\Directory\Model\CountryFactory">CountryFactory</abbr></a> $countryFactory, <abbr title="Magento\Directory\Model\CurrencyFactory">CurrencyFactory</abbr> $currencyFactory, <a href="../../../Magento/Directory/Helper/Data.html"><abbr title="Magento\Directory\Helper\Data">Data</abbr></a> $directoryData, <a href="../../../Magento/CatalogInventory/Api/StockRegistryInterface.html"><abbr title="Magento\CatalogInventory\Api\StockRegistryInterface">StockRegistryInterface</abbr></a> $stockRegistry, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Framework/Module/Dir/Reader.html"><abbr title="Magento\Framework\Module\Dir\Reader">Reader</abbr></a> $configReader, <abbr title="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">CollectionFactory</abbr> $productCollectionFactory, array $data = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addData">addData</a>(array $arr)
+        
+                                            <p>Add data to the object.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_addData"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setData">setData</a>(string|array $key, mixed $value = null)
+        
+                                            <p>Overwrite data in the object.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_setData"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsetData">unsetData</a>(null|string|array $key = null)
+        
+                                            <p>Unset data from the object.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_unsetData"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getData">getData</a>(string $key = &#039;&#039;, string|int $index = null)
+        
+                                            <p>Object data getter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_getData"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDataByPath">getDataByPath</a>(string $path)
+        
+                                            <p>Get object data by path</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_getDataByPath"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDataByKey">getDataByKey</a>(string $key)
+        
+                                            <p>Get object data by particular key</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_getDataByKey"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDataUsingMethod">setDataUsingMethod</a>(string $key, mixed $args = array())
+        
+                                            <p>Set object data with calling setter method</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_setDataUsingMethod"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDataUsingMethod">getDataUsingMethod</a>(string $key, mixed $args = null)
+        
+                                            <p>Get object data by key with calling getter method</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_getDataUsingMethod"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasData">hasData</a>(string $key = &#039;&#039;)
+        
+                                            <p>If $key is empty, checks whether there's any data in the object
+Otherwise checks if the specified attribute is set.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_hasData"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toArray">toArray</a>(array $keys = array())
+        
+                                            <p>Convert array of object data with to array with keys requested in $keys array</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_toArray"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertToArray">convertToArray</a>(array $keys = array())
+        
+                                            <p>The "__" style wrapper for toArray method</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_convertToArray"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toXml">toXml</a>(array $keys = array(), string $rootName = &#039;item&#039;, bool $addOpenTag = false, bool $addCdata = true)
+        
+                                            <p>Convert object data into XML string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_toXml"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertToXml">convertToXml</a>(array $arrAttributes = array(), string $rootName = &#039;item&#039;, bool $addOpenTag = false, bool $addCdata = true)
+        
+                                            <p>The "__" style wrapper for toXml method</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_convertToXml"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toJson">toJson</a>(array $keys = array())
+        
+                                            <p>Convert object data to JSON</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_toJson"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertToJson">convertToJson</a>(array $keys = array())
+        
+                                            <p>The "__" style wrapper for toJson</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_convertToJson"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toString">toString</a>(string $format = &#039;&#039;)
+        
+                                            <p>Convert object data into string with predefined format</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_toString"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $args)
+        
+                                            <p>Set/Get attribute wrapper</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method___call"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isEmpty">isEmpty</a>()
+        
+                                            <p>Checks whether the object is empty</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_isEmpty"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serialize">serialize</a>(array $keys = array(), string $valueSeparator = &#039;=&#039;, string $fieldSeparator = &#039; &#039;, string $quote = &#039;&quot;&#039;)
+        
+                                            <p>Convert object data into string with defined keys and values.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_serialize"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_debug">debug</a>(mixed $data = null, array $objects = array())
+        
+                                            <p>Present object data as string in debug mode</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_debug"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetSet">offsetSet</a>(string $offset, mixed $value)
+        
+                                            <p>Implementation of \ArrayAccess::offsetSet()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_offsetSet"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetExists">offsetExists</a>(string $offset)
+        
+                                            <p>Implementation of \ArrayAccess::offsetExists()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_offsetExists"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetUnset">offsetUnset</a>(string $offset)
+        
+                                            <p>Implementation of \ArrayAccess::offsetUnset()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_offsetUnset"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetGet">offsetGet</a>(string $offset)
+        
+                                            <p>Implementation of \ArrayAccess::offsetGet()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/DataObject.html#method_offsetGet"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConfigData">getConfigData</a>(string $field)
+        
+                                            <p>Retrieve information from carrier configuration</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getConfigData"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConfigFlag">getConfigFlag</a>(string $field)
+        
+                                            <p>Retrieve config flag for store by field</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getConfigFlag"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_requestToShipment">requestToShipment</a>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $request)
+        
+                                            <p>Do request to shipment</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_requestToShipment"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_returnOfShipment">returnOfShipment</a>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $request)
+        
+                                            <p>Do request to RMA shipment</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_returnOfShipment"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContainerTypes">getContainerTypes</a>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $params = null)
+        
+                                            <p>Return container types of carrier</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCustomizableContainerTypes">getCustomizableContainerTypes</a>()
+        
+                                            <p>Get Container Types, that could be customized</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getCustomizableContainerTypes"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDeliveryConfirmationTypes">getDeliveryConfirmationTypes</a>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $params = null)
+        
+                                            <p>Return delivery confirmation types of carrier</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr>|bool|<abbr title="Magento\Shipping\Model\Carrier\false">false</abbr>|<a href="../../../Magento/Framework/Model/AbstractModel.html"><abbr title="Magento\Framework\Model\AbstractModel">AbstractModel</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkAvailableShipCountries">checkAvailableShipCountries</a>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $request)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_checkAvailableShipCountries"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr>|<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>|boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_proccessAdditionalValidation">proccessAdditionalValidation</a>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $request)
+        
+                                            <p>Processing additional validation to check if carrier applicable.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_proccessAdditionalValidation"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isActive">isActive</a>()
+        
+                                            <p>Determine whether current carrier enabled for activity</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_isActive"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isFixed">isFixed</a>()
+        
+                                            <p>Whether this carrier has fixed rates calculation</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_isFixed"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isTrackingAvailable">isTrackingAvailable</a>()
+        
+                                            <p>Check if carrier has shipping tracking option available
+All \Magento\Usa carriers have shipping tracking option available</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_isTrackingAvailable"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isShippingLabelsAvailable">isShippingLabelsAvailable</a>()
+        
+                                            <p>Check if carrier has shipping label option available</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_isShippingLabelsAvailable"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSortOrder">getSortOrder</a>()
+        
+                                            <p>Retrieve sort order of current carrier</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getSortOrder"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFinalPriceWithHandlingFee">getFinalPriceWithHandlingFee</a>(float $cost)
+        
+                                            <p>Get the handling fee for the shipping + cost</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getFinalPriceWithHandlingFee"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTotalNumOfBoxes">getTotalNumOfBoxes</a>(int|float $weight)
+        
+                                            <p>Sets the number of boxes for shipping</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getTotalNumOfBoxes"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isStateProvinceRequired">isStateProvinceRequired</a>()
+        
+                                            <p>Is state province required</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_isStateProvinceRequired"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isCityRequired">isCityRequired</a>()
+        
+                                            <p>Check if city option required</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_isCityRequired"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isZipCodeRequired">isZipCodeRequired</a>(string|null $countryId = null)
+        
+                                            <p>Determine whether zip-code is required for the country of destination</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_isZipCodeRequired"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDebugFlag">getDebugFlag</a>()
+        
+                                            <p>Define if debugging is enabled</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getDebugFlag"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_debugData">debugData</a>(mixed $debugData)
+        
+                                            <p>Used to call debug method from not Payment Method context</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_debugData"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCarrierCode">getCarrierCode</a>()
+        
+                                            <p>Return code of carrier</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_getCarrierCode"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContentTypes">getContentTypes</a>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $params)
+        
+                                            <p>Return content types of package</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getContentTypes"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setActiveFlag">setActiveFlag</a>(string $code = &#039;active&#039;)
+        
+                                            <p>Set flag for check carriers for activity</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_setActiveFlag"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|<abbr title="Magento\Shipping\Model\Carrier\false">false</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTrackingInfo">getTrackingInfo</a>(string $tracking)
+        
+                                            <p>Get tracking information</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_getTrackingInfo"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAllItems">getAllItems</a>(<a href="../../../Magento/Quote/Model/Quote/Address/RateRequest.html"><abbr title="Magento\Quote\Model\Quote\Address\RateRequest">RateRequest</abbr></a> $request)
+        
+                                            <p>Return items for further shipment rate evaluation. We need to pass children of a bundle instead passing the
+bundle itself, otherwise we may not get a rate at all (e.g. when total weight of a bundle exceeds max weight
+despite each item by itself is not)</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_getAllItems"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rollBack">rollBack</a>(array $data)
+        
+                                            <p>For multi package shipments. Delete requested shipments if the current shipment
+request is failed</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isGirthAllowed">isGirthAllowed</a>(null|string $countyDest = null)
+        
+                                            <p>Check whether girth is allowed for the carrier</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_isGirthAllowed"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRawRequest">setRawRequest</a>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>|null $request)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_setRawRequest"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMethodPrice">getMethodPrice</a>(string $cost, string $method = &#039;&#039;)
+        
+                                            <p>Calculate price considering free shipping and handling fee</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_getMethodPrice"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseXml">parseXml</a>(string $xmlContent, string $customSimplexml = &#039;SimpleXMLElement&#039;)
+        
+                                            <p>Parse XML string and return XML document object or false</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_parseXml"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_canCollectRates">canCollectRates</a>()
+        
+                                            <p>Checks if shipping method can collect rates</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_canCollectRates"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>|bool|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_collectRates">collectRates</a>(<a href="../../../Magento/Quote/Model/Quote/Address/RateRequest.html"><abbr title="Magento\Quote\Model\Quote\Address\RateRequest">RateRequest</abbr></a> $request)
+        
+                                            <p>Collect and get rates</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Fedex\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRequest">setRequest</a>(<a href="../../../Magento/Quote/Model/Quote/Address/RateRequest.html"><abbr title="Magento\Quote\Model\Quote\Address\RateRequest">RateRequest</abbr></a> $request)
+        
+                                            <p>Prepare and set request to this instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Shipping/Model/Rate/Result.html"><abbr title="Magento\Shipping\Model\Rate\Result">Result</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResult">getResult</a>()
+        
+                                            <p>Get result of request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVersionInfo">getVersionInfo</a>()
+        
+                                            <p>Get version of rates request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|<abbr title="Magento\Fedex\Model\false">false</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCode">getCode</a>(string $type, string $code = &#039;&#039;)
+        
+                                            <p>Get configuration data of carrier</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCurrencyCode">getCurrencyCode</a>()
+        
+                                            <p>Return FeDex currency ISO code by Magento Base Currency Code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Shipping/Model/Rate/Result.html"><abbr title="Magento\Shipping\Model\Rate\Result">Result</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTracking">getTracking</a>(string|string[] $trackings)
+        
+                                            <p>Get tracking</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResponse">getResponse</a>()
+        
+                                            <p>Get tracking response</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAllowedMethods">getAllowedMethods</a>()
+        
+                                            <p>Get allowed shipping methods</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContainerTypesAll">getContainerTypesAll</a>()
+        
+                                            <p>Return all container types of carrier</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContainerTypesFilter">getContainerTypesFilter</a>()
+        
+                                            <p>Return structured data of containers witch related with shipping methods</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 152</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <abbr title="Magento\Quote\Model\Quote\Address\RateResult\ErrorFactory">ErrorFactory</abbr> $rateErrorFactory, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../Magento/Framework/Xml/Security.html"><abbr title="Magento\Framework\Xml\Security">Security</abbr></a> $xmlSecurity, <abbr title="Magento\Shipping\Model\Simplexml\ElementFactory">ElementFactory</abbr> $xmlElFactory, <abbr title="Magento\Shipping\Model\Rate\ResultFactory">ResultFactory</abbr> $rateFactory, <abbr title="Magento\Quote\Model\Quote\Address\RateResult\MethodFactory">MethodFactory</abbr> $rateMethodFactory, <abbr title="Magento\Shipping\Model\Tracking\ResultFactory">ResultFactory</abbr> $trackFactory, <abbr title="Magento\Shipping\Model\Tracking\Result\ErrorFactory">ErrorFactory</abbr> $trackErrorFactory, <abbr title="Magento\Shipping\Model\Tracking\Result\StatusFactory">StatusFactory</abbr> $trackStatusFactory, <a href="../../../Magento/Directory/Model/RegionFactory.html"><abbr title="Magento\Directory\Model\RegionFactory">RegionFactory</abbr></a> $regionFactory, <a href="../../../Magento/Directory/Model/CountryFactory.html"><abbr title="Magento\Directory\Model\CountryFactory">CountryFactory</abbr></a> $countryFactory, <abbr title="Magento\Directory\Model\CurrencyFactory">CurrencyFactory</abbr> $currencyFactory, <a href="../../../Magento/Directory/Helper/Data.html"><abbr title="Magento\Directory\Helper\Data">Data</abbr></a> $directoryData, <a href="../../../Magento/CatalogInventory/Api/StockRegistryInterface.html"><abbr title="Magento\CatalogInventory\Api\StockRegistryInterface">StockRegistryInterface</abbr></a> $stockRegistry, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Framework/Module/Dir/Reader.html"><abbr title="Magento\Framework\Module\Dir\Reader">Reader</abbr></a> $configReader, <abbr title="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">CollectionFactory</abbr> $productCollectionFactory, array $data = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a></td>
+                <td>$scopeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Quote\Model\Quote\Address\RateResult\ErrorFactory">ErrorFactory</abbr></td>
+                <td>$rateErrorFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Xml/Security.html"><abbr title="Magento\Framework\Xml\Security">Security</abbr></a></td>
+                <td>$xmlSecurity</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Shipping\Model\Simplexml\ElementFactory">ElementFactory</abbr></td>
+                <td>$xmlElFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Shipping\Model\Rate\ResultFactory">ResultFactory</abbr></td>
+                <td>$rateFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Quote\Model\Quote\Address\RateResult\MethodFactory">MethodFactory</abbr></td>
+                <td>$rateMethodFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Shipping\Model\Tracking\ResultFactory">ResultFactory</abbr></td>
+                <td>$trackFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Shipping\Model\Tracking\Result\ErrorFactory">ErrorFactory</abbr></td>
+                <td>$trackErrorFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Shipping\Model\Tracking\Result\StatusFactory">StatusFactory</abbr></td>
+                <td>$trackStatusFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Directory/Model/RegionFactory.html"><abbr title="Magento\Directory\Model\RegionFactory">RegionFactory</abbr></a></td>
+                <td>$regionFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Directory/Model/CountryFactory.html"><abbr title="Magento\Directory\Model\CountryFactory">CountryFactory</abbr></a></td>
+                <td>$countryFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Directory\Model\CurrencyFactory">CurrencyFactory</abbr></td>
+                <td>$currencyFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Directory/Helper/Data.html"><abbr title="Magento\Directory\Helper\Data">Data</abbr></a></td>
+                <td>$directoryData</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/CatalogInventory/Api/StockRegistryInterface.html"><abbr title="Magento\CatalogInventory\Api\StockRegistryInterface">StockRegistryInterface</abbr></a></td>
+                <td>$stockRegistry</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Module/Dir/Reader.html"><abbr title="Magento\Framework\Module\Dir\Reader">Reader</abbr></a></td>
+                <td>$configReader</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">CollectionFactory</abbr></td>
+                <td>$productCollectionFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addData">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_addData"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 51</div>
+        <code>                    <abbr title="Magento\Framework\$this">$this</abbr>
+    <strong>addData</strong>(array $arr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add data to the object.</p>                    <p>Retains previous data in the object.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arr</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setData">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_setData"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 71</div>
+        <code>                    <abbr title="Magento\Framework\$this">$this</abbr>
+    <strong>setData</strong>(string|array $key, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Overwrite data in the object.</p>                    <p>The $key parameter can be string or array.
+If $key is string, the attribute value will be overwritten by $value</p>
+
+<p>If $key is an array, it will overwrite all the data in the object.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsetData">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_unsetData"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 87</div>
+        <code>                    <abbr title="Magento\Framework\$this">$this</abbr>
+    <strong>unsetData</strong>(null|string|array $key = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unset data from the object.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getData">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_getData"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 119</div>
+        <code>                    mixed
+    <strong>getData</strong>(string $key = &#039;&#039;, string|int $index = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Object data getter</p>                    <p>If $key is not defined will return all the data as an array.
+Otherwise it will return value of the element specified by $key.
+It is possible to use keys like a/b/c for access nested array data</p>
+
+<p>If $index is specified it will assume that attribute data is an array
+and retrieve corresponding member. If data is the string - it will be explode
+by new line character and converted to array.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|int</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDataByPath">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_getDataByPath"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 155</div>
+        <code>                    mixed
+    <strong>getDataByPath</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get object data by path</p>                    <p>Method consider the path as chain of keys: a/b/c => ['a']['b']['c']</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDataByKey">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_getDataByKey"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 178</div>
+        <code>                    mixed
+    <strong>getDataByKey</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get object data by particular key</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDataUsingMethod">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_setDataUsingMethod"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 204</div>
+        <code>                    <abbr title="Magento\Framework\$this">$this</abbr>
+    <strong>setDataUsingMethod</strong>(string $key, mixed $args = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set object data with calling setter method</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDataUsingMethod">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_getDataUsingMethod"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 218</div>
+        <code>                    mixed
+    <strong>getDataUsingMethod</strong>(string $key, mixed $args = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get object data by key with calling getter method</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasData">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_hasData"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 231</div>
+        <code>                    bool
+    <strong>hasData</strong>(string $key = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>If $key is empty, checks whether there's any data in the object
+Otherwise checks if the specified attribute is set.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_toArray"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 245</div>
+        <code>                    array
+    <strong>toArray</strong>(array $keys = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert array of object data with to array with keys requested in $keys array</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>array of required keys</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertToArray">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_convertToArray"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 268</div>
+        <code>                    array
+    <strong>convertToArray</strong>(array $keys = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The "__" style wrapper for toArray method</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toXml">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_toXml"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 282</div>
+        <code>                    string
+    <strong>toXml</strong>(array $keys = array(), string $rootName = &#039;item&#039;, bool $addOpenTag = false, bool $addCdata = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert object data into XML string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>array of keys that must be represented</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$rootName</td>
+                <td>root node name</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$addOpenTag</td>
+                <td>flag that allow to add initial xml node</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$addCdata</td>
+                <td>flag that require wrap all values in CDATA</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertToXml">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_convertToXml"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 316</div>
+        <code>                    string
+    <strong>convertToXml</strong>(array $arrAttributes = array(), string $rootName = &#039;item&#039;, bool $addOpenTag = false, bool $addCdata = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The "__" style wrapper for toXml method</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arrAttributes</td>
+                <td>array of keys that must be represented</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$rootName</td>
+                <td>root node name</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$addOpenTag</td>
+                <td>flag that allow to add initial xml node</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$addCdata</td>
+                <td>flag that require wrap all values in CDATA</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toJson">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_toJson"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 331</div>
+        <code>                    string
+    <strong>toJson</strong>(array $keys = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert object data to JSON</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>array of required keys</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertToJson">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_convertToJson"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 343</div>
+        <code>                    string
+    <strong>convertToJson</strong>(array $keys = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The "__" style wrapper for toJson</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toString">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_toString"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 356</div>
+        <code>                    string
+    <strong>toString</strong>(string $format = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert object data into string with predefined format</p>                    <p>Will use $format as an template and substitute {{key}} for attributes</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method___call"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 378</div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set/Get attribute wrapper</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEmpty">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_isEmpty"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 406</div>
+        <code>                    bool
+    <strong>isEmpty</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks whether the object is empty</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_serialize"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 444</div>
+        <code>                    string
+    <strong>serialize</strong>(array $keys = array(), string $valueSeparator = &#039;=&#039;, string $fieldSeparator = &#039; &#039;, string $quote = &#039;&quot;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert object data into string with defined keys and values.</p>                    <p>Example: key1="value1" key2="value2" ...</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>array of accepted keys</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$valueSeparator</td>
+                <td>separator between key and value</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fieldSeparator</td>
+                <td>separator between key/value pairs</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$quote</td>
+                <td>quoting sign</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_debug"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 467</div>
+        <code>                    array
+    <strong>debug</strong>(mixed $data = null, array $objects = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Present object data as string in debug mode</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$objects</td>
+                <td>&amp;$objects</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_offsetSet"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 498</div>
+        <code>                    void
+    <strong>offsetSet</strong>(string $offset, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implementation of \ArrayAccess::offsetSet()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_offsetExists"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 510</div>
+        <code>                    bool
+    <strong>offsetExists</strong>(string $offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implementation of \ArrayAccess::offsetExists()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_offsetUnset"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 522</div>
+        <code>                    void
+    <strong>offsetUnset</strong>(string $offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implementation of \ArrayAccess::offsetUnset()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location">in <a href="../../../Magento/Framework/DataObject.html#method_offsetGet"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> at line         line 534</div>
+        <code>                    mixed
+    <strong>offsetGet</strong>(string $offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implementation of \ArrayAccess::offsetGet()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfigData">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getConfigData"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 125</div>
+        <code>                    mixed
+    <strong>getConfigData</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve information from carrier configuration</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfigFlag">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getConfigFlag"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 147</div>
+        <code>                    bool
+    <strong>getConfigFlag</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve config flag for store by field</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_requestToShipment">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_requestToShipment"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 452</div>
+        <code>                    <a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>
+    <strong>requestToShipment</strong>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Do request to shipment</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_returnOfShipment">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_returnOfShipment"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 500</div>
+        <code>                    <a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>
+    <strong>returnOfShipment</strong>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Do request to RMA shipment</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContainerTypes">
+        <div class="location">at line         line 1501</div>
+        <code>                    array
+    <strong>getContainerTypes</strong>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return container types of carrier</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomizableContainerTypes">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getCustomizableContainerTypes"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 259</div>
+        <code>                    array
+    <strong>getCustomizableContainerTypes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Container Types, that could be customized</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDeliveryConfirmationTypes">
+        <div class="location">at line         line 1568</div>
+        <code>                    array
+    <strong>getDeliveryConfirmationTypes</strong>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $params = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return delivery confirmation types of carrier</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkAvailableShipCountries">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_checkAvailableShipCountries"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 281</div>
+        <code>                    <abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr>|bool|<abbr title="Magento\Shipping\Model\Carrier\false">false</abbr>|<a href="../../../Magento/Framework/Model/AbstractModel.html"><abbr title="Magento\Framework\Model\AbstractModel">AbstractModel</abbr></a>
+    <strong>checkAvailableShipCountries</strong>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr>|bool|<abbr title="Magento\Shipping\Model\Carrier\false">false</abbr>|<a href="../../../Magento/Framework/Model/AbstractModel.html"><abbr title="Magento\Framework\Model\AbstractModel">AbstractModel</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_proccessAdditionalValidation">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_proccessAdditionalValidation"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 304</div>
+        <code>                    <abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr>|<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>|boolean
+    <strong>proccessAdditionalValidation</strong>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Processing additional validation to check if carrier applicable.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr>|<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>|boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isActive">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_isActive"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 340</div>
+        <code>                    bool
+    <strong>isActive</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine whether current carrier enabled for activity</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isFixed">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_isFixed"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 352</div>
+        <code>                    bool
+    <strong>isFixed</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Whether this carrier has fixed rates calculation</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isTrackingAvailable">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_isTrackingAvailable"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 219</div>
+        <code>                    bool
+    <strong>isTrackingAvailable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if carrier has shipping tracking option available
+All \Magento\Usa carriers have shipping tracking option available</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isShippingLabelsAvailable">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_isShippingLabelsAvailable"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 254</div>
+        <code>                    bool
+    <strong>isShippingLabelsAvailable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if carrier has shipping label option available</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSortOrder">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getSortOrder"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 382</div>
+        <code>                    string|null
+    <strong>getSortOrder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve sort order of current carrier</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFinalPriceWithHandlingFee">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getFinalPriceWithHandlingFee"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 458</div>
+        <code>                    float
+    <strong>getFinalPriceWithHandlingFee</strong>(float $cost)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the handling fee for the shipping + cost</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$cost</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td>final price for shipping method</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTotalNumOfBoxes">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getTotalNumOfBoxes"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 521</div>
+        <code>                    int|float
+    <strong>getTotalNumOfBoxes</strong>(int|float $weight)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the number of boxes for shipping</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|float</td>
+                <td>$weight</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|float</td>
+            <td>weight</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isStateProvinceRequired">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_isStateProvinceRequired"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 541</div>
+        <code>                    bool
+    <strong>isStateProvinceRequired</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is state province required</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isCityRequired">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_isCityRequired"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 229</div>
+        <code>                    bool
+    <strong>isCityRequired</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if city option required</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isZipCodeRequired">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_isZipCodeRequired"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 240</div>
+        <code>                    bool
+    <strong>isZipCodeRequired</strong>(string|null $countryId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine whether zip-code is required for the country of destination</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$countryId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDebugFlag">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getDebugFlag"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 588</div>
+        <code>                    bool
+    <strong>getDebugFlag</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define if debugging is enabled</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debugData">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_debugData"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 599</div>
+        <code>                    void
+    <strong>debugData</strong>(mixed $debugData)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Used to call debug method from not Payment Method context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$debugData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCarrierCode">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_getCarrierCode"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 185</div>
+        <code>                    string
+    <strong>getCarrierCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return code of carrier</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContentTypes">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrier.html#method_getContentTypes"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrier">AbstractCarrier</abbr></a> at line         line 621</div>
+        <code>                    array
+    <strong>getContentTypes</strong>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return content types of package</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setActiveFlag">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_setActiveFlag"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 173</div>
+        <code>                    <abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr>
+    <strong>setActiveFlag</strong>(string $code = &#039;active&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set flag for check carriers for activity</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTrackingInfo">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_getTrackingInfo"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 197</div>
+        <code>                    string|<abbr title="Magento\Shipping\Model\Carrier\false">false</abbr>
+    <strong>getTrackingInfo</strong>(string $tracking)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get tracking information</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tracking</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|<abbr title="Magento\Shipping\Model\Carrier\false">false</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllItems">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_getAllItems"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 269</div>
+        <code>                    array
+    <strong>getAllItems</strong>(<a href="../../../Magento/Quote/Model/Quote/Address/RateRequest.html"><abbr title="Magento\Quote\Model\Quote\Address\RateRequest">RateRequest</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return items for further shipment rate evaluation. We need to pass children of a bundle instead passing the
+bundle itself, otherwise we may not get a rate at all (e.g. when total weight of a bundle exceeds max weight
+despite each item by itself is not)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/Quote/Address/RateRequest.html"><abbr title="Magento\Quote\Model\Quote\Address\RateRequest">RateRequest</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rollBack">
+        <div class="location">at line         line 1481</div>
+        <code>                    bool
+    <strong>rollBack</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>For multi package shipments. Delete requested shipments if the current shipment
+request is failed</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isGirthAllowed">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_isGirthAllowed"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 603</div>
+        <code>                    bool
+    <strong>isGirthAllowed</strong>(null|string $countyDest = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether girth is allowed for the carrier</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|string</td>
+                <td>$countyDest</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRawRequest">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_setRawRequest"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 613</div>
+        <code>                    <abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr>
+    <strong>setRawRequest</strong>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>|null $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>|null</td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Shipping\Model\Carrier\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMethodPrice">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_getMethodPrice"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 628</div>
+        <code>                    float|string
+    <strong>getMethodPrice</strong>(string $cost, string $method = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate price considering free shipping and handling fee</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cost</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseXml">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_parseXml"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 651</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>|bool
+    <strong>parseXml</strong>(string $xmlContent, string $customSimplexml = &#039;SimpleXMLElement&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse XML string and return XML document object or false</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xmlContent</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$customSimplexml</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canCollectRates">
+        <div class="location">in <a href="../../../Magento/Shipping/Model/Carrier/AbstractCarrierOnline.html#method_canCollectRates"><abbr title="Magento\Shipping\Model\Carrier\AbstractCarrierOnline">AbstractCarrierOnline</abbr></a> at line         line 666</div>
+        <code>                    bool
+    <strong>canCollectRates</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if shipping method can collect rates</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_collectRates">
+        <div class="location">at line         line 254</div>
+        <code>                    <a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>|bool|null
+    <strong>collectRates</strong>(<a href="../../../Magento/Quote/Model/Quote/Address/RateRequest.html"><abbr title="Magento\Quote\Model\Quote\Address\RateRequest">RateRequest</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Collect and get rates</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/Quote/Address/RateRequest.html"><abbr title="Magento\Quote\Model\Quote\Address\RateRequest">RateRequest</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a>|bool|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequest">
+        <div class="location">at line         line 275</div>
+        <code>                    <abbr title="Magento\Fedex\Model\$this">$this</abbr>
+    <strong>setRequest</strong>(<a href="../../../Magento/Quote/Model/Quote/Address/RateRequest.html"><abbr title="Magento\Quote\Model\Quote\Address\RateRequest">RateRequest</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepare and set request to this instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/Quote/Address/RateRequest.html"><abbr title="Magento\Quote\Model\Quote\Address\RateRequest">RateRequest</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Fedex\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResult">
+        <div class="location">at line         line 368</div>
+        <code>                    <a href="../../../Magento/Shipping/Model/Rate/Result.html"><abbr title="Magento\Shipping\Model\Rate\Result">Result</abbr></a>|null
+    <strong>getResult</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get result of request</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Shipping/Model/Rate/Result.html"><abbr title="Magento\Shipping\Model\Rate\Result">Result</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVersionInfo">
+        <div class="location">at line         line 378</div>
+        <code>                    array
+    <strong>getVersionInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get version of rates request</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCode">
+        <div class="location">at line         line 791</div>
+        <code>                    array|<abbr title="Magento\Fedex\Model\false">false</abbr>
+    <strong>getCode</strong>(string $type, string $code = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get configuration data of carrier</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|<abbr title="Magento\Fedex\Model\false">false</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurrencyCode">
+        <div class="location">at line         line 950</div>
+        <code>                    string
+    <strong>getCurrencyCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return FeDex currency ISO code by Magento Base Currency Code</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>3-digit currency code</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTracking">
+        <div class="location">at line         line 980</div>
+        <code>                    <a href="../../../Magento/Shipping/Model/Rate/Result.html"><abbr title="Magento\Shipping\Model\Rate\Result">Result</abbr></a>|null
+    <strong>getTracking</strong>(string|string[] $trackings)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get tracking</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|string[]</td>
+                <td>$trackings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Shipping/Model/Rate/Result.html"><abbr title="Magento\Shipping\Model\Rate\Result">Result</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponse">
+        <div class="location">at line         line 1174</div>
+        <code>                    string
+    <strong>getResponse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get tracking response</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllowedMethods">
+        <div class="location">at line         line 1202</div>
+        <code>                    array
+    <strong>getAllowedMethods</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get allowed shipping methods</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContainerTypesAll">
+        <div class="location">at line         line 1546</div>
+        <code>                    array|bool
+    <strong>getContainerTypesAll</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return all container types of carrier</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContainerTypesFilter">
+        <div class="location">at line         line 1556</div>
+        <code>                    array|bool
+    <strong>getContainerTypesFilter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return structured data of containers witch related with shipping methods</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

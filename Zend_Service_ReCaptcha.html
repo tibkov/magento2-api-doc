@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_ReCaptcha | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_ReCaptcha" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_ReCaptcha
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_ReCaptcha</strong>        extends <a href="Zend_Service_Abstract.html">Zend_Service_Abstract</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Zend<em>Service</em>ReCaptcha</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>API_SERVER</td>
+                <td class="last">
+                    <p><em>URI to the regular API</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>API_SECURE_SERVER</td>
+                <td class="last">
+                    <p><em>URI to the secure API</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VERIFY_SERVER</td>
+                <td class="last">
+                    <p><em>URI to the verify server</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHttpClient">setHttpClient</a>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $httpClient)
+        
+                                            <p>Sets the HTTP client object to use for retrieving the feeds.  If none
+is set, the default Zend<em>Http</em>Client will be used.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Abstract.html#method_setHttpClient">Zend_Service_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpClient">getHttpClient</a>()
+        
+                                            <p>Gets the HTTP client object.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Abstract.html#method_getHttpClient">Zend_Service_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>($publicKey = null, $privateKey = null, $params = null, $options = null, $ip = null)
+        
+                                            <p>Class constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Serialize as string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setIp">setIp</a>(string $ip)
+        
+                                            <p>Set the ip property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIp">getIp</a>()
+        
+                                            <p>Get the ip property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParam">setParam</a>(string $key, string $value)
+        
+                                            <p>Set a single parameter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParams">setParams</a>(array|<a href="Zend_Config.html">Zend_Config</a> $params)
+        
+                                            <p>Set parameters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParams">getParams</a>()
+        
+                                            <p>Get the parameter array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParam">getParam</a>(string $key)
+        
+                                            <p>Get a single parameter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOption">setOption</a>(string $key, string $value)
+        
+                                            <p>Set a single option</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOptions">setOptions</a>(array|<a href="Zend_Config.html">Zend_Config</a> $options)
+        
+                                            <p>Set options</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOptions">getOptions</a>()
+        
+                                            <p>Get the options array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOption">getOption</a>(string $key)
+        
+                                            <p>Get a single option</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPublicKey">getPublicKey</a>()
+        
+                                            <p>Get the public key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPublicKey">setPublicKey</a>(string $publicKey)
+        
+                                            <p>Set the public key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrivateKey">getPrivateKey</a>()
+        
+                                            <p>Get the private key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPrivateKey">setPrivateKey</a>(string $privateKey)
+        
+                                            <p>Set the private key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHtml">getHtml</a>(null|string $name = null)
+        
+                                            <p>Get the HTML code for the captcha</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_ReCaptcha_Response.html">Zend_Service_ReCaptcha_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_verify">verify</a>(string $challengeField, string $responseField)
+        
+                                            <p>Verify the user input</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setHttpClient">
+        <div class="location">in <a href="Zend_Service_Abstract.html#method_setHttpClient">Zend_Service_Abstract</a> at line         line 51</div>
+        <code>final        static            
+    <strong>setHttpClient</strong>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $httpClient)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the HTTP client object to use for retrieving the feeds.  If none
+is set, the default Zend<em>Http</em>Client will be used.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+                <td>$httpClient</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpClient">
+        <div class="location">in <a href="Zend_Service_Abstract.html#method_getHttpClient">Zend_Service_Abstract</a> at line         line 62</div>
+        <code>final        static            <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>getHttpClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the HTTP client object.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 128</div>
+        <code>                    
+    <strong>__construct</strong>($publicKey = null, $privateKey = null, $params = null, $options = null, $ip = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Class constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$publicKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$privateKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$ip</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at line         line 163</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Serialize as string</p>                    <p>When the instance is used as a string it will display the recaptcha.
+Since we can't throw exceptions within this method we will trigger
+a user warning instead.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIp">
+        <div class="location">at line         line 181</div>
+        <code>                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+    <strong>setIp</strong>(string $ip)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the ip property</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ip</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIp">
+        <div class="location">at line         line 193</div>
+        <code>                    string
+    <strong>getIp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the ip property</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParam">
+        <div class="location">at line         line 205</div>
+        <code>                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+    <strong>setParam</strong>(string $key, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a single parameter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParams">
+        <div class="location">at line         line 219</div>
+        <code>                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+    <strong>setParams</strong>(array|<a href="Zend_Config.html">Zend_Config</a> $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set parameters</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a href="Zend_Config.html">Zend_Config</a></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_ReCaptcha_Exception.html">Zend_Service_ReCaptcha_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParams">
+        <div class="location">at line         line 246</div>
+        <code>                    array
+    <strong>getParams</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the parameter array</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParam">
+        <div class="location">at line         line 257</div>
+        <code>                    mixed
+    <strong>getParam</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a single parameter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOption">
+        <div class="location">at line         line 269</div>
+        <code>                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+    <strong>setOption</strong>(string $key, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a single option</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOptions">
+        <div class="location">at line         line 283</div>
+        <code>                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+    <strong>setOptions</strong>(array|<a href="Zend_Config.html">Zend_Config</a> $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set options</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a href="Zend_Config.html">Zend_Config</a></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_ReCaptcha_Exception.html">Zend_Service_ReCaptcha_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">at line         line 310</div>
+        <code>                    array
+    <strong>getOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the options array</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOption">
+        <div class="location">at line         line 321</div>
+        <code>                    mixed
+    <strong>getOption</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a single option</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPublicKey">
+        <div class="location">at line         line 331</div>
+        <code>                    string
+    <strong>getPublicKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the public key</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPublicKey">
+        <div class="location">at line         line 342</div>
+        <code>                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+    <strong>setPublicKey</strong>(string $publicKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the public key</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$publicKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrivateKey">
+        <div class="location">at line         line 354</div>
+        <code>                    string
+    <strong>getPrivateKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the private key</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPrivateKey">
+        <div class="location">at line         line 365</div>
+        <code>                    <a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a>
+    <strong>setPrivateKey</strong>(string $privateKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the private key</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$privateKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_ReCaptcha.html">Zend_Service_ReCaptcha</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHtml">
+        <div class="location">at line         line 381</div>
+        <code>                    string
+    <strong>getHtml</strong>(null|string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the HTML code for the captcha</p>                    <p>This method uses the public key to fetch a recaptcha form.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|string</td>
+                <td>$name</td>
+                <td>Base name for recaptcha form elements</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_ReCaptcha_Exception.html">Zend_Service_ReCaptcha_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verify">
+        <div class="location">at line         line 496</div>
+        <code>                    <a href="Zend_Service_ReCaptcha_Response.html">Zend_Service_ReCaptcha_Response</a>
+    <strong>verify</strong>(string $challengeField, string $responseField)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Verify the user input</p>                    <p>This method calls up the post method and returns a
+Zend<em>Service</em>ReCaptcha_Response object.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$challengeField</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$responseField</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_ReCaptcha_Response.html">Zend_Service_ReCaptcha_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

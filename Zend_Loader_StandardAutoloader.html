@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Loader_StandardAutoloader | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Loader_StandardAutoloader" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Loader_StandardAutoloader
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Loader_StandardAutoloader</strong>        implements
+        <a href="Zend_Loader_SplAutoloader.html">Zend_Loader_SplAutoloader</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>PSR-0 compliant autoloader</p>            <p>Allows autoloading both namespaced and vendor-prefixed classes. Class
+lookups are performed on the filesystem. If a class file for the referenced
+class is not found, a PHP warning will be raised by include().</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>NS_SEPARATOR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PREFIX_SEPARATOR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOAD_NS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LOAD_PREFIX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ACT_AS_FALLBACK</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AUTOREGISTER_ZF</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(null|array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $options = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    SplAutoloader
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOptions">setOptions</a>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $options)
+        
+                                            <p>Configure autoloader</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFallbackAutoloader">setFallbackAutoloader</a>(bool $flag)
+        
+                                            <p>Set flag indicating fallback autoloader status</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isFallbackAutoloader">isFallbackAutoloader</a>()
+        
+                                            <p>Is this autoloader acting as a fallback autoloader?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerNamespace">registerNamespace</a>(string $namespace, string $directory)
+        
+                                            <p>Register a namespace/directory pair</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerNamespaces">registerNamespaces</a>(array $namespaces)
+        
+                                            <p>Register many namespace/directory pairs at once</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerPrefix">registerPrefix</a>(string $prefix, string $directory)
+        
+                                            <p>Register a prefix/directory pair</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerPrefixes">registerPrefixes</a>(array $prefixes)
+        
+                                            <p>Register many namespace/directory pairs at once</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_autoload">autoload</a>($class)
+        
+                                            <p>Defined by Autoloadable; autoload a class</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_register">register</a>()
+        
+                                            <p>Register the autoloader with spl_autoload</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handleError">handleError</a>(mixed $errno, mixed $errstr)
+        
+                                            <p>Error handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 70</div>
+        <code>                    void
+    <strong>__construct</strong>(null|array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|array|<a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOptions">
+        <div class="location">at line         line 98</div>
+        <code>                    SplAutoloader
+    <strong>setOptions</strong>(array|<a target="_blank" href="http://php.net/Traversable">Traversable</a> $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Configure autoloader</p>                    <p>Allows specifying both "namespace" and "prefix" pairs, using the
+following structure:
+<code>
+array(
+    'namespaces' => array(
+        'Zend'     => '/path/to/Zend/library',
+        'Doctrine' => '/path/to/Doctrine/library',
+    ),
+    'prefixes' => array(
+        'Phly<em>'     => '/path/to/Phly/library',
+    ),
+    'fallback</em>autoloader' => true,
+)
+</code></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>SplAutoloader</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFallbackAutoloader">
+        <div class="location">at line         line 138</div>
+        <code>                    <a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a>
+    <strong>setFallbackAutoloader</strong>(bool $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set flag indicating fallback autoloader status</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isFallbackAutoloader">
+        <div class="location">at line         line 149</div>
+        <code>                    bool
+    <strong>isFallbackAutoloader</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is this autoloader acting as a fallback autoloader?</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerNamespace">
+        <div class="location">at line         line 161</div>
+        <code>                    <a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a>
+    <strong>registerNamespace</strong>(string $namespace, string $directory)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a namespace/directory pair</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerNamespaces">
+        <div class="location">at line         line 174</div>
+        <code>                    <a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a>
+    <strong>registerNamespaces</strong>(array $namespaces)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register many namespace/directory pairs at once</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$namespaces</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerPrefix">
+        <div class="location">at line         line 194</div>
+        <code>                    <a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a>
+    <strong>registerPrefix</strong>(string $prefix, string $directory)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register a prefix/directory pair</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerPrefixes">
+        <div class="location">at line         line 207</div>
+        <code>                    <a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a>
+    <strong>registerPrefixes</strong>(array $prefixes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register many namespace/directory pairs at once</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$prefixes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_StandardAutoloader.html">Zend_Loader_StandardAutoloader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_autoload">
+        <div class="location">at line         line 226</div>
+        <code>                    mixed
+    <strong>autoload</strong>($class)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Defined by Autoloadable; autoload a class</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>False [if unable to load $class]
+         get_class($class) [if $class is successfully loaded]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_register">
+        <div class="location">at line         line 256</div>
+        <code>                    void
+    <strong>register</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register the autoloader with spl_autoload</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handleError">
+        <div class="location">at line         line 271</div>
+        <code>                    void
+    <strong>handleError</strong>(mixed $errno, mixed $errstr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Error handler</p>                    <p>Used by {@link loadClass} during fallback autoloading in PHP versions
+prior to 5.3.0.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$errno</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$errstr</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

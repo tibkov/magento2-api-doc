@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Backend\Block\Widget\Context | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Backend_Block_Widget_Context" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../Magento/Backend.html">Backend</a></li>
+                                        <li><a href="../../../../Magento/Backend/Block.html">Block</a></li>
+                                        <li><a href="../../../../Magento/Backend/Block/Widget.html">Widget</a></li>
+    
+                <li>Context</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Context
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Context</strong>        extends <a href="../../../../Magento/Backend/Block/Template/Context.html"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a>
+</p>
+
+        
+    
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Magento/Framework/App/RequestInterface.html"><abbr title="Magento\Framework\App\RequestInterface">RequestInterface</abbr></a> $request, <a href="../../../../Magento/Framework/View/LayoutInterface.html"><abbr title="Magento\Framework\View\LayoutInterface">LayoutInterface</abbr></a> $layout, <a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a> $urlBuilder, <a href="../../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a> $cache, <a href="../../../../Magento/Framework/View/DesignInterface.html"><abbr title="Magento\Framework\View\DesignInterface">DesignInterface</abbr></a> $design, <a href="../../../../Magento/Framework/Session/SessionManagerInterface.html"><abbr title="Magento\Framework\Session\SessionManagerInterface">SessionManagerInterface</abbr></a> $session, <a href="../../../../Magento/Framework/Session/SidResolverInterface.html"><abbr title="Magento\Framework\Session\SidResolverInterface">SidResolverInterface</abbr></a> $sidResolver, <a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a> $assetRepo, <a href="../../../../Magento/Framework/View/ConfigInterface.html"><abbr title="Magento\Framework\View\ConfigInterface">ConfigInterface</abbr></a> $viewConfig, <a href="../../../../Magento/Framework/App/Cache/StateInterface.html"><abbr title="Magento\Framework\App\Cache\StateInterface">StateInterface</abbr></a> $cacheState, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../Magento/Framework/Escaper.html"><abbr title="Magento\Framework\Escaper">Escaper</abbr></a> $escaper, <a href="../../../../Magento/Framework/Filter/FilterManager.html"><abbr title="Magento\Framework\Filter\FilterManager">FilterManager</abbr></a> $filterManager, <a href="../../../../Magento/Framework/Stdlib/DateTime/TimezoneInterface.html"><abbr title="Magento\Framework\Stdlib\DateTime\TimezoneInterface">TimezoneInterface</abbr></a> $localeDate, <a href="../../../../Magento/Framework/Translate/Inline/StateInterface.html"><abbr title="Magento\Framework\Translate\Inline\StateInterface">StateInterface</abbr></a> $inlineTranslation, <a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a> $filesystem, <a href="../../../../Magento/Framework/View/FileSystem.html"><abbr title="Magento\Framework\View\FileSystem">FileSystem</abbr></a> $viewFileSystem, <a href="../../../../Magento/Framework/View/TemplateEnginePool.html"><abbr title="Magento\Framework\View\TemplateEnginePool">TemplateEnginePool</abbr></a> $enginePool, <a href="../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a> $appState, <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../Magento/Framework/View/Page/Config.html"><abbr title="Magento\Framework\View\Page\Config">Config</abbr></a> $pageConfig, <a href="../../../../Magento/Framework/View/Element/Template/File/Resolver.html"><abbr title="Magento\Framework\View\Element\Template\File\Resolver">Resolver</abbr></a> $resolver, <a href="../../../../Magento/Framework/View/Element/Template/File/Validator.html"><abbr title="Magento\Framework\View\Element\Template\File\Validator">Validator</abbr></a> $validator, <a href="../../../../Magento/Framework/AuthorizationInterface.html"><abbr title="Magento\Framework\AuthorizationInterface">AuthorizationInterface</abbr></a> $authorization, <a href="../../../../Magento/Backend/Model/Session.html"><abbr title="Magento\Backend\Model\Session">Session</abbr></a> $backendSession, <a href="../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a> $mathRandom, <a href="../../../../Magento/Framework/Data/Form/FormKey.html"><abbr title="Magento\Framework\Data\Form\FormKey">FormKey</abbr></a> $formKey, <a href="../../../../Magento/Framework/Code/NameBuilder.html"><abbr title="Magento\Framework\Code\NameBuilder">NameBuilder</abbr></a> $nameBuilder, <a href="../../../../Magento/Backend/Block/Widget/Button/ButtonList.html"><abbr title="Magento\Backend\Block\Widget\Button\ButtonList">ButtonList</abbr></a> $buttonList, <a href="../../../../Magento/Backend/Block/Widget/Button/ToolbarInterface.html"><abbr title="Magento\Backend\Block\Widget\Button\ToolbarInterface">ToolbarInterface</abbr></a> $toolbar)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCache">getCache</a>()
+        
+                                            <p>Get cache</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getCache"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/View/DesignInterface.html"><abbr title="Magento\Framework\View\DesignInterface">DesignInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDesignPackage">getDesignPackage</a>()
+        
+                                            <p>Get design package</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getDesignPackage"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEventManager">getEventManager</a>()
+        
+                                            <p>Get event manager</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getEventManager"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/View/LayoutInterface.html"><abbr title="Magento\Framework\View\LayoutInterface">LayoutInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLayout">getLayout</a>()
+        
+                                            <p>Get layout</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getLayout"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/App/RequestInterface.html"><abbr title="Magento\Framework\App\RequestInterface">RequestInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequest">getRequest</a>()
+        
+                                            <p>Get request</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getRequest"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Session/SessionManagerInterface.html"><abbr title="Magento\Framework\Session\SessionManagerInterface">SessionManagerInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSession">getSession</a>()
+        
+                                            <p>Get session</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getSession"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Session/SidResolverInterface.html"><abbr title="Magento\Framework\Session\SidResolverInterface">SidResolverInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSidResolver">getSidResolver</a>()
+        
+                                            <p>Get SID resolver</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getSidResolver"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getScopeConfig">getScopeConfig</a>()
+        
+                                            <p>Get scope config</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getScopeConfig"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Translate/Inline/StateInterface.html"><abbr title="Magento\Framework\Translate\Inline\StateInterface">StateInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInlineTranslation">getInlineTranslation</a>()
+        
+                                            <p>Get inline translation status object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getInlineTranslation"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUrlBuilder">getUrlBuilder</a>()
+        
+                                            <p>Get URL builder</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getUrlBuilder"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAssetRepository">getAssetRepository</a>()
+        
+                                            <p>Get asset service</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getAssetRepository"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/View/ConfigInterface.html"><abbr title="Magento\Framework\View\ConfigInterface">ConfigInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getViewConfig">getViewConfig</a>()
+        
+                                            <p>Get view config</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getViewConfig"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/App/Cache/StateInterface.html"><abbr title="Magento\Framework\App\Cache\StateInterface">StateInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheState">getCacheState</a>()
+        
+                                            <p>Get cache state</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getCacheState"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLogger">getLogger</a>()
+        
+                                            <p>Get logger instance</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getLogger"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Escaper.html"><abbr title="Magento\Framework\Escaper">Escaper</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEscaper">getEscaper</a>()
+        
+                                            <p>Get escaper</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getEscaper"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Filter/FilterManager.html"><abbr title="Magento\Framework\Filter\FilterManager">FilterManager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilterManager">getFilterManager</a>()
+        
+                                            <p>Get filter manager</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getFilterManager"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Stdlib/DateTime/TimezoneInterface.html"><abbr title="Magento\Framework\Stdlib\DateTime\TimezoneInterface">TimezoneInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLocaleDate">getLocaleDate</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Context.html#method_getLocaleDate"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/View/Element/Template/File/Resolver.html"><abbr title="Magento\Framework\View\Element\Template\File\Resolver">Resolver</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResolver">getResolver</a>()
+        
+                                            <p>Get template file resolver</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getResolver"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/View/Element/Template/File/Validator.html"><abbr title="Magento\Framework\View\Element\Template\File\Validator">Validator</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getValidator">getValidator</a>()
+        
+                                            <p>Get validator</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getValidator"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilesystem">getFilesystem</a>()
+        
+                                            <p>Get filesystem instance</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getFilesystem"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/View/FileSystem.html"><abbr title="Magento\Framework\View\FileSystem">FileSystem</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getViewFileSystem">getViewFileSystem</a>()
+        
+                                            <p>Get view file system model</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getViewFileSystem"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/View/TemplateEnginePool.html"><abbr title="Magento\Framework\View\TemplateEnginePool">TemplateEnginePool</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEnginePool">getEnginePool</a>()
+        
+                                            <p>Get the template engine pool instance</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getEnginePool"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAppState">getAppState</a>()
+        
+                                            <p>Get app state object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getAppState"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStoreManager">getStoreManager</a>()
+        
+                                            <p>Get store manager</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Backend/Block/Template/Context.html#method_getStoreManager"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/View/Page/Config.html"><abbr title="Magento\Framework\View\Page\Config">Config</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageConfig">getPageConfig</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getPageConfig"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/AuthorizationInterface.html"><abbr title="Magento\Framework\AuthorizationInterface">AuthorizationInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAuthorization">getAuthorization</a>()
+        
+                                            <p>Retrieve Authorization</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Backend/Block/Template/Context.html#method_getAuthorization"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Backend/Model/Session.html"><abbr title="Magento\Backend\Model\Session">Session</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBackendSession">getBackendSession</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Backend/Block/Template/Context.html#method_getBackendSession"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMathRandom">getMathRandom</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Backend/Block/Template/Context.html#method_getMathRandom"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Data/Form/FormKey.html"><abbr title="Magento\Framework\Data\Form\FormKey">FormKey</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFormKey">getFormKey</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Backend/Block/Template/Context.html#method_getFormKey"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Data/Form/FormKey.html"><abbr title="Magento\Framework\Data\Form\FormKey">FormKey</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNameBuilder">getNameBuilder</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Backend/Block/Template/Context.html#method_getNameBuilder"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Backend/Block/Widget/Button/ButtonList.html"><abbr title="Magento\Backend\Block\Widget\Button\ButtonList">ButtonList</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getButtonList">getButtonList</a>()
+        
+                                            <p>Get button list</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Backend/Block/Widget/Button/ToolbarInterface.html"><abbr title="Magento\Backend\Block\Widget\Button\ToolbarInterface">ToolbarInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getButtonToolbar">getButtonToolbar</a>()
+        
+                                            <p>Get button toolbar</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 65</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../Magento/Framework/App/RequestInterface.html"><abbr title="Magento\Framework\App\RequestInterface">RequestInterface</abbr></a> $request, <a href="../../../../Magento/Framework/View/LayoutInterface.html"><abbr title="Magento\Framework\View\LayoutInterface">LayoutInterface</abbr></a> $layout, <a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a> $urlBuilder, <a href="../../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a> $cache, <a href="../../../../Magento/Framework/View/DesignInterface.html"><abbr title="Magento\Framework\View\DesignInterface">DesignInterface</abbr></a> $design, <a href="../../../../Magento/Framework/Session/SessionManagerInterface.html"><abbr title="Magento\Framework\Session\SessionManagerInterface">SessionManagerInterface</abbr></a> $session, <a href="../../../../Magento/Framework/Session/SidResolverInterface.html"><abbr title="Magento\Framework\Session\SidResolverInterface">SidResolverInterface</abbr></a> $sidResolver, <a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a> $assetRepo, <a href="../../../../Magento/Framework/View/ConfigInterface.html"><abbr title="Magento\Framework\View\ConfigInterface">ConfigInterface</abbr></a> $viewConfig, <a href="../../../../Magento/Framework/App/Cache/StateInterface.html"><abbr title="Magento\Framework\App\Cache\StateInterface">StateInterface</abbr></a> $cacheState, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../Magento/Framework/Escaper.html"><abbr title="Magento\Framework\Escaper">Escaper</abbr></a> $escaper, <a href="../../../../Magento/Framework/Filter/FilterManager.html"><abbr title="Magento\Framework\Filter\FilterManager">FilterManager</abbr></a> $filterManager, <a href="../../../../Magento/Framework/Stdlib/DateTime/TimezoneInterface.html"><abbr title="Magento\Framework\Stdlib\DateTime\TimezoneInterface">TimezoneInterface</abbr></a> $localeDate, <a href="../../../../Magento/Framework/Translate/Inline/StateInterface.html"><abbr title="Magento\Framework\Translate\Inline\StateInterface">StateInterface</abbr></a> $inlineTranslation, <a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a> $filesystem, <a href="../../../../Magento/Framework/View/FileSystem.html"><abbr title="Magento\Framework\View\FileSystem">FileSystem</abbr></a> $viewFileSystem, <a href="../../../../Magento/Framework/View/TemplateEnginePool.html"><abbr title="Magento\Framework\View\TemplateEnginePool">TemplateEnginePool</abbr></a> $enginePool, <a href="../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a> $appState, <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../Magento/Framework/View/Page/Config.html"><abbr title="Magento\Framework\View\Page\Config">Config</abbr></a> $pageConfig, <a href="../../../../Magento/Framework/View/Element/Template/File/Resolver.html"><abbr title="Magento\Framework\View\Element\Template\File\Resolver">Resolver</abbr></a> $resolver, <a href="../../../../Magento/Framework/View/Element/Template/File/Validator.html"><abbr title="Magento\Framework\View\Element\Template\File\Validator">Validator</abbr></a> $validator, <a href="../../../../Magento/Framework/AuthorizationInterface.html"><abbr title="Magento\Framework\AuthorizationInterface">AuthorizationInterface</abbr></a> $authorization, <a href="../../../../Magento/Backend/Model/Session.html"><abbr title="Magento\Backend\Model\Session">Session</abbr></a> $backendSession, <a href="../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a> $mathRandom, <a href="../../../../Magento/Framework/Data/Form/FormKey.html"><abbr title="Magento\Framework\Data\Form\FormKey">FormKey</abbr></a> $formKey, <a href="../../../../Magento/Framework/Code/NameBuilder.html"><abbr title="Magento\Framework\Code\NameBuilder">NameBuilder</abbr></a> $nameBuilder, <a href="../../../../Magento/Backend/Block/Widget/Button/ButtonList.html"><abbr title="Magento\Backend\Block\Widget\Button\ButtonList">ButtonList</abbr></a> $buttonList, <a href="../../../../Magento/Backend/Block/Widget/Button/ToolbarInterface.html"><abbr title="Magento\Backend\Block\Widget\Button\ToolbarInterface">ToolbarInterface</abbr></a> $toolbar)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/RequestInterface.html"><abbr title="Magento\Framework\App\RequestInterface">RequestInterface</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/LayoutInterface.html"><abbr title="Magento\Framework\View\LayoutInterface">LayoutInterface</abbr></a></td>
+                <td>$layout</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a></td>
+                <td>$eventManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a></td>
+                <td>$urlBuilder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a></td>
+                <td>$cache</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/DesignInterface.html"><abbr title="Magento\Framework\View\DesignInterface">DesignInterface</abbr></a></td>
+                <td>$design</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Session/SessionManagerInterface.html"><abbr title="Magento\Framework\Session\SessionManagerInterface">SessionManagerInterface</abbr></a></td>
+                <td>$session</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Session/SidResolverInterface.html"><abbr title="Magento\Framework\Session\SidResolverInterface">SidResolverInterface</abbr></a></td>
+                <td>$sidResolver</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a></td>
+                <td>$scopeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a></td>
+                <td>$assetRepo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/ConfigInterface.html"><abbr title="Magento\Framework\View\ConfigInterface">ConfigInterface</abbr></a></td>
+                <td>$viewConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/Cache/StateInterface.html"><abbr title="Magento\Framework\App\Cache\StateInterface">StateInterface</abbr></a></td>
+                <td>$cacheState</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Escaper.html"><abbr title="Magento\Framework\Escaper">Escaper</abbr></a></td>
+                <td>$escaper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Filter/FilterManager.html"><abbr title="Magento\Framework\Filter\FilterManager">FilterManager</abbr></a></td>
+                <td>$filterManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Stdlib/DateTime/TimezoneInterface.html"><abbr title="Magento\Framework\Stdlib\DateTime\TimezoneInterface">TimezoneInterface</abbr></a></td>
+                <td>$localeDate</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Translate/Inline/StateInterface.html"><abbr title="Magento\Framework\Translate\Inline\StateInterface">StateInterface</abbr></a></td>
+                <td>$inlineTranslation</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a></td>
+                <td>$filesystem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/FileSystem.html"><abbr title="Magento\Framework\View\FileSystem">FileSystem</abbr></a></td>
+                <td>$viewFileSystem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/TemplateEnginePool.html"><abbr title="Magento\Framework\View\TemplateEnginePool">TemplateEnginePool</abbr></a></td>
+                <td>$enginePool</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a></td>
+                <td>$appState</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/Page/Config.html"><abbr title="Magento\Framework\View\Page\Config">Config</abbr></a></td>
+                <td>$pageConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/Element/Template/File/Resolver.html"><abbr title="Magento\Framework\View\Element\Template\File\Resolver">Resolver</abbr></a></td>
+                <td>$resolver</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/View/Element/Template/File/Validator.html"><abbr title="Magento\Framework\View\Element\Template\File\Validator">Validator</abbr></a></td>
+                <td>$validator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/AuthorizationInterface.html"><abbr title="Magento\Framework\AuthorizationInterface">AuthorizationInterface</abbr></a></td>
+                <td>$authorization</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Backend/Model/Session.html"><abbr title="Magento\Backend\Model\Session">Session</abbr></a></td>
+                <td>$backendSession</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a></td>
+                <td>$mathRandom</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Data/Form/FormKey.html"><abbr title="Magento\Framework\Data\Form\FormKey">FormKey</abbr></a></td>
+                <td>$formKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Code/NameBuilder.html"><abbr title="Magento\Framework\Code\NameBuilder">NameBuilder</abbr></a></td>
+                <td>$nameBuilder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Backend/Block/Widget/Button/ButtonList.html"><abbr title="Magento\Backend\Block\Widget\Button\ButtonList">ButtonList</abbr></a></td>
+                <td>$buttonList</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Backend/Block/Widget/Button/ToolbarInterface.html"><abbr title="Magento\Backend\Block\Widget\Button\ToolbarInterface">ToolbarInterface</abbr></a></td>
+                <td>$toolbar</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCache">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getCache"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 199</div>
+        <code>                    <a href="../../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a>
+    <strong>getCache</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get cache</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDesignPackage">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getDesignPackage"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 209</div>
+        <code>                    <a href="../../../../Magento/Framework/View/DesignInterface.html"><abbr title="Magento\Framework\View\DesignInterface">DesignInterface</abbr></a>
+    <strong>getDesignPackage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get design package</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/View/DesignInterface.html"><abbr title="Magento\Framework\View\DesignInterface">DesignInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEventManager">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getEventManager"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 219</div>
+        <code>                    <a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a>
+    <strong>getEventManager</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get event manager</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLayout">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getLayout"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 229</div>
+        <code>                    <a href="../../../../Magento/Framework/View/LayoutInterface.html"><abbr title="Magento\Framework\View\LayoutInterface">LayoutInterface</abbr></a>
+    <strong>getLayout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get layout</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/View/LayoutInterface.html"><abbr title="Magento\Framework\View\LayoutInterface">LayoutInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getRequest"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 239</div>
+        <code>                    <a href="../../../../Magento/Framework/App/RequestInterface.html"><abbr title="Magento\Framework\App\RequestInterface">RequestInterface</abbr></a>
+    <strong>getRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get request</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/App/RequestInterface.html"><abbr title="Magento\Framework\App\RequestInterface">RequestInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSession">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getSession"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 249</div>
+        <code>                    <a href="../../../../Magento/Framework/Session/SessionManagerInterface.html"><abbr title="Magento\Framework\Session\SessionManagerInterface">SessionManagerInterface</abbr></a>
+    <strong>getSession</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get session</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Session/SessionManagerInterface.html"><abbr title="Magento\Framework\Session\SessionManagerInterface">SessionManagerInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSidResolver">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getSidResolver"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 259</div>
+        <code>                    <a href="../../../../Magento/Framework/Session/SidResolverInterface.html"><abbr title="Magento\Framework\Session\SidResolverInterface">SidResolverInterface</abbr></a>
+    <strong>getSidResolver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get SID resolver</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Session/SidResolverInterface.html"><abbr title="Magento\Framework\Session\SidResolverInterface">SidResolverInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getScopeConfig">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getScopeConfig"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 269</div>
+        <code>                    <a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a>
+    <strong>getScopeConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get scope config</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInlineTranslation">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getInlineTranslation"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 279</div>
+        <code>                    <a href="../../../../Magento/Framework/Translate/Inline/StateInterface.html"><abbr title="Magento\Framework\Translate\Inline\StateInterface">StateInterface</abbr></a>
+    <strong>getInlineTranslation</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get inline translation status object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Translate/Inline/StateInterface.html"><abbr title="Magento\Framework\Translate\Inline\StateInterface">StateInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrlBuilder">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getUrlBuilder"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 289</div>
+        <code>                    <a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a>
+    <strong>getUrlBuilder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get URL builder</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAssetRepository">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getAssetRepository"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 299</div>
+        <code>                    <a href="../../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a>
+    <strong>getAssetRepository</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get asset service</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getViewConfig">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getViewConfig"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 309</div>
+        <code>                    <a href="../../../../Magento/Framework/View/ConfigInterface.html"><abbr title="Magento\Framework\View\ConfigInterface">ConfigInterface</abbr></a>
+    <strong>getViewConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get view config</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/View/ConfigInterface.html"><abbr title="Magento\Framework\View\ConfigInterface">ConfigInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheState">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getCacheState"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 319</div>
+        <code>                    <a href="../../../../Magento/Framework/App/Cache/StateInterface.html"><abbr title="Magento\Framework\App\Cache\StateInterface">StateInterface</abbr></a>
+    <strong>getCacheState</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get cache state</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/App/Cache/StateInterface.html"><abbr title="Magento\Framework\App\Cache\StateInterface">StateInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLogger">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getLogger"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a> at line         line 196</div>
+        <code>                    <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr>
+    <strong>getLogger</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get logger instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEscaper">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getEscaper"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 339</div>
+        <code>                    <a href="../../../../Magento/Framework/Escaper.html"><abbr title="Magento\Framework\Escaper">Escaper</abbr></a>
+    <strong>getEscaper</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get escaper</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Escaper.html"><abbr title="Magento\Framework\Escaper">Escaper</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilterManager">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getFilterManager"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 349</div>
+        <code>                    <a href="../../../../Magento/Framework/Filter/FilterManager.html"><abbr title="Magento\Framework\Filter\FilterManager">FilterManager</abbr></a>
+    <strong>getFilterManager</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get filter manager</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Filter/FilterManager.html"><abbr title="Magento\Framework\Filter\FilterManager">FilterManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLocaleDate">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Context.html#method_getLocaleDate"><abbr title="Magento\Framework\View\Element\Context">Context</abbr></a> at line         line 357</div>
+        <code>                    <a href="../../../../Magento/Framework/Stdlib/DateTime/TimezoneInterface.html"><abbr title="Magento\Framework\Stdlib\DateTime\TimezoneInterface">TimezoneInterface</abbr></a>
+    <strong>getLocaleDate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Stdlib/DateTime/TimezoneInterface.html"><abbr title="Magento\Framework\Stdlib\DateTime\TimezoneInterface">TimezoneInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResolver">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getResolver"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a> at line         line 166</div>
+        <code>                    <a href="../../../../Magento/Framework/View/Element/Template/File/Resolver.html"><abbr title="Magento\Framework\View\Element\Template\File\Resolver">Resolver</abbr></a>
+    <strong>getResolver</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get template file resolver</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/View/Element/Template/File/Resolver.html"><abbr title="Magento\Framework\View\Element\Template\File\Resolver">Resolver</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getValidator">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getValidator"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a> at line         line 176</div>
+        <code>                    <a href="../../../../Magento/Framework/View/Element/Template/File/Validator.html"><abbr title="Magento\Framework\View\Element\Template\File\Validator">Validator</abbr></a>
+    <strong>getValidator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get validator</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/View/Element/Template/File/Validator.html"><abbr title="Magento\Framework\View\Element\Template\File\Validator">Validator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilesystem">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getFilesystem"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a> at line         line 186</div>
+        <code>                    <a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a>
+    <strong>getFilesystem</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get filesystem instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getViewFileSystem">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getViewFileSystem"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a> at line         line 206</div>
+        <code>                    <a href="../../../../Magento/Framework/View/FileSystem.html"><abbr title="Magento\Framework\View\FileSystem">FileSystem</abbr></a>
+    <strong>getViewFileSystem</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get view file system model</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/View/FileSystem.html"><abbr title="Magento\Framework\View\FileSystem">FileSystem</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEnginePool">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getEnginePool"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a> at line         line 216</div>
+        <code>                    <a href="../../../../Magento/Framework/View/TemplateEnginePool.html"><abbr title="Magento\Framework\View\TemplateEnginePool">TemplateEnginePool</abbr></a>
+    <strong>getEnginePool</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the template engine pool instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/View/TemplateEnginePool.html"><abbr title="Magento\Framework\View\TemplateEnginePool">TemplateEnginePool</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAppState">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getAppState"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a> at line         line 226</div>
+        <code>                    <a href="../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a>
+    <strong>getAppState</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get app state object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStoreManager">
+        <div class="location">in <a href="../../../../Magento/Backend/Block/Template/Context.html#method_getStoreManager"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a> at line         line 151</div>
+        <code>                    <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a>
+    <strong>getStoreManager</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get store manager</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageConfig">
+        <div class="location">in <a href="../../../../Magento/Framework/View/Element/Template/Context.html#method_getPageConfig"><abbr title="Magento\Framework\View\Element\Template\Context">Context</abbr></a> at line         line 244</div>
+        <code>                    <a href="../../../../Magento/Framework/View/Page/Config.html"><abbr title="Magento\Framework\View\Page\Config">Config</abbr></a>
+    <strong>getPageConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/View/Page/Config.html"><abbr title="Magento\Framework\View\Page\Config">Config</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAuthorization">
+        <div class="location">in <a href="../../../../Magento/Backend/Block/Template/Context.html#method_getAuthorization"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a> at line         line 161</div>
+        <code>                    <a href="../../../../Magento/Framework/AuthorizationInterface.html"><abbr title="Magento\Framework\AuthorizationInterface">AuthorizationInterface</abbr></a>
+    <strong>getAuthorization</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Authorization</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/AuthorizationInterface.html"><abbr title="Magento\Framework\AuthorizationInterface">AuthorizationInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBackendSession">
+        <div class="location">in <a href="../../../../Magento/Backend/Block/Template/Context.html#method_getBackendSession"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a> at line         line 169</div>
+        <code>                    <a href="../../../../Magento/Backend/Model/Session.html"><abbr title="Magento\Backend\Model\Session">Session</abbr></a>
+    <strong>getBackendSession</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Backend/Model/Session.html"><abbr title="Magento\Backend\Model\Session">Session</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMathRandom">
+        <div class="location">in <a href="../../../../Magento/Backend/Block/Template/Context.html#method_getMathRandom"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a> at line         line 177</div>
+        <code>                    <a href="../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a>
+    <strong>getMathRandom</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormKey">
+        <div class="location">in <a href="../../../../Magento/Backend/Block/Template/Context.html#method_getFormKey"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a> at line         line 185</div>
+        <code>                    <a href="../../../../Magento/Framework/Data/Form/FormKey.html"><abbr title="Magento\Framework\Data\Form\FormKey">FormKey</abbr></a>
+    <strong>getFormKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Data/Form/FormKey.html"><abbr title="Magento\Framework\Data\Form\FormKey">FormKey</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNameBuilder">
+        <div class="location">in <a href="../../../../Magento/Backend/Block/Template/Context.html#method_getNameBuilder"><abbr title="Magento\Backend\Block\Template\Context">Context</abbr></a> at line         line 193</div>
+        <code>                    <a href="../../../../Magento/Framework/Data/Form/FormKey.html"><abbr title="Magento\Framework\Data\Form\FormKey">FormKey</abbr></a>
+    <strong>getNameBuilder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Data/Form/FormKey.html"><abbr title="Magento\Framework\Data\Form\FormKey">FormKey</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getButtonList">
+        <div class="location">at line         line 141</div>
+        <code>                    <a href="../../../../Magento/Backend/Block/Widget/Button/ButtonList.html"><abbr title="Magento\Backend\Block\Widget\Button\ButtonList">ButtonList</abbr></a>
+    <strong>getButtonList</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get button list</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Backend/Block/Widget/Button/ButtonList.html"><abbr title="Magento\Backend\Block\Widget\Button\ButtonList">ButtonList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getButtonToolbar">
+        <div class="location">at line         line 151</div>
+        <code>                    <a href="../../../../Magento/Backend/Block/Widget/Button/ToolbarInterface.html"><abbr title="Magento\Backend\Block\Widget\Button\ToolbarInterface">ToolbarInterface</abbr></a>
+    <strong>getButtonToolbar</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get button toolbar</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Backend/Block/Widget/Button/ToolbarInterface.html"><abbr title="Magento\Backend\Block\Widget\Button\ToolbarInterface">ToolbarInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Integration\Model\Oauth\Token\Provider | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
+        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Integration_Model_Oauth_Token_Provider" data-root-path="../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../../Magento/Integration.html">Integration</a></li>
+                                        <li><a href="../../../../../Magento/Integration/Model.html">Model</a></li>
+                                        <li><a href="../../../../../Magento/Integration/Model/Oauth.html">Oauth</a></li>
+                                        <li><a href="../../../../../Magento/Integration/Model/Oauth/Token.html">Token</a></li>
+    
+                <li>Provider</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Provider
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Provider</strong>        implements
+        <a href="../../../../../Magento/Framework/Oauth/TokenProviderInterface.html"><abbr title="Magento\Framework\Oauth\TokenProviderInterface">TokenProviderInterface</abbr></a>
+</p>
+
+        
+    
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<abbr title="Magento\Integration\Model\Oauth\ConsumerFactory">ConsumerFactory</abbr> $consumerFactory, <abbr title="Magento\Integration\Model\Oauth\TokenFactory">TokenFactory</abbr> $tokenFactory, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateConsumer">validateConsumer</a>(<a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a> $consumer)
+        
+                                            <p>Validate the consumer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createRequestToken">createRequestToken</a>(<a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a> $consumer)
+        
+                                            <p>Create a request token for the specified consumer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateRequestToken">validateRequestToken</a>(string $requestToken, <a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a> $consumer, string $oauthVerifier)
+        
+                                            <p>Validates the request token and verifier. Verifies the request token is associated with the consumer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAccessToken">getAccessToken</a>(<a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a> $consumer)
+        
+                                            <p>Retrieve access token for the specified consumer given the consumer key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateAccessTokenRequest">validateAccessTokenRequest</a>(string $accessToken, <a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a> $consumer)
+        
+                                            <p>Validates the Oauth token type and verifies that it's associated with the consumer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateAccessToken">validateAccessToken</a>(string $accessToken)
+        
+                                            <p>Validate an access token string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateOauthToken">validateOauthToken</a>(string $oauthToken)
+        
+                                            <p>Perform basic validation of an Oauth token, of any type (e.g. request, access, etc.).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConsumerByKey">getConsumerByKey</a>(string $consumerKey)
+        
+                                            <p>Retrieve a consumer given the consumer's key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Magento/Integration/Model/Oauth/Token.html"><abbr title="Magento\Integration\Model\Oauth\Token">Token</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIntegrationTokenByConsumerId">getIntegrationTokenByConsumerId</a>(int $consumerId)
+        
+                                            <p>Load token object given a consumer Id.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 36</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Magento\Integration\Model\Oauth\ConsumerFactory">ConsumerFactory</abbr> $consumerFactory, <abbr title="Magento\Integration\Model\Oauth\TokenFactory">TokenFactory</abbr> $tokenFactory, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Magento\Integration\Model\Oauth\ConsumerFactory">ConsumerFactory</abbr></td>
+                <td>$consumerFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Integration\Model\Oauth\TokenFactory">TokenFactory</abbr></td>
+                <td>$tokenFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateConsumer">
+        <div class="location">at line         line 49</div>
+        <code>                    bool
+    <strong>validateConsumer</strong>(<a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a> $consumer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate the consumer.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a></td>
+                <td>$consumer</td>
+                <td>The consumer.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>True if the consumer is valid.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/Exception.html"><abbr title="Magento\Framework\Oauth\Exception">Exception</abbr></a></td>
+                <td>Validation errors.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRequestToken">
+        <div class="location">at line         line 63</div>
+        <code>                    array
+    <strong>createRequestToken</strong>(<a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a> $consumer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a request token for the specified consumer.</p>                    <p>Example:</p>
+
+<pre>
+    array(
+        'oauth_token' => 'gshsjkndtyhwjhdbutfgbsnhtrequikf,
+        'oauth_token_secret' => 'gshsjkndtyhwjhdbutfgbsnhtrequikf'
+    )
+</pre>
+</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a></td>
+                <td>$consumer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>The request token and secret.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/Exception.html"><abbr title="Magento\Framework\Oauth\Exception">Exception</abbr></a></td>
+                <td>Validation errors.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateRequestToken">
+        <div class="location">at line         line 78</div>
+        <code>                    string
+    <strong>validateRequestToken</strong>(string $requestToken, <a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a> $consumer, string $oauthVerifier)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validates the request token and verifier. Verifies the request token is associated with the consumer.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$requestToken</td>
+                <td>The 'oauth_token' request token value.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a></td>
+                <td>$consumer</td>
+                <td>The consumer given the 'oauth<em>consumer</em>key'.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$oauthVerifier</td>
+                <td>The 'oauth_verifier' value.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The request token secret (i.e. 'oauth<em>token</em>secret').</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/Exception.html"><abbr title="Magento\Framework\Oauth\Exception">Exception</abbr></a></td>
+                <td>Validation errors.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAccessToken">
+        <div class="location">at line         line 104</div>
+        <code>                    array
+    <strong>getAccessToken</strong>(<a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a> $consumer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve access token for the specified consumer given the consumer key.</p>                    <p>Example:</p>
+
+<pre>
+    array(
+        'oauth_token' => 'gshsjkndtyhwjhdbutfgbsnhtrequikf,
+        'oauth_token_secret' => 'gshsjkndtyhwjhdbutfgbsnhtrequikf'
+    )
+</pre>
+</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a></td>
+                <td>$consumer</td>
+                <td>The consumer given the 'oauth<em>consumer</em>key'.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>The access token and secret.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/Exception.html"><abbr title="Magento\Framework\Oauth\Exception">Exception</abbr></a></td>
+                <td>Validation errors.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateAccessTokenRequest">
+        <div class="location">at line         line 123</div>
+        <code>                    string
+    <strong>validateAccessTokenRequest</strong>(string $accessToken, <a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a> $consumer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validates the Oauth token type and verifies that it's associated with the consumer.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accessToken</td>
+                <td>The 'oauth_token' access token value.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a></td>
+                <td>$consumer</td>
+                <td>The consumer given the 'oauth<em>consumer</em>key'.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The access token secret.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/Exception.html"><abbr title="Magento\Framework\Oauth\Exception">Exception</abbr></a></td>
+                <td>Validation errors.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateAccessToken">
+        <div class="location">at line         line 149</div>
+        <code>                    int
+    <strong>validateAccessToken</strong>(string $accessToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate an access token string.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accessToken</td>
+                <td>The 'oauth_token' access token string.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>Consumer ID if the access token is valid.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/Exception.html"><abbr title="Magento\Framework\Oauth\Exception">Exception</abbr></a></td>
+                <td>Validation errors.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateOauthToken">
+        <div class="location">at line         line 173</div>
+        <code>                    bool
+    <strong>validateOauthToken</strong>(string $oauthToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Perform basic validation of an Oauth token, of any type (e.g. request, access, etc.).</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$oauthToken</td>
+                <td>The token string.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>True if the Oauth token passes basic validation.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConsumerByKey">
+        <div class="location">at line         line 181</div>
+        <code>                    <a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a>
+    <strong>getConsumerByKey</strong>(string $consumerKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve a consumer given the consumer's key.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$consumerKey</td>
+                <td>The 'oauth<em>consumer</em>key' value.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Magento/Framework/Oauth/ConsumerInterface.html"><abbr title="Magento\Framework\Oauth\ConsumerInterface">ConsumerInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/Exception.html"><abbr title="Magento\Framework\Oauth\Exception">Exception</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIntegrationTokenByConsumerId">
+        <div class="location">at line         line 283</div>
+        <code>                    <a href="../../../../../Magento/Integration/Model/Oauth/Token.html"><abbr title="Magento\Integration\Model\Oauth\Token">Token</abbr></a>
+    <strong>getIntegrationTokenByConsumerId</strong>(int $consumerId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load token object given a consumer Id.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$consumerId</td>
+                <td><ul>
+<li>The Id of the consumer.</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Magento/Integration/Model/Oauth/Token.html"><abbr title="Magento\Integration\Model\Oauth\Token">Token</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Oauth/Exception.html"><abbr title="Magento\Framework\Oauth\Exception">Exception</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

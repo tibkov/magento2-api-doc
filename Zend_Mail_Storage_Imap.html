@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Mail_Storage_Imap | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Mail_Storage_Imap" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Mail_Storage_Imap
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Mail_Storage_Imap</strong>        extends <a href="Zend_Mail_Storage_Abstract.html">Zend_Mail_Storage_Abstract</a>        implements
+        <a href="Zend_Mail_Storage_Folder_Interface.html">Zend_Mail_Storage_Folder_Interface</a>, <a href="Zend_Mail_Storage_Writable_Interface.html">Zend_Mail_Storage_Writable_Interface</a>
+</p>
+
+        
+    
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $var)
+        
+                                            <p>Getter for has-properties. The standard has properties
+are: hasFolder, hasUniqueid, hasDelete, hasCreate, hasTop</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method___get">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCapabilities">getCapabilities</a>()
+        
+                                            <p>Get a full list of features supported by the specific mail lib and the server</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_getCapabilities">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_countMessages">countMessages</a>($flags = null)
+        
+                                            <p>Count messages all messages in current box</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSize">getSize</a>(int $id)
+        
+                                            <p>get a list of messages with number and size</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail_Message.html">Zend_Mail_Message</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMessage">getMessage</a>(int $id)
+        
+                                            <p>Fetch a message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRawHeader">getRawHeader</a>(int $id, null|array|string $part = null, int $topLines)
+        
+                                            <p>Get raw header of message or part</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRawContent">getRawContent</a>(int $id, null|array|string $part = null)
+        
+                                            <p>Get raw content of message or part</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $params)
+        
+                                            <p>create instance with parameters
+Supported paramters are
+  - user username
+  - host hostname or ip address of IMAP server [optional, default = 'localhost']
+  - password password for user 'username' [optional, default = '']
+  - port port for IMAP server [optional, default = 110]
+  - ssl 'SSL' or 'TLS' for secure sockets
+  - folder select this folder [optional, default = 'INBOX']</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+        
+                                            <p>Destructor calls close() and therefore closes the resource.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method___destruct">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_close">close</a>()
+        
+                                            <p>Close resource for mail lib. If you need to control, when the resource
+is closed. Otherwise the destructor would call this.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_noop">noop</a>()
+        
+                                            <p>Keep the server busy.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeMessage">removeMessage</a>($id)
+        
+                                            <p>Remove a message from server. If you're doing that from a web enviroment
+you should be careful and use a uniqueid as parameter if possible to
+identify the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUniqueId">getUniqueId</a>(int|null $id = null)
+        
+                                            <p>get unique id for one or all messages</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNumberByUniqueId">getNumberByUniqueId</a>(string $id)
+        
+                                            <p>get a message number from a unique id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>()
+        
+                                            <p>Countable::count()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_count">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetExists">offsetExists</a>(int $id)
+        
+                                            <p>ArrayAccess::offsetExists()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_offsetExists">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail_Message.html">Zend_Mail_Message</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetGet">offsetGet</a>(int $id)
+        
+                                            <p>ArrayAccess::offsetGet()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_offsetGet">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetSet">offsetSet</a>(id $id, mixed $value)
+        
+                                            <p>ArrayAccess::offsetSet()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_offsetSet">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetUnset">offsetUnset</a>(int $id)
+        
+                                            <p>ArrayAccess::offsetUnset()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_offsetUnset">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rewind">rewind</a>()
+        
+                                            <p>Iterator::rewind()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_rewind">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail_Message.html">Zend_Mail_Message</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_current">current</a>()
+        
+                                            <p>Iterator::current()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_current">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_key">key</a>()
+        
+                                            <p>Iterator::key()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_key">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_next">next</a>()
+        
+                                            <p>Iterator::next()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_next">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_valid">valid</a>()
+        
+                                            <p>Iterator::valid()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_valid">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_seek">seek</a>(int $pos)
+        
+                                            <p>SeekableIterator::seek()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mail_Storage_Abstract.html#method_seek">Zend_Mail_Storage_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFolders">getFolders</a>(string $rootFolder = null)
+        
+                                            <p>get root folder or given folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_selectFolder">selectFolder</a>(<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a>|string $globalName)
+        
+                                            <p>select given folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCurrentFolder">getCurrentFolder</a>()
+        
+                                            <p>get Zend<em>Mail</em>Storage_Folder instance for current folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createFolder">createFolder</a>(string $name, string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $parentFolder = null)
+        
+                                            <p>create a new folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeFolder">removeFolder</a>(string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $name)
+        
+                                            <p>remove a folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renameFolder">renameFolder</a>(string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $oldName, string $newName)
+        
+                                            <p>rename and/or move folder</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendMessage">appendMessage</a>(string|<a href="Zend_Mail_Message.html">Zend_Mail_Message</a>|<a href="Zend_Mime_Message.html">Zend_Mime_Message</a> $message, null|string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $folder = null, null|array $flags = null)
+        
+                                            <p>append a new message to mail storage</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copyMessage">copyMessage</a>(int $id, string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $folder)
+        
+                                            <p>copy an existing message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_moveMessage">moveMessage</a>(int $id, string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $folder)
+        
+                                            <p>move an existing message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFlags">setFlags</a>(int $id, array $flags)
+        
+                                            <p>set flags for message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method___get">Zend_Mail_Storage_Abstract</a> at line         line 75</div>
+        <code>                    bool
+    <strong>__get</strong>(string $var)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Getter for has-properties. The standard has properties
+are: hasFolder, hasUniqueid, hasDelete, hasCreate, hasTop</p>                    <p>The valid values for the has-properties are:
+  - true if a feature is supported
+  - false if a feature is not supported
+  - null is it's not yet known or it can't be know if a feature is supported</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$var</td>
+                <td>property name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>supported or not</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCapabilities">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_getCapabilities">Zend_Mail_Storage_Abstract</a> at line         line 95</div>
+        <code>                    array
+    <strong>getCapabilities</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a full list of features supported by the specific mail lib and the server</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>list of features as array(featurename => true|false[|null])</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_countMessages">
+        <div class="location">at line         line 115</div>
+        <code>                    int
+    <strong>countMessages</strong>($flags = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Count messages all messages in current box</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$flags</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>number of messages</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSize">
+        <div class="location">at line         line 148</div>
+        <code>                    int|array
+    <strong>getSize</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>get a list of messages with number and size</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>number of message</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|array</td>
+            <td>size of given message of list with all messages as array(num => size)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMessage">
+        <div class="location">at line         line 163</div>
+        <code>                    <a href="Zend_Mail_Message.html">Zend_Mail_Message</a>
+    <strong>getMessage</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fetch a message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>number of message</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail_Message.html">Zend_Mail_Message</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRawHeader">
+        <div class="location">at line         line 187</div>
+        <code>                    string
+    <strong>getRawHeader</strong>(int $id, null|array|string $part = null, int $topLines)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get raw header of message or part</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>number of message</td>
+            </tr>
+                    <tr>
+                <td>null|array|string</td>
+                <td>$part</td>
+                <td>path to part or null for messsage header</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$topLines</td>
+                <td>include this many lines with header (after an empty line)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>raw header</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRawContent">
+        <div class="location">at line         line 211</div>
+        <code>                    string
+    <strong>getRawContent</strong>(int $id, null|array|string $part = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get raw content of message or part</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>number of message</td>
+            </tr>
+                    <tr>
+                <td>null|array|string</td>
+                <td>$part</td>
+                <td>path to part or null for messsage content</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>raw content</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 239</div>
+        <code>                    
+    <strong>__construct</strong>(array $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>create instance with parameters
+Supported paramters are
+  - user username
+  - host hostname or ip address of IMAP server [optional, default = 'localhost']
+  - password password for user 'username' [optional, default = '']
+  - port port for IMAP server [optional, default = 110]
+  - ssl 'SSL' or 'TLS' for secure sockets
+  - folder select this folder [optional, default = 'INBOX']</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>mail reader specific parameters</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method___destruct">Zend_Mail_Storage_Abstract</a> at line         line 159</div>
+        <code>                    
+    <strong>__destruct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destructor calls close() and therefore closes the resource.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_close">
+        <div class="location">at line         line 292</div>
+        <code>                    null
+    <strong>close</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Close resource for mail lib. If you need to control, when the resource
+is closed. Otherwise the destructor would call this.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_noop">
+        <div class="location">at line         line 304</div>
+        <code>                    null
+    <strong>noop</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Keep the server busy.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeMessage">
+        <div class="location">at line         line 324</div>
+        <code>                    null
+    <strong>removeMessage</strong>($id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a message from server. If you're doing that from a web enviroment
+you should be careful and use a uniqueid as parameter if possible to
+identify the message.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUniqueId">
+        <div class="location">at line         line 352</div>
+        <code>                    array|string
+    <strong>getUniqueId</strong>(int|null $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>get unique id for one or all messages</p>                    <p>if storage does not support unique ids it's the same as the message number</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$id</td>
+                <td>message number</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string</td>
+            <td>message number for given message or all messages as array</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNumberByUniqueId">
+        <div class="location">at line         line 371</div>
+        <code>                    int
+    <strong>getNumberByUniqueId</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>get a message number from a unique id</p>                    <p>I.e. if you have a webmailer that supports deleting messages you should use unique ids
+as parameter and use this method to translate it to message number right before calling removeMessage()</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>unique id</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>message number</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_count">Zend_Mail_Storage_Abstract</a> at line         line 218</div>
+        <code>                    int
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Countable::count()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_offsetExists">Zend_Mail_Storage_Abstract</a> at line         line 230</div>
+        <code>                    boolean
+    <strong>offsetExists</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ArrayAccess::offsetExists()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_offsetGet">Zend_Mail_Storage_Abstract</a> at line         line 248</div>
+        <code>                    <a href="Zend_Mail_Message.html">Zend_Mail_Message</a>
+    <strong>offsetGet</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ArrayAccess::offsetGet()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail_Message.html">Zend_Mail_Message</a></td>
+            <td>message object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_offsetSet">Zend_Mail_Storage_Abstract</a> at line         line 262</div>
+        <code>                    void
+    <strong>offsetSet</strong>(id $id, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ArrayAccess::offsetSet()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>id</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_offsetUnset">Zend_Mail_Storage_Abstract</a> at line         line 278</div>
+        <code>                    boolean
+    <strong>offsetUnset</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ArrayAccess::offsetUnset()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>success</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewind">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_rewind">Zend_Mail_Storage_Abstract</a> at line         line 293</div>
+        <code>                    void
+    <strong>rewind</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Iterator::rewind()</p>                    <p>Rewind always gets the new count from the storage. Thus if you use
+the interfaces and your scripts take long you should use reset()
+from time to time.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_current">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_current">Zend_Mail_Storage_Abstract</a> at line         line 305</div>
+        <code>                    <a href="Zend_Mail_Message.html">Zend_Mail_Message</a>
+    <strong>current</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Iterator::current()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail_Message.html">Zend_Mail_Message</a></td>
+            <td>current message</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_key">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_key">Zend_Mail_Storage_Abstract</a> at line         line 316</div>
+        <code>                    int
+    <strong>key</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Iterator::key()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>id of current position</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_next">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_next">Zend_Mail_Storage_Abstract</a> at line         line 327</div>
+        <code>                    void
+    <strong>next</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Iterator::next()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_valid">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_valid">Zend_Mail_Storage_Abstract</a> at line         line 338</div>
+        <code>                    boolean
+    <strong>valid</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Iterator::valid()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seek">
+        <div class="location">in <a href="Zend_Mail_Storage_Abstract.html#method_seek">Zend_Mail_Storage_Abstract</a> at line         line 354</div>
+        <code>                    void
+    <strong>seek</strong>(int $pos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>SeekableIterator::seek()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$pos</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/OutOfBoundsException">OutOfBoundsException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFolders">
+        <div class="location">at line         line 397</div>
+        <code>                    <a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a>
+    <strong>getFolders</strong>(string $rootFolder = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>get root folder or given folder</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$rootFolder</td>
+                <td>get folder structure for given folder, else root</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a></td>
+            <td>root or wanted folder</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_selectFolder">
+        <div class="location">at line         line 460</div>
+        <code>                    null
+    <strong>selectFolder</strong>(<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a>|string $globalName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>select given folder</p>                    <p>folder must be selectable!</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a>|string</td>
+                <td>$globalName</td>
+                <td>global name of folder or instance for subfolder</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Mail_Protocol_Exception.html">Zend_Mail_Protocol_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurrentFolder">
+        <div class="location">at line         line 480</div>
+        <code>                    <a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a>
+    <strong>getCurrentFolder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>get Zend<em>Mail</em>Storage_Folder instance for current folder</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a></td>
+            <td>instance of current folder</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createFolder">
+        <div class="location">at line         line 496</div>
+        <code>                    null
+    <strong>createFolder</strong>(string $name, string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $parentFolder = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>create a new folder</p>                    <p>This method also creates parent folders if necessary. Some mail storages may restrict, which folder
+may be used as parent or which chars may be used in the folder name</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>global name of folder, local name if $parentFolder is set</td>
+            </tr>
+                    <tr>
+                <td>string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a></td>
+                <td>$parentFolder</td>
+                <td>parent folder for new folder, else root folder is parent</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeFolder">
+        <div class="location">at line         line 523</div>
+        <code>                    null
+    <strong>removeFolder</strong>(string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>remove a folder</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a></td>
+                <td>$name</td>
+                <td>name or instance of folder</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renameFolder">
+        <div class="location">at line         line 548</div>
+        <code>                    null
+    <strong>renameFolder</strong>(string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $oldName, string $newName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>rename and/or move folder</p>                    <p>The new name has the same restrictions as in createFolder()</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a></td>
+                <td>$oldName</td>
+                <td>name or instance of folder</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$newName</td>
+                <td>new global name of folder</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendMessage">
+        <div class="location">at line         line 572</div>
+        <code>                    
+    <strong>appendMessage</strong>(string|<a href="Zend_Mail_Message.html">Zend_Mail_Message</a>|<a href="Zend_Mime_Message.html">Zend_Mime_Message</a> $message, null|string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $folder = null, null|array $flags = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>append a new message to mail storage</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Mail_Message.html">Zend_Mail_Message</a>|<a href="Zend_Mime_Message.html">Zend_Mime_Message</a></td>
+                <td>$message</td>
+                <td>message as string or instance of message class</td>
+            </tr>
+                    <tr>
+                <td>null|string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a></td>
+                <td>$folder</td>
+                <td>folder for new message, else current folder is taken</td>
+            </tr>
+                    <tr>
+                <td>null|array</td>
+                <td>$flags</td>
+                <td>set flags for new message, else a default set is used</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copyMessage">
+        <div class="location">at line         line 600</div>
+        <code>                    null
+    <strong>copyMessage</strong>(int $id, string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $folder)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>copy an existing message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>number of message</td>
+            </tr>
+                    <tr>
+                <td>string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a></td>
+                <td>$folder</td>
+                <td>name or instance of targer folder</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_moveMessage">
+        <div class="location">at line         line 621</div>
+        <code>                    null
+    <strong>moveMessage</strong>(int $id, string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a> $folder)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>move an existing message</p>                    <p>NOTE: imap has no native move command, thus it's emulated with copy and delete</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>number of message</td>
+            </tr>
+                    <tr>
+                <td>string|<a href="Zend_Mail_Storage_Folder.html">Zend_Mail_Storage_Folder</a></td>
+                <td>$folder</td>
+                <td>name or instance of targer folder</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFlags">
+        <div class="location">at line         line 635</div>
+        <code>                    
+    <strong>setFlags</strong>(int $id, array $flags)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>set flags for message</p>                    <p>NOTE: this method can't set the recent flag.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>number of message</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$flags</td>
+                <td>new flags for message</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Storage_Exception.html">Zend_Mail_Storage_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

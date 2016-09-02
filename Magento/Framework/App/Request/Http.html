@@ -1,0 +1,2871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Framework\App\Request\Http | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Framework_App_Request_Http" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../Magento/Framework.html">Framework</a></li>
+                                        <li><a href="../../../../Magento/Framework/App.html">App</a></li>
+                                        <li><a href="../../../../Magento/Framework/App/Request.html">Request</a></li>
+    
+                <li>Http</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Http
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Http</strong>        extends <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a>        implements
+        <a href="../../../../Magento/Framework/App/RequestInterface.html"><abbr title="Magento\Framework\App\RequestInterface">RequestInterface</abbr></a>, <a href="../../../../Magento/Framework/App/RequestSafetyInterface.html"><abbr title="Magento\Framework\App\RequestSafetyInterface">RequestSafetyInterface</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Http request</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>SCHEME_HTTP</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SCHEME_HTTPS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_OFFLOADER_HEADER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_HTTP_PORT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_HTTPS_PORT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Magento/Framework/Stdlib/Cookie/CookieReaderInterface.html"><abbr title="Magento\Framework\Stdlib\Cookie\CookieReaderInterface">CookieReaderInterface</abbr></a> $cookieReader, <a href="../../../../Magento/Framework/Stdlib/StringUtils.html"><abbr title="Magento\Framework\Stdlib\StringUtils">StringUtils</abbr></a> $converter, <a href="../../../../Magento/Framework/App/Route/ConfigInterface/Proxy.html"><abbr title="Magento\Framework\App\Route\ConfigInterface\Proxy">Proxy</abbr></a> $routeConfig, <a href="../../../../Magento/Framework/App/Request/PathInfoProcessorInterface.html"><abbr title="Magento\Framework\App\Request\PathInfoProcessorInterface">PathInfoProcessorInterface</abbr></a> $pathInfoProcessor, <a href="../../../../Magento/Framework/ObjectManagerInterface.html"><abbr title="Magento\Framework\ObjectManagerInterface">ObjectManagerInterface</abbr></a> $objectManager, <abbr title="Zend\Uri\UriInterface">UriInterface</abbr>|string|null $uri = null, array $directFrontNames = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModuleName">getModuleName</a>()
+        
+                                            <p>Retrieve the module name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getModuleName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setModuleName">setModuleName</a>(string $value)
+        
+                                            <p>Set the module name to use</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setModuleName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getControllerName">getControllerName</a>()
+        
+                                            <p>Retrieve the controller name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getControllerName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setControllerName">setControllerName</a>(string $value)
+        
+                                            <p>Set the controller name to use</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setControllerName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getActionName">getActionName</a>()
+        
+                                            <p>Retrieve the action name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getActionName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setActionName">setActionName</a>(string $value)
+        
+                                            <p>Set the action name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setActionName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPathInfo">getPathInfo</a>()
+        
+                                            <p>Returns everything between the BaseUrl and QueryString.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getPathInfo"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPathInfo">setPathInfo</a>(string|null $pathInfo = null)
+        
+                                            <p>Set the PATH<em>INFO string
+Set the ORIGINAL</em>PATH_INFO string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequestString">getRequestString</a>()
+        
+                                            <p>Get request string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getRequestString"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAlias">getAlias</a>(string $name)
+        
+                                            <p>Retrieve an alias</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getAlias"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAlias">setAlias</a>(string $name, string $target)
+        
+                                            <p>Set a key alias</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setAlias"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParam">getParam</a>(string $key, mixed $default = null)
+        
+                                            <p>Get an action parameter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getParam"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParam">setParam</a>(string $key, mixed $value)
+        
+                                            <p>Set an action parameter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setParam"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParams">getParams</a>()
+        
+                                            <p>Get all action parameters</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getParams"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParams">setParams</a>(array $array)
+        
+                                            <p>Set action parameters en masse; does not overwrite</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setParams"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearParams">clearParams</a>()
+        
+                                            <p>Unset all user parameters</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_clearParams"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getScheme">getScheme</a>()
+        
+                                            <p>Get the request URI scheme</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getScheme"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDispatched">setDispatched</a>(boolean $flag = true)
+        
+                                            <p>Set flag indicating whether or not request has been dispatched</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setDispatched"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDispatched">isDispatched</a>()
+        
+                                            <p>Determine if the request has been dispatched</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_isDispatched"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isSecure">isSecure</a>()
+        
+                                            <p>Is https secure request</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_isSecure"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCookie">getCookie</a>(string|null $name = null, string|null $default = null)
+        
+                                            <p>Retrieve a value from a cookie.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getCookie"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|<abbr title="Zend\Stdlib\ParametersInterface">ParametersInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getServerValue">getServerValue</a>(string $name = null, mixed $default = null)
+        
+                                            <p>Retrieve SERVER parameters</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getServerValue"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|<abbr title="Zend\Stdlib\ParametersInterface">ParametersInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQueryValue">getQueryValue</a>(string $name = null, mixed $default = null)
+        
+                                            <p>Retrieve GET parameters</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getQueryValue"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setQueryValue">setQueryValue</a>(string $name, mixed $value = null)
+        
+                                            <p>Retrieve GET parameters</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setQueryValue"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|<abbr title="Zend\Stdlib\ParametersInterface">ParametersInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPostValue">getPostValue</a>(string $name = null, mixed $default = null)
+        
+                                            <p>Retrieve POST parameters</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getPostValue"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPostValue">setPostValue</a>(string|array $name, mixed $value = null)
+        
+                                            <p>Set POST parameters</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setPostValue"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $key)
+        
+                                            <p>Access values contained in the superglobals as public members
+Order of precedence: 1. GET, 2. POST, 3. COOKIE, 4. SERVER, 5. ENV</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method___get"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string $key)
+        
+                                            <p>Alias to __get</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_get"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___isset">__isset</a>(string $key)
+        
+                                            <p>Check to see if a property is set</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method___isset"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_has">has</a>(string $key)
+        
+                                            <p>Alias to __isset()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_has"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|<abbr title="Zend\Http\Header\HeaderInterface">HeaderInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHeader">getHeader</a>(string $name, mixed|null $default = false)
+        
+                                            <p>Get all headers of a certain name/type.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getHeader"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpHost">getHttpHost</a>(bool $trimPort = true)
+        
+                                            <p>Retrieve HTTP HOST</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getHttpHost"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getClientIp">getClientIp</a>(boolean $checkProxy = true)
+        
+                                            <p>Get the client's IP addres</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getClientIp"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUserParams">getUserParams</a>()
+        
+                                            <p>Retrieve only user params</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getUserParams"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUserParam">getUserParam</a>(string $key, string $default = null)
+        
+                                            <p>Retrieve a single user param</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getUserParam"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRequestUri">setRequestUri</a>(string $requestUri = null)
+        
+                                            <p>Set the REQUEST_URI</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setRequestUri"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseUrl">getBaseUrl</a>()
+        
+                                            <p>Get base url</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getBaseUrl"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isForwarded">isForwarded</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_isForwarded"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setForwarded">setForwarded</a>(bool $forwarded)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setForwarded"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOriginalPathInfo">getOriginalPathInfo</a>()
+        
+                                            <p>Returns ORIGINAL<em>PATH</em>INFO.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDirectAccessFrontendName">isDirectAccessFrontendName</a>(string $code)
+        
+                                            <p>Check if code declared as direct access frontend name
+this mean what this url can be used without store code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBasePath">getBasePath</a>()
+        
+                                            <p>Get base path</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFrontName">getFrontName</a>()
+        
+                                            <p>Retrieve request front name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\App\Request\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRouteName">setRouteName</a>(string $route)
+        
+                                            <p>Set route name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRouteName">getRouteName</a>()
+        
+                                            <p>Retrieve route name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\App\Request\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setControllerModule">setControllerModule</a>(string $module)
+        
+                                            <p>Specify module name where was found currently used controller</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getControllerModule">getControllerModule</a>()
+        
+                                            <p>Get module name of currently used controller</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\App\Request\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initForward">initForward</a>()
+        
+                                            <p>Collect properties changed by _forward in protected storage
+before _forward was called first time.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBeforeForwardInfo">getBeforeForwardInfo</a>(string $name = null)
+        
+                                            <p>Retrieve property's value which was before _forward call.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAjax">isAjax</a>()
+        
+                                            <p>Check is Request from AJAX</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDistroBaseUrl">getDistroBaseUrl</a>()
+        
+                                            <p>Get website instance base url</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDistroBaseUrlPath">getDistroBaseUrlPath</a>(array $server)
+        
+                                            <p>Determines a base URL path from environment</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUrlNoScript">getUrlNoScript</a>(string $url)
+        
+                                            <p>Return url with no script name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFullActionName">getFullActionName</a>(string $delimiter = &#039;_&#039;)
+        
+                                            <p>Retrieve full action name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___sleep">__sleep</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isSafeMethod">isSafeMethod</a>()
+        
+                                            <p>Check that this is safe request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 106</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../Magento/Framework/Stdlib/Cookie/CookieReaderInterface.html"><abbr title="Magento\Framework\Stdlib\Cookie\CookieReaderInterface">CookieReaderInterface</abbr></a> $cookieReader, <a href="../../../../Magento/Framework/Stdlib/StringUtils.html"><abbr title="Magento\Framework\Stdlib\StringUtils">StringUtils</abbr></a> $converter, <a href="../../../../Magento/Framework/App/Route/ConfigInterface/Proxy.html"><abbr title="Magento\Framework\App\Route\ConfigInterface\Proxy">Proxy</abbr></a> $routeConfig, <a href="../../../../Magento/Framework/App/Request/PathInfoProcessorInterface.html"><abbr title="Magento\Framework\App\Request\PathInfoProcessorInterface">PathInfoProcessorInterface</abbr></a> $pathInfoProcessor, <a href="../../../../Magento/Framework/ObjectManagerInterface.html"><abbr title="Magento\Framework\ObjectManagerInterface">ObjectManagerInterface</abbr></a> $objectManager, <abbr title="Zend\Uri\UriInterface">UriInterface</abbr>|string|null $uri = null, array $directFrontNames = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Stdlib/Cookie/CookieReaderInterface.html"><abbr title="Magento\Framework\Stdlib\Cookie\CookieReaderInterface">CookieReaderInterface</abbr></a></td>
+                <td>$cookieReader</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Stdlib/StringUtils.html"><abbr title="Magento\Framework\Stdlib\StringUtils">StringUtils</abbr></a></td>
+                <td>$converter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/Route/ConfigInterface/Proxy.html"><abbr title="Magento\Framework\App\Route\ConfigInterface\Proxy">Proxy</abbr></a></td>
+                <td>$routeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/Request/PathInfoProcessorInterface.html"><abbr title="Magento\Framework\App\Request\PathInfoProcessorInterface">PathInfoProcessorInterface</abbr></a></td>
+                <td>$pathInfoProcessor</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/ObjectManagerInterface.html"><abbr title="Magento\Framework\ObjectManagerInterface">ObjectManagerInterface</abbr></a></td>
+                <td>$objectManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Zend\Uri\UriInterface">UriInterface</abbr>|string|null</td>
+                <td>$uri</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$directFrontNames</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModuleName">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getModuleName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 138</div>
+        <code>                    string
+    <strong>getModuleName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the module name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setModuleName">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setModuleName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 149</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setModuleName</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the module name to use</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getControllerName">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getControllerName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 160</div>
+        <code>                    string
+    <strong>getControllerName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the controller name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setControllerName">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setControllerName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 171</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setControllerName</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the controller name to use</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActionName">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getActionName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 182</div>
+        <code>                    string
+    <strong>getActionName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the action name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setActionName">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setActionName"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 193</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setActionName</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the action name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPathInfo">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getPathInfo"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 206</div>
+        <code>                    string
+    <strong>getPathInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns everything between the BaseUrl and QueryString.</p>                    <p>This value is calculated instead of reading PATH<em>INFO
+directly from $</em>SERVER due to cross-platform differences.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPathInfo">
+        <div class="location">at line         line 144</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setPathInfo</strong>(string|null $pathInfo = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the PATH<em>INFO string
+Set the ORIGINAL</em>PATH_INFO string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$pathInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequestString">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getRequestString"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 252</div>
+        <code>                    string
+    <strong>getRequestString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get request string</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAlias">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getAlias"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 265</div>
+        <code>                    string|null
+    <strong>getAlias</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve an alias</p>                    <p>Retrieve the actual key represented by the alias $name.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Returns null when no alias exists</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAlias">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setAlias"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 283</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setAlias</strong>(string $name, string $target)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a key alias</p>                    <p>Set an alias used for key lookups. $name specifies the alias, $target
+specifies the actual key to use.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParam">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getParam"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 296</div>
+        <code>                    mixed
+    <strong>getParam</strong>(string $key, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an action parameter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td>Default value to use if key not found</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParam">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setParam"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 319</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setParam</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set an action parameter</p>                    <p>A $value of null will unset the $key if it exists</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParams">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getParams"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 336</div>
+        <code>                    array
+    <strong>getParams</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all action parameters</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParams">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setParams"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 356</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setParams</strong>(array $array)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set action parameters en masse; does not overwrite</p>                    <p>Null values will unset the associated key.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$array</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearParams">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_clearParams"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 369</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>clearParams</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unset all user parameters</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getScheme">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getScheme"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 380</div>
+        <code>                    string
+    <strong>getScheme</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the request URI scheme</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDispatched">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setDispatched"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 391</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setDispatched</strong>(boolean $flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set flag indicating whether or not request has been dispatched</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDispatched">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_isDispatched"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 402</div>
+        <code>                    boolean
+    <strong>isDispatched</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if the request has been dispatched</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSecure">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_isSecure"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 412</div>
+        <code>                    bool
+    <strong>isSecure</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is https secure request</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCookie">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getCookie"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 496</div>
+        <code>                    string|null
+    <strong>getCookie</strong>(string|null $name = null, string|null $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve a value from a cookie.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$default</td>
+                <td>The default value to return if no value could be found for the given $name.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getServerValue">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getServerValue"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 508</div>
+        <code>                    mixed|<abbr title="Zend\Stdlib\ParametersInterface">ParametersInterface</abbr>
+    <strong>getServerValue</strong>(string $name = null, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve SERVER parameters</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|<abbr title="Zend\Stdlib\ParametersInterface">ParametersInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueryValue">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getQueryValue"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 524</div>
+        <code>                    mixed|<abbr title="Zend\Stdlib\ParametersInterface">ParametersInterface</abbr>
+    <strong>getQueryValue</strong>(string $name = null, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve GET parameters</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|<abbr title="Zend\Stdlib\ParametersInterface">ParametersInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setQueryValue">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setQueryValue"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 540</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setQueryValue</strong>(string $name, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve GET parameters</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPostValue">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getPostValue"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 559</div>
+        <code>                    mixed|<abbr title="Zend\Stdlib\ParametersInterface">ParametersInterface</abbr>
+    <strong>getPostValue</strong>(string $name = null, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve POST parameters</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|<abbr title="Zend\Stdlib\ParametersInterface">ParametersInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPostValue">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setPostValue"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 576</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setPostValue</strong>(string|array $name, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set POST parameters</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method___get"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 594</div>
+        <code>                    mixed
+    <strong>__get</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Access values contained in the superglobals as public members
+Order of precedence: 1. GET, 2. POST, 3. COOKIE, 4. SERVER, 5. ENV</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://msdn.microsoft.com/en-us/library/system.web.httprequest.item.aspx</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_get"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 632</div>
+        <code>                    mixed
+    <strong>get</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Alias to __get</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method___isset"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 643</div>
+        <code>                    boolean
+    <strong>__isset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check to see if a property is set</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_has">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_has"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 675</div>
+        <code>                    boolean
+    <strong>has</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Alias to __isset()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeader">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getHeader"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 687</div>
+        <code>                    bool|<abbr title="Zend\Http\Header\HeaderInterface">HeaderInterface</abbr>
+    <strong>getHeader</strong>(string $name, mixed|null $default = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all headers of a certain name/type.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Header name to retrieve.</td>
+            </tr>
+                    <tr>
+                <td>mixed|null</td>
+                <td>$default</td>
+                <td>Default value to use when the requested header is missing.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|<abbr title="Zend\Http\Header\HeaderInterface">HeaderInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpHost">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getHttpHost"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 704</div>
+        <code>                    string
+    <strong>getHttpHost</strong>(bool $trimPort = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve HTTP HOST</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$trimPort</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClientIp">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getClientIp"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 724</div>
+        <code>                    string
+    <strong>getClientIp</strong>(boolean $checkProxy = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the client's IP addres</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$checkProxy</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUserParams">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getUserParams"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 741</div>
+        <code>                    array
+    <strong>getUserParams</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve only user params</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUserParam">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getUserParam"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 753</div>
+        <code>                    mixed
+    <strong>getUserParam</strong>(string $key, string $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve a single user param</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td>Default value to use if key not found</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequestUri">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setRequestUri"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 767</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setRequestUri</strong>(string $requestUri = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the REQUEST_URI</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$requestUri</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseUrl">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_getBaseUrl"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 790</div>
+        <code>                    string
+    <strong>getBaseUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get base url</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isForwarded">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_isForwarded"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 801</div>
+        <code>                    bool
+    <strong>isForwarded</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setForwarded">
+        <div class="location">in <a href="../../../../Magento/Framework/HTTP/PhpEnvironment/Request.html#method_setForwarded"><abbr title="Magento\Framework\HTTP\PhpEnvironment\Request">Request</abbr></a> at line         line 811</div>
+        <code>                    <abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr>
+    <strong>setForwarded</strong>(bool $forwarded)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$forwarded</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\HTTP\PhpEnvironment\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOriginalPathInfo">
+        <div class="location">at line         line 129</div>
+        <code>                    string
+    <strong>getOriginalPathInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns ORIGINAL<em>PATH</em>INFO.</p>                    <p>This value is calculated instead of reading PATH<em>INFO
+directly from $</em>SERVER due to cross-platform differences.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDirectAccessFrontendName">
+        <div class="location">at line         line 180</div>
+        <code>                    bool
+    <strong>isDirectAccessFrontendName</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if code declared as direct access frontend name
+this mean what this url can be used without store code</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBasePath">
+        <div class="location">at line         line 190</div>
+        <code>                    string
+    <strong>getBasePath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get base path</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFrontName">
+        <div class="location">at line         line 206</div>
+        <code>                    string|null
+    <strong>getFrontName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve request front name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRouteName">
+        <div class="location">at line         line 218</div>
+        <code>                    <abbr title="Magento\Framework\App\Request\$this">$this</abbr>
+    <strong>setRouteName</strong>(string $route)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set route name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$route</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\App\Request\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRouteName">
+        <div class="location">at line         line 233</div>
+        <code>                    string|null
+    <strong>getRouteName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve route name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setControllerModule">
+        <div class="location">at line         line 244</div>
+        <code>                    <abbr title="Magento\Framework\App\Request\$this">$this</abbr>
+    <strong>setControllerModule</strong>(string $module)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify module name where was found currently used controller</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\App\Request\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getControllerModule">
+        <div class="location">at line         line 255</div>
+        <code>                    string
+    <strong>getControllerModule</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get module name of currently used controller</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initForward">
+        <div class="location">at line         line 266</div>
+        <code>                    <abbr title="Magento\Framework\App\Request\$this">$this</abbr>
+    <strong>initForward</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Collect properties changed by _forward in protected storage
+before _forward was called first time.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\App\Request\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBeforeForwardInfo">
+        <div class="location">at line         line 288</div>
+        <code>                    array|string|null
+    <strong>getBeforeForwardInfo</strong>(string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve property's value which was before _forward call.</p>                    <p>If property was not changed during _forward call null will be returned.
+If passed name will be null whole state array will be returned.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAjax">
+        <div class="location">at line         line 303</div>
+        <code>                    boolean
+    <strong>isAjax</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check is Request from AJAX</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDistroBaseUrl">
+        <div class="location">at line         line 321</div>
+        <code>                    string
+    <strong>getDistroBaseUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get website instance base url</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDistroBaseUrlPath">
+        <div class="location">at line         line 354</div>
+        <code>        static            string
+    <strong>getDistroBaseUrlPath</strong>(array $server)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determines a base URL path from environment</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$server</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrlNoScript">
+        <div class="location">at line         line 375</div>
+        <code>        static            string
+    <strong>getUrlNoScript</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return url with no script name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFullActionName">
+        <div class="location">at line         line 394</div>
+        <code>                    string
+    <strong>getFullActionName</strong>(string $delimiter = &#039;_&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve full action name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$delimiter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___sleep">
+        <div class="location">at line         line 406</div>
+        <code>                    array
+    <strong>__sleep</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSafeMethod">
+        <div class="location">at line         line 416</div>
+        <code>                    bool
+    <strong>isSafeMethod</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check that this is safe request</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

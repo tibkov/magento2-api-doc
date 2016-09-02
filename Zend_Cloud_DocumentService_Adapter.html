@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Cloud_DocumentService_Adapter | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Cloud_DocumentService_Adapter" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Cloud_DocumentService_Adapter
+                
+        </h1>
+    </div>
+
+    <p>    interface
+    <strong>Zend_Cloud_DocumentService_Adapter</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Common interface for document storage services in the cloud. This interface
+supports most document services and provides some flexibility for
+vendor-specific features and requirements via an optional $options array in
+each method signature. Classes implementing this interface should implement
+URI construction for collections and documents from the parameters given in each
+method and the account data passed in to the constructor. Classes
+implementing this interface are also responsible for security; access control
+isn't currently supported in this interface, although we are considering
+access control support in future versions of the interface.</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>HTTP_ADAPTER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createCollection">createCollection</a>(string $name, array $options = null)
+        
+                                            <p>Create collection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteCollection">deleteCollection</a>(string $name, array $options = null)
+        
+                                            <p>Delete collection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listCollections">listCollections</a>(array $options = null)
+        
+                                            <p>List collections.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Cloud_DocumentService_DocumentSet.html">Zend_Cloud_DocumentService_DocumentSet</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listDocuments">listDocuments</a>(string $collectionName, array $options = null)
+        
+                                            <p>List all documents in a collection</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insertDocument">insertDocument</a>(string $collectionName, <a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a> $document, array $options = null)
+        
+                                            <p>Insert document</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_replaceDocument">replaceDocument</a>(string $collectionName, <a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a> $document, array $options = null)
+        
+                                            <p>Replace document
+The new document replaces the existing document with the same ID.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateDocument">updateDocument</a>(string $collectionName, mixed|<a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a> $documentID, array|<a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a> $fieldset = null, array $options = null)
+        
+                                            <p>Update document
+The fields of the existing documents will be updated.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteDocument">deleteDocument</a>(string $collectionName, mixed $documentID, array $options = null)
+        
+                                            <p>Delete document</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetchDocument">fetchDocument</a>(string $collectionName, mixed $documentID, array $options = null)
+        
+                                            <p>Fetch single document by ID</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_query">query</a>(string $collectionName, string $query, array $options = null)
+        
+                                            <p>Query for documents stored in the document service. If a string is passed in
+$query, the query string will be passed directly to the service.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Cloud_DocumentService_Query.html">Zend_Cloud_DocumentService_Query</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_select">select</a>(string $fields = null)
+        
+                                            <p>Create query statement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getClient">getClient</a>()
+        
+                                            <p>Get the concrete service client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_createCollection">
+        <div class="location">at line         line 49</div>
+        <code>                    array
+    <strong>createCollection</strong>(string $name, array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create collection.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteCollection">
+        <div class="location">at line         line 58</div>
+        <code>                    void
+    <strong>deleteCollection</strong>(string $name, array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete collection.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listCollections">
+        <div class="location">at line         line 66</div>
+        <code>                    array
+    <strong>listCollections</strong>(array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List collections.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>List of collection names</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listDocuments">
+        <div class="location">at line         line 75</div>
+        <code>                    <a href="Zend_Cloud_DocumentService_DocumentSet.html">Zend_Cloud_DocumentService_DocumentSet</a>
+    <strong>listDocuments</strong>(string $collectionName, array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all documents in a collection</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$collectionName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Cloud_DocumentService_DocumentSet.html">Zend_Cloud_DocumentService_DocumentSet</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insertDocument">
+        <div class="location">at line         line 85</div>
+        <code>                    boolean
+    <strong>insertDocument</strong>(string $collectionName, <a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a> $document, array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Insert document</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$collectionName</td>
+                <td>Collection name</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a></td>
+                <td>$document</td>
+                <td>Document to insert</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replaceDocument">
+        <div class="location">at line         line 95</div>
+        <code>                    
+    <strong>replaceDocument</strong>(string $collectionName, <a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a> $document, array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Replace document
+The new document replaces the existing document with the same ID.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$collectionName</td>
+                <td>Collection name</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a></td>
+                <td>$document</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateDocument">
+        <div class="location">at line         line 108</div>
+        <code>                    boolean
+    <strong>updateDocument</strong>(string $collectionName, mixed|<a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a> $documentID, array|<a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a> $fieldset = null, array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update document
+The fields of the existing documents will be updated.</p>                    <p>Fields not specified in the set will be left as-is.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$collectionName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed|<a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a></td>
+                <td>$documentID</td>
+                <td>Document ID, adapter-dependent, or document containing updates</td>
+            </tr>
+                    <tr>
+                <td>array|<a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a></td>
+                <td>$fieldset</td>
+                <td>Set of fields to update</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteDocument">
+        <div class="location">at line         line 118</div>
+        <code>                    void
+    <strong>deleteDocument</strong>(string $collectionName, mixed $documentID, array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete document</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$collectionName</td>
+                <td>Collection name</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$documentID</td>
+                <td>Document ID, adapter-dependent</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchDocument">
+        <div class="location">at line         line 130</div>
+        <code>                    <a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a>
+    <strong>fetchDocument</strong>(string $collectionName, mixed $documentID, array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fetch single document by ID</p>                    <p>Will return false if the document does not exist</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$collectionName</td>
+                <td>Collection name</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$documentID</td>
+                <td>Document ID, adapter-dependent</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Cloud_DocumentService_Document.html">Zend_Cloud_DocumentService_Document</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_query">
+        <div class="location">at line         line 141</div>
+        <code>                    array
+    <strong>query</strong>(string $collectionName, string $query, array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Query for documents stored in the document service. If a string is passed in
+$query, the query string will be passed directly to the service.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$collectionName</td>
+                <td>Collection name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Array of field sets</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_select">
+        <div class="location">at line         line 149</div>
+        <code>                    <a href="Zend_Cloud_DocumentService_Query.html">Zend_Cloud_DocumentService_Query</a>
+    <strong>select</strong>(string $fields = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create query statement</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fields</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Cloud_DocumentService_Query.html">Zend_Cloud_DocumentService_Query</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClient">
+        <div class="location">at line         line 154</div>
+        <code>                    
+    <strong>getClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the concrete service client</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

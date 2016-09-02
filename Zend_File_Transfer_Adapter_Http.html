@@ -1,0 +1,2815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_File_Transfer_Adapter_Http | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_File_Transfer_Adapter_Http" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_File_Transfer_Adapter_Http
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_File_Transfer_Adapter_Http</strong>        extends <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>File transfer adapter class for the HTTP protocol</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>FILTER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VALIDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>(mixed $options = null)
+        
+                                            <p>Send the file to the client (Download)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_receive">receive</a>(string|array $files = null)
+        
+                                            <p>Receive the file from the client (Upload)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isSent">isSent</a>(array|string|null $files = null)
+        
+                                            <p>Checks if the file was already sent</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isReceived">isReceived</a>(array|string|null $files = null)
+        
+                                            <p>Checks if the file was already received</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isUploaded">isUploaded</a>(array|string|null $files = null)
+        
+                                            <p>Has a file been uploaded ?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isFiltered">isFiltered</a>(array|string|null $files = null)
+        
+                                            <p>Checks if the file was already filtered</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProgress">getProgress</a>(string $id = null)
+        
+                                            <p>Returns the actual progress of file up-/downloads</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPluginLoader">setPluginLoader</a>(<a href="Zend_Loader_PluginLoader_Interface.html">Zend_Loader_PluginLoader_Interface</a> $loader, string $type)
+        
+                                            <p>Set plugin loader to use for validator or filter chain</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_setPluginLoader">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPluginLoader">getPluginLoader</a>(string $type)
+        
+                                            <p>Retrieve plugin loader for validator or filter chain</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getPluginLoader">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPrefixPath">addPrefixPath</a>(string $prefix, string $path, string $type = null)
+        
+                                            <p>Add prefix path for plugin loader</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_addPrefixPath">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPrefixPaths">addPrefixPaths</a>(array $spec)
+        
+                                            <p>Add many prefix paths at once</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_addPrefixPaths">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Zend_File_Transfer_Adapter
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addValidator">addValidator</a>(string|array $validator, boolean $breakChainOnFailure = false, string|array $options = null, string|array $files = null)
+        
+                                            <p>Adds a new validator for this class</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_addValidator">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addValidators">addValidators</a>(array $validators, string|array $files = null)
+        
+                                            <p>Add Multiple validators at once</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_addValidators">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Zend_File_Transfer_Adapter
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setValidators">setValidators</a>(array $validators, $files = null)
+        
+                                            <p>Sets a validator for the class, erasing all previous set</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasValidator">hasValidator</a>(string $name)
+        
+                                            <p>Determine if a given validator has already been registered</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_hasValidator">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Validate_Interface.html">Zend_Validate_Interface</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getValidator">getValidator</a>(string $name)
+        
+                                            <p>Retrieve individual validator</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getValidator">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getValidators">getValidators</a>(string|array $files = null)
+        
+                                            <p>Returns all set validators</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getValidators">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeValidator">removeValidator</a>(string $name)
+        
+                                            <p>Remove an individual validator</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearValidators">clearValidators</a>()
+        
+                                            <p>Remove an individual validator</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOptions">setOptions</a>(array $options = array(), array $files = null)
+        
+                                            <p>Sets Options for adapters</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_setOptions">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOptions">getOptions</a>(array $files = null)
+        
+                                            <p>Returns set options for adapters or files</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getOptions">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isValid">isValid</a>(string|array $files = null)
+        
+                                            <p>Checks if the files are valid</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMessages">getMessages</a>()
+        
+                                            <p>Returns found validation messages</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getMessages">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getErrors">getErrors</a>()
+        
+                                            <p>Retrieve error codes</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getErrors">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasErrors">hasErrors</a>()
+        
+                                            <p>Are there errors registered?</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_hasErrors">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Zend_File_Transfer_Adapter
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFilter">addFilter</a>(string|array $filter, string|array $options = null, string|array $files = null)
+        
+                                            <p>Adds a new filter for this class</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_addFilter">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFilters">addFilters</a>(array $filters, string|array $files = null)
+        
+                                            <p>Add Multiple filters at once</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_addFilters">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Zend_File_Transfer_Adapter
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFilters">setFilters</a>(array $filters, $files = null)
+        
+                                            <p>Sets a filter for the class, erasing all previous set</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_setFilters">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasFilter">hasFilter</a>(string $name)
+        
+                                            <p>Determine if a given filter has already been registered</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_hasFilter">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Filter_Interface.html">Zend_Filter_Interface</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilter">getFilter</a>(string $name)
+        
+                                            <p>Retrieve individual filter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFilter">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilters">getFilters</a>(string|array $files = null)
+        
+                                            <p>Returns all set filters</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFilters">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeFilter">removeFilter</a>(string $name)
+        
+                                            <p>Remove an individual filter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_removeFilter">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearFilters">clearFilters</a>()
+        
+                                            <p>Remove all filters</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_clearFilters">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFile">getFile</a>()
+        
+                                            <p>Returns all set files</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFile">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFileName">getFileName</a>(string|null $file = null, boolean $path = true)
+        
+                                            <p>Retrieves the filename of transferred files.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFileName">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFileInfo">getFileInfo</a>(string $file = null)
+        
+                                            <p>Retrieve additional internal file informations for files</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFileInfo">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFile">addFile</a>(string|array $file, string|array $validator = null, string|array $filter = null)
+        
+                                            <p>Adds one or more files</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_addFile">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getType">getType</a>()
+        
+                                            <p>Returns all set types</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getType">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addType">addType</a>(string|array $type, string|array $validator = null, string|array $filter = null)
+        
+                                            <p>Adds one or more type of files</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_addType">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Zend_File_Transfer_Abstract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDestination">setDestination</a>(string $destination, string|array $files = null)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Sets a new destination for the given files</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_setDestination">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null|string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDestination">getDestination</a>(null|string|array $files = null)
+        
+                                            <p>Retrieve destination directory value</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getDestination">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Zend_File_Transfer_Abstract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTranslator">setTranslator</a>(<a href="Zend_Translate.html">Zend_Translate</a>|null $translator = null)
+        
+                                            <p>Set translator object for localization</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_setTranslator">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Translate_Adapter.html">Zend_Translate_Adapter</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTranslator">getTranslator</a>()
+        
+                                            <p>Retrieve localization translator object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getTranslator">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Zend_File_Transfer_Abstract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDisableTranslator">setDisableTranslator</a>(bool $flag)
+        
+                                            <p>Indicate whether or not translation should be disabled</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_setDisableTranslator">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_translatorIsDisabled">translatorIsDisabled</a>()
+        
+                                            <p>Is translation disabled?</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_translatorIsDisabled">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHash">getHash</a>(string $hash = &#039;crc32&#039;, string|array $files = null)
+        
+                                            <p>Returns the hash for a given file</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getHash">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFileSize">getFileSize</a>(string|array $files = null)
+        
+                                            <p>Returns the real filesize of the file</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFileSize">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMimeType">getMimeType</a>(string|array $files = null)
+        
+                                            <p>Returns the real mimetype of the file
+Uses fileinfo, when not available mime_magic and as last fallback a manual given mimetype</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_File_Transfer_Adapter_Abstract.html#method_getMimeType">Zend_File_Transfer_Adapter_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $options = array())
+        
+                                            <p>Constructor for Http File Transfers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isApcAvailable">isApcAvailable</a>()
+        
+                                            <p>Checks the APC extension for progress information</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isUploadProgressAvailable">isUploadProgressAvailable</a>()
+        
+                                            <p>Checks the UploadProgress extension for progress information</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">at line         line 106</div>
+        <code>                    bool
+    <strong>send</strong>(mixed $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send the file to the client (Download)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>Not implemented</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_receive">
+        <div class="location">at line         line 157</div>
+        <code>                    bool
+    <strong>receive</strong>(string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Receive the file from the client (Upload)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td>(Optional) Files to receive</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSent">
+        <div class="location">at line         line 229</div>
+        <code>                    bool
+    <strong>isSent</strong>(array|string|null $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if the file was already sent</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|null</td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>Not implemented</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isReceived">
+        <div class="location">at line         line 241</div>
+        <code>                    bool
+    <strong>isReceived</strong>(array|string|null $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if the file was already received</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|null</td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isUploaded">
+        <div class="location">at line         line 285</div>
+        <code>                    bool
+    <strong>isUploaded</strong>(array|string|null $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Has a file been uploaded ?</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|null</td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isFiltered">
+        <div class="location">at line         line 263</div>
+        <code>                    bool
+    <strong>isFiltered</strong>(array|string|null $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if the file was already filtered</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|null</td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProgress">
+        <div class="location">at line         line 307</div>
+        <code>        static            float
+    <strong>getProgress</strong>(string $id = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the actual progress of file up-/downloads</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>The upload to get the progress for</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPluginLoader">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_setPluginLoader">Zend_File_Transfer_Adapter_Abstract</a> at line         line 186</div>
+        <code>                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+    <strong>setPluginLoader</strong>(<a href="Zend_Loader_PluginLoader_Interface.html">Zend_Loader_PluginLoader_Interface</a> $loader, string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set plugin loader to use for validator or filter chain</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Loader_PluginLoader_Interface.html">Zend_Loader_PluginLoader_Interface</a></td>
+                <td>$loader</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>'filter', or 'validate'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>on invalid type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPluginLoader">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getPluginLoader">Zend_File_Transfer_Adapter_Abstract</a> at line         line 210</div>
+        <code>                    <a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a>
+    <strong>getPluginLoader</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve plugin loader for validator or filter chain</p>                    <p>Instantiates with default rules if none available for that type. Use
+'filter' or 'validate' for $type.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>on invalid type.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPrefixPath">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_addPrefixPath">Zend_File_Transfer_Adapter_Abstract</a> at line         line 256</div>
+        <code>                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+    <strong>addPrefixPath</strong>(string $prefix, string $path, string $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add prefix path for plugin loader</p>                    <p>If no $type specified, assumes it is a base path for both filters and
+validators, and sets each according to the following rules:
+- filters:    $prefix = $prefix . '<em>Filter'
+- validators: $prefix = $prefix . '</em>Validate'</p>
+
+<p>Otherwise, the path prefix is set on the appropriate plugin loader.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>for invalid type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPrefixPaths">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_addPrefixPaths">Zend_File_Transfer_Adapter_Abstract</a> at line         line 288</div>
+        <code>                    <a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a>
+    <strong>addPrefixPaths</strong>(array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add many prefix paths at once</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addValidator">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_addValidator">Zend_File_Transfer_Adapter_Abstract</a> at line         line 333</div>
+        <code>                    Zend_File_Transfer_Adapter
+    <strong>addValidator</strong>(string|array $validator, boolean $breakChainOnFailure = false, string|array $options = null, string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a new validator for this class</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$validator</td>
+                <td>Type of validator to add</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$breakChainOnFailure</td>
+                <td>If the validation chain should stop an failure</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$options</td>
+                <td>Options to set for the validator</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td>Files to limit this validator to</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Zend_File_Transfer_Adapter</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addValidators">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_addValidators">Zend_File_Transfer_Adapter_Abstract</a> at line         line 379</div>
+        <code>                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+    <strong>addValidators</strong>(array $validators, string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add Multiple validators at once</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$validators</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setValidators">
+        <div class="location">at line         line 64</div>
+        <code>                    Zend_File_Transfer_Adapter
+    <strong>setValidators</strong>(array $validators, $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets a validator for the class, erasing all previous set</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$validators</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Zend_File_Transfer_Adapter</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasValidator">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_hasValidator">Zend_File_Transfer_Adapter_Abstract</a> at line         line 459</div>
+        <code>                    bool
+    <strong>hasValidator</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if a given validator has already been registered</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getValidator">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getValidator">Zend_File_Transfer_Adapter_Abstract</a> at line         line 470</div>
+        <code>                    <a href="Zend_Validate_Interface.html">Zend_Validate_Interface</a>|null
+    <strong>getValidator</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve individual validator</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Validate_Interface.html">Zend_Validate_Interface</a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getValidators">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getValidators">Zend_File_Transfer_Adapter_Abstract</a> at line         line 484</div>
+        <code>                    null|array
+    <strong>getValidators</strong>(string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns all set validators</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td>(Optional) Returns the validator for this files</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|array</td>
+            <td>List of set validators</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeValidator">
+        <div class="location">at line         line 76</div>
+        <code>                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+    <strong>removeValidator</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove an individual validator</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearValidators">
+        <div class="location">at line         line 91</div>
+        <code>                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+    <strong>clearValidators</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove an individual validator</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOptions">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_setOptions">Zend_File_Transfer_Adapter_Abstract</a> at line         line 560</div>
+        <code>                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+    <strong>setOptions</strong>(array $options = array(), array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets Options for adapters</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options to set</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$files</td>
+                <td>(Optional) Files to set the options for</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getOptions">Zend_File_Transfer_Adapter_Abstract</a> at line         line 598</div>
+        <code>                    array
+    <strong>getOptions</strong>(array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns set options for adapters or files</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$files</td>
+                <td>(Optional) Files to return the options for</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Options for given files</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isValid">
+        <div class="location">at line         line 118</div>
+        <code>                    boolean
+    <strong>isValid</strong>(string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if the files are valid</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td>(Optional) Files to check</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>True if all checks are valid</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMessages">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getMessages">Zend_File_Transfer_Adapter_Abstract</a> at line         line 717</div>
+        <code>                    array
+    <strong>getMessages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns found validation messages</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getErrors">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getErrors">Zend_File_Transfer_Adapter_Abstract</a> at line         line 727</div>
+        <code>                    array
+    <strong>getErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve error codes</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasErrors">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_hasErrors">Zend_File_Transfer_Adapter_Abstract</a> at line         line 737</div>
+        <code>                    boolean
+    <strong>hasErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Are there errors registered?</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFilter">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_addFilter">Zend_File_Transfer_Adapter_Abstract</a> at line         line 750</div>
+        <code>                    Zend_File_Transfer_Adapter
+    <strong>addFilter</strong>(string|array $filter, string|array $options = null, string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a new filter for this class</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$filter</td>
+                <td>Type of filter to add</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$options</td>
+                <td>Options to set for the filter</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td>Files to limit this filter to</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Zend_File_Transfer_Adapter</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFilters">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_addFilters">Zend_File_Transfer_Adapter_Abstract</a> at line         line 778</div>
+        <code>                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+    <strong>addFilters</strong>(array $filters, string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add Multiple filters at once</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$filters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFilters">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_setFilters">Zend_File_Transfer_Adapter_Abstract</a> at line         line 822</div>
+        <code>                    Zend_File_Transfer_Adapter
+    <strong>setFilters</strong>(array $filters, $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets a filter for the class, erasing all previous set</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$filters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Zend_File_Transfer_Adapter</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasFilter">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_hasFilter">Zend_File_Transfer_Adapter_Abstract</a> at line         line 834</div>
+        <code>                    bool
+    <strong>hasFilter</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if a given filter has already been registered</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilter">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFilter">Zend_File_Transfer_Adapter_Abstract</a> at line         line 845</div>
+        <code>                    <a href="Zend_Filter_Interface.html">Zend_Filter_Interface</a>|null
+    <strong>getFilter</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve individual filter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Filter_Interface.html">Zend_Filter_Interface</a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilters">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFilters">Zend_File_Transfer_Adapter_Abstract</a> at line         line 860</div>
+        <code>                    array
+    <strong>getFilters</strong>(string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns all set filters</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td>(Optional) Returns the filter for this files</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>List of set filters</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>When file not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeFilter">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_removeFilter">Zend_File_Transfer_Adapter_Abstract</a> at line         line 889</div>
+        <code>                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+    <strong>removeFilter</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove an individual filter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearFilters">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_clearFilters">Zend_File_Transfer_Adapter_Abstract</a> at line         line 916</div>
+        <code>                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+    <strong>clearFilters</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove all filters</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFile">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFile">Zend_File_Transfer_Adapter_Abstract</a> at line         line 931</div>
+        <code>                    array
+    <strong>getFile</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns all set files</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>List of set files</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>Not implemented</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFileName">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFileName">Zend_File_Transfer_Adapter_Abstract</a> at line         line 944</div>
+        <code>                    string|array
+    <strong>getFileName</strong>(string|null $file = null, boolean $path = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieves the filename of transferred files.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$path</td>
+                <td>(Optional) Should the path also be returned ?</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFileInfo">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFileInfo">Zend_File_Transfer_Adapter_Abstract</a> at line         line 974</div>
+        <code>                    array
+    <strong>getFileInfo</strong>(string $file = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve additional internal file informations for files</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>(Optional) File to get informations for</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFile">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_addFile">Zend_File_Transfer_Adapter_Abstract</a> at line         line 988</div>
+        <code>                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+    <strong>addFile</strong>(string|array $file, string|array $validator = null, string|array $filter = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds one or more files</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$file</td>
+                <td>File to add</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$validator</td>
+                <td>Validators to use for this file, must be set before</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$filter</td>
+                <td>Filters to use for this file, must be set before</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>Not implemented</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getType">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getType">Zend_File_Transfer_Adapter_Abstract</a> at line         line 1000</div>
+        <code>                    array
+    <strong>getType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns all set types</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>List of set types</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>Not implemented</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addType">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_addType">Zend_File_Transfer_Adapter_Abstract</a> at line         line 1015</div>
+        <code>                    <a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a>
+    <strong>addType</strong>(string|array $type, string|array $validator = null, string|array $filter = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds one or more type of files</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$type</td>
+                <td>Type of files to add</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$validator</td>
+                <td>Validators to use for this file, must be set before</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$filter</td>
+                <td>Filters to use for this file, must be set before</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_File_Transfer_Adapter_Abstract.html">Zend_File_Transfer_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>Not implemented</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDestination">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_setDestination">Zend_File_Transfer_Adapter_Abstract</a> at line         line 1030</div>
+        <code>                    Zend_File_Transfer_Abstract
+    <strong>setDestination</strong>(string $destination, string|array $files = null)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>Will</td>
+                    <td>be changed to be a filter!!!</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Sets a new destination for the given files</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$destination</td>
+                <td>New destination directory</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td>Files to set the new destination for</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Zend_File_Transfer_Abstract</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>when the given destination is not a directory or does not exist</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDestination">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getDestination">Zend_File_Transfer_Adapter_Abstract</a> at line         line 1073</div>
+        <code>                    null|string|array
+    <strong>getDestination</strong>(null|string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve destination directory value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|string|array</td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|string|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTranslator">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_setTranslator">Zend_File_Transfer_Adapter_Abstract</a> at line         line 1113</div>
+        <code>                    Zend_File_Transfer_Abstract
+    <strong>setTranslator</strong>(<a href="Zend_Translate.html">Zend_Translate</a>|null $translator = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set translator object for localization</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Translate.html">Zend_Translate</a>|null</td>
+                <td>$translator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Zend_File_Transfer_Abstract</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTranslator">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getTranslator">Zend_File_Transfer_Adapter_Abstract</a> at line         line 1134</div>
+        <code>                    <a href="Zend_Translate_Adapter.html">Zend_Translate_Adapter</a>|null
+    <strong>getTranslator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve localization translator object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Translate_Adapter.html">Zend_Translate_Adapter</a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDisableTranslator">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_setDisableTranslator">Zend_File_Transfer_Adapter_Abstract</a> at line         line 1149</div>
+        <code>                    Zend_File_Transfer_Abstract
+    <strong>setDisableTranslator</strong>(bool $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate whether or not translation should be disabled</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Zend_File_Transfer_Abstract</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translatorIsDisabled">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_translatorIsDisabled">Zend_File_Transfer_Adapter_Abstract</a> at line         line 1160</div>
+        <code>                    bool
+    <strong>translatorIsDisabled</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is translation disabled?</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHash">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getHash">Zend_File_Transfer_Adapter_Abstract</a> at line         line 1173</div>
+        <code>                    string|array
+    <strong>getHash</strong>(string $hash = &#039;crc32&#039;, string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the hash for a given file</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$hash</td>
+                <td>Hash algorithm to use</td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td>Files to return the hash for</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td>Hashstring</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>On unknown hash algorithm</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFileSize">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getFileSize">Zend_File_Transfer_Adapter_Abstract</a> at line         line 1207</div>
+        <code>                    string|array
+    <strong>getFileSize</strong>(string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the real filesize of the file</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td>Files to get the filesize from</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td>Filesize</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>When the file does not exist</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMimeType">
+        <div class="location">in <a href="Zend_File_Transfer_Adapter_Abstract.html#method_getMimeType">Zend_File_Transfer_Adapter_Abstract</a> at line         line 1260</div>
+        <code>                    string|array
+    <strong>getMimeType</strong>(string|array $files = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the real mimetype of the file
+Uses fileinfo, when not available mime_magic and as last fallback a manual given mimetype</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$files</td>
+                <td>Files to get the mimetype from</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td>MimeType</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_File_Transfer_Exception.html">Zend_File_Transfer_Exception</a></td>
+                <td>When the file does not exist</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 45</div>
+        <code>                    
+    <strong>__construct</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor for Http File Transfers</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>OPTIONAL Options to set</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isApcAvailable">
+        <div class="location">at line         line 414</div>
+        <code>        static            boolean
+    <strong>isApcAvailable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks the APC extension for progress information</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isUploadProgressAvailable">
+        <div class="location">at line         line 424</div>
+        <code>        static            boolean
+    <strong>isUploadProgressAvailable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks the UploadProgress extension for progress information</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

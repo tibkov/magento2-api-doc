@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Paypal\Model\Cart | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Paypal_Model_Cart" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Paypal.html">Paypal</a></li>
+                                        <li><a href="../../../Magento/Paypal/Model.html">Model</a></li>
+    
+                <li>Cart</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Cart
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Cart</strong>        extends <a href="../../../Magento/Payment/Model/Cart.html"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>PayPal-specific model for shopping cart items and totals
+The main idea is to accommodate all possible totals into PayPal-compatible 4 totals and line items</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>AMOUNT_TAX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AMOUNT_SHIPPING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AMOUNT_DISCOUNT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AMOUNT_SUBTOTAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Payment/Model/Cart/SalesModel/Factory.html"><abbr title="Magento\Payment\Model\Cart\SalesModel\Factory">Factory</abbr></a> $salesModelFactory, <a href="../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../Magento/Quote/Api/Data/CartInterface.html"><abbr title="Magento\Quote\Api\Data\CartInterface">CartInterface</abbr></a> $salesModel)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method___construct"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Payment/Model/Cart/SalesModel/SalesModelInterface.html"><abbr title="Magento\Payment\Model\Cart\SalesModel\SalesModelInterface">SalesModelInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSalesModel">getSalesModel</a>()
+        
+                                            <p>Return payment cart sales model</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_getSalesModel"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addTax">addTax</a>(float $taxAmount)
+        
+                                            <p>Add amount to existing tax amount</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_addTax"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTax">setTax</a>(float $taxAmount)
+        
+                                            <p>Set tax. Old value will be overwritten</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_setTax"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTax">getTax</a>()
+        
+                                            <p>Get tax amount</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_getTax"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addDiscount">addDiscount</a>(float $discountAmount)
+        
+                                            <p>Add amount to existing discount amount</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_addDiscount"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDiscount">setDiscount</a>(float $discountAmount)
+        
+                                            <p>Set discount. Old value will be overwritten</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_setDiscount"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDiscount">getDiscount</a>()
+        
+                                            <p>Get discount amount</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_getDiscount"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addShipping">addShipping</a>(float $shippingAmount)
+        
+                                            <p>Add amount to existing shipping amount</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_addShipping"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setShipping">setShipping</a>(float $shippingAmount)
+        
+                                            <p>Set shipping. Old value will be overwritten</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_setShipping"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShipping">getShipping</a>()
+        
+                                            <p>Get shipping amount</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_getShipping"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addSubtotal">addSubtotal</a>(float $subtotalAmount)
+        
+                                            <p>Add amount to existing subtotal amount</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_addSubtotal"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSubtotal">getSubtotal</a>()
+        
+                                            <p>Get subtotal amount</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_getSubtotal"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addCustomItem">addCustomItem</a>(string $name, int $qty, float $amount, string|null $identifier = null)
+        
+                                            <p>Add custom item (such as discount as line item, shipping as line item, etc)</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_addCustomItem"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAllItems">getAllItems</a>()
+        
+                                            <p>Get all cart items</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_getAllItems"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAmounts">getAmounts</a>()
+        
+                                            <p>Get shipping, tax, subtotal and discount amounts all together</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTransferShippingAsItem">setTransferShippingAsItem</a>()
+        
+                                            <p>Specify that shipping should be transferred as cart item</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_setTransferShippingAsItem"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTransferDiscountAsItem">setTransferDiscountAsItem</a>()
+        
+                                            <p>Specify that discount should be transferred as cart item</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Model/Cart.html#method_setTransferDiscountAsItem"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasNegativeItemAmount">hasNegativeItemAmount</a>()
+        
+                                            <p>Check whether any item has negative amount</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method___construct"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 80</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Payment/Model/Cart/SalesModel/Factory.html"><abbr title="Magento\Payment\Model\Cart\SalesModel\Factory">Factory</abbr></a> $salesModelFactory, <a href="../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../Magento/Quote/Api/Data/CartInterface.html"><abbr title="Magento\Quote\Api\Data\CartInterface">CartInterface</abbr></a> $salesModel)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Payment/Model/Cart/SalesModel/Factory.html"><abbr title="Magento\Payment\Model\Cart\SalesModel\Factory">Factory</abbr></a></td>
+                <td>$salesModelFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a></td>
+                <td>$eventManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Quote/Api/Data/CartInterface.html"><abbr title="Magento\Quote\Api\Data\CartInterface">CartInterface</abbr></a></td>
+                <td>$salesModel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSalesModel">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_getSalesModel"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 96</div>
+        <code>                    <a href="../../../Magento/Payment/Model/Cart/SalesModel/SalesModelInterface.html"><abbr title="Magento\Payment\Model\Cart\SalesModel\SalesModelInterface">SalesModelInterface</abbr></a>
+    <strong>getSalesModel</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return payment cart sales model</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Payment/Model/Cart/SalesModel/SalesModelInterface.html"><abbr title="Magento\Payment\Model\Cart\SalesModel\SalesModelInterface">SalesModelInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addTax">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_addTax"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 108</div>
+        <code>                    void
+    <strong>addTax</strong>(float $taxAmount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add amount to existing tax amount</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$taxAmount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTax">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_setTax"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 120</div>
+        <code>                    void
+    <strong>setTax</strong>(float $taxAmount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set tax. Old value will be overwritten</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$taxAmount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTax">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_getTax"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 131</div>
+        <code>                    float
+    <strong>getTax</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get tax amount</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addDiscount">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_addDiscount"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 143</div>
+        <code>                    void
+    <strong>addDiscount</strong>(float $discountAmount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add amount to existing discount amount</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$discountAmount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDiscount">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_setDiscount"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 155</div>
+        <code>                    void
+    <strong>setDiscount</strong>(float $discountAmount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set discount. Old value will be overwritten</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$discountAmount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDiscount">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_getDiscount"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 166</div>
+        <code>                    float
+    <strong>getDiscount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get discount amount</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addShipping">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_addShipping"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 178</div>
+        <code>                    void
+    <strong>addShipping</strong>(float $shippingAmount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add amount to existing shipping amount</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$shippingAmount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setShipping">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_setShipping"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 190</div>
+        <code>                    void
+    <strong>setShipping</strong>(float $shippingAmount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set shipping. Old value will be overwritten</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$shippingAmount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShipping">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_getShipping"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 201</div>
+        <code>                    float
+    <strong>getShipping</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get shipping amount</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addSubtotal">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_addSubtotal"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 213</div>
+        <code>                    void
+    <strong>addSubtotal</strong>(float $subtotalAmount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add amount to existing subtotal amount</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$subtotalAmount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSubtotal">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_getSubtotal"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 224</div>
+        <code>                    float
+    <strong>getSubtotal</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get subtotal amount</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCustomItem">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_addCustomItem"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 239</div>
+        <code>                    void
+    <strong>addCustomItem</strong>(string $name, int $qty, float $amount, string|null $identifier = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add custom item (such as discount as line item, shipping as line item, etc)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$qty</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$amount</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllItems">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_getAllItems"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 250</div>
+        <code>                    array
+    <strong>getAllItems</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all cart items</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAmounts">
+        <div class="location">at line         line 24</div>
+        <code>                    array
+    <strong>getAmounts</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get shipping, tax, subtotal and discount amounts all together</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTransferShippingAsItem">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_setTransferShippingAsItem"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 275</div>
+        <code>                    void
+    <strong>setTransferShippingAsItem</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify that shipping should be transferred as cart item</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTransferDiscountAsItem">
+        <div class="location">in <a href="../../../Magento/Payment/Model/Cart.html#method_setTransferDiscountAsItem"><abbr title="Magento\Payment\Model\Cart">Cart</abbr></a> at line         line 286</div>
+        <code>                    void
+    <strong>setTransferDiscountAsItem</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify that discount should be transferred as cart item</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasNegativeItemAmount">
+        <div class="location">at line         line 188</div>
+        <code>                    bool
+    <strong>hasNegativeItemAmount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether any item has negative amount</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,3183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Paypal\Model\Config | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Paypal_Model_Config" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Paypal.html">Paypal</a></li>
+                                        <li><a href="../../../Magento/Paypal/Model.html">Model</a></li>
+    
+                <li>Config</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Config
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Config</strong>        extends <a href="../../../Magento/Paypal/Model/AbstractConfig.html"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Config model that is aware of all \Magento\Paypal payment methods
+Works with PayPal-specific system configuration</p>                    </div>
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="../../../Magento/Payment/Helper/Formatter.html"><abbr title="Magento\Payment\Helper\Formatter">Formatter</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Class Formatter
+                </div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>PAYMENT_ACTION_SALE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_ACTION_AUTH</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_ACTION_ORDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_WPP_EXPRESS</td>
+                <td class="last">
+                    <p><em>PayPal Website Payments Pro - Express Checkout</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_EXPRESS</td>
+                <td class="last">
+                    <p><em>PayPal Express</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_WPS_EXPRESS</td>
+                <td class="last">
+                    <p><em>PayPal Standard - alias METHOD<em>WPP</em>EXPRESS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_WPS_BML</td>
+                <td class="last">
+                    <p><em>PayPal Standard Bml - alias METHOD<em>WPP</em>BML</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_WPP_BML</td>
+                <td class="last">
+                    <p><em>PayPal Bill Me Later - Express Checkout</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_WPP_DIRECT</td>
+                <td class="last">
+                    <p><em>PayPal Website Payments Pro - Direct Payments</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_PAYMENT_PRO</td>
+                <td class="last">
+                    <p><em>PayPal Website Payments Pro - Direct Payments - alias METHOD_PAYFLOWPRO</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_WPP_PE_EXPRESS</td>
+                <td class="last">
+                    <p><em>Express Checkout (Payflow Edition)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_WPP_PE_BML</td>
+                <td class="last">
+                    <p><em>PayPal Bill Me Later - Express Checkout (Payflow Edition)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_PAYFLOWPRO</td>
+                <td class="last">
+                    <p><em>Payflow Pro Gateway</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_PAYFLOWLINK</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_PAYFLOWADVANCED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_HOSTEDPRO</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_BILLING_AGREEMENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EC_FLAVOR_DYNAMIC</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EC_FLAVOR_STATIC</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EC_BUTTON_TYPE_SHORTCUT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EC_BUTTON_TYPE_MARK</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_MARK_SMALL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_MARK_MEDIUM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_MARK_LARGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_LOGO_TYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AUTHORIZATION_AMOUNT_ONE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AUTHORIZATION_AMOUNT_FULL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REQUIRE_BILLING_ADDRESS_NO</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REQUIRE_BILLING_ADDRESS_ALL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REQUIRE_BILLING_ADDRESS_VIRTUAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FRAUD_ACTION_ACCEPT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FRAUD_ACTION_DENY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REFUND_TYPE_FULL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REFUND_TYPE_PARTIAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EC_SOLUTION_TYPE_SOLE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EC_SOLUTION_TYPE_MARK</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WPS_TRANSPORT_IPN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WPS_TRANSPORT_PDT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WPS_TRANSPORT_IPN_PDT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EC_BA_SIGNUP_AUTO</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EC_BA_SIGNUP_ASK</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EC_BA_SIGNUP_NEVER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRANSFER_CART_LINE_ITEMS</td>
+                <td class="last">
+                    <p><em>Paypal setting</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRANSFER_SHIPPING_OPTIONS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_PAYPAL_EXPRESS_SKIP_ORDER_REVIEW_STEP_FLAG</td>
+                <td class="last">
+                    <p><em>Config path for enabling/disabling order review step in express checkout</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../Magento/Directory/Helper/Data.html"><abbr title="Magento\Directory\Helper\Data">Data</abbr></a> $directoryHelper, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <abbr title="Magento\Payment\Model\Source\CctypeFactory">CctypeFactory</abbr> $cctypeFactory, <abbr title="Magento\Paypal\Model\CertFactory">CertFactory</abbr> $certFactory, array $params = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMethodInstance">setMethodInstance</a>(<a href="../../../Magento/Payment/Model/MethodInterface.html"><abbr title="Magento\Payment\Model\MethodInterface">MethodInterface</abbr></a> $method)
+        
+                                            <p>Sets method instance used for retrieving method specific data</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_setMethodInstance"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMethod">setMethod</a>(string|<a href="../../../Magento/Payment/Model/MethodInterface.html"><abbr title="Magento\Payment\Model\MethodInterface">MethodInterface</abbr></a> $method)
+        
+                                            <p>Method code setter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_setMethod"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMethodCode">getMethodCode</a>()
+        
+                                            <p>Payment method instance code getter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_getMethodCode"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setStoreId">setStoreId</a>(int $storeId)
+        
+                                            <p>Store ID setter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_setStoreId"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getValue">getValue</a>(string $key, int|null $storeId = null)
+        
+                                            <p>Returns payment configuration value</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_getValue"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMethodCode">setMethodCode</a>(string $methodCode)
+        
+                                            <p>Sets method code</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_setMethodCode"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPathPattern">setPathPattern</a>(string $pathPattern)
+        
+                                            <p>Sets path pattern</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_setPathPattern"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_shouldUseUnilateralPayments">shouldUseUnilateralPayments</a>()
+        
+                                            <p>Check whether only Unilateral payments (Accelerated Boarding) possible for Express method or not</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_shouldUseUnilateralPayments"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isWppApiAvailabe">isWppApiAvailabe</a>()
+        
+                                            <p>Check whether WPP API credentials are available for this method</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_isWppApiAvailabe"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isMethodAvailable">isMethodAvailable</a>(null $methodCode = null)
+        
+                                            <p>Check whether method available for checkout or not
+Logic based on merchant country, methods dependence</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isMethodActive">isMethodActive</a>(string $method)
+        
+                                            <p>Check whether method active in configuration and supported for merchant country or not</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_isMethodActive"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isMethodSupportedForCountry">isMethodSupportedForCountry</a>(string|null $method = null, string|null $countryCode = null)
+        
+                                            <p>Check whether method supported for specified country or not
+Use $_methodCode and merchant country by default</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBuildNotationCode">getBuildNotationCode</a>()
+        
+                                            <p>BN code getter</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_getBuildNotationCode"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formatPrice">formatPrice</a>(mixed $price)
+        
+                                            <p>Format price to 0.00 format</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Payment/Helper/Formatter.html#method_formatPrice"><abbr title="Magento\Payment\Helper\Formatter">Formatter</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSupportedMerchantCountryCodes">getSupportedMerchantCountryCodes</a>()
+        
+                                            <p>Return merchant country codes supported by PayPal</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSupportedBuyerCountryCodes">getSupportedBuyerCountryCodes</a>()
+        
+                                            <p>Return buyer country codes supported by PayPal</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMerchantCountry">getMerchantCountry</a>()
+        
+                                            <p>Return merchant country code, use default country if it not specified in General settings</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCountryMethods">getCountryMethods</a>(string|null $countryCode = null)
+        
+                                            <p>Return list of allowed methods for specified country iso code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPayPalBasicStartUrl">getPayPalBasicStartUrl</a>(string $token)
+        
+                                            <p>Return start url for PayPal Basic</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isOrderReviewStepDisabled">isOrderReviewStepDisabled</a>()
+        
+                                            <p>Check whether order review step enabled in configuration</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpressCheckoutStartUrl">getExpressCheckoutStartUrl</a>(string $token)
+        
+                                            <p>Get url for dispatching customer to express checkout start</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpressCheckoutOrderUrl">getExpressCheckoutOrderUrl</a>(string $orderId)
+        
+                                            <p>Get url for dispatching customer to checkout retrial</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpressCheckoutEditUrl">getExpressCheckoutEditUrl</a>(<abbr title="Magento\Paypal\Controller\Express">Express</abbr>|string $token)
+        
+                                            <p>Get url that allows to edit checkout details on paypal side</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpressCheckoutCompleteUrl">getExpressCheckoutCompleteUrl</a>(string $token)
+        
+                                            <p>Get url for additional actions that PayPal may require customer to do after placing the order.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStartBillingAgreementUrl">getStartBillingAgreementUrl</a>(string $token)
+        
+                                            <p>Retrieve url for initialization of billing agreement</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPaypalUrl">getPaypalUrl</a>(array $params = array())
+        
+                                            <p>PayPal web URL generic getter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPayPalIpnUrl">getPayPalIpnUrl</a>()
+        
+                                            <p>PayPal web URL for IPN</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_areButtonsDynamic">areButtonsDynamic</a>()
+        
+                                            <p>Whether Express Checkout button should be rendered dynamically</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpressCheckoutShortcutImageUrl">getExpressCheckoutShortcutImageUrl</a>(string $localeCode, float|null $orderTotal = null, string|null $pal = null)
+        
+                                            <p>Express checkout shortcut pic URL getter
+PayPal will ignore "pal", if there is no total amount specified</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpressCheckoutInContextImageUrl">getExpressCheckoutInContextImageUrl</a>(string $localeCode)
+        
+                                            <p>Express in context checkout shortcut pic URL getter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPaymentMarkImageUrl">getPaymentMarkImageUrl</a>(string $localeCode, float|null $orderTotal = null, string|null $pal = null, string|null $staticSize = null)
+        
+                                            <p>Get PayPal "mark" image URL
+Supposed to be used on payment methods selection
+$staticSize is applicable for static images only</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPaymentMarkWhatIsPaypalUrl">getPaymentMarkWhatIsPaypalUrl</a>(<a href="../../../Magento/Framework/Locale/ResolverInterface.html"><abbr title="Magento\Framework\Locale\ResolverInterface">ResolverInterface</abbr></a> $localeResolver = null)
+        
+                                            <p>Get "What Is PayPal" localized URL
+Supposed to be used with "mark" as popup window</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSolutionImageUrl">getSolutionImageUrl</a>(string $localeCode, bool $isVertical = false, bool $isEcheck = false)
+        
+                                            <p>Getter for Solution banner images</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPaymentFormLogoUrl">getPaymentFormLogoUrl</a>(string $localeCode)
+        
+                                            <p>Getter for Payment form logo images</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAdditionalOptionsLogoTypes">getAdditionalOptionsLogoTypes</a>()
+        
+                                            <p>Return supported types for PayPal logo</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAdditionalOptionsLogoUrl">getAdditionalOptionsLogoUrl</a>(string $localeCode, bool|string $type = false)
+        
+                                            <p>Return PayPal logo URL with additional options</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpressCheckoutButtonFlavors">getExpressCheckoutButtonFlavors</a>()
+        
+                                            <p>Express Checkout button "flavors" source getter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpressCheckoutButtonTypes">getExpressCheckoutButtonTypes</a>()
+        
+                                            <p>Express Checkout button types source getter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPaymentActions">getPaymentActions</a>()
+        
+                                            <p>Payment actions source getter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequireBillingAddressOptions">getRequireBillingAddressOptions</a>()
+        
+                                            <p>Require Billing Address source getter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPaymentAction">getPaymentAction</a>()
+        
+                                            <p>Mapper from PayPal-specific payment actions to Magento payment actions</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpressCheckoutSolutionTypes">getExpressCheckoutSolutionTypes</a>()
+        
+                                            <p>Express Checkout "solution types" source getter
+"sole" = "Express Checkout for Auctions" - PayPal allows guest checkout
+"mark" = "Normal Express Checkout" - PayPal requires to checkout with PayPal buyer account only</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExpressCheckoutBASignupOptions">getExpressCheckoutBASignupOptions</a>()
+        
+                                            <p>Retrieve express checkout billing agreement signup options</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_shouldAskToCreateBillingAgreement">shouldAskToCreateBillingAgreement</a>()
+        
+                                            <p>Whether to ask customer to create billing agreements
+Unilateral payments are incompatible with the billing agreements</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWpsPaymentDeliveryMethods">getWpsPaymentDeliveryMethods</a>()
+        
+                                            <p>Payment data delivery methods getter for PayPal Standard</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWppCcTypesAsOptionArray">getWppCcTypesAsOptionArray</a>()
+        
+                                            <p>Return list of supported credit card types by Paypal Direct gateway</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWppPeCcTypesAsOptionArray">getWppPeCcTypesAsOptionArray</a>()
+        
+                                            <p>Return list of supported credit card types by Paypal Direct (Payflow Edition) gateway</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPayflowproCcTypesAsOptionArray">getPayflowproCcTypesAsOptionArray</a>()
+        
+                                            <p>Return list of supported credit card types by Payflow Pro gateway</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIsCreditCardMethod">getIsCreditCardMethod</a>(string $code)
+        
+                                            <p>Check whether the specified payment method is a CC-based one</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isCurrencyCodeSupported">isCurrencyCodeSupported</a>(string $code)
+        
+                                            <p>Check whether specified currency code is supported</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exportExpressCheckoutStyleSettings">exportExpressCheckoutStyleSettings</a>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $to)
+        
+                                            <p>Export page style current settings to specified object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getApiAuthenticationMethods">getApiAuthenticationMethods</a>()
+        
+                                            <p>Payment API authentication methods source getter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getApiCertificate">getApiCertificate</a>()
+        
+                                            <p>Api certificate getter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBmlPublisherId">getBmlPublisherId</a>()
+        
+                                            <p>Get PublisherId from stored config</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBmlDisplay">getBmlDisplay</a>(string $section)
+        
+                                            <p>Get Display option from stored config</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBmlPosition">getBmlPosition</a>(string $section)
+        
+                                            <p>Get Position option from stored config</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBmlSize">getBmlSize</a>(string $section)
+        
+                                            <p>Get Size option from stored config</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 611</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../Magento/Directory/Helper/Data.html"><abbr title="Magento\Directory\Helper\Data">Data</abbr></a> $directoryHelper, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <abbr title="Magento\Payment\Model\Source\CctypeFactory">CctypeFactory</abbr> $cctypeFactory, <abbr title="Magento\Paypal\Model\CertFactory">CertFactory</abbr> $certFactory, array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a></td>
+                <td>$scopeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Directory/Helper/Data.html"><abbr title="Magento\Directory\Helper\Data">Data</abbr></a></td>
+                <td>$directoryHelper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Payment\Model\Source\CctypeFactory">CctypeFactory</abbr></td>
+                <td>$cctypeFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Paypal\Model\CertFactory">CertFactory</abbr></td>
+                <td>$certFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMethodInstance">
+        <div class="location">in <a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_setMethodInstance"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a> at line         line 84</div>
+        <code>                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+    <strong>setMethodInstance</strong>(<a href="../../../Magento/Payment/Model/MethodInterface.html"><abbr title="Magento\Payment\Model\MethodInterface">MethodInterface</abbr></a> $method)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets method instance used for retrieving method specific data</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Payment/Model/MethodInterface.html"><abbr title="Magento\Payment\Model\MethodInterface">MethodInterface</abbr></a></td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMethod">
+        <div class="location">in <a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_setMethod"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a> at line         line 96</div>
+        <code>                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+    <strong>setMethod</strong>(string|<a href="../../../Magento/Payment/Model/MethodInterface.html"><abbr title="Magento\Payment\Model\MethodInterface">MethodInterface</abbr></a> $method)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Method code setter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="../../../Magento/Payment/Model/MethodInterface.html"><abbr title="Magento\Payment\Model\MethodInterface">MethodInterface</abbr></a></td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMethodCode">
+        <div class="location">in <a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_getMethodCode"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a> at line         line 111</div>
+        <code>                    string
+    <strong>getMethodCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Payment method instance code getter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setStoreId">
+        <div class="location">in <a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_setStoreId"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a> at line         line 122</div>
+        <code>                    <abbr title="Magento\Paypal\Model\$this">$this</abbr>
+    <strong>setStoreId</strong>(int $storeId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Store ID setter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getValue">
+        <div class="location">in <a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_getValue"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a> at line         line 137</div>
+        <code>                    mixed
+    <strong>getValue</strong>(string $key, int|null $storeId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns payment configuration value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMethodCode">
+        <div class="location">in <a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_setMethodCode"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a> at line         line 164</div>
+        <code>                    void
+    <strong>setMethodCode</strong>(string $methodCode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets method code</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPathPattern">
+        <div class="location">in <a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_setPathPattern"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a> at line         line 175</div>
+        <code>                    void
+    <strong>setPathPattern</strong>(string $pathPattern)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets path pattern</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pathPattern</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldUseUnilateralPayments">
+        <div class="location">in <a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_shouldUseUnilateralPayments"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a> at line         line 220</div>
+        <code>                    bool
+    <strong>shouldUseUnilateralPayments</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether only Unilateral payments (Accelerated Boarding) possible for Express method or not</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isWppApiAvailabe">
+        <div class="location">in <a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_isWppApiAvailabe"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a> at line         line 230</div>
+        <code>                    bool
+    <strong>isWppApiAvailabe</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether WPP API credentials are available for this method</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMethodAvailable">
+        <div class="location">at line         line 642</div>
+        <code>                    bool
+    <strong>isMethodAvailable</strong>(null $methodCode = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether method available for checkout or not
+Logic based on merchant country, methods dependence</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null</td>
+                <td>$methodCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMethodActive">
+        <div class="location">in <a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_isMethodActive"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a> at line         line 261</div>
+        <code>                    bool
+    <strong>isMethodActive</strong>(string $method)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether method active in configuration and supported for merchant country or not</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>Method code</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMethodSupportedForCountry">
+        <div class="location">at line         line 733</div>
+        <code>                    bool
+    <strong>isMethodSupportedForCountry</strong>(string|null $method = null, string|null $countryCode = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether method supported for specified country or not
+Use $_methodCode and merchant country by default</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$countryCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBuildNotationCode">
+        <div class="location">in <a href="../../../Magento/Paypal/Model/AbstractConfig.html#method_getBuildNotationCode"><abbr title="Magento\Paypal\Model\AbstractConfig">AbstractConfig</abbr></a> at line         line 336</div>
+        <code>                    string
+    <strong>getBuildNotationCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>BN code getter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatPrice">
+        <div class="location">in <a href="../../../Magento/Payment/Helper/Formatter.html#method_formatPrice"><abbr title="Magento\Payment\Helper\Formatter">Formatter</abbr></a> at line         line 20</div>
+        <code>                    string
+    <strong>formatPrice</strong>(mixed $price)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Format price to 0.00 format</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$price</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSupportedMerchantCountryCodes">
+        <div class="location">at line         line 692</div>
+        <code>                    string[]
+    <strong>getSupportedMerchantCountryCodes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return merchant country codes supported by PayPal</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSupportedBuyerCountryCodes">
+        <div class="location">at line         line 702</div>
+        <code>                    string[]
+    <strong>getSupportedBuyerCountryCodes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return buyer country codes supported by PayPal</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMerchantCountry">
+        <div class="location">at line         line 712</div>
+        <code>                    string
+    <strong>getMerchantCountry</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return merchant country code, use default country if it not specified in General settings</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCountryMethods">
+        <div class="location">at line         line 751</div>
+        <code>                    array
+    <strong>getCountryMethods</strong>(string|null $countryCode = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return list of allowed methods for specified country iso code</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$countryCode</td>
+                <td>2-letters iso code</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPayPalBasicStartUrl">
+        <div class="location">at line         line 833</div>
+        <code>                    string
+    <strong>getPayPalBasicStartUrl</strong>(string $token)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return start url for PayPal Basic</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isOrderReviewStepDisabled">
+        <div class="location">at line         line 852</div>
+        <code>                    bool
+    <strong>isOrderReviewStepDisabled</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether order review step enabled in configuration</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpressCheckoutStartUrl">
+        <div class="location">at line         line 867</div>
+        <code>                    string
+    <strong>getExpressCheckoutStartUrl</strong>(string $token)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get url for dispatching customer to express checkout start</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpressCheckoutOrderUrl">
+        <div class="location">at line         line 878</div>
+        <code>                    string
+    <strong>getExpressCheckoutOrderUrl</strong>(string $orderId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get url for dispatching customer to checkout retrial</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$orderId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpressCheckoutEditUrl">
+        <div class="location">at line         line 889</div>
+        <code>                    string
+    <strong>getExpressCheckoutEditUrl</strong>(<abbr title="Magento\Paypal\Controller\Express">Express</abbr>|string $token)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get url that allows to edit checkout details on paypal side</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Magento\Paypal\Controller\Express">Express</abbr>|string</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpressCheckoutCompleteUrl">
+        <div class="location">at line         line 901</div>
+        <code>                    string
+    <strong>getExpressCheckoutCompleteUrl</strong>(string $token)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get url for additional actions that PayPal may require customer to do after placing the order.</p>                    <p>For instance, redirecting customer to bank for payment confirmation.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStartBillingAgreementUrl">
+        <div class="location">at line         line 912</div>
+        <code>                    string
+    <strong>getStartBillingAgreementUrl</strong>(string $token)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve url for initialization of billing agreement</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPaypalUrl">
+        <div class="location">at line         line 923</div>
+        <code>                    string
+    <strong>getPaypalUrl</strong>(array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>PayPal web URL generic getter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPayPalIpnUrl">
+        <div class="location">at line         line 937</div>
+        <code>                    string
+    <strong>getPayPalIpnUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>PayPal web URL for IPN</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_areButtonsDynamic">
+        <div class="location">at line         line 950</div>
+        <code>                    bool
+    <strong>areButtonsDynamic</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Whether Express Checkout button should be rendered dynamically</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpressCheckoutShortcutImageUrl">
+        <div class="location">at line         line 965</div>
+        <code>                    string
+    <strong>getExpressCheckoutShortcutImageUrl</strong>(string $localeCode, float|null $orderTotal = null, string|null $pal = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Express checkout shortcut pic URL getter
+PayPal will ignore "pal", if there is no total amount specified</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$localeCode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float|null</td>
+                <td>$orderTotal</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$pal</td>
+                <td>encrypted summary about merchant</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Paypal_Model_Api_Nvp::callGetPalDetails()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpressCheckoutInContextImageUrl">
+        <div class="location">at line         line 983</div>
+        <code>                    string
+    <strong>getExpressCheckoutInContextImageUrl</strong>(string $localeCode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Express in context checkout shortcut pic URL getter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$localeCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPaymentMarkImageUrl">
+        <div class="location">at line         line 1005</div>
+        <code>                    string
+    <strong>getPaymentMarkImageUrl</strong>(string $localeCode, float|null $orderTotal = null, string|null $pal = null, string|null $staticSize = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get PayPal "mark" image URL
+Supposed to be used on payment methods selection
+$staticSize is applicable for static images only</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$localeCode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float|null</td>
+                <td>$orderTotal</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$pal</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$staticSize</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPaymentMarkWhatIsPaypalUrl">
+        <div class="location">at line         line 1037</div>
+        <code>                    string
+    <strong>getPaymentMarkWhatIsPaypalUrl</strong>(<a href="../../../Magento/Framework/Locale/ResolverInterface.html"><abbr title="Magento\Framework\Locale\ResolverInterface">ResolverInterface</abbr></a> $localeResolver = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get "What Is PayPal" localized URL
+Supposed to be used with "mark" as popup window</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Locale/ResolverInterface.html"><abbr title="Magento\Framework\Locale\ResolverInterface">ResolverInterface</abbr></a></td>
+                <td>$localeResolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSolutionImageUrl">
+        <div class="location">at line         line 1064</div>
+        <code>                    string
+    <strong>getSolutionImageUrl</strong>(string $localeCode, bool $isVertical = false, bool $isEcheck = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Getter for Solution banner images</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$localeCode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isVertical</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isEcheck</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPaymentFormLogoUrl">
+        <div class="location">at line         line 1080</div>
+        <code>                    string
+    <strong>getPaymentFormLogoUrl</strong>(string $localeCode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Getter for Payment form logo images</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$localeCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdditionalOptionsLogoTypes">
+        <div class="location">at line         line 1122</div>
+        <code>                    array
+    <strong>getAdditionalOptionsLogoTypes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return supported types for PayPal logo</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdditionalOptionsLogoUrl">
+        <div class="location">at line         line 1143</div>
+        <code>                    string|bool
+    <strong>getAdditionalOptionsLogoUrl</strong>(string $localeCode, bool|string $type = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return PayPal logo URL with additional options</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$localeCode</td>
+                <td>Supported locale code</td>
+            </tr>
+                    <tr>
+                <td>bool|string</td>
+                <td>$type</td>
+                <td>One of supported logo types</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td>Logo Image URL or false if logo disabled in configuration</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpressCheckoutButtonFlavors">
+        <div class="location">at line         line 1167</div>
+        <code>                    array
+    <strong>getExpressCheckoutButtonFlavors</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Express Checkout button "flavors" source getter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpressCheckoutButtonTypes">
+        <div class="location">at line         line 1177</div>
+        <code>                    array
+    <strong>getExpressCheckoutButtonTypes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Express Checkout button types source getter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPaymentActions">
+        <div class="location">at line         line 1190</div>
+        <code>                    array
+    <strong>getPaymentActions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Payment actions source getter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequireBillingAddressOptions">
+        <div class="location">at line         line 1207</div>
+        <code>                    array
+    <strong>getRequireBillingAddressOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Require Billing Address source getter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPaymentAction">
+        <div class="location">at line         line 1221</div>
+        <code>                    string|null
+    <strong>getPaymentAction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mapper from PayPal-specific payment actions to Magento payment actions</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpressCheckoutSolutionTypes">
+        <div class="location">at line         line 1241</div>
+        <code>                    array
+    <strong>getExpressCheckoutSolutionTypes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Express Checkout "solution types" source getter
+"sole" = "Express Checkout for Auctions" - PayPal allows guest checkout
+"mark" = "Normal Express Checkout" - PayPal requires to checkout with PayPal buyer account only</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpressCheckoutBASignupOptions">
+        <div class="location">at line         line 1251</div>
+        <code>                    array
+    <strong>getExpressCheckoutBASignupOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve express checkout billing agreement signup options</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldAskToCreateBillingAgreement">
+        <div class="location">at line         line 1266</div>
+        <code>                    bool
+    <strong>shouldAskToCreateBillingAgreement</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Whether to ask customer to create billing agreements
+Unilateral payments are incompatible with the billing agreements</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWpsPaymentDeliveryMethods">
+        <div class="location">at line         line 1277</div>
+        <code>                    array
+    <strong>getWpsPaymentDeliveryMethods</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Payment data delivery methods getter for PayPal Standard</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWppCcTypesAsOptionArray">
+        <div class="location">at line         line 1287</div>
+        <code>                    array
+    <strong>getWppCcTypesAsOptionArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return list of supported credit card types by Paypal Direct gateway</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWppPeCcTypesAsOptionArray">
+        <div class="location">at line         line 1299</div>
+        <code>                    array
+    <strong>getWppPeCcTypesAsOptionArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return list of supported credit card types by Paypal Direct (Payflow Edition) gateway</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPayflowproCcTypesAsOptionArray">
+        <div class="location">at line         line 1311</div>
+        <code>                    array
+    <strong>getPayflowproCcTypesAsOptionArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return list of supported credit card types by Payflow Pro gateway</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIsCreditCardMethod">
+        <div class="location">at line         line 1323</div>
+        <code>        static            bool
+    <strong>getIsCreditCardMethod</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether the specified payment method is a CC-based one</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isCurrencyCodeSupported">
+        <div class="location">at line         line 1341</div>
+        <code>                    bool
+    <strong>isCurrencyCodeSupported</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether specified currency code is supported</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exportExpressCheckoutStyleSettings">
+        <div class="location">at line         line 1364</div>
+        <code>                    void
+    <strong>exportExpressCheckoutStyleSettings</strong>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $to)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Export page style current settings to specified object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getApiAuthenticationMethods">
+        <div class="location">at line         line 1693</div>
+        <code>                    array
+    <strong>getApiAuthenticationMethods</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Payment API authentication methods source getter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getApiCertificate">
+        <div class="location">at line         line 1703</div>
+        <code>                    string
+    <strong>getApiCertificate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Api certificate getter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBmlPublisherId">
+        <div class="location">at line         line 1714</div>
+        <code>                    mixed
+    <strong>getBmlPublisherId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get PublisherId from stored config</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBmlDisplay">
+        <div class="location">at line         line 1729</div>
+        <code>                    mixed
+    <strong>getBmlDisplay</strong>(string $section)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Display option from stored config</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$section</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBmlPosition">
+        <div class="location">at line         line 1756</div>
+        <code>                    mixed
+    <strong>getBmlPosition</strong>(string $section)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Position option from stored config</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$section</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBmlSize">
+        <div class="location">at line         line 1771</div>
+        <code>                    mixed
+    <strong>getBmlSize</strong>(string $section)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Size option from stored config</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$section</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

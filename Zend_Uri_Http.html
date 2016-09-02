@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Uri_Http | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Uri_Http" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Uri_Http
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Uri_Http</strong>        extends <a href="Zend_Uri.html">Zend_Uri</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>HTTP(S) URI handler</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>CHAR_ALNUM</td>
+                <td class="last">
+                    <p><em>Character classes for validation regular expressions</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CHAR_MARK</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CHAR_RESERVED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CHAR_SEGMENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CHAR_UNWISE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Return a string representation of this URI.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Uri.html#method___toString">Zend_Uri</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_check">check</a>(string $uri)
+        
+                                            <p>Convenience function, checks that a $uri string is well-formed
+by validating it but not returning an object.  Returns TRUE if
+$uri is a well-formed URI, or FALSE otherwise.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Uri.html#method_check">Zend_Uri</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Uri.html">Zend_Uri</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_factory">factory</a>(string $uri = &#039;http&#039;, string $className = null)
+        
+                                            <p>Create a new Zend_Uri object for a URI.  If building a new URI, then $uri should contain
+only the scheme (http, ftp, etc).  Otherwise, supply $uri with the complete URI.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Uri.html#method_factory">Zend_Uri</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getScheme">getScheme</a>()
+        
+                                            <p>Get the URI's scheme</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Uri.html#method_getScheme">Zend_Uri</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setConfig">setConfig</a>(<a href="Zend_Config.html">Zend_Config</a>|array $config)
+        
+                                            <p>Set global configuration options</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Uri.html#method_setConfig">Zend_Uri</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUri">getUri</a>()
+        
+                                            <p>Returns a URI based on current values of the instance variables. If any
+part of the URI does not pass validation, then an exception is thrown.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_valid">valid</a>()
+        
+                                            <p>Validate the current URI from the instance variables. Returns true if and only if all
+parts pass validation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Uri_Http.html">Zend_Uri_Http</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fromString">fromString</a>(string $uri)
+        
+                                            <p>Creates a Zend<em>Uri</em>Http from the given string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUsername">getUsername</a>()
+        
+                                            <p>Returns the username portion of the URL, or FALSE if none.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateUsername">validateUsername</a>(string $username = null)
+        
+                                            <p>Returns true if and only if the username passes validation. If no username is passed,
+then the username contained in the instance variable is used.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUsername">setUsername</a>(string $username)
+        
+                                            <p>Sets the username for the current URI, and returns the old username</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPassword">getPassword</a>()
+        
+                                            <p>Returns the password portion of the URL, or FALSE if none.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validatePassword">validatePassword</a>(string $password = null)
+        
+                                            <p>Returns true if and only if the password passes validation. If no password is passed,
+then the password contained in the instance variable is used.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPassword">setPassword</a>(string $password)
+        
+                                            <p>Sets the password for the current URI, and returns the old password</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHost">getHost</a>()
+        
+                                            <p>Returns the domain or host IP portion of the URL, or FALSE if none.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateHost">validateHost</a>(string $host = null)
+        
+                                            <p>Returns true if and only if the host string passes validation. If no host is passed,
+then the host contained in the instance variable is used.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHost">setHost</a>(string $host)
+        
+                                            <p>Sets the host for the current URI, and returns the old host</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPort">getPort</a>()
+        
+                                            <p>Returns the TCP port, or FALSE if none.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validatePort">validatePort</a>(string $port = null)
+        
+                                            <p>Returns true if and only if the TCP port string passes validation. If no port is passed,
+then the port contained in the instance variable is used.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPort">setPort</a>(string $port)
+        
+                                            <p>Sets the port for the current URI, and returns the old port</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPath">getPath</a>()
+        
+                                            <p>Returns the path and filename portion of the URL.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validatePath">validatePath</a>(string $path = null)
+        
+                                            <p>Returns true if and only if the path string passes validation. If no path is passed,
+then the path contained in the instance variable is used.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPath">setPath</a>(string $path)
+        
+                                            <p>Sets the path for the current URI, and returns the old path</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuery">getQuery</a>()
+        
+                                            <p>Returns the query portion of the URL (after ?), or FALSE if none.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQueryAsArray">getQueryAsArray</a>()
+        
+                                            <p>Returns the query portion of the URL (after ?) as a
+key-value-array. If the query is empty an empty array
+is returned</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateQuery">validateQuery</a>(string $query = null)
+        
+                                            <p>Returns true if and only if the query string passes validation. If no query is passed,
+then the query string contained in the instance variable is used.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addReplaceQueryParameters">addReplaceQueryParameters</a>(array $queryParams)
+        
+                                            <p>Add or replace params in the query string for the current URI, and
+return the old query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeQueryParameters">removeQueryParameters</a>(array $queryParamKeys)
+        
+                                            <p>Remove params in the query string for the current URI, and
+return the old query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setQuery">setQuery</a>(string|array $query)
+        
+                                            <p>Set the query string for the current URI, and return the old query
+string This method accepts both strings and arrays.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFragment">getFragment</a>()
+        
+                                            <p>Returns the fragment portion of the URL (after #), or FALSE if none.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateFragment">validateFragment</a>(string $fragment = null)
+        
+                                            <p>Returns true if and only if the fragment passes validation. If no fragment is passed,
+then the fragment contained in the instance variable is used.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFragment">setFragment</a>(string $fragment)
+        
+                                            <p>Sets the fragment for the current URI, and returns the old fragment</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">in <a href="Zend_Uri.html#method___toString">Zend_Uri</a> at line         line 54</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a string representation of this URI.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>getUri()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_check">
+        <div class="location">in <a href="Zend_Uri.html#method_check">Zend_Uri</a> at line         line 72</div>
+        <code>        static            boolean
+    <strong>check</strong>(string $uri)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convenience function, checks that a $uri string is well-formed
+by validating it but not returning an object.  Returns TRUE if
+$uri is a well-formed URI, or FALSE otherwise.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uri</td>
+                <td>The URI to check</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_factory">
+        <div class="location">in <a href="Zend_Uri.html#method_factory">Zend_Uri</a> at line         line 96</div>
+        <code>        static            <a href="Zend_Uri.html">Zend_Uri</a>
+    <strong>factory</strong>(string $uri = &#039;http&#039;, string $className = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new Zend_Uri object for a URI.  If building a new URI, then $uri should contain
+only the scheme (http, ftp, etc).  Otherwise, supply $uri with the complete URI.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uri</td>
+                <td>The URI form which a Zend_Uri instance is created</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>The name of the class to use in order to manipulate URI</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Uri.html">Zend_Uri</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When an empty string was supplied for the scheme</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When an illegal scheme is supplied</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When the scheme is not supported</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When $className doesn't exist or doesn't implements Zend_Uri</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getScheme">
+        <div class="location">in <a href="Zend_Uri.html#method_getScheme">Zend_Uri</a> at line         line 158</div>
+        <code>                    string|false
+    <strong>getScheme</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the URI's scheme</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|false</td>
+            <td>Scheme or false if no scheme is set.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">in <a href="Zend_Uri.html#method_setConfig">Zend_Uri</a> at line         line 172</div>
+        <code>        static            
+    <strong>setConfig</strong>(<a href="Zend_Config.html">Zend_Config</a>|array $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set global configuration options</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Config.html">Zend_Config</a>|array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUri">
+        <div class="location">at line         line 243</div>
+        <code>                    string
+    <strong>getUri</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a URI based on current values of the instance variables. If any
+part of the URI does not pass validation, then an exception is thrown.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When one or more parts of the URI are invalid</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_valid">
+        <div class="location">at line         line 272</div>
+        <code>                    boolean
+    <strong>valid</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate the current URI from the instance variables. Returns true if and only if all
+parts pass validation.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromString">
+        <div class="location">at line         line 170</div>
+        <code>        static            <a href="Zend_Uri_Http.html">Zend_Uri_Http</a>
+    <strong>fromString</strong>(string $uri)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates a Zend<em>Uri</em>Http from the given string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uri</td>
+                <td>String to create URI from, must start with
+                    'http://' or 'https://'</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Uri_Http.html">Zend_Uri_Http</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>When the given $uri is not a string or
+                                  does not start with http:// or https://</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When the given $uri is invalid</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUsername">
+        <div class="location">at line         line 289</div>
+        <code>                    string
+    <strong>getUsername</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the username portion of the URL, or FALSE if none.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateUsername">
+        <div class="location">at line         line 303</div>
+        <code>                    boolean
+    <strong>validateUsername</strong>(string $username = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if and only if the username passes validation. If no username is passed,
+then the username contained in the instance variable is used.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>The HTTP username</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When username validation fails</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUsername">
+        <div class="location">at line         line 333</div>
+        <code>                    string
+    <strong>setUsername</strong>(string $username)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the username for the current URI, and returns the old username</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>The HTTP username</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When $username is not a valid HTTP username</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPassword">
+        <div class="location">at line         line 351</div>
+        <code>                    string
+    <strong>getPassword</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the password portion of the URL, or FALSE if none.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validatePassword">
+        <div class="location">at line         line 365</div>
+        <code>                    boolean
+    <strong>validatePassword</strong>(string $password = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if and only if the password passes validation. If no password is passed,
+then the password contained in the instance variable is used.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>The HTTP password</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When password validation fails</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPassword">
+        <div class="location">at line         line 400</div>
+        <code>                    string
+    <strong>setPassword</strong>(string $password)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the password for the current URI, and returns the old password</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>The HTTP password</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When $password is not a valid HTTP password</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHost">
+        <div class="location">at line         line 418</div>
+        <code>                    string
+    <strong>getHost</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the domain or host IP portion of the URL, or FALSE if none.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateHost">
+        <div class="location">at line         line 431</div>
+        <code>                    boolean
+    <strong>validateHost</strong>(string $host = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if and only if the host string passes validation. If no host is passed,
+then the host contained in the instance variable is used.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$host</td>
+                <td>The HTTP host</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHost">
+        <div class="location">at line         line 455</div>
+        <code>                    string
+    <strong>setHost</strong>(string $host)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the host for the current URI, and returns the old host</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$host</td>
+                <td>The HTTP host</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When $host is nota valid HTTP host</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPort">
+        <div class="location">at line         line 473</div>
+        <code>                    string
+    <strong>getPort</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the TCP port, or FALSE if none.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validatePort">
+        <div class="location">at line         line 485</div>
+        <code>                    boolean
+    <strong>validatePort</strong>(string $port = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if and only if the TCP port string passes validation. If no port is passed,
+then the port contained in the instance variable is used.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$port</td>
+                <td>The HTTP port</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPort">
+        <div class="location">at line         line 507</div>
+        <code>                    string
+    <strong>setPort</strong>(string $port)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the port for the current URI, and returns the old port</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$port</td>
+                <td>The HTTP port</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When $port is not a valid HTTP port</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPath">
+        <div class="location">at line         line 525</div>
+        <code>                    string
+    <strong>getPath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the path and filename portion of the URL.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validatePath">
+        <div class="location">at line         line 538</div>
+        <code>                    boolean
+    <strong>validatePath</strong>(string $path = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if and only if the path string passes validation. If no path is passed,
+then the path contained in the instance variable is used.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>The HTTP path</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When path validation fails</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPath">
+        <div class="location">at line         line 567</div>
+        <code>                    string
+    <strong>setPath</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the path for the current URI, and returns the old path</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>The HTTP path</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When $path is not a valid HTTP path</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuery">
+        <div class="location">at line         line 585</div>
+        <code>                    string
+    <strong>getQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the query portion of the URL (after ?), or FALSE if none.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueryAsArray">
+        <div class="location">at line         line 597</div>
+        <code>                    array
+    <strong>getQueryAsArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the query portion of the URL (after ?) as a
+key-value-array. If the query is empty an empty array
+is returned</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateQuery">
+        <div class="location">at line         line 616</div>
+        <code>                    boolean
+    <strong>validateQuery</strong>(string $query = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if and only if the query string passes validation. If no query is passed,
+then the query string contained in the instance variable is used.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>The query to validate</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When query validation fails</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addReplaceQueryParameters">
+        <div class="location">at line         line 645</div>
+        <code>                    string
+    <strong>addReplaceQueryParameters</strong>(array $queryParams)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add or replace params in the query string for the current URI, and
+return the old query.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$queryParams</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Old query string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeQueryParameters">
+        <div class="location">at line         line 658</div>
+        <code>                    string
+    <strong>removeQueryParameters</strong>(array $queryParamKeys)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove params in the query string for the current URI, and
+return the old query.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$queryParamKeys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Old query string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setQuery">
+        <div class="location">at line         line 672</div>
+        <code>                    string
+    <strong>setQuery</strong>(string|array $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the query string for the current URI, and return the old query
+string This method accepts both strings and arrays.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$query</td>
+                <td>The query string or array</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Old query string</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When $query is not a valid query string</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFragment">
+        <div class="location">at line         line 710</div>
+        <code>                    string|false
+    <strong>getFragment</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the fragment portion of the URL (after #), or FALSE if none.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateFragment">
+        <div class="location">at line         line 724</div>
+        <code>                    boolean
+    <strong>validateFragment</strong>(string $fragment = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if and only if the fragment passes validation. If no fragment is passed,
+then the fragment contained in the instance variable is used.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fragment</td>
+                <td>Fragment of an URI</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When fragment validation fails</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFragment">
+        <div class="location">at line         line 753</div>
+        <code>                    string
+    <strong>setFragment</strong>(string $fragment)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the fragment for the current URI, and returns the old fragment</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fragment</td>
+                <td>Fragment of the current URI</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Exception.html">Zend_Uri_Exception</a></td>
+                <td>When $fragment is not a valid HTTP fragment</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

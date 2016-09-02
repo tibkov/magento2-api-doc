@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_Amazon_S3 | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_Amazon_S3" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_Amazon_S3
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_Amazon_S3</strong>        extends <a href="Zend_Service_Amazon_Abstract.html">Zend_Service_Amazon_Abstract</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Amazon S3 PHP connection class</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>S3_ENDPOINT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>S3_ACL_PRIVATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>S3_ACL_PUBLIC_READ</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>S3_ACL_PUBLIC_WRITE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>S3_ACL_AUTH_READ</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>S3_REQUESTPAY_HEADER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>S3_ACL_HEADER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>S3_CONTENT_TYPE_HEADER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHttpClient">setHttpClient</a>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $httpClient)
+        
+                                            <p>Sets the HTTP client object to use for retrieving the feeds.  If none
+is set, the default Zend<em>Http</em>Client will be used.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Abstract.html#method_setHttpClient">Zend_Service_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpClient">getHttpClient</a>()
+        
+                                            <p>Gets the HTTP client object.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Abstract.html#method_getHttpClient">Zend_Service_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setKeys">setKeys</a>($accessKey, $secretKey)
+        
+                                            <p>Set the keys to use when accessing SQS.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Amazon_Abstract.html#method_setKeys">Zend_Service_Amazon_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>($accessKey = null, $secretKey = null, string $region = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEndpoint">setEndpoint</a>(string|<a href="Zend_Uri_Http.html">Zend_Uri_Http</a> $endpoint)
+        
+                                            <p>Set S3 endpoint to use</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Uri_Http.html">Zend_Uri_Http</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEndpoint">getEndpoint</a>()
+        
+                                            <p>Get current S3 endpoint</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__validBucketName">_validBucketName</a>(string $bucket)
+        
+                                            <p>Verify if the bucket name is valid</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createBucket">createBucket</a>($bucket, $location = null)
+        
+                                            <p>Add a new bucket</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isBucketAvailable">isBucketAvailable</a>(string $bucket)
+        
+                                            <p>Checks if a given bucket name is available</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isObjectAvailable">isObjectAvailable</a>(string $object)
+        
+                                            <p>Checks if a given object exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeBucket">removeBucket</a>(string $bucket)
+        
+                                            <p>Remove a given bucket. All objects in the bucket must be removed prior
+to removing the bucket.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInfo">getInfo</a>(string $object)
+        
+                                            <p>Get metadata information for a given object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBuckets">getBuckets</a>()
+        
+                                            <p>List the S3 buckets</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cleanBucket">cleanBucket</a>(string $bucket)
+        
+                                            <p>Remove all objects in the bucket.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getObjectsByBucket">getObjectsByBucket</a>(string $bucket, array $params = array())
+        
+                                            <p>List the objects in a bucket.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getObjectsAndPrefixesByBucket">getObjectsAndPrefixesByBucket</a>(string $bucket, array $params = array())
+        
+                                            <p>List the objects and common prefixes in a bucket.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getObject">getObject</a>(string $object, bool $paidobject = false)
+        
+                                            <p>Get an object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Response_Stream.html">Zend_Http_Response_Stream</a>|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getObjectStream">getObjectStream</a>(string $object, string $streamfile = null, bool $paidobject = false)
+        
+                                            <p>Get an object using streaming</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putObject">putObject</a>(string $object, string|resource $data, array $meta = null)
+        
+                                            <p>Upload an object by a PHP string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putFile">putFile</a>(string $path, string $object, array $meta = null)
+        
+                                            <p>Put file to S3 as object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putFileStream">putFileStream</a>(string $path, string $object, array $meta = null)
+        
+                                            <p>Put file to S3 as object, using streaming</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeObject">removeObject</a>(string $object)
+        
+                                            <p>Remove a given object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copyObject">copyObject</a>(string $sourceObject, string $destObject, array $meta = null)
+        
+                                            <p>Copy an object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_moveObject">moveObject</a>(string $sourceObject, string $destObject, array $meta = null)
+        
+                                            <p>Move an object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__makeRequest">_makeRequest</a>(string $method, string $path = &#039;&#039;, array $params = null, array $headers = array(), string|resource $data = null)
+        
+                                            <p>Make a request to Amazon S3</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMimeType">getMimeType</a>(string $path)
+        
+                                            <p>Attempt to get the content-type of a file based on the extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerAsClient">registerAsClient</a>(string $name)
+        
+                                            <p>Register this object as stream wrapper client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unregisterAsClient">unregisterAsClient</a>(string $name)
+        
+                                            <p>Unregister this object as stream wrapper client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWrapperClient">getWrapperClient</a>(string $name)
+        
+                                            <p>Get wrapper client for stream type</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerStreamWrapper">registerStreamWrapper</a>(string $name = &#039;s3&#039;)
+        
+                                            <p>Register this object as stream wrapper</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unregisterStreamWrapper">unregisterStreamWrapper</a>(string $name = &#039;s3&#039;)
+        
+                                            <p>Unregister this object as stream wrapper</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setHttpClient">
+        <div class="location">in <a href="Zend_Service_Abstract.html#method_setHttpClient">Zend_Service_Abstract</a> at line         line 51</div>
+        <code>final        static            
+    <strong>setHttpClient</strong>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $httpClient)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the HTTP client object to use for retrieving the feeds.  If none
+is set, the default Zend<em>Http</em>Client will be used.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+                <td>$httpClient</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpClient">
+        <div class="location">in <a href="Zend_Service_Abstract.html#method_getHttpClient">Zend_Service_Abstract</a> at line         line 62</div>
+        <code>final        static            <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>getHttpClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the HTTP client object.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKeys">
+        <div class="location">in <a href="Zend_Service_Amazon_Abstract.html#method_setKeys">Zend_Service_Amazon_Abstract</a> at line         line 68</div>
+        <code>        static            void
+    <strong>setKeys</strong>($accessKey, $secretKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the keys to use when accessing SQS.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$accessKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$secretKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 109</div>
+        <code>                    void
+    <strong>__construct</strong>($accessKey = null, $secretKey = null, string $region = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$accessKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$secretKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$region</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEndpoint">
+        <div class="location">at line         line 76</div>
+        <code>                    <a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+    <strong>setEndpoint</strong>(string|<a href="Zend_Uri_Http.html">Zend_Uri_Http</a> $endpoint)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set S3 endpoint to use</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Uri_Http.html">Zend_Uri_Http</a></td>
+                <td>$endpoint</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEndpoint">
+        <div class="location">at line         line 97</div>
+        <code>                    <a href="Zend_Uri_Http.html">Zend_Uri_Http</a>
+    <strong>getEndpoint</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current S3 endpoint</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Uri_Http.html">Zend_Uri_Http</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__validBucketName">
+        <div class="location">at line         line 122</div>
+        <code>                    boolean
+    <strong>_validBucketName</strong>(string $bucket)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Verify if the bucket name is valid</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$bucket</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createBucket">
+        <div class="location">at line         line 157</div>
+        <code>                    boolean
+    <strong>createBucket</strong>($bucket, $location = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a new bucket</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$bucket</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isBucketAvailable">
+        <div class="location">at line         line 179</div>
+        <code>                    boolean
+    <strong>isBucketAvailable</strong>(string $bucket)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if a given bucket name is available</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$bucket</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isObjectAvailable">
+        <div class="location">at line         line 192</div>
+        <code>                    boolean
+    <strong>isObjectAvailable</strong>(string $object)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if a given object exists</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeBucket">
+        <div class="location">at line         line 207</div>
+        <code>                    boolean
+    <strong>removeBucket</strong>(string $bucket)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a given bucket. All objects in the bucket must be removed prior
+to removing the bucket.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$bucket</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInfo">
+        <div class="location">at line         line 221</div>
+        <code>                    array|false
+    <strong>getInfo</strong>(string $object)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get metadata information for a given object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBuckets">
+        <div class="location">at line         line 246</div>
+        <code>                    array|false
+    <strong>getBuckets</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List the S3 buckets</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cleanBucket">
+        <div class="location">at line         line 270</div>
+        <code>                    boolean
+    <strong>cleanBucket</strong>(string $bucket)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove all objects in the bucket.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$bucket</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getObjectsByBucket">
+        <div class="location">at line         line 303</div>
+        <code>                    array|false
+    <strong>getObjectsByBucket</strong>(string $bucket, array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List the objects in a bucket.</p>                    <p>Provides the list of object keys that are contained in the bucket.  Valid params include the following.
+prefix - Limits the response to keys which begin with the indicated prefix. You can use prefixes to separate a bucket into different sets of keys in a way similar to how a file system uses folders.
+marker - Indicates where in the bucket to begin listing. The list will only include keys that occur lexicographically after marker. This is convenient for pagination: To get the next page of results use the last key of the current page as the marker.
+max-keys - The maximum number of keys you'd like to see in the response body. The server might return fewer than this many keys, but will not return more.
+delimiter - Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection. These rolled-up keys are not returned elsewhere in the response.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$bucket</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>S3 GET Bucket Paramater</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getObjectsAndPrefixesByBucket">
+        <div class="location">at line         line 338</div>
+        <code>                    array|false
+    <strong>getObjectsAndPrefixesByBucket</strong>(string $bucket, array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List the objects and common prefixes in a bucket.</p>                    <p>Provides the list of object keys and common prefixes that are contained in the bucket.  Valid params include the following.
+prefix - Limits the response to keys which begin with the indicated prefix. You can use prefixes to separate a bucket into different sets of keys in a way similar to how a file system uses folders.
+marker - Indicates where in the bucket to begin listing. The list will only include keys that occur lexicographically after marker. This is convenient for pagination: To get the next page of results use the last key of the current page as the marker.
+max-keys - The maximum number of keys you'd like to see in the response body. The server might return fewer than this many keys, but will not return more.
+delimiter - Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection. These rolled-up keys are not returned elsewhere in the response.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$bucket</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>S3 GET Bucket Paramater</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>ZF-11401</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getObject">
+        <div class="location">at line         line 397</div>
+        <code>                    string|false
+    <strong>getObject</strong>(string $object, bool $paidobject = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$paidobject</td>
+                <td>This is "requestor pays" object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getObjectStream">
+        <div class="location">at line         line 424</div>
+        <code>                    <a href="Zend_Http_Response_Stream.html">Zend_Http_Response_Stream</a>|false
+    <strong>getObjectStream</strong>(string $object, string $streamfile = null, bool $paidobject = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an object using streaming</p>                    <p>Can use either provided filename for storage or create a temp file if none provided.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$object</td>
+                <td>Object path</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$streamfile</td>
+                <td>File to write the stream to</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$paidobject</td>
+                <td>This is "requestor pays" object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Response_Stream.html">Zend_Http_Response_Stream</a>|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putObject">
+        <div class="location">at line         line 451</div>
+        <code>                    boolean
+    <strong>putObject</strong>(string $object, string|resource $data, array $meta = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Upload an object by a PHP string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$object</td>
+                <td>Object name</td>
+            </tr>
+                    <tr>
+                <td>string|resource</td>
+                <td>$data</td>
+                <td>Object data (can be string or stream)</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$meta</td>
+                <td>Metadata</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putFile">
+        <div class="location">at line         line 488</div>
+        <code>                    boolean
+    <strong>putFile</strong>(string $path, string $object, array $meta = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put file to S3 as object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>File name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$object</td>
+                <td>Object name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$meta</td>
+                <td>Metadata</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putFileStream">
+        <div class="location">at line         line 518</div>
+        <code>                    boolean
+    <strong>putFileStream</strong>(string $path, string $object, array $meta = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put file to S3 as object, using streaming</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>File name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$object</td>
+                <td>Object name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$meta</td>
+                <td>Metadata</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeObject">
+        <div class="location">at line         line 550</div>
+        <code>                    boolean
+    <strong>removeObject</strong>(string $object)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a given object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copyObject">
+        <div class="location">at line         line 568</div>
+        <code>                    boolean
+    <strong>copyObject</strong>(string $sourceObject, string $destObject, array $meta = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Copy an object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sourceObject</td>
+                <td>Source object name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$destObject</td>
+                <td>Destination object name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$meta</td>
+                <td>(OPTIONAL) Metadata to apply to desination object.
+                              Set to null to copy metadata from source object.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_moveObject">
+        <div class="location">at line         line 596</div>
+        <code>                    
+    <strong>moveObject</strong>(string $sourceObject, string $destObject, array $meta = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Move an object</p>                    <p>Performs a copy to dest + verify + remove source</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sourceObject</td>
+                <td>Source object name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$destObject</td>
+                <td>Destination object name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$meta</td>
+                <td>(OPTIONAL) Metadata to apply to destination object.
+                             Set to null to retain existing metadata.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__makeRequest">
+        <div class="location">at line         line 620</div>
+        <code>                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+    <strong>_makeRequest</strong>(string $method, string $path = &#039;&#039;, array $params = null, array $headers = array(), string|resource $data = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Make a request to Amazon S3</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>Request method</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Path to requested object</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>Request parameters</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>HTTP headers</td>
+            </tr>
+                    <tr>
+                <td>string|resource</td>
+                <td>$data</td>
+                <td>Request data</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Response.html">Zend_Http_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMimeType">
+        <div class="location">at line         line 796</div>
+        <code>        static            string
+    <strong>getMimeType</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attempt to get the content-type of a file based on the extension</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerAsClient">
+        <div class="location">at line         line 958</div>
+        <code>                    <a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+    <strong>registerAsClient</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register this object as stream wrapper client</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unregisterAsClient">
+        <div class="location">at line         line 970</div>
+        <code>                    <a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+    <strong>unregisterAsClient</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unregister this object as stream wrapper client</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWrapperClient">
+        <div class="location">at line         line 982</div>
+        <code>        static            <a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+    <strong>getWrapperClient</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get wrapper client for stream type</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerStreamWrapper">
+        <div class="location">at line         line 993</div>
+        <code>                    <a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+    <strong>registerStreamWrapper</strong>(string $name = &#039;s3&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register this object as stream wrapper</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unregisterStreamWrapper">
+        <div class="location">at line         line 1010</div>
+        <code>                    <a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a>
+    <strong>unregisterStreamWrapper</strong>(string $name = &#039;s3&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unregister this object as stream wrapper</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Amazon_S3.html">Zend_Service_Amazon_S3</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

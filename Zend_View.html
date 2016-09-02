@@ -1,0 +1,5046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_View | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_View" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_View
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_View</strong>        extends <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Concrete class for handling view scripts.</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $config = array())
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEngine">getEngine</a>()
+        
+                                            <p>Return the template engine object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getEngine">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Allow custom object initialization when extending Zend<em>View</em>Abstract or
+Zend_View</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_init">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $key)
+        
+                                            <p>Prevent E_NOTICE for nonexistent values</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method___get">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___isset">__isset</a>(string $key)
+        
+                                            <p>Allows testing with empty() and isset() to work inside
+templates.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method___isset">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___set">__set</a>(string $key, mixed $val)
+        
+                                            <p>Directly assigns a variable to the view script.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method___set">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___unset">__unset</a>(string $key)
+        
+                                            <p>Allows unset() on object properties to work</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method___unset">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $name, array $args)
+        
+                                            <p>Accesses a helper object from within a script.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method___call">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBasePath">setBasePath</a>(string $path, string $classPrefix = &#039;Zend_View&#039;)
+        
+                                            <p>Given a base path, sets the script, helper, and filter paths relative to it</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_setBasePath">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addBasePath">addBasePath</a>(string $path, string $classPrefix = &#039;Zend_View&#039;)
+        
+                                            <p>Given a base path, add script, helper, and filter paths relative to it</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_addBasePath">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addScriptPath">addScriptPath</a>(string|array $path)
+        
+                                            <p>Adds to the stack of view script paths in LIFO order.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_addScriptPath">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setScriptPath">setScriptPath</a>(string|array $path)
+        
+                                            <p>Resets the stack of view script paths.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_setScriptPath">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    false|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getScriptPath">getScriptPath</a>(string $name)
+        
+                                            <p>Return full path to a view script specified by $name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getScriptPath">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getScriptPaths">getScriptPaths</a>()
+        
+                                            <p>Returns an array of all currently set script paths</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getScriptPaths">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPluginLoader">setPluginLoader</a>(<a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a> $loader, string $type)
+        
+                                            <p>Set plugin loader for a particular plugin type</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_setPluginLoader">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPluginLoader">getPluginLoader</a>(string $type)
+        
+                                            <p>Retrieve plugin loader for a specific plugin type</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getPluginLoader">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addHelperPath">addHelperPath</a>(string|array $path, string $classPrefix = &#039;Zend_View_Helper_&#039;)
+        
+                                            <p>Adds to the stack of helper paths in LIFO order.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_addHelperPath">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHelperPath">setHelperPath</a>(string|array $path, string $classPrefix = &#039;Zend_View_Helper_&#039;)
+        
+                                            <p>Resets the stack of helper paths.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_setHelperPath">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHelperPath">getHelperPath</a>(string $name)
+        
+                                            <p>Get full path to a helper class file specified by $name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getHelperPath">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHelperPaths">getHelperPaths</a>()
+        
+                                            <p>Returns an array of all currently set helper paths</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getHelperPaths">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerHelper">registerHelper</a>(<a href="Zend_View_Helper_Abstract.html">Zend_View_Helper_Abstract</a>|object $helper, string $name)
+        
+                                            <p>Registers a helper object, bypassing plugin loader</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_registerHelper">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHelper">getHelper</a>(string $name)
+        
+                                            <p>Get a helper by name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getHelper">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHelpers">getHelpers</a>()
+        
+                                            <p>Get array of all active helpers</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getHelpers">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFilterPath">addFilterPath</a>(string|array $path, string $classPrefix = &#039;Zend_View_Filter_&#039;)
+        
+                                            <p>Adds to the stack of filter paths in LIFO order.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_addFilterPath">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFilterPath">setFilterPath</a>(string|array $path, string $classPrefix = &#039;Zend_View_Filter_&#039;)
+        
+                                            <p>Resets the stack of filter paths.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_setFilterPath">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilterPath">getFilterPath</a>(string $name)
+        
+                                            <p>Get full path to a filter class file specified by $name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getFilterPath">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilter">getFilter</a>(string $name)
+        
+                                            <p>Get a filter object by name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getFilter">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilters">getFilters</a>()
+        
+                                            <p>Return array of all currently active filters</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getFilters">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilterPaths">getFilterPaths</a>()
+        
+                                            <p>Returns an array of all currently set filter paths</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getFilterPaths">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAllPaths">getAllPaths</a>()
+        
+                                            <p>Return associative array of path types => paths</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getAllPaths">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFilter">addFilter</a>(string|array $name)
+        
+                                            <p>Add one or more filters to the stack in FIFO order.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_addFilter">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFilter">setFilter</a>(string|array $name)
+        
+                                            <p>Resets the filter stack.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_setFilter">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEscape">setEscape</a>(mixed $spec)
+        
+                                            <p>Sets the _escape() callback.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_setEscape">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLfiProtection">setLfiProtection</a>(bool $flag)
+        
+                                            <p>Set LFI protection flag</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_setLfiProtection">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isLfiProtectionOn">isLfiProtectionOn</a>()
+        
+                                            <p>Return status of LFI protection flag</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_isLfiProtectionOn">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_assign">assign</a>(string|array $spec, mixed $value = null)
+        
+                                            <p>Assigns variables to the view script via differing strategies.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_assign">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVars">getVars</a>()
+        
+                                            <p>Return list of all assigned variables</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getVars">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearVars">clearVars</a>()
+        
+                                            <p>Clear all assigned variables</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_clearVars">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>(string $name)
+        
+                                            <p>Processes a view script and returns the output.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_render">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_escape">escape</a>(mixed $var)
+        
+                                            <p>Escapes a value for output in a view script.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_escape">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEncoding">setEncoding</a>(string $encoding)
+        
+                                            <p>Set encoding to use with htmlentities() and htmlspecialchars()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_setEncoding">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEncoding">getEncoding</a>()
+        
+                                            <p>Return current escape encoding</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_getEncoding">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_strictVars">strictVars</a>(boolean $flag = true)
+        
+                                            <p>Enable or disable strict vars</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Abstract.html#method_strictVars">Zend_View_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View.html">Zend_View</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUseStreamWrapper">setUseStreamWrapper</a>(bool $flag)
+        
+                                            <p>Set flag indicating if stream wrapper should be used if short<em>open</em>tag is off</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_useStreamWrapper">useStreamWrapper</a>()
+        
+                                            <p>Should the stream wrapper be used if short<em>open</em>tag is off?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_baseUrl">baseUrl</a>($file = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_currency">currency</a>($value = null, $currency = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Cycle.html">Zend_View_Helper_Cycle</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cycle">cycle</a>(array  $data = array(), $name = Zend_View_Helper_Cycle::DEFAULT_NAME)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Doctype.html">Zend_View_Helper_Doctype</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_doctype">doctype</a>($doctype = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fieldset">fieldset</a>($name, $content, $attribs = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_form">form</a>($name, $attribs = null, $content = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formButton">formButton</a>($name, $value = null, $attribs = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formCheckbox">formCheckbox</a>($name, $value = null, $attribs = null, array  $checkedOptions = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formErrors">formErrors</a>($errors, array  $options = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formFile">formFile</a>($name, $attribs = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formHidden">formHidden</a>($name, $value = null, array  $attribs = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formImage">formImage</a>($name, $value = null, $attribs = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formLabel">formLabel</a>($name, $value = null, array  $attribs = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formMultiCheckbox">formMultiCheckbox</a>($name, $value = null, $attribs = null, $options = null, $listsep = &quot;&lt;br /&gt;\n&quot;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formNote">formNote</a>($name, $value = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formPassword">formPassword</a>($name, $value = null, $attribs = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formRadio">formRadio</a>($name, $value = null, $attribs = null, $options = null, $listsep = &quot;&lt;br /&gt;\n&quot;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formReset">formReset</a>($name = &#039;&#039;, $value = &#039;Reset&#039;, $attribs = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formSelect">formSelect</a>($name, $value = null, $attribs = null, $options = null, $listsep = &quot;&lt;br /&gt;\n&quot;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formSubmit">formSubmit</a>($name, $value = null, $attribs = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formText">formText</a>($name, $value = null, $attribs = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_formTextarea">formTextarea</a>($name, $value = null, $attribs = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_gravatar">gravatar</a>($email = &quot;&quot;, $options = array(), $attribs = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_HeadLink.html">Zend_View_Helper_HeadLink</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_headLink">headLink</a>(array  $attributes = null, $placement = Zend_View_Helper_Placeholder_Container_Abstract::APPEND)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_HeadMeta.html">Zend_View_Helper_HeadMeta</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_headMeta">headMeta</a>($content = null, $keyValue = null, $keyType = &#039;name&#039;, $modifiers = array(), $placement = Zend_View_Helper_Placeholder_Container_Abstract::APPEND)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_HeadScript.html">Zend_View_Helper_HeadScript</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_headScript">headScript</a>($mode = Zend_View_Helper_HeadScript::FILE, $spec = null, $placement = &#039;APPEND&#039;, array  $attrs = array(), $type = &#039;text/javascript&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_HeadStyle.html">Zend_View_Helper_HeadStyle</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_headStyle">headStyle</a>($content = null, $placement = &#039;APPEND&#039;, $attributes = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_HeadTitle.html">Zend_View_Helper_HeadTitle</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_headTitle">headTitle</a>($title = null, $setType = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_htmlFlash">htmlFlash</a>($data, array  $attribs = array(), array  $params = array(), $content = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_htmlList">htmlList</a>(array  $items, $ordered = false, $attribs = false, $escape = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_htmlObject">htmlObject</a>($data, $type, array  $attribs = array(), array  $params = array(), $content = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_htmlPage">htmlPage</a>($data, array  $attribs = array(), array  $params = array(), $content = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_htmlQuicktime">htmlQuicktime</a>($data, array  $attribs = array(), array  $params = array(), $content = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_InlineScript.html">Zend_View_Helper_InlineScript</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_inlineScript">inlineScript</a>($mode = Zend_View_Helper_HeadScript::FILE, $spec = null, $placement = &#039;APPEND&#039;, array  $attrs = array(), $type = &#039;text/javascript&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_json">json</a>($data, $keepLayouts = false, $encodeData = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Layout.html">Zend_View_Helper_Layout</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_layout">layout</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Navigation.html">Zend_View_Helper_Navigation</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_navigation">navigation</a>(Zend_Navigation_Container  $container = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_paginationControl">paginationControl</a>(Zend_Paginator  $paginator = null, $scrollingStyle = null, $partial = null, $params = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_partial">partial</a>($name = null, $module = null, $model = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_partialLoop">partialLoop</a>($name = null, $module = null, $model = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Placeholder_Container_Abstract.html">Zend_View_Helper_Placeholder_Container_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_placeholder">placeholder</a>($name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderToPlaceholder">renderToPlaceholder</a>($script, $placeholder)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serverUrl">serverUrl</a>($requestUri = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_translate">translate</a>($messageid = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_url">url</a>(array  $urlOptions = array(), $name = null, $reset = false, $encode = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userAgent">userAgent</a>(Zend_Http_UserAgent  $userAgent = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 108</div>
+        <code>                    
+    <strong>__construct</strong>(array $config = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                    <p>Register Zend<em>View</em>Stream stream wrapper if short tags are disabled.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td>Configuration key-value pairs.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEngine">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getEngine">Zend_View_Abstract</a> at line         line 242</div>
+        <code>                    mixed
+    <strong>getEngine</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the template engine object</p>                    <p>Returns the object instance, as it is its own template engine</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_init">Zend_View_Abstract</a> at line         line 255</div>
+        <code>                    void
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allow custom object initialization when extending Zend<em>View</em>Abstract or
+Zend_View</p>                    <p>Triggered by {@link __construct() the constructor} as its final action.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">in <a href="Zend_View_Abstract.html#method___get">Zend_View_Abstract</a> at line         line 267</div>
+        <code>                    null
+    <strong>__get</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prevent E_NOTICE for nonexistent values</p>                    <p>If {@link strictVars()} is on, raises a notice.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">in <a href="Zend_View_Abstract.html#method___isset">Zend_View_Abstract</a> at line         line 283</div>
+        <code>                    boolean
+    <strong>__isset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allows testing with empty() and isset() to work inside
+templates.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___set">
+        <div class="location">in <a href="Zend_View_Abstract.html#method___set">Zend_View_Abstract</a> at line         line 305</div>
+        <code>                    void
+    <strong>__set</strong>(string $key, mixed $val)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Directly assigns a variable to the view script.</p>                    <p>Checks first to ensure that the caller is not attempting to set a
+protected or private member (by checking for a prefixed underscore); if
+not, the public member is set; otherwise, an exception is raised.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>The variable name.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$val</td>
+                <td>The variable value.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_View_Exception.html">Zend_View_Exception</a></td>
+                <td>if an attempt to set a private or protected
+member is detected</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___unset">
+        <div class="location">in <a href="Zend_View_Abstract.html#method___unset">Zend_View_Abstract</a> at line         line 324</div>
+        <code>                    void
+    <strong>__unset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allows unset() on object properties to work</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="Zend_View_Abstract.html#method___call">Zend_View_Abstract</a> at line         line 341</div>
+        <code>                    string
+    <strong>__call</strong>(string $name, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Accesses a helper object from within a script.</p>                    <p>If the helper class has a 'view' property, sets it with the current view
+object.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The helper name.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>The parameters for the helper.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The result of the helper output.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBasePath">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_setBasePath">Zend_View_Abstract</a> at line         line 368</div>
+        <code>                    void
+    <strong>setBasePath</strong>(string $path, string $classPrefix = &#039;Zend_View&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Given a base path, sets the script, helper, and filter paths relative to it</p>                    <p>Assumes a directory structure of:
+<code>
+basePath/
+    scripts/
+    helpers/
+    filters/
+</code></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$classPrefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addBasePath">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_addBasePath">Zend_View_Abstract</a> at line         line 395</div>
+        <code>                    void
+    <strong>addBasePath</strong>(string $path, string $classPrefix = &#039;Zend_View&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Given a base path, add script, helper, and filter paths relative to it</p>                    <p>Assumes a directory structure of:
+<code>
+basePath/
+    scripts/
+    helpers/
+    filters/
+</code></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$classPrefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addScriptPath">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_addScriptPath">Zend_View_Abstract</a> at line         line 413</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>addScriptPath</strong>(string|array $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds to the stack of view script paths in LIFO order.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$path</td>
+                <td>The directory (-ies) to add.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setScriptPath">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_setScriptPath">Zend_View_Abstract</a> at line         line 427</div>
+        <code>                    void
+    <strong>setScriptPath</strong>(string|array $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resets the stack of view script paths.</p>                    <p>To clear all paths, use Zend_View::setScriptPath(null).</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$path</td>
+                <td>The directory (-ies) to set as the path. Note that
+the concrete view implentation may not necessarily support multiple
+directories.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getScriptPath">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getScriptPath">Zend_View_Abstract</a> at line         line 441</div>
+        <code>                    false|string
+    <strong>getScriptPath</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return full path to a view script specified by $name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>false|string</td>
+            <td>False if script not found</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_View_Exception.html">Zend_View_Exception</a></td>
+                <td>if no script directory set</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getScriptPaths">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getScriptPaths">Zend_View_Abstract</a> at line         line 460</div>
+        <code>                    array
+    <strong>getScriptPaths</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array of all currently set script paths</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPluginLoader">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_setPluginLoader">Zend_View_Abstract</a> at line         line 472</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>setPluginLoader</strong>(<a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a> $loader, string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set plugin loader for a particular plugin type</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a></td>
+                <td>$loader</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPluginLoader">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getPluginLoader">Zend_View_Abstract</a> at line         line 492</div>
+        <code>                    <a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a>
+    <strong>getPluginLoader</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve plugin loader for a specific plugin type</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addHelperPath">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_addHelperPath">Zend_View_Abstract</a> at line         line 531</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>addHelperPath</strong>(string|array $path, string $classPrefix = &#039;Zend_View_Helper_&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds to the stack of helper paths in LIFO order.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$path</td>
+                <td>The directory (-ies) to add.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$classPrefix</td>
+                <td>Class prefix to use with classes in this
+directory; defaults to Zend<em>View</em>Helper</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHelperPath">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_setHelperPath">Zend_View_Abstract</a> at line         line 546</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>setHelperPath</strong>(string|array $path, string $classPrefix = &#039;Zend_View_Helper_&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resets the stack of helper paths.</p>                    <p>To clear all paths, use Zend_View::setHelperPath(null).</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$path</td>
+                <td>The directory (-ies) to set as the path.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$classPrefix</td>
+                <td>The class prefix to apply to all elements in
+$path; defaults to Zend<em>View</em>Helper</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHelperPath">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getHelperPath">Zend_View_Abstract</a> at line         line 558</div>
+        <code>                    string|false
+    <strong>getHelperPath</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get full path to a helper class file specified by $name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|false</td>
+            <td>False on failure, path on success</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHelperPaths">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getHelperPaths">Zend_View_Abstract</a> at line         line 568</div>
+        <code>                    array
+    <strong>getHelperPaths</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array of all currently set helper paths</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerHelper">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_registerHelper">Zend_View_Abstract</a> at line         line 581</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>registerHelper</strong>(<a href="Zend_View_Helper_Abstract.html">Zend_View_Helper_Abstract</a>|object $helper, string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Registers a helper object, bypassing plugin loader</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_View_Helper_Abstract.html">Zend_View_Helper_Abstract</a>|object</td>
+                <td>$helper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_View_Exception.html">Zend_View_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHelper">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getHelper">Zend_View_Abstract</a> at line         line 616</div>
+        <code>                    object
+    <strong>getHelper</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a helper by name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHelpers">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getHelpers">Zend_View_Abstract</a> at line         line 628</div>
+        <code>                    array
+    <strong>getHelpers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get array of all active helpers</p>                    <p>Only returns those that have already been instantiated.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFilterPath">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_addFilterPath">Zend_View_Abstract</a> at line         line 641</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>addFilterPath</strong>(string|array $path, string $classPrefix = &#039;Zend_View_Filter_&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds to the stack of filter paths in LIFO order.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$path</td>
+                <td>The directory (-ies) to add.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$classPrefix</td>
+                <td>Class prefix to use with classes in this
+directory; defaults to Zend<em>View</em>Filter</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFilterPath">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_setFilterPath">Zend_View_Abstract</a> at line         line 656</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>setFilterPath</strong>(string|array $path, string $classPrefix = &#039;Zend_View_Filter_&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resets the stack of filter paths.</p>                    <p>To clear all paths, use Zend_View::setFilterPath(null).</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$path</td>
+                <td>The directory (-ies) to set as the path.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$classPrefix</td>
+                <td>The class prefix to apply to all elements in
+$path; defaults to Zend<em>View</em>Filter</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilterPath">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getFilterPath">Zend_View_Abstract</a> at line         line 668</div>
+        <code>                    string|false
+    <strong>getFilterPath</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get full path to a filter class file specified by $name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|false</td>
+            <td>False on failure, path on success</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilter">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getFilter">Zend_View_Abstract</a> at line         line 679</div>
+        <code>                    object
+    <strong>getFilter</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a filter object by name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilters">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getFilters">Zend_View_Abstract</a> at line         line 691</div>
+        <code>                    array
+    <strong>getFilters</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return array of all currently active filters</p>                    <p>Only returns those that have already been instantiated.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilterPaths">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getFilterPaths">Zend_View_Abstract</a> at line         line 701</div>
+        <code>                    array
+    <strong>getFilterPaths</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array of all currently set filter paths</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllPaths">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getAllPaths">Zend_View_Abstract</a> at line         line 711</div>
+        <code>                    array
+    <strong>getAllPaths</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return associative array of path types => paths</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFilter">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_addFilter">Zend_View_Abstract</a> at line         line 725</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>addFilter</strong>(string|array $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add one or more filters to the stack in FIFO order.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$name</td>
+                <td>One or more filters to add.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFilter">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_setFilter">Zend_View_Abstract</a> at line         line 741</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>setFilter</strong>(string|array $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resets the filter stack.</p>                    <p>To clear all filters, use Zend_View::setFilter(null).</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$name</td>
+                <td>One or more filters to set.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEscape">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_setEscape">Zend_View_Abstract</a> at line         line 754</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>setEscape</strong>(mixed $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the _escape() callback.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$spec</td>
+                <td>The callback for _escape() to use.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLfiProtection">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_setLfiProtection">Zend_View_Abstract</a> at line         line 766</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>setLfiProtection</strong>(bool $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set LFI protection flag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isLfiProtectionOn">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_isLfiProtectionOn">Zend_View_Abstract</a> at line         line 777</div>
+        <code>                    bool
+    <strong>isLfiProtectionOn</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return status of LFI protection flag</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assign">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_assign">Zend_View_Abstract</a> at line         line 799</div>
+        <code>                    void
+    <strong>assign</strong>(string|array $spec, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Assigns variables to the view script via differing strategies.</p>                    <p>Zend_View::assign('name', $value) assigns a variable called 'name'
+with the corresponding $value.</p>
+
+<p>Zend_View::assign($array) assigns the array keys as variable
+names (with the corresponding array values).</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$spec</td>
+                <td>The assignment strategy to use (key or array of key
+=> value pairs)</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>(Optional) If assigning a named variable, use this
+as the value.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_View_Exception.html">Zend_View_Exception</a></td>
+                <td>if $spec is neither a string nor an array,
+or if an attempt to set a private or protected member is detected</td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>__set()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVars">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getVars">Zend_View_Abstract</a> at line         line 845</div>
+        <code>                    array
+    <strong>getVars</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return list of all assigned variables</p>                    <p>Returns all public properties of the object. Reflection is not used
+here as testing reflection properties for visibility is buggy.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearVars">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_clearVars">Zend_View_Abstract</a> at line         line 865</div>
+        <code>                    void
+    <strong>clearVars</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear all assigned variables</p>                    <p>Clears all variables assigned to Zend_View either via {@link assign()} or
+property overloading ({@link __set()}).</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_render">Zend_View_Abstract</a> at line         line 881</div>
+        <code>                    string
+    <strong>render</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Processes a view script and returns the output.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The script name to process.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The script output.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_escape">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_escape">Zend_View_Abstract</a> at line         line 902</div>
+        <code>                    mixed
+    <strong>escape</strong>(mixed $var)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Escapes a value for output in a view script.</p>                    <p>If escaping mechanism is one of htmlspecialchars or htmlentities, uses
+{@link $_encoding} setting.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$var</td>
+                <td>The output to escape.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>The escaped value.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEncoding">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_setEncoding">Zend_View_Abstract</a> at line         line 921</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>setEncoding</strong>(string $encoding)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set encoding to use with htmlentities() and htmlspecialchars()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEncoding">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_getEncoding">Zend_View_Abstract</a> at line         line 932</div>
+        <code>                    string
+    <strong>getEncoding</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return current escape encoding</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_strictVars">
+        <div class="location">in <a href="Zend_View_Abstract.html#method_strictVars">Zend_View_Abstract</a> at line         line 949</div>
+        <code>                    <a href="Zend_View_Abstract.html">Zend_View_Abstract</a>
+    <strong>strictVars</strong>(boolean $flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enable or disable strict vars</p>                    <p>If strict variables are enabled, {@link __get()} will raise a notice
+when a variable is not defined.</p>
+
+<p>Use in conjunction with {@link Zend<em>View</em>Helper_DeclareVars the declareVars() helper}
+to enforce strict variable handling in your view scripts.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Abstract.html">Zend_View_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUseStreamWrapper">
+        <div class="location">at line         line 131</div>
+        <code>                    <a href="Zend_View.html">Zend_View</a>
+    <strong>setUseStreamWrapper</strong>(bool $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set flag indicating if stream wrapper should be used if short<em>open</em>tag is off</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View.html">Zend_View</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_useStreamWrapper">
+        <div class="location">at line         line 142</div>
+        <code>                    bool
+    <strong>useStreamWrapper</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Should the stream wrapper be used if short<em>open</em>tag is off?</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_baseUrl">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>baseUrl</strong>($file = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currency">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>currency</strong>($value = null, $currency = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$currency</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cycle">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_Cycle.html">Zend_View_Helper_Cycle</a>
+    <strong>cycle</strong>(array  $data = array(), $name = Zend_View_Helper_Cycle::DEFAULT_NAME)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array </td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Cycle.html">Zend_View_Helper_Cycle</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_doctype">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_Doctype.html">Zend_View_Helper_Doctype</a>
+    <strong>doctype</strong>($doctype = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$doctype</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Doctype.html">Zend_View_Helper_Doctype</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fieldset">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>fieldset</strong>($name, $content, $attribs = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_form">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>form</strong>($name, $attribs = null, $content = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formButton">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formButton</strong>($name, $value = null, $attribs = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formCheckbox">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formCheckbox</strong>($name, $value = null, $attribs = null, array  $checkedOptions = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$checkedOptions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formErrors">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formErrors</strong>($errors, array  $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$errors</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formFile">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formFile</strong>($name, $attribs = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formHidden">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formHidden</strong>($name, $value = null, array  $attribs = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formImage">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formImage</strong>($name, $value = null, $attribs = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formLabel">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formLabel</strong>($name, $value = null, array  $attribs = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formMultiCheckbox">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formMultiCheckbox</strong>($name, $value = null, $attribs = null, $options = null, $listsep = &quot;&lt;br /&gt;\n&quot;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$listsep</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formNote">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formNote</strong>($name, $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formPassword">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formPassword</strong>($name, $value = null, $attribs = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formRadio">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formRadio</strong>($name, $value = null, $attribs = null, $options = null, $listsep = &quot;&lt;br /&gt;\n&quot;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$listsep</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formReset">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formReset</strong>($name = &#039;&#039;, $value = &#039;Reset&#039;, $attribs = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formSelect">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formSelect</strong>($name, $value = null, $attribs = null, $options = null, $listsep = &quot;&lt;br /&gt;\n&quot;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$listsep</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formSubmit">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formSubmit</strong>($name, $value = null, $attribs = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formText">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formText</strong>($name, $value = null, $attribs = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formTextarea">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>formTextarea</strong>($name, $value = null, $attribs = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_gravatar">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+    <strong>gravatar</strong>($email = &quot;&quot;, $options = array(), $attribs = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_headLink">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_HeadLink.html">Zend_View_Helper_HeadLink</a>
+    <strong>headLink</strong>(array  $attributes = null, $placement = Zend_View_Helper_Placeholder_Container_Abstract::APPEND)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array </td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$placement</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_HeadLink.html">Zend_View_Helper_HeadLink</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_headMeta">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_HeadMeta.html">Zend_View_Helper_HeadMeta</a>
+    <strong>headMeta</strong>($content = null, $keyValue = null, $keyType = &#039;name&#039;, $modifiers = array(), $placement = Zend_View_Helper_Placeholder_Container_Abstract::APPEND)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$keyValue</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$keyType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$modifiers</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$placement</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_HeadMeta.html">Zend_View_Helper_HeadMeta</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_headScript">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_HeadScript.html">Zend_View_Helper_HeadScript</a>
+    <strong>headScript</strong>($mode = Zend_View_Helper_HeadScript::FILE, $spec = null, $placement = &#039;APPEND&#039;, array  $attrs = array(), $type = &#039;text/javascript&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$placement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$attrs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_HeadScript.html">Zend_View_Helper_HeadScript</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_headStyle">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_HeadStyle.html">Zend_View_Helper_HeadStyle</a>
+    <strong>headStyle</strong>($content = null, $placement = &#039;APPEND&#039;, $attributes = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$placement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_HeadStyle.html">Zend_View_Helper_HeadStyle</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_headTitle">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_HeadTitle.html">Zend_View_Helper_HeadTitle</a>
+    <strong>headTitle</strong>($title = null, $setType = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$title</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$setType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_HeadTitle.html">Zend_View_Helper_HeadTitle</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_htmlFlash">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>htmlFlash</strong>($data, array  $attribs = array(), array  $params = array(), $content = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_htmlList">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>htmlList</strong>(array  $items, $ordered = false, $attribs = false, $escape = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array </td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$ordered</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$escape</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_htmlObject">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>htmlObject</strong>($data, $type, array  $attribs = array(), array  $params = array(), $content = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_htmlPage">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>htmlPage</strong>($data, array  $attribs = array(), array  $params = array(), $content = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_htmlQuicktime">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>htmlQuicktime</strong>($data, array  $attribs = array(), array  $params = array(), $content = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inlineScript">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_InlineScript.html">Zend_View_Helper_InlineScript</a>
+    <strong>inlineScript</strong>($mode = Zend_View_Helper_HeadScript::FILE, $spec = null, $placement = &#039;APPEND&#039;, array  $attrs = array(), $type = &#039;text/javascript&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$placement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array </td>
+                <td>$attrs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_InlineScript.html">Zend_View_Helper_InlineScript</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_json">
+        <div class="location">at line         line 86</div>
+        <code>                    string|void
+    <strong>json</strong>($data, $keepLayouts = false, $encodeData = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$keepLayouts</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$encodeData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_layout">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_Layout.html">Zend_View_Helper_Layout</a>
+    <strong>layout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Layout.html">Zend_View_Helper_Layout</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_navigation">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_Navigation.html">Zend_View_Helper_Navigation</a>
+    <strong>navigation</strong>(Zend_Navigation_Container  $container = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Zend_Navigation_Container </td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Navigation.html">Zend_View_Helper_Navigation</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_paginationControl">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>paginationControl</strong>(Zend_Paginator  $paginator = null, $scrollingStyle = null, $partial = null, $params = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Zend_Paginator </td>
+                <td>$paginator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$scrollingStyle</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$partial</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_partial">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>partial</strong>($name = null, $module = null, $model = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$module</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$model</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_partialLoop">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>partialLoop</strong>($name = null, $module = null, $model = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$module</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$model</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeholder">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_View_Helper_Placeholder_Container_Abstract.html">Zend_View_Helper_Placeholder_Container_Abstract</a>
+    <strong>placeholder</strong>($name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Placeholder_Container_Abstract.html">Zend_View_Helper_Placeholder_Container_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderToPlaceholder">
+        <div class="location">at line         line 86</div>
+        <code>                    void
+    <strong>renderToPlaceholder</strong>($script, $placeholder)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$placeholder</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serverUrl">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>serverUrl</strong>($requestUri = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$requestUri</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_translate">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>translate</strong>($messageid = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_url">
+        <div class="location">at line         line 86</div>
+        <code>                    string
+    <strong>url</strong>(array  $urlOptions = array(), $name = null, $reset = false, $encode = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array </td>
+                <td>$urlOptions</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$reset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$encode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userAgent">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+    <strong>userAgent</strong>(Zend_Http_UserAgent  $userAgent = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Zend_Http_UserAgent </td>
+                <td>$userAgent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

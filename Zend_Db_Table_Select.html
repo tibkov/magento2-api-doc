@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Db_Table_Select | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Db_Table_Select" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Db_Table_Select
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Db_Table_Select</strong>        extends <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class for SQL SELECT query manipulation for the Zend<em>Db</em>Table component.</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>DISTINCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COLUMNS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FROM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WHERE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GROUP</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HAVING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ORDER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LIMIT_COUNT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LIMIT_OFFSET</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FOR_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INNER_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LEFT_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RIGHT_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FULL_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CROSS_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NATURAL_JOIN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_WILDCARD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_SELECT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_UNION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_UNION_ALL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_FROM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_WHERE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_DISTINCT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_GROUP_BY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_ORDER_BY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_HAVING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_FOR_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_AND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_AS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_OR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_ON</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_ASC</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SQL_DESC</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REGEX_COLUMN_EXPR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="Zend_Db_Table_Abstract.html">Zend_Db_Table_Abstract</a> $table)
+        
+                                            <p>Class constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBind">getBind</a>()
+        
+                                            <p>Get bind variables</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_getBind">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_bind">bind</a>(mixed $bind)
+        
+                                            <p>Set bind variables</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_bind">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_distinct">distinct</a>(bool $flag = true)
+        
+                                            <p>Makes the query SELECT DISTINCT.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_distinct">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_from">from</a>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $cols = self::SQL_WILDCARD, string $schema = null)
+        
+                                            <p>Adds a FROM table and optional columns to the query.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_columns">columns</a>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $cols = &#039;*&#039;, string $correlationName = null)
+        
+                                            <p>Specifies the columns used in the FROM clause.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_columns">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_union">union</a>($select = array(), $type = self::SQL_UNION)
+        
+                                            <p>Adds a UNION clause to the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_union">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_join">join</a>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, string $cond, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        
+                                            <p>Adds a JOIN table and columns to the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_join">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinInner">joinInner</a>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, string $cond, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        
+                                            <p>Add an INNER JOIN table and colums to the query
+Rows in both tables are matched according to the expression
+in the $cond argument.  The result set is comprised
+of all cases where rows from the left table match
+rows from the right table.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_joinInner">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinLeft">joinLeft</a>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, string $cond, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        
+                                            <p>Add a LEFT OUTER JOIN table and colums to the query
+All rows from the left operand table are included,
+matching rows from the right operand table included,
+and the columns from the right operand table are filled
+with NULLs if no row exists matching the left table.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_joinLeft">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinRight">joinRight</a>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, string $cond, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        
+                                            <p>Add a RIGHT OUTER JOIN table and colums to the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_joinRight">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinFull">joinFull</a>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, string $cond, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        
+                                            <p>Add a FULL OUTER JOIN table and colums to the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_joinFull">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinCross">joinCross</a>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        
+                                            <p>Add a CROSS JOIN table and colums to the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_joinCross">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_joinNatural">joinNatural</a>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        
+                                            <p>Add a NATURAL JOIN table and colums to the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_joinNatural">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_where">where</a>(string $cond, mixed $value = null, int $type = null)
+        
+                                            <p>Adds a WHERE condition to the query by AND.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_where">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orWhere">orWhere</a>(string $cond, mixed $value = null, int $type = null)
+        
+                                            <p>Adds a WHERE condition to the query by OR.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_orWhere">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_group">group</a>(array|string $spec)
+        
+                                            <p>Adds grouping to the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_group">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_having">having</a>(string $cond, mixed $value = null, int $type = null)
+        
+                                            <p>Adds a HAVING condition to the query by AND.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_having">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_orHaving">orHaving</a>(string $cond, mixed $value = null, int $type = null)
+        
+                                            <p>Adds a HAVING condition to the query by OR.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_orHaving">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_order">order</a>(mixed $spec)
+        
+                                            <p>Adds a row order to the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_order">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_limit">limit</a>(int $count = null, int $offset = null)
+        
+                                            <p>Sets a limit count and offset to the query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_limit">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_limitPage">limitPage</a>(int $page, int $rowCount)
+        
+                                            <p>Sets the limit and count by page number.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_limitPage">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_forUpdate">forUpdate</a>(bool $flag = true)
+        
+                                            <p>Makes the query SELECT FOR UPDATE.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_forUpdate">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPart">getPart</a>(string $part)
+        
+                                            <p>Get part of the structured information for the current query.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_getPart">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    PDO_Statement|<a href="Zend_Db_Statement.html">Zend_Db_Statement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_query">query</a>(integer $fetchMode = null, mixed $bind = array())
+        
+                                            <p>Executes the current select object and returns the result</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_query">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_assemble">assemble</a>()
+        
+                                            <p>Performs a validation on the select query before passing back to the parent class.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reset">reset</a>(string $part = null)
+        
+                                            <p>Clear parts of the Select object, or an individual part.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_reset">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAdapter">getAdapter</a>()
+        
+                                            <p>Gets the Zend<em>Db</em>Adapter<em>Abstract for this
+particular Zend</em>Db_Select object.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method_getAdapter">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__joinUsing">_joinUsing</a>($type, $name, $cond, $cols = &#039;*&#039;, $schema = null)
+        
+                                            <p>Handle JOIN.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method__joinUsing">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $args)
+        
+                                            <p>Turn magic function calls into non-magic function calls
+for joinUsing syntax</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method___call">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Implements magic method.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Db_Select.html#method___toString">Zend_Db_Select</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Table_Abstract.html">Zend_Db_Table_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTable">getTable</a>()
+        
+                                            <p>Return the table that created this select object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTable">setTable</a>(<a href="Zend_Db_Table_Abstract.html">Zend_Db_Table_Abstract</a> $table)
+        
+                                            <p>Sets the primary table name and retrieves the table schema.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setIntegrityCheck">setIntegrityCheck</a>($flag = true)
+        
+                                            <p>Sets the integrity check flag.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isReadOnly">isReadOnly</a>()
+        
+                                            <p>Tests query to determine if expressions or aliases columns exist.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 74</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="Zend_Db_Table_Abstract.html">Zend_Db_Table_Abstract</a> $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Class constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Db_Table_Abstract.html">Zend_Db_Table_Abstract</a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBind">
+        <div class="location">in <a href="Zend_Db_Select.html#method_getBind">Zend_Db_Select</a> at line         line 176</div>
+        <code>                    array
+    <strong>getBind</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get bind variables</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bind">
+        <div class="location">in <a href="Zend_Db_Select.html#method_bind">Zend_Db_Select</a> at line         line 187</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>bind</strong>(mixed $bind)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set bind variables</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$bind</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_distinct">
+        <div class="location">in <a href="Zend_Db_Select.html#method_distinct">Zend_Db_Select</a> at line         line 200</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>distinct</strong>(bool $flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Makes the query SELECT DISTINCT.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td>Whether or not the SELECT is DISTINCT (default true).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_from">
+        <div class="location">at line         line 171</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>from</strong>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $cols = self::SQL_WILDCARD, string $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a FROM table and optional columns to the query.</p>                    <p>The table name can be expressed</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a></td>
+                <td>$name</td>
+                <td>The table name or an associative array
+                                        relating correlation name to table name.</td>
+            </tr>
+                    <tr>
+                <td>array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a></td>
+                <td>$cols</td>
+                <td>The columns to select from this table.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$schema</td>
+                <td>The schema name to specify, if any.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_columns">
+        <div class="location">in <a href="Zend_Db_Select.html#method_columns">Zend_Db_Select</a> at line         line 245</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>columns</strong>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $cols = &#039;*&#039;, string $correlationName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specifies the columns used in the FROM clause.</p>                    <p>The parameter can be a single string or Zend<em>Db</em>Expr object,
+or else an array of strings or Zend<em>Db</em>Expr objects.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a></td>
+                <td>$cols</td>
+                <td>The columns to select from this table.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$correlationName</td>
+                <td>Correlation name of target table. OPTIONAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_union">
+        <div class="location">in <a href="Zend_Db_Select.html#method_union">Zend_Db_Select</a> at line         line 282</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>union</strong>($select = array(), $type = self::SQL_UNION)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a UNION clause to the query.</p>                    <p>The first parameter has to be an array of Zend<em>Db</em>Select or
+sql query strings.</p>
+
+<p><code>
+$sql1 = $db->select();
+$sql2 = "SELECT ...";
+$select = $db->select()
+     ->union(array($sql1, $sql2))
+     ->order("id");
+</code></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$select</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_join">
+        <div class="location">in <a href="Zend_Db_Select.html#method_join">Zend_Db_Select</a> at line         line 315</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>join</strong>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, string $cond, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a JOIN table and columns to the query.</p>                    <p>The $name and $cols parameters follow the same logic
+as described in the from() method.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a></td>
+                <td>$name</td>
+                <td>The table name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>Join on this condition.</td>
+            </tr>
+                    <tr>
+                <td>array|string</td>
+                <td>$cols</td>
+                <td>The columns to select from the joined table.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$schema</td>
+                <td>The database name to specify, if any.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinInner">
+        <div class="location">in <a href="Zend_Db_Select.html#method_joinInner">Zend_Db_Select</a> at line         line 336</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>joinInner</strong>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, string $cond, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add an INNER JOIN table and colums to the query
+Rows in both tables are matched according to the expression
+in the $cond argument.  The result set is comprised
+of all cases where rows from the left table match
+rows from the right table.</p>                    <p>The $name and $cols parameters follow the same logic
+as described in the from() method.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a></td>
+                <td>$name</td>
+                <td>The table name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>Join on this condition.</td>
+            </tr>
+                    <tr>
+                <td>array|string</td>
+                <td>$cols</td>
+                <td>The columns to select from the joined table.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$schema</td>
+                <td>The database name to specify, if any.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinLeft">
+        <div class="location">in <a href="Zend_Db_Select.html#method_joinLeft">Zend_Db_Select</a> at line         line 357</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>joinLeft</strong>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, string $cond, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a LEFT OUTER JOIN table and colums to the query
+All rows from the left operand table are included,
+matching rows from the right operand table included,
+and the columns from the right operand table are filled
+with NULLs if no row exists matching the left table.</p>                    <p>The $name and $cols parameters follow the same logic
+as described in the from() method.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a></td>
+                <td>$name</td>
+                <td>The table name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>Join on this condition.</td>
+            </tr>
+                    <tr>
+                <td>array|string</td>
+                <td>$cols</td>
+                <td>The columns to select from the joined table.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$schema</td>
+                <td>The database name to specify, if any.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinRight">
+        <div class="location">in <a href="Zend_Db_Select.html#method_joinRight">Zend_Db_Select</a> at line         line 379</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>joinRight</strong>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, string $cond, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a RIGHT OUTER JOIN table and colums to the query.</p>                    <p>Right outer join is the complement of left outer join.
+All rows from the right operand table are included,
+matching rows from the left operand table included,
+and the columns from the left operand table are filled
+with NULLs if no row exists matching the right table.</p>
+
+<p>The $name and $cols parameters follow the same logic
+as described in the from() method.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a></td>
+                <td>$name</td>
+                <td>The table name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>Join on this condition.</td>
+            </tr>
+                    <tr>
+                <td>array|string</td>
+                <td>$cols</td>
+                <td>The columns to select from the joined table.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$schema</td>
+                <td>The database name to specify, if any.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinFull">
+        <div class="location">in <a href="Zend_Db_Select.html#method_joinFull">Zend_Db_Select</a> at line         line 401</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>joinFull</strong>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, string $cond, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a FULL OUTER JOIN table and colums to the query.</p>                    <p>A full outer join is like combining a left outer join
+and a right outer join.  All rows from both tables are
+included, paired with each other on the same row of the
+result set if they satisfy the join condition, and otherwise
+paired with NULLs in place of columns from the other table.</p>
+
+<p>The $name and $cols parameters follow the same logic
+as described in the from() method.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a></td>
+                <td>$name</td>
+                <td>The table name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>Join on this condition.</td>
+            </tr>
+                    <tr>
+                <td>array|string</td>
+                <td>$cols</td>
+                <td>The columns to select from the joined table.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$schema</td>
+                <td>The database name to specify, if any.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinCross">
+        <div class="location">in <a href="Zend_Db_Select.html#method_joinCross">Zend_Db_Select</a> at line         line 418</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>joinCross</strong>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a CROSS JOIN table and colums to the query.</p>                    <p>A cross join is a cartesian product; there is no join condition.</p>
+
+<p>The $name and $cols parameters follow the same logic
+as described in the from() method.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a></td>
+                <td>$name</td>
+                <td>The table name.</td>
+            </tr>
+                    <tr>
+                <td>array|string</td>
+                <td>$cols</td>
+                <td>The columns to select from the joined table.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$schema</td>
+                <td>The database name to specify, if any.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_joinNatural">
+        <div class="location">in <a href="Zend_Db_Select.html#method_joinNatural">Zend_Db_Select</a> at line         line 438</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>joinNatural</strong>(array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a> $name, array|string $cols = self::SQL_WILDCARD, string $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a NATURAL JOIN table and colums to the query.</p>                    <p>A natural join assumes an equi-join across any column(s)
+that appear with the same name in both tables.
+Only natural inner joins are supported by this API,
+even though SQL permits natural outer joins as well.</p>
+
+<p>The $name and $cols parameters follow the same logic
+as described in the from() method.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string|<a href="Zend_Db_Expr.html">Zend_Db_Expr</a></td>
+                <td>$name</td>
+                <td>The table name.</td>
+            </tr>
+                    <tr>
+                <td>array|string</td>
+                <td>$cols</td>
+                <td>The columns to select from the joined table.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$schema</td>
+                <td>The database name to specify, if any.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_where">
+        <div class="location">in <a href="Zend_Db_Select.html#method_where">Zend_Db_Select</a> at line         line 475</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>where</strong>(string $cond, mixed $value = null, int $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a WHERE condition to the query by AND.</p>                    <p>If a value is passed as the second param, it will be quoted
+and replaced into the condition wherever a question-mark
+appears. Array values are quoted and comma-separated.</p>
+
+<p><code>
+// simplest but non-secure
+$select->where("id = $id");</p>
+
+<p>// secure (ID is quoted but matched anyway)
+$select->where('id = ?', $id);</p>
+
+<p>// alternatively, with named binding
+$select->where('id = :id');
+</code></p>
+
+<p>Note that it is more correct to use named bindings in your
+queries for values other than strings. When you use named
+bindings, don't forget to pass the values when actually
+making a query:</p>
+
+<p><code>
+$db->fetchAll($select, array('id' => 5));
+</code></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>The WHERE condition.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>OPTIONAL The value to quote into the condition.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>OPTIONAL The type of the given value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orWhere">
+        <div class="location">in <a href="Zend_Db_Select.html#method_orWhere">Zend_Db_Select</a> at line         line 494</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>orWhere</strong>(string $cond, mixed $value = null, int $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a WHERE condition to the query by OR.</p>                    <p>Otherwise identical to where().</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>The WHERE condition.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>OPTIONAL The value to quote into the condition.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>OPTIONAL The type of the given value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>where()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_group">
+        <div class="location">in <a href="Zend_Db_Select.html#method_group">Zend_Db_Select</a> at line         line 507</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>group</strong>(array|string $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds grouping to the query.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$spec</td>
+                <td>The column(s) to group by.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_having">
+        <div class="location">in <a href="Zend_Db_Select.html#method_having">Zend_Db_Select</a> at line         line 535</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>having</strong>(string $cond, mixed $value = null, int $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a HAVING condition to the query by AND.</p>                    <p>If a value is passed as the second param, it will be quoted
+and replaced into the condition wherever a question-mark
+appears. See {@link where()} for an example</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>The HAVING condition.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>OPTIONAL The value to quote into the condition.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>OPTIONAL The type of the given value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orHaving">
+        <div class="location">in <a href="Zend_Db_Select.html#method_orHaving">Zend_Db_Select</a> at line         line 562</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>orHaving</strong>(string $cond, mixed $value = null, int $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a HAVING condition to the query by OR.</p>                    <p>Otherwise identical to orHaving().</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cond</td>
+                <td>The HAVING condition.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>OPTIONAL The value to quote into the condition.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>OPTIONAL The type of the given value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>having()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_order">
+        <div class="location">in <a href="Zend_Db_Select.html#method_order">Zend_Db_Select</a> at line         line 583</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>order</strong>(mixed $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a row order to the query.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$spec</td>
+                <td>The column(s) and direction to order by.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_limit">
+        <div class="location">in <a href="Zend_Db_Select.html#method_limit">Zend_Db_Select</a> at line         line 623</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>limit</strong>(int $count = null, int $offset = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets a limit count and offset to the query.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td>OPTIONAL The number of rows to return.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td>OPTIONAL Start returning after this many rows.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_limitPage">
+        <div class="location">in <a href="Zend_Db_Select.html#method_limitPage">Zend_Db_Select</a> at line         line 637</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>limitPage</strong>(int $page, int $rowCount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the limit and count by page number.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td>Limit results to this page number.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$rowCount</td>
+                <td>Use this many rows per page.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forUpdate">
+        <div class="location">in <a href="Zend_Db_Select.html#method_forUpdate">Zend_Db_Select</a> at line         line 652</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>forUpdate</strong>(bool $flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Makes the query SELECT FOR UPDATE.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td>Whether or not the SELECT is FOR UPDATE (default true).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPart">
+        <div class="location">in <a href="Zend_Db_Select.html#method_getPart">Zend_Db_Select</a> at line         line 665</div>
+        <code>                    mixed
+    <strong>getPart</strong>(string $part)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get part of the structured information for the current query.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$part</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Db_Select_Exception.html">Zend_Db_Select_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_query">
+        <div class="location">in <a href="Zend_Db_Select.html#method_query">Zend_Db_Select</a> at line         line 682</div>
+        <code>                    PDO_Statement|<a href="Zend_Db_Statement.html">Zend_Db_Statement</a>
+    <strong>query</strong>(integer $fetchMode = null, mixed $bind = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Executes the current select object and returns the result</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$fetchMode</td>
+                <td>OPTIONAL</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$bind</td>
+                <td>An array of data to bind to the placeholders.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>PDO_Statement|<a href="Zend_Db_Statement.html">Zend_Db_Statement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assemble">
+        <div class="location">at line         line 190</div>
+        <code>                    string|null
+    <strong>assemble</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Performs a validation on the select query before passing back to the parent class.</p>                    <p>Ensures that only columns from the primary Zend<em>Db</em>Table are returned in the result.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>This object as a SELECT string. (or null if a string cannot be produced.)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">in <a href="Zend_Db_Select.html#method_reset">Zend_Db_Select</a> at line         line 719</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>reset</strong>(string $part = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear parts of the Select object, or an individual part.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$part</td>
+                <td>OPTIONAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdapter">
+        <div class="location">in <a href="Zend_Db_Select.html#method_getAdapter">Zend_Db_Select</a> at line         line 735</div>
+        <code>                    <a href="Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a>
+    <strong>getAdapter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the Zend<em>Db</em>Adapter<em>Abstract for this
+particular Zend</em>Db_Select object.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__joinUsing">
+        <div class="location">in <a href="Zend_Db_Select.html#method__joinUsing">Zend_Db_Select</a> at line         line 875</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>_joinUsing</strong>($type, $name, $cond, $cols = &#039;*&#039;, $schema = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handle JOIN.</p>                    <p>.. USING... syntax</p>
+
+<p>This is functionality identical to the existing JOIN methods, however
+the join condition can be passed as a single column name. This method
+then completes the ON condition by using the same field for the FROM
+table and the JOIN table.</p>
+
+<p><code>
+$select = $db->select()->from('table1')
+                       ->joinUsing('table2', 'column1');</p>
+
+<p>// SELECT * FROM table1 JOIN table2 ON table1.column1 = table2.column2
+</code></p>
+
+<p>These joins are called by the developer simply by adding 'Using' to the
+method name. E.g.
+* joinUsing
+* joinInnerUsing
+* joinFullUsing
+* joinRightUsing
+* joinLeftUsing</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cond</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cols</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$schema</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="Zend_Db_Select.html#method___call">Zend_Db_Select</a> at line         line 1309</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>__call</strong>(string $method, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Turn magic function calls into non-magic function calls
+for joinUsing syntax</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>OPTIONAL Zend<em>Db</em>Table_Select query modifier</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Db_Select_Exception.html">Zend_Db_Select_Exception</a></td>
+                <td>If an invalid method is called.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">in <a href="Zend_Db_Select.html#method___toString">Zend_Db_Select</a> at line         line 1347</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implements magic method.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>This object as a SELECT string.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTable">
+        <div class="location">at line         line 86</div>
+        <code>                    <a href="Zend_Db_Table_Abstract.html">Zend_Db_Table_Abstract</a>
+    <strong>getTable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the table that created this select object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Table_Abstract.html">Zend_Db_Table_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTable">
+        <div class="location">at line         line 97</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>setTable</strong>(<a href="Zend_Db_Table_Abstract.html">Zend_Db_Table_Abstract</a> $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the primary table name and retrieves the table schema.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Db_Table_Abstract.html">Zend_Db_Table_Abstract</a></td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIntegrityCheck">
+        <div class="location">at line         line 115</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>setIntegrityCheck</strong>($flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the integrity check flag.</p>                    <p>Setting this flag to false skips the checks for table joins, allowing
+'hybrid' table rows to be created.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td>This Zend<em>Db</em>Select object.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isReadOnly">
+        <div class="location">at line         line 126</div>
+        <code>                    boolean
+    <strong>isReadOnly</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Tests query to determine if expressions or aliases columns exist.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

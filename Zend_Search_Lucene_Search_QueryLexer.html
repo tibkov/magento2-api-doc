@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Search_Lucene_Search_QueryLexer | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Search_Lucene_Search_QueryLexer" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Search_Lucene_Search_QueryLexer
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Search_Lucene_Search_QueryLexer</strong>        extends <a href="Zend_Search_Lucene_FSM.html">Zend_Search_Lucene_FSM</a>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>ST_WHITE_SPACE</td>
+                <td class="last">
+                    <p><em>State Machine states</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ST_SYNT_LEXEME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ST_LEXEME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ST_QUOTED_LEXEME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ST_ESCAPED_CHAR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ST_ESCAPED_QCHAR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ST_LEXEME_MODIFIER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ST_NUMBER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ST_MANTISSA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ST_ERROR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IN_WHITE_SPACE</td>
+                <td class="last">
+                    <p><em>Input symbols</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IN_SYNT_CHAR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IN_LEXEME_MODIFIER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IN_ESCAPE_CHAR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IN_QUOTE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IN_DECIMAL_POINT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IN_ASCII_DIGIT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IN_CHAR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IN_MUTABLE_CHAR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>QUERY_WHITE_SPACE_CHARS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>QUERY_SYNT_CHARS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>QUERY_MUTABLE_CHARS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>QUERY_DOUBLECHARLEXEME_CHARS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>QUERY_LEXEMEMODIFIER_CHARS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>QUERY_ASCIIDIGITS_CHARS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Finite State machine constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addStates">addStates</a>(array $states)
+        
+                                            <p>Add states to the state machine</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_addStates">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addState">addState</a>(integer|string $state)
+        
+                                            <p>Add state to the state machine</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_addState">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setState">setState</a>(integer|string $state)
+        
+                                            <p>Set FSM state.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_setState">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getState">getState</a>()
+        
+                                            <p>Get FSM state.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_getState">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addInputSymbols">addInputSymbols</a>(array $inputAphabet)
+        
+                                            <p>Add symbols to the input alphabet</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_addInputSymbols">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addInputSymbol">addInputSymbol</a>(integer|string $inputSymbol)
+        
+                                            <p>Add symbol to the input alphabet</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_addInputSymbol">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRules">addRules</a>(array $rules)
+        
+                                            <p>Add transition rules</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_addRules">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRule">addRule</a>(integer|string $sourceState, integer|string $input, integer|string $targetState, <a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a>|null $inputAction = null)
+        
+                                            <p>Add symbol to the input alphabet</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_addRule">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addEntryAction">addEntryAction</a>(integer|string $state, <a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a> $action)
+        
+                                            <p>Add state entry action.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_addEntryAction">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addExitAction">addExitAction</a>(integer|string $state, <a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a> $action)
+        
+                                            <p>Add state exit action.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_addExitAction">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addInputAction">addInputAction</a>($state, $inputSymbol, <a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a> $action)
+        
+                                            <p>Add input action (defined by {state, input} pair).</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_addInputAction">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addTransitionAction">addTransitionAction</a>(integer|string $sourceState, integer|string $targetState, <a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a> $action)
+        
+                                            <p>Add transition action (defined by {state, input} pair).</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_addTransitionAction">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_process">process</a>(mixed $input)
+        
+                                            <p>Process an input</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_process">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reset">reset</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Search_Lucene_FSM.html#method_reset">Zend_Search_Lucene_FSM</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tokenize">tokenize</a>(string $inputString, string $encoding)
+        
+                                            <p>This method is used to tokenize query string into lexemes</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addQuerySyntaxLexeme">addQuerySyntaxLexeme</a>()
+        
+                                            <p>Add query syntax lexeme</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addLexemeModifier">addLexemeModifier</a>()
+        
+                                            <p>Add lexeme modifier</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addLexeme">addLexeme</a>()
+        
+                                            <p>Add lexeme</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addQuotedLexeme">addQuotedLexeme</a>()
+        
+                                            <p>Add quoted lexeme</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addNumberLexeme">addNumberLexeme</a>()
+        
+                                            <p>Add number lexeme</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addLexemeChar">addLexemeChar</a>()
+        
+                                            <p>Extend lexeme by one char</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lexModifierErrException">lexModifierErrException</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_quoteWithinLexemeErrException">quoteWithinLexemeErrException</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wrongNumberErrException">wrongNumberErrException</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 97</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Finite State machine constructor</p>                    <p>$states is an array of integers or strings with a list of possible machine states
+constructor treats fist list element as a sturt state (assignes it to $_current state).
+It may be reassigned by setState() call.
+States list may be empty and can be extended later by addState() or addStates() calls.</p>
+
+<p>$inputAphabet is the same as $states, but represents input alphabet
+it also may be extended later by addInputSymbols() or addInputSymbol() calls.</p>
+
+<p>$rules parameter describes FSM transitions and has a structure:
+array( array(sourseState, input, targetState[, inputAction]),
+       array(sourseState, input, targetState[, inputAction]),
+       array(sourseState, input, targetState[, inputAction]),
+       ...
+     )
+Rules also can be added later by addRules() and addRule() calls.</p>
+
+<p>FSM actions are very flexible and may be defined by addEntryAction(), addExitAction(),
+addInputAction() and addTransitionAction() calls.</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addStates">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_addStates">Zend_Search_Lucene_FSM</a> at line         line 149</div>
+        <code>                    
+    <strong>addStates</strong>(array $states)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add states to the state machine</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$states</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addState">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_addState">Zend_Search_Lucene_FSM</a> at line         line 161</div>
+        <code>                    
+    <strong>addState</strong>(integer|string $state)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add state to the state machine</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|string</td>
+                <td>$state</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setState">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_setState">Zend_Search_Lucene_FSM</a> at line         line 177</div>
+        <code>                    
+    <strong>setState</strong>(integer|string $state)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set FSM state.</p>                    <p>No any action is invoked</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|string</td>
+                <td>$state</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Exception.html">Zend_Search_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getState">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_getState">Zend_Search_Lucene_FSM</a> at line         line 192</div>
+        <code>                    integer|string
+    <strong>getState</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get FSM state.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer|string</td>
+            <td>$state|null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addInputSymbols">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_addInputSymbols">Zend_Search_Lucene_FSM</a> at line         line 202</div>
+        <code>                    
+    <strong>addInputSymbols</strong>(array $inputAphabet)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add symbols to the input alphabet</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$inputAphabet</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addInputSymbol">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_addInputSymbol">Zend_Search_Lucene_FSM</a> at line         line 214</div>
+        <code>                    
+    <strong>addInputSymbol</strong>(integer|string $inputSymbol)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add symbol to the input alphabet</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|string</td>
+                <td>$inputSymbol</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRules">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_addRules">Zend_Search_Lucene_FSM</a> at line         line 232</div>
+        <code>                    
+    <strong>addRules</strong>(array $rules)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add transition rules</p>                    <p>array structure:
+array( array(sourseState, input, targetState[, inputAction]),
+       array(sourseState, input, targetState[, inputAction]),
+       array(sourseState, input, targetState[, inputAction]),
+       ...
+     )</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$rules</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRule">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_addRule">Zend_Search_Lucene_FSM</a> at line         line 248</div>
+        <code>                    
+    <strong>addRule</strong>(integer|string $sourceState, integer|string $input, integer|string $targetState, <a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a>|null $inputAction = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add symbol to the input alphabet</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|string</td>
+                <td>$sourceState</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer|string</td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer|string</td>
+                <td>$targetState</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a>|null</td>
+                <td>$inputAction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Exception.html">Zend_Search_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addEntryAction">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_addEntryAction">Zend_Search_Lucene_FSM</a> at line         line 288</div>
+        <code>                    
+    <strong>addEntryAction</strong>(integer|string $state, <a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a> $action)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add state entry action.</p>                    <p>Several entry actions are allowed.
+Action execution order is defined by addEntryAction() calls</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|string</td>
+                <td>$state</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a></td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addExitAction">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_addExitAction">Zend_Search_Lucene_FSM</a> at line         line 310</div>
+        <code>                    
+    <strong>addExitAction</strong>(integer|string $state, <a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a> $action)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add state exit action.</p>                    <p>Several exit actions are allowed.
+Action execution order is defined by addEntryAction() calls</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|string</td>
+                <td>$state</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a></td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addInputAction">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_addInputAction">Zend_Search_Lucene_FSM</a> at line         line 333</div>
+        <code>                    
+    <strong>addInputAction</strong>($state, $inputSymbol, <a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a> $action)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add input action (defined by {state, input} pair).</p>                    <p>Several input actions are allowed.
+Action execution order is defined by addInputAction() calls</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$state</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$inputSymbol</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a></td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addTransitionAction">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_addTransitionAction">Zend_Search_Lucene_FSM</a> at line         line 363</div>
+        <code>                    
+    <strong>addTransitionAction</strong>(integer|string $sourceState, integer|string $targetState, <a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a> $action)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add transition action (defined by {state, input} pair).</p>                    <p>Several transition actions are allowed.
+Action execution order is defined by addTransitionAction() calls</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer|string</td>
+                <td>$sourceState</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer|string</td>
+                <td>$targetState</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Search_Lucene_FSMAction.html">Zend_Search_Lucene_FSMAction</a></td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_process">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_process">Zend_Search_Lucene_FSM</a> at line         line 391</div>
+        <code>                    
+    <strong>process</strong>(mixed $input)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Process an input</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Exception.html">Zend_Search_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">in <a href="Zend_Search_Lucene_FSM.html#method_reset">Zend_Search_Lucene_FSM</a> at line         line 433</div>
+        <code>                    
+    <strong>reset</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tokenize">
+        <div class="location">at line         line 332</div>
+        <code>                    array
+    <strong>tokenize</strong>(string $inputString, string $encoding)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>This method is used to tokenize query string into lexemes</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$inputString</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Search_QueryParserException.html">Zend_Search_Lucene_Search_QueryParserException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addQuerySyntaxLexeme">
+        <div class="location">at line         line 382</div>
+        <code>                    
+    <strong>addQuerySyntaxLexeme</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add query syntax lexeme</p>                                </div>
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Search_QueryParserException.html">Zend_Search_Lucene_Search_QueryParserException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addLexemeModifier">
+        <div class="location">at line         line 424</div>
+        <code>                    
+    <strong>addLexemeModifier</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add lexeme modifier</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addLexeme">
+        <div class="location">at line         line 436</div>
+        <code>                    
+    <strong>addLexeme</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add lexeme</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addQuotedLexeme">
+        <div class="location">at line         line 449</div>
+        <code>                    
+    <strong>addQuotedLexeme</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add quoted lexeme</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addNumberLexeme">
+        <div class="location">at line         line 462</div>
+        <code>                    
+    <strong>addNumberLexeme</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add number lexeme</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addLexemeChar">
+        <div class="location">at line         line 474</div>
+        <code>                    
+    <strong>addLexemeChar</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Extend lexeme by one char</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lexModifierErrException">
+        <div class="location">at line         line 494</div>
+        <code>                    
+    <strong>lexModifierErrException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_quoteWithinLexemeErrException">
+        <div class="location">at line         line 499</div>
+        <code>                    
+    <strong>quoteWithinLexemeErrException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrongNumberErrException">
+        <div class="location">at line         line 504</div>
+        <code>                    
+    <strong>wrongNumberErrException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Setup\Model\Cron\Status | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Setup_Model_Cron_Status" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../Magento/Setup.html">Setup</a></li>
+                                        <li><a href="../../../../Magento/Setup/Model.html">Model</a></li>
+                                        <li><a href="../../../../Magento/Setup/Model/Cron.html">Cron</a></li>
+    
+                <li>Status</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Status
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Status</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class which provides access to the current status of the Magento setup application.</p>            <p>Each job is using this class to share information about its current status.
+Current status can be seen on the update app web page.</p>        </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a> $filesystem, <a href="../../../../Magento/Setup/Model/Cron/SetupLoggerFactory.html"><abbr title="Magento\Setup\Model\Cron\SetupLoggerFactory">SetupLoggerFactory</abbr></a> $setupLoggerFactory, string $statusFilePath = null, string $logFilePath = null, string $updateInProgressFlagFilePath = null, string $updateErrorFlagFilePath = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStatusFilePath">getStatusFilePath</a>()
+        
+                                            <p>Get status file path</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLogFilePath">getLogFilePath</a>()
+        
+                                            <p>Get log file path</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Setup\Model\Cron\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_add">add</a>(string $text, int $severity = \Psr\Log\LogLevel::INFO, bool $writeToStatusFile = true)
+        
+                                            <p>Add status update.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isUpdateInProgress">isUpdateInProgress</a>()
+        
+                                            <p>Check if update application is running.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Setup\Model\Cron\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toggleUpdateInProgress">toggleUpdateInProgress</a>(bool $isInProgress = true)
+        
+                                            <p>Set current update app status: true if update is in progress, false otherwise.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isUpdateError">isUpdateError</a>()
+        
+                                            <p>Check if error has occurred during update application execution.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Setup\Model\Cron\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toggleUpdateError">toggleUpdateError</a>(bool $isErrorOccurred = true)
+        
+                                            <p>Set current update app status: true if error occurred during update app execution, false otherwise.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 73</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a> $filesystem, <a href="../../../../Magento/Setup/Model/Cron/SetupLoggerFactory.html"><abbr title="Magento\Setup\Model\Cron\SetupLoggerFactory">SetupLoggerFactory</abbr></a> $setupLoggerFactory, string $statusFilePath = null, string $logFilePath = null, string $updateInProgressFlagFilePath = null, string $updateErrorFlagFilePath = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a></td>
+                <td>$filesystem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Setup/Model/Cron/SetupLoggerFactory.html"><abbr title="Magento\Setup\Model\Cron\SetupLoggerFactory">SetupLoggerFactory</abbr></a></td>
+                <td>$setupLoggerFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$statusFilePath</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$logFilePath</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$updateInProgressFlagFilePath</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$updateErrorFlagFilePath</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatusFilePath">
+        <div class="location">at line         line 98</div>
+        <code>                    string
+    <strong>getStatusFilePath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get status file path</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLogFilePath">
+        <div class="location">at line         line 108</div>
+        <code>                    string
+    <strong>getLogFilePath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get log file path</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_add">
+        <div class="location">at line         line 125</div>
+        <code>                    <abbr title="Magento\Setup\Model\Cron\$this">$this</abbr>
+    <strong>add</strong>(string $text, int $severity = \Psr\Log\LogLevel::INFO, bool $writeToStatusFile = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add status update.</p>                    <p>Add information to a temporary file which is used for status display on a web page and to a permanent status log.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$severity</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$writeToStatusFile</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Setup\Model\Cron\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isUpdateInProgress">
+        <div class="location">at line         line 166</div>
+        <code>                    bool
+    <strong>isUpdateInProgress</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if update application is running.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toggleUpdateInProgress">
+        <div class="location">at line         line 177</div>
+        <code>                    <abbr title="Magento\Setup\Model\Cron\$this">$this</abbr>
+    <strong>toggleUpdateInProgress</strong>(bool $isInProgress = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set current update app status: true if update is in progress, false otherwise.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$isInProgress</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Setup\Model\Cron\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isUpdateError">
+        <div class="location">at line         line 187</div>
+        <code>                    bool
+    <strong>isUpdateError</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if error has occurred during update application execution.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toggleUpdateError">
+        <div class="location">at line         line 198</div>
+        <code>                    <abbr title="Magento\Setup\Model\Cron\$this">$this</abbr>
+    <strong>toggleUpdateError</strong>(bool $isErrorOccurred = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set current update app status: true if error occurred during update app execution, false otherwise.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$isErrorOccurred</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Setup\Model\Cron\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

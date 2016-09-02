@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_XmlRpc_Server | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_XmlRpc_Server" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_XmlRpc_Server
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_XmlRpc_Server</strong>        extends <a href="Zend_Server_Abstract.html">Zend_Server_Abstract</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>An XML-RPC server implementation</p>            <p>Example:
+<code></p>
+
+<h1>require_once 'Zend/XmlRpc/Server.php';</h1>
+
+<h1>require_once 'Zend/XmlRpc/Server/Cache.php';</h1>
+
+<h1>require_once 'Zend/XmlRpc/Server/Fault.php';</h1>
+
+<h1>require_once 'My/Exception.php';</h1>
+
+<h1>require_once 'My/Fault/Observer.php';</h1>
+
+<p>// Instantiate server
+$server = new Zend<em>XmlRpc</em>Server();</p>
+
+<p>// Allow some exceptions to report as fault responses:
+Zend<em>XmlRpc</em>Server<em>Fault::attachFaultException('My</em>Exception');
+Zend<em>XmlRpc</em>Server<em>Fault::attachObserver('My</em>Fault_Observer');</p>
+
+<p>// Get or build dispatch table:
+if (!Zend<em>XmlRpc</em>Server<em>Cache::get($filename, $server)) {
+    #require</em>once 'Some/Service/Class.php';
+    #require_once 'Another/Service/Class.php';</p>
+
+<pre><code>// Attach Some_Service_Class in 'some' namespace
+$server-&gt;setClass('Some_Service_Class', 'some');
+
+// Attach Another_Service_Class in 'another' namespace
+$server-&gt;setClass('Another_Service_Class', 'another');
+
+// Create dispatch table cache file
+Zend_XmlRpc_Server_Cache::save($filename, $server);
+</code></pre>
+
+<p>}</p>
+
+<p>$response = $server->handle();
+echo $response;
+</code></p>        </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFunctions">getFunctions</a>()
+        
+                                            <p>Returns a list of registered methods</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lowerCase">lowerCase</a>($value, $key)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Lowercase a string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Server_Abstract.html#method_lowerCase">Zend_Server_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $params)
+        
+                                            <p>Proxy calls to system object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFunction">addFunction</a>($function, $namespace = &#039;&#039;)
+        
+                                            <p>Attach a callback as an XMLRPC method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setClass">setClass</a>(mixed $class, string $namespace = &#039;&#039;, null|array $argv = null)
+        
+                                            <p>Attach class methods as XMLRPC method handlers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fault">fault</a>(mixed $fault = null, int $code = 404)
+        
+                                            <p>Raise an xmlrpc server fault</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handle">handle</a>(mixed $request = false)
+        
+                                            <p>Handle an xmlrpc call</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadFunctions">loadFunctions</a>($definition)
+        
+                                            <p>Load methods as returned from {@link getFunctions}</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_XmlRpc_Server.html">Zend_XmlRpc_Server</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEncoding">setEncoding</a>(string $encoding)
+        
+                                            <p>Set encoding</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEncoding">getEncoding</a>()
+        
+                                            <p>Retrieve current encoding</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPersistence">setPersistence</a>(int $mode)
+        
+                                            <p>Do nothing; persistence is handled via {@link Zend<em>XmlRpc</em>Server_Cache}</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_XmlRpc_Server.html">Zend_XmlRpc_Server</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRequest">setRequest</a>(string|<a href="Zend_XmlRpc_Request.html">Zend_XmlRpc_Request</a> $request)
+        
+                                            <p>Set the request object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null|<a href="Zend_XmlRpc_Request.html">Zend_XmlRpc_Request</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequest">getRequest</a>()
+        
+                                            <p>Return currently registered request object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setResponseClass">setResponseClass</a>(string $class)
+        
+                                            <p>Set the class to use for the response</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResponseClass">getResponseClass</a>()
+        
+                                            <p>Retrieve current response class</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDispatchTable">getDispatchTable</a>()
+        
+                                            <p>Retrieve dispatch table</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_XmlRpc_Server_System.html">Zend_XmlRpc_Server_System</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSystem">getSystem</a>()
+        
+                                            <p>Retrieve system object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendArgumentsToAllMethods">sendArgumentsToAllMethods</a>($flag = null)
+        
+                                            <p>Send arguments to all methods?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 193</div>
+        <code>                    void
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                    <p>Creates system.* methods.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFunctions">
+        <div class="location">at line         line 500</div>
+        <code>                    array
+    <strong>getFunctions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a list of registered methods</p>                    <p>Returns an array of dispatchables (Zend<em>Server</em>Reflection_Function,
+_Method, and _Class items).</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lowerCase">
+        <div class="location">in <a href="Zend_Server_Abstract.html#method_lowerCase">Zend_Server_Abstract</a> at line         line 124</div>
+        <code>        static            string
+    <strong>lowerCase</strong>($value, $key)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Lowercase a string</p>                    <p>Lowercase's a string by reference</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Lower cased string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at line         line 207</div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Proxy calls to system object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_XmlRpc_Server_Exception.html">Zend_XmlRpc_Server_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFunction">
+        <div class="location">at line         line 233</div>
+        <code>                    void
+    <strong>addFunction</strong>($function, $namespace = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attach a callback as an XMLRPC method</p>                    <p>Attaches a callback as an XMLRPC method, prefixing the XMLRPC method name
+with $namespace, if provided. Reflection is done on the callback's
+docblock to create the methodHelp for the XMLRPC method.</p>
+
+<p>Additional arguments to pass to the function at dispatch may be passed;
+any arguments following the namespace will be aggregated and passed at
+dispatch time.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$function</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_XmlRpc_Server_Exception.html">Zend_XmlRpc_Server_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setClass">
+        <div class="location">at line         line 274</div>
+        <code>                    void
+    <strong>setClass</strong>(mixed $class, string $namespace = &#039;&#039;, null|array $argv = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attach class methods as XMLRPC method handlers</p>                    <p>$class may be either a class name or an object. Reflection is done on the
+class or object to determine the available public methods, and each is
+attached to the server as an available method; if a $namespace has been
+provided, that namespace is used to prefix the XMLRPC method names.</p>
+
+<p>Any additional arguments beyond $namespace will be passed to a method at
+invocation.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$class</td>
+                <td>Class name or object instance to examine and attach
+to the server.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>Optional namespace with which to prepend method
+names in the dispatch table.
+methods in the class will be valid callbacks.</td>
+            </tr>
+                    <tr>
+                <td>null|array</td>
+                <td>$argv</td>
+                <td>Optional array of arguments to pass to callbacks at
+dispatch.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_XmlRpc_Server_Exception.html">Zend_XmlRpc_Server_Exception</a></td>
+                <td>on invalid input</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fault">
+        <div class="location">at line         line 300</div>
+        <code>                    mixed
+    <strong>fault</strong>(mixed $fault = null, int $code = 404)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Raise an xmlrpc server fault</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$fault</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handle">
+        <div class="location">at line         line 320</div>
+        <code>                    mixed
+    <strong>handle</strong>(mixed $request = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handle an xmlrpc call</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadFunctions">
+        <div class="location">at line         line 359</div>
+        <code>                    void
+    <strong>loadFunctions</strong>($definition)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load methods as returned from {@link getFunctions}</p>                    <p>Typically, you will not use this method; it will be called using the
+results pulled from {@link Zend<em>XmlRpc</em>Server_Cache::get()}.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$definition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_XmlRpc_Server_Exception.html">Zend_XmlRpc_Server_Exception</a></td>
+                <td>on invalid input</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEncoding">
+        <div class="location">at line         line 392</div>
+        <code>                    <a href="Zend_XmlRpc_Server.html">Zend_XmlRpc_Server</a>
+    <strong>setEncoding</strong>(string $encoding)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set encoding</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_XmlRpc_Server.html">Zend_XmlRpc_Server</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEncoding">
+        <div class="location">at line         line 404</div>
+        <code>                    string
+    <strong>getEncoding</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve current encoding</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPersistence">
+        <div class="location">at line         line 415</div>
+        <code>                    void
+    <strong>setPersistence</strong>(int $mode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Do nothing; persistence is handled via {@link Zend<em>XmlRpc</em>Server_Cache}</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRequest">
+        <div class="location">at line         line 426</div>
+        <code>                    <a href="Zend_XmlRpc_Server.html">Zend_XmlRpc_Server</a>
+    <strong>setRequest</strong>(string|<a href="Zend_XmlRpc_Request.html">Zend_XmlRpc_Request</a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the request object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_XmlRpc_Request.html">Zend_XmlRpc_Request</a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_XmlRpc_Server.html">Zend_XmlRpc_Server</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_XmlRpc_Server_Exception.html">Zend_XmlRpc_Server_Exception</a></td>
+                <td>on invalid request class or object</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">at line         line 449</div>
+        <code>                    null|<a href="Zend_XmlRpc_Request.html">Zend_XmlRpc_Request</a>
+    <strong>getRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return currently registered request object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|<a href="Zend_XmlRpc_Request.html">Zend_XmlRpc_Request</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setResponseClass">
+        <div class="location">at line         line 460</div>
+        <code>                    boolean
+    <strong>setResponseClass</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the class to use for the response</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>True if class was set, false if not</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponseClass">
+        <div class="location">at line         line 477</div>
+        <code>                    string
+    <strong>getResponseClass</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve current response class</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDispatchTable">
+        <div class="location">at line         line 487</div>
+        <code>                    array
+    <strong>getDispatchTable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve dispatch table</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSystem">
+        <div class="location">at line         line 510</div>
+        <code>                    <a href="Zend_XmlRpc_Server_System.html">Zend_XmlRpc_Server_System</a>
+    <strong>getSystem</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve system object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_XmlRpc_Server_System.html">Zend_XmlRpc_Server_System</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendArgumentsToAllMethods">
+        <div class="location">at line         line 523</div>
+        <code>                    
+    <strong>sendArgumentsToAllMethods</strong>($flag = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send arguments to all methods?</p>                    <p>If setClass() is used to add classes to the server, this flag defined
+how to handle arguments. If set to true, all methods including constructor
+will receive the arguments. If set to false, only constructor will receive the
+arguments</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

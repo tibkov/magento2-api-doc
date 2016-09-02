@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Framework\Search\Adapter\Mysql\AdapterTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
+        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Framework_Search_Adapter_Mysql_AdapterTest" data-root-path="../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../../Magento/Framework.html">Framework</a></li>
+                                        <li><a href="../../../../../Magento/Framework/Search.html">Search</a></li>
+                                        <li><a href="../../../../../Magento/Framework/Search/Adapter.html">Adapter</a></li>
+                                        <li><a href="../../../../../Magento/Framework/Search/Adapter/Mysql.html">Mysql</a></li>
+    
+                <li>AdapterTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            AdapterTest
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>AdapterTest</strong>        extends PHPUnit_Framework_TestCase
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class AdapterTest</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testMatchQuery">testMatchQuery</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testAggregationsQuery">testAggregationsQuery</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testMatchQueryFilters">testMatchQueryFilters</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testRangeFilterWithAllFields">testRangeFilterWithAllFields</a>()
+        
+                                            <p>Range filter test with all fields filled</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testRangeFilterWithoutFromField">testRangeFilterWithoutFromField</a>()
+        
+                                            <p>Range filter test with all fields filled</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testRangeFilterWithoutToField">testRangeFilterWithoutToField</a>()
+        
+                                            <p>Range filter test with all fields filled</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testTermFilter">testTermFilter</a>()
+        
+                                            <p>Term filter test</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testTermFilterArray">testTermFilterArray</a>()
+        
+                                            <p>Term filter test</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testWildcardFilter">testWildcardFilter</a>()
+        
+                                            <p>Term filter test</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testSearchLimit">testSearchLimit</a>()
+        
+                                            <p>Request limits test</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testBoolFilter">testBoolFilter</a>()
+        
+                                            <p>Bool filter test</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testBoolFilterWithNestedNegativeBoolFilter">testBoolFilterWithNestedNegativeBoolFilter</a>()
+        
+                                            <p>Test bool filter with nested negative bool filter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testBoolFilterWithNestedRangeInNegativeBoolFilter">testBoolFilterWithNestedRangeInNegativeBoolFilter</a>()
+        
+                                            <p>Test range inside nested negative bool filter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testSimpleAdvancedSearch">testSimpleAdvancedSearch</a>($nameQuery, $descriptionQuery, $rangeFilter, $expectedRecordsCount)
+        
+                                            <p>Sample Advanced search request test</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_advancedSearchDataProvider">advancedSearchDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testCustomFilterableAttribute">testCustomFilterableAttribute</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testAdvancedSearchDateField">testAdvancedSearchDateField</a>($rangeFilter, $expectedRecordsCount)
+        
+                                            <p>Advanced search request using date product attribute</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dateDataProvider">dateDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_testMatchQuery">
+        <div class="location">at line         line 124</div>
+        <code>                    
+    <strong>testMatchQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testAggregationsQuery">
+        <div class="location">at line         line 137</div>
+        <code>                    
+    <strong>testAggregationsQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testMatchQueryFilters">
+        <div class="location">at line         line 154</div>
+        <code>                    
+    <strong>testMatchQueryFilters</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testRangeFilterWithAllFields">
+        <div class="location">at line         line 171</div>
+        <code>                    
+    <strong>testRangeFilterWithAllFields</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Range filter test with all fields filled</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testRangeFilterWithoutFromField">
+        <div class="location">at line         line 186</div>
+        <code>                    
+    <strong>testRangeFilterWithoutFromField</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Range filter test with all fields filled</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testRangeFilterWithoutToField">
+        <div class="location">at line         line 200</div>
+        <code>                    
+    <strong>testRangeFilterWithoutToField</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Range filter test with all fields filled</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testTermFilter">
+        <div class="location">at line         line 214</div>
+        <code>                    
+    <strong>testTermFilter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Term filter test</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testTermFilterArray">
+        <div class="location">at line         line 229</div>
+        <code>                    
+    <strong>testTermFilterArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Term filter test</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testWildcardFilter">
+        <div class="location">at line         line 243</div>
+        <code>                    
+    <strong>testWildcardFilter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Term filter test</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSearchLimit">
+        <div class="location">at line         line 259</div>
+        <code>                    
+    <strong>testSearchLimit</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Request limits test</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testBoolFilter">
+        <div class="location">at line         line 275</div>
+        <code>                    
+    <strong>testBoolFilter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Bool filter test</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testBoolFilterWithNestedNegativeBoolFilter">
+        <div class="location">at line         line 298</div>
+        <code>                    
+    <strong>testBoolFilterWithNestedNegativeBoolFilter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test bool filter with nested negative bool filter</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testBoolFilterWithNestedRangeInNegativeBoolFilter">
+        <div class="location">at line         line 316</div>
+        <code>                    
+    <strong>testBoolFilterWithNestedRangeInNegativeBoolFilter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test range inside nested negative bool filter</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSimpleAdvancedSearch">
+        <div class="location">at line         line 334</div>
+        <code>                    
+    <strong>testSimpleAdvancedSearch</strong>($nameQuery, $descriptionQuery, $rangeFilter, $expectedRecordsCount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sample Advanced search request test</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$nameQuery</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$descriptionQuery</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$rangeFilter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expectedRecordsCount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_advancedSearchDataProvider">
+        <div class="location">at line         line 353</div>
+        <code>                    array
+    <strong>advancedSearchDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCustomFilterableAttribute">
+        <div class="location">at line         line 370</div>
+        <code>                    
+    <strong>testCustomFilterableAttribute</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testAdvancedSearchDateField">
+        <div class="location">at line         line 406</div>
+        <code>                    
+    <strong>testAdvancedSearchDateField</strong>($rangeFilter, $expectedRecordsCount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Advanced search request using date product attribute</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$rangeFilter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expectedRecordsCount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dateDataProvider">
+        <div class="location">at line         line 416</div>
+        <code>                    
+    <strong>dateDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

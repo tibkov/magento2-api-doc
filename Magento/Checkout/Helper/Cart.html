@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Checkout\Helper\Cart | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Checkout_Helper_Cart" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Checkout.html">Checkout</a></li>
+                                        <li><a href="../../../Magento/Checkout/Helper.html">Helper</a></li>
+    
+                <li>Cart</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Cart
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Cart</strong>        extends <a href="../../../Magento/Framework/Url/Helper/Data.html"><abbr title="Magento\Framework\Url\Helper\Data">Data</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Shopping cart helper</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>DELETE_URL</td>
+                <td class="last">
+                    <p><em>Path to controller to delete item from cart</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_REDIRECT_TO_CART</td>
+                <td class="last">
+                    <p><em>Path for redirect to cart</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COUPON_CODE_MAX_LENGTH</td>
+                <td class="last">
+                    <p><em>Maximal coupon code length according to database table definitions (longer codes are truncated)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../Magento/Checkout/Model/Cart.html"><abbr title="Magento\Checkout\Model\Cart">Cart</abbr></a> $checkoutCart, <a href="../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a> $checkoutSession)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isModuleOutputEnabled">isModuleOutputEnabled</a>(string $moduleName = null)
+        
+                                            <p>Check whether or not the module output is enabled in Configuration</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCurrentBase64Url">getCurrentBase64Url</a>()
+        
+                                            <p>Retrieve current url in base64 encoding</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/Url/Helper/Data.html#method_getCurrentBase64Url"><abbr title="Magento\Framework\Url\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEncodedUrl">getEncodedUrl</a>(string $url = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/Url/Helper/Data.html#method_getEncodedUrl"><abbr title="Magento\Framework\Url\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRequestParam">addRequestParam</a>(string $url, array $param)
+        
+                                            <p>Add request parameter into url</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/Url/Helper/Data.html#method_addRequestParam"><abbr title="Magento\Framework\Url\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeRequestParam">removeRequestParam</a>(string $url, string $paramKey, bool $caseSensitive = false)
+        
+                                            <p>Remove request parameter from url</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/Url/Helper/Data.html#method_removeRequestParam"><abbr title="Magento\Framework\Url\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Checkout/Model/Cart.html"><abbr title="Magento\Checkout\Model\Cart">Cart</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCart">getCart</a>()
+        
+                                            <p>Retrieve cart instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAddUrl">getAddUrl</a>(<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, array $additional = array())
+        
+                                            <p>Retrieve url for add product to cart</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRemoveUrl">getRemoveUrl</a>(<a href="../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item)
+        
+                                            <p>Retrieve url for remove product from cart</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDeletePostJson">getDeletePostJson</a>(<a href="../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item)
+        
+                                            <p>Get post parameters for delete from cart</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCartUrl">getCartUrl</a>()
+        
+                                            <p>Retrieve shopping cart url</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuote">getQuote</a>()
+        
+                                            <p>Retrieve current quote instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getItemsCount">getItemsCount</a>()
+        
+                                            <p>Get shopping cart items count</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getItemsQty">getItemsQty</a>()
+        
+                                            <p>Get shopping cart summary qty</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSummaryCount">getSummaryCount</a>()
+        
+                                            <p>Get shopping cart items summary (include config settings)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIsVirtualQuote">getIsVirtualQuote</a>()
+        
+                                            <p>Check quote for virtual products only</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShouldRedirectToCart">getShouldRedirectToCart</a>(int|string|<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a> $store = null)
+        
+                                            <p>Checks if customer should be redirected to shopping cart after adding a product</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 46</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../Magento/Checkout/Model/Cart.html"><abbr title="Magento\Checkout\Model\Cart">Cart</abbr></a> $checkoutCart, <a href="../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a> $checkoutSession)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a></td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Checkout/Model/Cart.html"><abbr title="Magento\Checkout\Model\Cart">Cart</abbr></a></td>
+                <td>$checkoutCart</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a></td>
+                <td>$checkoutSession</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isModuleOutputEnabled">
+        <div class="location">in <a href="../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a> at line         line 130</div>
+        <code>                    boolean
+    <strong>isModuleOutputEnabled</strong>(string $moduleName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether or not the module output is enabled in Configuration</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$moduleName</td>
+                <td>Full module name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>use \Magento\Framework\Module\Manager::isOutputEnabled()</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurrentBase64Url">
+        <div class="location">in <a href="../../../Magento/Framework/Url/Helper/Data.html#method_getCurrentBase64Url"><abbr title="Magento\Framework\Url\Helper\Data">Data</abbr></a> at line         line 21</div>
+        <code>                    string
+    <strong>getCurrentBase64Url</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve current url in base64 encoding</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEncodedUrl">
+        <div class="location">in <a href="../../../Magento/Framework/Url/Helper/Data.html#method_getEncodedUrl"><abbr title="Magento\Framework\Url\Helper\Data">Data</abbr></a> at line         line 30</div>
+        <code>                    string
+    <strong>getEncodedUrl</strong>(string $url = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRequestParam">
+        <div class="location">in <a href="../../../Magento/Framework/Url/Helper/Data.html#method_addRequestParam"><abbr title="Magento\Framework\Url\Helper\Data">Data</abbr></a> at line         line 45</div>
+        <code>                    string
+    <strong>addRequestParam</strong>(string $url, array $param)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add request parameter into url</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$param</td>
+                <td>array( 'key' => value )</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeRequestParam">
+        <div class="location">in <a href="../../../Magento/Framework/Url/Helper/Data.html#method_removeRequestParam"><abbr title="Magento\Framework\Url\Helper\Data">Data</abbr></a> at line         line 78</div>
+        <code>                    string
+    <strong>removeRequestParam</strong>(string $url, string $paramKey, bool $caseSensitive = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove request parameter from url</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$paramKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$caseSensitive</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCart">
+        <div class="location">at line         line 62</div>
+        <code>                    <a href="../../../Magento/Checkout/Model/Cart.html"><abbr title="Magento\Checkout\Model\Cart">Cart</abbr></a>
+    <strong>getCart</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve cart instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Checkout/Model/Cart.html"><abbr title="Magento\Checkout\Model\Cart">Cart</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAddUrl">
+        <div class="location">at line         line 74</div>
+        <code>                    string
+    <strong>getAddUrl</strong>(<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, array $additional = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve url for add product to cart</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additional</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRemoveUrl">
+        <div class="location">at line         line 109</div>
+        <code>                    string
+    <strong>getRemoveUrl</strong>(<a href="../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve url for remove product from cart</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDeletePostJson">
+        <div class="location">at line         line 124</div>
+        <code>                    string
+    <strong>getDeletePostJson</strong>(<a href="../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a> $item)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get post parameters for delete from cart</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/Quote/Item/AbstractItem.html"><abbr title="Magento\Quote\Model\Quote\Item\AbstractItem">AbstractItem</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCartUrl">
+        <div class="location">at line         line 141</div>
+        <code>                    string
+    <strong>getCartUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve shopping cart url</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuote">
+        <div class="location">at line         line 152</div>
+        <code>                    <a href="../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a>
+    <strong>getQuote</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve current quote instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemsCount">
+        <div class="location">at line         line 163</div>
+        <code>                    int
+    <strong>getItemsCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get shopping cart items count</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemsQty">
+        <div class="location">at line         line 174</div>
+        <code>                    int|float
+    <strong>getItemsQty</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get shopping cart summary qty</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSummaryCount">
+        <div class="location">at line         line 185</div>
+        <code>                    int|float
+    <strong>getSummaryCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get shopping cart items summary (include config settings)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIsVirtualQuote">
+        <div class="location">at line         line 197</div>
+        <code>                    bool
+    <strong>getIsVirtualQuote</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check quote for virtual products only</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShouldRedirectToCart">
+        <div class="location">at line         line 210</div>
+        <code>                    bool
+    <strong>getShouldRedirectToCart</strong>(int|string|<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a> $store = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if customer should be redirected to shopping cart after adding a product</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|string|<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a></td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

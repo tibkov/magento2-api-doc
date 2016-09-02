@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_OpenId | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_OpenId" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_OpenId
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_OpenId</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Static class that contains common utility functions for
+{@link Zend<em>OpenId</em>Consumer} and {@link Zend<em>OpenId</em>Provider}.</p>            <p>This class implements common utility functions that are used by both
+Consumer and Provider. They include functions for Diffie-Hellman keys
+generation and exchange, URL normalization, HTTP redirection and some others.</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>DH_P</td>
+                <td class="last">
+                    <p><em>Default Diffie-Hellman key generator (1024 bit)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DH_G</td>
+                <td class="last">
+                    <p><em>Default Diffie-Hellman prime number (should be 2 or 5)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NS_2_0</td>
+                <td class="last">
+                    <p><em>OpenID 2.0 namespace. All OpenID 2.0 messages MUST contain variable
+openid.ns with its value.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_exitOnRedirect">
+                    static                                                            
+                </td>
+                <td>$exitOnRedirect</td>
+                <td class="last">Allows enable/disable stoping execution of PHP script after redirect()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_selfUrl">
+                    static                                                            
+                </td>
+                <td>$selfUrl</td>
+                <td class="last">Alternative request URL that can be used to override the default
+selfUrl() response</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSelfUrl">setSelfUrl</a>(string $selfUrl = null)
+        
+                                            <p>Sets alternative request URL that can be used to override the default
+selfUrl() response</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_selfUrl">selfUrl</a>()
+        
+                                            <p>Returns a full URL that was requested on current HTTP request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_absoluteUrl">absoluteUrl</a>(string $url)
+        
+                                            <p>Returns an absolute URL for the given one</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_paramsToQuery">paramsToQuery</a>(array $params)
+        
+                                            <p>Converts variable/value pairs into URL encoded query string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizeUrl">normalizeUrl</a>(string $id)
+        
+                                            <p>Normalizes URL according to RFC 3986 to use it in comparison operations.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalize">normalize</a>(string $id)
+        
+                                            <p>Normalizes OpenID identifier that can be URL or XRI name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_redirect">redirect</a>(string $url, array $params = null, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response = null, string $method = &#039;GET&#039;)
+        
+                                            <p>Performs a HTTP redirection to specified URL with additional data.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_randomBytes">randomBytes</a>(integer $len)
+        
+                                            <p>Produces string of random byte of given length.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_digest">digest</a>(string $func, string $data)
+        
+                                            <p>Generates a hash value (message digest) according to given algorithm.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hashHmac">hashHmac</a>(string $macFunc, string $data, string $secret)
+        
+                                            <p>Generates a keyed hash value using the HMAC method. It uses ext/hash
+if available or user-level PHP implementation, that is not significantly
+slower.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createDhKey">createDhKey</a>(string $p, string $g, string $priv_key = null)
+        
+                                            <p>Performs the first step of a Diffie-Hellman key exchange by generating
+private and public DH values based on given prime number $p and
+generator $g. Both sides of key exchange MUST have the same prime number
+and generator. In this case they will able to create a random shared
+secret that is never send from one to the other.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDhKeyDetails">getDhKeyDetails</a>(mixed $dh)
+        
+                                            <p>Returns an associative array with Diffie-Hellman key components in
+binary representation. The array includes original prime number 'p' and
+generator 'g', random private key 'priv<em>key' and corresponding public
+key 'pub</em>key'.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computeDhSecret">computeDhSecret</a>(string $pub_key, mixed $dh)
+        
+                                            <p>Computes the shared secret from the private DH value $dh and the other
+party's public value in $pub_key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_btwoc">btwoc</a>(string $str)
+        
+                                            <p>Takes an arbitrary precision integer and returns its shortest big-endian
+two's complement representation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_strlen">strlen</a>(string $str)
+        
+                                            <p>Returns lenght of binary string in bytes</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setSelfUrl">
+        <div class="location">at line         line 77</div>
+        <code>        static            string
+    <strong>setSelfUrl</strong>(string $selfUrl = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets alternative request URL that can be used to override the default
+selfUrl() response</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$selfUrl</td>
+                <td>the URL to be set</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>the old value of overriding URL</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_selfUrl">
+        <div class="location">at line         line 89</div>
+        <code>        static            string
+    <strong>selfUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a full URL that was requested on current HTTP request.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_absoluteUrl">
+        <div class="location">at line         line 161</div>
+        <code>        static            string
+    <strong>absoluteUrl</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an absolute URL for the given one</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>absilute or relative URL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_paramsToQuery">
+        <div class="location">at line         line 202</div>
+        <code>        static            string
+    <strong>paramsToQuery</strong>(array $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts variable/value pairs into URL encoded query string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>variable/value pairs</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>URL encoded query string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeUrl">
+        <div class="location">at line         line 222</div>
+        <code>        static            bool
+    <strong>normalizeUrl</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Normalizes URL according to RFC 3986 to use it in comparison operations.</p>                    <p>The function gets URL argument by reference and modifies it.
+It returns true on success and false of failure.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>&amp;$id url to be normalized</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalize">
+        <div class="location">at line         line 383</div>
+        <code>        static            bool
+    <strong>normalize</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Normalizes OpenID identifier that can be URL or XRI name.</p>                    <p>Returns true on success and false of failure.</p>
+
+<p>Normalization is performed according to the following rules:
+1. If the user's input starts with one of the "xri://", "xri://$ip<em>",
+   or "xri://$dns</em>" prefixes, they MUST be stripped off, so that XRIs
+   are used in the canonical form, and URI-authority XRIs are further
+   considered URL identifiers.
+2. If the first character of the resulting string is an XRI Global
+   Context Symbol ("=", "@", "+", "$", "!"), then the input SHOULD be
+   treated as an XRI.
+3. Otherwise, the input SHOULD be treated as an http URL; if it does
+   not include a "http" or "https" scheme, the Identifier MUST be
+   prefixed with the string "http://".
+4. URL identifiers MUST then be further normalized by both following
+   redirects when retrieving their content and finally applying the
+   rules in Section 6 of [RFC3986] to the final destination URL.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>&amp;$id identifier to be normalized</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_redirect">
+        <div class="location">at line         line 427</div>
+        <code>        static            
+    <strong>redirect</strong>(string $url, array $params = null, <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a> $response = null, string $method = &#039;GET&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Performs a HTTP redirection to specified URL with additional data.</p>                    <p>It may generate redirected request using GET or POST HTTP method.
+The function never returns.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL to redirect to</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>additional variable/value pairs to send</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>redirection method ('GET' or 'POST')</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_randomBytes">
+        <div class="location">at line         line 475</div>
+        <code>        static            string
+    <strong>randomBytes</strong>(integer $len)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Produces string of random byte of given length.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$len</td>
+                <td>length of requested string</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>RAW random binary string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_digest">
+        <div class="location">at line         line 497</div>
+        <code>        static            string
+    <strong>digest</strong>(string $func, string $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generates a hash value (message digest) according to given algorithm.</p>                    <p>It returns RAW binary string.</p>
+
+<p>This is a wrapper function that uses one of available internal function
+dependent on given PHP configuration. It may use various functions from
+ ext/openssl, ext/hash, ext/mhash or ext/standard.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$func</td>
+                <td>digest algorithm</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>data to sign</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>RAW digital signature</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_OpenId_Exception.html">Zend_OpenId_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hashHmac">
+        <div class="location">at line         line 527</div>
+        <code>        static            string
+    <strong>hashHmac</strong>(string $macFunc, string $data, string $secret)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generates a keyed hash value using the HMAC method. It uses ext/hash
+if available or user-level PHP implementation, that is not significantly
+slower.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$macFunc</td>
+                <td>name of selected hashing algorithm (sha1, sha256)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>data to sign</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$secret</td>
+                <td>shared secret key used for generating the HMAC
+ variant of the message digest</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>RAW HMAC value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createDhKey">
+        <div class="location">at line         line 628</div>
+        <code>        static            mixed
+    <strong>createDhKey</strong>(string $p, string $g, string $priv_key = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Performs the first step of a Diffie-Hellman key exchange by generating
+private and public DH values based on given prime number $p and
+generator $g. Both sides of key exchange MUST have the same prime number
+and generator. In this case they will able to create a random shared
+secret that is never send from one to the other.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$p</td>
+                <td>prime number in binary representation</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$g</td>
+                <td>generator in binary representation</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$priv_key</td>
+                <td>private key in binary representation</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDhKeyDetails">
+        <div class="location">at line         line 675</div>
+        <code>        static            array
+    <strong>getDhKeyDetails</strong>(mixed $dh)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an associative array with Diffie-Hellman key components in
+binary representation. The array includes original prime number 'p' and
+generator 'g', random private key 'priv<em>key' and corresponding public
+key 'pub</em>key'.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$dh</td>
+                <td>Diffie-Hellman key</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computeDhSecret">
+        <div class="location">at line         line 696</div>
+        <code>        static            string
+    <strong>computeDhSecret</strong>(string $pub_key, mixed $dh)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Computes the shared secret from the private DH value $dh and the other
+party's public value in $pub_key</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pub_key</td>
+                <td>other party's public value</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$dh</td>
+                <td>Diffie-Hellman key</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_OpenId_Exception.html">Zend_OpenId_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_btwoc">
+        <div class="location">at line         line 734</div>
+        <code>        static            string
+    <strong>btwoc</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Takes an arbitrary precision integer and returns its shortest big-endian
+two's complement representation.</p>                    <p>Arbitrary precision integers MUST be encoded as big-endian signed two's
+complement binary strings. Henceforth, "btwoc" is a function that takes
+an arbitrary precision integer and returns its shortest big-endian two's
+complement representation. All integers that are used with
+Diffie-Hellman Key Exchange are positive. This means that the left-most
+bit of the two's complement representation MUST be zero. If it is not,
+implementations MUST add a zero byte at the front of the string.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>binary representation of arbitrary precision integer</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>big-endian signed representation</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_strlen">
+        <div class="location">at line         line 748</div>
+        <code>        static            int
+    <strong>strlen</strong>(string $str)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns lenght of binary string in bytes</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>the string lenght</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

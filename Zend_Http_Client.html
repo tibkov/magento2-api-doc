@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Http_Client | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Http_Client" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Http_Client
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Http_Client</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Zend<em>Http</em>Client is an implementation of an HTTP client in PHP. The client
+supports basic features like sending different HTTP requests and handling
+redirections, as well as more advanced features like proxy settings, HTTP
+authentication and cookie persistence (using a Zend<em>Http</em>CookieJar object)</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>GET</td>
+                <td class="last">
+                    <p><em>HTTP request methods</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>POST</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PUT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HEAD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRACE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OPTIONS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONNECT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MERGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATCH</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AUTH_BASIC</td>
+                <td class="last">
+                    <p><em>Supported HTTP Authentication methods</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HTTP_1</td>
+                <td class="last">
+                    <p><em>HTTP protocol versions</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>HTTP_0</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTENT_TYPE</td>
+                <td class="last">
+                    <p><em>Content attributes</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONTENT_LENGTH</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ENC_URLENCODED</td>
+                <td class="last">
+                    <p><em>POST data encoding methods</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ENC_FORMDATA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VTYPE_SCALAR</td>
+                <td class="last">
+                    <p><em>Value types for Body key/value pairs</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VTYPE_FILE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string $uri = null, array $config = null)
+        
+                                            <p>Constructor method. Will create a new HTTP client. Accepts the target
+URL and optionally configuration array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUri">setUri</a>(<a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string $uri)
+        
+                                            <p>Set the URI for the next request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUri">getUri</a>(boolean $as_string = false)
+        
+                                            <p>Get the URI for the next request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setConfig">setConfig</a>(<a href="Zend_Config.html">Zend_Config</a> $config = array())
+        
+                                            <p>Set configuration parameters for this HTTP client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMethod">setMethod</a>(string $method = self::GET)
+        
+                                            <p>Set the next request's method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHeaders">setHeaders</a>(string|array $name, mixed $value = null)
+        
+                                            <p>Set one or more request headers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHeader">getHeader</a>(string $key)
+        
+                                            <p>Get the value of a specific header</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParameterGet">setParameterGet</a>(string|array $name, string $value = null)
+        
+                                            <p>Set a GET parameter for the request. Wrapper around _setParameter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParameterPost">setParameterPost</a>(string|array $name, string $value = null)
+        
+                                            <p>Set a POST parameter for the request. Wrapper around _setParameter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRedirectionsCount">getRedirectionsCount</a>()
+        
+                                            <p>Get the number of redirections done on the last request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAuth">setAuth</a>(string|false $user, string $password = &#039;&#039;, string $type = self::AUTH_BASIC)
+        
+                                            <p>Set HTTP authentication parameters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCookieJar">setCookieJar</a>(<a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a>|boolean $cookiejar = true)
+        
+                                            <p>Set the HTTP client's cookie jar.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCookieJar">getCookieJar</a>()
+        
+                                            <p>Return the current cookie jar or null if none.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCookie">setCookie</a>(<a href="Zend_Http_Cookie.html">Zend_Http_Cookie</a>|string $cookie, string|null $value = null)
+        
+                                            <p>Add a cookie to the request. If the client has no Cookie Jar, the cookies
+will be added directly to the headers array as "Cookie" headers.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFileUpload">setFileUpload</a>(string $filename, string $formname, string $data = null, string $ctype = null)
+        
+                                            <p>Set a file to upload (using a POST request)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEncType">setEncType</a>(string $enctype = self::ENC_URLENCODED)
+        
+                                            <p>Set the encoding type for POST data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRawData">setRawData</a>(string|resource $data, string $enctype = null)
+        
+                                            <p>Set the raw (already encoded) POST data.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUnmaskStatus">setUnmaskStatus</a>(boolean $status = true)
+        
+                                            <p>Set the unmask feature for GET parameters as array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUnmaskStatus">getUnmaskStatus</a>()
+        
+                                            <p>Returns the currently configured unmask status</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetParameters">resetParameters</a>(bool $clearAll = false)
+        
+                                            <p>Clear all GET and POST parameters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLastRequest">getLastRequest</a>()
+        
+                                            <p>Get the last HTTP request as string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLastResponse">getLastResponse</a>()
+        
+                                            <p>Get the last HTTP response received by this client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAdapter">setAdapter</a>(<a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>|string $adapter)
+        
+                                            <p>Load the connection adapter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAdapter">getAdapter</a>()
+        
+                                            <p>Load the connection adapter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setStream">setStream</a>(string|boolean $streamfile = true)
+        
+                                            <p>Set streaming for received data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStream">getStream</a>()
+        
+                                            <p>Get status of streaming for received data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_request">request</a>(string $method = null)
+        
+                                            <p>Send the HTTP request and return an HTTP response object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeFormData">encodeFormData</a>(string $boundary, string $name, mixed $value, string $filename = null, array $headers = array())
+        
+                                            <p>Encode data to a multipart/form-data part suitable for a POST request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeAuthHeader">encodeAuthHeader</a>(string $user, string $password, string $type = self::AUTH_BASIC)
+        
+                                            <p>Create a HTTP authentication "Authorization:" header according to the
+specified user, password and authentication method.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 287</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string $uri = null, array $config = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor method. Will create a new HTTP client. Accepts the target
+URL and optionally configuration array.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string</td>
+                <td>$uri</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td>Configuration key-value pairs.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUri">
+        <div class="location">at line         line 306</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setUri</strong>(<a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string $uri)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the URI for the next request</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string</td>
+                <td>$uri</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUri">
+        <div class="location">at line         line 342</div>
+        <code>                    <a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string
+    <strong>getUri</strong>(boolean $as_string = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the URI for the next request</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$as_string</td>
+                <td>If true, will return the URI as a string</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">at line         line 358</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setConfig</strong>(<a href="Zend_Config.html">Zend_Config</a> $config = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set configuration parameters for this HTTP client</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Config.html">Zend_Config</a></td>
+                <td>$config</td>
+                <td>| array $config</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMethod">
+        <div class="location">at line         line 392</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setMethod</strong>(string $method = self::GET)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the next request's method</p>                    <p>Validated the passed method and sets it. If we have files set for
+POST requests, and the new method is not POST, the files are silently
+dropped.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHeaders">
+        <div class="location">at line         line 433</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setHeaders</strong>(string|array $name, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set one or more request headers</p>                    <p>This function can be used in several ways to set the client's request
+headers:
+1. By providing two parameters: $name as the header to set (e.g. 'Host')
+   and $value as it's value (e.g. 'www.example.com').
+2. By providing a single header string as the only parameter
+   e.g. 'Host: www.example.com'
+3. By providing an array of headers as the first parameter
+   e.g. array('host' => 'www.example.com', 'x-foo: bar'). In This case
+   the function will call itself recursively for each array item.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$name</td>
+                <td>Header name, full header string ('Header: value')
+    or an array of headers</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>Header value or null</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeader">
+        <div class="location">at line         line 487</div>
+        <code>                    string|array|null
+    <strong>getHeader</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the value of a specific header</p>                    <p>Note that if the header has more than one value, an array
+will be returned.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array|null</td>
+            <td>The header value or null if it is not set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParameterGet">
+        <div class="location">at line         line 504</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setParameterGet</strong>(string|array $name, string $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a GET parameter for the request. Wrapper around _setParameter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParameterPost">
+        <div class="location">at line         line 523</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setParameterPost</strong>(string|array $name, string $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a POST parameter for the request. Wrapper around _setParameter</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRedirectionsCount">
+        <div class="location">at line         line 574</div>
+        <code>                    int
+    <strong>getRedirectionsCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the number of redirections done on the last request</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAuth">
+        <div class="location">at line         line 602</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setAuth</strong>(string|false $user, string $password = &#039;&#039;, string $type = self::AUTH_BASIC)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set HTTP authentication parameters</p>                    <p>$type should be one of the supported types - see the self::AUTH_*
+constants.</p>
+
+<p>To enable authentication:
+<code>
+$this->setAuth('shahar', 'secret', Zend<em>Http</em>Client::AUTH_BASIC);
+</code></p>
+
+<p>To disable authentication:
+<code>
+$this->setAuth(false);
+</code></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|false</td>
+                <td>$user</td>
+                <td>User name or false disable authentication</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>Password</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Authentication type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.faqs.org/rfcs/rfc2617.html</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCookieJar">
+        <div class="location">at line         line 642</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setCookieJar</strong>(<a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a>|boolean $cookiejar = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the HTTP client's cookie jar.</p>                    <p>A cookie jar is an object that holds and maintains cookies across HTTP requests
+and responses.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a>|boolean</td>
+                <td>$cookiejar</td>
+                <td>Existing cookiejar object, true to create a new one, false to disable</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCookieJar">
+        <div class="location">at line         line 666</div>
+        <code>                    <a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a>|null
+    <strong>getCookieJar</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the current cookie jar or null if none.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCookie">
+        <div class="location">at line         line 680</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setCookie</strong>(<a href="Zend_Http_Cookie.html">Zend_Http_Cookie</a>|string $cookie, string|null $value = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a cookie to the request. If the client has no Cookie Jar, the cookies
+will be added directly to the headers array as "Cookie" headers.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Cookie.html">Zend_Http_Cookie</a>|string</td>
+                <td>$cookie</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$value</td>
+                <td>If "cookie" is a string, this is the cookie value.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFileUpload">
+        <div class="location">at line         line 753</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setFileUpload</strong>(string $filename, string $formname, string $data = null, string $ctype = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a file to upload (using a POST request)</p>                    <p>Can be used in two ways:</p>
+
+<ol>
+<li>$data is null (default): $filename is treated as the name if a local file which
+will be read and sent. Will try to guess the content type using mime<em>content</em>type().</li>
+<li>$data is set - $filename is sent as the file name, but $data is sent as the file
+contents and no file is read from the file system. In this case, you need to
+manually set the Content-Type ($ctype) or it will default to
+application/octet-stream.</li>
+</ol>
+</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td>Name of file to upload, or name to save as</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$formname</td>
+                <td>Name of form element to send as</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>Data to send (if null, $filename is read and sent)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ctype</td>
+                <td>Content type to use (if $data is set and $ctype is
+    null, will be application/octet-stream)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEncType">
+        <div class="location">at line         line 788</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setEncType</strong>(string $enctype = self::ENC_URLENCODED)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the encoding type for POST data</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$enctype</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRawData">
+        <div class="location">at line         line 809</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setRawData</strong>(string|resource $data, string $enctype = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the raw (already encoded) POST data.</p>                    <p>This function is here for two reasons:
+1. For advanced user who would like to set their own data, already encoded
+2. For backwards compatibilty: If someone uses the old post($data) method.
+   this method will be used to set the encoded data.</p>
+
+<p>$data can also be stream (such as file) from which the data will be read.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|resource</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$enctype</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUnmaskStatus">
+        <div class="location">at line         line 836</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setUnmaskStatus</strong>(boolean $status = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the unmask feature for GET parameters as array</p>                    <p>Example:
+foo%5B0%5D=a&amp;foo%5B1%5D=b
+becomes
+foo=a&amp;foo=b</p>
+
+<p>This is usefull for some services</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUnmaskStatus">
+        <div class="location">at line         line 847</div>
+        <code>                    boolean
+    <strong>getUnmaskStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the currently configured unmask status</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetParameters">
+        <div class="location">at line         line 864</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>resetParameters</strong>(bool $clearAll = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear all GET and POST parameters</p>                    <p>Should be used to reset the request parameters if the client is
+used for several concurrent requests.</p>
+
+<p>clearAll parameter controls if we clean just parameters or also
+headers and last_*</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$clearAll</td>
+                <td>Should all data be cleared?</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastRequest">
+        <div class="location">at line         line 895</div>
+        <code>                    string
+    <strong>getLastRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the last HTTP request as string</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastResponse">
+        <div class="location">at line         line 908</div>
+        <code>                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+    <strong>getLastResponse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the last HTTP response received by this client</p>                    <p>If $config['storeresponse'] is set to false, or no response was
+stored yet, will return null</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Response.html">Zend_Http_Response</a></td>
+            <td>or null if none</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAdapter">
+        <div class="location">at line         line 923</div>
+        <code>                    null
+    <strong>setAdapter</strong>(<a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>|string $adapter)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load the connection adapter</p>                    <p>While this method is not called more than one for a client, it is
+seperated from ->request() to preserve logic and readability</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>|string</td>
+                <td>$adapter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdapter">
+        <div class="location">at line         line 954</div>
+        <code>                    <a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>
+    <strong>getAdapter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load the connection adapter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a></td>
+            <td>$adapter</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setStream">
+        <div class="location">at line         line 969</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>setStream</strong>(string|boolean $streamfile = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set streaming for received data</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|boolean</td>
+                <td>$streamfile</td>
+                <td>Stream file, true for temp file, false/null for no streaming</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStream">
+        <div class="location">at line         line 979</div>
+        <code>                    boolean|string
+    <strong>getStream</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get status of streaming for received data</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_request">
+        <div class="location">at line         line 1016</div>
+        <code>                    <a href="Zend_Http_Response.html">Zend_Http_Response</a>
+    <strong>request</strong>(string $method = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send the HTTP request and return an HTTP response object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Response.html">Zend_Http_Response</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeFormData">
+        <div class="location">at line         line 1471</div>
+        <code>        static            string
+    <strong>encodeFormData</strong>(string $boundary, string $name, mixed $value, string $filename = null, array $headers = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encode data to a multipart/form-data part suitable for a POST request.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$boundary</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Associative array of optional headers @example ("Content-Transfer-Encoding" => "binary")</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeAuthHeader">
+        <div class="location">at line         line 1502</div>
+        <code>        static            string
+    <strong>encodeAuthHeader</strong>(string $user, string $password, string $type = self::AUTH_BASIC)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a HTTP authentication "Authorization:" header according to the
+specified user, password and authentication method.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Exception.html">Zend_Http_Client_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://www.faqs.org/rfcs/rfc2617.html</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

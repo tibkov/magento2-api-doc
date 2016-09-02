@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Wildfire_Plugin_FirePhp | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Wildfire_Plugin_FirePhp" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Wildfire_Plugin_FirePhp
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Wildfire_Plugin_FirePhp</strong>        implements
+        <a href="Zend_Wildfire_Plugin_Interface.html">Zend_Wildfire_Plugin_Interface</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Primary class for communicating with the FirePHP Firefox Extension.</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>LOG</td>
+                <td class="last">
+                    <p><em>Plain log style.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INFO</td>
+                <td class="last">
+                    <p><em>Information style.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WARN</td>
+                <td class="last">
+                    <p><em>Warning style.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERROR</td>
+                <td class="last">
+                    <p><em>Error style that increments Firebug's error counter.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRACE</td>
+                <td class="last">
+                    <p><em>Trace style showing message and expandable full stack trace.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EXCEPTION</td>
+                <td class="last">
+                    <p><em>Exception style showing message and expandable full stack trace.</em></p>
+                    <p>Also increments Firebug's error counter.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TABLE</td>
+                <td class="last">
+                    <p><em>Table style showing summary line and expandable table</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DUMP</td>
+                <td class="last">
+                    <p><em>Dump variable to Server panel in Firebug Request Inspector</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GROUP_START</td>
+                <td class="last">
+                    <p><em>Start a group in the Firebug Console</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GROUP_END</td>
+                <td class="last">
+                    <p><em>End a group in the Firebug Console</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PLUGIN_URI</td>
+                <td class="last">
+                    <p><em>The plugin URI for this plugin</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PROTOCOL_URI</td>
+                <td class="last">
+                    <p><em>The protocol URI for this plugin</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>STRUCTURE_URI_DUMP</td>
+                <td class="last">
+                    <p><em>The structure URI for the Dump structure</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>STRUCTURE_URI_FIREBUGCONSOLE</td>
+                <td class="last">
+                    <p><em>The structure URI for the Firebug Console structure</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Wildfire_Plugin_FirePhp.html">Zend_Wildfire_Plugin_FirePhp</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>(string $class = null)
+        
+                                            <p>Create singleton instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Wildfire_Plugin_FirePhp.html">Zend_Wildfire_Plugin_FirePhp</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInstance">getInstance</a>(bool $skipCreate = false)
+        
+                                            <p>Get or create singleton instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_destroyInstance">destroyInstance</a>()
+        
+                                            <p>Destroys the singleton instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEnabled">setEnabled</a>(boolean $enabled)
+        
+                                            <p>Enable or disable sending of messages to user-agent.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEnabled">getEnabled</a>()
+        
+                                            <p>Determine if logging to user-agent is enabled.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOption">setOption</a>(string $key, mixed $value)
+        
+                                            <p>Set a single option</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOption">getOption</a>(string $key)
+        
+                                            <p>Retrieve a single option</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOptions">getOptions</a>()
+        
+                                            <p>Retrieve all options</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setObjectFilter">setObjectFilter</a>($class, $filter)
+        
+                                            <p>Specify a filter to be used when encoding an object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;TRUE
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_group">group</a>(string $title, array $options = array())
+        
+                                            <p>Starts a group in the Firebug Console</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;TRUE
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_groupEnd">groupEnd</a>()
+        
+                                            <p>Ends a group in the Firebug Console</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>(mixed $var, string $label = null, string $style = null, array $options = array())
+        
+                                            <p>Logs variables to the Firebug Console
+via HTTP response headers and the FirePHP Firefox Extension.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUri">getUri</a>()
+        
+                                            <p>Get the unique indentifier for this plugin.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_flushMessages">flushMessages</a>(string $protocolUri)
+        
+                                            <p>Flush any buffered data.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at line         line 175</div>
+        <code>        static            <a href="Zend_Wildfire_Plugin_FirePhp.html">Zend_Wildfire_Plugin_FirePhp</a>
+    <strong>init</strong>(string $class = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create singleton instance.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td>OPTIONAL Subclass of Zend<em>Wildfire</em>Plugin_FirePhp</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Wildfire_Plugin_FirePhp.html">Zend_Wildfire_Plugin_FirePhp</a></td>
+            <td>Returns the singleton Zend<em>Wildfire</em>Plugin_FirePhp instance</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Wildfire_Exception.html">Zend_Wildfire_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInstance">
+        <div class="location">at line         line 220</div>
+        <code>        static            <a href="Zend_Wildfire_Plugin_FirePhp.html">Zend_Wildfire_Plugin_FirePhp</a>
+    <strong>getInstance</strong>(bool $skipCreate = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get or create singleton instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$skipCreate</td>
+                <td>True if an instance should not be created</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Wildfire_Plugin_FirePhp.html">Zend_Wildfire_Plugin_FirePhp</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroyInstance">
+        <div class="location">at line         line 235</div>
+        <code>        static            void
+    <strong>destroyInstance</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destroys the singleton instance</p>                    <p>Primarily used for testing.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEnabled">
+        <div class="location">at line         line 247</div>
+        <code>                    boolean
+    <strong>setEnabled</strong>(boolean $enabled)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enable or disable sending of messages to user-agent.</p>                    <p>If disabled all headers to be sent will be removed.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$enabled</td>
+                <td>Set to TRUE to enable sending of messages.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>The previous value.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEnabled">
+        <div class="location">at line         line 263</div>
+        <code>                    boolean
+    <strong>getEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if logging to user-agent is enabled.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>Returns TRUE if logging is enabled.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOption">
+        <div class="location">at line         line 275</div>
+        <code>                    mixed
+    <strong>setOption</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a single option</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>The name of the option</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value of the option</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>The previous value of the option</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOption">
+        <div class="location">at line         line 291</div>
+        <code>                    mixed
+    <strong>getOption</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve a single option</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>The name of the option</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>The value of the option</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">at line         line 304</div>
+        <code>                    array
+    <strong>getOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve all options</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>All options</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setObjectFilter">
+        <div class="location">at line         line 318</div>
+        <code>                    void
+    <strong>setObjectFilter</strong>($class, $filter)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify a filter to be used when encoding an object</p>                    <p>Filters are used to exclude object members.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_group">
+        <div class="location">at line         line 329</div>
+        <code>        static            TRUE
+    <strong>group</strong>(string $title, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Starts a group in the Firebug Console</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$title</td>
+                <td>The title of the group</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>OPTIONAL Setting 'Collapsed' to true will initialize group collapsed instead of expanded</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>TRUE</td>
+            <td>if the group instruction was added to the response headers or buffered.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupEnd">
+        <div class="location">at line         line 339</div>
+        <code>        static            TRUE
+    <strong>groupEnd</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ends a group in the Firebug Console</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>TRUE</td>
+            <td>if the group instruction was added to the response headers or buffered.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">at line         line 355</div>
+        <code>        static            boolean
+    <strong>send</strong>(mixed $var, string $label = null, string $style = null, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Logs variables to the Firebug Console
+via HTTP response headers and the FirePHP Firefox Extension.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$var</td>
+                <td>The variable to log.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$label</td>
+                <td>OPTIONAL Label to prepend to the log event.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$style</td>
+                <td>OPTIONAL Style of the log event.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>OPTIONAL Options to change how messages are processed and sent</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>Returns TRUE if the variable was added to the response headers or buffered.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Wildfire_Exception.html">Zend_Wildfire_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUri">
+        <div class="location">at line         line 795</div>
+        <code>                    string
+    <strong>getUri</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the unique indentifier for this plugin.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Returns the URI of the plugin.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flushMessages">
+        <div class="location">at line         line 806</div>
+        <code>                    void
+    <strong>flushMessages</strong>(string $protocolUri)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Flush any buffered data.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$protocolUri</td>
+                <td>The URI of the protocol that should be flushed to</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Framework\DB\Test\Unit\Ddl\TriggerTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/sami.css">
+        <script src="../../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Framework_DB_Test_Unit_Ddl_TriggerTest" data-root-path="../../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../../../Magento/Framework.html">Framework</a></li>
+                                        <li><a href="../../../../../../Magento/Framework/DB.html">DB</a></li>
+                                        <li><a href="../../../../../../Magento/Framework/DB/Test.html">Test</a></li>
+                                        <li><a href="../../../../../../Magento/Framework/DB/Test/Unit.html">Unit</a></li>
+                                        <li><a href="../../../../../../Magento/Framework/DB/Test/Unit/Ddl.html">Ddl</a></li>
+    
+                <li>TriggerTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            TriggerTest
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>TriggerTest</strong>        extends PHPUnit_Framework_TestCase
+</p>
+
+        
+    
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetListOfEvents">testGetListOfEvents</a>()
+        
+                                            <p>Test getListOfEvents() method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetListOfTimes">testGetListOfTimes</a>()
+        
+                                            <p>Test getListOfTimes() method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetNameWithSetName">testGetNameWithSetName</a>()
+        
+                                            <p>Test case for getName() after setName()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testSetNameWithException">testSetNameWithException</a>()
+        
+                                            <p>Test case for setName() with exception</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testSetTableWithException">testSetTableWithException</a>()
+        
+                                            <p>Test case for setTable() with exception</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetNameWithException">testGetNameWithException</a>()
+        
+                                            <p>Test case for getName()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetTimeWithException">testGetTimeWithException</a>()
+        
+                                            <p>Test case for getTime() with Exception</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetTableWithException">testGetTableWithException</a>()
+        
+                                            <p>Test case for getTable()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetEventWithException">testGetEventWithException</a>()
+        
+                                            <p>Test case for getEvent() with Exception</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testWrongEventTypeException">testWrongEventTypeException</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testWrongTimeTypeException">testWrongTimeTypeException</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testAddStatementWithException">testAddStatementWithException</a>()
+        
+                                            <p>Test case for setTable() with exception</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStatementsDataProvider">getStatementsDataProvider</a>()
+        
+                                            <p>Data provider for setBody function</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testAddStatement">testAddStatement</a>($param, $expected)
+        
+                                            <p>Test addStatement and getStatements for trigger</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetStatements">testGetStatements</a>()
+        
+                                            <p>Test getStatements method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_testGetListOfEvents">
+        <div class="location">at line         line 23</div>
+        <code>                    
+    <strong>testGetListOfEvents</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test getListOfEvents() method</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetListOfTimes">
+        <div class="location">at line         line 36</div>
+        <code>                    
+    <strong>testGetListOfTimes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test getListOfTimes() method</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetNameWithSetName">
+        <div class="location">at line         line 48</div>
+        <code>                    
+    <strong>testGetNameWithSetName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test case for getName() after setName()</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSetNameWithException">
+        <div class="location">at line         line 62</div>
+        <code>                    
+    <strong>testSetNameWithException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test case for setName() with exception</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSetTableWithException">
+        <div class="location">at line         line 76</div>
+        <code>                    
+    <strong>testSetTableWithException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test case for setTable() with exception</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetNameWithException">
+        <div class="location">at line         line 90</div>
+        <code>                    
+    <strong>testGetNameWithException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test case for getName()</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetTimeWithException">
+        <div class="location">at line         line 106</div>
+        <code>                    
+    <strong>testGetTimeWithException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test case for getTime() with Exception</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetTableWithException">
+        <div class="location">at line         line 122</div>
+        <code>                    
+    <strong>testGetTableWithException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test case for getTable()</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetEventWithException">
+        <div class="location">at line         line 137</div>
+        <code>                    
+    <strong>testGetEventWithException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test case for getEvent() with Exception</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testWrongEventTypeException">
+        <div class="location">at line         line 150</div>
+        <code>                    
+    <strong>testWrongEventTypeException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testWrongTimeTypeException">
+        <div class="location">at line         line 159</div>
+        <code>                    
+    <strong>testWrongTimeTypeException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testAddStatementWithException">
+        <div class="location">at line         line 170</div>
+        <code>                    
+    <strong>testAddStatementWithException</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test case for setTable() with exception</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatementsDataProvider">
+        <div class="location">at line         line 181</div>
+        <code>                    
+    <strong>getStatementsDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Data provider for setBody function</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testAddStatement">
+        <div class="location">at line         line 191</div>
+        <code>                    
+    <strong>testAddStatement</strong>($param, $expected)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test addStatement and getStatements for trigger</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$param</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expected</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetStatements">
+        <div class="location">at line         line 200</div>
+        <code>                    
+    <strong>testGetStatements</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test getStatements method</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

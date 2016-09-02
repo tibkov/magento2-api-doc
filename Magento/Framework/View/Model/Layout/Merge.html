@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Framework\View\Model\Layout\Merge | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
+        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Framework_View_Model_Layout_Merge" data-root-path="../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../../Magento/Framework.html">Framework</a></li>
+                                        <li><a href="../../../../../Magento/Framework/View.html">View</a></li>
+                                        <li><a href="../../../../../Magento/Framework/View/Model.html">Model</a></li>
+                                        <li><a href="../../../../../Magento/Framework/View/Model/Layout.html">Layout</a></li>
+    
+                <li>Merge</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Merge
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Merge</strong>        implements
+        <a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Layout merge model</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>DESIGN_ABSTRACTION_CUSTOM</td>
+                <td class="last">
+                    <p><em>Layout abstraction based on designer prerogative.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DESIGN_ABSTRACTION_PAGE_LAYOUT</td>
+                <td class="last">
+                    <p><em>Layout generalization guaranteed to load into View</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XPATH_HANDLE_DECLARATION</td>
+                <td class="last">
+                    <p><em>XPath of handles originally declared in layout updates</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_ATTRIBUTE</td>
+                <td class="last">
+                    <p><em>Name of an attribute that stands for data type of node values</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAGE_LAYOUT_CACHE_SUFFIX</td>
+                <td class="last">
+                    <p><em>Cache id suffix for page layout</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../Magento/Framework/View/DesignInterface.html"><abbr title="Magento\Framework\View\DesignInterface">DesignInterface</abbr></a> $design, <a href="../../../../../Magento/Framework/Url/ScopeResolverInterface.html"><abbr title="Magento\Framework\Url\ScopeResolverInterface">ScopeResolverInterface</abbr></a> $scopeResolver, <a href="../../../../../Magento/Framework/View/File/CollectorInterface.html"><abbr title="Magento\Framework\View\File\CollectorInterface">CollectorInterface</abbr></a> $fileSource, <a href="../../../../../Magento/Framework/View/File/CollectorInterface.html"><abbr title="Magento\Framework\View\File\CollectorInterface">CollectorInterface</abbr></a> $pageLayoutFileSource, <a href="../../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a> $appState, <a href="../../../../../Magento/Framework/Cache/FrontendInterface.html"><abbr title="Magento\Framework\Cache\FrontendInterface">FrontendInterface</abbr></a> $cache, <a href="../../../../../Magento/Framework/View/Model/Layout/Update/Validator.html"><abbr title="Magento\Framework\View\Model\Layout\Update\Validator">Validator</abbr></a> $validator, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../../Magento/Framework/Filesystem/File/ReadFactory.html"><abbr title="Magento\Framework\Filesystem\File\ReadFactory">ReadFactory</abbr></a> $readFactory, <a href="../../../../../Magento/Framework/View/Design/ThemeInterface.html"><abbr title="Magento\Framework\View\Design\ThemeInterface">ThemeInterface</abbr></a> $theme = null, $cacheSuffix = &#039;&#039;)
+        
+                                            <p>Init merge model</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addUpdate">addUpdate</a>(string $update)
+        
+                                            <p>Add XML update instruction</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_asArray">asArray</a>()
+        
+                                            <p>Get all registered updates as array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_asString">asString</a>()
+        
+                                            <p>Get all registered updates as string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addHandle">addHandle</a>(string|string[] $handleName)
+        
+                                            <p>Add handle(s) to update</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeHandle">removeHandle</a>(string $handleName)
+        
+                                            <p>Remove handle from update</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHandles">getHandles</a>()
+        
+                                            <p>Get handle names array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPageHandles">addPageHandles</a>(array $handlesToTry)
+        
+                                            <p>Add the first existing (declared in layout updates) page handle along with all parents to the update.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pageHandleExists">pageHandleExists</a>(string $handleName)
+        
+                                            <p>Whether a page handle is declared in the system or not</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageLayout">getPageLayout</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isLayoutDefined">isLayoutDefined</a>()
+        
+                                            <p>Check current handles if layout was defined on it</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageHandles">getPageHandles</a>()
+        
+                                            <p>Retrieve used page handle names sorted from parent to child</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAllDesignAbstractions">getAllDesignAbstractions</a>()
+        
+                                            <p>Retrieve all design abstractions that exist in the system.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageHandleType">getPageHandleType</a>(string $handleName)
+        
+                                            <p>Retrieve the type of a page handle</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_load">load</a>(array|string $handles = array())
+        
+                                            <p>Load layout updates by handles</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_asSimplexml">asSimplexml</a>()
+        
+                                            <p>Get layout updates as \Magento\Framework\View\Layout\Element object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDbUpdateString">getDbUpdateString</a>(string $handle)
+        
+                                            <p>Get update string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Magento/Framework/View/Layout/Element.html"><abbr title="Magento\Framework\View\Layout\Element">Element</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFileLayoutUpdatesXml">getFileLayoutUpdatesXml</a>()
+        
+                                            <p>Retrieve already merged layout updates from files for specified area/theme/package/store</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContainers">getContainers</a>()
+        
+                                            <p>Retrieve containers from the update handles that have been already loaded</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+        
+                                            <p>Cleanup circular references</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isCustomerDesignAbstraction">isCustomerDesignAbstraction</a>(array $abstraction)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isPageLayoutDesignAbstraction">isPageLayoutDesignAbstraction</a>(array $abstraction)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Magento/Framework/View/Design/ThemeInterface.html"><abbr title="Magento\Framework\View\Design\ThemeInterface">ThemeInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTheme">getTheme</a>()
+        
+                                            <p>Retrieve theme</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../Magento/Framework/Url/ScopeInterface.html"><abbr title="Magento\Framework\Url\ScopeInterface">ScopeInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getScope">getScope</a>()
+        
+                                            <p>Retrieve current scope</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheId">getCacheId</a>()
+        
+                                            <p>Return cache ID based current area/package/theme/store and handles</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 171</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../../Magento/Framework/View/DesignInterface.html"><abbr title="Magento\Framework\View\DesignInterface">DesignInterface</abbr></a> $design, <a href="../../../../../Magento/Framework/Url/ScopeResolverInterface.html"><abbr title="Magento\Framework\Url\ScopeResolverInterface">ScopeResolverInterface</abbr></a> $scopeResolver, <a href="../../../../../Magento/Framework/View/File/CollectorInterface.html"><abbr title="Magento\Framework\View\File\CollectorInterface">CollectorInterface</abbr></a> $fileSource, <a href="../../../../../Magento/Framework/View/File/CollectorInterface.html"><abbr title="Magento\Framework\View\File\CollectorInterface">CollectorInterface</abbr></a> $pageLayoutFileSource, <a href="../../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a> $appState, <a href="../../../../../Magento/Framework/Cache/FrontendInterface.html"><abbr title="Magento\Framework\Cache\FrontendInterface">FrontendInterface</abbr></a> $cache, <a href="../../../../../Magento/Framework/View/Model/Layout/Update/Validator.html"><abbr title="Magento\Framework\View\Model\Layout\Update\Validator">Validator</abbr></a> $validator, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../../Magento/Framework/Filesystem/File/ReadFactory.html"><abbr title="Magento\Framework\Filesystem\File\ReadFactory">ReadFactory</abbr></a> $readFactory, <a href="../../../../../Magento/Framework/View/Design/ThemeInterface.html"><abbr title="Magento\Framework\View\Design\ThemeInterface">ThemeInterface</abbr></a> $theme = null, $cacheSuffix = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Init merge model</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/View/DesignInterface.html"><abbr title="Magento\Framework\View\DesignInterface">DesignInterface</abbr></a></td>
+                <td>$design</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Url/ScopeResolverInterface.html"><abbr title="Magento\Framework\Url\ScopeResolverInterface">ScopeResolverInterface</abbr></a></td>
+                <td>$scopeResolver</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/View/File/CollectorInterface.html"><abbr title="Magento\Framework\View\File\CollectorInterface">CollectorInterface</abbr></a></td>
+                <td>$fileSource</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/View/File/CollectorInterface.html"><abbr title="Magento\Framework\View\File\CollectorInterface">CollectorInterface</abbr></a></td>
+                <td>$pageLayoutFileSource</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a></td>
+                <td>$appState</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Cache/FrontendInterface.html"><abbr title="Magento\Framework\Cache\FrontendInterface">FrontendInterface</abbr></a></td>
+                <td>$cache</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/View/Model/Layout/Update/Validator.html"><abbr title="Magento\Framework\View\Model\Layout\Update\Validator">Validator</abbr></a></td>
+                <td>$validator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Filesystem/File/ReadFactory.html"><abbr title="Magento\Framework\Filesystem\File\ReadFactory">ReadFactory</abbr></a></td>
+                <td>$readFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/View/Design/ThemeInterface.html"><abbr title="Magento\Framework\View\Design\ThemeInterface">ThemeInterface</abbr></a></td>
+                <td>$theme</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cacheSuffix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addUpdate">
+        <div class="location">at line         line 202</div>
+        <code>                    <a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a>
+    <strong>addUpdate</strong>(string $update)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add XML update instruction</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$update</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_asArray">
+        <div class="location">at line         line 213</div>
+        <code>                    array
+    <strong>asArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all registered updates as array</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_asString">
+        <div class="location">at line         line 223</div>
+        <code>                    string
+    <strong>asString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all registered updates as string</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addHandle">
+        <div class="location">at line         line 234</div>
+        <code>                    <a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a>
+    <strong>addHandle</strong>(string|string[] $handleName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add handle(s) to update</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|string[]</td>
+                <td>$handleName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeHandle">
+        <div class="location">at line         line 252</div>
+        <code>                    <a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a>
+    <strong>removeHandle</strong>(string $handleName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove handle from update</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$handleName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHandles">
+        <div class="location">at line         line 263</div>
+        <code>                    array
+    <strong>getHandles</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get handle names array</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPageHandles">
+        <div class="location">at line         line 275</div>
+        <code>                    bool
+    <strong>addPageHandles</strong>(array $handlesToTry)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add the first existing (declared in layout updates) page handle along with all parents to the update.</p>                    <p>Return whether any page handles have been added or not.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$handlesToTry</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pageHandleExists">
+        <div class="location">at line         line 296</div>
+        <code>                    bool
+    <strong>pageHandleExists</strong>(string $handleName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Whether a page handle is declared in the system or not</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$handleName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageLayout">
+        <div class="location">at line         line 304</div>
+        <code>                    string|null
+    <strong>getPageLayout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isLayoutDefined">
+        <div class="location">at line         line 314</div>
+        <code>                    bool
+    <strong>isLayoutDefined</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check current handles if layout was defined on it</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageHandles">
+        <div class="location">at line         line 350</div>
+        <code>                    array
+    <strong>getPageHandles</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve used page handle names sorted from parent to child</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllDesignAbstractions">
+        <div class="location">at line         line 370</div>
+        <code>                    array
+    <strong>getAllDesignAbstractions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve all design abstractions that exist in the system.</p>                    <p>Result format:
+array(
+    'handle<em>name</em>1' => array(
+        'name'     => 'handle<em>name</em>1',
+        'label'    => 'Handle Name 1',
+        'design<em>abstraction' => self::DESIGN</em>ABSTRACTION<em>PAGE</em>LAYOUT or self::DESIGN<em>ABSTRACTION</em>CUSTOM
+    ),
+    // ...
+)</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageHandleType">
+        <div class="location">at line         line 399</div>
+        <code>                    string|null
+    <strong>getPageHandleType</strong>(string $handleName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the type of a page handle</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$handleName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_load">
+        <div class="location">at line         line 412</div>
+        <code>                    <a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a>
+    <strong>load</strong>(array|string $handles = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load layout updates by handles</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$handles</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Magento/Framework/View/Layout/ProcessorInterface.html"><abbr title="Magento\Framework\View\Layout\ProcessorInterface">ProcessorInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_asSimplexml">
+        <div class="location">at line         line 475</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>asSimplexml</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get layout updates as \Magento\Framework\View\Layout\Element object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDbUpdateString">
+        <div class="location">at line         line 594</div>
+        <code>                    string
+    <strong>getDbUpdateString</strong>(string $handle)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get update string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$handle</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFileLayoutUpdatesXml">
+        <div class="location">at line         line 623</div>
+        <code>                    <a href="../../../../../Magento/Framework/View/Layout/Element.html"><abbr title="Magento\Framework\View\Layout\Element">Element</abbr></a>
+    <strong>getFileLayoutUpdatesXml</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve already merged layout updates from files for specified area/theme/package/store</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Magento/Framework/View/Layout/Element.html"><abbr title="Magento\Framework\View\Layout\Element">Element</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContainers">
+        <div class="location">at line         line 791</div>
+        <code>                    array
+    <strong>getContainers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve containers from the update handles that have been already loaded</p>                    <p>Result format:
+array(
+    'container_name' => 'Container Label',
+    // ...
+)</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">at line         line 811</div>
+        <code>                    
+    <strong>__destruct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cleanup circular references</p>                    <p>Destructor should be called explicitly in order to work around the PHP bug
+https://bugs.php.net/bug.php?id=62468</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isCustomerDesignAbstraction">
+        <div class="location">at line         line 820</div>
+        <code>                    bool
+    <strong>isCustomerDesignAbstraction</strong>(array $abstraction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$abstraction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPageLayoutDesignAbstraction">
+        <div class="location">at line         line 831</div>
+        <code>                    bool
+    <strong>isPageLayoutDesignAbstraction</strong>(array $abstraction)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$abstraction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTheme">
+        <div class="location">at line         line 844</div>
+        <code>                    <a href="../../../../../Magento/Framework/View/Design/ThemeInterface.html"><abbr title="Magento\Framework\View\Design\ThemeInterface">ThemeInterface</abbr></a>
+    <strong>getTheme</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve theme</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Magento/Framework/View/Design/ThemeInterface.html"><abbr title="Magento\Framework\View\Design\ThemeInterface">ThemeInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getScope">
+        <div class="location">at line         line 854</div>
+        <code>                    <a href="../../../../../Magento/Framework/Url/ScopeInterface.html"><abbr title="Magento\Framework\Url\ScopeInterface">ScopeInterface</abbr></a>
+    <strong>getScope</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve current scope</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../Magento/Framework/Url/ScopeInterface.html"><abbr title="Magento\Framework\Url\ScopeInterface">ScopeInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheId">
+        <div class="location">at line         line 864</div>
+        <code>                    string
+    <strong>getCacheId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return cache ID based current area/package/theme/store and handles</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

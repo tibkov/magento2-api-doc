@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Paginator_Adapter_DbTableSelect | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Paginator_Adapter_DbTableSelect" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Paginator_Adapter_DbTableSelect
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Paginator_Adapter_DbTableSelect</strong>        extends <a href="Zend_Paginator_Adapter_DbSelect.html">Zend_Paginator_Adapter_DbSelect</a>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>ROW_COUNT_COLUMN</td>
+                <td class="last">
+                    <p><em>Name of the row count column</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="Zend_Db_Select.html">Zend_Db_Select</a> $select)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Paginator_Adapter_DbSelect.html#method___construct">Zend_Paginator_Adapter_DbSelect</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheIdentifier">getCacheIdentifier</a>()
+        
+                                            <p>Returns the cache identifier.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Paginator_Adapter_DbSelect.html#method_getCacheIdentifier">Zend_Paginator_Adapter_DbSelect</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Paginator_Adapter_DbSelect.html">Zend_Paginator_Adapter_DbSelect</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRowCount">setRowCount</a>($rowCount)
+        
+                                            <p>Sets the total row count, either directly or through a supplied
+query.  Without setting this, {@link getPages()} selects the count
+as a subquery (SELECT COUNT .</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Paginator_Adapter_DbSelect.html#method_setRowCount">Zend_Paginator_Adapter_DbSelect</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getItems">getItems</a>(integer $offset, integer $itemCountPerPage)
+        
+                                            <p>Returns a Zend<em>Db</em>Table<em>Rowset</em>Abstract of items for a page.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>()
+        
+                                            <p>Returns the total number of rows in the result set.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Paginator_Adapter_DbSelect.html#method_count">Zend_Paginator_Adapter_DbSelect</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCountSelect">getCountSelect</a>()
+        
+                                            <p>Get the COUNT select object for the provided query</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Paginator_Adapter_DbSelect.html#method_getCountSelect">Zend_Paginator_Adapter_DbSelect</a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="Zend_Paginator_Adapter_DbSelect.html#method___construct">Zend_Paginator_Adapter_DbSelect</a> at line         line 86</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="Zend_Db_Select.html">Zend_Db_Select</a> $select)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+                <td>$select</td>
+                <td>The select query</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheIdentifier">
+        <div class="location">in <a href="Zend_Paginator_Adapter_DbSelect.html#method_getCacheIdentifier">Zend_Paginator_Adapter_DbSelect</a> at line         line 97</div>
+        <code>                    string
+    <strong>getCacheIdentifier</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the cache identifier.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRowCount">
+        <div class="location">in <a href="Zend_Paginator_Adapter_DbSelect.html#method_setRowCount">Zend_Paginator_Adapter_DbSelect</a> at line         line 117</div>
+        <code>                    <a href="Zend_Paginator_Adapter_DbSelect.html">Zend_Paginator_Adapter_DbSelect</a>
+    <strong>setRowCount</strong>($rowCount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the total row count, either directly or through a supplied
+query.  Without setting this, {@link getPages()} selects the count
+as a subquery (SELECT COUNT .</p>                    <p>.. FROM (SELECT ...)).  While this
+yields an accurate count even with queries containing clauses like
+LIMIT, it can be slow in some circumstances.  For example, in MySQL,
+subqueries are generally slow when using the InnoDB storage engine.
+Users are therefore encouraged to profile their queries to find
+the solution that best meets their needs.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$rowCount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Paginator_Adapter_DbSelect.html">Zend_Paginator_Adapter_DbSelect</a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Paginator_Exception.html">Zend_Paginator_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItems">
+        <div class="location">at line         line 42</div>
+        <code>                    array
+    <strong>getItems</strong>(integer $offset, integer $itemCountPerPage)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a Zend<em>Db</em>Table<em>Rowset</em>Abstract of items for a page.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$offset</td>
+                <td>Page offset</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$itemCountPerPage</td>
+                <td>Number of items per page</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">in <a href="Zend_Paginator_Adapter_DbSelect.html#method_count">Zend_Paginator_Adapter_DbSelect</a> at line         line 178</div>
+        <code>                    integer
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the total number of rows in the result set.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCountSelect">
+        <div class="location">in <a href="Zend_Paginator_Adapter_DbSelect.html#method_getCountSelect">Zend_Paginator_Adapter_DbSelect</a> at line         line 198</div>
+        <code>                    <a href="Zend_Db_Select.html">Zend_Db_Select</a>
+    <strong>getCountSelect</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the COUNT select object for the provided query</p>                    <p>TODO: Have a look at queries that have both GROUP BY and DISTINCT specified.
+In that use-case I'm expecting problems when either GROUP BY or DISTINCT
+has one column.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Select.html">Zend_Db_Select</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

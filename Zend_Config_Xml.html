@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Config_Xml | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Config_Xml" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Config_Xml
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Config_Xml</strong>        extends <a href="Zend_Config.html">Zend_Config</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>XML Adapter for Zend_Config</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XML_NAMESPACE</td>
+                <td class="last">
+                    <p><em>XML namespace for ZF-related tags and attributes</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $xml, mixed $section = null, array|boolean $options = false)
+        
+                                            <p>Loads the section $section from the config file (or string $xml for
+access facilitated by nested object properties.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string $name, mixed $default = null)
+        
+                                            <p>Retrieve a value and return $default if there is no element set.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_get">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $name)
+        
+                                            <p>Magic function so that $obj->value will work.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method___get">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___set">__set</a>(string $name, mixed $value)
+        
+                                            <p>Only allow setting of a property if $allowModifications
+was set to true on construction. Otherwise, throw an exception.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method___set">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___clone">__clone</a>()
+        
+                                            <p>Deep clone of this instance to ensure that nested Zend_Configs
+are also cloned.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method___clone">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toArray">toArray</a>()
+        
+                                            <p>Return an associative array of the stored data.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_toArray">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___isset">__isset</a>(string $name)
+        
+                                            <p>Support isset() overloading on PHP 5.1</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method___isset">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___unset">__unset</a>(string $name)
+        
+                                            <p>Support unset() overloading on PHP 5.1</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method___unset">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>()
+        
+                                            <p>Defined by Countable interface</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_count">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_current">current</a>()
+        
+                                            <p>Defined by Iterator interface</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_current">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_key">key</a>()
+        
+                                            <p>Defined by Iterator interface</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_key">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_next">next</a>()
+        
+                                            <p>Defined by Iterator interface</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_next">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rewind">rewind</a>()
+        
+                                            <p>Defined by Iterator interface</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_rewind">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_valid">valid</a>()
+        
+                                            <p>Defined by Iterator interface</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_valid">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSectionName">getSectionName</a>()
+        
+                                            <p>Returns the section name(s) loaded.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_getSectionName">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_areAllSectionsLoaded">areAllSectionsLoaded</a>()
+        
+                                            <p>Returns true if all sections were loaded</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_areAllSectionsLoaded">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Config.html">Zend_Config</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_merge">merge</a>(<a href="Zend_Config.html">Zend_Config</a> $merge)
+        
+                                            <p>Merge another Zend_Config with this one. The items
+in $merge will override the same named items in
+the current config.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_merge">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setReadOnly">setReadOnly</a>()
+        
+                                            <p>Prevent any more modifications being made to this instance. Useful
+after merge() has been used to merge multiple Zend_Config objects
+into one object which should then not be modified again.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_setReadOnly">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_readOnly">readOnly</a>()
+        
+                                            <p>Returns if this Zend_Config object is read only or not.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_readOnly">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExtends">getExtends</a>()
+        
+                                            <p>Get the current extends</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_getExtends">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setExtend">setExtend</a>(string $extendingSection, string $extendedSection = null)
+        
+                                            <p>Set an extend for Zend<em>Config</em>Writer</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method_setExtend">Zend_Config</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__loadFileErrorHandler">_loadFileErrorHandler</a>(integer $errno, string $errstr, string $errfile, integer $errline)
+        
+                                            <p>Handle any errors from simplexml<em>load</em>file or parse<em>ini</em>file</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Config.html#method__loadFileErrorHandler">Zend_Config</a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 84</div>
+        <code>                    void
+    <strong>__construct</strong>(string $xml, mixed $section = null, array|boolean $options = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Loads the section $section from the config file (or string $xml for
+access facilitated by nested object properties.</p>                    <p>Sections are defined in the XML as children of the root element.</p>
+
+<p>In order to extend another section, a section defines the "extends"
+attribute having a value of the section name from which the extending
+section inherits values.</p>
+
+<p>Note that the keys in $section will override any keys of the same
+name in the sections that have been included via "extends".</p>
+
+<p>The $options parameter may be provided as either a boolean or an array.
+If provided as a boolean, this sets the $allowModifications option of
+Zend_Config. If provided as an array, there are two configuration
+directives that may be set. For example:</p>
+
+<p>$options = array(
+    'allowModifications' => false,
+    'skipExtends'        => false
+     );</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xml</td>
+                <td>XML file or string to process</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$section</td>
+                <td>Section to process</td>
+            </tr>
+                    <tr>
+                <td>array|boolean</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Config_Exception.html">Zend_Config_Exception</a></td>
+                <td>When xml is not set or cannot be loaded</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Config_Exception.html">Zend_Config_Exception</a></td>
+                <td>When section $sectionName cannot be found in $xml</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">in <a href="Zend_Config.html#method_get">Zend_Config</a> at line         line 128</div>
+        <code>                    mixed
+    <strong>get</strong>(string $name, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve a value and return $default if there is no element set.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">in <a href="Zend_Config.html#method___get">Zend_Config</a> at line         line 143</div>
+        <code>                    mixed
+    <strong>__get</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Magic function so that $obj->value will work.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___set">
+        <div class="location">in <a href="Zend_Config.html#method___set">Zend_Config</a> at line         line 157</div>
+        <code>                    void
+    <strong>__set</strong>(string $name, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Only allow setting of a property if $allowModifications
+was set to true on construction. Otherwise, throw an exception.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Config_Exception.html">Zend_Config_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___clone">
+        <div class="location">in <a href="Zend_Config.html#method___clone">Zend_Config</a> at line         line 179</div>
+        <code>                    void
+    <strong>__clone</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Deep clone of this instance to ensure that nested Zend_Configs
+are also cloned.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location">in <a href="Zend_Config.html#method_toArray">Zend_Config</a> at line         line 197</div>
+        <code>                    array
+    <strong>toArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return an associative array of the stored data.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">in <a href="Zend_Config.html#method___isset">Zend_Config</a> at line         line 217</div>
+        <code>                    boolean
+    <strong>__isset</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Support isset() overloading on PHP 5.1</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___unset">
+        <div class="location">in <a href="Zend_Config.html#method___unset">Zend_Config</a> at line         line 229</div>
+        <code>                    void
+    <strong>__unset</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Support unset() overloading on PHP 5.1</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Config_Exception.html">Zend_Config_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">in <a href="Zend_Config.html#method_count">Zend_Config</a> at line         line 248</div>
+        <code>                    int
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Defined by Countable interface</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_current">
+        <div class="location">in <a href="Zend_Config.html#method_current">Zend_Config</a> at line         line 258</div>
+        <code>                    mixed
+    <strong>current</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Defined by Iterator interface</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_key">
+        <div class="location">in <a href="Zend_Config.html#method_key">Zend_Config</a> at line         line 269</div>
+        <code>                    mixed
+    <strong>key</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Defined by Iterator interface</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_next">
+        <div class="location">in <a href="Zend_Config.html#method_next">Zend_Config</a> at line         line 278</div>
+        <code>                    
+    <strong>next</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Defined by Iterator interface</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewind">
+        <div class="location">in <a href="Zend_Config.html#method_rewind">Zend_Config</a> at line         line 292</div>
+        <code>                    
+    <strong>rewind</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Defined by Iterator interface</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_valid">
+        <div class="location">in <a href="Zend_Config.html#method_valid">Zend_Config</a> at line         line 304</div>
+        <code>                    boolean
+    <strong>valid</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Defined by Iterator interface</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSectionName">
+        <div class="location">in <a href="Zend_Config.html#method_getSectionName">Zend_Config</a> at line         line 314</div>
+        <code>                    mixed
+    <strong>getSectionName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the section name(s) loaded.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_areAllSectionsLoaded">
+        <div class="location">in <a href="Zend_Config.html#method_areAllSectionsLoaded">Zend_Config</a> at line         line 327</div>
+        <code>                    boolean
+    <strong>areAllSectionsLoaded</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if all sections were loaded</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_merge">
+        <div class="location">in <a href="Zend_Config.html#method_merge">Zend_Config</a> at line         line 341</div>
+        <code>                    <a href="Zend_Config.html">Zend_Config</a>
+    <strong>merge</strong>(<a href="Zend_Config.html">Zend_Config</a> $merge)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Merge another Zend_Config with this one. The items
+in $merge will override the same named items in
+the current config.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Config.html">Zend_Config</a></td>
+                <td>$merge</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Config.html">Zend_Config</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setReadOnly">
+        <div class="location">in <a href="Zend_Config.html#method_setReadOnly">Zend_Config</a> at line         line 368</div>
+        <code>                    
+    <strong>setReadOnly</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prevent any more modifications being made to this instance. Useful
+after merge() has been used to merge multiple Zend_Config objects
+into one object which should then not be modified again.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_readOnly">
+        <div class="location">in <a href="Zend_Config.html#method_readOnly">Zend_Config</a> at line         line 383</div>
+        <code>                    boolean
+    <strong>readOnly</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns if this Zend_Config object is read only or not.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtends">
+        <div class="location">in <a href="Zend_Config.html#method_getExtends">Zend_Config</a> at line         line 393</div>
+        <code>                    array
+    <strong>getExtends</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current extends</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setExtend">
+        <div class="location">in <a href="Zend_Config.html#method_setExtend">Zend_Config</a> at line         line 405</div>
+        <code>                    void
+    <strong>setExtend</strong>(string $extendingSection, string $extendedSection = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set an extend for Zend<em>Config</em>Writer</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$extendingSection</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$extendedSection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__loadFileErrorHandler">
+        <div class="location">in <a href="Zend_Config.html#method__loadFileErrorHandler">Zend_Config</a> at line         line 447</div>
+        <code>                    
+    <strong>_loadFileErrorHandler</strong>(integer $errno, string $errstr, string $errfile, integer $errline)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handle any errors from simplexml<em>load</em>file or parse<em>ini</em>file</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$errno</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errstr</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errfile</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$errline</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

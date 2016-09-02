@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Db | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Db" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Db
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Db</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class for connecting to SQL databases and performing common operations.</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>PROFILER</td>
+                <td class="last">
+                    <p><em>Use the PROFILER constant in the config of a Zend<em>Db</em>Adapter.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CASE_FOLDING</td>
+                <td class="last">
+                    <p><em>Use the CASE<em>FOLDING constant in the config of a Zend</em>Db_Adapter.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_MODE</td>
+                <td class="last">
+                    <p><em>Use the FETCH<em>MODE constant in the config of a Zend</em>Db_Adapter.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AUTO_QUOTE_IDENTIFIERS</td>
+                <td class="last">
+                    <p><em>Use the AUTO<em>QUOTE</em>IDENTIFIERS constant in the config of a Zend<em>Db</em>Adapter.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ALLOW_SERIALIZATION</td>
+                <td class="last">
+                    <p><em>Use the ALLOW<em>SERIALIZATION constant in the config of a Zend</em>Db_Adapter.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AUTO_RECONNECT_ON_UNSERIALIZE</td>
+                <td class="last">
+                    <p><em>Use the AUTO<em>RECONNECT</em>ON<em>UNSERIALIZE constant in the config of a Zend</em>Db_Adapter.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INT_TYPE</td>
+                <td class="last">
+                    <p><em>Use the INT<em>TYPE, BIGINT</em>TYPE, and FLOAT_TYPE with the quote() method.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BIGINT_TYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FLOAT_TYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_AUTOCOMMIT</td>
+                <td class="last">
+                    <p><em>PDO constant values discovered by this script result:</em></p>
+                    <p>$list = array(
+   'PARAM<em>BOOL', 'PARAM</em>NULL', 'PARAM<em>INT', 'PARAM</em>STR', 'PARAM<em>LOB',
+   'PARAM</em>STMT', 'PARAM<em>INPUT</em>OUTPUT', 'FETCH<em>LAZY', 'FETCH</em>ASSOC',
+   'FETCH<em>NUM', 'FETCH</em>BOTH', 'FETCH<em>OBJ', 'FETCH</em>BOUND',
+   'FETCH<em>COLUMN', 'FETCH</em>CLASS', 'FETCH<em>INTO', 'FETCH</em>FUNC',
+   'FETCH<em>GROUP', 'FETCH</em>UNIQUE', 'FETCH<em>CLASSTYPE', 'FETCH</em>SERIALIZE',
+   'FETCH<em>NAMED', 'ATTR</em>AUTOCOMMIT', 'ATTR<em>PREFETCH', 'ATTR</em>TIMEOUT',
+   'ATTR<em>ERRMODE', 'ATTR</em>SERVER<em>VERSION', 'ATTR</em>CLIENT<em>VERSION',
+   'ATTR</em>SERVER<em>INFO', 'ATTR</em>CONNECTION<em>STATUS', 'ATTR</em>CASE',
+   'ATTR<em>CURSOR</em>NAME', 'ATTR<em>CURSOR', 'ATTR</em>ORACLE<em>NULLS',
+   'ATTR</em>PERSISTENT', 'ATTR<em>STATEMENT</em>CLASS', 'ATTR<em>FETCH</em>TABLE<em>NAMES',
+   'ATTR</em>FETCH<em>CATALOG</em>NAMES', 'ATTR<em>DRIVER</em>NAME',
+   'ATTR<em>STRINGIFY</em>FETCHES', 'ATTR<em>MAX</em>COLUMN<em>LEN', 'ERRMODE</em>SILENT',
+   'ERRMODE<em>WARNING', 'ERRMODE</em>EXCEPTION', 'CASE<em>NATURAL',
+   'CASE</em>LOWER', 'CASE<em>UPPER', 'NULL</em>NATURAL', 'NULL<em>EMPTY</em>STRING',
+   'NULL<em>TO</em>STRING', 'ERR<em>NONE', 'FETCH</em>ORI<em>NEXT',
+   'FETCH</em>ORI<em>PRIOR', 'FETCH</em>ORI<em>FIRST', 'FETCH</em>ORI<em>LAST',
+   'FETCH</em>ORI<em>ABS', 'FETCH</em>ORI<em>REL', 'CURSOR</em>FWDONLY', 'CURSOR<em>SCROLL',
+   'ERR</em>CANT<em>MAP', 'ERR</em>SYNTAX', 'ERR<em>CONSTRAINT', 'ERR</em>NOT<em>FOUND',
+   'ERR</em>ALREADY<em>EXISTS', 'ERR</em>NOT<em>IMPLEMENTED', 'ERR</em>MISMATCH',
+   'ERR<em>TRUNCATED', 'ERR</em>DISCONNECTED', 'ERR<em>NO</em>PERM',
+);</p>
+
+<p>$const = array();
+foreach ($list as $name) {
+   $const[$name] = constant("PDO::$name");
+}
+var_export($const);</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_CASE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_CLIENT_VERSION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_CONNECTION_STATUS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_CURSOR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_CURSOR_NAME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_DRIVER_NAME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_ERRMODE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_FETCH_CATALOG_NAMES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_FETCH_TABLE_NAMES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_MAX_COLUMN_LEN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_ORACLE_NULLS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_PERSISTENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_PREFETCH</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_SERVER_INFO</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_SERVER_VERSION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_STATEMENT_CLASS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_STRINGIFY_FETCHES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_TIMEOUT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CASE_LOWER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CASE_NATURAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CASE_UPPER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURSOR_FWDONLY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURSOR_SCROLL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR_ALREADY_EXISTS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR_CANT_MAP</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR_CONSTRAINT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR_DISCONNECTED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR_MISMATCH</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR_NO_PERM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR_NONE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR_NOT_FOUND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR_NOT_IMPLEMENTED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR_SYNTAX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR_TRUNCATED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERRMODE_EXCEPTION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERRMODE_SILENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERRMODE_WARNING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_ASSOC</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_BOTH</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_BOUND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_CLASS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_CLASSTYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_COLUMN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_FUNC</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_GROUP</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_INTO</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_LAZY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_NAMED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_NUM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_OBJ</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_ORI_ABS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_ORI_FIRST</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_ORI_LAST</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_ORI_NEXT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_ORI_PRIOR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_ORI_REL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_SERIALIZE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FETCH_UNIQUE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NULL_EMPTY_STRING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NULL_NATURAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NULL_TO_STRING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARAM_BOOL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARAM_INPUT_OUTPUT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARAM_INT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARAM_LOB</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARAM_NULL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARAM_STMT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARAM_STR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_factory">factory</a>(mixed $adapter, mixed $config = array())
+        
+                                            <p>Factory for Zend<em>Db</em>Adapter_Abstract classes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_factory">
+        <div class="location">at line         line 199</div>
+        <code>        static            <a href="Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a>
+    <strong>factory</strong>(mixed $adapter, mixed $config = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory for Zend<em>Db</em>Adapter_Abstract classes.</p>                    <p>First argument may be a string containing the base of the adapter class
+name, e.g. 'Mysqli' corresponds to class Zend<em>Db</em>Adapter<em>Mysqli.  This
+name is currently case-insensitive, but is not ideal to rely on this behavior.
+If your class is named 'My</em>Company<em>Pdo</em>Mysql', where 'My<em>Company' is the namespace
+and 'Pdo</em>Mysql' is the adapter name, it is best to use the name exactly as it
+is defined in the class.  This will ensure proper use of the factory API.</p>
+
+<p>First argument may alternatively be an object of type Zend_Config.
+The adapter class base name is read from the 'adapter' property.
+The adapter config parameters are read from the 'params' property.</p>
+
+<p>Second argument is optional and may be an associative array of key-value
+pairs.  This is used as the argument to the adapter constructor.</p>
+
+<p>If the first argument is of type Zend_Config, it is assumed to contain
+all parameters, and the second argument is ignored.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$adapter</td>
+                <td>String name of base adapter class, or Zend_Config object.</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$config</td>
+                <td>OPTIONAL; an array or Zend_Config object with adapter parameters.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Adapter_Abstract.html">Zend_Db_Adapter_Abstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Db_Exception.html">Zend_Db_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\CatalogInventory\Test\Unit\Model\Spi\StockStateProviderTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/sami.css">
+        <script src="../../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_CatalogInventory_Test_Unit_Model_Spi_StockStateProviderTest" data-root-path="../../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../../../Magento/CatalogInventory.html">CatalogInventory</a></li>
+                                        <li><a href="../../../../../../Magento/CatalogInventory/Test.html">Test</a></li>
+                                        <li><a href="../../../../../../Magento/CatalogInventory/Test/Unit.html">Unit</a></li>
+                                        <li><a href="../../../../../../Magento/CatalogInventory/Test/Unit/Model.html">Model</a></li>
+                                        <li><a href="../../../../../../Magento/CatalogInventory/Test/Unit/Model/Spi.html">Spi</a></li>
+    
+                <li>StockStateProviderTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            StockStateProviderTest
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>StockStateProviderTest</strong>        extends PHPUnit_Framework_TestCase
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class StockStateProviderTest</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testVerifyStock">testVerifyStock</a>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testVerifyNotification">testVerifyNotification</a>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testCheckQty">testCheckQty</a>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testSuggestQty">testSuggestQty</a>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetStockQty">testGetStockQty</a>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testCheckQtyIncrements">testCheckQtyIncrements</a>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testCheckQuoteItemQty">testCheckQuoteItemQty</a>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_verifyStockDataProvider">verifyStockDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_verifyNotificationDataProvider">verifyNotificationDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkQtyDataProvider">checkQtyDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_suggestQtyDataProvider">suggestQtyDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStockQtyDataProvider">getStockQtyDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkQtyIncrementsDataProvider">checkQtyIncrementsDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkQuoteItemQtyDataProvider">checkQuoteItemQtyDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testCheckQtyIncrementsMsg">testCheckQtyIncrementsMsg</a>(bool $isChildItem, string $expectedMsg)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkQtyIncrementsMsgDataProvider">checkQtyIncrementsMsgDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_testVerifyStock">
+        <div class="location">at line         line 164</div>
+        <code>                    
+    <strong>testVerifyStock</strong>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a></td>
+                <td>$stockItem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$expectedResult</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testVerifyNotification">
+        <div class="location">at line         line 177</div>
+        <code>                    
+    <strong>testVerifyNotification</strong>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a></td>
+                <td>$stockItem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$expectedResult</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCheckQty">
+        <div class="location">at line         line 190</div>
+        <code>                    
+    <strong>testCheckQty</strong>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a></td>
+                <td>$stockItem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$expectedResult</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSuggestQty">
+        <div class="location">at line         line 203</div>
+        <code>                    
+    <strong>testSuggestQty</strong>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a></td>
+                <td>$stockItem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$expectedResult</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetStockQty">
+        <div class="location">at line         line 216</div>
+        <code>                    
+    <strong>testGetStockQty</strong>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a></td>
+                <td>$stockItem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$expectedResult</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCheckQtyIncrements">
+        <div class="location">at line         line 229</div>
+        <code>                    
+    <strong>testCheckQtyIncrements</strong>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a></td>
+                <td>$stockItem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$expectedResult</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCheckQuoteItemQty">
+        <div class="location">at line         line 242</div>
+        <code>                    
+    <strong>testCheckQuoteItemQty</strong>(<a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a> $stockItem, mixed $expectedResult)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/CatalogInventory/Api/Data/StockItemInterface.html"><abbr title="Magento\CatalogInventory\Api\Data\StockItemInterface">StockItemInterface</abbr></a></td>
+                <td>$stockItem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$expectedResult</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verifyStockDataProvider">
+        <div class="location">at line         line 255</div>
+        <code>                    
+    <strong>verifyStockDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verifyNotificationDataProvider">
+        <div class="location">at line         line 260</div>
+        <code>                    
+    <strong>verifyNotificationDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkQtyDataProvider">
+        <div class="location">at line         line 265</div>
+        <code>                    
+    <strong>checkQtyDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_suggestQtyDataProvider">
+        <div class="location">at line         line 270</div>
+        <code>                    
+    <strong>suggestQtyDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStockQtyDataProvider">
+        <div class="location">at line         line 275</div>
+        <code>                    
+    <strong>getStockQtyDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkQtyIncrementsDataProvider">
+        <div class="location">at line         line 280</div>
+        <code>                    
+    <strong>checkQtyIncrementsDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkQuoteItemQtyDataProvider">
+        <div class="location">at line         line 285</div>
+        <code>                    
+    <strong>checkQuoteItemQtyDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testCheckQtyIncrementsMsg">
+        <div class="location">at line         line 423</div>
+        <code>                    
+    <strong>testCheckQtyIncrementsMsg</strong>(bool $isChildItem, string $expectedMsg)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$isChildItem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$expectedMsg</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkQtyIncrementsMsgDataProvider">
+        <div class="location">at line         line 442</div>
+        <code>                    
+    <strong>checkQtyIncrementsMsgDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

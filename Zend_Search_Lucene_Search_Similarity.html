@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Search_Lucene_Search_Similarity | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Search_Lucene_Search_Similarity" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Search_Lucene_Search_Similarity
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Search_Lucene_Search_Similarity</strong>
+</p>
+
+        
+    
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefault">setDefault</a>(<a href="Zend_Search_Lucene_Search_Similarity.html">Zend_Search_Lucene_Search_Similarity</a> $similarity)
+        
+                                            <p>Set the default Similarity implementation used by indexing and search
+code.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Search_Lucene_Search_Similarity.html">Zend_Search_Lucene_Search_Similarity</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefault">getDefault</a>()
+        
+                                            <p>Return the default Similarity implementation used by indexing and search
+code.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lengthNorm">lengthNorm</a>(string $fieldName, integer $numTokens)
+        
+                                            <p>Computes the normalization value for a field given the total number of
+terms contained in a field.  These values, together with field boosts, are
+stored in an index and multipled into scores for hits on each field by the
+search code.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_queryNorm">queryNorm</a>(float $sumOfSquaredWeights)
+        
+                                            <p>Computes the normalization value for a query given the sum of the squared
+weights of each of the query terms.  This value is then multipled into the
+weight of each query term.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decodeNorm">decodeNorm</a>(integer $byte)
+        
+                                            <p>Decodes a normalization factor stored in an index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeNorm">encodeNorm</a>(float $f)
+        
+                                            <p>Encodes a normalization factor for storage in an index.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tf">tf</a>(float $freq)
+        
+                                            <p>Computes a score factor based on a term or phrase's frequency in a
+document.  This value is multiplied by the idf(Term, Searcher)
+factor for each term in the query and these products are then summed to
+form the initial score for a document.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sloppyFreq">sloppyFreq</a>(integer $distance)
+        
+                                            <p>Computes the amount of a sloppy phrase match, based on an edit distance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    a
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_idf">idf</a>(mixed $input, <a href="Zend_Search_Lucene_Interface.html">Zend_Search_Lucene_Interface</a> $reader)
+        
+                                            <p>Computes a score factor for a simple term or a phrase.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_idfFreq">idfFreq</a>(integer $docFreq, integer $numDocs)
+        
+                                            <p>Computes a score factor based on a term's document frequency (the number
+of documents which contain the term).  This value is multiplied by the
+tf(int) factor for each term in the query and these products are
+then summed to form the initial score for a document.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_coord">coord</a>(integer $overlap, integer $maxOverlap)
+        
+                                            <p>Computes a score factor based on the fraction of all query terms that a
+document contains.  This value is multiplied into scores.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setDefault">
+        <div class="location">at line         line 310</div>
+        <code>        static            
+    <strong>setDefault</strong>(<a href="Zend_Search_Lucene_Search_Similarity.html">Zend_Search_Lucene_Search_Similarity</a> $similarity)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default Similarity implementation used by indexing and search
+code.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Search_Similarity.html">Zend_Search_Lucene_Search_Similarity</a></td>
+                <td>$similarity</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefault">
+        <div class="location">at line         line 322</div>
+        <code>        static            <a href="Zend_Search_Lucene_Search_Similarity.html">Zend_Search_Lucene_Search_Similarity</a>
+    <strong>getDefault</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the default Similarity implementation used by indexing and search
+code.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Search_Lucene_Search_Similarity.html">Zend_Search_Lucene_Search_Similarity</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lengthNorm">
+        <div class="location">at line         line 357</div>
+        <code>    abstract                float
+    <strong>lengthNorm</strong>(string $fieldName, integer $numTokens)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Computes the normalization value for a field given the total number of
+terms contained in a field.  These values, together with field boosts, are
+stored in an index and multipled into scores for hits on each field by the
+search code.</p>                    <p>Matches in longer fields are less precise, so implemenations of this
+method usually return smaller values when 'numTokens' is large,
+and larger values when 'numTokens' is small.</p>
+
+<p>That these values are computed under
+IndexWriter::addDocument(Document) and stored then using
+encodeNorm(float).  Thus they have limited precision, and documents
+must be re-indexed if this method is altered.</p>
+
+<p>fieldName - name of field
+numTokens - the total number of tokens contained in fields named
+            'fieldName' of 'doc'.
+Returns a normalization factor for hits on this field of this document</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fieldName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$numTokens</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_queryNorm">
+        <div class="location">at line         line 373</div>
+        <code>    abstract                float
+    <strong>queryNorm</strong>(float $sumOfSquaredWeights)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Computes the normalization value for a query given the sum of the squared
+weights of each of the query terms.  This value is then multipled into the
+weight of each query term.</p>                    <p>This does not affect ranking, but rather just attempts to make scores
+from different queries comparable.</p>
+
+<p>sumOfSquaredWeights - the sum of the squares of query term weights
+Returns a normalization factor for query weights</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$sumOfSquaredWeights</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decodeNorm">
+        <div class="location">at line         line 382</div>
+        <code>        static            float
+    <strong>decodeNorm</strong>(integer $byte)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decodes a normalization factor stored in an index.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$byte</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeNorm">
+        <div class="location">at line         line 402</div>
+        <code>        static            integer
+    <strong>encodeNorm</strong>(float $f)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encodes a normalization factor for storage in an index.</p>                    <p>The encoding uses a five-bit exponent and three-bit mantissa, thus
+representing values from around 7x10^9 to 2x10^-9 with about one
+significant decimal digit of accuracy.  Zero is also represented.
+Negative numbers are rounded up to zero.  Values too large to represent
+are rounded down to the largest representable value.  Positive values too
+small to represent are rounded up to the smallest positive representable
+value.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$f</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tf">
+        <div class="location">at line         line 464</div>
+        <code>    abstract                float
+    <strong>tf</strong>(float $freq)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Computes a score factor based on a term or phrase's frequency in a
+document.  This value is multiplied by the idf(Term, Searcher)
+factor for each term in the query and these products are then summed to
+form the initial score for a document.</p>                    <p>Terms and phrases repeated in a document indicate the topic of the
+document, so implementations of this method usually return larger values
+when 'freq' is large, and smaller values when 'freq'
+is small.</p>
+
+<p>freq - the frequency of a term within a document
+Returns a score factor based on a term's within-document frequency</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$freq</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sloppyFreq">
+        <div class="location">at line         line 482</div>
+        <code>    abstract                float
+    <strong>sloppyFreq</strong>(integer $distance)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Computes the amount of a sloppy phrase match, based on an edit distance.</p>                    <p>This value is summed for each sloppy phrase match in a document to form
+the frequency that is passed to tf(float).</p>
+
+<p>A phrase match with a small edit distance to a document passage more
+closely matches the document, so implementations of this method usually
+return larger values when the edit distance is small and smaller values
+when it is large.</p>
+
+<p>distance - the edit distance of this sloppy phrase match
+Returns the frequency increment for this match</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$distance</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_idf">
+        <div class="location">at line         line 499</div>
+        <code>                    a
+    <strong>idf</strong>(mixed $input, <a href="Zend_Search_Lucene_Interface.html">Zend_Search_Lucene_Interface</a> $reader)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Computes a score factor for a simple term or a phrase.</p>                    <p>The default implementation is:
+  return idfFreq(searcher.docFreq(term), searcher.maxDoc());</p>
+
+<p>input - the term in question or array of terms
+reader - reader the document collection being searched
+Returns a score factor for the term</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Search_Lucene_Interface.html">Zend_Search_Lucene_Interface</a></td>
+                <td>$reader</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>a</td>
+            <td>score factor for the term</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_idfFreq">
+        <div class="location">at line         line 530</div>
+        <code>    abstract                float
+    <strong>idfFreq</strong>(integer $docFreq, integer $numDocs)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Computes a score factor based on a term's document frequency (the number
+of documents which contain the term).  This value is multiplied by the
+tf(int) factor for each term in the query and these products are
+then summed to form the initial score for a document.</p>                    <p>Terms that occur in fewer documents are better indicators of topic, so
+implemenations of this method usually return larger values for rare terms,
+and smaller values for common terms.</p>
+
+<p>docFreq - the number of documents which contain the term
+numDocs - the total number of documents in the collection
+Returns a score factor based on the term's document frequency</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$docFreq</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$numDocs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_coord">
+        <div class="location">at line         line 549</div>
+        <code>    abstract                float
+    <strong>coord</strong>(integer $overlap, integer $maxOverlap)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Computes a score factor based on the fraction of all query terms that a
+document contains.  This value is multiplied into scores.</p>                    <p>The presence of a large portion of the query terms indicates a better
+match with the query, so implemenations of this method usually return
+larger values when the ratio between these parameters is large and smaller
+values when the ratio between them is small.</p>
+
+<p>overlap - the number of query terms matched in the document
+maxOverlap - the total number of terms in the query
+Returns a score factor based on term overlap with the query</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$overlap</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$maxOverlap</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

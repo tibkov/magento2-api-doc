@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Email\Test\Unit\Model\TemplateTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/sami.css">
+        <script src="../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Email_Test_Unit_Model_TemplateTest" data-root-path="../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../../Magento/Email.html">Email</a></li>
+                                        <li><a href="../../../../../Magento/Email/Test.html">Test</a></li>
+                                        <li><a href="../../../../../Magento/Email/Test/Unit.html">Unit</a></li>
+                                        <li><a href="../../../../../Magento/Email/Test/Unit/Model.html">Model</a></li>
+    
+                <li>TemplateTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            TemplateTest
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>TemplateTest</strong>        extends PHPUnit_Framework_TestCase
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Covers \Magento\Email\Model\Template</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testSetAndGetIsChildTemplate">testSetAndGetIsChildTemplate</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testSetAndGetTemplateFilter">testSetAndGetTemplateFilter</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetTemplateFilterWithEmptyValue">testGetTemplateFilterWithEmptyValue</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testLoadDefault">testLoadDefault</a>($templateType, $templateText, $parsedTemplateText, $expectedTemplateSubject, $expectedOrigTemplateVariables, $expectedTemplateStyles)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadDefaultDataProvider">loadDefaultDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testLoadByConfigPath">testLoadByConfigPath</a>(bool $loadFromDatabase)
+        
+                                            <p>Test to ensure that this method handles loading templates from DB vs filesystem, based on whether template ID is
+numeric.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadByConfigPathDataProvider">loadByConfigPathDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetAndSetId">testGetAndSetId</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testIsValidForSend">testIsValidForSend</a>($isSMTPDisabled, $senderName, $senderEmail, $templateSubject, $expectedValue)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isValidForSendDataProvider">isValidForSendDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetProcessedTemplateSubject">testGetProcessedTemplateSubject</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetVariablesOptionArray">testGetVariablesOptionArray</a>($withGroup, $templateVariables, $expectedResult)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVariablesOptionArrayDataProvider">getVariablesOptionArrayDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testProcessTemplate">testProcessTemplate</a>($templateId, $expectedResult)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processTemplateVariable">processTemplateVariable</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testProcessTemplateThrowsExceptionNonExistentTemplate">testProcessTemplateThrowsExceptionNonExistentTemplate</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetSubject">testGetSubject</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testSetOptions">testSetOptions</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetType">testGetType</a>(string $templateType, int $expectedResult)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTypeDataProvider">getTypeDataProvider</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_testSetAndGetIsChildTemplate">
+        <div class="location">at line         line 172</div>
+        <code>                    
+    <strong>testSetAndGetIsChildTemplate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSetAndGetTemplateFilter">
+        <div class="location">at line         line 182</div>
+        <code>                    
+    <strong>testSetAndGetTemplateFilter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetTemplateFilterWithEmptyValue">
+        <div class="location">at line         line 192</div>
+        <code>                    
+    <strong>testGetTemplateFilterWithEmptyValue</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLoadDefault">
+        <div class="location">at line         line 228</div>
+        <code>                    
+    <strong>testLoadDefault</strong>($templateType, $templateText, $parsedTemplateText, $expectedTemplateSubject, $expectedOrigTemplateVariables, $expectedTemplateStyles)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$templateType</td>
+                <td>string</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$templateText</td>
+                <td>string</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$parsedTemplateText</td>
+                <td>string</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expectedTemplateSubject</td>
+                <td>string|null</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expectedOrigTemplateVariables</td>
+                <td>array|null</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expectedTemplateStyles</td>
+                <td>string|null</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadDefaultDataProvider">
+        <div class="location">at line         line 294</div>
+        <code>                    
+    <strong>loadDefaultDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testLoadByConfigPath">
+        <div class="location">at line         line 355</div>
+        <code>                    
+    <strong>testLoadByConfigPath</strong>(bool $loadFromDatabase)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test to ensure that this method handles loading templates from DB vs filesystem, based on whether template ID is
+numeric.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$loadFromDatabase</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadByConfigPathDataProvider">
+        <div class="location">at line         line 404</div>
+        <code>                    array
+    <strong>loadByConfigPathDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetAndSetId">
+        <div class="location">at line         line 420</div>
+        <code>                    
+    <strong>testGetAndSetId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testIsValidForSend">
+        <div class="location">at line         line 435</div>
+        <code>                    
+    <strong>testIsValidForSend</strong>($isSMTPDisabled, $senderName, $senderEmail, $templateSubject, $expectedValue)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$isSMTPDisabled</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$senderName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$senderEmail</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$templateSubject</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expectedValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isValidForSendDataProvider">
+        <div class="location">at line         line 454</div>
+        <code>                    
+    <strong>isValidForSendDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetProcessedTemplateSubject">
+        <div class="location">at line         line 495</div>
+        <code>                    
+    <strong>testGetProcessedTemplateSubject</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetVariablesOptionArray">
+        <div class="location">at line         line 548</div>
+        <code>                    
+    <strong>testGetVariablesOptionArray</strong>($withGroup, $templateVariables, $expectedResult)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$withGroup</td>
+                <td>bool</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$templateVariables</td>
+                <td>string</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expectedResult</td>
+                <td>array</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVariablesOptionArrayDataProvider">
+        <div class="location">at line         line 555</div>
+        <code>                    
+    <strong>getVariablesOptionArrayDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testProcessTemplate">
+        <div class="location">at line         line 617</div>
+        <code>                    
+    <strong>testProcessTemplate</strong>($templateId, $expectedResult)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$templateId</td>
+                <td>string|int</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$expectedResult</td>
+                <td>string</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processTemplateVariable">
+        <div class="location">at line         line 655</div>
+        <code>                    
+    <strong>processTemplateVariable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testProcessTemplateThrowsExceptionNonExistentTemplate">
+        <div class="location">at line         line 672</div>
+        <code>                    
+    <strong>testProcessTemplateThrowsExceptionNonExistentTemplate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetSubject">
+        <div class="location">at line         line 689</div>
+        <code>                    
+    <strong>testGetSubject</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testSetOptions">
+        <div class="location">at line         line 702</div>
+        <code>                    
+    <strong>testSetOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetType">
+        <div class="location">at line         line 717</div>
+        <code>                    
+    <strong>testGetType</strong>(string $templateType, int $expectedResult)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$templateType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$expectedResult</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTypeDataProvider">
+        <div class="location">at line         line 751</div>
+        <code>                    
+    <strong>getTypeDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Framework\Webapi\ErrorProcessor | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Framework_Webapi_ErrorProcessor" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Framework.html">Framework</a></li>
+                                        <li><a href="../../../Magento/Framework/Webapi.html">Webapi</a></li>
+    
+                <li>ErrorProcessor</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ErrorProcessor
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ErrorProcessor</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Helper for errors processing.</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>DEFAULT_SHUTDOWN_FUNCTION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_ERROR_HTTP_CODE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_RESPONSE_CHARSET</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INTERNAL_SERVER_ERROR_MSG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DATA_FORMAT_JSON</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DATA_FORMAT_XML</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/Json/Encoder.html"><abbr title="Magento\Framework\Json\Encoder">Encoder</abbr></a> $encoder, <a href="../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a> $appState, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a> $filesystem)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/Webapi/Exception.html"><abbr title="Magento\Framework\Webapi\Exception">Exception</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_maskException">maskException</a>(<a target="_blank" href="http://php.net/Exception">Exception</a> $exception)
+        
+                                            <p>Mask actual exception for security reasons in case when it should not be exposed to API clients.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderException">renderException</a>(<a target="_blank" href="http://php.net/Exception">Exception</a> $exception, int $httpCode = self::DEFAULT_ERROR_HTTP_CODE)
+        
+                                            <p>Process API exception.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderErrorMessage">renderErrorMessage</a>(string $errorMessage, string $trace = &#039;Trace is not available.&#039;, int $httpCode = self::DEFAULT_ERROR_HTTP_CODE)
+        
+                                            <p>Render error according to mime type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Framework\Webapi\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerShutdownFunction">registerShutdownFunction</a>()
+        
+                                            <p>Declare web API-specific shutdown function.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_apiShutdownFunction">apiShutdownFunction</a>()
+        
+                                            <p>Function to catch errors, that has not been caught by the user error dispatcher function.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 75</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/Json/Encoder.html"><abbr title="Magento\Framework\Json\Encoder">Encoder</abbr></a> $encoder, <a href="../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a> $appState, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a> $filesystem)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Json/Encoder.html"><abbr title="Magento\Framework\Json\Encoder">Encoder</abbr></a></td>
+                <td>$encoder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/State.html"><abbr title="Magento\Framework\App\State">State</abbr></a></td>
+                <td>$appState</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a></td>
+                <td>$filesystem</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_maskException">
+        <div class="location">at line         line 98</div>
+        <code>                    <a href="../../../Magento/Framework/Webapi/Exception.html"><abbr title="Magento\Framework\Webapi\Exception">Exception</abbr></a>
+    <strong>maskException</strong>(<a target="_blank" href="http://php.net/Exception">Exception</a> $exception)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mask actual exception for security reasons in case when it should not be exposed to API clients.</p>                    <p>Convert any exception into \Magento\Framework\Webapi\Exception.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td>$exception</td>
+                <td>Exception to convert to a WebAPI exception</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/Webapi/Exception.html"><abbr title="Magento\Framework\Webapi\Exception">Exception</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderException">
+        <div class="location">at line         line 166</div>
+        <code>                    void
+    <strong>renderException</strong>(<a target="_blank" href="http://php.net/Exception">Exception</a> $exception, int $httpCode = self::DEFAULT_ERROR_HTTP_CODE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Process API exception.</p>                    <p>Create report if not in developer mode and render error to send correct API response.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td>$exception</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$httpCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderErrorMessage">
+        <div class="location">at line         line 208</div>
+        <code>                    void
+    <strong>renderErrorMessage</strong>(string $errorMessage, string $trace = &#039;Trace is not available.&#039;, int $httpCode = self::DEFAULT_ERROR_HTTP_CODE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render error according to mime type.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$errorMessage</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$trace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$httpCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerShutdownFunction">
+        <div class="location">at line         line 273</div>
+        <code>                    <abbr title="Magento\Framework\Webapi\$this">$this</abbr>
+    <strong>registerShutdownFunction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Declare web API-specific shutdown function.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Framework\Webapi\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_apiShutdownFunction">
+        <div class="location">at line         line 284</div>
+        <code>                    void
+    <strong>apiShutdownFunction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Function to catch errors, that has not been caught by the user error dispatcher function.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

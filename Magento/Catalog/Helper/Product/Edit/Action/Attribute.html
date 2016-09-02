@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Catalog\Helper\Product\Edit\Action\Attribute | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/sami.css">
+        <script src="../../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Catalog_Helper_Product_Edit_Action_Attribute" data-root-path="../../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../../../Magento/Catalog.html">Catalog</a></li>
+                                        <li><a href="../../../../../../Magento/Catalog/Helper.html">Helper</a></li>
+                                        <li><a href="../../../../../../Magento/Catalog/Helper/Product.html">Product</a></li>
+                                        <li><a href="../../../../../../Magento/Catalog/Helper/Product/Edit.html">Edit</a></li>
+                                        <li><a href="../../../../../../Magento/Catalog/Helper/Product/Edit/Action.html">Action</a></li>
+    
+                <li>Attribute</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Attribute
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Attribute</strong>        extends <a href="../../../../../../Magento/Backend/Helper/Data.html"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class Attribute</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XML_PATH_USE_CUSTOM_ADMIN_URL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../../../../Magento/Framework/App/Route/Config.html"><abbr title="Magento\Framework\App\Route\Config">Config</abbr></a> $routeConfig, <a href="../../../../../../Magento/Framework/Locale/ResolverInterface.html"><abbr title="Magento\Framework\Locale\ResolverInterface">ResolverInterface</abbr></a> $locale, <a href="../../../../../../Magento/Backend/Model/UrlInterface.html"><abbr title="Magento\Backend\Model\UrlInterface">UrlInterface</abbr></a> $backendUrl, <a href="../../../../../../Magento/Backend/Model/Auth.html"><abbr title="Magento\Backend\Model\Auth">Auth</abbr></a> $auth, <a href="../../../../../../Magento/Backend/App/Area/FrontNameResolver.html"><abbr title="Magento\Backend\App\Area\FrontNameResolver">FrontNameResolver</abbr></a> $frontNameResolver, <a href="../../../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a> $mathRandom, <a href="../../../../../../Magento/Eav/Model/Config.html"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> $eavConfig, <a href="../../../../../../Magento/Backend/Model/Session.html"><abbr title="Magento\Backend\Model\Session">Session</abbr></a> $session, <abbr title="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">CollectionFactory</abbr> $productsFactory, <a href="../../../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isModuleOutputEnabled">isModuleOutputEnabled</a>(string $moduleName = null)
+        
+                                            <p>Check whether or not the module output is enabled in Configuration</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageHelpUrl">getPageHelpUrl</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Backend/Helper/Data.html#method_getPageHelpUrl"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Backend\Helper\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPageHelpUrl">setPageHelpUrl</a>(string|null $url = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Backend/Helper/Data.html#method_setPageHelpUrl"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Backend\Helper\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPageHelpUrl">addPageHelpUrl</a>(string $suffix)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Backend/Helper/Data.html#method_addPageHelpUrl"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUrl">getUrl</a>(string $route = &#039;&#039;, array $params = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Backend/Helper/Data.html#method_getUrl"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCurrentUserId">getCurrentUserId</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Backend/Helper/Data.html#method_getCurrentUserId"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareFilterString">prepareFilterString</a>(string $filterString)
+        
+                                            <p>Decode filter string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Backend/Helper/Data.html#method_prepareFilterString"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generateResetPasswordLinkToken">generateResetPasswordLinkToken</a>()
+        
+                                            <p>Generate unique token for reset password confirmation link</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Backend/Helper/Data.html#method_generateResetPasswordLinkToken"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHomePageUrl">getHomePageUrl</a>()
+        
+                                            <p>Get backend start page URL</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Backend/Helper/Data.html#method_getHomePageUrl"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAreaFrontName">getAreaFrontName</a>(bool $checkHost = false)
+        
+                                            <p>Return Backend area front name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../../../Magento/Backend/Helper/Data.html#method_getAreaFrontName"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Catalog/Model/ResourceModel/Product/Collection.html"><abbr title="Magento\Catalog\Model\ResourceModel\Product\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProducts">getProducts</a>()
+        
+                                            <p>Return product collection with selected product filter
+Product collection didn't load</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setProductIds">setProductIds</a>(array $productIds)
+        
+                                            <p>Set array of selected product</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductIds">getProductIds</a>()
+        
+                                            <p>Return array of selected product ids from post or session</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSelectedStoreId">getSelectedStoreId</a>()
+        
+                                            <p>Return selected store id from request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductsSetIds">getProductsSetIds</a>()
+        
+                                            <p>Return array of attribute sets by selected products</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../../../Magento/Eav/Model/ResourceModel/Entity/Attribute/Collection.html"><abbr title="Magento\Eav\Model\ResourceModel\Entity\Attribute\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributes">getAttributes</a>()
+        
+                                            <p>Return collection of same attributes for selected products without unique</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStoreWebsiteId">getStoreWebsiteId</a>(int $storeId)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 73</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../../../../Magento/Framework/App/Route/Config.html"><abbr title="Magento\Framework\App\Route\Config">Config</abbr></a> $routeConfig, <a href="../../../../../../Magento/Framework/Locale/ResolverInterface.html"><abbr title="Magento\Framework\Locale\ResolverInterface">ResolverInterface</abbr></a> $locale, <a href="../../../../../../Magento/Backend/Model/UrlInterface.html"><abbr title="Magento\Backend\Model\UrlInterface">UrlInterface</abbr></a> $backendUrl, <a href="../../../../../../Magento/Backend/Model/Auth.html"><abbr title="Magento\Backend\Model\Auth">Auth</abbr></a> $auth, <a href="../../../../../../Magento/Backend/App/Area/FrontNameResolver.html"><abbr title="Magento\Backend\App\Area\FrontNameResolver">FrontNameResolver</abbr></a> $frontNameResolver, <a href="../../../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a> $mathRandom, <a href="../../../../../../Magento/Eav/Model/Config.html"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> $eavConfig, <a href="../../../../../../Magento/Backend/Model/Session.html"><abbr title="Magento\Backend\Model\Session">Session</abbr></a> $session, <abbr title="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">CollectionFactory</abbr> $productsFactory, <a href="../../../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a></td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Framework/App/Route/Config.html"><abbr title="Magento\Framework\App\Route\Config">Config</abbr></a></td>
+                <td>$routeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Framework/Locale/ResolverInterface.html"><abbr title="Magento\Framework\Locale\ResolverInterface">ResolverInterface</abbr></a></td>
+                <td>$locale</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Backend/Model/UrlInterface.html"><abbr title="Magento\Backend\Model\UrlInterface">UrlInterface</abbr></a></td>
+                <td>$backendUrl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Backend/Model/Auth.html"><abbr title="Magento\Backend\Model\Auth">Auth</abbr></a></td>
+                <td>$auth</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Backend/App/Area/FrontNameResolver.html"><abbr title="Magento\Backend\App\Area\FrontNameResolver">FrontNameResolver</abbr></a></td>
+                <td>$frontNameResolver</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a></td>
+                <td>$mathRandom</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Eav/Model/Config.html"><abbr title="Magento\Eav\Model\Config">Config</abbr></a></td>
+                <td>$eavConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Backend/Model/Session.html"><abbr title="Magento\Backend\Model\Session">Session</abbr></a></td>
+                <td>$session</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">CollectionFactory</abbr></td>
+                <td>$productsFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isModuleOutputEnabled">
+        <div class="location">in <a href="../../../../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a> at line         line 130</div>
+        <code>                    boolean
+    <strong>isModuleOutputEnabled</strong>(string $moduleName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether or not the module output is enabled in Configuration</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$moduleName</td>
+                <td>Full module name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>use \Magento\Framework\Module\Manager::isOutputEnabled()</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageHelpUrl">
+        <div class="location">in <a href="../../../../../../Magento/Backend/Helper/Data.html#method_getPageHelpUrl"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a> at line         line 82</div>
+        <code>                    string
+    <strong>getPageHelpUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPageHelpUrl">
+        <div class="location">in <a href="../../../../../../Magento/Backend/Helper/Data.html#method_setPageHelpUrl"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a> at line         line 94</div>
+        <code>                    <abbr title="Magento\Backend\Helper\$this">$this</abbr>
+    <strong>setPageHelpUrl</strong>(string|null $url = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Backend\Helper\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPageHelpUrl">
+        <div class="location">in <a href="../../../../../../Magento/Backend/Helper/Data.html#method_addPageHelpUrl"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a> at line         line 124</div>
+        <code>                    <abbr title="Magento\Backend\Helper\$this">$this</abbr>
+    <strong>addPageHelpUrl</strong>(string $suffix)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$suffix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Backend\Helper\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrl">
+        <div class="location">in <a href="../../../../../../Magento/Backend/Helper/Data.html#method_getUrl"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a> at line         line 135</div>
+        <code>                    string
+    <strong>getUrl</strong>(string $route = &#039;&#039;, array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$route</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurrentUserId">
+        <div class="location">in <a href="../../../../../../Magento/Backend/Helper/Data.html#method_getCurrentUserId"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a> at line         line 143</div>
+        <code>                    int|bool
+    <strong>getCurrentUserId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareFilterString">
+        <div class="location">in <a href="../../../../../../Magento/Backend/Helper/Data.html#method_prepareFilterString"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a> at line         line 157</div>
+        <code>                    array
+    <strong>prepareFilterString</strong>(string $filterString)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decode filter string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filterString</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateResetPasswordLinkToken">
+        <div class="location">in <a href="../../../../../../Magento/Backend/Helper/Data.html#method_generateResetPasswordLinkToken"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a> at line         line 183</div>
+        <code>                    string
+    <strong>generateResetPasswordLinkToken</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate unique token for reset password confirmation link</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHomePageUrl">
+        <div class="location">in <a href="../../../../../../Magento/Backend/Helper/Data.html#method_getHomePageUrl"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a> at line         line 193</div>
+        <code>                    string
+    <strong>getHomePageUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get backend start page URL</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAreaFrontName">
+        <div class="location">in <a href="../../../../../../Magento/Backend/Helper/Data.html#method_getAreaFrontName"><abbr title="Magento\Backend\Helper\Data">Data</abbr></a> at line         line 204</div>
+        <code>                    bool|string
+    <strong>getAreaFrontName</strong>(bool $checkHost = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return Backend area front name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$checkHost</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProducts">
+        <div class="location">at line         line 99</div>
+        <code>                    <a href="../../../../../../Magento/Catalog/Model/ResourceModel/Product/Collection.html"><abbr title="Magento\Catalog\Model\ResourceModel\Product\Collection">Collection</abbr></a>
+    <strong>getProducts</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return product collection with selected product filter
+Product collection didn't load</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Catalog/Model/ResourceModel/Product/Collection.html"><abbr title="Magento\Catalog\Model\ResourceModel\Product\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setProductIds">
+        <div class="location">at line         line 125</div>
+        <code>                    void
+    <strong>setProductIds</strong>(array $productIds)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set array of selected product</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$productIds</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductIds">
+        <div class="location">at line         line 135</div>
+        <code>                    array|null
+    <strong>getProductIds</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return array of selected product ids from post or session</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSelectedStoreId">
+        <div class="location">at line         line 145</div>
+        <code>                    integer
+    <strong>getSelectedStoreId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return selected store id from request</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductsSetIds">
+        <div class="location">at line         line 155</div>
+        <code>                    array
+    <strong>getProductsSetIds</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return array of attribute sets by selected products</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributes">
+        <div class="location">at line         line 165</div>
+        <code>                    <a href="../../../../../../Magento/Eav/Model/ResourceModel/Entity/Attribute/Collection.html"><abbr title="Magento\Eav\Model\ResourceModel\Entity\Attribute\Collection">Collection</abbr></a>
+    <strong>getAttributes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return collection of same attributes for selected products without unique</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../../../Magento/Eav/Model/ResourceModel/Entity/Attribute/Collection.html"><abbr title="Magento\Eav\Model\ResourceModel\Entity\Attribute\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStoreWebsiteId">
+        <div class="location">at line         line 199</div>
+        <code>                    int
+    <strong>getStoreWebsiteId</strong>(int $storeId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

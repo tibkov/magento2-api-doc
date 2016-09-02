@@ -1,0 +1,5424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Sales\Api\Data\OrderPaymentInterface | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Sales_Api_Data_OrderPaymentInterface" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">interface</span></li>
+                                                            <li><a href="../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../Magento/Sales.html">Sales</a></li>
+                                        <li><a href="../../../../Magento/Sales/Api.html">Api</a></li>
+                                        <li><a href="../../../../Magento/Sales/Api/Data.html">Data</a></li>
+    
+                <li>OrderPaymentInterface</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            OrderPaymentInterface
+                
+        </h1>
+    </div>
+
+    <p>    interface
+    <strong>OrderPaymentInterface</strong>        implements
+        <a href="../../../../Magento/Framework/Api/ExtensibleDataInterface.html"><abbr title="Magento\Framework\Api\ExtensibleDataInterface">ExtensibleDataInterface</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Order payment interface.</p>            <p>An order is a document that a web store issues to a customer. Magento generates a sales order that lists the product
+items, billing and shipping addresses, and shipping and payment methods. A corresponding external document, known as
+a purchase order, is emailed to the customer.</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>ENTITY_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARENT_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BASE_SHIPPING_CAPTURED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SHIPPING_CAPTURED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AMOUNT_REFUNDED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BASE_AMOUNT_PAID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AMOUNT_CANCELED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BASE_AMOUNT_AUTHORIZED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BASE_AMOUNT_PAID_ONLINE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BASE_AMOUNT_REFUNDED_ONLINE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BASE_SHIPPING_AMOUNT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SHIPPING_AMOUNT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AMOUNT_PAID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AMOUNT_AUTHORIZED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BASE_AMOUNT_ORDERED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BASE_SHIPPING_REFUNDED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SHIPPING_REFUNDED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BASE_AMOUNT_REFUNDED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AMOUNT_ORDERED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BASE_AMOUNT_CANCELED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>QUOTE_PAYMENT_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADDITIONAL_DATA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_EXP_MONTH</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_SS_START_YEAR</td>
+                <td class="last">
+                    <p><em>Credit card SS start year.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ECHECK_BANK_NAME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_DEBUG_REQUEST_BODY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_SECURE_VERIFY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PROTECTION_ELIGIBILITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_APPROVAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_LAST_4</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_STATUS_DESCRIPTION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ECHECK_TYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_DEBUG_RESPONSE_SERIALIZED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_SS_START_MONTH</td>
+                <td class="last">
+                    <p><em>Credit card SS start month.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ECHECK_ACCOUNT_TYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LAST_TRANS_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_CID_STATUS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_OWNER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_TYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PO_NUMBER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_EXP_YEAR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_STATUS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ECHECK_ROUTING_NUMBER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ACCOUNT_STATUS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ANET_TRANS_METHOD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_DEBUG_RESPONSE_BODY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_SS_ISSUE</td>
+                <td class="last">
+                    <p><em>Credit card SS issue.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ECHECK_ACCOUNT_NAME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_AVS_STATUS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_NUMBER_ENC</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CC_TRANS_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADDRESS_STATUS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ADDITIONAL_INFORMATION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAccountStatus">getAccountStatus</a>()
+        
+                                            <p>Gets the account status for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAdditionalData">getAdditionalData</a>()
+        
+                                            <p>Gets the additional data for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAdditionalInformation">getAdditionalInformation</a>()
+        
+                                            <p>Gets the additional information for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAddressStatus">getAddressStatus</a>()
+        
+                                            <p>Gets the address status for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAmountAuthorized">getAmountAuthorized</a>()
+        
+                                            <p>Gets the amount authorized for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAmountCanceled">getAmountCanceled</a>()
+        
+                                            <p>Gets the amount canceled for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAmountOrdered">getAmountOrdered</a>()
+        
+                                            <p>Gets the amount ordered for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAmountPaid">getAmountPaid</a>()
+        
+                                            <p>Gets the amount paid for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAmountRefunded">getAmountRefunded</a>()
+        
+                                            <p>Gets the amount refunded for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAnetTransMethod">getAnetTransMethod</a>()
+        
+                                            <p>Gets the anet transaction method for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseAmountAuthorized">getBaseAmountAuthorized</a>()
+        
+                                            <p>Gets the base amount authorized for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseAmountCanceled">getBaseAmountCanceled</a>()
+        
+                                            <p>Gets the base amount canceled for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseAmountOrdered">getBaseAmountOrdered</a>()
+        
+                                            <p>Gets the base amount ordered for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseAmountPaid">getBaseAmountPaid</a>()
+        
+                                            <p>Gets the base amount paid for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseAmountPaidOnline">getBaseAmountPaidOnline</a>()
+        
+                                            <p>Gets the base amount paid online for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseAmountRefunded">getBaseAmountRefunded</a>()
+        
+                                            <p>Gets the base amount refunded for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseAmountRefundedOnline">getBaseAmountRefundedOnline</a>()
+        
+                                            <p>Gets the base amount refunded online for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseShippingAmount">getBaseShippingAmount</a>()
+        
+                                            <p>Gets the base shipping amount for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseShippingCaptured">getBaseShippingCaptured</a>()
+        
+                                            <p>Gets the base shipping captured for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseShippingRefunded">getBaseShippingRefunded</a>()
+        
+                                            <p>Gets the base shipping refunded amount for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcApproval">getCcApproval</a>()
+        
+                                            <p>Gets the credit card approval for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcAvsStatus">getCcAvsStatus</a>()
+        
+                                            <p>Gets the credit card avs status for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcCidStatus">getCcCidStatus</a>()
+        
+                                            <p>Gets the credit card cid status for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcDebugRequestBody">getCcDebugRequestBody</a>()
+        
+                                            <p>Gets the credit card debug request body for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcDebugResponseBody">getCcDebugResponseBody</a>()
+        
+                                            <p>Gets the credit card debug response body for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcDebugResponseSerialized">getCcDebugResponseSerialized</a>()
+        
+                                            <p>Gets the credit card debug response serialized for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcExpMonth">getCcExpMonth</a>()
+        
+                                            <p>Gets the credit card expiration month for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcExpYear">getCcExpYear</a>()
+        
+                                            <p>Gets the credit card expiration year for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcLast4">getCcLast4</a>()
+        
+                                            <p>Gets the last four digits of the credit card for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcNumberEnc">getCcNumberEnc</a>()
+        
+                                            <p>Gets the encrypted credit card number for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcOwner">getCcOwner</a>()
+        
+                                            <p>Gets the credit card owner for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcSecureVerify">getCcSecureVerify</a>()
+        
+                                            <p>Gets the credit card secure verify for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcSsIssue">getCcSsIssue</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Gets the credit card SS issue for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcSsStartMonth">getCcSsStartMonth</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Gets the credit card SS start month for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcSsStartYear">getCcSsStartYear</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Gets the credit card SS start year for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcStatus">getCcStatus</a>()
+        
+                                            <p>Gets the credit card status for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcStatusDescription">getCcStatusDescription</a>()
+        
+                                            <p>Gets the credit card status description for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcTransId">getCcTransId</a>()
+        
+                                            <p>Gets the credit card transaction id for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCcType">getCcType</a>()
+        
+                                            <p>Gets the credit card type for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEcheckAccountName">getEcheckAccountName</a>()
+        
+                                            <p>Gets the eCheck account name for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEcheckAccountType">getEcheckAccountType</a>()
+        
+                                            <p>Gets the eCheck account type for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEcheckBankName">getEcheckBankName</a>()
+        
+                                            <p>Gets the eCheck bank name for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEcheckRoutingNumber">getEcheckRoutingNumber</a>()
+        
+                                            <p>Gets the eCheck routing number for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEcheckType">getEcheckType</a>()
+        
+                                            <p>Gets the eCheck type for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEntityId">getEntityId</a>()
+        
+                                            <p>Gets the entity ID for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEntityId">setEntityId</a>(int $entityId)
+        
+                                            <p>Sets entity ID.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLastTransId">getLastTransId</a>()
+        
+                                            <p>Gets the last transaction ID for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMethod">getMethod</a>()
+        
+                                            <p>Gets the method for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParentId">getParentId</a>()
+        
+                                            <p>Gets the parent ID for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPoNumber">getPoNumber</a>()
+        
+                                            <p>Gets the PO number for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProtectionEligibility">getProtectionEligibility</a>()
+        
+                                            <p>Gets the protection eligibility for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuotePaymentId">getQuotePaymentId</a>()
+        
+                                            <p>Gets the quote payment ID for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShippingAmount">getShippingAmount</a>()
+        
+                                            <p>Gets the shipping amount for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShippingCaptured">getShippingCaptured</a>()
+        
+                                            <p>Gets the shipping captured for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShippingRefunded">getShippingRefunded</a>()
+        
+                                            <p>Gets the shipping refunded for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParentId">setParentId</a>(int $id)
+        
+                                            <p>Sets the parent ID for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBaseShippingCaptured">setBaseShippingCaptured</a>(float $baseShippingCaptured)
+        
+                                            <p>Sets the base shipping captured for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setShippingCaptured">setShippingCaptured</a>(float $shippingCaptured)
+        
+                                            <p>Sets the shipping captured for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAmountRefunded">setAmountRefunded</a>(float $amountRefunded)
+        
+                                            <p>Sets the amount refunded for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBaseAmountPaid">setBaseAmountPaid</a>(float $baseAmountPaid)
+        
+                                            <p>Sets the base amount paid for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAmountCanceled">setAmountCanceled</a>(float $amountCanceled)
+        
+                                            <p>Sets the amount canceled for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBaseAmountAuthorized">setBaseAmountAuthorized</a>(float $baseAmountAuthorized)
+        
+                                            <p>Sets the base amount authorized for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBaseAmountPaidOnline">setBaseAmountPaidOnline</a>(float $baseAmountPaidOnline)
+        
+                                            <p>Sets the base amount paid online for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBaseAmountRefundedOnline">setBaseAmountRefundedOnline</a>(float $baseAmountRefundedOnline)
+        
+                                            <p>Sets the base amount refunded online for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBaseShippingAmount">setBaseShippingAmount</a>(float $amount)
+        
+                                            <p>Sets the base shipping amount for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setShippingAmount">setShippingAmount</a>(float $amount)
+        
+                                            <p>Sets the shipping amount for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAmountPaid">setAmountPaid</a>(float $amountPaid)
+        
+                                            <p>Sets the amount paid for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAmountAuthorized">setAmountAuthorized</a>(float $amountAuthorized)
+        
+                                            <p>Sets the amount authorized for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBaseAmountOrdered">setBaseAmountOrdered</a>(float $baseAmountOrdered)
+        
+                                            <p>Sets the base amount ordered for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBaseShippingRefunded">setBaseShippingRefunded</a>(float $baseShippingRefunded)
+        
+                                            <p>Sets the base shipping refunded amount for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setShippingRefunded">setShippingRefunded</a>(float $shippingRefunded)
+        
+                                            <p>Sets the shipping refunded for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBaseAmountRefunded">setBaseAmountRefunded</a>(float $baseAmountRefunded)
+        
+                                            <p>Sets the base amount refunded for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAmountOrdered">setAmountOrdered</a>(float $amountOrdered)
+        
+                                            <p>Sets the amount ordered for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBaseAmountCanceled">setBaseAmountCanceled</a>(float $baseAmountCanceled)
+        
+                                            <p>Sets the base amount canceled for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setQuotePaymentId">setQuotePaymentId</a>(int $id)
+        
+                                            <p>Sets the quote payment ID for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAdditionalData">setAdditionalData</a>(string $additionalData)
+        
+                                            <p>Sets the additional data for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcExpMonth">setCcExpMonth</a>(string $ccExpMonth)
+        
+                                            <p>Sets the credit card expiration month for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcSsStartYear">setCcSsStartYear</a>(string $ccSsStartYear)
+        
+                                            <p>Sets the credit card SS start year for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEcheckBankName">setEcheckBankName</a>(string $echeckBankName)
+        
+                                            <p>Sets the eCheck bank name for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMethod">setMethod</a>(string $method)
+        
+                                            <p>Sets the method for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcDebugRequestBody">setCcDebugRequestBody</a>(string $ccDebugRequestBody)
+        
+                                            <p>Sets the credit card debug request body for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcSecureVerify">setCcSecureVerify</a>(string $ccSecureVerify)
+        
+                                            <p>Sets the credit card secure verify for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setProtectionEligibility">setProtectionEligibility</a>(string $protectionEligibility)
+        
+                                            <p>Sets the protection eligibility for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcApproval">setCcApproval</a>(string $ccApproval)
+        
+                                            <p>Sets the credit card approval for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcLast4">setCcLast4</a>(string $ccLast4)
+        
+                                            <p>Sets the last four digits of the credit card for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcStatusDescription">setCcStatusDescription</a>(string $description)
+        
+                                            <p>Sets the credit card status description for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEcheckType">setEcheckType</a>(string $echeckType)
+        
+                                            <p>Sets the eCheck type for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcDebugResponseSerialized">setCcDebugResponseSerialized</a>(string $ccDebugResponseSerialized)
+        
+                                            <p>Sets the credit card debug response serialized for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcSsStartMonth">setCcSsStartMonth</a>(string $ccSsStartMonth)
+        
+                                            <p>Sets the credit card SS start month for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEcheckAccountType">setEcheckAccountType</a>(string $echeckAccountType)
+        
+                                            <p>Sets the eCheck account type for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLastTransId">setLastTransId</a>(string $id)
+        
+                                            <p>Sets the last transaction ID for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcCidStatus">setCcCidStatus</a>(string $ccCidStatus)
+        
+                                            <p>Sets the credit card cid status for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcOwner">setCcOwner</a>(string $ccOwner)
+        
+                                            <p>Sets the credit card owner for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcType">setCcType</a>(string $ccType)
+        
+                                            <p>Sets the credit card type for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPoNumber">setPoNumber</a>(string $poNumber)
+        
+                                            <p>Sets the PO number for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcExpYear">setCcExpYear</a>(string $ccExpYear)
+        
+                                            <p>Sets the credit card expiration year for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcStatus">setCcStatus</a>(string $ccStatus)
+        
+                                            <p>Sets the credit card status for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEcheckRoutingNumber">setEcheckRoutingNumber</a>(string $echeckRoutingNumber)
+        
+                                            <p>Sets the eCheck routing number for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAccountStatus">setAccountStatus</a>(string $accountStatus)
+        
+                                            <p>Sets the account status for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAnetTransMethod">setAnetTransMethod</a>(string $anetTransMethod)
+        
+                                            <p>Sets the anet transaction method for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcDebugResponseBody">setCcDebugResponseBody</a>(string $ccDebugResponseBody)
+        
+                                            <p>Sets the credit card debug response body for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcSsIssue">setCcSsIssue</a>(string $ccSsIssue)
+        
+                                            <p>Sets the credit card SS issue for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEcheckAccountName">setEcheckAccountName</a>(string $echeckAccountName)
+        
+                                            <p>Sets the eCheck account name for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcAvsStatus">setCcAvsStatus</a>(string $ccAvsStatus)
+        
+                                            <p>Sets the credit card avs status for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcNumberEnc">setCcNumberEnc</a>(string $ccNumberEnc)
+        
+                                            <p>Sets the encrypted credit card number for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCcTransId">setCcTransId</a>(string $id)
+        
+                                            <p>Sets the credit card transaction id for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAddressStatus">setAddressStatus</a>(string $addressStatus)
+        
+                                            <p>Sets the address status for the order payment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\OrderPaymentExtensionInterface">OrderPaymentExtensionInterface</abbr>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExtensionAttributes">getExtensionAttributes</a>()
+        
+                                            <p>Retrieve existing extension attributes object or create a new one.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setExtensionAttributes">setExtensionAttributes</a>(<abbr title="Magento\Sales\Api\Data\OrderPaymentExtensionInterface">OrderPaymentExtensionInterface</abbr> $extensionAttributes)
+        
+                                            <p>Set an extension attributes object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getAccountStatus">
+        <div class="location">at line         line 252</div>
+        <code>                    string
+    <strong>getAccountStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the account status for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Account status.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdditionalData">
+        <div class="location">at line         line 259</div>
+        <code>                    string|null
+    <strong>getAdditionalData</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the additional data for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Additional data.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdditionalInformation">
+        <div class="location">at line         line 266</div>
+        <code>                    string[]
+    <strong>getAdditionalInformation</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the additional information for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td>Array of additional information.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAddressStatus">
+        <div class="location">at line         line 273</div>
+        <code>                    string|null
+    <strong>getAddressStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the address status for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Address status.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAmountAuthorized">
+        <div class="location">at line         line 280</div>
+        <code>                    float|null
+    <strong>getAmountAuthorized</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the amount authorized for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Amount authorized.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAmountCanceled">
+        <div class="location">at line         line 287</div>
+        <code>                    float|null
+    <strong>getAmountCanceled</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the amount canceled for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Amount canceled.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAmountOrdered">
+        <div class="location">at line         line 294</div>
+        <code>                    float|null
+    <strong>getAmountOrdered</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the amount ordered for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Amount ordered.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAmountPaid">
+        <div class="location">at line         line 301</div>
+        <code>                    float|null
+    <strong>getAmountPaid</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the amount paid for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Amount paid.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAmountRefunded">
+        <div class="location">at line         line 308</div>
+        <code>                    float|null
+    <strong>getAmountRefunded</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the amount refunded for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Amount refunded.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAnetTransMethod">
+        <div class="location">at line         line 315</div>
+        <code>                    string|null
+    <strong>getAnetTransMethod</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the anet transaction method for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Anet transaction method.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseAmountAuthorized">
+        <div class="location">at line         line 322</div>
+        <code>                    float|null
+    <strong>getBaseAmountAuthorized</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the base amount authorized for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Base amount authorized.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseAmountCanceled">
+        <div class="location">at line         line 329</div>
+        <code>                    float|null
+    <strong>getBaseAmountCanceled</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the base amount canceled for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Base amount canceled.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseAmountOrdered">
+        <div class="location">at line         line 336</div>
+        <code>                    float|null
+    <strong>getBaseAmountOrdered</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the base amount ordered for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Base amount ordered.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseAmountPaid">
+        <div class="location">at line         line 343</div>
+        <code>                    float|null
+    <strong>getBaseAmountPaid</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the base amount paid for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Base amount paid.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseAmountPaidOnline">
+        <div class="location">at line         line 350</div>
+        <code>                    float|null
+    <strong>getBaseAmountPaidOnline</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the base amount paid online for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Base amount paid online.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseAmountRefunded">
+        <div class="location">at line         line 357</div>
+        <code>                    float|null
+    <strong>getBaseAmountRefunded</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the base amount refunded for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Base amount refunded.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseAmountRefundedOnline">
+        <div class="location">at line         line 364</div>
+        <code>                    float|null
+    <strong>getBaseAmountRefundedOnline</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the base amount refunded online for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Base amount refunded online.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseShippingAmount">
+        <div class="location">at line         line 371</div>
+        <code>                    float|null
+    <strong>getBaseShippingAmount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the base shipping amount for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Base shipping amount.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseShippingCaptured">
+        <div class="location">at line         line 378</div>
+        <code>                    float|null
+    <strong>getBaseShippingCaptured</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the base shipping captured for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Base shipping captured amount.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseShippingRefunded">
+        <div class="location">at line         line 385</div>
+        <code>                    float|null
+    <strong>getBaseShippingRefunded</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the base shipping refunded amount for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Base shipping refunded amount.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcApproval">
+        <div class="location">at line         line 392</div>
+        <code>                    string|null
+    <strong>getCcApproval</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card approval for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card approval.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcAvsStatus">
+        <div class="location">at line         line 399</div>
+        <code>                    string|null
+    <strong>getCcAvsStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card avs status for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card avs status.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcCidStatus">
+        <div class="location">at line         line 406</div>
+        <code>                    string|null
+    <strong>getCcCidStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card cid status for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card CID status.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcDebugRequestBody">
+        <div class="location">at line         line 413</div>
+        <code>                    string|null
+    <strong>getCcDebugRequestBody</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card debug request body for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card debug request body.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcDebugResponseBody">
+        <div class="location">at line         line 420</div>
+        <code>                    string|null
+    <strong>getCcDebugResponseBody</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card debug response body for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card debug response body.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcDebugResponseSerialized">
+        <div class="location">at line         line 427</div>
+        <code>                    string|null
+    <strong>getCcDebugResponseSerialized</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card debug response serialized for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card debug response serialized.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcExpMonth">
+        <div class="location">at line         line 434</div>
+        <code>                    string|null
+    <strong>getCcExpMonth</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card expiration month for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card expiration month.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcExpYear">
+        <div class="location">at line         line 441</div>
+        <code>                    string|null
+    <strong>getCcExpYear</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card expiration year for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card expiration year.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcLast4">
+        <div class="location">at line         line 448</div>
+        <code>                    string
+    <strong>getCcLast4</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the last four digits of the credit card for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Last four digits of the credit card.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcNumberEnc">
+        <div class="location">at line         line 455</div>
+        <code>                    string|null
+    <strong>getCcNumberEnc</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the encrypted credit card number for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Encrypted credit card number.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcOwner">
+        <div class="location">at line         line 462</div>
+        <code>                    string|null
+    <strong>getCcOwner</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card owner for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card number.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcSecureVerify">
+        <div class="location">at line         line 469</div>
+        <code>                    string|null
+    <strong>getCcSecureVerify</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card secure verify for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card secure verify.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcSsIssue">
+        <div class="location">at line         line 477</div>
+        <code>                    string|null
+    <strong>getCcSsIssue</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>unused</td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card SS issue for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card SS issue.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcSsStartMonth">
+        <div class="location">at line         line 485</div>
+        <code>                    string|null
+    <strong>getCcSsStartMonth</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>unused</td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card SS start month for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card SS start month.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcSsStartYear">
+        <div class="location">at line         line 493</div>
+        <code>                    string|null
+    <strong>getCcSsStartYear</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>unused</td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card SS start year for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card SS start year.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcStatus">
+        <div class="location">at line         line 500</div>
+        <code>                    string|null
+    <strong>getCcStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card status for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card status.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcStatusDescription">
+        <div class="location">at line         line 507</div>
+        <code>                    string|null
+    <strong>getCcStatusDescription</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card status description for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card status description.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcTransId">
+        <div class="location">at line         line 514</div>
+        <code>                    string|null
+    <strong>getCcTransId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card transaction id for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card transaction ID.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCcType">
+        <div class="location">at line         line 521</div>
+        <code>                    string|null
+    <strong>getCcType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the credit card type for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Credit card type.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEcheckAccountName">
+        <div class="location">at line         line 528</div>
+        <code>                    string|null
+    <strong>getEcheckAccountName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the eCheck account name for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>eCheck account name.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEcheckAccountType">
+        <div class="location">at line         line 535</div>
+        <code>                    string|null
+    <strong>getEcheckAccountType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the eCheck account type for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>eCheck account type.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEcheckBankName">
+        <div class="location">at line         line 542</div>
+        <code>                    string|null
+    <strong>getEcheckBankName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the eCheck bank name for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>eCheck bank name.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEcheckRoutingNumber">
+        <div class="location">at line         line 549</div>
+        <code>                    string|null
+    <strong>getEcheckRoutingNumber</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the eCheck routing number for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>eCheck routing number.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEcheckType">
+        <div class="location">at line         line 556</div>
+        <code>                    string|null
+    <strong>getEcheckType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the eCheck type for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>eCheck type.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEntityId">
+        <div class="location">at line         line 563</div>
+        <code>                    int|null
+    <strong>getEntityId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the entity ID for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td>Entity ID.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEntityId">
+        <div class="location">at line         line 571</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setEntityId</strong>(int $entityId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets entity ID.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$entityId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastTransId">
+        <div class="location">at line         line 578</div>
+        <code>                    string|null
+    <strong>getLastTransId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the last transaction ID for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Last transaction ID.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMethod">
+        <div class="location">at line         line 585</div>
+        <code>                    string
+    <strong>getMethod</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the method for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Method.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParentId">
+        <div class="location">at line         line 592</div>
+        <code>                    int|null
+    <strong>getParentId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the parent ID for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td>Parent ID.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPoNumber">
+        <div class="location">at line         line 599</div>
+        <code>                    string|null
+    <strong>getPoNumber</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the PO number for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>PO number.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProtectionEligibility">
+        <div class="location">at line         line 606</div>
+        <code>                    string|null
+    <strong>getProtectionEligibility</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the protection eligibility for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Protection eligibility.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuotePaymentId">
+        <div class="location">at line         line 613</div>
+        <code>                    int|null
+    <strong>getQuotePaymentId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the quote payment ID for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td>Quote payment ID.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShippingAmount">
+        <div class="location">at line         line 620</div>
+        <code>                    float|null
+    <strong>getShippingAmount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the shipping amount for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Shipping amount.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShippingCaptured">
+        <div class="location">at line         line 627</div>
+        <code>                    float|null
+    <strong>getShippingCaptured</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the shipping captured for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Shipping captured.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShippingRefunded">
+        <div class="location">at line         line 634</div>
+        <code>                    float|null
+    <strong>getShippingRefunded</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the shipping refunded for the order payment.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|null</td>
+            <td>Shipping refunded.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParentId">
+        <div class="location">at line         line 642</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setParentId</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the parent ID for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseShippingCaptured">
+        <div class="location">at line         line 650</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setBaseShippingCaptured</strong>(float $baseShippingCaptured)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the base shipping captured for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$baseShippingCaptured</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setShippingCaptured">
+        <div class="location">at line         line 658</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setShippingCaptured</strong>(float $shippingCaptured)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the shipping captured for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$shippingCaptured</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAmountRefunded">
+        <div class="location">at line         line 666</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setAmountRefunded</strong>(float $amountRefunded)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the amount refunded for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$amountRefunded</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseAmountPaid">
+        <div class="location">at line         line 674</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setBaseAmountPaid</strong>(float $baseAmountPaid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the base amount paid for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$baseAmountPaid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAmountCanceled">
+        <div class="location">at line         line 682</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setAmountCanceled</strong>(float $amountCanceled)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the amount canceled for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$amountCanceled</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseAmountAuthorized">
+        <div class="location">at line         line 690</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setBaseAmountAuthorized</strong>(float $baseAmountAuthorized)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the base amount authorized for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$baseAmountAuthorized</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseAmountPaidOnline">
+        <div class="location">at line         line 698</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setBaseAmountPaidOnline</strong>(float $baseAmountPaidOnline)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the base amount paid online for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$baseAmountPaidOnline</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseAmountRefundedOnline">
+        <div class="location">at line         line 706</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setBaseAmountRefundedOnline</strong>(float $baseAmountRefundedOnline)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the base amount refunded online for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$baseAmountRefundedOnline</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseShippingAmount">
+        <div class="location">at line         line 714</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setBaseShippingAmount</strong>(float $amount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the base shipping amount for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$amount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setShippingAmount">
+        <div class="location">at line         line 722</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setShippingAmount</strong>(float $amount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the shipping amount for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$amount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAmountPaid">
+        <div class="location">at line         line 730</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setAmountPaid</strong>(float $amountPaid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the amount paid for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$amountPaid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAmountAuthorized">
+        <div class="location">at line         line 738</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setAmountAuthorized</strong>(float $amountAuthorized)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the amount authorized for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$amountAuthorized</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseAmountOrdered">
+        <div class="location">at line         line 746</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setBaseAmountOrdered</strong>(float $baseAmountOrdered)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the base amount ordered for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$baseAmountOrdered</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseShippingRefunded">
+        <div class="location">at line         line 754</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setBaseShippingRefunded</strong>(float $baseShippingRefunded)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the base shipping refunded amount for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$baseShippingRefunded</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setShippingRefunded">
+        <div class="location">at line         line 762</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setShippingRefunded</strong>(float $shippingRefunded)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the shipping refunded for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$shippingRefunded</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseAmountRefunded">
+        <div class="location">at line         line 770</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setBaseAmountRefunded</strong>(float $baseAmountRefunded)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the base amount refunded for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$baseAmountRefunded</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAmountOrdered">
+        <div class="location">at line         line 778</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setAmountOrdered</strong>(float $amountOrdered)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the amount ordered for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$amountOrdered</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBaseAmountCanceled">
+        <div class="location">at line         line 786</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setBaseAmountCanceled</strong>(float $baseAmountCanceled)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the base amount canceled for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$baseAmountCanceled</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setQuotePaymentId">
+        <div class="location">at line         line 794</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setQuotePaymentId</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the quote payment ID for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAdditionalData">
+        <div class="location">at line         line 802</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setAdditionalData</strong>(string $additionalData)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the additional data for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$additionalData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcExpMonth">
+        <div class="location">at line         line 810</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcExpMonth</strong>(string $ccExpMonth)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card expiration month for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccExpMonth</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcSsStartYear">
+        <div class="location">at line         line 818</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcSsStartYear</strong>(string $ccSsStartYear)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card SS start year for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccSsStartYear</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEcheckBankName">
+        <div class="location">at line         line 826</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setEcheckBankName</strong>(string $echeckBankName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the eCheck bank name for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$echeckBankName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMethod">
+        <div class="location">at line         line 834</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setMethod</strong>(string $method)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the method for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcDebugRequestBody">
+        <div class="location">at line         line 842</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcDebugRequestBody</strong>(string $ccDebugRequestBody)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card debug request body for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccDebugRequestBody</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcSecureVerify">
+        <div class="location">at line         line 850</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcSecureVerify</strong>(string $ccSecureVerify)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card secure verify for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccSecureVerify</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setProtectionEligibility">
+        <div class="location">at line         line 858</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setProtectionEligibility</strong>(string $protectionEligibility)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the protection eligibility for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$protectionEligibility</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcApproval">
+        <div class="location">at line         line 866</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcApproval</strong>(string $ccApproval)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card approval for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccApproval</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcLast4">
+        <div class="location">at line         line 874</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcLast4</strong>(string $ccLast4)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the last four digits of the credit card for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccLast4</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcStatusDescription">
+        <div class="location">at line         line 882</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcStatusDescription</strong>(string $description)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card status description for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$description</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEcheckType">
+        <div class="location">at line         line 890</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setEcheckType</strong>(string $echeckType)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the eCheck type for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$echeckType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcDebugResponseSerialized">
+        <div class="location">at line         line 898</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcDebugResponseSerialized</strong>(string $ccDebugResponseSerialized)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card debug response serialized for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccDebugResponseSerialized</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcSsStartMonth">
+        <div class="location">at line         line 906</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcSsStartMonth</strong>(string $ccSsStartMonth)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card SS start month for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccSsStartMonth</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEcheckAccountType">
+        <div class="location">at line         line 914</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setEcheckAccountType</strong>(string $echeckAccountType)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the eCheck account type for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$echeckAccountType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLastTransId">
+        <div class="location">at line         line 922</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setLastTransId</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the last transaction ID for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcCidStatus">
+        <div class="location">at line         line 930</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcCidStatus</strong>(string $ccCidStatus)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card cid status for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccCidStatus</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcOwner">
+        <div class="location">at line         line 938</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcOwner</strong>(string $ccOwner)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card owner for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccOwner</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcType">
+        <div class="location">at line         line 946</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcType</strong>(string $ccType)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card type for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPoNumber">
+        <div class="location">at line         line 954</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setPoNumber</strong>(string $poNumber)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the PO number for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$poNumber</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcExpYear">
+        <div class="location">at line         line 962</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcExpYear</strong>(string $ccExpYear)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card expiration year for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccExpYear</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcStatus">
+        <div class="location">at line         line 970</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcStatus</strong>(string $ccStatus)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card status for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccStatus</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEcheckRoutingNumber">
+        <div class="location">at line         line 978</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setEcheckRoutingNumber</strong>(string $echeckRoutingNumber)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the eCheck routing number for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$echeckRoutingNumber</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAccountStatus">
+        <div class="location">at line         line 986</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setAccountStatus</strong>(string $accountStatus)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the account status for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accountStatus</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAnetTransMethod">
+        <div class="location">at line         line 994</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setAnetTransMethod</strong>(string $anetTransMethod)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the anet transaction method for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$anetTransMethod</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcDebugResponseBody">
+        <div class="location">at line         line 1002</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcDebugResponseBody</strong>(string $ccDebugResponseBody)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card debug response body for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccDebugResponseBody</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcSsIssue">
+        <div class="location">at line         line 1010</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcSsIssue</strong>(string $ccSsIssue)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card SS issue for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccSsIssue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEcheckAccountName">
+        <div class="location">at line         line 1018</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setEcheckAccountName</strong>(string $echeckAccountName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the eCheck account name for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$echeckAccountName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcAvsStatus">
+        <div class="location">at line         line 1026</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcAvsStatus</strong>(string $ccAvsStatus)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card avs status for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccAvsStatus</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcNumberEnc">
+        <div class="location">at line         line 1034</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcNumberEnc</strong>(string $ccNumberEnc)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the encrypted credit card number for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ccNumberEnc</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCcTransId">
+        <div class="location">at line         line 1042</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setCcTransId</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the credit card transaction id for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAddressStatus">
+        <div class="location">at line         line 1050</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setAddressStatus</strong>(string $addressStatus)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the address status for the order payment.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$addressStatus</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtensionAttributes">
+        <div class="location">at line         line 1057</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\OrderPaymentExtensionInterface">OrderPaymentExtensionInterface</abbr>|null
+    <strong>getExtensionAttributes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve existing extension attributes object or create a new one.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\OrderPaymentExtensionInterface">OrderPaymentExtensionInterface</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setExtensionAttributes">
+        <div class="location">at line         line 1065</div>
+        <code>                    <abbr title="Magento\Sales\Api\Data\$this">$this</abbr>
+    <strong>setExtensionAttributes</strong>(<abbr title="Magento\Sales\Api\Data\OrderPaymentExtensionInterface">OrderPaymentExtensionInterface</abbr> $extensionAttributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set an extension attributes object.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Magento\Sales\Api\Data\OrderPaymentExtensionInterface">OrderPaymentExtensionInterface</abbr></td>
+                <td>$extensionAttributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Sales\Api\Data\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

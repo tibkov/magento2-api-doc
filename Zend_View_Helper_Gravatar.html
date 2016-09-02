@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_View_Helper_Gravatar | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_View_Helper_Gravatar" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_View_Helper_Gravatar
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_View_Helper_Gravatar</strong>        extends <a href="Zend_View_Helper_HtmlElement.html">Zend_View_Helper_HtmlElement</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Helper for retrieving avatars from gravatar.com</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>EOL</td>
+                <td class="last">
+                    <p><em>EOL character</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GRAVATAR_URL</td>
+                <td class="last">
+                    <p><em>URL to gravatar service</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GRAVATAR_URL_SECURE</td>
+                <td class="last">
+                    <p><em>Secure URL to gravatar service</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RATING_G</td>
+                <td class="last">
+                    <p><em>Gravatar rating</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RATING_PG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RATING_R</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RATING_X</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_404</td>
+                <td class="last">
+                    <p><em>Default gravatar image value constants</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_MM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_IDENTICON</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_MONSTERID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_WAVATAR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_view">
+                                                                                <a href="Zend_View_Interface.html">Zend_View_Interface</a>
+                </td>
+                <td>$view</td>
+                <td class="last">View object</td>
+                <td><small>from&nbsp;<a href="Zend_View_Helper_Abstract.html#property_view">Zend_View_Helper_Abstract</a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Interface.html">Zend_View_Helper_Interface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setView">setView</a>(<a href="Zend_View_Interface.html">Zend_View_Interface</a> $view)
+        
+                                            <p>Set the View object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Helper_Abstract.html#method_setView">Zend_View_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_direct">direct</a>()
+        
+                                            <p>Strategy pattern: currently unutilized</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Helper_Abstract.html#method_direct">Zend_View_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getClosingBracket">getClosingBracket</a>()
+        
+                                            <p>Get the tag closing bracket</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_View_Helper_HtmlElement.html#method_getClosingBracket">Zend_View_Helper_HtmlElement</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_gravatar">gravatar</a>(string|null $email = &#039;&#039;, null|array $options = array(), array $attribs = array())
+        
+                                            <p>Returns an avatar from gravatar's service.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOptions">setOptions</a>(array $options)
+        
+                                            <p>Configure state</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getImgSize">getImgSize</a>()
+        
+                                            <p>Get img size</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setImgSize">setImgSize</a>(int $imgSize)
+        
+                                            <p>Set img size in pixels</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultImg">getDefaultImg</a>()
+        
+                                            <p>Get default img</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultImg">setDefaultImg</a>(string $defaultImg)
+        
+                                            <p>Set default img</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRating">setRating</a>(string $rating)
+        
+                                            <p>Set rating value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRating">getRating</a>()
+        
+                                            <p>Get rating value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEmail">setEmail</a>(string $email)
+        
+                                            <p>Set email adress</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEmail">getEmail</a>()
+        
+                                            <p>Get email adress</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSecure">setSecure</a>(bool $flag)
+        
+                                            <p>Load from an SSL or No-SSL location?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSecure">getSecure</a>()
+        
+                                            <p>Get an SSL or a No-SSL location</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttribs">getAttribs</a>()
+        
+                                            <p>Get attribs of image</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAttribs">setAttribs</a>(array $attribs)
+        
+                                            <p>Set attribs for image tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getImgTag">getImgTag</a>()
+        
+                                            <p>Return valid image tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Return valid image tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setView">
+        <div class="location">in <a href="Zend_View_Helper_Abstract.html#method_setView">Zend_View_Helper_Abstract</a> at line         line 50</div>
+        <code>                    <a href="Zend_View_Helper_Interface.html">Zend_View_Helper_Interface</a>
+    <strong>setView</strong>(<a href="Zend_View_Interface.html">Zend_View_Interface</a> $view)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the View object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_View_Interface.html">Zend_View_Interface</a></td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Interface.html">Zend_View_Helper_Interface</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_direct">
+        <div class="location">in <a href="Zend_View_Helper_Abstract.html#method_direct">Zend_View_Helper_Abstract</a> at line         line 61</div>
+        <code>                    mixed
+    <strong>direct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Strategy pattern: currently unutilized</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClosingBracket">
+        <div class="location">in <a href="Zend_View_Helper_HtmlElement.html#method_getClosingBracket">Zend_View_Helper_HtmlElement</a> at line         line 54</div>
+        <code>                    string
+    <strong>getClosingBracket</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the tag closing bracket</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_gravatar">
+        <div class="location">at line         line 106</div>
+        <code>                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+    <strong>gravatar</strong>(string|null $email = &#039;&#039;, null|array $options = array(), array $attribs = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an avatar from gravatar's service.</p>                    <p>$options may include the following:
+- 'img<em>size' int height of img to return
+- 'default</em>img' string img to return if email adress has not found
+- 'rating' string rating parameter for avatar
+- 'secure' bool load from the SSL or Non-SSL location</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$email</td>
+                <td>Email adress.</td>
+            </tr>
+                    <tr>
+                <td>null|array</td>
+                <td>$options</td>
+                <td>Options</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attribs</td>
+                <td>Attributes for image tag (title, alt etc.)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>http://pl.gravatar.com/site/implement/url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>http://pl.gravatar.com/site/implement/url</td>
+                <td>More information about gravatar's service.</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOptions">
+        <div class="location">at line         line 120</div>
+        <code>                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+    <strong>setOptions</strong>(array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Configure state</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getImgSize">
+        <div class="location">at line         line 136</div>
+        <code>                    int
+    <strong>getImgSize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get img size</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>The img size</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setImgSize">
+        <div class="location">at line         line 147</div>
+        <code>                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+    <strong>setImgSize</strong>(int $imgSize)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set img size in pixels</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$imgSize</td>
+                <td>Size of img must be between 1 and 512</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultImg">
+        <div class="location">at line         line 158</div>
+        <code>                    string
+    <strong>getDefaultImg</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get default img</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultImg">
+        <div class="location">at line         line 172</div>
+        <code>                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+    <strong>setDefaultImg</strong>(string $defaultImg)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set default img</p>                    <p>Can be either an absolute URL to an image, or one of the DEFAULT_* constants</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$defaultImg</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRating">
+        <div class="location">at line         line 187</div>
+        <code>                    
+    <strong>setRating</strong>(string $rating)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set rating value</p>                    <p>Must be one of the RATING_* constants</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$rating</td>
+                <td>Value for rating. Allowed values are: g, px, r,x</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_View_Exception.html">Zend_View_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRating">
+        <div class="location">at line         line 211</div>
+        <code>                    string
+    <strong>getRating</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get rating value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEmail">
+        <div class="location">at line         line 222</div>
+        <code>                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+    <strong>setEmail</strong>(string $email)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set email adress</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmail">
+        <div class="location">at line         line 233</div>
+        <code>                    string
+    <strong>getEmail</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get email adress</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSecure">
+        <div class="location">at line         line 244</div>
+        <code>                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+    <strong>setSecure</strong>(bool $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load from an SSL or No-SSL location?</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSecure">
+        <div class="location">at line         line 255</div>
+        <code>                    bool
+    <strong>getSecure</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an SSL or a No-SSL location</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttribs">
+        <div class="location">at line         line 273</div>
+        <code>                    array
+    <strong>getAttribs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get attribs of image</p>                    <p>Warning!
+If you set src attrib, you get it, but this value will be overwritten in
+protected method _setSrcAttribForImg(). And finally your get other src
+value!</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAttribs">
+        <div class="location">at line         line 288</div>
+        <code>                    <a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a>
+    <strong>setAttribs</strong>(array $attribs)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set attribs for image tag</p>                    <p>Warning! You shouldn't set src attrib for image tag.
+This attrib is overwritten in protected method <em>setSrcAttribForImg().
+This method(</em>setSrcAttribForImg) is called in public method getImgTag().</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attribs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Helper_Gravatar.html">Zend_View_Helper_Gravatar</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getImgTag">
+        <div class="location">at line         line 343</div>
+        <code>                    string
+    <strong>getImgTag</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return valid image tag</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at line         line 358</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return valid image tag</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

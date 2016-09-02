@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Http_UserAgent | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Http_UserAgent" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Http_UserAgent
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Http_UserAgent</strong>        implements
+        <a target="_blank" href="http://php.net/Serializable">Serializable</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Lists of User Agent chains for testing :</p>            <p><ul>
+<li>http://www.useragentstring.com/layout/useragentstring.php</li>
+<li>http://user-agent-string.info/list-of-ua</li>
+<li>http://www.user-agents.org/allagents.xml</li>
+<li>http://en.wikipedia.org/wiki/List<em>of</em>user<em>agents</em>for<em>mobile</em>phones</li>
+<li>http://www.mobilemultimedia.be/fr/</li>
+</ul>
+</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>DEFAULT_IDENTIFICATION_SEQUENCE</td>
+                <td class="last">
+                    <p><em>'desktop' by default if the sequence return false for each item or is empty</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_PERSISTENT_STORAGE_ADAPTER</td>
+                <td class="last">
+                    <p><em>Default persitent storage adapter : Session or NonPersitent</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_BROWSER_TYPE</td>
+                <td class="last">
+                    <p><em>'desktop' by default if the sequence return false for each item</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_HTTP_USER_AGENT</td>
+                <td class="last">
+                    <p><em>Default User Agent chain to prevent empty value</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_HTTP_ACCEPT</td>
+                <td class="last">
+                    <p><em>Default Http Accept param to prevent empty value</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEFAULT_MARKUP_LANGUAGE</td>
+                <td class="last">
+                    <p><em>Default markup language</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(null|array|<a href="Zend_Config.html">Zend_Config</a>|<a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $options = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serialize">serialize</a>()
+        
+                                            <p>Serialized representation of the object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unserialize">unserialize</a>(string $serialized)
+        
+                                            <p>Unserialize a previous representation of the object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOptions">setOptions</a>(array|<a href="Zend_Config.html">Zend_Config</a>|<a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $options)
+        
+                                            <p>Configure instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUserAgent">getUserAgent</a>()
+        
+                                            <p>Returns the User Agent value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUserAgent">setUserAgent</a>(string $userAgent)
+        
+                                            <p>Force or replace the UA chain in $_server variable</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpAccept">getHttpAccept</a>(string $httpAccept = null)
+        
+                                            <p>Returns the HTTP Accept server param</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHttpAccept">setHttpAccept</a>(string $httpAccept)
+        
+                                            <p>Force or replace the HTTP<em>ACCEPT chain in self::$</em>server variable</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_UserAgent_Storage.html">Zend_Http_UserAgent_Storage</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStorage">getStorage</a>(string $browser = null)
+        
+                                            <p>Returns the persistent storage handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setStorage">setStorage</a>(<a href="Zend_Http_UserAgent_Storage.html">Zend_Http_UserAgent_Storage</a> $storage)
+        
+                                            <p>Sets the persistent storage handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearStorage">clearStorage</a>(string $browser = null)
+        
+                                            <p>Clean the persistent storage</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConfig">getConfig</a>()
+        
+                                            <p>Get user configuration</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setConfig">setConfig</a>(mixed $config = array())
+        
+                                            <p>Config parameters is an Array or a Zend_Config object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_UserAgent_Device.html">Zend_Http_UserAgent_Device</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDevice">getDevice</a>()
+        
+                                            <p>Returns the device object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBrowserType">getBrowserType</a>()
+        
+                                            <p>Retrieve the browser type</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBrowserType">setBrowserType</a>(string $browserType)
+        
+                                            <p>Set the browser "type"</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getServer">getServer</a>()
+        
+                                            <p>Retrieve the "$_SERVER" array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setServer">setServer</a>(array|<a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $server)
+        
+                                            <p>Set the "$_SERVER" array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getServerValue">getServerValue</a>(string $key)
+        
+                                            <p>Retrieve a server value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setServerValue">setServerValue</a>(string|int|float $key, mixed $value)
+        
+                                            <p>Set a server value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPluginLoader">setPluginLoader</a>(string $type, string|<a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a> $loader)
+        
+                                            <p>Set plugin loader</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPluginLoader">getPluginLoader</a>(string $type)
+        
+                                            <p>Get a plugin loader</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 160</div>
+        <code>                    void
+    <strong>__construct</strong>(null|array|<a href="Zend_Config.html">Zend_Config</a>|<a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|array|<a href="Zend_Config.html">Zend_Config</a>|<a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">at line         line 172</div>
+        <code>                    string
+    <strong>serialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Serialized representation of the object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unserialize">
+        <div class="location">at line         line 192</div>
+        <code>                    void
+    <strong>unserialize</strong>(string $serialized)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unserialize a previous representation of the object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$serialized</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOptions">
+        <div class="location">at line         line 217</div>
+        <code>                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+    <strong>setOptions</strong>(array|<a href="Zend_Config.html">Zend_Config</a>|<a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Configure instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a href="Zend_Config.html">Zend_Config</a>|<a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUserAgent">
+        <div class="location">at line         line 362</div>
+        <code>                    string
+    <strong>getUserAgent</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the User Agent value</p>                    <p>If $userAgent param is null, the value of $<em>server['HTTP</em>USER_AGENT'] is
+returned.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUserAgent">
+        <div class="location">at line         line 378</div>
+        <code>                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+    <strong>setUserAgent</strong>(string $userAgent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Force or replace the UA chain in $_server variable</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userAgent</td>
+                <td>Forced UserAgent chain</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpAccept">
+        <div class="location">at line         line 390</div>
+        <code>                    string
+    <strong>getHttpAccept</strong>(string $httpAccept = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the HTTP Accept server param</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$httpAccept</td>
+                <td>(option) forced HTTP Accept chain</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHttpAccept">
+        <div class="location">at line         line 405</div>
+        <code>                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+    <strong>setHttpAccept</strong>(string $httpAccept)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Force or replace the HTTP<em>ACCEPT chain in self::$</em>server variable</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$httpAccept</td>
+                <td>Forced HTTP Accept chain</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStorage">
+        <div class="location">at line         line 422</div>
+        <code>                    <a href="Zend_Http_UserAgent_Storage.html">Zend_Http_UserAgent_Storage</a>
+    <strong>getStorage</strong>(string $browser = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the persistent storage handler</p>                    <p>Session storage is used by default unless a different storage adapter
+has been set via the "persistent<em>storage</em>adapter" key. That key should
+contain either a fully qualified class name, or a short name that
+resolves via the plugin loader.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$browser</td>
+                <td>Browser identifier (User Agent chain)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_UserAgent_Storage.html">Zend_Http_UserAgent_Storage</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setStorage">
+        <div class="location">at line         line 450</div>
+        <code>                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+    <strong>setStorage</strong>(<a href="Zend_Http_UserAgent_Storage.html">Zend_Http_UserAgent_Storage</a> $storage)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the persistent storage handler</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_UserAgent_Storage.html">Zend_Http_UserAgent_Storage</a></td>
+                <td>$storage</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearStorage">
+        <div class="location">at line         line 469</div>
+        <code>                    void
+    <strong>clearStorage</strong>(string $browser = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clean the persistent storage</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$browser</td>
+                <td>Browser identifier (User Agent chain)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">at line         line 479</div>
+        <code>                    array
+    <strong>getConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get user configuration</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">at line         line 503</div>
+        <code>                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+    <strong>setConfig</strong>(mixed $config = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Config parameters is an Array or a Zend_Config object</p>                    <p>The allowed parameters are :
+- the identification sequence (can be empty) => desktop browser type is the
+default browser type returned
+$config['identification<em>sequence'] : ',' separated browser types
+- the persistent storage adapter
+$config['persistent</em>storage_adapter'] = "Session" or "NonPersistent"
+- to add or replace a browser type device
+$config[(type)]['device']['path']
+$config[(type)]['device']['classname']
+- to add or replace a browser type features adapter
+$config[(type)]['features']['path']
+$config[(type)]['features']['classname']</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$config</td>
+                <td>(option) Config array</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDevice">
+        <div class="location">at line         line 539</div>
+        <code>                    <a href="Zend_Http_UserAgent_Device.html">Zend_Http_UserAgent_Device</a>
+    <strong>getDevice</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the device object</p>                    <p>This is the object that will contain the various discovered device
+capabilities.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_UserAgent_Device.html">Zend_Http_UserAgent_Device</a></td>
+            <td>$device</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBrowserType">
+        <div class="location">at line         line 578</div>
+        <code>                    string
+    <strong>getBrowserType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the browser type</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>$browserType</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBrowserType">
+        <div class="location">at line         line 589</div>
+        <code>                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+    <strong>setBrowserType</strong>(string $browserType)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the browser "type"</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$browserType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getServer">
+        <div class="location">at line         line 613</div>
+        <code>                    array
+    <strong>getServer</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the "$_SERVER" array</p>                    <p>Basically, the $_SERVER array or an equivalent container storing the
+data that will be introspected.</p>
+
+<p>If the value has not been previously set, it sets itself from the
+$_SERVER superglobal.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setServer">
+        <div class="location">at line         line 631</div>
+        <code>                    void
+    <strong>setServer</strong>(array|<a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a> $server)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the "$_SERVER" array</p>                    <p>Basically, the $_SERVER array or an equivalent container storing the
+data that will be introspected.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a></td>
+                <td>$server</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_UserAgent_Exception.html">Zend_Http_UserAgent_Exception</a></td>
+                <td>on invalid parameter</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getServerValue">
+        <div class="location">at line         line 673</div>
+        <code>                    mixed
+    <strong>getServerValue</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve a server value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setServerValue">
+        <div class="location">at line         line 692</div>
+        <code>                    void
+    <strong>setServerValue</strong>(string|int|float $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a server value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int|float</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPluginLoader">
+        <div class="location">at line         line 714</div>
+        <code>                    <a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a>
+    <strong>setPluginLoader</strong>(string $type, string|<a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a> $loader)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set plugin loader</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Type of plugin loader; one of 'storage', (?)</td>
+            </tr>
+                    <tr>
+                <td>string|<a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a></td>
+                <td>$loader</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_UserAgent.html">Zend_Http_UserAgent</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPluginLoader">
+        <div class="location">at line         line 762</div>
+        <code>                    <a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a>
+    <strong>getPluginLoader</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a plugin loader</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>A valid plugin loader type; see {@link $_loaderTypes}</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Customer\Model\AccountManagement | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Customer_Model_AccountManagement" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Customer.html">Customer</a></li>
+                                        <li><a href="../../../Magento/Customer/Model.html">Model</a></li>
+    
+                <li>AccountManagement</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            AccountManagement
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>AccountManagement</strong>        implements
+        <a href="../../../Magento/Customer/Api/AccountManagementInterface.html"><abbr title="Magento\Customer\Api\AccountManagementInterface">AccountManagementInterface</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Handle various customer account actions</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XML_PATH_REGISTER_EMAIL_TEMPLATE</td>
+                <td class="last">
+                    <p><em>Configuration paths for email templates and identities</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_REGISTER_NO_PASSWORD_EMAIL_TEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_REGISTER_EMAIL_IDENTITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_REMIND_EMAIL_TEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_FORGOT_EMAIL_TEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_FORGOT_EMAIL_IDENTITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_IS_CONFIRM</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_CONFIRM_EMAIL_TEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_CONFIRMED_EMAIL_TEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NEW_ACCOUNT_EMAIL_REGISTERED</td>
+                <td class="last">
+                    <p><em>Constants for the type of new account email to be sent</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NEW_ACCOUNT_EMAIL_REGISTERED_NO_PASSWORD</td>
+                <td class="last">
+                    <p><em>Welcome email, when password setting is required</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NEW_ACCOUNT_EMAIL_CONFIRMATION</td>
+                <td class="last">
+                    <p><em>Welcome email, when confirmation is enabled</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NEW_ACCOUNT_EMAIL_CONFIRMED</td>
+                <td class="last">
+                    <p><em>Confirmation email, when account is confirmed</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EMAIL_REMINDER</td>
+                <td class="last">
+                    <p><em>Constants for types of emails to send out.</em></p>
+                    <p>pdl:
+forgot, remind, reset email templates</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EMAIL_RESET</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_MINIMUM_PASSWORD_LENGTH</td>
+                <td class="last">
+                    <p><em>Configuration path to customer password minimum length</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_REQUIRED_CHARACTER_CLASSES_NUMBER</td>
+                <td class="last">
+                    <p><em>Configuration path to customer password required character classes number</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_RESET_PASSWORD_TEMPLATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MIN_PASSWORD_LENGTH</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<abbr title="Magento\Customer\Model\CustomerFactory">CustomerFactory</abbr> $customerFactory, <a href="../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a> $mathRandom, <a href="../../../Magento/Customer/Model/Metadata/Validator.html"><abbr title="Magento\Customer\Model\Metadata\Validator">Validator</abbr></a> $validator, <abbr title="Magento\Customer\Api\Data\ValidationResultsInterfaceFactory">ValidationResultsInterfaceFactory</abbr> $validationResultsDataFactory, <a href="../../../Magento/Customer/Api/AddressRepositoryInterface.html"><abbr title="Magento\Customer\Api\AddressRepositoryInterface">AddressRepositoryInterface</abbr></a> $addressRepository, <a href="../../../Magento/Customer/Api/CustomerMetadataInterface.html"><abbr title="Magento\Customer\Api\CustomerMetadataInterface">CustomerMetadataInterface</abbr></a> $customerMetadataService, <a href="../../../Magento/Customer/Model/CustomerRegistry.html"><abbr title="Magento\Customer\Model\CustomerRegistry">CustomerRegistry</abbr></a> $customerRegistry, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../Magento/Framework/Encryption/EncryptorInterface.html"><abbr title="Magento\Framework\Encryption\EncryptorInterface">EncryptorInterface</abbr></a> $encryptor, <a href="../../../Magento/Customer/Model/Config/Share.html"><abbr title="Magento\Customer\Model\Config\Share">Share</abbr></a> $configShare, <a href="../../../Magento/Framework/Stdlib/StringUtils.html"><abbr title="Magento\Framework\Stdlib\StringUtils">StringUtils</abbr></a> $stringHelper, <a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository, <a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../Magento/Framework/Mail/Template/TransportBuilder.html"><abbr title="Magento\Framework\Mail\Template\TransportBuilder">TransportBuilder</abbr></a> $transportBuilder, <a href="../../../Magento/Framework/Reflection/DataObjectProcessor.html"><abbr title="Magento\Framework\Reflection\DataObjectProcessor">DataObjectProcessor</abbr></a> $dataProcessor, <a href="../../../Magento/Framework/Registry.html"><abbr title="Magento\Framework\Registry">Registry</abbr></a> $registry, <a href="../../../Magento/Customer/Helper/View.html"><abbr title="Magento\Customer\Helper\View">View</abbr></a> $customerViewHelper, <a href="../../../Magento/Framework/Stdlib/DateTime.html"><abbr title="Magento\Framework\Stdlib\DateTime">DateTime</abbr></a> $dateTime, <a href="../../../Magento/Customer/Model/Customer.html"><abbr title="Magento\Customer\Model\Customer">Customer</abbr></a> $customerModel, <abbr title="Magento\Framework\DataObjectFactory">DataObjectFactory</abbr> $objectFactory, <a href="../../../Magento/Framework/Api/ExtensibleDataObjectConverter.html"><abbr title="Magento\Framework\Api\ExtensibleDataObjectConverter">ExtensibleDataObjectConverter</abbr></a> $extensibleDataObjectConverter)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resendConfirmation">resendConfirmation</a>(string $email, int $websiteId = null, string $redirectUrl = &#039;&#039;)
+        
+                                            <p>Resend confirmation email.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_activate">activate</a>(string $email, string $confirmationKey)
+        
+                                            <p>Activate a customer account using a key that was sent in a confirmation email.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_activateById">activateById</a>(int $customerId, string $confirmationKey)
+        
+                                            <p>Activate a customer account using a key that was sent in a confirmation email.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_authenticate">authenticate</a>($username, string $password)
+        
+                                            <p>Authenticate a customer by username and password</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateResetPasswordLinkToken">validateResetPasswordLinkToken</a>(int $customerId, string $resetPasswordLinkToken)
+        
+                                            <p>Check if password reset token is valid.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initiatePasswordReset">initiatePasswordReset</a>(string $email, string $template, int $websiteId = null)
+        
+                                            <p>Send an email to the customer with a password reset link.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetPassword">resetPassword</a>(string $email, string $resetToken, string $newPassword)
+        
+                                            <p>Reset customer password.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConfirmationStatus">getConfirmationStatus</a>(int $customerId)
+        
+                                            <p>Gets the account confirmation status.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createAccount">createAccount</a>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer, string $password = null, string $redirectUrl = &#039;&#039;)
+        
+                                            <p>Create customer account. Perform necessary business operations like sending email.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createAccountWithPasswordHash">createAccountWithPasswordHash</a>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer, string $hash, string $redirectUrl = &#039;&#039;)
+        
+                                            <p>Create customer account using provided hashed password. Should not be exposed as a webapi.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Customer/Api/Data/AddressInterface.html"><abbr title="Magento\Customer\Api\Data\AddressInterface">AddressInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultBillingAddress">getDefaultBillingAddress</a>(int $customerId)
+        
+                                            <p>Retrieve default billing address for the given customerId.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Customer/Api/Data/AddressInterface.html"><abbr title="Magento\Customer\Api\Data\AddressInterface">AddressInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultShippingAddress">getDefaultShippingAddress</a>(int $customerId)
+        
+                                            <p>Retrieve default shipping address for the given customerId.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_changePassword">changePassword</a>(string $email, string $currentPassword, string $newPassword)
+        
+                                            <p>Change customer password.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_changePasswordById">changePasswordById</a>(int $customerId, string $currentPassword, string $newPassword)
+        
+                                            <p>Change customer password.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Customer/Api/Data/ValidationResultsInterface.html"><abbr title="Magento\Customer\Api\Data\ValidationResultsInterface">ValidationResultsInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validate">validate</a>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer)
+        
+                                            <p>Validate customer data.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isEmailAvailable">isEmailAvailable</a>(string $customerEmail, int $websiteId = null)
+        
+                                            <p>Check if given email is associated with a customer account in given website.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isCustomerInStore">isCustomerInStore</a>(int $customerWebsiteId, int $storeId)
+        
+                                            <p>Check store availability for customer given the customerId.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isReadonly">isReadonly</a>(int $customerId)
+        
+                                            <p>Check if customer can be deleted.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isResetPasswordLinkTokenExpired">isResetPasswordLinkTokenExpired</a>(string $rpToken, string $rpTokenCreatedAt)
+        
+                                            <p>Check if rpToken is expired</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_changeResetPasswordLinkToken">changeResetPasswordLinkToken</a>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer, string $passwordLinkToken)
+        
+                                            <p>Change reset password link token</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Customer\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendPasswordReminderEmail">sendPasswordReminderEmail</a>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Send email with new customer password</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Customer\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendPasswordResetConfirmationEmail">sendPasswordResetConfirmationEmail</a>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Send email with reset password confirmation link</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPasswordHash">getPasswordHash</a>(string $password)
+        
+                                            <p>Return hashed password, which can be directly saved to database.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 316</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Magento\Customer\Model\CustomerFactory">CustomerFactory</abbr> $customerFactory, <a href="../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a> $mathRandom, <a href="../../../Magento/Customer/Model/Metadata/Validator.html"><abbr title="Magento\Customer\Model\Metadata\Validator">Validator</abbr></a> $validator, <abbr title="Magento\Customer\Api\Data\ValidationResultsInterfaceFactory">ValidationResultsInterfaceFactory</abbr> $validationResultsDataFactory, <a href="../../../Magento/Customer/Api/AddressRepositoryInterface.html"><abbr title="Magento\Customer\Api\AddressRepositoryInterface">AddressRepositoryInterface</abbr></a> $addressRepository, <a href="../../../Magento/Customer/Api/CustomerMetadataInterface.html"><abbr title="Magento\Customer\Api\CustomerMetadataInterface">CustomerMetadataInterface</abbr></a> $customerMetadataService, <a href="../../../Magento/Customer/Model/CustomerRegistry.html"><abbr title="Magento\Customer\Model\CustomerRegistry">CustomerRegistry</abbr></a> $customerRegistry, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../Magento/Framework/Encryption/EncryptorInterface.html"><abbr title="Magento\Framework\Encryption\EncryptorInterface">EncryptorInterface</abbr></a> $encryptor, <a href="../../../Magento/Customer/Model/Config/Share.html"><abbr title="Magento\Customer\Model\Config\Share">Share</abbr></a> $configShare, <a href="../../../Magento/Framework/Stdlib/StringUtils.html"><abbr title="Magento\Framework\Stdlib\StringUtils">StringUtils</abbr></a> $stringHelper, <a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository, <a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <a href="../../../Magento/Framework/Mail/Template/TransportBuilder.html"><abbr title="Magento\Framework\Mail\Template\TransportBuilder">TransportBuilder</abbr></a> $transportBuilder, <a href="../../../Magento/Framework/Reflection/DataObjectProcessor.html"><abbr title="Magento\Framework\Reflection\DataObjectProcessor">DataObjectProcessor</abbr></a> $dataProcessor, <a href="../../../Magento/Framework/Registry.html"><abbr title="Magento\Framework\Registry">Registry</abbr></a> $registry, <a href="../../../Magento/Customer/Helper/View.html"><abbr title="Magento\Customer\Helper\View">View</abbr></a> $customerViewHelper, <a href="../../../Magento/Framework/Stdlib/DateTime.html"><abbr title="Magento\Framework\Stdlib\DateTime">DateTime</abbr></a> $dateTime, <a href="../../../Magento/Customer/Model/Customer.html"><abbr title="Magento\Customer\Model\Customer">Customer</abbr></a> $customerModel, <abbr title="Magento\Framework\DataObjectFactory">DataObjectFactory</abbr> $objectFactory, <a href="../../../Magento/Framework/Api/ExtensibleDataObjectConverter.html"><abbr title="Magento\Framework\Api\ExtensibleDataObjectConverter">ExtensibleDataObjectConverter</abbr></a> $extensibleDataObjectConverter)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Magento\Customer\Model\CustomerFactory">CustomerFactory</abbr></td>
+                <td>$customerFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a></td>
+                <td>$eventManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a></td>
+                <td>$mathRandom</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Model/Metadata/Validator.html"><abbr title="Magento\Customer\Model\Metadata\Validator">Validator</abbr></a></td>
+                <td>$validator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Customer\Api\Data\ValidationResultsInterfaceFactory">ValidationResultsInterfaceFactory</abbr></td>
+                <td>$validationResultsDataFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/AddressRepositoryInterface.html"><abbr title="Magento\Customer\Api\AddressRepositoryInterface">AddressRepositoryInterface</abbr></a></td>
+                <td>$addressRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/CustomerMetadataInterface.html"><abbr title="Magento\Customer\Api\CustomerMetadataInterface">CustomerMetadataInterface</abbr></a></td>
+                <td>$customerMetadataService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Model/CustomerRegistry.html"><abbr title="Magento\Customer\Model\CustomerRegistry">CustomerRegistry</abbr></a></td>
+                <td>$customerRegistry</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Encryption/EncryptorInterface.html"><abbr title="Magento\Framework\Encryption\EncryptorInterface">EncryptorInterface</abbr></a></td>
+                <td>$encryptor</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Model/Config/Share.html"><abbr title="Magento\Customer\Model\Config\Share">Share</abbr></a></td>
+                <td>$configShare</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Stdlib/StringUtils.html"><abbr title="Magento\Framework\Stdlib\StringUtils">StringUtils</abbr></a></td>
+                <td>$stringHelper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a></td>
+                <td>$customerRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a></td>
+                <td>$scopeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Mail/Template/TransportBuilder.html"><abbr title="Magento\Framework\Mail\Template\TransportBuilder">TransportBuilder</abbr></a></td>
+                <td>$transportBuilder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Reflection/DataObjectProcessor.html"><abbr title="Magento\Framework\Reflection\DataObjectProcessor">DataObjectProcessor</abbr></a></td>
+                <td>$dataProcessor</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Registry.html"><abbr title="Magento\Framework\Registry">Registry</abbr></a></td>
+                <td>$registry</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Helper/View.html"><abbr title="Magento\Customer\Helper\View">View</abbr></a></td>
+                <td>$customerViewHelper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Stdlib/DateTime.html"><abbr title="Magento\Framework\Stdlib\DateTime">DateTime</abbr></a></td>
+                <td>$dateTime</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Model/Customer.html"><abbr title="Magento\Customer\Model\Customer">Customer</abbr></a></td>
+                <td>$customerModel</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Framework\DataObjectFactory">DataObjectFactory</abbr></td>
+                <td>$objectFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Api/ExtensibleDataObjectConverter.html"><abbr title="Magento\Framework\Api\ExtensibleDataObjectConverter">ExtensibleDataObjectConverter</abbr></a></td>
+                <td>$extensibleDataObjectConverter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resendConfirmation">
+        <div class="location">at line         line 386</div>
+        <code>                    bool
+    <strong>resendConfirmation</strong>(string $email, int $websiteId = null, string $redirectUrl = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resend confirmation email.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$websiteId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$redirectUrl</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>true on success</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_activate">
+        <div class="location">at line         line 409</div>
+        <code>                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>
+    <strong>activate</strong>(string $email, string $confirmationKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Activate a customer account using a key that was sent in a confirmation email.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$confirmationKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_activateById">
+        <div class="location">at line         line 418</div>
+        <code>                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>
+    <strong>activateById</strong>(int $customerId, string $confirmationKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Activate a customer account using a key that was sent in a confirmation email.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$customerId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$confirmationKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_authenticate">
+        <div class="location">at line         line 453</div>
+        <code>                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>
+    <strong>authenticate</strong>($username, string $password)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Authenticate a customer by username and password</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$username</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateResetPasswordLinkToken">
+        <div class="location">at line         line 488</div>
+        <code>                    bool
+    <strong>validateResetPasswordLinkToken</strong>(int $customerId, string $resetPasswordLinkToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if password reset token is valid.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$customerId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$resetPasswordLinkToken</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>True if the token is valid</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/State/InputMismatchException.html"><abbr title="Magento\Framework\Exception\State\InputMismatchException">InputMismatchException</abbr></a></td>
+                <td>If token is mismatched</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/State/ExpiredException.html"><abbr title="Magento\Framework\Exception\State\ExpiredException">ExpiredException</abbr></a></td>
+                <td>If token is expired</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/InputException.html"><abbr title="Magento\Framework\Exception\InputException">InputException</abbr></a></td>
+                <td>If token or customer id is invalid</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/NoSuchEntityException.html"><abbr title="Magento\Framework\Exception\NoSuchEntityException">NoSuchEntityException</abbr></a></td>
+                <td>If customer doesn't exist</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initiatePasswordReset">
+        <div class="location">at line         line 497</div>
+        <code>                    bool
+    <strong>initiatePasswordReset</strong>(string $email, string $template, int $websiteId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send an email to the customer with a password reset link.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$websiteId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>true on success</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetPassword">
+        <div class="location">at line         line 535</div>
+        <code>                    bool
+    <strong>resetPassword</strong>(string $email, string $resetToken, string $newPassword)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reset customer password.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$resetToken</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$newPassword</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>true on success</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfirmationStatus">
+        <div class="location">at line         line 638</div>
+        <code>                    string
+    <strong>getConfirmationStatus</strong>(int $customerId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the account confirmation status.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$customerId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createAccount">
+        <div class="location">at line         line 654</div>
+        <code>                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>
+    <strong>createAccount</strong>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer, string $password = null, string $redirectUrl = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create customer account. Perform necessary business operations like sending email.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+                <td>$customer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$redirectUrl</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createAccountWithPasswordHash">
+        <div class="location">at line         line 670</div>
+        <code>                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>
+    <strong>createAccountWithPasswordHash</strong>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer, string $hash, string $redirectUrl = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create customer account using provided hashed password. Should not be exposed as a webapi.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+                <td>$customer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$hash</td>
+                <td>Password hash that we can save directly</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$redirectUrl</td>
+                <td>URL fed to welcome email templates. Can be used by templates to, for example, direct
+                           the customer to a product they were looking at after pressing confirmation link.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/InputException.html"><abbr title="Magento\Framework\Exception\InputException">InputException</abbr></a></td>
+                <td>If bad input is provided</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/State/InputMismatchException.html"><abbr title="Magento\Framework\Exception\State\InputMismatchException">InputMismatchException</abbr></a></td>
+                <td>If the provided email is already used</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultBillingAddress">
+        <div class="location">at line         line 745</div>
+        <code>                    <a href="../../../Magento/Customer/Api/Data/AddressInterface.html"><abbr title="Magento\Customer\Api\Data\AddressInterface">AddressInterface</abbr></a>
+    <strong>getDefaultBillingAddress</strong>(int $customerId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve default billing address for the given customerId.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$customerId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Customer/Api/Data/AddressInterface.html"><abbr title="Magento\Customer\Api\Data\AddressInterface">AddressInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/NoSuchEntityException.html"><abbr title="Magento\Framework\Exception\NoSuchEntityException">NoSuchEntityException</abbr></a></td>
+                <td>If the customer Id is invalid</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultShippingAddress">
+        <div class="location">at line         line 754</div>
+        <code>                    <a href="../../../Magento/Customer/Api/Data/AddressInterface.html"><abbr title="Magento\Customer\Api\Data\AddressInterface">AddressInterface</abbr></a>
+    <strong>getDefaultShippingAddress</strong>(int $customerId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve default shipping address for the given customerId.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$customerId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Customer/Api/Data/AddressInterface.html"><abbr title="Magento\Customer\Api\Data\AddressInterface">AddressInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/NoSuchEntityException.html"><abbr title="Magento\Framework\Exception\NoSuchEntityException">NoSuchEntityException</abbr></a></td>
+                <td>If the customer Id is invalid</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_changePassword">
+        <div class="location">at line         line 787</div>
+        <code>                    bool
+    <strong>changePassword</strong>(string $email, string $currentPassword, string $newPassword)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Change customer password.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$currentPassword</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$newPassword</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>true on success</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_changePasswordById">
+        <div class="location">at line         line 800</div>
+        <code>                    bool
+    <strong>changePasswordById</strong>(int $customerId, string $currentPassword, string $newPassword)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Change customer password.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$customerId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$currentPassword</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$newPassword</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>true on success</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validate">
+        <div class="location">at line         line 862</div>
+        <code>                    <a href="../../../Magento/Customer/Api/Data/ValidationResultsInterface.html"><abbr title="Magento\Customer\Api\Data\ValidationResultsInterface">ValidationResultsInterface</abbr></a>
+    <strong>validate</strong>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate customer data.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+                <td>$customer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Customer/Api/Data/ValidationResultsInterface.html"><abbr title="Magento\Customer\Api\Data\ValidationResultsInterface">ValidationResultsInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEmailAvailable">
+        <div class="location">at line         line 889</div>
+        <code>                    bool
+    <strong>isEmailAvailable</strong>(string $customerEmail, int $websiteId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if given email is associated with a customer account in given website.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$customerEmail</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$websiteId</td>
+                <td>If not set, will use the current websiteId</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isCustomerInStore">
+        <div class="location">at line         line 905</div>
+        <code>                    bool
+    <strong>isCustomerInStore</strong>(int $customerWebsiteId, int $storeId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check store availability for customer given the customerId.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$customerWebsiteId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isReadonly">
+        <div class="location">at line         line 964</div>
+        <code>                    bool
+    <strong>isReadonly</strong>(int $customerId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if customer can be deleted.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$customerId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/NoSuchEntityException.html"><abbr title="Magento\Framework\Exception\NoSuchEntityException">NoSuchEntityException</abbr></a></td>
+                <td>If group is not found</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isResetPasswordLinkTokenExpired">
+        <div class="location">at line         line 1154</div>
+        <code>                    bool
+    <strong>isResetPasswordLinkTokenExpired</strong>(string $rpToken, string $rpTokenCreatedAt)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if rpToken is expired</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$rpToken</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$rpTokenCreatedAt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_changeResetPasswordLinkToken">
+        <div class="location">at line         line 1186</div>
+        <code>                    bool
+    <strong>changeResetPasswordLinkToken</strong>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer, string $passwordLinkToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Change reset password link token</p>                    <p>Stores new reset password link token</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+                <td>$customer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$passwordLinkToken</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/InputException.html"><abbr title="Magento\Framework\Exception\InputException">InputException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendPasswordReminderEmail">
+        <div class="location">at line         line 1212</div>
+        <code>                    <abbr title="Magento\Customer\Model\$this">$this</abbr>
+    <strong>sendPasswordReminderEmail</strong>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Send email with new customer password</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+                <td>$customer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Customer\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendPasswordResetConfirmationEmail">
+        <div class="location">at line         line 1239</div>
+        <code>                    <abbr title="Magento\Customer\Model\$this">$this</abbr>
+    <strong>sendPasswordResetConfirmationEmail</strong>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Send email with reset password confirmation link</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+                <td>$customer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Customer\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPasswordHash">
+        <div class="location">at line         line 1301</div>
+        <code>                    string
+    <strong>getPasswordHash</strong>(string $password)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return hashed password, which can be directly saved to database.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

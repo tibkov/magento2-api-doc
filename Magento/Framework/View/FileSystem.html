@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Framework\View\FileSystem | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Framework_View_FileSystem" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Framework.html">Framework</a></li>
+                                        <li><a href="../../../Magento/Framework/View.html">View</a></li>
+    
+                <li>FileSystem</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            FileSystem
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>FileSystem</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Model that finds file paths by their fileId</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/File.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\File">File</abbr></a> $fallbackFile, <a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/TemplateFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\TemplateFile">TemplateFile</abbr></a> $fallbackTemplateFile, <a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/LocaleFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\LocaleFile">LocaleFile</abbr></a> $fallbackLocaleFile, <a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/StaticFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\StaticFile">StaticFile</abbr></a> $fallbackStaticFile, <a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/EmailTemplateFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\EmailTemplateFile">EmailTemplateFile</abbr></a> $fallbackEmailTemplateFile, <a href="../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a> $assetRepo)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilename">getFilename</a>(string $fileId, array $params = array())
+        
+                                            <p>Get existing file name with fallback to default</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLocaleFileName">getLocaleFileName</a>(string $file, array $params = array())
+        
+                                            <p>Get a locale file</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTemplateFileName">getTemplateFileName</a>(string $fileId, array $params = array())
+        
+                                            <p>Get a template file</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStaticFileName">getStaticFileName</a>(string $fileId, array $params = array())
+        
+                                            <p>Find a static view file using fallback mechanism</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEmailTemplateFileName">getEmailTemplateFileName</a>(string $fileId, array $params, string $module)
+        
+                                            <p>Get an email template file</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizePath">normalizePath</a>(string $path)
+        
+                                            <p>Remove excessive "." and ".</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetPath">offsetPath</a>(string $relatedPath, string $path)
+        
+                                            <p>Get a relative path between $relatedPath and $path paths as if $path was to refer to $relatedPath
+relatively of itself</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRelatedPath">getRelatedPath</a>(string $relativeTo, string $path)
+        
+                                            <p>Concatenate/normalize a path to another path as a relative, assuming it will be relative to its directory</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 57</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/File.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\File">File</abbr></a> $fallbackFile, <a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/TemplateFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\TemplateFile">TemplateFile</abbr></a> $fallbackTemplateFile, <a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/LocaleFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\LocaleFile">LocaleFile</abbr></a> $fallbackLocaleFile, <a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/StaticFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\StaticFile">StaticFile</abbr></a> $fallbackStaticFile, <a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/EmailTemplateFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\EmailTemplateFile">EmailTemplateFile</abbr></a> $fallbackEmailTemplateFile, <a href="../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a> $assetRepo)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/File.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\File">File</abbr></a></td>
+                <td>$fallbackFile</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/TemplateFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\TemplateFile">TemplateFile</abbr></a></td>
+                <td>$fallbackTemplateFile</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/LocaleFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\LocaleFile">LocaleFile</abbr></a></td>
+                <td>$fallbackLocaleFile</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/StaticFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\StaticFile">StaticFile</abbr></a></td>
+                <td>$fallbackStaticFile</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/View/Design/FileResolution/Fallback/EmailTemplateFile.html"><abbr title="Magento\Framework\View\Design\FileResolution\Fallback\EmailTemplateFile">EmailTemplateFile</abbr></a></td>
+                <td>$fallbackEmailTemplateFile</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/View/Asset/Repository.html"><abbr title="Magento\Framework\View\Asset\Repository">Repository</abbr></a></td>
+                <td>$assetRepo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilename">
+        <div class="location">at line         line 80</div>
+        <code>                    string
+    <strong>getFilename</strong>(string $fileId, array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get existing file name with fallback to default</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fileId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLocaleFileName">
+        <div class="location">at line         line 101</div>
+        <code>                    string
+    <strong>getLocaleFileName</strong>(string $file, array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a locale file</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTemplateFileName">
+        <div class="location">at line         line 115</div>
+        <code>                    string|bool
+    <strong>getTemplateFileName</strong>(string $fileId, array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a template file</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fileId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStaticFileName">
+        <div class="location">at line         line 135</div>
+        <code>                    string
+    <strong>getStaticFileName</strong>(string $fileId, array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find a static view file using fallback mechanism</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fileId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmailTemplateFileName">
+        <div class="location">at line         line 156</div>
+        <code>                    string|bool
+    <strong>getEmailTemplateFileName</strong>(string $fileId, array $params, string $module)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an email template file</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fileId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizePath">
+        <div class="location">at line         line 171</div>
+        <code>        static            string
+    <strong>normalizePath</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove excessive "." and ".</p>                    <p>." parts from a path</p>
+
+<p>For example foo/bar/../file.ext -> foo/file.ext</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetPath">
+        <div class="location">at line         line 208</div>
+        <code>        static            string
+    <strong>offsetPath</strong>(string $relatedPath, string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a relative path between $relatedPath and $path paths as if $path was to refer to $relatedPath
+relatively of itself</p>                    <p>Returns new calculated relative path.
+Examples:
+  $path: /some/directory/one/file.ext
+  $relatedPath: /some/directory/two/another/file.ext
+  Result: ../two/another</p>
+
+<p>$path: http://example.com/themes/demo/css/styles.css
+  $relatedPath: http://example.com/images/logo.gif
+  Result: ../../../images</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relatedPath</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelatedPath">
+        <div class="location">at line         line 229</div>
+        <code>        static            string
+    <strong>getRelatedPath</strong>(string $relativeTo, string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Concatenate/normalize a path to another path as a relative, assuming it will be relative to its directory</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relativeTo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

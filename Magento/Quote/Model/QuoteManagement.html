@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Quote\Model\QuoteManagement | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Quote_Model_QuoteManagement" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Quote.html">Quote</a></li>
+                                        <li><a href="../../../Magento/Quote/Model.html">Model</a></li>
+    
+                <li>QuoteManagement</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            QuoteManagement
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>QuoteManagement</strong>        implements
+        <a href="../../../Magento/Quote/Api/CartManagementInterface.html"><abbr title="Magento\Quote\Api\CartManagementInterface">CartManagementInterface</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class QuoteManagement</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../Magento/Quote/Model/QuoteValidator.html"><abbr title="Magento\Quote\Model\QuoteValidator">QuoteValidator</abbr></a> $quoteValidator, <abbr title="Magento\Sales\Api\Data\OrderInterfaceFactory">OrderInterfaceFactory</abbr> $orderFactory, <a href="../../../Magento/Sales/Api/OrderManagementInterface.html"><abbr title="Magento\Sales\Api\OrderManagementInterface">OrderManagementInterface</abbr></a> $orderManagement, <a href="../../../Magento/Quote/Model/CustomerManagement.html"><abbr title="Magento\Quote\Model\CustomerManagement">CustomerManagement</abbr></a> $customerManagement, <a href="../../../Magento/Quote/Model/Quote/Address/ToOrder.html"><abbr title="Magento\Quote\Model\Quote\Address\ToOrder">ToOrder</abbr></a> $quoteAddressToOrder, <a href="../../../Magento/Quote/Model/Quote/Address/ToOrderAddress.html"><abbr title="Magento\Quote\Model\Quote\Address\ToOrderAddress">ToOrderAddress</abbr></a> $quoteAddressToOrderAddress, <a href="../../../Magento/Quote/Model/Quote/Item/ToOrderItem.html"><abbr title="Magento\Quote\Model\Quote\Item\ToOrderItem">ToOrderItem</abbr></a> $quoteItemToOrderItem, <a href="../../../Magento/Quote/Model/Quote/Payment/ToOrderPayment.html"><abbr title="Magento\Quote\Model\Quote\Payment\ToOrderPayment">ToOrderPayment</abbr></a> $quotePaymentToOrderPayment, <a href="../../../Magento/Authorization/Model/UserContextInterface.html"><abbr title="Magento\Authorization\Model\UserContextInterface">UserContextInterface</abbr></a> $userContext, <a href="../../../Magento/Quote/Api/CartRepositoryInterface.html"><abbr title="Magento\Quote\Api\CartRepositoryInterface">CartRepositoryInterface</abbr></a> $quoteRepository, <a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository, <abbr title="Magento\Customer\Model\CustomerFactory">CustomerFactory</abbr> $customerModelFactory, <abbr title="Magento\Quote\Model\Quote\AddressFactory">AddressFactory</abbr> $quoteAddressFactory, <a href="../../../Magento/Framework/Api/DataObjectHelper.html"><abbr title="Magento\Framework\Api\DataObjectHelper">DataObjectHelper</abbr></a> $dataObjectHelper, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a> $checkoutSession, <a href="../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a> $customerSession, <a href="../../../Magento/Customer/Api/AccountManagementInterface.html"><abbr title="Magento\Customer\Api\AccountManagementInterface">AccountManagementInterface</abbr></a> $accountManagement, <abbr title="Magento\Quote\Model\QuoteFactory">QuoteFactory</abbr> $quoteFactory)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createEmptyCart">createEmptyCart</a>()
+        
+                                            <p>Creates an empty cart and quote for a guest.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createEmptyCartForCustomer">createEmptyCartForCustomer</a>(int $customerId)
+        
+                                            <p>Creates an empty cart and quote for a specified customer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_assignCustomer">assignCustomer</a>(int $cartId, int $customerId, int $storeId)
+        
+                                            <p>Assigns a specified customer to a specified shopping cart.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_placeOrder">placeOrder</a>(int $cartId, <a href="../../../Magento/Quote/Api/Data/PaymentInterface.html"><abbr title="Magento\Quote\Api\Data\PaymentInterface">PaymentInterface</abbr></a> $paymentMethod = null)
+        
+                                            <p>Places an order for a specified cart.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Quote/Api/Data/CartInterface.html"><abbr title="Magento\Quote\Api\Data\CartInterface">CartInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCartForCustomer">getCartForCustomer</a>(int $customerId)
+        
+                                            <p>Returns information for the cart for a specified customer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/Model/AbstractExtensibleModel.html"><abbr title="Magento\Framework\Model\AbstractExtensibleModel">AbstractExtensibleModel</abbr></a>|<a href="../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a>|object|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_submit">submit</a>(<a href="../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a> $quote, array $orderData = array())
+        
+                                            <p>Submit quote</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 162</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../Magento/Quote/Model/QuoteValidator.html"><abbr title="Magento\Quote\Model\QuoteValidator">QuoteValidator</abbr></a> $quoteValidator, <abbr title="Magento\Sales\Api\Data\OrderInterfaceFactory">OrderInterfaceFactory</abbr> $orderFactory, <a href="../../../Magento/Sales/Api/OrderManagementInterface.html"><abbr title="Magento\Sales\Api\OrderManagementInterface">OrderManagementInterface</abbr></a> $orderManagement, <a href="../../../Magento/Quote/Model/CustomerManagement.html"><abbr title="Magento\Quote\Model\CustomerManagement">CustomerManagement</abbr></a> $customerManagement, <a href="../../../Magento/Quote/Model/Quote/Address/ToOrder.html"><abbr title="Magento\Quote\Model\Quote\Address\ToOrder">ToOrder</abbr></a> $quoteAddressToOrder, <a href="../../../Magento/Quote/Model/Quote/Address/ToOrderAddress.html"><abbr title="Magento\Quote\Model\Quote\Address\ToOrderAddress">ToOrderAddress</abbr></a> $quoteAddressToOrderAddress, <a href="../../../Magento/Quote/Model/Quote/Item/ToOrderItem.html"><abbr title="Magento\Quote\Model\Quote\Item\ToOrderItem">ToOrderItem</abbr></a> $quoteItemToOrderItem, <a href="../../../Magento/Quote/Model/Quote/Payment/ToOrderPayment.html"><abbr title="Magento\Quote\Model\Quote\Payment\ToOrderPayment">ToOrderPayment</abbr></a> $quotePaymentToOrderPayment, <a href="../../../Magento/Authorization/Model/UserContextInterface.html"><abbr title="Magento\Authorization\Model\UserContextInterface">UserContextInterface</abbr></a> $userContext, <a href="../../../Magento/Quote/Api/CartRepositoryInterface.html"><abbr title="Magento\Quote\Api\CartRepositoryInterface">CartRepositoryInterface</abbr></a> $quoteRepository, <a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository, <abbr title="Magento\Customer\Model\CustomerFactory">CustomerFactory</abbr> $customerModelFactory, <abbr title="Magento\Quote\Model\Quote\AddressFactory">AddressFactory</abbr> $quoteAddressFactory, <a href="../../../Magento/Framework/Api/DataObjectHelper.html"><abbr title="Magento\Framework\Api\DataObjectHelper">DataObjectHelper</abbr></a> $dataObjectHelper, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a> $checkoutSession, <a href="../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a> $customerSession, <a href="../../../Magento/Customer/Api/AccountManagementInterface.html"><abbr title="Magento\Customer\Api\AccountManagementInterface">AccountManagementInterface</abbr></a> $accountManagement, <abbr title="Magento\Quote\Model\QuoteFactory">QuoteFactory</abbr> $quoteFactory)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a></td>
+                <td>$eventManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/QuoteValidator.html"><abbr title="Magento\Quote\Model\QuoteValidator">QuoteValidator</abbr></a></td>
+                <td>$quoteValidator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Sales\Api\Data\OrderInterfaceFactory">OrderInterfaceFactory</abbr></td>
+                <td>$orderFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Sales/Api/OrderManagementInterface.html"><abbr title="Magento\Sales\Api\OrderManagementInterface">OrderManagementInterface</abbr></a></td>
+                <td>$orderManagement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/CustomerManagement.html"><abbr title="Magento\Quote\Model\CustomerManagement">CustomerManagement</abbr></a></td>
+                <td>$customerManagement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/Quote/Address/ToOrder.html"><abbr title="Magento\Quote\Model\Quote\Address\ToOrder">ToOrder</abbr></a></td>
+                <td>$quoteAddressToOrder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/Quote/Address/ToOrderAddress.html"><abbr title="Magento\Quote\Model\Quote\Address\ToOrderAddress">ToOrderAddress</abbr></a></td>
+                <td>$quoteAddressToOrderAddress</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/Quote/Item/ToOrderItem.html"><abbr title="Magento\Quote\Model\Quote\Item\ToOrderItem">ToOrderItem</abbr></a></td>
+                <td>$quoteItemToOrderItem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/Quote/Payment/ToOrderPayment.html"><abbr title="Magento\Quote\Model\Quote\Payment\ToOrderPayment">ToOrderPayment</abbr></a></td>
+                <td>$quotePaymentToOrderPayment</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Authorization/Model/UserContextInterface.html"><abbr title="Magento\Authorization\Model\UserContextInterface">UserContextInterface</abbr></a></td>
+                <td>$userContext</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Quote/Api/CartRepositoryInterface.html"><abbr title="Magento\Quote\Api\CartRepositoryInterface">CartRepositoryInterface</abbr></a></td>
+                <td>$quoteRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a></td>
+                <td>$customerRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Customer\Model\CustomerFactory">CustomerFactory</abbr></td>
+                <td>$customerModelFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Quote\Model\Quote\AddressFactory">AddressFactory</abbr></td>
+                <td>$quoteAddressFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Api/DataObjectHelper.html"><abbr title="Magento\Framework\Api\DataObjectHelper">DataObjectHelper</abbr></a></td>
+                <td>$dataObjectHelper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a></td>
+                <td>$checkoutSession</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a></td>
+                <td>$customerSession</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/AccountManagementInterface.html"><abbr title="Magento\Customer\Api\AccountManagementInterface">AccountManagementInterface</abbr></a></td>
+                <td>$accountManagement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Quote\Model\QuoteFactory">QuoteFactory</abbr></td>
+                <td>$quoteFactory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createEmptyCart">
+        <div class="location">at line         line 209</div>
+        <code>                    int
+    <strong>createEmptyCart</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates an empty cart and quote for a guest.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>Cart ID.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/CouldNotSaveException.html"><abbr title="Magento\Framework\Exception\CouldNotSaveException">CouldNotSaveException</abbr></a></td>
+                <td>The empty cart and quote could not be created.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createEmptyCartForCustomer">
+        <div class="location">at line         line 228</div>
+        <code>                    int
+    <strong>createEmptyCartForCustomer</strong>(int $customerId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates an empty cart and quote for a specified customer.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$customerId</td>
+                <td>The customer ID.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>Cart ID.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/CouldNotSaveException.html"><abbr title="Magento\Framework\Exception\CouldNotSaveException">CouldNotSaveException</abbr></a></td>
+                <td>The empty cart and quote could not be created.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assignCustomer">
+        <div class="location">at line         line 244</div>
+        <code>                    boolean
+    <strong>assignCustomer</strong>(int $cartId, int $customerId, int $storeId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Assigns a specified customer to a specified shopping cart.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$cartId</td>
+                <td>The cart ID.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$customerId</td>
+                <td>The customer ID.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeOrder">
+        <div class="location">at line         line 323</div>
+        <code>                    int
+    <strong>placeOrder</strong>(int $cartId, <a href="../../../Magento/Quote/Api/Data/PaymentInterface.html"><abbr title="Magento\Quote\Api\Data\PaymentInterface">PaymentInterface</abbr></a> $paymentMethod = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Places an order for a specified cart.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$cartId</td>
+                <td>The cart ID.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Quote/Api/Data/PaymentInterface.html"><abbr title="Magento\Quote\Api\Data\PaymentInterface">PaymentInterface</abbr></a></td>
+                <td>$paymentMethod</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>Order ID.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/CouldNotSaveException.html"><abbr title="Magento\Framework\Exception\CouldNotSaveException">CouldNotSaveException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCartForCustomer">
+        <div class="location">at line         line 368</div>
+        <code>                    <a href="../../../Magento/Quote/Api/Data/CartInterface.html"><abbr title="Magento\Quote\Api\Data\CartInterface">CartInterface</abbr></a>
+    <strong>getCartForCustomer</strong>(int $customerId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns information for the cart for a specified customer.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$customerId</td>
+                <td>The customer ID.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Quote/Api/Data/CartInterface.html"><abbr title="Magento\Quote\Api\Data\CartInterface">CartInterface</abbr></a></td>
+            <td>Cart object.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/NoSuchEntityException.html"><abbr title="Magento\Framework\Exception\NoSuchEntityException">NoSuchEntityException</abbr></a></td>
+                <td>The specified customer does not exist.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_submit">
+        <div class="location">at line         line 382</div>
+        <code>                    <a href="../../../Magento/Framework/Model/AbstractExtensibleModel.html"><abbr title="Magento\Framework\Model\AbstractExtensibleModel">AbstractExtensibleModel</abbr></a>|<a href="../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a>|object|null
+    <strong>submit</strong>(<a href="../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a> $quote, array $orderData = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Submit quote</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a></td>
+                <td>$quote</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$orderData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/Model/AbstractExtensibleModel.html"><abbr title="Magento\Framework\Model\AbstractExtensibleModel">AbstractExtensibleModel</abbr></a>|<a href="../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a>|object|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

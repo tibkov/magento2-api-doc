@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_SlideShare | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_SlideShare" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_SlideShare
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_SlideShare</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The Zend<em>Service</em>SlideShare component is used to interface with the
+slideshare.net web server to retrieve slide shows hosted on the web site for
+display or other processing.</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>SERVICE_ERROR_BAD_APIKEY</td>
+                <td class="last">
+                    <p><em>Web service result code mapping</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_BAD_AUTH</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_MISSING_TITLE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_MISSING_FILE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_EMPTY_TITLE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_NOT_SOURCEOBJ</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_INVALID_EXT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_FILE_TOO_BIG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_SHOW_NOT_FOUND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_USER_NOT_FOUND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_GROUP_NOT_FOUND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_MISSING_TAG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_DAILY_LIMIT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_ERROR_ACCOUNT_BLOCKED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_UPLOAD_URI</td>
+                <td class="last">
+                    <p><em>Slide share Web service communication URIs</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_GET_SHOW_URI</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_GET_SHOW_BY_USER_URI</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_GET_SHOW_BY_TAG_URI</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SERVICE_GET_SHOW_BY_GROUP_URI</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>POWERPOINT_MIME_TYPE</td>
+                <td class="last">
+                    <p><em>The MIME type of Slideshow files</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHttpClient">setHttpClient</a>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $client)
+        
+                                            <p>Sets the Zend<em>Http</em>Client object to use in requests. If not provided a
+default will be used.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpClient">getHttpClient</a>()
+        
+                                            <p>Returns the instance of the Zend<em>Http</em>Client which will be used. Creates
+an instance of Zend<em>Http</em>Client if no previous client was set.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCacheObject">setCacheObject</a>(<a href="Zend_Cache_Core.html">Zend_Cache_Core</a> $cacheobject)
+        
+                                            <p>Sets the Zend_Cache object to use to cache the results of API queries</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Cache_Core.html">Zend_Cache_Core</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCacheObject">getCacheObject</a>()
+        
+                                            <p>Gets the Zend_Cache object which will be used to cache API queries. If no
+cache object was previously set the the default will be used (Filesystem
+caching in /tmp with a life time of 43200 seconds)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUserName">getUserName</a>()
+        
+                                            <p>Returns the user name used for API calls</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setUserName">setUserName</a>(string $un)
+        
+                                            <p>Sets the user name to use for API calls</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPassword">getPassword</a>()
+        
+                                            <p>Gets the password to use in API calls</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPassword">setPassword</a>(string $pw)
+        
+                                            <p>Sets the password to use in API calls</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getApiKey">getApiKey</a>()
+        
+                                            <p>Gets the API key to be used in making API calls</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setApiKey">setApiKey</a>(string $key)
+        
+                                            <p>Sets the API key to be used in making API calls</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSharedSecret">getSharedSecret</a>()
+        
+                                            <p>Gets the shared secret used in making API calls</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSharedSecret">setSharedSecret</a>(string $secret)
+        
+                                            <p>Sets the shared secret used in making API calls</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $apikey, string $sharedSecret, string $username = null, string $password = null)
+        
+                                            <p>The Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_SlideShare_SlideShow.html">Zend_Service_SlideShare_SlideShow</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_uploadSlideShow">uploadSlideShow</a>(<a href="Zend_Service_SlideShare_SlideShow.html">Zend_Service_SlideShare_SlideShow</a> $ss, boolean $makeSrcPublic = true)
+        
+                                            <p>Uploads the specified Slide show the the server</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_SlideShare_SlideShow.html">Zend_Service_SlideShare_SlideShow</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSlideShow">getSlideShow</a>(int $ssId)
+        
+                                            <p>Retrieves a slide show's information based on slide show ID</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSlideShowsByUsername">getSlideShowsByUsername</a>(string $username, int $offset = null, int $limit = null)
+        
+                                            <p>Retrieves an array of slide shows for a given username</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSlideShowsByTag">getSlideShowsByTag</a>(string $tag, int $offset = null, int $limit = null)
+        
+                                            <p>Retrieves an array of slide shows based on tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSlideShowsByGroup">getSlideShowsByGroup</a>(string $group, int $offset = null, int $limit = null)
+        
+                                            <p>Retrieves an array of slide shows based on group name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setHttpClient">
+        <div class="location">at line         line 137</div>
+        <code>                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+    <strong>setHttpClient</strong>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $client)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the Zend<em>Http</em>Client object to use in requests. If not provided a
+default will be used.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+                <td>$client</td>
+                <td>The HTTP client instance to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpClient">
+        <div class="location">at line         line 149</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>getHttpClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the instance of the Zend<em>Http</em>Client which will be used. Creates
+an instance of Zend<em>Http</em>Client if no previous client was set.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td>The HTTP client which will be used</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheObject">
+        <div class="location">at line         line 175</div>
+        <code>                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+    <strong>setCacheObject</strong>(<a href="Zend_Cache_Core.html">Zend_Cache_Core</a> $cacheobject)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the Zend_Cache object to use to cache the results of API queries</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Cache_Core.html">Zend_Cache_Core</a></td>
+                <td>$cacheobject</td>
+                <td>The Zend_Cache object used</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCacheObject">
+        <div class="location">at line         line 188</div>
+        <code>                    <a href="Zend_Cache_Core.html">Zend_Cache_Core</a>
+    <strong>getCacheObject</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the Zend_Cache object which will be used to cache API queries. If no
+cache object was previously set the the default will be used (Filesystem
+caching in /tmp with a life time of 43200 seconds)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Cache_Core.html">Zend_Cache_Core</a></td>
+            <td>The object used in caching</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUserName">
+        <div class="location">at line         line 213</div>
+        <code>                    string
+    <strong>getUserName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the user name used for API calls</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>The username</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUserName">
+        <div class="location">at line         line 224</div>
+        <code>                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+    <strong>setUserName</strong>(string $un)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the user name to use for API calls</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$un</td>
+                <td>The username to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPassword">
+        <div class="location">at line         line 235</div>
+        <code>                    string
+    <strong>getPassword</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the password to use in API calls</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>the password to use in API calls</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPassword">
+        <div class="location">at line         line 246</div>
+        <code>                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+    <strong>setPassword</strong>(string $pw)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the password to use in API calls</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pw</td>
+                <td>The password to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getApiKey">
+        <div class="location">at line         line 257</div>
+        <code>                    string
+    <strong>getApiKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the API key to be used in making API calls</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>the API Key</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setApiKey">
+        <div class="location">at line         line 268</div>
+        <code>                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+    <strong>setApiKey</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the API key to be used in making API calls</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>The API key to use</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSharedSecret">
+        <div class="location">at line         line 279</div>
+        <code>                    string
+    <strong>getSharedSecret</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the shared secret used in making API calls</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>the Shared secret</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSharedSecret">
+        <div class="location">at line         line 290</div>
+        <code>                    <a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a>
+    <strong>setSharedSecret</strong>(string $secret)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the shared secret used in making API calls</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$secret</td>
+                <td>the shared secret</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_SlideShare.html">Zend_Service_SlideShare</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 304</div>
+        <code>                    
+    <strong>__construct</strong>(string $apikey, string $sharedSecret, string $username = null, string $password = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$apikey</td>
+                <td>The API key</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sharedSecret</td>
+                <td>The shared secret</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>The username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>The password</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_uploadSlideShow">
+        <div class="location">at line         line 330</div>
+        <code>                    <a href="Zend_Service_SlideShare_SlideShow.html">Zend_Service_SlideShare_SlideShow</a>
+    <strong>uploadSlideShow</strong>(<a href="Zend_Service_SlideShare_SlideShow.html">Zend_Service_SlideShare_SlideShow</a> $ss, boolean $makeSrcPublic = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Uploads the specified Slide show the the server</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_SlideShare_SlideShow.html">Zend_Service_SlideShare_SlideShow</a></td>
+                <td>$ss</td>
+                <td>The slide show
+                                             object representing the
+                                             slide show to upload</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$makeSrcPublic</td>
+                <td>Determines if the slide
+                                             show's source file is public
+                                             or not upon upload</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_SlideShare_SlideShow.html">Zend_Service_SlideShare_SlideShow</a></td>
+            <td>The passed Slide show object,
+                                          with the new assigned ID
+                                          provided</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_SlideShare_Exception.html">Zend_Service_SlideShare_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSlideShow">
+        <div class="location">at line         line 419</div>
+        <code>                    <a href="Zend_Service_SlideShare_SlideShow.html">Zend_Service_SlideShare_SlideShow</a>
+    <strong>getSlideShow</strong>(int $ssId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieves a slide show's information based on slide show ID</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$ssId</td>
+                <td>The slide show ID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_SlideShare_SlideShow.html">Zend_Service_SlideShare_SlideShow</a></td>
+            <td>the Slideshow object</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_SlideShare_Exception.html">Zend_Service_SlideShare_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSlideShowsByUsername">
+        <div class="location">at line         line 483</div>
+        <code>                    array
+    <strong>getSlideShowsByUsername</strong>(string $username, int $offset = null, int $limit = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieves an array of slide shows for a given username</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>The username to retrieve slide shows from</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td>The offset of the list to start retrieving from</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td>The maximum number of slide shows to retrieve</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>An array of Zend<em>Service</em>SlideShare_SlideShow objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSlideShowsByTag">
+        <div class="location">at line         line 500</div>
+        <code>                    array
+    <strong>getSlideShowsByTag</strong>(string $tag, int $offset = null, int $limit = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieves an array of slide shows based on tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td>The tag to retrieve slide shows with</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td>The offset of the list to start retrieving from</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td>The maximum number of slide shows to retrieve</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>An array of Zend<em>Service</em>SlideShare_SlideShow objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSlideShowsByGroup">
+        <div class="location">at line         line 523</div>
+        <code>                    array
+    <strong>getSlideShowsByGroup</strong>(string $group, int $offset = null, int $limit = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieves an array of slide shows based on group name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$group</td>
+                <td>The group name to retrieve slide shows for</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td>The offset of the list to start retrieving from</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td>The maximum number of slide shows to retrieve</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>An array of Zend<em>Service</em>SlideShare_SlideShow objects</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

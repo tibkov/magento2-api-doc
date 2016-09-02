@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Json | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Json" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Json
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Json</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class for encoding to and decoding from JSON.</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>TYPE_ARRAY</td>
+                <td class="last">
+                    <p><em>How objects should be encoded -- arrays or as StdClass. TYPE_ARRAY is 1
+so that it is a boolean true value, allowing it to be used with
+ext/json's functions.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_OBJECT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_maxRecursionDepthAllowed">
+                    static                                                            int
+                </td>
+                <td>$maxRecursionDepthAllowed</td>
+                <td class="last">To check the allowed nesting depth of the XML tree during xml2json conversion.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_useBuiltinEncoderDecoder">
+                    static                                                            bool
+                </td>
+                <td>$useBuiltinEncoderDecoder</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decode">decode</a>(string $encodedValue, int $objectDecodeType = Zend_Json::TYPE_ARRAY)
+        
+                                            <p>Decodes the given $encodedValue string which is
+encoded in the JSON format</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encode">encode</a>(mixed $valueToEncode, boolean $cycleCheck = false, array $options = array())
+        
+                                            <p>Encode the mixed $valueToEncode into the JSON format</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fromXml">fromXml</a>(string $xmlStringContents, boolean $ignoreXmlAttributes = true)
+        
+                                            <p>fromXml - Converts XML to JSON</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prettyPrint">prettyPrint</a>(string $json, array $options = array())
+        
+                                            <p>Pretty-print JSON string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_decode">
+        <div class="location">at line         line 74</div>
+        <code>        static            mixed
+    <strong>decode</strong>(string $encodedValue, int $objectDecodeType = Zend_Json::TYPE_ARRAY)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decodes the given $encodedValue string which is
+encoded in the JSON format</p>                    <p>Uses ext/json's json_decode if available.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$encodedValue</td>
+                <td>Encoded in JSON format</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$objectDecodeType</td>
+                <td>Optional; flag indicating how to decode
+objects. See {@link Zend<em>Json</em>Decoder::decode()} for details.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encode">
+        <div class="location">at line         line 130</div>
+        <code>        static            string
+    <strong>encode</strong>(mixed $valueToEncode, boolean $cycleCheck = false, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encode the mixed $valueToEncode into the JSON format</p>                    <p>Encodes using ext/json's json_encode() if available.</p>
+
+<p>NOTE: Object should not contain cycles; the JSON format
+does not allow object reference.</p>
+
+<p>NOTE: Only public variables will be encoded</p>
+
+<p>NOTE: Encoding native javascript expressions are possible using Zend<em>Json</em>Expr.
+      You can enable this by setting $options['enableJsonExprFinder'] = true</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$valueToEncode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$cycleCheck</td>
+                <td>Optional; whether or not to check for object recursion; off by default</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Additional options used during encoding</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>JSON encoded object</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Zend_Json_Expr</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromXml">
+        <div class="location">at line         line 345</div>
+        <code>        static            mixed
+    <strong>fromXml</strong>(string $xmlStringContents, boolean $ignoreXmlAttributes = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>fromXml - Converts XML to JSON</p>                    <p>Converts a XML formatted string into a JSON formatted string.
+The value returned will be a string in JSON format.</p>
+
+<p>The caller of this function needs to provide only the first parameter,
+which is an XML formatted String. The second parameter is optional, which
+lets the user to select if the XML attributes in the input XML string
+should be included or ignored in xml2json conversion.</p>
+
+<p>This function converts the XML formatted string into a PHP array by
+calling a recursive (protected static) function in this class. Then, it
+converts that PHP array into JSON by calling the "encode" static funcion.</p>
+
+<p>Throws a Zend<em>Json</em>Exception if the input not a XML formatted string.
+NOTE: Encoding native javascript expressions via Zend<em>Json</em>Expr is not possible.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$xmlStringContents</td>
+                <td>XML String to be converted</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$ignoreXmlAttributes</td>
+                <td>Include or exclude XML attributes in
+the xml2json conversion process.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><ul>
+<li>JSON formatted string on success</li>
+</ul>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Json_Exception.html">Zend_Json_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prettyPrint">
+        <div class="location">at line         line 379</div>
+        <code>        static            string
+    <strong>prettyPrint</strong>(string $json, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pretty-print JSON string</p>                    <p>Use 'format' option to select output format - currently html and txt supported, txt is default
+Use 'indent' option to override the indentation string set in the format - by default for the 'txt' format it's a tab</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$json</td>
+                <td>Original JSON string</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Encoding options</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_Yahoo | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_Yahoo" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_Yahoo
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_Yahoo</strong>
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_appId">
+                                                                                string
+                </td>
+                <td>$appId</td>
+                <td class="last">Yahoo Developer Application ID</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $appId)
+        
+                                            <p>Sets the application ID and instantiates the REST client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Yahoo_ResultSet.html">Zend_Service_Yahoo_ResultSet</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_inlinkDataSearch">inlinkDataSearch</a>(string $query, array $options = array())
+        
+                                            <p>Retrieve Inlink Data from siteexplorer.yahoo.com.  A basic query
+consists simply of a URL.  Additional options that can be
+specified consist of:
+'results'      => int  How many results to return, max is 100
+'start'        => int  The start offset for search results
+'entire<em>site'  => bool  Data for the whole site or a single page
+'omit</em>inlinks' => (none|domain|subdomain)  Filter inlinks from these sources</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Yahoo_ImageResultSet.html">Zend_Service_Yahoo_ImageResultSet</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_imageSearch">imageSearch</a>(string $query, array $options = array())
+        
+                                            <p>Perform a search of images.  The most basic query consists simply
+of a plain text search, but you can also specify the type of
+image, the format, color, etc.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Yahoo_LocalResultSet.html">Zend_Service_Yahoo_LocalResultSet</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_localSearch">localSearch</a>(string $query, array $options = array())
+        
+                                            <p>Perform a search on local.yahoo.com.  The basic search
+consists of a query and some fragment of location information;
+for example zipcode, latitude/longitude, or street address.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Yahoo_NewsResultSet.html">Zend_Service_Yahoo_NewsResultSet</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newsSearch">newsSearch</a>(string $query, array $options = array())
+        
+                                            <p>Execute a search on news.yahoo.com. This method minimally takes a
+text query to search on.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Yahoo_ResultSet.html">Zend_Service_Yahoo_ResultSet</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pageDataSearch">pageDataSearch</a>(string $query, array $options = array())
+        
+                                            <p>Retrieve Page Data from siteexplorer.yahoo.com.  A basic query
+consists simply of a URL.  Additional options that can be
+specified consist of:
+'results'      => int  How many results to return, max is 100
+'start'        => int  The start offset for search results
+'domain_only'  => bool  Data for just the given domain or all sub-domains also</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Yahoo_VideoResultSet.html">Zend_Service_Yahoo_VideoResultSet</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_videoSearch">videoSearch</a>(string $query, array $options = array())
+        
+                                            <p>Perform a search of videos.  The most basic query consists simply
+of a plain text search, but you can also specify the format of
+video.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Yahoo_WebResultSet.html">Zend_Service_Yahoo_WebResultSet</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_webSearch">webSearch</a>(string $query, array $options = array())
+        
+                                            <p>Perform a web content search on search.yahoo.com.  A basic query
+consists simply of a text query.  Additional options that can be
+specified consist of:
+'results'    => int  How many results to return, max is 50
+'start'      => int  The start offset for search results
+'language'   => lang  The target document language to match
+'type'       => (all|any|phrase)  How the query should be parsed
+'site'       => string  A site to which your search should be restricted
+'format'     => (any|html|msword|pdf|ppt|rss|txt|xls)
+'adult<em>ok'   => bool  permit 'adult' content in the search results
+'similar</em>ok' => bool  permit similar results in the result set
+'country'    => string  The country code for the content searched
+'license'    => (any|cc<em>any|cc</em>commercial|cc_modifiable)  The license of content being searched
+'region'     => The regional search engine on which the service performs the search. default us.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Rest_Client.html">Zend_Rest_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRestClient">getRestClient</a>()
+        
+                                            <p>Returns a reference to the REST client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 57</div>
+        <code>                    void
+    <strong>__construct</strong>(string $appId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the application ID and instantiates the REST client</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$appId</td>
+                <td>specified the developer's appid</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inlinkDataSearch">
+        <div class="location">at line         line 82</div>
+        <code>                    <a href="Zend_Service_Yahoo_ResultSet.html">Zend_Service_Yahoo_ResultSet</a>
+    <strong>inlinkDataSearch</strong>(string $query, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Inlink Data from siteexplorer.yahoo.com.  A basic query
+consists simply of a URL.  Additional options that can be
+specified consist of:
+'results'      => int  How many results to return, max is 100
+'start'        => int  The start offset for search results
+'entire<em>site'  => bool  Data for the whole site or a single page
+'omit</em>inlinks' => (none|domain|subdomain)  Filter inlinks from these sources</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>the query being run</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>any optional parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Yahoo_ResultSet.html">Zend_Service_Yahoo_ResultSet</a></td>
+            <td>The return set</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_imageSearch">
+        <div class="location">at line         line 133</div>
+        <code>                    <a href="Zend_Service_Yahoo_ImageResultSet.html">Zend_Service_Yahoo_ImageResultSet</a>
+    <strong>imageSearch</strong>(string $query, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Perform a search of images.  The most basic query consists simply
+of a plain text search, but you can also specify the type of
+image, the format, color, etc.</p>                    <p>The specific options are:
+'type'       => (all|any|phrase)  How to parse the query terms
+'results'    => int  How many results to return, max is 50
+'start'      => int  The start offset for search results
+'format'     => (any|bmp|gif|jpeg|png)  The type of images to search for
+'coloration' => (any|color|bw)  The coloration of images to search for
+'adult_ok'   => bool  Flag to allow 'adult' images.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>the query to be run</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>an optional array of query options</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Yahoo_ImageResultSet.html">Zend_Service_Yahoo_ImageResultSet</a></td>
+            <td>the search results</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_localSearch">
+        <div class="location">at line         line 197</div>
+        <code>                    <a href="Zend_Service_Yahoo_LocalResultSet.html">Zend_Service_Yahoo_LocalResultSet</a>
+    <strong>localSearch</strong>(string $query, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Perform a search on local.yahoo.com.  The basic search
+consists of a query and some fragment of location information;
+for example zipcode, latitude/longitude, or street address.</p>                    <p>Query options include:
+'results'    => int  How many results to return, max is 50
+'start'      => int  The start offset for search results
+'sort'       => (relevance|title|distance|rating) How to order your results</p>
+
+<p>'radius'     => float  The radius (in miles) in which to search</p>
+
+<p>'longitude'  => float  The longitude of the location to search around
+'latitude'   => float  The latitude of the location to search around</p>
+
+<p>'zip'        => string The zipcode to search around</p>
+
+<p>'street'     => string  The street address to search around
+'city'       => string  The city for address search
+'state'      => string  The state for address search
+'location'   => string  An adhoc location string to search around</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>The query string you want to run</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The search options, including location</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Yahoo_LocalResultSet.html">Zend_Service_Yahoo_LocalResultSet</a></td>
+            <td>The results</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newsSearch">
+        <div class="location">at line         line 251</div>
+        <code>                    <a href="Zend_Service_Yahoo_NewsResultSet.html">Zend_Service_Yahoo_NewsResultSet</a>
+    <strong>newsSearch</strong>(string $query, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Execute a search on news.yahoo.com. This method minimally takes a
+text query to search on.</p>                    <p>Query options coonsist of:</p>
+
+<p>'results'    => int  How many results to return, max is 50
+'start'      => int  The start offset for search results
+'sort'       => (rank|date)  How to order your results
+'language'   => lang  The target document language to match
+'type'       => (all|any|phrase)  How the query should be parsed
+'site'       => string  A site to which your search should be restricted</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>The query to run</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The array of optional parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Yahoo_NewsResultSet.html">Zend_Service_Yahoo_NewsResultSet</a></td>
+            <td>The query return set</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pageDataSearch">
+        <div class="location">at line         line 299</div>
+        <code>                    <a href="Zend_Service_Yahoo_ResultSet.html">Zend_Service_Yahoo_ResultSet</a>
+    <strong>pageDataSearch</strong>(string $query, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Page Data from siteexplorer.yahoo.com.  A basic query
+consists simply of a URL.  Additional options that can be
+specified consist of:
+'results'      => int  How many results to return, max is 100
+'start'        => int  The start offset for search results
+'domain_only'  => bool  Data for just the given domain or all sub-domains also</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>the query being run</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>any optional parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Yahoo_ResultSet.html">Zend_Service_Yahoo_ResultSet</a></td>
+            <td>The return set</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_videoSearch">
+        <div class="location">at line         line 349</div>
+        <code>                    <a href="Zend_Service_Yahoo_VideoResultSet.html">Zend_Service_Yahoo_VideoResultSet</a>
+    <strong>videoSearch</strong>(string $query, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Perform a search of videos.  The most basic query consists simply
+of a plain text search, but you can also specify the format of
+video.</p>                    <p>The specific options are:
+'type'       => (all|any|phrase)  How to parse the query terms
+'results'    => int  How many results to return, max is 50
+'start'      => int  The start offset for search results
+'format'     => (any|avi|flash|mpeg|msmedia|quicktime|realmedia)  The type of videos to search for
+'adult_ok'   => bool  Flag to allow 'adult' videos.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>the query to be run</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>an optional array of query options</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Yahoo_VideoResultSet.html">Zend_Service_Yahoo_VideoResultSet</a></td>
+            <td>the search results</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_webSearch">
+        <div class="location">at line         line 406</div>
+        <code>                    <a href="Zend_Service_Yahoo_WebResultSet.html">Zend_Service_Yahoo_WebResultSet</a>
+    <strong>webSearch</strong>(string $query, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Perform a web content search on search.yahoo.com.  A basic query
+consists simply of a text query.  Additional options that can be
+specified consist of:
+'results'    => int  How many results to return, max is 50
+'start'      => int  The start offset for search results
+'language'   => lang  The target document language to match
+'type'       => (all|any|phrase)  How the query should be parsed
+'site'       => string  A site to which your search should be restricted
+'format'     => (any|html|msword|pdf|ppt|rss|txt|xls)
+'adult<em>ok'   => bool  permit 'adult' content in the search results
+'similar</em>ok' => bool  permit similar results in the result set
+'country'    => string  The country code for the content searched
+'license'    => (any|cc<em>any|cc</em>commercial|cc_modifiable)  The license of content being searched
+'region'     => The regional search engine on which the service performs the search. default us.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>the query being run</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>any optional parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Yahoo_WebResultSet.html">Zend_Service_Yahoo_WebResultSet</a></td>
+            <td>The return set</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRestClient">
+        <div class="location">at line         line 446</div>
+        <code>                    <a href="Zend_Rest_Client.html">Zend_Rest_Client</a>
+    <strong>getRestClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a reference to the REST client</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Rest_Client.html">Zend_Rest_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

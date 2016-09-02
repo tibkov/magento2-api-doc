@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_Delicious | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_Delicious" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_Delicious
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_Delicious</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Zend<em>Service</em>Delicious is a concrete implementation of the del.icio.us web service</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>API_URI</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_UPDATE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_TAGS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_TAG_RENAME</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_BUNDLES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_BUNDLE_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_BUNDLE_ADD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_DATES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_POST_DELETE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_POSTS_GET</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_POSTS_ALL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_POSTS_ADD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PATH_POSTS_RECENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>JSON_URI</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>JSON_POSTS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>JSON_TAGS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>JSON_NETWORK</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>JSON_FANS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>JSON_URL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $uname = null, string $pass = null)
+        
+                                            <p>Constructs a new del.icio.us Web Services Client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAuth">setAuth</a>(string $uname, string $pass)
+        
+                                            <p>Set client username and password</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Date.html">Zend_Date</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLastUpdate">getLastUpdate</a>()
+        
+                                            <p>Get time of the last update</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTags">getTags</a>()
+        
+                                            <p>Get all tags, returning an array with tags as keys and number of corresponding posts as values</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renameTag">renameTag</a>(string $old, string $new)
+        
+                                            <p>Rename a tag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBundles">getBundles</a>()
+        
+                                            <p>Get all bundles, returning an array with bundles as keys and array of tags as values</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addBundle">addBundle</a>(string $bundle, array $tags)
+        
+                                            <p>Adds a new bundle</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteBundle">deleteBundle</a>(string $bundle)
+        
+                                            <p>Delete a bundle</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deletePost">deletePost</a>(string $url)
+        
+                                            <p>Delete a post</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDates">getDates</a>(string $tag = null)
+        
+                                            <p>Get number of posts by date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPosts">getPosts</a>(string $tag = null, <a href="Zend_Date.html">Zend_Date</a> $dt = null, string $url = null)
+        
+                                            <p>Get posts matching the arguments</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAllPosts">getAllPosts</a>(string $tag = null)
+        
+                                            <p>Get all posts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRecentPosts">getRecentPosts</a>(string $tag = null, string $count = 15)
+        
+                                            <p>Get recent posts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Delicious_Post.html">Zend_Service_Delicious_Post</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createNewPost">createNewPost</a>($title, $url)
+        
+                                            <p>Create new post</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUserPosts">getUserPosts</a>(string $user, int $count = null, string $tag = null)
+        
+                                            <p>Get posts of a user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUserTags">getUserTags</a>(string $user, int $atleast = null, int $count = null, string $sort = &#039;alpha&#039;)
+        
+                                            <p>Get tags of a user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUserNetwork">getUserNetwork</a>(string $user)
+        
+                                            <p>Get network of a user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUserFans">getUserFans</a>(string $user)
+        
+                                            <p>Get fans of a user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUrlDetails">getUrlDetails</a>(string $url)
+        
+                                            <p>Get details on a particular bookmarked URL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_makeRequest">makeRequest</a>(string $path, array $parms = array(), string $type = &#039;xml&#039;)
+        
+                                            <p>Handles all GET requests to a web service</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 121</div>
+        <code>                    void
+    <strong>__construct</strong>(string $uname = null, string $pass = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructs a new del.icio.us Web Services Client</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uname</td>
+                <td>Client username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pass</td>
+                <td>Client password</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAuth">
+        <div class="location">at line         line 135</div>
+        <code>                    <a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a>
+    <strong>setAuth</strong>(string $uname, string $pass)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set client username and password</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uname</td>
+                <td>Client user name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pass</td>
+                <td>Client password</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastUpdate">
+        <div class="location">at line         line 149</div>
+        <code>                    <a href="Zend_Date.html">Zend_Date</a>
+    <strong>getLastUpdate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get time of the last update</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Date.html">Zend_Date</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Delicious_Exception.html">Zend_Service_Delicious_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTags">
+        <div class="location">at line         line 173</div>
+        <code>                    array
+    <strong>getTags</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all tags, returning an array with tags as keys and number of corresponding posts as values</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>list of tags</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renameTag">
+        <div class="location">at line         line 187</div>
+        <code>                    <a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a>
+    <strong>renameTag</strong>(string $old, string $new)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Rename a tag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$old</td>
+                <td>Old tag name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$new</td>
+                <td>New tag name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBundles">
+        <div class="location">at line         line 201</div>
+        <code>                    array
+    <strong>getBundles</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all bundles, returning an array with bundles as keys and array of tags as values</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>list of bundles</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addBundle">
+        <div class="location">at line         line 219</div>
+        <code>                    <a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a>
+    <strong>addBundle</strong>(string $bundle, array $tags)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a new bundle</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$bundle</td>
+                <td>Name of new bundle</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tags</td>
+                <td>Array of tags</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteBundle">
+        <div class="location">at line         line 235</div>
+        <code>                    <a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a>
+    <strong>deleteBundle</strong>(string $bundle)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete a bundle</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$bundle</td>
+                <td>Name of bundle to be deleted</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deletePost">
+        <div class="location">at line         line 250</div>
+        <code>                    <a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a>
+    <strong>deletePost</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete a post</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL of post to be deleted</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Delicious.html">Zend_Service_Delicious</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDates">
+        <div class="location">at line         line 267</div>
+        <code>                    array
+    <strong>getDates</strong>(string $tag = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get number of posts by date</p>                    <p>Returns array where keys are dates and values are numbers of posts</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td>Optional filtering by tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>list of dates</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPosts">
+        <div class="location">at line         line 290</div>
+        <code>                    <a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a>
+    <strong>getPosts</strong>(string $tag = null, <a href="Zend_Date.html">Zend_Date</a> $dt = null, string $url = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get posts matching the arguments</p>                    <p>If no date or url is given, most recent date will be used</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td>Optional filtering by tag</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Date.html">Zend_Date</a></td>
+                <td>$dt</td>
+                <td>Optional filtering by date</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>Optional filtering by url</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Delicious_Exception.html">Zend_Service_Delicious_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllPosts">
+        <div class="location">at line         line 314</div>
+        <code>                    <a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a>
+    <strong>getAllPosts</strong>(string $tag = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all posts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td>Optional filtering by tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecentPosts">
+        <div class="location">at line         line 333</div>
+        <code>                    <a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a>
+    <strong>getRecentPosts</strong>(string $tag = null, string $count = 15)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get recent posts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td>Optional filtering by tag</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$count</td>
+                <td>Maximum number of posts to be returned (default 15)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createNewPost">
+        <div class="location">at line         line 353</div>
+        <code>                    <a href="Zend_Service_Delicious_Post.html">Zend_Service_Delicious_Post</a>
+    <strong>createNewPost</strong>($title, $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create new post</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$title</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Delicious_Post.html">Zend_Service_Delicious_Post</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUserPosts">
+        <div class="location">at line         line 366</div>
+        <code>                    <a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a>
+    <strong>getUserPosts</strong>(string $user, int $count = null, string $tag = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get posts of a user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$user</td>
+                <td>Owner of the posts</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td>Number of posts (default 15, max. 100)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td>Optional filtering by tag</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Delicious_PostList.html">Zend_Service_Delicious_PostList</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUserTags">
+        <div class="location">at line         line 390</div>
+        <code>                    array
+    <strong>getUserTags</strong>(string $user, int $atleast = null, int $count = null, string $sort = &#039;alpha&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get tags of a user</p>                    <p>Returned array has tags as keys and number of posts as values</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$user</td>
+                <td>Owner of the posts</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$atleast</td>
+                <td>Include only tags for which there are at least ### number of posts</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td>Number of tags to get (default all)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sort</td>
+                <td>Order of returned tags ('alpha' || 'count')</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUserNetwork">
+        <div class="location">at line         line 414</div>
+        <code>                    array
+    <strong>getUserNetwork</strong>(string $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get network of a user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$user</td>
+                <td>Owner of the network</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUserFans">
+        <div class="location">at line         line 426</div>
+        <code>                    array
+    <strong>getUserFans</strong>(string $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get fans of a user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$user</td>
+                <td>Owner of the fans</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrlDetails">
+        <div class="location">at line         line 446</div>
+        <code>                    array
+    <strong>getUrlDetails</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get details on a particular bookmarked URL</p>                    <p>Returned array contains four elements:
+ - hash - md5 hash of URL
+ - top<em>tags - array of tags and their respective usage counts
+ - url - URL for which details were returned
+ - total</em>posts - number of users that have bookmarked URL</p>
+
+<p>If URL hasen't been bookmarked null is returned.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>URL for which to get details</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeRequest">
+        <div class="location">at line         line 468</div>
+        <code>                    mixed
+    <strong>makeRequest</strong>(string $path, array $parms = array(), string $type = &#039;xml&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handles all GET requests to a web service</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Path</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parms</td>
+                <td>Array of GET parameters</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Type of a request ("xml"|"json")</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>decoded response from web service</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Delicious_Exception.html">Zend_Service_Delicious_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

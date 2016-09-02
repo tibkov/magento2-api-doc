@@ -1,0 +1,3306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Mail | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Mail" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Mail
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Mail</strong>        extends <a href="Zend_Mime_Message.html">Zend_Mime_Message</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class for sending an email.</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_hasAttachments">
+                                                                                boolean
+                </td>
+                <td>$hasAttachments</td>
+                <td class="last">Flag: whether or not email has attachments</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParts">getParts</a>()
+        
+                                            <p>Returns the list of all Zend<em>Mime</em>Parts in the message</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mime_Message.html#method_getParts">Zend_Mime_Message</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setParts">setParts</a>(array $parts)
+        
+                                            <p>Sets the given array of Zend<em>Mime</em>Parts as the array for the message</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mime_Message.html#method_setParts">Zend_Mime_Message</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPart">addPart</a>(<a href="Zend_Mime_Part.html">Zend_Mime_Part</a> $part)
+        
+                                            <p>Append a new Zend<em>Mime</em>Part to the current message</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mime_Message.html#method_addPart">Zend_Mime_Message</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isMultiPart">isMultiPart</a>()
+        
+                                            <p>Check if message needs to be sent as multipart
+MIME message or if it has only one part.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mime_Message.html#method_isMultiPart">Zend_Mime_Message</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMime">setMime</a>(Zend_Mime $mime)
+        
+                                            <p>Set Zend_Mime object for the message</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mime_Message.html#method_setMime">Zend_Mime_Message</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Zend_Mime
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMime">getMime</a>()
+        
+                                            <p>Returns the Zend_Mime object in use by the message</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mime_Message.html#method_getMime">Zend_Mime_Message</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generateMessage">generateMessage</a>(string $EOL = Zend_Mime::LINEEND)
+        
+                                            <p>Generate MIME-compliant message from the current configuration</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mime_Message.html#method_generateMessage">Zend_Mime_Message</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPartHeadersArray">getPartHeadersArray</a>(int $partnum)
+        
+                                            <p>Get the headers of a given part as an array</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mime_Message.html#method_getPartHeadersArray">Zend_Mime_Message</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPartHeaders">getPartHeaders</a>(int $partnum, string $EOL = Zend_Mime::LINEEND)
+        
+                                            <p>Get the headers of a given part as a string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mime_Message.html#method_getPartHeaders">Zend_Mime_Message</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPartContent">getPartContent</a>(int $partnum, string $EOL = Zend_Mime::LINEEND)
+        
+                                            <p>Get the (encoded) content of a given part as a string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mime_Message.html#method_getPartContent">Zend_Mime_Message</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Mime_Message.html">Zend_Mime_Message</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createFromMessage">createFromMessage</a>(string $message, string $boundary, string $EOL = Zend_Mime::LINEEND)
+        
+                                            <p>Decodes a MIME encoded string and returns a Zend<em>Mime</em>Message object with
+all the MIME parts set according to the given string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Mime_Message.html#method_createFromMessage">Zend_Mime_Message</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultTransport">setDefaultTransport</a>(<a href="Zend_Mail_Transport_Abstract.html">Zend_Mail_Transport_Abstract</a> $transport)
+        
+                                            <p>Sets the default mail transport for all following uses of
+Zend_Mail::send();</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultTransport">getDefaultTransport</a>()
+        
+                                            <p>Gets the default mail transport for all following uses of
+unittests</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearDefaultTransport">clearDefaultTransport</a>()
+        
+                                            <p>Clear the default transport property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $charset = null)
+        
+                                            <p>Public constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCharset">getCharset</a>()
+        
+                                            <p>Return charset string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setType">setType</a>(string $type)
+        
+                                            <p>Set content type</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getType">getType</a>()
+        
+                                            <p>Get content type of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMimeBoundary">setMimeBoundary</a>(string $boundary)
+        
+                                            <p>Set an arbitrary mime boundary for the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMimeBoundary">getMimeBoundary</a>()
+        
+                                            <p>Return the boundary string used for the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEncodingOfHeaders">getEncodingOfHeaders</a>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Return encoding of mail headers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHeaderEncoding">getHeaderEncoding</a>()
+        
+                                            <p>Return the encoding of mail headers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEncodingOfHeaders">setEncodingOfHeaders</a>(string $encoding)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                                            <p>Set the encoding of mail headers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHeaderEncoding">setHeaderEncoding</a>(string $encoding)
+        
+                                            <p>Set the encoding of mail headers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBodyText">setBodyText</a>(string $txt, string $charset = null, string $encoding = Zend_Mime::ENCODING_QUOTEDPRINTABLE)
+        
+                                            <p>Sets the text body for the message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    false|<a href="Zend_Mime_Part.html">Zend_Mime_Part</a>|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBodyText">getBodyText</a>(bool $textOnly = false)
+        
+                                            <p>Return text body Zend<em>Mime</em>Part or string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBodyHtml">setBodyHtml</a>(string $html, string $charset = null, string $encoding = Zend_Mime::ENCODING_QUOTEDPRINTABLE)
+        
+                                            <p>Sets the HTML body for the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    false|<a href="Zend_Mime_Part.html">Zend_Mime_Part</a>|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBodyHtml">getBodyHtml</a>(bool $htmlOnly = false)
+        
+                                            <p>Return Zend<em>Mime</em>Part representing body HTML</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addAttachment">addAttachment</a>(<a href="Zend_Mime_Part.html">Zend_Mime_Part</a> $attachment)
+        
+                                            <p>Adds an existing attachment to the mail message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mime_Part.html">Zend_Mime_Part</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createAttachment">createAttachment</a>(string $body, string $mimeType = Zend_Mime::TYPE_OCTETSTREAM, string $disposition = Zend_Mime::DISPOSITION_ATTACHMENT, string $encoding = Zend_Mime::ENCODING_BASE64, string $filename = null)
+        
+                                            <p>Creates a Zend<em>Mime</em>Part attachment</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPartCount">getPartCount</a>()
+        
+                                            <p>Return a count of message parts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addTo">addTo</a>(string|array $email, string $name = &#039;&#039;)
+        
+                                            <p>Adds To-header and recipient, $email can be an array, or a single string address</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addCc">addCc</a>(string|array $email, string $name = &#039;&#039;)
+        
+                                            <p>Adds Cc-header and recipient, $email can be an array, or a single string address</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addBcc">addBcc</a>(string|array $email)
+        
+                                            <p>Adds Bcc recipient, $email can be an array, or a single string address</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRecipients">getRecipients</a>()
+        
+                                            <p>Return list of recipient email addresses</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearHeader">clearHeader</a>(string $headerName)
+        
+                                            <p>Clear header from the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearRecipients">clearRecipients</a>()
+        
+                                            <p>Clears list of recipient email addresses</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFrom">setFrom</a>(string $email, string $name = null)
+        
+                                            <p>Sets From-header and sender of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setReplyTo">setReplyTo</a>(string $email, string $name = null)
+        
+                                            <p>Set Reply-To Header</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFrom">getFrom</a>()
+        
+                                            <p>Returns the sender of the mail</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getReplyTo">getReplyTo</a>()
+        
+                                            <p>Returns the current Reply-To address of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearFrom">clearFrom</a>()
+        
+                                            <p>Clears the sender from the mail</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearReplyTo">clearReplyTo</a>()
+        
+                                            <p>Clears the current Reply-To address from the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultFrom">setDefaultFrom</a>(string $email, string $name = null)
+        
+                                            <p>Sets Default From-email and name of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;null|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultFrom">getDefaultFrom</a>()
+        
+                                            <p>Returns the default sender of the mail</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearDefaultFrom">clearDefaultFrom</a>()
+        
+                                            <p>Clears the default sender from the mail</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFromToDefaultFrom">setFromToDefaultFrom</a>()
+        
+                                            <p>Sets From-name and -email based on the defaults</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultReplyTo">setDefaultReplyTo</a>(string $email, string $name = null)
+        
+                                            <p>Sets Default ReplyTo-address and -name of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;null|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultReplyTo">getDefaultReplyTo</a>()
+        
+                                            <p>Returns the default Reply-To Address and Name of the mail</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearDefaultReplyTo">clearDefaultReplyTo</a>()
+        
+                                            <p>Clears the default ReplyTo-address and -name from the mail</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setReplyToFromDefault">setReplyToFromDefault</a>()
+        
+                                            <p>Sets ReplyTo-name and -email based on the defaults</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setReturnPath">setReturnPath</a>(string $email)
+        
+                                            <p>Sets the Return-Path header of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getReturnPath">getReturnPath</a>()
+        
+                                            <p>Returns the current Return-Path address of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearReturnPath">clearReturnPath</a>()
+        
+                                            <p>Clears the current Return-Path address from the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSubject">setSubject</a>(string $subject)
+        
+                                            <p>Sets the subject of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSubject">getSubject</a>()
+        
+                                            <p>Returns the encoded subject of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearSubject">clearSubject</a>()
+        
+                                            <p>Clears the encoded subject from the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDate">setDate</a>(timestamp|string|<a href="Zend_Date.html">Zend_Date</a> $date = null)
+        
+                                            <p>Sets Date-header</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDate">getDate</a>()
+        
+                                            <p>Returns the formatted date of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearDate">clearDate</a>()
+        
+                                            <p>Clears the formatted date from the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMessageId">setMessageId</a>(boolean|string $id = true)
+        
+                                            <p>Sets the Message-ID of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMessageId">getMessageId</a>()
+        
+                                            <p>Returns the Message-ID of the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearMessageId">clearMessageId</a>()
+        
+                                            <p>Clears the Message-ID from the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createMessageId">createMessageId</a>()
+        
+                                            <p>Creates the Message-ID</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addHeader">addHeader</a>(string $name, string $value, boolean $append = false)
+        
+                                            <p>Add a custom header to the message</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHeaders">getHeaders</a>()
+        
+                                            <p>Return mail headers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Mail.html">Zend_Mail</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>(<a href="Zend_Mail_Transport_Abstract.html">Zend_Mail_Transport_Abstract</a> $transport = null)
+        
+                                            <p>Sends this email using the given transport or a previously
+set DefaultTransport or the internal mail function if no
+default transport had been set.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getParts">
+        <div class="location">in <a href="Zend_Mime_Message.html#method_getParts">Zend_Mime_Message</a> at line         line 59</div>
+        <code>                    array
+    <strong>getParts</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the list of all Zend<em>Mime</em>Parts in the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>of Zend<em>Mime</em>Part</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParts">
+        <div class="location">in <a href="Zend_Mime_Message.html#method_setParts">Zend_Mime_Message</a> at line         line 69</div>
+        <code>                    
+    <strong>setParts</strong>(array $parts)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the given array of Zend<em>Mime</em>Parts as the array for the message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$parts</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPart">
+        <div class="location">in <a href="Zend_Mime_Message.html#method_addPart">Zend_Mime_Message</a> at line         line 79</div>
+        <code>                    
+    <strong>addPart</strong>(<a href="Zend_Mime_Part.html">Zend_Mime_Part</a> $part)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append a new Zend<em>Mime</em>Part to the current message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mime_Part.html">Zend_Mime_Part</a></td>
+                <td>$part</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMultiPart">
+        <div class="location">in <a href="Zend_Mime_Message.html#method_isMultiPart">Zend_Mime_Message</a> at line         line 93</div>
+        <code>                    boolean
+    <strong>isMultiPart</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if message needs to be sent as multipart
+MIME message or if it has only one part.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMime">
+        <div class="location">in <a href="Zend_Mime_Message.html#method_setMime">Zend_Mime_Message</a> at line         line 106</div>
+        <code>                    
+    <strong>setMime</strong>(Zend_Mime $mime)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Zend_Mime object for the message</p>                    <p>This can be used to set the boundary specifically or to use a subclass of
+Zend_Mime for generating the boundary.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Zend_Mime</td>
+                <td>$mime</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMime">
+        <div class="location">in <a href="Zend_Mime_Message.html#method_getMime">Zend_Mime_Message</a> at line         line 119</div>
+        <code>                    Zend_Mime
+    <strong>getMime</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the Zend_Mime object in use by the message</p>                    <p>If the object was not present, it is created and returned. Can be used to
+determine the boundary used in this message.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Zend_Mime</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateMessage">
+        <div class="location">in <a href="Zend_Mime_Message.html#method_generateMessage">Zend_Mime_Message</a> at line         line 143</div>
+        <code>                    string
+    <strong>generateMessage</strong>(string $EOL = Zend_Mime::LINEEND)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate MIME-compliant message from the current configuration</p>                    <p>This can be a multipart message if more than one MIME part was added. If
+only one part is present, the content of this part is returned. If no
+part had been added, an empty string is returned.</p>
+
+<p>Parts are seperated by the mime boundary as defined in Zend<em>Mime. If
+{@link setMime()} has been called before this method, the Zend</em>Mime
+object set by this call will be used. Otherwise, a new Zend_Mime object
+is generated and used.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$EOL</td>
+                <td>EOL string; defaults to {@link Zend_Mime::LINEEND}</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPartHeadersArray">
+        <div class="location">in <a href="Zend_Mime_Message.html#method_getPartHeadersArray">Zend_Mime_Message</a> at line         line 174</div>
+        <code>                    array
+    <strong>getPartHeadersArray</strong>(int $partnum)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the headers of a given part as an array</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$partnum</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPartHeaders">
+        <div class="location">in <a href="Zend_Mime_Message.html#method_getPartHeaders">Zend_Mime_Message</a> at line         line 186</div>
+        <code>                    string
+    <strong>getPartHeaders</strong>(int $partnum, string $EOL = Zend_Mime::LINEEND)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the headers of a given part as a string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$partnum</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$EOL</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPartContent">
+        <div class="location">in <a href="Zend_Mime_Message.html#method_getPartContent">Zend_Mime_Message</a> at line         line 198</div>
+        <code>                    string
+    <strong>getPartContent</strong>(int $partnum, string $EOL = Zend_Mime::LINEEND)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the (encoded) content of a given part as a string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$partnum</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$EOL</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createFromMessage">
+        <div class="location">in <a href="Zend_Mime_Message.html#method_createFromMessage">Zend_Mime_Message</a> at line         line 257</div>
+        <code>        static            <a href="Zend_Mime_Message.html">Zend_Mime_Message</a>
+    <strong>createFromMessage</strong>(string $message, string $boundary, string $EOL = Zend_Mime::LINEEND)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decodes a MIME encoded string and returns a Zend<em>Mime</em>Message object with
+all the MIME parts set according to the given string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$boundary</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$EOL</td>
+                <td>EOL string; defaults to {@link Zend_Mime::LINEEND}</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mime_Message.html">Zend_Mime_Message</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Exception.html">Zend_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultTransport">
+        <div class="location">at line         line 183</div>
+        <code>        static            
+    <strong>setDefaultTransport</strong>(<a href="Zend_Mail_Transport_Abstract.html">Zend_Mail_Transport_Abstract</a> $transport)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the default mail transport for all following uses of
+Zend_Mail::send();</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Transport_Abstract.html">Zend_Mail_Transport_Abstract</a></td>
+                <td>$transport</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultTransport">
+        <div class="location">at line         line 195</div>
+        <code>        static            
+    <strong>getDefaultTransport</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the default mail transport for all following uses of
+unittests</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearDefaultTransport">
+        <div class="location">at line         line 203</div>
+        <code>        static            
+    <strong>clearDefaultTransport</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear the default transport property</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 214</div>
+        <code>                    void
+    <strong>__construct</strong>(string $charset = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Public constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$charset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCharset">
+        <div class="location">at line         line 226</div>
+        <code>                    string
+    <strong>getCharset</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return charset string</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setType">
+        <div class="location">at line         line 240</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setType</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set content type</p>                    <p>Should only be used for manually setting multipart content types.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Content type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Implements fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Exception.html">Zend_Mail_Exception</a></td>
+                <td>for types not supported by Zend_Mime</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getType">
+        <div class="location">at line         line 264</div>
+        <code>                    string
+    <strong>getType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get content type of the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMimeBoundary">
+        <div class="location">at line         line 277</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setMimeBoundary</strong>(string $boundary)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set an arbitrary mime boundary for the message</p>                    <p>If not set, Zend_Mime will generate one.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$boundary</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMimeBoundary">
+        <div class="location">at line         line 289</div>
+        <code>                    string
+    <strong>getMimeBoundary</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the boundary string used for the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEncodingOfHeaders">
+        <div class="location">at line         line 300</div>
+        <code>                    string
+    <strong>getEncodingOfHeaders</strong>()
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>use</td>
+                    <td>{@link getHeaderEncoding()} instead</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Return encoding of mail headers</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeaderEncoding">
+        <div class="location">at line         line 312</div>
+        <code>                    string
+    <strong>getHeaderEncoding</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the encoding of mail headers</p>                    <p>Either Zend<em>Mime::ENCODING</em>QUOTEDPRINTABLE or Zend<em>Mime::ENCODING</em>BASE64</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEncodingOfHeaders">
+        <div class="location">at line         line 324</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setEncodingOfHeaders</strong>(string $encoding)
+        <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
+    </h3>
+    <div class="details">
+            
+            <p>
+                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                            <tr>
+                    <td>Use</td>
+                    <td>{@link setHeaderEncoding()} instead.</td>
+                </tr>
+                    </p>
+    
+
+                    <div class="method-description">
+                                    <p>Set the encoding of mail headers</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHeaderEncoding">
+        <div class="location">at line         line 335</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setHeaderEncoding</strong>(string $encoding)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the encoding of mail headers</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td>Zend<em>Mime::ENCODING</em>QUOTEDPRINTABLE or Zend<em>Mime::ENCODING</em>BASE64</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBodyText">
+        <div class="location">at line         line 361</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setBodyText</strong>(string $txt, string $charset = null, string $encoding = Zend_Mime::ENCODING_QUOTEDPRINTABLE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the text body for the message.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$txt</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$charset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBodyText">
+        <div class="location">at line         line 384</div>
+        <code>                    false|<a href="Zend_Mime_Part.html">Zend_Mime_Part</a>|string
+    <strong>getBodyText</strong>(bool $textOnly = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return text body Zend<em>Mime</em>Part or string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$textOnly</td>
+                <td>textOnly Whether to return just the body text content or the MIME part; defaults to false, the MIME part</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>false|<a href="Zend_Mime_Part.html">Zend_Mime_Part</a>|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBodyHtml">
+        <div class="location">at line         line 402</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setBodyHtml</strong>(string $html, string $charset = null, string $encoding = Zend_Mime::ENCODING_QUOTEDPRINTABLE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the HTML body for the message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$html</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$charset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBodyHtml">
+        <div class="location">at line         line 425</div>
+        <code>                    false|<a href="Zend_Mime_Part.html">Zend_Mime_Part</a>|string
+    <strong>getBodyHtml</strong>(bool $htmlOnly = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return Zend<em>Mime</em>Part representing body HTML</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$htmlOnly</td>
+                <td>Whether to return the body HTML only, or the MIME part; defaults to false, the MIME part</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>false|<a href="Zend_Mime_Part.html">Zend_Mime_Part</a>|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addAttachment">
+        <div class="location">at line         line 441</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>addAttachment</strong>(<a href="Zend_Mime_Part.html">Zend_Mime_Part</a> $attachment)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds an existing attachment to the mail message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mime_Part.html">Zend_Mime_Part</a></td>
+                <td>$attachment</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createAttachment">
+        <div class="location">at line         line 463</div>
+        <code>                    <a href="Zend_Mime_Part.html">Zend_Mime_Part</a>
+    <strong>createAttachment</strong>(string $body, string $mimeType = Zend_Mime::TYPE_OCTETSTREAM, string $disposition = Zend_Mime::DISPOSITION_ATTACHMENT, string $encoding = Zend_Mime::ENCODING_BASE64, string $filename = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates a Zend<em>Mime</em>Part attachment</p>                    <p>Attachment is automatically added to the mail object after creation. The
+attachment object is returned to allow for further manipulation.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$mimeType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$disposition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td>OPTIONAL A filename for the attachment</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mime_Part.html">Zend_Mime_Part</a></td>
+            <td>Newly created Zend<em>Mime</em>Part object (to allow
+advanced settings)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPartCount">
+        <div class="location">at line         line 486</div>
+        <code>                    integer
+    <strong>getPartCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a count of message parts</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addTo">
+        <div class="location">at line         line 571</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>addTo</strong>(string|array $email, string $name = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds To-header and recipient, $email can be an array, or a single string address</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCc">
+        <div class="location">at line         line 592</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>addCc</strong>(string|array $email, string $name = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds Cc-header and recipient, $email can be an array, or a single string address</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addBcc">
+        <div class="location">at line         line 611</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>addBcc</strong>(string|array $email)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds Bcc recipient, $email can be an array, or a single string address</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRecipients">
+        <div class="location">at line         line 629</div>
+        <code>                    array
+    <strong>getRecipients</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return list of recipient email addresses</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>(of strings)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearHeader">
+        <div class="location">at line         line 640</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>clearHeader</strong>(string $headerName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear header from the message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$headerName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent inter</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearRecipients">
+        <div class="location">at line         line 653</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>clearRecipients</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clears list of recipient email addresses</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFrom">
+        <div class="location">at line         line 673</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setFrom</strong>(string $email, string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets From-header and sender of the message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Exception.html">Zend_Mail_Exception</a></td>
+                <td>if called subsequent times</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setReplyTo">
+        <div class="location">at line         line 699</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setReplyTo</strong>(string $email, string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Reply-To Header</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Exception.html">Zend_Mail_Exception</a></td>
+                <td>if called more than one time</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFrom">
+        <div class="location">at line         line 722</div>
+        <code>                    string
+    <strong>getFrom</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the sender of the mail</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getReplyTo">
+        <div class="location">at line         line 732</div>
+        <code>                    string|null
+    <strong>getReplyTo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the current Reply-To address of the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>Reply-To address, null when not set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearFrom">
+        <div class="location">at line         line 742</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>clearFrom</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clears the sender from the mail</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearReplyTo">
+        <div class="location">at line         line 755</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>clearReplyTo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clears the current Reply-To address from the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultFrom">
+        <div class="location">at line         line 770</div>
+        <code>        static            void
+    <strong>setDefaultFrom</strong>(string $email, string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets Default From-email and name of the message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Optional   $name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultFrom">
+        <div class="location">at line         line 780</div>
+        <code>        static            null|array
+    <strong>getDefaultFrom</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the default sender of the mail</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|array</td>
+            <td>Null if none was set.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearDefaultFrom">
+        <div class="location">at line         line 790</div>
+        <code>        static            void
+    <strong>clearDefaultFrom</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clears the default sender from the mail</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFromToDefaultFrom">
+        <div class="location">at line         line 800</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setFromToDefaultFrom</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets From-name and -email based on the defaults</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultReplyTo">
+        <div class="location">at line         line 820</div>
+        <code>        static            void
+    <strong>setDefaultReplyTo</strong>(string $email, string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets Default ReplyTo-address and -name of the message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Optional   $name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultReplyTo">
+        <div class="location">at line         line 830</div>
+        <code>        static            null|array
+    <strong>getDefaultReplyTo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the default Reply-To Address and Name of the mail</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|array</td>
+            <td>Null if none was set.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearDefaultReplyTo">
+        <div class="location">at line         line 840</div>
+        <code>        static            void
+    <strong>clearDefaultReplyTo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clears the default ReplyTo-address and -name from the mail</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setReplyToFromDefault">
+        <div class="location">at line         line 850</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setReplyToFromDefault</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets ReplyTo-name and -email based on the defaults</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setReturnPath">
+        <div class="location">at line         line 870</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setReturnPath</strong>(string $email)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the Return-Path header of the message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Exception.html">Zend_Mail_Exception</a></td>
+                <td>if set multiple times</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getReturnPath">
+        <div class="location">at line         line 893</div>
+        <code>                    string
+    <strong>getReturnPath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the current Return-Path address of the message</p>                    <p>If no Return-Path header is set, returns the value of {@link $_from}.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearReturnPath">
+        <div class="location">at line         line 907</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>clearReturnPath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clears the current Return-Path address from the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSubject">
+        <div class="location">at line         line 922</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setSubject</strong>(string $subject)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the subject of the message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Exception.html">Zend_Mail_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSubject">
+        <div class="location">at line         line 943</div>
+        <code>                    string
+    <strong>getSubject</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the encoded subject of the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearSubject">
+        <div class="location">at line         line 953</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>clearSubject</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clears the encoded subject from the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDate">
+        <div class="location">at line         line 968</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setDate</strong>(timestamp|string|<a href="Zend_Date.html">Zend_Date</a> $date = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets Date-header</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>timestamp|string|<a href="Zend_Date.html">Zend_Date</a></td>
+                <td>$date</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Exception.html">Zend_Mail_Exception</a></td>
+                <td>if called subsequent times or wrong date format.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDate">
+        <div class="location">at line         line 1013</div>
+        <code>                    string
+    <strong>getDate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the formatted date of the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearDate">
+        <div class="location">at line         line 1023</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>clearDate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clears the formatted date from the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMessageId">
+        <div class="location">at line         line 1042</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>setMessageId</strong>(boolean|string $id = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the Message-ID of the message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean|string</td>
+                <td>$id</td>
+                <td>true  :Auto
+false :No set
+null  :No set
+string:Sets given string (Angle brackets is not necessary)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Exception.html">Zend_Mail_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMessageId">
+        <div class="location">at line         line 1070</div>
+        <code>                    string
+    <strong>getMessageId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the Message-ID of the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearMessageId">
+        <div class="location">at line         line 1081</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>clearMessageId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clears the Message-ID from the message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMessageId">
+        <div class="location">at line         line 1094</div>
+        <code>                    string
+    <strong>createMessageId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates the Message-ID</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addHeader">
+        <div class="location">at line         line 1132</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>addHeader</strong>(string $name, string $value, boolean $append = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a custom header to the message</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$append</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Exception.html">Zend_Mail_Exception</a></td>
+                <td>on attempts to create standard headers</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeaders">
+        <div class="location">at line         line 1158</div>
+        <code>                    void
+    <strong>getHeaders</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return mail headers</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">at line         line 1171</div>
+        <code>                    <a href="Zend_Mail.html">Zend_Mail</a>
+    <strong>send</strong>(<a href="Zend_Mail_Transport_Abstract.html">Zend_Mail_Transport_Abstract</a> $transport = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sends this email using the given transport or a previously
+set DefaultTransport or the internal mail function if no
+default transport had been set.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Mail_Transport_Abstract.html">Zend_Mail_Transport_Abstract</a></td>
+                <td>$transport</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Mail.html">Zend_Mail</a></td>
+            <td>Provides fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

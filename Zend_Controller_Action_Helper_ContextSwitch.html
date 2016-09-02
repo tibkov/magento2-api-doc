@@ -1,0 +1,3048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Controller_Action_Helper_ContextSwitch | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Controller_Action_Helper_ContextSwitch" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Controller_Action_Helper_ContextSwitch
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Controller_Action_Helper_ContextSwitch</strong>        extends <a href="Zend_Controller_Action_Helper_Abstract.html">Zend_Controller_Action_Helper_Abstract</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Simplify context switching based on requested format</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>TRIGGER_INIT</td>
+                <td class="last">
+                    <p><em>Trigger type constants</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRIGGER_POST</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Zend_Controller_ActionHelper_Abstract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setActionController">setActionController</a>(<a href="Zend_Controller_Action.html">Zend_Controller_Action</a> $actionController = null)
+        
+                                            <p>setActionController()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_setActionController">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getActionController">getActionController</a>()
+        
+                                            <p>Retrieve current action controller</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_getActionController">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFrontController">getFrontController</a>()
+        
+                                            <p>Retrieve front controller instance</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_getFrontController">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>Initialize at start of action controller</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_preDispatch">preDispatch</a>()
+        
+                                            <p>Hook into action controller preDispatch() workflow</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_preDispatch">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postDispatch">postDispatch</a>()
+        
+                                            <p>Post dispatch processing</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequest">getRequest</a>()
+        
+                                            <p>getRequest() -</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_getRequest">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResponse">getResponse</a>()
+        
+                                            <p>getResponse() -</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_getResponse">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p>getName()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_getName">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array|<a href="Zend_Config.html">Zend_Config</a> $options = null)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOptions">setOptions</a>(array $options)
+        
+                                            <p>Configure object from array of options</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setConfig">setConfig</a>(<a href="Zend_Config.html">Zend_Config</a> $config)
+        
+                                            <p>Set object state from config object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_direct">direct</a>()
+        
+                                            <p>Strategy pattern: return object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initContext">initContext</a>(mixed $format = null)
+        
+                                            <p>Initialize context detection and switching</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initJsonContext">initJsonContext</a>()
+        
+                                            <p>JSON context extra initialization</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAutoJsonSerialization">setAutoJsonSerialization</a>(boolean $flag)
+        
+                                            <p>Should JSON contexts auto-serialize?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAutoJsonSerialization">getAutoJsonSerialization</a>()
+        
+                                            <p>Get JSON context auto-serialization flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSuffix">setSuffix</a>(string $context, string $suffix, boolean $prependViewRendererSuffix = true)
+        
+                                            <p>Customize view script suffix to use when switching context.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSuffix">getSuffix</a>(string $type)
+        
+                                            <p>Retrieve suffix for given context type</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasContext">hasContext</a>(string $context, boolean $throwException = false)
+        
+                                            <p>Does the given context exist?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addHeader">addHeader</a>(string $context, string $header, string $content)
+        
+                                            <p>Add header to context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHeader">setHeader</a>($context, $header, $content)
+        
+                                            <p>Customize response header to use when switching context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addHeaders">addHeaders</a>(string $context, array $headers)
+        
+                                            <p>Add multiple headers at once for a given context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHeaders">setHeaders</a>(string $context, array $headers)
+        
+                                            <p>Set multiple headers at once for a given context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHeader">getHeader</a>(string $context, string $header)
+        
+                                            <p>Retrieve context header</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHeaders">getHeaders</a>(string $context)
+        
+                                            <p>Retrieve context headers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeHeader">removeHeader</a>(string $context, string $header)
+        
+                                            <p>Remove a single header from a context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearHeaders">clearHeaders</a>(string $context)
+        
+                                            <p>Clear all headers for a given context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCallback">setCallback</a>(string $context, string $trigger, string|array $callback)
+        
+                                            <p>Set a callback for a given context and trigger</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCallbacks">setCallbacks</a>(string $context, array $callbacks)
+        
+                                            <p>Set callbacks for a given context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCallback">getCallback</a>(string $context, string $trigger)
+        
+                                            <p>Get a single callback for a given context and trigger</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCallbacks">getCallbacks</a>(string $context)
+        
+                                            <p>Get all callbacks for a given context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeCallback">removeCallback</a>(string $context, string $trigger)
+        
+                                            <p>Clear a callback for a given context and trigger</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearCallbacks">clearCallbacks</a>(string $context)
+        
+                                            <p>Clear all callbacks for a given context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setContextParam">setContextParam</a>(string $name)
+        
+                                            <p>Set name of parameter to use when determining context format</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContextParam">getContextParam</a>()
+        
+                                            <p>Return context format request parameter name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultContext">setDefaultContext</a>(string $type)
+        
+                                            <p>Indicate default context to use when no context format provided</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultContext">getDefaultContext</a>()
+        
+                                            <p>Return default context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAutoDisableLayout">setAutoDisableLayout</a>(boolean $flag)
+        
+                                            <p>Set flag indicating if layout should be disabled</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAutoDisableLayout">getAutoDisableLayout</a>()
+        
+                                            <p>Retrieve auto layout disable flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addContext">addContext</a>(string $context, array $spec)
+        
+                                            <p>Add new context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setContext">setContext</a>(string $context, array $spec)
+        
+                                            <p>Overwrite existing context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addContexts">addContexts</a>(array $contexts)
+        
+                                            <p>Add multiple contexts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setContexts">setContexts</a>(array $contexts)
+        
+                                            <p>Set multiple contexts, after first removing all</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContext">getContext</a>(string $context)
+        
+                                            <p>Retrieve context specification</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContexts">getContexts</a>()
+        
+                                            <p>Retrieve context definitions</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeContext">removeContext</a>(string $context)
+        
+                                            <p>Remove a context</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearContexts">clearContexts</a>()
+        
+                                            <p>Remove all contexts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCurrentContext">getCurrentContext</a>()
+        
+                                            <p>Return current context, if any</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postJsonContext">postJsonContext</a>()
+        
+                                            <p>JSON post processing</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addActionContext">addActionContext</a>(string $action, string|array $context)
+        
+                                            <p>Add one or more contexts to an action</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setActionContext">setActionContext</a>(string $action, string|array $context)
+        
+                                            <p>Set a context as available for a given controller action</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addActionContexts">addActionContexts</a>(array $contexts)
+        
+                                            <p>Add multiple action/context pairs at once</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setActionContexts">setActionContexts</a>(array $contexts)
+        
+                                            <p>Overwrite and set multiple action contexts at once</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasActionContext">hasActionContext</a>(string $action, string|array $context)
+        
+                                            <p>Does a particular controller action have the given context(s)?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getActionContexts">getActionContexts</a>(string $action = null)
+        
+                                            <p>Get contexts for a given action or all actions in the controller</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeActionContext">removeActionContext</a>(string $action, string|array $context)
+        
+                                            <p>Remove one or more contexts for a given controller action</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearActionContexts">clearActionContexts</a>(string $action = null)
+        
+                                            <p>Clear all contexts for a given controller action or all actions</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setActionController">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_setActionController">Zend_Controller_Action_Helper_Abstract</a> at line         line 55</div>
+        <code>                    Zend_Controller_ActionHelper_Abstract
+    <strong>setActionController</strong>(<a href="Zend_Controller_Action.html">Zend_Controller_Action</a> $actionController = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>setActionController()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action.html">Zend_Controller_Action</a></td>
+                <td>$actionController</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Zend_Controller_ActionHelper_Abstract</td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActionController">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_getActionController">Zend_Controller_Action_Helper_Abstract</a> at line         line 66</div>
+        <code>                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+    <strong>getActionController</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve current action controller</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action.html">Zend_Controller_Action</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFrontController">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_getFrontController">Zend_Controller_Action_Helper_Abstract</a> at line         line 76</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>getFrontController</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve front controller instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at line         line 165</div>
+        <code>                    void
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize at start of action controller</p>                    <p>Reset the view script suffix to the original state, or store the
+original state.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preDispatch">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_preDispatch">Zend_Controller_Action_Helper_Abstract</a> at line         line 95</div>
+        <code>                    void
+    <strong>preDispatch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Hook into action controller preDispatch() workflow</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postDispatch">
+        <div class="location">at line         line 1078</div>
+        <code>                    void
+    <strong>postDispatch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Post dispatch processing</p>                    <p>Execute postDispatch callback for current context, if available</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_getRequest">Zend_Controller_Action_Helper_Abstract</a> at line         line 113</div>
+        <code>                    <a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a>
+    <strong>getRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>getRequest() -</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a></td>
+            <td>$request</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponse">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_getResponse">Zend_Controller_Action_Helper_Abstract</a> at line         line 128</div>
+        <code>                    <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+    <strong>getResponse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>getResponse() -</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+            <td>$response</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_getName">Zend_Controller_Action_Helper_Abstract</a> at line         line 143</div>
+        <code>                    string
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>getName()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 129</div>
+        <code>                    void
+    <strong>__construct</strong>(array|<a href="Zend_Config.html">Zend_Config</a> $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a href="Zend_Config.html">Zend_Config</a></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOptions">
+        <div class="location">at line         line 180</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setOptions</strong>(array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Configure object from array of options</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">at line         line 210</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setConfig</strong>(<a href="Zend_Config.html">Zend_Config</a> $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set object state from config object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Config.html">Zend_Config</a></td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_direct">
+        <div class="location">at line         line 220</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>direct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Strategy pattern: return object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initContext">
+        <div class="location">at line         line 232</div>
+        <code>                    void
+    <strong>initContext</strong>(mixed $format = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize context detection and switching</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initJsonContext">
+        <div class="location">at line         line 324</div>
+        <code>                    void
+    <strong>initJsonContext</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>JSON context extra initialization</p>                    <p>Turns off viewRenderer auto-rendering</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAutoJsonSerialization">
+        <div class="location">at line         line 343</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setAutoJsonSerialization</strong>(boolean $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Should JSON contexts auto-serialize?</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAutoJsonSerialization">
+        <div class="location">at line         line 354</div>
+        <code>                    boolean
+    <strong>getAutoJsonSerialization</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get JSON context auto-serialization flag</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSuffix">
+        <div class="location">at line         line 438</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setSuffix</strong>(string $context, string $suffix, boolean $prependViewRendererSuffix = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Customize view script suffix to use when switching context.</p>                    <p>Passing an empty suffix value to the setters disables the view script
+suffix change.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td>Context type for which to set suffix</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$suffix</td>
+                <td>Suffix to use</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$prependViewRendererSuffix</td>
+                <td>Whether or not to prepend the new suffix to the viewrenderer suffix</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSuffix">
+        <div class="location">at line         line 484</div>
+        <code>                    string
+    <strong>getSuffix</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve suffix for given context type</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>Context type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasContext">
+        <div class="location">at line         line 505</div>
+        <code>                    bool
+    <strong>hasContext</strong>(string $context, boolean $throwException = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Does the given context exist?</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$throwException</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td>if context does not exist and throwException is true</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addHeader">
+        <div class="location">at line         line 547</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>addHeader</strong>(string $context, string $header, string $content)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add header to context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$header</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHeader">
+        <div class="location">at line         line 578</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setHeader</strong>($context, $header, $content)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Customize response header to use when switching context</p>                    <p>Passing an empty header value to the setters disables the response
+header.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$header</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addHeaders">
+        <div class="location">at line         line 596</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>addHeaders</strong>(string $context, array $headers)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add multiple headers at once for a given context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHeaders">
+        <div class="location">at line         line 630</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setHeaders</strong>(string $context, array $headers)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set multiple headers at once for a given context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeader">
+        <div class="location">at line         line 649</div>
+        <code>                    string|null
+    <strong>getHeader</strong>(string $context, string $header)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve context header</p>                    <p>Returns the value of a given header for a given context type</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$header</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeaders">
+        <div class="location">at line         line 669</div>
+        <code>                    array
+    <strong>getHeaders</strong>(string $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve context headers</p>                    <p>Returns all headers for a context as key/value pairs</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeHeader">
+        <div class="location">at line         line 683</div>
+        <code>                    boolean
+    <strong>removeHeader</strong>(string $context, string $header)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a single header from a context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$header</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearHeaders">
+        <div class="location">at line         line 702</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>clearHeaders</strong>(string $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear all headers for a given context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCallback">
+        <div class="location">at line         line 744</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setCallback</strong>(string $context, string $trigger, string|array $callback)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a callback for a given context and trigger</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$trigger</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCallbacks">
+        <div class="location">at line         line 790</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setCallbacks</strong>(string $context, array $callbacks)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set callbacks for a given context</p>                    <p>Callbacks should be in trigger/callback pairs.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$callbacks</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCallback">
+        <div class="location">at line         line 811</div>
+        <code>                    string|array|null
+    <strong>getCallback</strong>(string $context, string $trigger)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a single callback for a given context and trigger</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$trigger</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCallbacks">
+        <div class="location">at line         line 828</div>
+        <code>                    array
+    <strong>getCallbacks</strong>(string $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all callbacks for a given context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeCallback">
+        <div class="location">at line         line 841</div>
+        <code>                    boolean
+    <strong>removeCallback</strong>(string $context, string $trigger)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear a callback for a given context and trigger</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$trigger</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearCallbacks">
+        <div class="location">at line         line 859</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>clearCallbacks</strong>(string $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear all callbacks for a given context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setContextParam">
+        <div class="location">at line         line 872</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setContextParam</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set name of parameter to use when determining context format</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContextParam">
+        <div class="location">at line         line 883</div>
+        <code>                    string
+    <strong>getContextParam</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return context format request parameter name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultContext">
+        <div class="location">at line         line 895</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setDefaultContext</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Indicate default context to use when no context format provided</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultContext">
+        <div class="location">at line         line 914</div>
+        <code>                    string
+    <strong>getDefaultContext</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return default context</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAutoDisableLayout">
+        <div class="location">at line         line 925</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setAutoDisableLayout</strong>(boolean $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set flag indicating if layout should be disabled</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAutoDisableLayout">
+        <div class="location">at line         line 936</div>
+        <code>                    boolean
+    <strong>getAutoDisableLayout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve auto layout disable flag</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addContext">
+        <div class="location">at line         line 949</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>addContext</strong>(string $context, array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add new context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td>Context type</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td>Context specification</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setContext">
+        <div class="location">at line         line 975</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setContext</strong>(string $context, array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Overwrite existing context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td>Context type</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td>Context specification</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addContexts">
+        <div class="location">at line         line 987</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>addContexts</strong>(array $contexts)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add multiple contexts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$contexts</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setContexts">
+        <div class="location">at line         line 1001</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setContexts</strong>(array $contexts)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set multiple contexts, after first removing all</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$contexts</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContext">
+        <div class="location">at line         line 1016</div>
+        <code>                    array|null
+    <strong>getContext</strong>(string $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve context specification</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContexts">
+        <div class="location">at line         line 1029</div>
+        <code>                    array
+    <strong>getContexts</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve context definitions</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeContext">
+        <div class="location">at line         line 1040</div>
+        <code>                    boolean
+    <strong>removeContext</strong>(string $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a context</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearContexts">
+        <div class="location">at line         line 1054</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>clearContexts</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove all contexts</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurrentContext">
+        <div class="location">at line         line 1065</div>
+        <code>                    null|string
+    <strong>getCurrentContext</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return current context, if any</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postJsonContext">
+        <div class="location">at line         line 1107</div>
+        <code>                    void
+    <strong>postJsonContext</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>JSON post processing</p>                    <p>JSON serialize view variables to response body</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addActionContext">
+        <div class="location">at line         line 1137</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>|void
+    <strong>addActionContext</strong>(string $action, string|array $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add one or more contexts to an action</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>|void</td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setActionContext">
+        <div class="location">at line         line 1177</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>|void
+    <strong>setActionContext</strong>(string $action, string|array $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a context as available for a given controller action</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>|void</td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addActionContexts">
+        <div class="location">at line         line 1207</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>addActionContexts</strong>(array $contexts)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add multiple action/context pairs at once</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$contexts</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setActionContexts">
+        <div class="location">at line         line 1221</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>setActionContexts</strong>(array $contexts)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Overwrite and set multiple action contexts at once</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$contexts</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasActionContext">
+        <div class="location">at line         line 1237</div>
+        <code>                    boolean
+    <strong>hasActionContext</strong>(string $action, string|array $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Does a particular controller action have the given context(s)?</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActionContexts">
+        <div class="location">at line         line 1301</div>
+        <code>                    array
+    <strong>getActionContexts</strong>(string $action = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get contexts for a given action or all actions in the controller</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeActionContext">
+        <div class="location">at line         line 1332</div>
+        <code>                    boolean
+    <strong>removeActionContext</strong>(string $action, string|array $context)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove one or more contexts for a given controller action</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearActionContexts">
+        <div class="location">at line         line 1358</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a>
+    <strong>clearActionContexts</strong>(string $action = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear all contexts for a given controller action or all actions</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ContextSwitch.html">Zend_Controller_Action_Helper_ContextSwitch</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

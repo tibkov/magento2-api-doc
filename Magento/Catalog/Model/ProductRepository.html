@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Catalog\Model\ProductRepository | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Catalog_Model_ProductRepository" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Catalog.html">Catalog</a></li>
+                                        <li><a href="../../../Magento/Catalog/Model.html">Model</a></li>
+    
+                <li>ProductRepository</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ProductRepository
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>ProductRepository</strong>        implements
+        <a href="../../../Magento/Catalog/Api/ProductRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductRepositoryInterface">ProductRepositoryInterface</abbr></a>
+</p>
+
+        
+    
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<abbr title="Magento\Catalog\Model\ProductFactory">ProductFactory</abbr> $productFactory, <a href="../../../Magento/Catalog/Controller/Adminhtml/Product/Initialization/Helper.html"><abbr title="Magento\Catalog\Controller\Adminhtml\Product\Initialization\Helper">Helper</abbr></a> $initializationHelper, <abbr title="Magento\Catalog\Api\Data\ProductSearchResultsInterfaceFactory">ProductSearchResultsInterfaceFactory</abbr> $searchResultsFactory, <abbr title="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">CollectionFactory</abbr> $collectionFactory, <a href="../../../Magento/Framework/Api/SearchCriteriaBuilder.html"><abbr title="Magento\Framework\Api\SearchCriteriaBuilder">SearchCriteriaBuilder</abbr></a> $searchCriteriaBuilder, <a href="../../../Magento/Catalog/Api/ProductAttributeRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductAttributeRepositoryInterface">ProductAttributeRepositoryInterface</abbr></a> $attributeRepository, <a href="../../../Magento/Catalog/Model/ResourceModel/Product.html"><abbr title="Magento\Catalog\Model\ResourceModel\Product">Product</abbr></a> $resourceModel, <a href="../../../Magento/Catalog/Model/Product/Initialization/Helper/ProductLinks.html"><abbr title="Magento\Catalog\Model\Product\Initialization\Helper\ProductLinks">ProductLinks</abbr></a> $linkInitializer, <a href="../../../Magento/Catalog/Model/Product/LinkTypeProvider.html"><abbr title="Magento\Catalog\Model\Product\LinkTypeProvider">LinkTypeProvider</abbr></a> $linkTypeProvider, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Framework/Api/FilterBuilder.html"><abbr title="Magento\Framework\Api\FilterBuilder">FilterBuilder</abbr></a> $filterBuilder, <a href="../../../Magento/Catalog/Api/ProductAttributeRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductAttributeRepositoryInterface">ProductAttributeRepositoryInterface</abbr></a> $metadataServiceInterface, <a href="../../../Magento/Framework/Api/ExtensibleDataObjectConverter.html"><abbr title="Magento\Framework\Api\ExtensibleDataObjectConverter">ExtensibleDataObjectConverter</abbr></a> $extensibleDataObjectConverter, <a href="../../../Magento/Catalog/Model/Product/Option/Converter.html"><abbr title="Magento\Catalog\Model\Product\Option\Converter">Converter</abbr></a> $optionConverter, <a href="../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a> $fileSystem, <a href="../../../Magento/Framework/Api/ImageContentValidatorInterface.html"><abbr title="Magento\Framework\Api\ImageContentValidatorInterface">ImageContentValidatorInterface</abbr></a> $contentValidator, <abbr title="Magento\Framework\Api\Data\ImageContentInterfaceFactory">ImageContentInterfaceFactory</abbr> $contentFactory, <a href="../../../Magento/Catalog/Model/Product/Gallery/MimeTypeExtensionMap.html"><abbr title="Magento\Catalog\Model\Product\Gallery\MimeTypeExtensionMap">MimeTypeExtensionMap</abbr></a> $mimeTypeExtensionMap, <a href="../../../Magento/Framework/Api/ImageProcessorInterface.html"><abbr title="Magento\Framework\Api\ImageProcessorInterface">ImageProcessorInterface</abbr></a> $imageProcessor, <a href="../../../Magento/Framework/Api/ExtensionAttribute/JoinProcessorInterface.html"><abbr title="Magento\Framework\Api\ExtensionAttribute\JoinProcessorInterface">JoinProcessorInterface</abbr></a> $extensionAttributesJoinProcessor)
+        
+                                            <p>ProductRepository constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string $sku, bool $editMode = false, int|null $storeId = null, bool $forceReload = false)
+        
+                                            <p>Get info about product by product SKU</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getById">getById</a>(int $productId, bool $editMode = false, int|null $storeId = null, bool $forceReload = false)
+        
+                                            <p>Get info about product by product id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_save">save</a>(<a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a> $product, bool $saveOptions = false)
+        
+                                            <p>Create product</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>(<a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a> $product)
+        
+                                            <p>Delete product</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteById">deleteById</a>(string $sku)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Catalog/Api/Data/ProductSearchResultsInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductSearchResultsInterface">ProductSearchResultsInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getList">getList</a>(<a href="../../../Magento/Framework/Api/SearchCriteriaInterface.html"><abbr title="Magento\Framework\Api\SearchCriteriaInterface">SearchCriteriaInterface</abbr></a> $searchCriteria)
+        
+                                            <p>Get product list</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cleanCache">cleanCache</a>()
+        
+                                            <p>Clean internal product cache</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 160</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Magento\Catalog\Model\ProductFactory">ProductFactory</abbr> $productFactory, <a href="../../../Magento/Catalog/Controller/Adminhtml/Product/Initialization/Helper.html"><abbr title="Magento\Catalog\Controller\Adminhtml\Product\Initialization\Helper">Helper</abbr></a> $initializationHelper, <abbr title="Magento\Catalog\Api\Data\ProductSearchResultsInterfaceFactory">ProductSearchResultsInterfaceFactory</abbr> $searchResultsFactory, <abbr title="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">CollectionFactory</abbr> $collectionFactory, <a href="../../../Magento/Framework/Api/SearchCriteriaBuilder.html"><abbr title="Magento\Framework\Api\SearchCriteriaBuilder">SearchCriteriaBuilder</abbr></a> $searchCriteriaBuilder, <a href="../../../Magento/Catalog/Api/ProductAttributeRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductAttributeRepositoryInterface">ProductAttributeRepositoryInterface</abbr></a> $attributeRepository, <a href="../../../Magento/Catalog/Model/ResourceModel/Product.html"><abbr title="Magento\Catalog\Model\ResourceModel\Product">Product</abbr></a> $resourceModel, <a href="../../../Magento/Catalog/Model/Product/Initialization/Helper/ProductLinks.html"><abbr title="Magento\Catalog\Model\Product\Initialization\Helper\ProductLinks">ProductLinks</abbr></a> $linkInitializer, <a href="../../../Magento/Catalog/Model/Product/LinkTypeProvider.html"><abbr title="Magento\Catalog\Model\Product\LinkTypeProvider">LinkTypeProvider</abbr></a> $linkTypeProvider, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Framework/Api/FilterBuilder.html"><abbr title="Magento\Framework\Api\FilterBuilder">FilterBuilder</abbr></a> $filterBuilder, <a href="../../../Magento/Catalog/Api/ProductAttributeRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductAttributeRepositoryInterface">ProductAttributeRepositoryInterface</abbr></a> $metadataServiceInterface, <a href="../../../Magento/Framework/Api/ExtensibleDataObjectConverter.html"><abbr title="Magento\Framework\Api\ExtensibleDataObjectConverter">ExtensibleDataObjectConverter</abbr></a> $extensibleDataObjectConverter, <a href="../../../Magento/Catalog/Model/Product/Option/Converter.html"><abbr title="Magento\Catalog\Model\Product\Option\Converter">Converter</abbr></a> $optionConverter, <a href="../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a> $fileSystem, <a href="../../../Magento/Framework/Api/ImageContentValidatorInterface.html"><abbr title="Magento\Framework\Api\ImageContentValidatorInterface">ImageContentValidatorInterface</abbr></a> $contentValidator, <abbr title="Magento\Framework\Api\Data\ImageContentInterfaceFactory">ImageContentInterfaceFactory</abbr> $contentFactory, <a href="../../../Magento/Catalog/Model/Product/Gallery/MimeTypeExtensionMap.html"><abbr title="Magento\Catalog\Model\Product\Gallery\MimeTypeExtensionMap">MimeTypeExtensionMap</abbr></a> $mimeTypeExtensionMap, <a href="../../../Magento/Framework/Api/ImageProcessorInterface.html"><abbr title="Magento\Framework\Api\ImageProcessorInterface">ImageProcessorInterface</abbr></a> $imageProcessor, <a href="../../../Magento/Framework/Api/ExtensionAttribute/JoinProcessorInterface.html"><abbr title="Magento\Framework\Api\ExtensionAttribute\JoinProcessorInterface">JoinProcessorInterface</abbr></a> $extensionAttributesJoinProcessor)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>ProductRepository constructor.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Magento\Catalog\Model\ProductFactory">ProductFactory</abbr></td>
+                <td>$productFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Controller/Adminhtml/Product/Initialization/Helper.html"><abbr title="Magento\Catalog\Controller\Adminhtml\Product\Initialization\Helper">Helper</abbr></a></td>
+                <td>$initializationHelper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Catalog\Api\Data\ProductSearchResultsInterfaceFactory">ProductSearchResultsInterfaceFactory</abbr></td>
+                <td>$searchResultsFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Catalog\Model\ResourceModel\Product\CollectionFactory">CollectionFactory</abbr></td>
+                <td>$collectionFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Api/SearchCriteriaBuilder.html"><abbr title="Magento\Framework\Api\SearchCriteriaBuilder">SearchCriteriaBuilder</abbr></a></td>
+                <td>$searchCriteriaBuilder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Api/ProductAttributeRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductAttributeRepositoryInterface">ProductAttributeRepositoryInterface</abbr></a></td>
+                <td>$attributeRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Model/ResourceModel/Product.html"><abbr title="Magento\Catalog\Model\ResourceModel\Product">Product</abbr></a></td>
+                <td>$resourceModel</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Model/Product/Initialization/Helper/ProductLinks.html"><abbr title="Magento\Catalog\Model\Product\Initialization\Helper\ProductLinks">ProductLinks</abbr></a></td>
+                <td>$linkInitializer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Model/Product/LinkTypeProvider.html"><abbr title="Magento\Catalog\Model\Product\LinkTypeProvider">LinkTypeProvider</abbr></a></td>
+                <td>$linkTypeProvider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Api/FilterBuilder.html"><abbr title="Magento\Framework\Api\FilterBuilder">FilterBuilder</abbr></a></td>
+                <td>$filterBuilder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Api/ProductAttributeRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductAttributeRepositoryInterface">ProductAttributeRepositoryInterface</abbr></a></td>
+                <td>$metadataServiceInterface</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Api/ExtensibleDataObjectConverter.html"><abbr title="Magento\Framework\Api\ExtensibleDataObjectConverter">ExtensibleDataObjectConverter</abbr></a></td>
+                <td>$extensibleDataObjectConverter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Model/Product/Option/Converter.html"><abbr title="Magento\Catalog\Model\Product\Option\Converter">Converter</abbr></a></td>
+                <td>$optionConverter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a></td>
+                <td>$fileSystem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Api/ImageContentValidatorInterface.html"><abbr title="Magento\Framework\Api\ImageContentValidatorInterface">ImageContentValidatorInterface</abbr></a></td>
+                <td>$contentValidator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Framework\Api\Data\ImageContentInterfaceFactory">ImageContentInterfaceFactory</abbr></td>
+                <td>$contentFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Model/Product/Gallery/MimeTypeExtensionMap.html"><abbr title="Magento\Catalog\Model\Product\Gallery\MimeTypeExtensionMap">MimeTypeExtensionMap</abbr></a></td>
+                <td>$mimeTypeExtensionMap</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Api/ImageProcessorInterface.html"><abbr title="Magento\Framework\Api\ImageProcessorInterface">ImageProcessorInterface</abbr></a></td>
+                <td>$imageProcessor</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Api/ExtensionAttribute/JoinProcessorInterface.html"><abbr title="Magento\Framework\Api\ExtensionAttribute\JoinProcessorInterface">JoinProcessorInterface</abbr></a></td>
+                <td>$extensionAttributesJoinProcessor</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at line         line 204</div>
+        <code>                    <a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a>
+    <strong>get</strong>(string $sku, bool $editMode = false, int|null $storeId = null, bool $forceReload = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get info about product by product SKU</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sku</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$editMode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$forceReload</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/NoSuchEntityException.html"><abbr title="Magento\Framework\Exception\NoSuchEntityException">NoSuchEntityException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getById">
+        <div class="location">at line         line 230</div>
+        <code>                    <a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a>
+    <strong>getById</strong>(int $productId, bool $editMode = false, int|null $storeId = null, bool $forceReload = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get info about product by product id</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$productId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$editMode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$forceReload</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/NoSuchEntityException.html"><abbr title="Magento\Framework\Exception\NoSuchEntityException">NoSuchEntityException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_save">
+        <div class="location">at line         line 488</div>
+        <code>                    <a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a>
+    <strong>save</strong>(<a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a> $product, bool $saveOptions = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create product</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$saveOptions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/InputException.html"><abbr title="Magento\Framework\Exception\InputException">InputException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/StateException.html"><abbr title="Magento\Framework\Exception\StateException">StateException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/CouldNotSaveException.html"><abbr title="Magento\Framework\Exception\CouldNotSaveException">CouldNotSaveException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">at line         line 560</div>
+        <code>                    bool
+    <strong>delete</strong>(<a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a> $product)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete product</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Api/Data/ProductInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductInterface">ProductInterface</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>Will returned True if deleted</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/StateException.html"><abbr title="Magento\Framework\Exception\StateException">StateException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteById">
+        <div class="location">at line         line 583</div>
+        <code>                    bool
+    <strong>deleteById</strong>(string $sku)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sku</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>Will returned True if deleted</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/NoSuchEntityException.html"><abbr title="Magento\Framework\Exception\NoSuchEntityException">NoSuchEntityException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/StateException.html"><abbr title="Magento\Framework\Exception\StateException">StateException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getList">
+        <div class="location">at line         line 592</div>
+        <code>                    <a href="../../../Magento/Catalog/Api/Data/ProductSearchResultsInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductSearchResultsInterface">ProductSearchResultsInterface</abbr></a>
+    <strong>getList</strong>(<a href="../../../Magento/Framework/Api/SearchCriteriaInterface.html"><abbr title="Magento\Framework\Api\SearchCriteriaInterface">SearchCriteriaInterface</abbr></a> $searchCriteria)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get product list</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Api/SearchCriteriaInterface.html"><abbr title="Magento\Framework\Api\SearchCriteriaInterface">SearchCriteriaInterface</abbr></a></td>
+                <td>$searchCriteria</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Catalog/Api/Data/ProductSearchResultsInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductSearchResultsInterface">ProductSearchResultsInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cleanCache">
+        <div class="location">at line         line 664</div>
+        <code>                    void
+    <strong>cleanCache</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clean internal product cache</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

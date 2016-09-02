@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_Flickr | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_Flickr" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_Flickr
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_Flickr</strong>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>URI_BASE</td>
+                <td class="last">
+                    <p><em>Base URI for the REST client</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_apiKey">
+                                                                                string
+                </td>
+                <td>$apiKey</td>
+                <td class="last">Your Flickr API key</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $apiKey)
+        
+                                            <p>Performs object initializations</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Flickr_ResultSet.html">Zend_Service_Flickr_ResultSet</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tagSearch">tagSearch</a>(string|array $query, array $options = array())
+        
+                                            <p>Find Flickr photos by tag.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Flickr_ResultSet.html">Zend_Service_Flickr_ResultSet</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userSearch">userSearch</a>(string $query, array $options = null)
+        
+                                            <p>Finds photos by a user's username or email.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Flickr_ResultSet.html">Zend_Service_Flickr_ResultSet</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_groupPoolGetPhotos">groupPoolGetPhotos</a>(string $query, array $options = array())
+        
+                                            <p>Finds photos in a group's pool.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIdByUsername">getIdByUsername</a>(string $username)
+        
+                                            <p>Utility function to find Flickr User IDs for usernames.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIdByEmail">getIdByEmail</a>(string $email)
+        
+                                            <p>Utility function to find Flickr User IDs for emails.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getImageDetails">getImageDetails</a>(string $id)
+        
+                                            <p>Returns Flickr photo details by for the given photo ID</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Rest_Client.html">Zend_Rest_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRestClient">getRestClient</a>()
+        
+                                            <p>Returns a reference to the REST client, instantiating it if necessary</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 65</div>
+        <code>                    void
+    <strong>__construct</strong>(string $apiKey)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Performs object initializations</p>                    <p><h1>Sets up character encoding</h1>
+
+<p># Saves the API key</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$apiKey</td>
+                <td>Your Flickr API key</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tagSearch">
+        <div class="location">at line         line 90</div>
+        <code>                    <a href="Zend_Service_Flickr_ResultSet.html">Zend_Service_Flickr_ResultSet</a>
+    <strong>tagSearch</strong>(string|array $query, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find Flickr photos by tag.</p>                    <p>Query options include:</p>
+
+<p># per<em>page:        how many results to return per query
+ # page:            the starting page offset.  first result will be (page - 1) * per</em>page + 1
+ # tag<em>mode:        Either 'any' for an OR combination of tags,
+                    or 'all' for an AND combination. Default is 'any'.
+ # min</em>upload<em>date: Minimum upload date to search on.  Date should be a unix timestamp.
+ # max</em>upload<em>date: Maximum upload date to search on.  Date should be a unix timestamp.
+ # min</em>taken<em>date:  Minimum upload date to search on.  Date should be a MySQL datetime.
+ # max</em>taken_date:  Maximum upload date to search on.  Date should be a MySQL datetime.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$query</td>
+                <td>A single tag or an array of tags.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Additional parameters to refine your query.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Flickr_ResultSet.html">Zend_Service_Flickr_ResultSet</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userSearch">
+        <div class="location">at line         line 147</div>
+        <code>                    <a href="Zend_Service_Flickr_ResultSet.html">Zend_Service_Flickr_ResultSet</a>
+    <strong>userSearch</strong>(string $query, array $options = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Finds photos by a user's username or email.</p>                    <p>Additional query options include:</p>
+
+<p># per<em>page:        how many results to return per query
+ # page:            the starting page offset.  first result will be (page - 1) * per</em>page + 1
+ # min<em>upload</em>date: Minimum upload date to search on.  Date should be a unix timestamp.
+ # max<em>upload</em>date: Maximum upload date to search on.  Date should be a unix timestamp.
+ # min<em>taken</em>date:  Minimum upload date to search on.  Date should be a MySQL datetime.
+ # max<em>taken</em>date:  Maximum upload date to search on.  Date should be a MySQL datetime.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>username or email</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Additional parameters to refine your query.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Flickr_ResultSet.html">Zend_Service_Flickr_ResultSet</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupPoolGetPhotos">
+        <div class="location">at line         line 200</div>
+        <code>                    <a href="Zend_Service_Flickr_ResultSet.html">Zend_Service_Flickr_ResultSet</a>
+    <strong>groupPoolGetPhotos</strong>(string $query, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Finds photos in a group's pool.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td>group id</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Additional parameters to refine your query.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Flickr_ResultSet.html">Zend_Service_Flickr_ResultSet</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIdByUsername">
+        <div class="location">at line         line 257</div>
+        <code>                    string
+    <strong>getIdByUsername</strong>(string $username)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function to find Flickr User IDs for usernames.</p>                    <p>(You can only find a user's photo with their NSID.)</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the username</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>the NSID (userid)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIdByEmail">
+        <div class="location">at line         line 301</div>
+        <code>                    string
+    <strong>getIdByEmail</strong>(string $email)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function to find Flickr User IDs for emails.</p>                    <p>(You can only find a user's photo with their NSID.)</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td>the email</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>the NSID (userid)</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getImageDetails">
+        <div class="location">at line         line 343</div>
+        <code>                    array
+    <strong>getImageDetails</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns Flickr photo details by for the given photo ID</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>the NSID</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>of Zend<em>Service</em>Flickr_Image, details for the specified image</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_Exception.html">Zend_Service_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRestClient">
+        <div class="location">at line         line 384</div>
+        <code>                    <a href="Zend_Rest_Client.html">Zend_Rest_Client</a>
+    <strong>getRestClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a reference to the REST client, instantiating it if necessary</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Rest_Client.html">Zend_Rest_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

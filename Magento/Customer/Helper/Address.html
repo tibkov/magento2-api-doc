@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Customer\Helper\Address | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Customer_Helper_Address" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Customer.html">Customer</a></li>
+                                        <li><a href="../../../Magento/Customer/Helper.html">Helper</a></li>
+    
+                <li>Address</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Address
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Address</strong>        extends <a href="../../../Magento/Framework/App/Helper/AbstractHelper.html"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Customer address helper</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XML_PATH_VIV_DISABLE_AUTO_ASSIGN_DEFAULT</td>
+                <td class="last">
+                    <p><em>VAT Validation parameters XML paths</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_VIV_ON_EACH_TRANSACTION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_VAT_VALIDATION_ENABLED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_VIV_TAX_CALCULATION_ADDRESS_TYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_VAT_FRONTEND_VISIBILITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_BILLING</td>
+                <td class="last">
+                    <p><em>Possible customer address types</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_SHIPPING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../Magento/Framework/View/Element/BlockFactory.html"><abbr title="Magento\Framework\View\Element\BlockFactory">BlockFactory</abbr></a> $blockFactory, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Customer/Api/CustomerMetadataInterface.html"><abbr title="Magento\Customer\Api\CustomerMetadataInterface">CustomerMetadataInterface</abbr></a> $customerMetadataService, <a href="../../../Magento/Customer/Api/AddressMetadataInterface.html"><abbr title="Magento\Customer\Api\AddressMetadataInterface">AddressMetadataInterface</abbr></a> $addressMetadataService, <a href="../../../Magento/Customer/Model/Address/Config.html"><abbr title="Magento\Customer\Model\Address\Config">Config</abbr></a> $addressConfig)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isModuleOutputEnabled">isModuleOutputEnabled</a>(string $moduleName = null)
+        
+                                            <p>Check whether or not the module output is enabled in Configuration</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBookUrl">getBookUrl</a>()
+        
+                                            <p>Addresses url</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEditUrl">getEditUrl</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDeleteUrl">getDeleteUrl</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCreateUrl">getCreateUrl</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/View/Element/BlockInterface.html"><abbr title="Magento\Framework\View\Element\BlockInterface">BlockInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRenderer">getRenderer</a>(string $renderer)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConfig">getConfig</a>(string $key, <a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|int|string $store = null)
+        
+                                            <p>Return customer address config value by key and store</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStreetLines">getStreetLines</a>(<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|int|string $store = null)
+        
+                                            <p>Return Number of Lines in a Street Address for store</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Directory/Model/Country/Format.html"><abbr title="Magento\Directory\Model\Country\Format">Format</abbr></a>|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFormat">getFormat</a>(string $code)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Customer/Block/Address/Renderer/RendererInterface.html"><abbr title="Magento\Customer\Block\Address\Renderer\RendererInterface">RendererInterface</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFormatTypeRenderer">getFormatTypeRenderer</a>(string $code)
+        
+                                            <p>Retrieve renderer by code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_canShowConfig">canShowConfig</a>(string $key)
+        
+                                            <p>Determine if specified address config value can be shown</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributeValidationClass">getAttributeValidationClass</a>(string $attributeCode)
+        
+                                            <p>Get string with frontend validation classes for attribute</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertStreetLines">convertStreetLines</a>(string[] $origStreets, int $toCount)
+        
+                                            <p>Convert streets array to new street lines count
+Examples of use:
+ $origStreets = array('street1', 'street2', 'street3', 'street4')
+ $toCount = 3
+ Result:
+  array('street1 street2', 'street3', 'street4')
+ $toCount = 2
+ Result:
+  array('street1 street2', 'street3 street4')</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isVatValidationEnabled">isVatValidationEnabled</a>(<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int $store = null)
+        
+                                            <p>Check whether VAT ID validation is enabled</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDisableAutoGroupAssignDefaultValue">isDisableAutoGroupAssignDefaultValue</a>()
+        
+                                            <p>Retrieve disable auto group assign default value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasValidateOnEachTransaction">hasValidateOnEachTransaction</a>(<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int $store = null)
+        
+                                            <p>Retrieve 'validate on each transaction' value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTaxCalculationAddressType">getTaxCalculationAddressType</a>(<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int|null $store = null)
+        
+                                            <p>Retrieve customer address type on which tax calculation must be based</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isVatAttributeVisible">isVatAttributeVisible</a>()
+        
+                                            <p>Check if VAT ID address attribute has to be shown on frontend (on Customer Address management forms)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 91</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../Magento/Framework/View/Element/BlockFactory.html"><abbr title="Magento\Framework\View\Element\BlockFactory">BlockFactory</abbr></a> $blockFactory, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Customer/Api/CustomerMetadataInterface.html"><abbr title="Magento\Customer\Api\CustomerMetadataInterface">CustomerMetadataInterface</abbr></a> $customerMetadataService, <a href="../../../Magento/Customer/Api/AddressMetadataInterface.html"><abbr title="Magento\Customer\Api\AddressMetadataInterface">AddressMetadataInterface</abbr></a> $addressMetadataService, <a href="../../../Magento/Customer/Model/Address/Config.html"><abbr title="Magento\Customer\Model\Address\Config">Config</abbr></a> $addressConfig)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a></td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/View/Element/BlockFactory.html"><abbr title="Magento\Framework\View\Element\BlockFactory">BlockFactory</abbr></a></td>
+                <td>$blockFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/CustomerMetadataInterface.html"><abbr title="Magento\Customer\Api\CustomerMetadataInterface">CustomerMetadataInterface</abbr></a></td>
+                <td>$customerMetadataService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/AddressMetadataInterface.html"><abbr title="Magento\Customer\Api\AddressMetadataInterface">AddressMetadataInterface</abbr></a></td>
+                <td>$addressMetadataService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Model/Address/Config.html"><abbr title="Magento\Customer\Model\Address\Config">Config</abbr></a></td>
+                <td>$addressConfig</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isModuleOutputEnabled">
+        <div class="location">in <a href="../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a> at line         line 130</div>
+        <code>                    boolean
+    <strong>isModuleOutputEnabled</strong>(string $moduleName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether or not the module output is enabled in Configuration</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$moduleName</td>
+                <td>Full module name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>use \Magento\Framework\Module\Manager::isOutputEnabled()</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBookUrl">
+        <div class="location">at line         line 112</div>
+        <code>                    void
+    <strong>getBookUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Addresses url</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEditUrl">
+        <div class="location">at line         line 119</div>
+        <code>                    void
+    <strong>getEditUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDeleteUrl">
+        <div class="location">at line         line 126</div>
+        <code>                    void
+    <strong>getDeleteUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCreateUrl">
+        <div class="location">at line         line 133</div>
+        <code>                    void
+    <strong>getCreateUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRenderer">
+        <div class="location">at line         line 141</div>
+        <code>                    <a href="../../../Magento/Framework/View/Element/BlockInterface.html"><abbr title="Magento\Framework\View\Element\BlockInterface">BlockInterface</abbr></a>
+    <strong>getRenderer</strong>(string $renderer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$renderer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/View/Element/BlockInterface.html"><abbr title="Magento\Framework\View\Element\BlockInterface">BlockInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfig">
+        <div class="location">at line         line 157</div>
+        <code>                    string|null
+    <strong>getConfig</strong>(string $key, <a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|int|string $store = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return customer address config value by key and store</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|int|string</td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStreetLines">
+        <div class="location">at line         line 177</div>
+        <code>                    int
+    <strong>getStreetLines</strong>(<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|int|string $store = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return Number of Lines in a Street Address for store</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|int|string</td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormat">
+        <div class="location">at line         line 197</div>
+        <code>                    <a href="../../../Magento/Directory/Model/Country/Format.html"><abbr title="Magento\Directory\Model\Country\Format">Format</abbr></a>|string
+    <strong>getFormat</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Directory/Model/Country/Format.html"><abbr title="Magento\Directory\Model\Country\Format">Format</abbr></a>|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormatTypeRenderer">
+        <div class="location">at line         line 209</div>
+        <code>                    <a href="../../../Magento/Customer/Block/Address/Renderer/RendererInterface.html"><abbr title="Magento\Customer\Block\Address\Renderer\RendererInterface">RendererInterface</abbr></a>|null
+    <strong>getFormatTypeRenderer</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve renderer by code</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Customer/Block/Address/Renderer/RendererInterface.html"><abbr title="Magento\Customer\Block\Address\Renderer\RendererInterface">RendererInterface</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canShowConfig">
+        <div class="location">at line         line 224</div>
+        <code>                    bool
+    <strong>canShowConfig</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine if specified address config value can be shown</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeValidationClass">
+        <div class="location">at line         line 237</div>
+        <code>                    string
+    <strong>getAttributeValidationClass</strong>(string $attributeCode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get string with frontend validation classes for attribute</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attributeCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertStreetLines">
+        <div class="location">at line         line 281</div>
+        <code>                    string[]
+    <strong>convertStreetLines</strong>(string[] $origStreets, int $toCount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert streets array to new street lines count
+Examples of use:
+ $origStreets = array('street1', 'street2', 'street3', 'street4')
+ $toCount = 3
+ Result:
+  array('street1 street2', 'street3', 'street4')
+ $toCount = 2
+ Result:
+  array('street1 street2', 'street3 street4')</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]</td>
+                <td>$origStreets</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$toCount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isVatValidationEnabled">
+        <div class="location">at line         line 312</div>
+        <code>                    bool
+    <strong>isVatValidationEnabled</strong>(<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int $store = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether VAT ID validation is enabled</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int</td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDisableAutoGroupAssignDefaultValue">
+        <div class="location">at line         line 326</div>
+        <code>                    bool
+    <strong>isDisableAutoGroupAssignDefaultValue</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve disable auto group assign default value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasValidateOnEachTransaction">
+        <div class="location">at line         line 340</div>
+        <code>                    bool
+    <strong>hasValidateOnEachTransaction</strong>(<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int $store = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve 'validate on each transaction' value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int</td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTaxCalculationAddressType">
+        <div class="location">at line         line 355</div>
+        <code>                    string
+    <strong>getTaxCalculationAddressType</strong>(<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int|null $store = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve customer address type on which tax calculation must be based</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int|null</td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isVatAttributeVisible">
+        <div class="location">at line         line 369</div>
+        <code>                    boolean
+    <strong>isVatAttributeVisible</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if VAT ID address attribute has to be shown on frontend (on Customer Address management forms)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_Audioscrobbler | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_Audioscrobbler" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_Audioscrobbler
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_Audioscrobbler</strong>
+</p>
+
+        
+    
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Sets up character encoding, instantiates the HTTP client, and assigns the web service version.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHttpClient">setHttpClient</a>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $client)
+        
+                                            <p>Set Http Client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpClient">getHttpClient</a>()
+        
+                                            <p>Get current http client.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string $field)
+        
+                                            <p>Returns a field value, or false if the named field does not exist</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Audioscrobbler.html">Zend_Service_Audioscrobbler</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_set">set</a>(string $field, string $value)
+        
+                                            <p>Generic set action for a field in the parameters being used</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetProfileInformation">userGetProfileInformation</a>()
+        
+                                            <p>Utility function to get Audioscrobbler profile information (eg: Name, Gender)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetTopArtists">userGetTopArtists</a>()
+        
+                                            <p>Utility function get this user's 50 most played artists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetTopAlbums">userGetTopAlbums</a>()
+        
+                                            <p>Utility function to get this user's 50 most played albums</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    SimpleXML
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetTopTracks">userGetTopTracks</a>()
+        
+                                            <p>Utility function to get this user's 50 most played tracks</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetTopTags">userGetTopTags</a>()
+        
+                                            <p>Utility function to get this user's 50 most used tags</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetTopTagsForArtist">userGetTopTagsForArtist</a>()
+        
+                                            <p>Utility function that returns the user's top tags used most used on a specific artist</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetTopTagsForAlbum">userGetTopTagsForAlbum</a>()
+        
+                                            <p>Utility function that returns this user's top tags for an album</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetTopTagsForTrack">userGetTopTagsForTrack</a>()
+        
+                                            <p>Utility function that returns this user's top tags for a track</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetFriends">userGetFriends</a>()
+        
+                                            <p>Utility function that retrieves this user's list of friends</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetNeighbours">userGetNeighbours</a>()
+        
+                                            <p>Utility function that returns a list of people with similar listening preferences to this user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetRecentTracks">userGetRecentTracks</a>()
+        
+                                            <p>Utility function that returns a list of the 10 most recent tracks played by this user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetRecentBannedTracks">userGetRecentBannedTracks</a>()
+        
+                                            <p>Utility function that returns a list of the 10 tracks most recently banned by this user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetRecentLovedTracks">userGetRecentLovedTracks</a>()
+        
+                                            <p>Utility function that returns a list of the 10 tracks most recently loved by this user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetWeeklyChartList">userGetWeeklyChartList</a>()
+        
+                                            <p>Utility function that returns a list of dates of available weekly charts for a this user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetWeeklyAlbumChart">userGetWeeklyAlbumChart</a>(integer $from = NULL, integer $to = NULL)
+        
+                                            <p>Utility function that returns weekly album chart data for this user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetWeeklyArtistChart">userGetWeeklyArtistChart</a>(integer $from = NULL, integer $to = NULL)
+        
+                                            <p>Utility function that returns weekly artist chart data for this user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetWeeklyTrackChart">userGetWeeklyTrackChart</a>(integer $from = NULL, integer $to = NULL)
+        
+                                            <p>Utility function that returns weekly track chart data for this user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_artistGetRelatedArtists">artistGetRelatedArtists</a>()
+        
+                                            <p>Utility function that returns a list of artists similiar to this artist</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_artistGetTopFans">artistGetTopFans</a>()
+        
+                                            <p>Utility function that returns a list of this artist's top listeners</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_artistGetTopTracks">artistGetTopTracks</a>()
+        
+                                            <p>Utility function that returns a list of this artist's top-rated tracks</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_artistGetTopAlbums">artistGetTopAlbums</a>()
+        
+                                            <p>Utility function that returns a list of this artist's top-rated albums</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_artistGetTopTags">artistGetTopTags</a>()
+        
+                                            <p>Utility function that returns a list of this artist's top-rated tags</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_albumGetInfo">albumGetInfo</a>()
+        
+                                            <p>Get information about an album</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_trackGetTopFans">trackGetTopFans</a>()
+        
+                                            <p>Get top fans of the current track.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_trackGetTopTags">trackGetTopTags</a>()
+        
+                                            <p>Get top tags of the current track.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tagGetTopTags">tagGetTopTags</a>()
+        
+                                            <p>Get Top Tags.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tagGetTopAlbums">tagGetTopAlbums</a>()
+        
+                                            <p>Get top albums by current tag.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tagGetTopArtists">tagGetTopArtists</a>()
+        
+                                            <p>Get top artists by current tag.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tagGetTopTracks">tagGetTopTracks</a>()
+        
+                                            <p>Get Top Tracks by currently set tag.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_groupGetWeeklyChartList">groupGetWeeklyChartList</a>()
+        
+                                            <p>Get weekly chart list by current set group.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_groupGetWeeklyArtistChartList">groupGetWeeklyArtistChartList</a>(int $from = NULL, int $to = NULL)
+        
+                                            <p>Retrieve weekly Artist Charts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_groupGetWeeklyTrackChartList">groupGetWeeklyTrackChartList</a>(int $from = NULL, int $to = NULL)
+        
+                                            <p>Retrieve Weekly Track Charts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_groupGetWeeklyAlbumChartList">groupGetWeeklyAlbumChartList</a>(int $from = NULL, int $to = NULL)
+        
+                                            <p>Retrieve Weekly album charts.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__errorHandler">_errorHandler</a>(integer $errno, string $errstr, string $errfile, integer $errline, array $errcontext)
+        
+                                            <p>Saves the provided error information to this instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Audioscrobbler.html">Zend_Service_Audioscrobbler</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $args)
+        
+                                            <p>Call Intercept for set($name, $field)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 70</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets up character encoding, instantiates the HTTP client, and assigns the web service version.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHttpClient">
+        <div class="location">at line         line 90</div>
+        <code>                    
+    <strong>setHttpClient</strong>(<a href="Zend_Http_Client.html">Zend_Http_Client</a> $client)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Http Client</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpClient">
+        <div class="location">at line         line 100</div>
+        <code>                    <a href="Zend_Http_Client.html">Zend_Http_Client</a>
+    <strong>getHttpClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current http client.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client.html">Zend_Http_Client</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at line         line 124</div>
+        <code>                    string|false
+    <strong>get</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a field value, or false if the named field does not exist</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_set">
+        <div class="location">at line         line 140</div>
+        <code>                    <a href="Zend_Service_Audioscrobbler.html">Zend_Service_Audioscrobbler</a>
+    <strong>set</strong>(string $field, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generic set action for a field in the parameters being used</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td>name of field to set</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>value to assign to the named field</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Audioscrobbler.html">Zend_Service_Audioscrobbler</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetProfileInformation">
+        <div class="location">at line         line 215</div>
+        <code>                    array
+    <strong>userGetProfileInformation</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function to get Audioscrobbler profile information (eg: Name, Gender)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>containing information</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetTopArtists">
+        <div class="location">at line         line 226</div>
+        <code>                    array
+    <strong>userGetTopArtists</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function get this user's 50 most played artists</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>containing info</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetTopAlbums">
+        <div class="location">at line         line 237</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetTopAlbums</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function to get this user's 50 most played albums</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetTopTracks">
+        <div class="location">at line         line 247</div>
+        <code>                    SimpleXML
+    <strong>userGetTopTracks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function to get this user's 50 most played tracks</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>SimpleXML</td>
+            <td>object containing resut set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetTopTags">
+        <div class="location">at line         line 258</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetTopTags</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function to get this user's 50 most used tags</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetTopTagsForArtist">
+        <div class="location">at line         line 269</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetTopTagsForArtist</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns the user's top tags used most used on a specific artist</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetTopTagsForAlbum">
+        <div class="location">at line         line 281</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetTopTagsForAlbum</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns this user's top tags for an album</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetTopTagsForTrack">
+        <div class="location">at line         line 293</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetTopTagsForTrack</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns this user's top tags for a track</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetFriends">
+        <div class="location">at line         line 304</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetFriends</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that retrieves this user's list of friends</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetNeighbours">
+        <div class="location">at line         line 315</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetNeighbours</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns a list of people with similar listening preferences to this user</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetRecentTracks">
+        <div class="location">at line         line 326</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetRecentTracks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns a list of the 10 most recent tracks played by this user</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetRecentBannedTracks">
+        <div class="location">at line         line 337</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetRecentBannedTracks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns a list of the 10 tracks most recently banned by this user</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetRecentLovedTracks">
+        <div class="location">at line         line 348</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetRecentLovedTracks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns a list of the 10 tracks most recently loved by this user</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetWeeklyChartList">
+        <div class="location">at line         line 361</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetWeeklyChartList</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns a list of dates of available weekly charts for a this user</p>                    <p>Should actually be named userGetWeeklyChartDateList() but we have to follow audioscrobbler's naming</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetWeeklyAlbumChart">
+        <div class="location">at line         line 375</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetWeeklyAlbumChart</strong>(integer $from = NULL, integer $to = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns weekly album chart data for this user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$from</td>
+                <td>optional UNIX timestamp for start of date range</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$to</td>
+                <td>optional UNIX timestamp for end of date range</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetWeeklyArtistChart">
+        <div class="location">at line         line 396</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetWeeklyArtistChart</strong>(integer $from = NULL, integer $to = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns weekly artist chart data for this user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$from</td>
+                <td>optional UNIX timestamp for start of date range</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$to</td>
+                <td>optional UNIX timestamp for end of date range</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetWeeklyTrackChart">
+        <div class="location">at line         line 417</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>userGetWeeklyTrackChart</strong>(integer $from = NULL, integer $to = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns weekly track chart data for this user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$from</td>
+                <td>optional UNIX timestamp for start of date range</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$to</td>
+                <td>optional UNIX timestamp for end of date range</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_artistGetRelatedArtists">
+        <div class="location">at line         line 437</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>artistGetRelatedArtists</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns a list of artists similiar to this artist</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_artistGetTopFans">
+        <div class="location">at line         line 448</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>artistGetTopFans</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns a list of this artist's top listeners</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_artistGetTopTracks">
+        <div class="location">at line         line 459</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>artistGetTopTracks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns a list of this artist's top-rated tracks</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_artistGetTopAlbums">
+        <div class="location">at line         line 470</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>artistGetTopAlbums</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns a list of this artist's top-rated albums</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_artistGetTopTags">
+        <div class="location">at line         line 481</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>artistGetTopTags</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Utility function that returns a list of this artist's top-rated tags</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td>object containing result set</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_albumGetInfo">
+        <div class="location">at line         line 493</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>albumGetInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get information about an album</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_trackGetTopFans">
+        <div class="location">at line         line 504</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>trackGetTopFans</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get top fans of the current track.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_trackGetTopTags">
+        <div class="location">at line         line 515</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>trackGetTopTags</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get top tags of the current track.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tagGetTopTags">
+        <div class="location">at line         line 526</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>tagGetTopTags</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Top Tags.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tagGetTopAlbums">
+        <div class="location">at line         line 537</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>tagGetTopAlbums</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get top albums by current tag.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tagGetTopArtists">
+        <div class="location">at line         line 548</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>tagGetTopArtists</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get top artists by current tag.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tagGetTopTracks">
+        <div class="location">at line         line 559</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>tagGetTopTracks</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Top Tracks by currently set tag.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupGetWeeklyChartList">
+        <div class="location">at line         line 571</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>groupGetWeeklyChartList</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get weekly chart list by current set group.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>set()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupGetWeeklyArtistChartList">
+        <div class="location">at line         line 584</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>groupGetWeeklyArtistChartList</strong>(int $from = NULL, int $to = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve weekly Artist Charts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupGetWeeklyTrackChartList">
+        <div class="location">at line         line 606</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>groupGetWeeklyTrackChartList</strong>(int $from = NULL, int $to = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Weekly Track Charts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupGetWeeklyAlbumChartList">
+        <div class="location">at line         line 627</div>
+        <code>                    <a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a>
+    <strong>groupGetWeeklyAlbumChartList</strong>(int $from = NULL, int $to = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Weekly album charts.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/SimpleXMLElement">SimpleXMLElement</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__errorHandler">
+        <div class="location">at line         line 651</div>
+        <code>                    void
+    <strong>_errorHandler</strong>(integer $errno, string $errstr, string $errfile, integer $errline, array $errcontext)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Saves the provided error information to this instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$errno</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errstr</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errfile</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$errline</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$errcontext</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at line         line 669</div>
+        <code>                    <a href="Zend_Service_Audioscrobbler.html">Zend_Service_Audioscrobbler</a>
+    <strong>__call</strong>(string $method, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Call Intercept for set($name, $field)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Audioscrobbler.html">Zend_Service_Audioscrobbler</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Ldap_Dn | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Ldap_Dn" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Ldap_Dn
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Ldap_Dn</strong>        implements
+        <a target="_blank" href="http://php.net/ArrayAccess">ArrayAccess</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Zend<em>Ldap</em>Dn provides an API for DN manipulation</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>ATTR_CASEFOLD_NONE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_CASEFOLD_UPPER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_CASEFOLD_LOWER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_factory">factory</a>(string|array $dn, string|null $caseFold = null)
+        
+                                            <p>Creates a DN from an array or a string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fromString">fromString</a>(string $dn, string|null $caseFold = null)
+        
+                                            <p>Creates a DN from a string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fromArray">fromArray</a>(array $dn, string|null $caseFold = null)
+        
+                                            <p>Creates a DN from an array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRdn">getRdn</a>(string $caseFold = null)
+        
+                                            <p>Gets the RDN of the current DN</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRdnString">getRdnString</a>(string $caseFold = null)
+        
+                                            <p>Gets the RDN of the current DN as a string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParentDn">getParentDn</a>(int $levelUp = 1)
+        
+                                            <p>Get the parent DN $levelUp levels up the tree</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(int $index, int $length = 1, string $caseFold = null)
+        
+                                            <p>Get a DN part</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_set">set</a>(int $index, array $value)
+        
+                                            <p>Set a DN part</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_remove">remove</a>(int $index, int $length = 1)
+        
+                                            <p>Remove a DN part</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_append">append</a>(array $value)
+        
+                                            <p>Append a DN part</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepend">prepend</a>(array $value)
+        
+                                            <p>Prepend a DN part</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insert">insert</a>(int $index, array $value)
+        
+                                            <p>Insert a DN part</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCaseFold">setCaseFold</a>(string|null $caseFold)
+        
+                                            <p>Sets the case fold</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toString">toString</a>(string $caseFold = null)
+        
+                                            <p>Return DN as a string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toArray">toArray</a>(string $caseFold = null)
+        
+                                            <p>Return DN as an array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Cast to string representation {see toString()}</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetExists">offsetExists</a>(int $offset)
+        
+                                            <p>Required by the ArrayAccess implementation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetGet">offsetGet</a>(int $offset)
+        
+                                            <p>Proxy to {see get()}
+Required by the ArrayAccess implementation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetSet">offsetSet</a>(int $offset, array $value)
+        
+                                            <p>Proxy to {see set()}
+Required by the ArrayAccess implementation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetUnset">offsetUnset</a>(int $offset)
+        
+                                            <p>Proxy to {see remove()}
+Required by the ArrayAccess implementation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultCaseFold">setDefaultCaseFold</a>(string $caseFold)
+        
+                                            <p>Sets the default case fold</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_escapeValue">escapeValue</a>(string|array $values = array())
+        
+                                            <p>Escapes a DN value according to RFC 2253</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unescapeValue">unescapeValue</a>(string|array $values = array())
+        
+                                            <p>Undoes the conversion done by {@link escapeValue()}.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_explodeDn">explodeDn</a>(string $dn, array $keys = null, array $vals = null, string $caseFold = self::ATTR_CASEFOLD_NONE)
+        
+                                            <p>Creates an array containing all parts of the given DN.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkDn">checkDn</a>(string $dn, array $keys = null, array $vals = null, string $caseFold = self::ATTR_CASEFOLD_NONE)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_implodeRdn">implodeRdn</a>(array $part, $caseFold = null)
+        
+                                            <p>Returns a DN part in the form $attribute = $value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_implodeDn">implodeDn</a>(array $dnArray, string $caseFold = null, string $separator = &#039;,&#039;)
+        
+                                            <p>Implodes an array in the form delivered by {@link explodeDn()}
+to a DN string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isChildOf">isChildOf</a>(string|<a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a> $childDn, string|<a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a> $parentDn)
+        
+                                            <p>Checks if given $childDn is beneath $parentDn subtree.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_factory">
+        <div class="location">at line         line 65</div>
+        <code>        static            <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+    <strong>factory</strong>(string|array $dn, string|null $caseFold = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates a DN from an array or a string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$dn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromString">
+        <div class="location">at line         line 88</div>
+        <code>        static            <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+    <strong>fromString</strong>(string $dn, string|null $caseFold = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates a DN from a string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$dn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromArray">
+        <div class="location">at line         line 107</div>
+        <code>        static            <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+    <strong>fromArray</strong>(array $dn, string|null $caseFold = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates a DN from an array</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$dn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRdn">
+        <div class="location">at line         line 131</div>
+        <code>                    array
+    <strong>getRdn</strong>(string $caseFold = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the RDN of the current DN</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td>if DN has no RDN (empty array)</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRdnString">
+        <div class="location">at line         line 144</div>
+        <code>                    string
+    <strong>getRdnString</strong>(string $caseFold = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the RDN of the current DN as a string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td>if DN has no RDN (empty array)</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParentDn">
+        <div class="location">at line         line 156</div>
+        <code>                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+    <strong>getParentDn</strong>(int $levelUp = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the parent DN $levelUp levels up the tree</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$levelUp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at line         line 179</div>
+        <code>                    array
+    <strong>get</strong>(int $index, int $length = 1, string $caseFold = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a DN part</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td>if index is illegal</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_set">
+        <div class="location">at line         line 203</div>
+        <code>                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+    <strong>set</strong>(int $index, array $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a DN part</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td>if index is illegal</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_remove">
+        <div class="location">at line         line 219</div>
+        <code>                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+    <strong>remove</strong>(int $index, int $length = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a DN part</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td>if index is illegal</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_append">
+        <div class="location">at line         line 236</div>
+        <code>                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+    <strong>append</strong>(array $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append a DN part</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepend">
+        <div class="location">at line         line 249</div>
+        <code>                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+    <strong>prepend</strong>(array $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prepend a DN part</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insert">
+        <div class="location">at line         line 264</div>
+        <code>                    <a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a>
+    <strong>insert</strong>(int $index, array $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Insert a DN part</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td>if index is illegal</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCaseFold">
+        <div class="location">at line         line 333</div>
+        <code>                    
+    <strong>setCaseFold</strong>(string|null $caseFold)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the case fold</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toString">
+        <div class="location">at line         line 345</div>
+        <code>                    string
+    <strong>toString</strong>(string $caseFold = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return DN as a string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location">at line         line 357</div>
+        <code>                    array
+    <strong>toArray</strong>(string $caseFold = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return DN as an array</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at line         line 409</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cast to string representation {see toString()}</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location">at line         line 420</div>
+        <code>                    boolean
+    <strong>offsetExists</strong>(int $offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Required by the ArrayAccess implementation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location">at line         line 437</div>
+        <code>                    array
+    <strong>offsetGet</strong>(int $offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Proxy to {see get()}
+Required by the ArrayAccess implementation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location">at line         line 449</div>
+        <code>                    
+    <strong>offsetSet</strong>(int $offset, array $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Proxy to {see set()}
+Required by the ArrayAccess implementation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location">at line         line 460</div>
+        <code>                    
+    <strong>offsetUnset</strong>(int $offset)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Proxy to {see remove()}
+Required by the ArrayAccess implementation</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultCaseFold">
+        <div class="location">at line         line 470</div>
+        <code>        static            
+    <strong>setDefaultCaseFold</strong>(string $caseFold)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the default case fold</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_escapeValue">
+        <div class="location">at line         line 509</div>
+        <code>        static            array
+    <strong>escapeValue</strong>(string|array $values = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Escapes a DN value according to RFC 2253</p>                    <p>Escapes the given VALUES according to RFC 2253 so that they can be safely used in LDAP DNs.
+The characters ",", "+", """, "\", "&lt;", ">", ";", "#", " = " with a special meaning in RFC 2252
+are preceeded by ba backslash. Control characters with an ASCII code &lt; 32 are represented as \hexpair.
+Finally all leading and trailing spaces are converted to sequences of \20.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$values</td>
+                <td>An array containing the DN values that should be escaped</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>The array $values, but escaped</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Net_LDAP2_Util::escape_dn_value()</td>
+                <td>from Benedikt Hallinger <beni@php.net></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unescapeValue">
+        <div class="location">at line         line 551</div>
+        <code>        static            array
+    <strong>unescapeValue</strong>(string|array $values = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Undoes the conversion done by {@link escapeValue()}.</p>                    <p>Any escape sequence starting with a baskslash - hexpair or special character -
+will be transformed back to the corresponding character.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$values</td>
+                <td>Array of DN Values</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Same as $values, but unescaped</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Net_LDAP2_Util::escape_dn_value()</td>
+                <td>from Benedikt Hallinger <beni@php.net></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_explodeDn">
+        <div class="location">at line         line 587</div>
+        <code>        static            array
+    <strong>explodeDn</strong>(string $dn, array $keys = null, array $vals = null, string $caseFold = self::ATTR_CASEFOLD_NONE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates an array containing all parts of the given DN.</p>                    <p>Array will be of type
+array(
+     array("cn" => "name1", "uid" => "user"),
+     array("cn" => "name2"),
+     array("dc" => "example"),
+     array("dc" => "org")
+)
+for a DN of cn=name1+uid=user,cn=name2,dc=example,dc=org.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$dn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>An optional array to receive DN keys (e.g. CN, OU, DC, ...)</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$vals</td>
+                <td>An optional array to receive DN values</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkDn">
+        <div class="location">at line         line 625</div>
+        <code>        static            boolean
+    <strong>checkDn</strong>(string $dn, array $keys = null, array $vals = null, string $caseFold = self::ATTR_CASEFOLD_NONE)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$dn</td>
+                <td>The DN to parse</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td>An optional array to receive DN keys (e.g. CN, OU, DC, ...)</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$vals</td>
+                <td>An optional array to receive DN values</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>True if the DN was successfully parsed or false if the string is not a valid DN.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_implodeRdn">
+        <div class="location">at line         line 719</div>
+        <code>        static            string
+    <strong>implodeRdn</strong>(array $part, $caseFold = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a DN part in the form $attribute = $value</p>                    <p>This method supports the creation of multi-valued RDNs
+$part must contain an even number of elemets.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$part</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_implodeDn">
+        <div class="location">at line         line 751</div>
+        <code>        static            string
+    <strong>implodeDn</strong>(array $dnArray, string $caseFold = null, string $separator = &#039;,&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implodes an array in the form delivered by {@link explodeDn()}
+to a DN string.</p>                    <p>$dnArray must be of type
+array(
+     array("cn" => "name1", "uid" => "user"),
+     array("cn" => "name2"),
+     array("dc" => "example"),
+     array("dc" => "org")
+)</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$dnArray</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$caseFold</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$separator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Ldap_Exception.html">Zend_Ldap_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isChildOf">
+        <div class="location">at line         line 767</div>
+        <code>        static            boolean
+    <strong>isChildOf</strong>(string|<a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a> $childDn, string|<a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a> $parentDn)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checks if given $childDn is beneath $parentDn subtree.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a></td>
+                <td>$childDn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|<a href="Zend_Ldap_Dn.html">Zend_Ldap_Dn</a></td>
+                <td>$parentDn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

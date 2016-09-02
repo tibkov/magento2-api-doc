@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Setup\Model\CronScriptReadinessCheck | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Setup_Model_CronScriptReadinessCheck" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Setup.html">Setup</a></li>
+                                        <li><a href="../../../Magento/Setup/Model.html">Model</a></li>
+    
+                <li>CronScriptReadinessCheck</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            CronScriptReadinessCheck
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>CronScriptReadinessCheck</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>This class is used by Readiness check page to verify if Setup cron command
+and Updater cron script are running properly.</p>            <p>This includes verifying file permission in Updater Cron and db privileges in Setup Cron.
+It also verifies Cron time interval configuration.
+This class only verifies the status files created by both Cron jobs. No actual checking logic is done in this class.</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>SETUP</td>
+                <td class="last">
+                    <p><em>Setup type</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UPDATER</td>
+                <td class="last">
+                    <p><em>Updater type</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UPDATER_CRON_JOB_STATS_FILE</td>
+                <td class="last">
+                    <p><em>Basename to Updater status file</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UPDATER_KEY_FILE_PERMISSIONS_VERIFIED</td>
+                <td class="last">
+                    <p><em>Key in Updater status file</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>OTHER_CHECKS_WILL_FAIL_MSG</td>
+                <td class="last">
+                    <p><em>Error message for dependant checks</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a> $filesystem)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkSetup">checkSetup</a>()
+        
+                                            <p>Check Setup Cron job status file</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkUpdater">checkUpdater</a>()
+        
+                                            <p>Check Updater Cron job status file</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 57</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a> $filesystem)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a></td>
+                <td>$filesystem</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkSetup">
+        <div class="location">at line         line 67</div>
+        <code>                    array
+    <strong>checkSetup</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check Setup Cron job status file</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkUpdater">
+        <div class="location">at line         line 77</div>
+        <code>                    array
+    <strong>checkUpdater</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check Updater Cron job status file</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

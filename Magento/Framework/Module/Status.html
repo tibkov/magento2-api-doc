@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Framework\Module\Status | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Framework_Module_Status" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Framework.html">Framework</a></li>
+                                        <li><a href="../../../Magento/Framework/Module.html">Module</a></li>
+    
+                <li>Status</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Status
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Status</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>A service for controlling module status</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/Module/ModuleList/Loader.html"><abbr title="Magento\Framework\Module\ModuleList\Loader">Loader</abbr></a> $loader, <a href="../../../Magento/Framework/Module/ModuleList.html"><abbr title="Magento\Framework\Module\ModuleList">ModuleList</abbr></a> $list, <a href="../../../Magento/Framework/App/DeploymentConfig/Writer.html"><abbr title="Magento\Framework\App\DeploymentConfig\Writer">Writer</abbr></a> $writer, <a href="../../../Magento/Framework/Module/ConflictChecker.html"><abbr title="Magento\Framework\Module\ConflictChecker">ConflictChecker</abbr></a> $conflictChecker, <a href="../../../Magento/Framework/Module/DependencyChecker.html"><abbr title="Magento\Framework\Module\DependencyChecker">DependencyChecker</abbr></a> $dependencyChecker)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkConstraints">checkConstraints</a>(bool $isEnabled, string[] $modulesToBeChanged, string[] $currentlyEnabledModules = null, bool $prettyMessage = false)
+        
+                                            <p>Whether it is allowed to enable or disable specified modules</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setIsEnabled">setIsEnabled</a>(bool $isEnabled, string[] $modules)
+        
+                                            <p>Sets specified modules to enabled or disabled state</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModulesToChange">getModulesToChange</a>(bool $isEnabled, string[] $modules)
+        
+                                            <p>Get a list of modules that will be changed</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 63</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/Module/ModuleList/Loader.html"><abbr title="Magento\Framework\Module\ModuleList\Loader">Loader</abbr></a> $loader, <a href="../../../Magento/Framework/Module/ModuleList.html"><abbr title="Magento\Framework\Module\ModuleList">ModuleList</abbr></a> $list, <a href="../../../Magento/Framework/App/DeploymentConfig/Writer.html"><abbr title="Magento\Framework\App\DeploymentConfig\Writer">Writer</abbr></a> $writer, <a href="../../../Magento/Framework/Module/ConflictChecker.html"><abbr title="Magento\Framework\Module\ConflictChecker">ConflictChecker</abbr></a> $conflictChecker, <a href="../../../Magento/Framework/Module/DependencyChecker.html"><abbr title="Magento\Framework\Module\DependencyChecker">DependencyChecker</abbr></a> $dependencyChecker)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Module/ModuleList/Loader.html"><abbr title="Magento\Framework\Module\ModuleList\Loader">Loader</abbr></a></td>
+                <td>$loader</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Module/ModuleList.html"><abbr title="Magento\Framework\Module\ModuleList">ModuleList</abbr></a></td>
+                <td>$list</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/DeploymentConfig/Writer.html"><abbr title="Magento\Framework\App\DeploymentConfig\Writer">Writer</abbr></a></td>
+                <td>$writer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Module/ConflictChecker.html"><abbr title="Magento\Framework\Module\ConflictChecker">ConflictChecker</abbr></a></td>
+                <td>$conflictChecker</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Module/DependencyChecker.html"><abbr title="Magento\Framework\Module\DependencyChecker">DependencyChecker</abbr></a></td>
+                <td>$dependencyChecker</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkConstraints">
+        <div class="location">at line         line 87</div>
+        <code>                    string[]
+    <strong>checkConstraints</strong>(bool $isEnabled, string[] $modulesToBeChanged, string[] $currentlyEnabledModules = null, bool $prettyMessage = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Whether it is allowed to enable or disable specified modules</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$isEnabled</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string[]</td>
+                <td>$modulesToBeChanged</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string[]</td>
+                <td>$currentlyEnabledModules</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$prettyMessage</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIsEnabled">
+        <div class="location">at line         line 143</div>
+        <code>                    void
+    <strong>setIsEnabled</strong>(bool $isEnabled, string[] $modules)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets specified modules to enabled or disabled state</p>                    <p>Performs other necessary routines, such as cache cleanup</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$isEnabled</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string[]</td>
+                <td>$modules</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModulesToChange">
+        <div class="location">at line         line 164</div>
+        <code>                    string[]
+    <strong>getModulesToChange</strong>(bool $isEnabled, string[] $modules)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a list of modules that will be changed</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$isEnabled</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string[]</td>
+                <td>$modules</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

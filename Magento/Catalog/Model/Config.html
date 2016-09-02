@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Catalog\Model\Config | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Catalog_Model_Config" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Catalog.html">Catalog</a></li>
+                                        <li><a href="../../../Magento/Catalog/Model.html">Model</a></li>
+    
+                <li>Config</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Config
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Config</strong>        extends <a href="../../../Magento/Eav/Model/Config.html"><abbr title="Magento\Eav\Model\Config">Config</abbr></a>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>ENTITIES_CACHE_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTES_CACHE_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTRIBUTES_CODES_CACHE_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_LIST_DEFAULT_SORT_BY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a> $cache, <abbr title="Magento\Eav\Model\Entity\TypeFactory">TypeFactory</abbr> $entityTypeFactory, <abbr title="Magento\Eav\Model\ResourceModel\Entity\Type\CollectionFactory">CollectionFactory</abbr> $entityTypeCollectionFactory, <a href="../../../Magento/Framework/App/Cache/StateInterface.html"><abbr title="Magento\Framework\App\Cache\StateInterface">StateInterface</abbr></a> $cacheState, <a href="../../../Magento/Framework/Validator/UniversalFactory.html"><abbr title="Magento\Framework\Validator\UniversalFactory">UniversalFactory</abbr></a> $universalFactory, <a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <abbr title="Magento\Catalog\Model\ResourceModel\ConfigFactory">ConfigFactory</abbr> $configFactory, <abbr title="Magento\Catalog\Model\Product\TypeFactory">TypeFactory</abbr> $productTypeFactory, <abbr title="Magento\Eav\Model\ResourceModel\Entity\Attribute\Group\CollectionFactory">CollectionFactory</abbr> $groupCollectionFactory, <abbr title="Magento\Eav\Model\ResourceModel\Entity\Attribute\Set\CollectionFactory">CollectionFactory</abbr> $setCollectionFactory, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Eav/Model/Config.html"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> $eavConfig)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCache">getCache</a>()
+        
+                                            <p>Get cache interface</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Eav/Model/Config.html#method_getCache"><abbr title="Magento\Eav\Model\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Eav\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clear">clear</a>()
+        
+                                            <p>Reset object state</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Eav/Model/Config.html#method_clear"><abbr title="Magento\Eav\Model\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isCacheEnabled">isCacheEnabled</a>()
+        
+                                            <p>Check EAV cache availability</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Eav/Model/Config.html#method_isCacheEnabled"><abbr title="Magento\Eav\Model\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Eav/Model/Entity/Type.html"><abbr title="Magento\Eav\Model\Entity\Type">Type</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEntityType">getEntityType</a>(int|string|<a href="../../../Magento/Eav/Model/Entity/Type.html"><abbr title="Magento\Eav\Model\Entity\Type">Type</abbr></a> $code)
+        
+                                            <p>Get entity type object by entity type code/identifier</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Eav/Model/Config.html#method_getEntityType"><abbr title="Magento\Eav\Model\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Eav/Model/Entity/Attribute/AbstractAttribute.html"><abbr title="Magento\Eav\Model\Entity\Attribute\AbstractAttribute">AbstractAttribute</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttribute">getAttribute</a>(mixed $entityType, mixed $code)
+        
+                                            <p>Get attribute by code for entity type</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Eav/Model/Config.html#method_getAttribute"><abbr title="Magento\Eav\Model\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEntityAttributeCodes">getEntityAttributeCodes</a>(mixed $entityType, <a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $object = null)
+        
+                                            <p>Get codes of all entity type attributes</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Eav/Model/Config.html#method_getEntityAttributeCodes"><abbr title="Magento\Eav\Model\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Eav\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_importAttributesData">importAttributesData</a>(string|<a href="../../../Magento/Eav/Model/Entity/Type.html"><abbr title="Magento\Eav\Model\Entity\Type">Type</abbr></a> $entityType, array $attributes)
+        
+                                            <p>Import attributes data from external source</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Eav/Model/Config.html#method_importAttributesData"><abbr title="Magento\Eav\Model\Config">Config</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Catalog/Model/Config.html"><abbr title="Magento\Catalog\Model\Config">Config</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setStoreId">setStoreId</a>(integer $storeId)
+        
+                                            <p>Set store id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStoreId">getStoreId</a>()
+        
+                                            <p>Return store id, if is not set return current app store</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Catalog\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadAttributeSets">loadAttributeSets</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Catalog\Model\false">false</abbr>|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributeSetName">getAttributeSetName</a>(string|int|float $entityTypeId, float|int $id)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Catalog\Model\false">false</abbr>|string|int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributeSetId">getAttributeSetId</a>(string|int|float $entityTypeId, string|null $name = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Catalog\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadAttributeGroups">loadAttributeGroups</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributeGroupName">getAttributeGroupName</a>(float|int|string $attributeSetId, float|int|string $id)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|string|int|float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributeGroupId">getAttributeGroupId</a>(float|int|string $attributeSetId, string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Catalog\Model\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadProductTypes">loadProductTypes</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Catalog\Model\false">false</abbr>|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductTypeId">getProductTypeId</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Catalog\Model\false">false</abbr>|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductTypeName">getProductTypeName</a>(float|int|string $id)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null|mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSourceOptionId">getSourceOptionId</a>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $source, string $value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductAttributes">getProductAttributes</a>()
+        
+                                            <p>Load Product attributes</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributesUsedInProductListing">getAttributesUsedInProductListing</a>()
+        
+                                            <p>Retrieve Attributes used in product listing</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributesUsedForSortBy">getAttributesUsedForSortBy</a>()
+        
+                                            <p>Retrieve Attributes array used for sort by</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributeUsedForSortByArray">getAttributeUsedForSortByArray</a>()
+        
+                                            <p>Retrieve Attributes Used for Sort by as array
+key = code, value = name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductListDefaultSortBy">getProductListDefaultSortBy</a>(mixed $store = null)
+        
+                                            <p>Retrieve Product List Default Sort By</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 138</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a> $cache, <abbr title="Magento\Eav\Model\Entity\TypeFactory">TypeFactory</abbr> $entityTypeFactory, <abbr title="Magento\Eav\Model\ResourceModel\Entity\Type\CollectionFactory">CollectionFactory</abbr> $entityTypeCollectionFactory, <a href="../../../Magento/Framework/App/Cache/StateInterface.html"><abbr title="Magento\Framework\App\Cache\StateInterface">StateInterface</abbr></a> $cacheState, <a href="../../../Magento/Framework/Validator/UniversalFactory.html"><abbr title="Magento\Framework\Validator\UniversalFactory">UniversalFactory</abbr></a> $universalFactory, <a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $scopeConfig, <abbr title="Magento\Catalog\Model\ResourceModel\ConfigFactory">ConfigFactory</abbr> $configFactory, <abbr title="Magento\Catalog\Model\Product\TypeFactory">TypeFactory</abbr> $productTypeFactory, <abbr title="Magento\Eav\Model\ResourceModel\Entity\Attribute\Group\CollectionFactory">CollectionFactory</abbr> $groupCollectionFactory, <abbr title="Magento\Eav\Model\ResourceModel\Entity\Attribute\Set\CollectionFactory">CollectionFactory</abbr> $setCollectionFactory, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Eav/Model/Config.html"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> $eavConfig)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a></td>
+                <td>$cache</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Eav\Model\Entity\TypeFactory">TypeFactory</abbr></td>
+                <td>$entityTypeFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Eav\Model\ResourceModel\Entity\Type\CollectionFactory">CollectionFactory</abbr></td>
+                <td>$entityTypeCollectionFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Cache/StateInterface.html"><abbr title="Magento\Framework\App\Cache\StateInterface">StateInterface</abbr></a></td>
+                <td>$cacheState</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Validator/UniversalFactory.html"><abbr title="Magento\Framework\Validator\UniversalFactory">UniversalFactory</abbr></a></td>
+                <td>$universalFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a></td>
+                <td>$scopeConfig</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Catalog\Model\ResourceModel\ConfigFactory">ConfigFactory</abbr></td>
+                <td>$configFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Catalog\Model\Product\TypeFactory">TypeFactory</abbr></td>
+                <td>$productTypeFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Eav\Model\ResourceModel\Entity\Attribute\Group\CollectionFactory">CollectionFactory</abbr></td>
+                <td>$groupCollectionFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Eav\Model\ResourceModel\Entity\Attribute\Set\CollectionFactory">CollectionFactory</abbr></td>
+                <td>$setCollectionFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Eav/Model/Config.html"><abbr title="Magento\Eav\Model\Config">Config</abbr></a></td>
+                <td>$eavConfig</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCache">
+        <div class="location">in <a href="../../../Magento/Eav/Model/Config.html#method_getCache"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> at line         line 123</div>
+        <code>                    <a href="../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a>
+    <strong>getCache</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get cache interface</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/App/CacheInterface.html"><abbr title="Magento\Framework\App\CacheInterface">CacheInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clear">
+        <div class="location">in <a href="../../../Magento/Eav/Model/Config.html#method_clear"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> at line         line 133</div>
+        <code>                    <abbr title="Magento\Eav\Model\$this">$this</abbr>
+    <strong>clear</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reset object state</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Eav\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isCacheEnabled">
+        <div class="location">in <a href="../../../Magento/Eav/Model/Config.html#method_isCacheEnabled"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> at line         line 260</div>
+        <code>                    bool
+    <strong>isCacheEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check EAV cache availability</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEntityType">
+        <div class="location">in <a href="../../../Magento/Eav/Model/Config.html#method_getEntityType"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> at line         line 324</div>
+        <code>                    <a href="../../../Magento/Eav/Model/Entity/Type.html"><abbr title="Magento\Eav\Model\Entity\Type">Type</abbr></a>
+    <strong>getEntityType</strong>(int|string|<a href="../../../Magento/Eav/Model/Entity/Type.html"><abbr title="Magento\Eav\Model\Entity\Type">Type</abbr></a> $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get entity type object by entity type code/identifier</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|string|<a href="../../../Magento/Eav/Model/Entity/Type.html"><abbr title="Magento\Eav\Model\Entity\Type">Type</abbr></a></td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Eav/Model/Entity/Type.html"><abbr title="Magento\Eav\Model\Entity\Type">Type</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttribute">
+        <div class="location">in <a href="../../../Magento/Eav/Model/Config.html#method_getAttribute"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> at line         line 426</div>
+        <code>                    <a href="../../../Magento/Eav/Model/Entity/Attribute/AbstractAttribute.html"><abbr title="Magento\Eav\Model\Entity\Attribute\AbstractAttribute">AbstractAttribute</abbr></a>
+    <strong>getAttribute</strong>(mixed $entityType, mixed $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get attribute by code for entity type</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$entityType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Eav/Model/Entity/Attribute/AbstractAttribute.html"><abbr title="Magento\Eav\Model\Entity\Attribute\AbstractAttribute">AbstractAttribute</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEntityAttributeCodes">
+        <div class="location">in <a href="../../../Magento/Eav/Model/Config.html#method_getEntityAttributeCodes"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> at line         line 475</div>
+        <code>                    array
+    <strong>getEntityAttributeCodes</strong>(mixed $entityType, <a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $object = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get codes of all entity type attributes</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$entityType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_importAttributesData">
+        <div class="location">in <a href="../../../Magento/Eav/Model/Config.html#method_importAttributesData"><abbr title="Magento\Eav\Model\Config">Config</abbr></a> at line         line 598</div>
+        <code>                    <abbr title="Magento\Eav\Model\$this">$this</abbr>
+    <strong>importAttributesData</strong>(string|<a href="../../../Magento/Eav/Model/Entity/Type.html"><abbr title="Magento\Eav\Model\Entity\Type">Type</abbr></a> $entityType, array $attributes)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Import attributes data from external source</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="../../../Magento/Eav/Model/Entity/Type.html"><abbr title="Magento\Eav\Model\Entity\Type">Type</abbr></a></td>
+                <td>$entityType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Eav\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setStoreId">
+        <div class="location">at line         line 179</div>
+        <code>                    <a href="../../../Magento/Catalog/Model/Config.html"><abbr title="Magento\Catalog\Model\Config">Config</abbr></a>
+    <strong>setStoreId</strong>(integer $storeId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set store id</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$storeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Catalog/Model/Config.html"><abbr title="Magento\Catalog\Model\Config">Config</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStoreId">
+        <div class="location">at line         line 190</div>
+        <code>                    integer
+    <strong>getStoreId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return store id, if is not set return current app store</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadAttributeSets">
+        <div class="location">at line         line 201</div>
+        <code>                    <abbr title="Magento\Catalog\Model\$this">$this</abbr>
+    <strong>loadAttributeSets</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Catalog\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeSetName">
+        <div class="location">at line         line 225</div>
+        <code>                    <abbr title="Magento\Catalog\Model\false">false</abbr>|string
+    <strong>getAttributeSetName</strong>(string|int|float $entityTypeId, float|int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int|float</td>
+                <td>$entityTypeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float|int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Catalog\Model\false">false</abbr>|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeSetId">
+        <div class="location">at line         line 245</div>
+        <code>                    <abbr title="Magento\Catalog\Model\false">false</abbr>|string|int
+    <strong>getAttributeSetId</strong>(string|int|float $entityTypeId, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int|float</td>
+                <td>$entityTypeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Catalog\Model\false">false</abbr>|string|int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadAttributeGroups">
+        <div class="location">at line         line 264</div>
+        <code>                    <abbr title="Magento\Catalog\Model\$this">$this</abbr>
+    <strong>loadAttributeGroups</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Catalog\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeGroupName">
+        <div class="location">at line         line 288</div>
+        <code>                    bool|string
+    <strong>getAttributeGroupName</strong>(float|int|string $attributeSetId, float|int|string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float|int|string</td>
+                <td>$attributeSetId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float|int|string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeGroupId">
+        <div class="location">at line         line 309</div>
+        <code>                    bool|string|int|float
+    <strong>getAttributeGroupId</strong>(float|int|string $attributeSetId, string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float|int|string</td>
+                <td>$attributeSetId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|string|int|float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadProductTypes">
+        <div class="location">at line         line 329</div>
+        <code>                    <abbr title="Magento\Catalog\Model\$this">$this</abbr>
+    <strong>loadProductTypes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Catalog\Model\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductTypeId">
+        <div class="location">at line         line 351</div>
+        <code>                    <abbr title="Magento\Catalog\Model\false">false</abbr>|string
+    <strong>getProductTypeId</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Catalog\Model\false">false</abbr>|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductTypeName">
+        <div class="location">at line         line 367</div>
+        <code>                    <abbr title="Magento\Catalog\Model\false">false</abbr>|string
+    <strong>getProductTypeName</strong>(float|int|string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float|int|string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Catalog\Model\false">false</abbr>|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSourceOptionId">
+        <div class="location">at line         line 383</div>
+        <code>                    null|mixed
+    <strong>getSourceOptionId</strong>(<a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a> $source, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/DataObject.html"><abbr title="Magento\Framework\DataObject">DataObject</abbr></a></td>
+                <td>$source</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductAttributes">
+        <div class="location">at line         line 398</div>
+        <code>                    array
+    <strong>getProductAttributes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load Product attributes</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributesUsedInProductListing">
+        <div class="location">at line         line 421</div>
+        <code>                    array
+    <strong>getAttributesUsedInProductListing</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Attributes used in product listing</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributesUsedForSortBy">
+        <div class="location">at line         line 444</div>
+        <code>                    array
+    <strong>getAttributesUsedForSortBy</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Attributes array used for sort by</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributeUsedForSortByArray">
+        <div class="location">at line         line 465</div>
+        <code>                    array
+    <strong>getAttributeUsedForSortByArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Attributes Used for Sort by as array
+key = code, value = name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductListDefaultSortBy">
+        <div class="location">at line         line 482</div>
+        <code>                    string
+    <strong>getProductListDefaultSortBy</strong>(mixed $store = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Product List Default Sort By</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

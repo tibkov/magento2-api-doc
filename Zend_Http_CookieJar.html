@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Http_CookieJar | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Http_CookieJar" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Http_CookieJar
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Http_CookieJar</strong>        implements
+        <a target="_blank" href="http://php.net/Countable">Countable</a>, <a target="_blank" href="http://php.net/IteratorAggregate">IteratorAggregate</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>A Zend<em>Http</em>CookieJar object is designed to contain and maintain HTTP cookies, and should
+be used along with Zend<em>Http</em>Client in order to manage cookies across HTTP requests and
+responses.</p>            <p>The class contains an array of Zend<em>Http</em>Cookie objects. Cookies can be added to the jar
+automatically from a request or manually. Then, the jar can find and return the cookies
+needed for a specific HTTP request.</p>
+
+<p>A special parameter can be passed to all methods of this class that return cookies: Cookies
+can be returned either in their native form (as Zend<em>Http</em>Cookie objects) or as strings -
+the later is suitable for sending as the value of the "Cookie" header in an HTTP request.
+You can also choose, when returning more than one cookie, whether to get an array of strings
+(by passing Zend<em>Http</em>CookieJar::COOKIE<em>STRING</em>ARRAY) or one unified string for all cookies
+(by passing Zend<em>Http</em>CookieJar::COOKIE<em>STRING</em>CONCAT).</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>COOKIE_OBJECT</td>
+                <td class="last">
+                    <p><em>Return cookie(s) as a Zend<em>Http</em>Cookie object</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COOKIE_STRING_ARRAY</td>
+                <td class="last">
+                    <p><em>Return cookie(s) as a string (suitable for sending in an HTTP request)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COOKIE_STRING_CONCAT</td>
+                <td class="last">
+                    <p><em>Return all cookies as one long string (suitable for sending in an HTTP request)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>COOKIE_STRING_CONCAT_STRICT</td>
+                <td class="last">
+                    <p><em>Return all cookies as one long string (strict mode)
+ - Single space after the semi-colon separating each cookie
+ - Remove trailing semi-colon, if any</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Construct a new CookieJar object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addCookie">addCookie</a>(<a href="Zend_Http_Cookie.html">Zend_Http_Cookie</a>|string $cookie, <a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string $ref_uri = null, boolean $encodeValue = true)
+        
+                                            <p>Add a cookie to the jar. Cookie should be passed either as a Zend<em>Http</em>Cookie object
+or as a string - in which case an object is created from the string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addCookiesFromResponse">addCookiesFromResponse</a>(<a href="Zend_Http_Response.html">Zend_Http_Response</a> $response, <a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string $ref_uri, boolean $encodeValue = true)
+        
+                                            <p>Parse an HTTP response, adding all the cookies set in that response
+to the cookie jar.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAllCookies">getAllCookies</a>(int $ret_as = self::COOKIE_OBJECT)
+        
+                                            <p>Get all cookies in the cookie jar as an array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMatchingCookies">getMatchingCookies</a>(string|<a href="Zend_Uri_Http.html">Zend_Uri_Http</a> $uri, boolean $matchSessionCookies = true, int $ret_as = self::COOKIE_OBJECT, int $now = null)
+        
+                                            <p>Return an array of all cookies matching a specific request according to the request URI,
+whether session cookies should be sent or not, and the time to consider as "now" when
+checking cookie expiry time.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Cookie.html">Zend_Http_Cookie</a>|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCookie">getCookie</a>(<a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string $uri, string $cookie_name, int $ret_as = self::COOKIE_OBJECT)
+        
+                                            <p>Get a specific cookie according to a URI and name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fromResponse">fromResponse</a>(<a href="Zend_Http_Response.html">Zend_Http_Response</a> $response, $ref_uri)
+        
+                                            <p>Create a new CookieJar object and automatically load into it all the
+cookies set in an Http_Response object. If $uri is set, it will be
+considered as the requested URI for setting default domain and path
+of the cookie.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>()
+        
+                                            <p>Required by Countable interface</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/ArrayIterator">ArrayIterator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIterator">getIterator</a>()
+        
+                                            <p>Required by IteratorAggregate interface</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isEmpty">isEmpty</a>()
+        
+                                            <p>Tells if the jar is empty of any cookie</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reset">reset</a>()
+        
+                                            <p>Empties the cookieJar of any cookie</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 117</div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Construct a new CookieJar object</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCookie">
+        <div class="location">at line         line 128</div>
+        <code>                    
+    <strong>addCookie</strong>(<a href="Zend_Http_Cookie.html">Zend_Http_Cookie</a>|string $cookie, <a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string $ref_uri = null, boolean $encodeValue = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a cookie to the jar. Cookie should be passed either as a Zend<em>Http</em>Cookie object
+or as a string - in which case an object is created from the string.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Cookie.html">Zend_Http_Cookie</a>|string</td>
+                <td>$cookie</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string</td>
+                <td>$ref_uri</td>
+                <td>Optional reference URI (for domain, path, secure)</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$encodeValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addCookiesFromResponse">
+        <div class="location">at line         line 155</div>
+        <code>                    
+    <strong>addCookiesFromResponse</strong>(<a href="Zend_Http_Response.html">Zend_Http_Response</a> $response, <a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string $ref_uri, boolean $encodeValue = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse an HTTP response, adding all the cookies set in that response
+to the cookie jar.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Response.html">Zend_Http_Response</a></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string</td>
+                <td>$ref_uri</td>
+                <td>Requested URI</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$encodeValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllCookies">
+        <div class="location">at line         line 180</div>
+        <code>                    array|string
+    <strong>getAllCookies</strong>(int $ret_as = self::COOKIE_OBJECT)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get all cookies in the cookie jar as an array</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$ret_as</td>
+                <td>Whether to return cookies as objects of Zend<em>Http</em>Cookie or as strings</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMatchingCookies">
+        <div class="location">at line         line 200</div>
+        <code>                    array|string
+    <strong>getMatchingCookies</strong>(string|<a href="Zend_Uri_Http.html">Zend_Uri_Http</a> $uri, boolean $matchSessionCookies = true, int $ret_as = self::COOKIE_OBJECT, int $now = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return an array of all cookies matching a specific request according to the request URI,
+whether session cookies should be sent or not, and the time to consider as "now" when
+checking cookie expiry time.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="Zend_Uri_Http.html">Zend_Uri_Http</a></td>
+                <td>$uri</td>
+                <td>URI to check against (secure, domain, path)</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$matchSessionCookies</td>
+                <td>Whether to send session cookies</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ret_as</td>
+                <td>Whether to return cookies as objects of Zend<em>Http</em>Cookie or as strings</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$now</td>
+                <td>Override the current time when checking for expiry time</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCookie">
+        <div class="location">at line         line 237</div>
+        <code>                    <a href="Zend_Http_Cookie.html">Zend_Http_Cookie</a>|string
+    <strong>getCookie</strong>(<a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string $uri, string $cookie_name, int $ret_as = self::COOKIE_OBJECT)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a specific cookie according to a URI and name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Uri_Http.html">Zend_Uri_Http</a>|string</td>
+                <td>$uri</td>
+                <td>The uri (domain and path) to match</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cookie_name</td>
+                <td>The cookie's name</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ret_as</td>
+                <td>Whether to return cookies as objects of Zend<em>Http</em>Cookie or as strings</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Cookie.html">Zend_Http_Cookie</a>|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromResponse">
+        <div class="location">at line         line 381</div>
+        <code>        static            <a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a>
+    <strong>fromResponse</strong>(<a href="Zend_Http_Response.html">Zend_Http_Response</a> $response, $ref_uri)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new CookieJar object and automatically load into it all the
+cookies set in an Http_Response object. If $uri is set, it will be
+considered as the requested URI for setting default domain and path
+of the cookie.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Response.html">Zend_Http_Response</a></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$ref_uri</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">at line         line 393</div>
+        <code>                    int
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Required by Countable interface</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIterator">
+        <div class="location">at line         line 403</div>
+        <code>                    <a target="_blank" href="http://php.net/ArrayIterator">ArrayIterator</a>
+    <strong>getIterator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Required by IteratorAggregate interface</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/ArrayIterator">ArrayIterator</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEmpty">
+        <div class="location">at line         line 413</div>
+        <code>                    bool
+    <strong>isEmpty</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Tells if the jar is empty of any cookie</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">at line         line 423</div>
+        <code>                    <a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a>
+    <strong>reset</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Empties the cookieJar of any cookie</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_CookieJar.html">Zend_Http_CookieJar</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Pdf | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Pdf" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Pdf
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Pdf</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>General entity which describes PDF document.</p>            <p>It implements document abstraction with a document level operations.</p>
+
+<p>Class is used to create new PDF document or load existing document.
+See details in a class constructor description</p>
+
+<p>Class agregates document level properties and entities (pages, bookmarks,
+document level actions, attachments, form object, etc)</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>PDF_VERSION</td>
+                <td class="last">
+                    <p><em>Version number of generated PDF documents.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PDF_HEADER</td>
+                <td class="last">
+                    <p><em>PDF file header.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PDF_FORM_FIELD_READONLY</td>
+                <td class="last">
+                    <p><em>Form field options</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PDF_FORM_FIELD_REQUIRED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PDF_FORM_FIELD_NOEXPORT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_pages">
+                                                                                array
+                </td>
+                <td>$pages</td>
+                <td class="last">Pages collection</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_properties">
+                                                                                array
+                </td>
+                <td>$properties</td>
+                <td class="last">Document properties</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_outlines">
+                                                                                array
+                </td>
+                <td>$outlines</td>
+                <td class="last">Document outlines</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Memory_Manager.html">Zend_Memory_Manager</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMemoryManager">getMemoryManager</a>()
+        
+                                            <p>Request used memory manager</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMemoryManager">setMemoryManager</a>(<a href="Zend_Memory_Manager.html">Zend_Memory_Manager</a> $memoryManager)
+        
+                                            <p>Set user defined memory manager</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Pdf.html">Zend_Pdf</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parse">parse</a>(string $source = null, integer $revision = null)
+        
+                                            <p>Create new PDF document from a $source string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Pdf.html">Zend_Pdf</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_load">load</a>(string $source = null, integer $revision = null)
+        
+                                            <p>Load PDF document from a file</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_save">save</a>(string $filename, boolean $updateOnly = false)
+        
+                                            <p>Render PDF document and save it.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Pdf.html">Zend_Pdf</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $source = null, integer $revision = null, bool $load = false)
+        
+                                            <p>Creates or loads PDF document.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_revisions">revisions</a>()
+        
+                                            <p>Retrive number of revisions.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rollback">rollback</a>(integer $steps)
+        
+                                            <p>Rollback document $steps number of revisions.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTextFieldNames">getTextFieldNames</a>()
+        
+                                            <p>Retrieves a list with the names of the AcroForm textfields in the PDF</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTextField">setTextField</a>(string $name, string $value)
+        
+                                            <p>Sets the value of an AcroForm text field</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTextFieldProperties">setTextFieldProperties</a>(string $name, mixed $bitmask)
+        
+                                            <p>Sets the properties for an AcroForm text field</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_markTextFieldAsReadOnly">markTextFieldAsReadOnly</a>(string $name)
+        
+                                            <p>Marks an AcroForm text field as read only</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Pdf_Page.html">Zend_Pdf_Page</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newPage">newPage</a>(mixed $param1, mixed $param2 = null)
+        
+                                            <p>Create page object, attached to the PDF document.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMetadata">getMetadata</a>()
+        
+                                            <p>Return the document-level Metadata
+or null Metadata stream is not presented</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setMetadata">setMetadata</a>(string $metadata)
+        
+                                            <p>Sets the document-level Metadata (mast be valid XMP document)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getJavaScript">getJavaScript</a>()
+        
+                                            <p>Return the document-level JavaScript
+or null if there is no JavaScript for this document</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Pdf_Target.html">Zend_Pdf_Target</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOpenAction">getOpenAction</a>()
+        
+                                            <p>Get open Action
+Returns Zend<em>Pdf</em>Target (Zend<em>Pdf</em>Destination or Zend<em>Pdf</em>Action object)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOpenAction">setOpenAction</a>(<a href="Zend_Pdf_Target.html">Zend_Pdf_Target</a> $openAction = null)
+        
+                                            <p>Set open Action which is actually Zend<em>Pdf</em>Destination or Zend<em>Pdf</em>Action object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNamedDestinations">getNamedDestinations</a>()
+        
+                                            <p>Return an associative array containing all the named destinations (or GoTo actions) in the PDF.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Pdf_Destination_Explicit.html">Zend_Pdf_Destination_Explicit</a>|<a href="Zend_Pdf_Action_GoTo.html">Zend_Pdf_Action_GoTo</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNamedDestination">getNamedDestination</a>(string $name)
+        
+                                            <p>Return specified named destination</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setNamedDestination">setNamedDestination</a>(string $name, <a href="Zend_Pdf_Destination_Explicit.html">Zend_Pdf_Destination_Explicit</a>|<a href="Zend_Pdf_Action_GoTo.html">Zend_Pdf_Action_GoTo</a> $destination = null)
+        
+                                            <p>Set specified named destination</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Pdf_Page.html">Zend_Pdf_Page</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolveDestination">resolveDestination</a>(<a href="Zend_Pdf_Destination.html">Zend_Pdf_Destination</a> $destination, bool $refreshPageCollectionHashes = true)
+        
+                                            <p>Resolve destination.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extractFonts">extractFonts</a>()
+        
+                                            <p>Extract fonts attached to the document</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Pdf_Resource_Font_Extracted.html">Zend_Pdf_Resource_Font_Extracted</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_extractFont">extractFont</a>(string $fontName)
+        
+                                            <p>Extract font attached to the page by specific font name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>(boolean $newSegmentOnly = false, resource $outputStream = null)
+        
+                                            <p>Render the completed PDF to a string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setJavaScript">setJavaScript</a>(string|array $javaScript)
+        
+                                            <p>Sets the document-level JavaScript</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetJavaScript">resetJavaScript</a>()
+        
+                                            <p>Resets the document-level JavaScript</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addJavaScript">addJavaScript</a>(string|array $javaScript)
+        
+                                            <p>Appends JavaScript to the document-level JavaScript</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pdfDate">pdfDate</a>(integer $timestamp = null)
+        
+                                            <p>Convert date to PDF format (it's close to ASN.1 (Abstract Syntax Notation
+One) defined in ISO/IEC 8824).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getMemoryManager">
+        <div class="location">at line         line 236</div>
+        <code>        static            <a href="Zend_Memory_Manager.html">Zend_Memory_Manager</a>
+    <strong>getMemoryManager</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Request used memory manager</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Memory_Manager.html">Zend_Memory_Manager</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMemoryManager">
+        <div class="location">at line         line 251</div>
+        <code>        static            
+    <strong>setMemoryManager</strong>(<a href="Zend_Memory_Manager.html">Zend_Memory_Manager</a> $memoryManager)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set user defined memory manager</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Memory_Manager.html">Zend_Memory_Manager</a></td>
+                <td>$memoryManager</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parse">
+        <div class="location">at line         line 264</div>
+        <code>        static            <a href="Zend_Pdf.html">Zend_Pdf</a>
+    <strong>parse</strong>(string $source = null, integer $revision = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create new PDF document from a $source string</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$revision</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Pdf.html">Zend_Pdf</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_load">
+        <div class="location">at line         line 276</div>
+        <code>        static            <a href="Zend_Pdf.html">Zend_Pdf</a>
+    <strong>load</strong>(string $source = null, integer $revision = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load PDF document from a file</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$revision</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Pdf.html">Zend_Pdf</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_save">
+        <div class="location">at line         line 291</div>
+        <code>                    
+    <strong>save</strong>(string $filename, boolean $updateOnly = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render PDF document and save it.</p>                    <p>If $updateOnly is true and it's not a new document, then it only
+appends new section to the end of file.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$updateOnly</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 322</div>
+        <code>                    <a href="Zend_Pdf.html">Zend_Pdf</a>
+    <strong>__construct</strong>(string $source = null, integer $revision = null, bool $load = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates or loads PDF document.</p>                    <p>If $source is null, then it creates a new document.</p>
+
+<p>If $source is a string and $load is false, then it loads document
+from a binary string.</p>
+
+<p>If $source is a string and $load is true, then it loads document
+from a file.
+$revision used to roll back document to specified version
+(0 - current version, 1 - previous version, 2 - ...)</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td><ul>
+<li>PDF file to load</li>
+</ul>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$revision</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$load</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Pdf.html">Zend_Pdf</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_revisions">
+        <div class="location">at line         line 420</div>
+        <code>                    integer
+    <strong>revisions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrive number of revisions.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rollback">
+        <div class="location">at line         line 440</div>
+        <code>                    
+    <strong>rollback</strong>(integer $steps)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Rollback document $steps number of revisions.</p>                    <p>This method must be invoked before any changes, applied to the document.
+Otherwise behavior is undefined.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$steps</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTextFieldNames">
+        <div class="location">at line         line 655</div>
+        <code>                    array
+    <strong>getTextFieldNames</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieves a list with the names of the AcroForm textfields in the PDF</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>of strings</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTextField">
+        <div class="location">at line         line 667</div>
+        <code>                    
+    <strong>setTextField</strong>(string $name, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the value of an AcroForm text field</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of textfield</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Value</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td>if the textfield does not exist in the pdf</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTextFieldProperties">
+        <div class="location">at line         line 690</div>
+        <code>                    
+    <strong>setTextFieldProperties</strong>(string $name, mixed $bitmask)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the properties for an AcroForm text field</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$bitmask</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_markTextFieldAsReadOnly">
+        <div class="location">at line         line 711</div>
+        <code>                    
+    <strong>markTextFieldAsReadOnly</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Marks an AcroForm text field as read only</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newPage">
+        <div class="location">at line         line 936</div>
+        <code>                    <a href="Zend_Pdf_Page.html">Zend_Pdf_Page</a>
+    <strong>newPage</strong>(mixed $param1, mixed $param2 = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create page object, attached to the PDF document.</p>                    <p>Method signatures:</p>
+
+<ol>
+<li>Create new page with a specified pagesize.
+If $factory is null then it will be created and page must be attached to the document to be</li>
+</ol>
+
+<h2>   included into output.</h2>
+
+<h2>new Zend<em>Pdf</em>Page(string $pagesize);</h2>
+
+<ol>
+<li>Create new page with a specified pagesize (in default user space units).
+If $factory is null then it will be created and page must be attached to the document to be</li>
+</ol>
+
+<h2>   included into output.</h2>
+
+<h2>new Zend<em>Pdf</em>Page(numeric $width, numeric $height);</h2>
+</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$param1</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$param2</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Pdf_Page.html">Zend_Pdf_Page</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMetadata">
+        <div class="location">at line         line 952</div>
+        <code>                    string
+    <strong>getMetadata</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the document-level Metadata
+or null Metadata stream is not presented</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setMetadata">
+        <div class="location">at line         line 966</div>
+        <code>                    
+    <strong>setMetadata</strong>(string $metadata)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the document-level Metadata (mast be valid XMP document)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$metadata</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getJavaScript">
+        <div class="location">at line         line 982</div>
+        <code>                    string
+    <strong>getJavaScript</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the document-level JavaScript
+or null if there is no JavaScript for this document</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOpenAction">
+        <div class="location">at line         line 993</div>
+        <code>                    <a href="Zend_Pdf_Target.html">Zend_Pdf_Target</a>
+    <strong>getOpenAction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get open Action
+Returns Zend<em>Pdf</em>Target (Zend<em>Pdf</em>Destination or Zend<em>Pdf</em>Action object)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Pdf_Target.html">Zend_Pdf_Target</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOpenAction">
+        <div class="location">at line         line 1009</div>
+        <code>                    
+    <strong>setOpenAction</strong>(<a href="Zend_Pdf_Target.html">Zend_Pdf_Target</a> $openAction = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set open Action which is actually Zend<em>Pdf</em>Destination or Zend<em>Pdf</em>Action object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Target.html">Zend_Pdf_Target</a></td>
+                <td>$openAction</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNamedDestinations">
+        <div class="location">at line         line 1034</div>
+        <code>                    array
+    <strong>getNamedDestinations</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return an associative array containing all the named destinations (or GoTo actions) in the PDF.</p>                    <p>Named targets can be used to reference from outside
+the PDF, ex: 'http://www.something.com/mydocument.pdf#MyAction'</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNamedDestination">
+        <div class="location">at line         line 1045</div>
+        <code>                    <a href="Zend_Pdf_Destination_Explicit.html">Zend_Pdf_Destination_Explicit</a>|<a href="Zend_Pdf_Action_GoTo.html">Zend_Pdf_Action_GoTo</a>
+    <strong>getNamedDestination</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return specified named destination</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Pdf_Destination_Explicit.html">Zend_Pdf_Destination_Explicit</a>|<a href="Zend_Pdf_Action_GoTo.html">Zend_Pdf_Action_GoTo</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setNamedDestination">
+        <div class="location">at line         line 1061</div>
+        <code>                    
+    <strong>setNamedDestination</strong>(string $name, <a href="Zend_Pdf_Destination_Explicit.html">Zend_Pdf_Destination_Explicit</a>|<a href="Zend_Pdf_Action_GoTo.html">Zend_Pdf_Action_GoTo</a> $destination = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set specified named destination</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Pdf_Destination_Explicit.html">Zend_Pdf_Destination_Explicit</a>|<a href="Zend_Pdf_Action_GoTo.html">Zend_Pdf_Action_GoTo</a></td>
+                <td>$destination</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveDestination">
+        <div class="location">at line         line 1122</div>
+        <code>                    <a href="Zend_Pdf_Page.html">Zend_Pdf_Page</a>|null
+    <strong>resolveDestination</strong>(<a href="Zend_Pdf_Destination.html">Zend_Pdf_Destination</a> $destination, bool $refreshPageCollectionHashes = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resolve destination.</p>                    <p>Returns Zend<em>Pdf</em>Page page object or null if destination is not found within PDF document.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Destination.html">Zend_Pdf_Destination</a></td>
+                <td>$destination</td>
+                <td>Destination to resolve</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$refreshPageCollectionHashes</td>
+                <td>Refresh page collection hashes before processing</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Pdf_Page.html">Zend_Pdf_Page</a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractFonts">
+        <div class="location">at line         line 1221</div>
+        <code>                    array
+    <strong>extractFonts</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Extract fonts attached to the document</p>                    <p>returns array of Zend<em>Pdf</em>Resource<em>Font</em>Extracted objects</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extractFont">
+        <div class="location">at line         line 1275</div>
+        <code>                    <a href="Zend_Pdf_Resource_Font_Extracted.html">Zend_Pdf_Resource_Font_Extracted</a>|null
+    <strong>extractFont</strong>(string $fontName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Extract font attached to the page by specific font name</p>                    <p>$fontName should be specified in UTF-8 encoding</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fontName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Pdf_Resource_Font_Extracted.html">Zend_Pdf_Resource_Font_Extracted</a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">at line         line 1336</div>
+        <code>                    string
+    <strong>render</strong>(boolean $newSegmentOnly = false, resource $outputStream = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render the completed PDF to a string.</p>                    <p>If $newSegmentOnly is true and it's not a new document,
+then only appended part of PDF is returned.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$newSegmentOnly</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>resource</td>
+                <td>$outputStream</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setJavaScript">
+        <div class="location">at line         line 1536</div>
+        <code>                    
+    <strong>setJavaScript</strong>(string|array $javaScript)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the document-level JavaScript</p>                    <p>Resets and appends</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$javaScript</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetJavaScript">
+        <div class="location">at line         line 1546</div>
+        <code>                    
+    <strong>resetJavaScript</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resets the document-level JavaScript</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addJavaScript">
+        <div class="location">at line         line 1563</div>
+        <code>                    
+    <strong>addJavaScript</strong>(string|array $javaScript)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Appends JavaScript to the document-level JavaScript</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$javaScript</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pdfDate">
+        <div class="location">at line         line 1625</div>
+        <code>        static            string
+    <strong>pdfDate</strong>(integer $timestamp = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert date to PDF format (it's close to ASN.1 (Abstract Syntax Notation
+One) defined in ISO/IEC 8824).</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$timestamp</td>
+                <td>(optional) If omitted, uses the current time.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_Yahoo_NewsResultSet | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_Yahoo_NewsResultSet" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_Yahoo_NewsResultSet
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_Yahoo_NewsResultSet</strong>        extends <a href="Zend_Service_Yahoo_ResultSet.html">Zend_Service_Yahoo_ResultSet</a>
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_totalResultsAvailable">
+                                                                                int
+                </td>
+                <td>$totalResultsAvailable</td>
+                <td class="last">Total number of results available</td>
+                <td><small>from&nbsp;<a href="Zend_Service_Yahoo_ResultSet.html#property_totalResultsAvailable">Zend_Service_Yahoo_ResultSet</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_totalResultsReturned">
+                                                                                int
+                </td>
+                <td>$totalResultsReturned</td>
+                <td class="last">The number of results in this result set</td>
+                <td><small>from&nbsp;<a href="Zend_Service_Yahoo_ResultSet.html#property_totalResultsReturned">Zend_Service_Yahoo_ResultSet</a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_firstResultPosition">
+                                                                                int
+                </td>
+                <td>$firstResultPosition</td>
+                <td class="last">The offset in the total result set of this search set</td>
+                <td><small>from&nbsp;<a href="Zend_Service_Yahoo_ResultSet.html#property_firstResultPosition">Zend_Service_Yahoo_ResultSet</a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
+        
+                                            <p>Parse the search response and retrieve the results for iteration</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Yahoo_ResultSet.html#method___construct">Zend_Service_Yahoo_ResultSet</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_totalResults">totalResults</a>()
+        
+                                            <p>Total Number of results returned</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Yahoo_ResultSet.html#method_totalResults">Zend_Service_Yahoo_ResultSet</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_Yahoo_Result.html">Zend_Service_Yahoo_Result</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_current">current</a>()
+        
+                                            <p>Overrides Zend<em>Service</em>Yahoo_ResultSet::current()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_key">key</a>()
+        
+                                            <p>Implement SeekableIterator::key()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Yahoo_ResultSet.html#method_key">Zend_Service_Yahoo_ResultSet</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_next">next</a>()
+        
+                                            <p>Implement SeekableIterator::next()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Yahoo_ResultSet.html#method_next">Zend_Service_Yahoo_ResultSet</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rewind">rewind</a>()
+        
+                                            <p>Implement SeekableIterator::rewind()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Yahoo_ResultSet.html#method_rewind">Zend_Service_Yahoo_ResultSet</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_seek">seek</a>(int $index)
+        
+                                            <p>Implement SeekableIterator::seek()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Yahoo_ResultSet.html#method_seek">Zend_Service_Yahoo_ResultSet</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_valid">valid</a>()
+        
+                                            <p>Implement SeekableIterator::valid()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_Yahoo_ResultSet.html#method_valid">Zend_Service_Yahoo_ResultSet</a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="Zend_Service_Yahoo_ResultSet.html#method___construct">Zend_Service_Yahoo_ResultSet</a> at line         line 90</div>
+        <code>                    void
+    <strong>__construct</strong>(<a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a> $dom)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse the search response and retrieve the results for iteration</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/DOMDocument">DOMDocument</a></td>
+                <td>$dom</td>
+                <td>the REST fragment for this object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_totalResults">
+        <div class="location">in <a href="Zend_Service_Yahoo_ResultSet.html#method_totalResults">Zend_Service_Yahoo_ResultSet</a> at line         line 110</div>
+        <code>                    int
+    <strong>totalResults</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Total Number of results returned</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>Total number of results returned</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_current">
+        <div class="location">at line         line 59</div>
+        <code>                    <a href="Zend_Service_Yahoo_Result.html">Zend_Service_Yahoo_Result</a>
+    <strong>current</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Overrides Zend<em>Service</em>Yahoo_ResultSet::current()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_Yahoo_Result.html">Zend_Service_Yahoo_Result</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_key">
+        <div class="location">in <a href="Zend_Service_Yahoo_ResultSet.html#method_key">Zend_Service_Yahoo_ResultSet</a> at line         line 140</div>
+        <code>                    int
+    <strong>key</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implement SeekableIterator::key()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_next">
+        <div class="location">in <a href="Zend_Service_Yahoo_ResultSet.html#method_next">Zend_Service_Yahoo_ResultSet</a> at line         line 151</div>
+        <code>                    void
+    <strong>next</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implement SeekableIterator::next()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewind">
+        <div class="location">in <a href="Zend_Service_Yahoo_ResultSet.html#method_rewind">Zend_Service_Yahoo_ResultSet</a> at line         line 162</div>
+        <code>                    void
+    <strong>rewind</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implement SeekableIterator::rewind()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seek">
+        <div class="location">in <a href="Zend_Service_Yahoo_ResultSet.html#method_seek">Zend_Service_Yahoo_ResultSet</a> at line         line 175</div>
+        <code>                    void
+    <strong>seek</strong>(int $index)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implement SeekableIterator::seek()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/OutOfBoundsException">OutOfBoundsException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_valid">
+        <div class="location">in <a href="Zend_Service_Yahoo_ResultSet.html#method_valid">Zend_Service_Yahoo_ResultSet</a> at line         line 191</div>
+        <code>                    boolean
+    <strong>valid</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Implement SeekableIterator::valid()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

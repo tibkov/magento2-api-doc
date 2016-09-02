@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Checkout\Model\Type\Onepage | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Checkout_Model_Type_Onepage" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../Magento/Checkout.html">Checkout</a></li>
+                                        <li><a href="../../../../Magento/Checkout/Model.html">Model</a></li>
+                                        <li><a href="../../../../Magento/Checkout/Model/Type.html">Type</a></li>
+    
+                <li>Onepage</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Onepage
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Onepage</strong>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>METHOD_GUEST</td>
+                <td class="last">
+                    <p><em>Checkout types: Checkout as Guest, Register, Logged In Customer</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_REGISTER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>METHOD_CUSTOMER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>USE_FOR_SHIPPING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_USE_FOR_SHIPPING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../../Magento/Checkout/Helper/Data.html"><abbr title="Magento\Checkout\Helper\Data">Data</abbr></a> $helper, <a href="../../../../Magento/Customer/Model/Url.html"><abbr title="Magento\Customer\Model\Url">Url</abbr></a> $customerUrl, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a> $checkoutSession, <a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a> $customerSession, <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../Magento/Framework/App/RequestInterface.html"><abbr title="Magento\Framework\App\RequestInterface">RequestInterface</abbr></a> $request, <abbr title="Magento\Customer\Model\AddressFactory">AddressFactory</abbr> $customrAddrFactory, <abbr title="Magento\Customer\Model\FormFactory">FormFactory</abbr> $customerFormFactory, <abbr title="Magento\Customer\Model\CustomerFactory">CustomerFactory</abbr> $customerFactory, <abbr title="Magento\Sales\Model\OrderFactory">OrderFactory</abbr> $orderFactory, <a href="../../../../Magento/Framework/DataObject/Copy.html"><abbr title="Magento\Framework\DataObject\Copy">Copy</abbr></a> $objectCopyService, <a href="../../../../Magento/Framework/Message/ManagerInterface.html"><abbr title="Magento\Framework\Message\ManagerInterface">ManagerInterface</abbr></a> $messageManager, <a href="../../../../Magento/Customer/Model/Metadata/FormFactory.html"><abbr title="Magento\Customer\Model\Metadata\FormFactory">FormFactory</abbr></a> $formFactory, <abbr title="Magento\Customer\Api\Data\CustomerInterfaceFactory">CustomerInterfaceFactory</abbr> $customerDataFactory, <a href="../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a> $mathRandom, <a href="../../../../Magento/Framework/Encryption/EncryptorInterface.html"><abbr title="Magento\Framework\Encryption\EncryptorInterface">EncryptorInterface</abbr></a> $encryptor, <a href="../../../../Magento/Customer/Api/AddressRepositoryInterface.html"><abbr title="Magento\Customer\Api\AddressRepositoryInterface">AddressRepositoryInterface</abbr></a> $addressRepository, <a href="../../../../Magento/Customer/Api/AccountManagementInterface.html"><abbr title="Magento\Customer\Api\AccountManagementInterface">AccountManagementInterface</abbr></a> $accountManagement, <a href="../../../../Magento/Sales/Model/Order/Email/Sender/OrderSender.html"><abbr title="Magento\Sales\Model\Order\Email\Sender\OrderSender">OrderSender</abbr></a> $orderSender, <a href="../../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository, <a href="../../../../Magento/Quote/Api/CartRepositoryInterface.html"><abbr title="Magento\Quote\Api\CartRepositoryInterface">CartRepositoryInterface</abbr></a> $quoteRepository, <a href="../../../../Magento/Framework/Api/ExtensibleDataObjectConverter.html"><abbr title="Magento\Framework\Api\ExtensibleDataObjectConverter">ExtensibleDataObjectConverter</abbr></a> $extensibleDataObjectConverter, <a href="../../../../Magento/Quote/Api/CartManagementInterface.html"><abbr title="Magento\Quote\Api\CartManagementInterface">CartManagementInterface</abbr></a> $quoteManagement, <a href="../../../../Magento/Framework/Api/DataObjectHelper.html"><abbr title="Magento\Framework\Api\DataObjectHelper">DataObjectHelper</abbr></a> $dataObjectHelper, <a href="../../../../Magento/Quote/Model/Quote/TotalsCollector.html"><abbr title="Magento\Quote\Model\Quote\TotalsCollector">TotalsCollector</abbr></a> $totalsCollector)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCheckout">getCheckout</a>()
+        
+                                            <p>Get frontend checkout session object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQuote">getQuote</a>()
+        
+                                            <p>Quote object getter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Checkout\Model\Type\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setQuote">setQuote</a>(<a href="../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a> $quote)
+        
+                                            <p>Declare checkout quote instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCustomerSession">getCustomerSession</a>()
+        
+                                            <p>Get customer session object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Checkout\Model\Type\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initCheckout">initCheckout</a>()
+        
+                                            <p>Initialize quote state to be valid for one page checkout</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCheckoutMethod">getCheckoutMethod</a>()
+        
+                                            <p>Get quote checkout method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveCheckoutMethod">saveCheckoutMethod</a>(string $method)
+        
+                                            <p>Specify checkout method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveShipping">saveShipping</a>(array $data, int $customerAddressId)
+        
+                                            <p>Save checkout shipping address</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveShippingMethod">saveShippingMethod</a>(string $shippingMethod)
+        
+                                            <p>Specify quote shipping method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_savePayment">savePayment</a>(array $data)
+        
+                                            <p>Specify quote payment method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Checkout\Model\Type\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveOrder">saveOrder</a>()
+        
+                                            <p>Create order based on checkout type. Create customer if necessary.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLastOrderId">getLastOrderId</a>()
+        
+                                            <p>Get last order increment id by order id</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 204</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../../Magento/Checkout/Helper/Data.html"><abbr title="Magento\Checkout\Helper\Data">Data</abbr></a> $helper, <a href="../../../../Magento/Customer/Model/Url.html"><abbr title="Magento\Customer\Model\Url">Url</abbr></a> $customerUrl, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a> $checkoutSession, <a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a> $customerSession, <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../Magento/Framework/App/RequestInterface.html"><abbr title="Magento\Framework\App\RequestInterface">RequestInterface</abbr></a> $request, <abbr title="Magento\Customer\Model\AddressFactory">AddressFactory</abbr> $customrAddrFactory, <abbr title="Magento\Customer\Model\FormFactory">FormFactory</abbr> $customerFormFactory, <abbr title="Magento\Customer\Model\CustomerFactory">CustomerFactory</abbr> $customerFactory, <abbr title="Magento\Sales\Model\OrderFactory">OrderFactory</abbr> $orderFactory, <a href="../../../../Magento/Framework/DataObject/Copy.html"><abbr title="Magento\Framework\DataObject\Copy">Copy</abbr></a> $objectCopyService, <a href="../../../../Magento/Framework/Message/ManagerInterface.html"><abbr title="Magento\Framework\Message\ManagerInterface">ManagerInterface</abbr></a> $messageManager, <a href="../../../../Magento/Customer/Model/Metadata/FormFactory.html"><abbr title="Magento\Customer\Model\Metadata\FormFactory">FormFactory</abbr></a> $formFactory, <abbr title="Magento\Customer\Api\Data\CustomerInterfaceFactory">CustomerInterfaceFactory</abbr> $customerDataFactory, <a href="../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a> $mathRandom, <a href="../../../../Magento/Framework/Encryption/EncryptorInterface.html"><abbr title="Magento\Framework\Encryption\EncryptorInterface">EncryptorInterface</abbr></a> $encryptor, <a href="../../../../Magento/Customer/Api/AddressRepositoryInterface.html"><abbr title="Magento\Customer\Api\AddressRepositoryInterface">AddressRepositoryInterface</abbr></a> $addressRepository, <a href="../../../../Magento/Customer/Api/AccountManagementInterface.html"><abbr title="Magento\Customer\Api\AccountManagementInterface">AccountManagementInterface</abbr></a> $accountManagement, <a href="../../../../Magento/Sales/Model/Order/Email/Sender/OrderSender.html"><abbr title="Magento\Sales\Model\Order\Email\Sender\OrderSender">OrderSender</abbr></a> $orderSender, <a href="../../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository, <a href="../../../../Magento/Quote/Api/CartRepositoryInterface.html"><abbr title="Magento\Quote\Api\CartRepositoryInterface">CartRepositoryInterface</abbr></a> $quoteRepository, <a href="../../../../Magento/Framework/Api/ExtensibleDataObjectConverter.html"><abbr title="Magento\Framework\Api\ExtensibleDataObjectConverter">ExtensibleDataObjectConverter</abbr></a> $extensibleDataObjectConverter, <a href="../../../../Magento/Quote/Api/CartManagementInterface.html"><abbr title="Magento\Quote\Api\CartManagementInterface">CartManagementInterface</abbr></a> $quoteManagement, <a href="../../../../Magento/Framework/Api/DataObjectHelper.html"><abbr title="Magento\Framework\Api\DataObjectHelper">DataObjectHelper</abbr></a> $dataObjectHelper, <a href="../../../../Magento/Quote/Model/Quote/TotalsCollector.html"><abbr title="Magento\Quote\Model\Quote\TotalsCollector">TotalsCollector</abbr></a> $totalsCollector)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a></td>
+                <td>$eventManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Checkout/Helper/Data.html"><abbr title="Magento\Checkout\Helper\Data">Data</abbr></a></td>
+                <td>$helper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Model/Url.html"><abbr title="Magento\Customer\Model\Url">Url</abbr></a></td>
+                <td>$customerUrl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a></td>
+                <td>$checkoutSession</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a></td>
+                <td>$customerSession</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/RequestInterface.html"><abbr title="Magento\Framework\App\RequestInterface">RequestInterface</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Customer\Model\AddressFactory">AddressFactory</abbr></td>
+                <td>$customrAddrFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Customer\Model\FormFactory">FormFactory</abbr></td>
+                <td>$customerFormFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Customer\Model\CustomerFactory">CustomerFactory</abbr></td>
+                <td>$customerFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Sales\Model\OrderFactory">OrderFactory</abbr></td>
+                <td>$orderFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/DataObject/Copy.html"><abbr title="Magento\Framework\DataObject\Copy">Copy</abbr></a></td>
+                <td>$objectCopyService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Message/ManagerInterface.html"><abbr title="Magento\Framework\Message\ManagerInterface">ManagerInterface</abbr></a></td>
+                <td>$messageManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Model/Metadata/FormFactory.html"><abbr title="Magento\Customer\Model\Metadata\FormFactory">FormFactory</abbr></a></td>
+                <td>$formFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Customer\Api\Data\CustomerInterfaceFactory">CustomerInterfaceFactory</abbr></td>
+                <td>$customerDataFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Math/Random.html"><abbr title="Magento\Framework\Math\Random">Random</abbr></a></td>
+                <td>$mathRandom</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Encryption/EncryptorInterface.html"><abbr title="Magento\Framework\Encryption\EncryptorInterface">EncryptorInterface</abbr></a></td>
+                <td>$encryptor</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Api/AddressRepositoryInterface.html"><abbr title="Magento\Customer\Api\AddressRepositoryInterface">AddressRepositoryInterface</abbr></a></td>
+                <td>$addressRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Api/AccountManagementInterface.html"><abbr title="Magento\Customer\Api\AccountManagementInterface">AccountManagementInterface</abbr></a></td>
+                <td>$accountManagement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Sales/Model/Order/Email/Sender/OrderSender.html"><abbr title="Magento\Sales\Model\Order\Email\Sender\OrderSender">OrderSender</abbr></a></td>
+                <td>$orderSender</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a></td>
+                <td>$customerRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Quote/Api/CartRepositoryInterface.html"><abbr title="Magento\Quote\Api\CartRepositoryInterface">CartRepositoryInterface</abbr></a></td>
+                <td>$quoteRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Api/ExtensibleDataObjectConverter.html"><abbr title="Magento\Framework\Api\ExtensibleDataObjectConverter">ExtensibleDataObjectConverter</abbr></a></td>
+                <td>$extensibleDataObjectConverter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Quote/Api/CartManagementInterface.html"><abbr title="Magento\Quote\Api\CartManagementInterface">CartManagementInterface</abbr></a></td>
+                <td>$quoteManagement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Api/DataObjectHelper.html"><abbr title="Magento\Framework\Api\DataObjectHelper">DataObjectHelper</abbr></a></td>
+                <td>$dataObjectHelper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Quote/Model/Quote/TotalsCollector.html"><abbr title="Magento\Quote\Model\Quote\TotalsCollector">TotalsCollector</abbr></a></td>
+                <td>$totalsCollector</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCheckout">
+        <div class="location">at line         line 268</div>
+        <code>                    <a href="../../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a>
+    <strong>getCheckout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get frontend checkout session object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQuote">
+        <div class="location">at line         line 278</div>
+        <code>                    <a href="../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a>
+    <strong>getQuote</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Quote object getter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setQuote">
+        <div class="location">at line         line 293</div>
+        <code>                    <abbr title="Magento\Checkout\Model\Type\$this">$this</abbr>
+    <strong>setQuote</strong>(<a href="../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a> $quote)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Declare checkout quote instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Quote/Model/Quote.html"><abbr title="Magento\Quote\Model\Quote">Quote</abbr></a></td>
+                <td>$quote</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Checkout\Model\Type\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomerSession">
+        <div class="location">at line         line 305</div>
+        <code>                    <a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a>
+    <strong>getCustomerSession</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get customer session object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initCheckout">
+        <div class="location">at line         line 316</div>
+        <code>                    <abbr title="Magento\Checkout\Model\Type\$this">$this</abbr>
+    <strong>initCheckout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize quote state to be valid for one page checkout</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Checkout\Model\Type\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCheckoutMethod">
+        <div class="location">at line         line 350</div>
+        <code>                    string
+    <strong>getCheckoutMethod</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get quote checkout method</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveCheckoutMethod">
+        <div class="location">at line         line 371</div>
+        <code>                    array
+    <strong>saveCheckoutMethod</strong>(string $method)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify checkout method</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveShipping">
+        <div class="location">at line         line 401</div>
+        <code>                    array
+    <strong>saveShipping</strong>(array $data, int $customerAddressId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Save checkout shipping address</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$customerAddressId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveShippingMethod">
+        <div class="location">at line         line 480</div>
+        <code>                    array
+    <strong>saveShippingMethod</strong>(string $shippingMethod)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify quote shipping method</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$shippingMethod</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_savePayment">
+        <div class="location">at line         line 506</div>
+        <code>                    array
+    <strong>savePayment</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Specify quote payment method</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveOrder">
+        <div class="location">at line         line 689</div>
+        <code>                    <abbr title="Magento\Checkout\Model\Type\$this">$this</abbr>
+    <strong>saveOrder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create order based on checkout type. Create customer if necessary.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Checkout\Model\Type\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastOrderId">
+        <div class="location">at line         line 775</div>
+        <code>                    string
+    <strong>getLastOrderId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get last order increment id by order id</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

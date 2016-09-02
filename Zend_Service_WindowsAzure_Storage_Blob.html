@@ -1,0 +1,3644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_WindowsAzure_Storage_Blob | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_WindowsAzure_Storage_Blob" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_WindowsAzure_Storage_Blob
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_WindowsAzure_Storage_Blob</strong>        extends <a href="Zend_Service_WindowsAzure_Storage.html">Zend_Service_WindowsAzure_Storage</a>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>URL_DEV_BLOB</td>
+                <td class="last">
+                    <p><em>Development storage URLS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>URL_DEV_QUEUE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>URL_DEV_TABLE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>URL_CLOUD_BLOB</td>
+                <td class="last">
+                    <p><em>Live storage URLS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>URL_CLOUD_QUEUE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>URL_CLOUD_TABLE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_UNKNOWN</td>
+                <td class="last">
+                    <p><em>Resource types</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_CONTAINER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_BLOB</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_TABLE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_ENTITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_QUEUE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PREFIX_PROPERTIES</td>
+                <td class="last">
+                    <p><em>HTTP header prefixes</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PREFIX_METADATA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PREFIX_STORAGE_HEADER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ACL_PRIVATE</td>
+                <td class="last">
+                    <p><em>ACL - Private access</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ACL_PUBLIC</td>
+                <td class="last">
+                    <p><em>ACL - Public access (read all blobs)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ACL_PUBLIC_BLOB</td>
+                <td class="last">
+                    <p><em>ACL - Blob Public access (read all blobs)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ACL_PUBLIC_CONTAINER</td>
+                <td class="last">
+                    <p><em>ACL - Container Public access (enumerate and read all blobs)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LEASE_ACQUIRE</td>
+                <td class="last">
+                    <p><em>Blob lease constants</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LEASE_RENEW</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LEASE_RELEASE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LEASE_BREAK</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MAX_BLOB_SIZE</td>
+                <td class="last">
+                    <p><em>Maximal blob size (in bytes)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MAX_BLOB_TRANSFER_SIZE</td>
+                <td class="last">
+                    <p><em>Maximal blob transfer size (in bytes)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BLOBTYPE_BLOCK</td>
+                <td class="last">
+                    <p><em>Blob types</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BLOBTYPE_PAGE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAGE_WRITE_UPDATE</td>
+                <td class="last">
+                    <p><em>Put page write options</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAGE_WRITE_CLEAR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $host = Zend_Service_WindowsAzure_Storage::URL_DEV_BLOB, string $accountName = Zend_Service_WindowsAzure_Credentials_CredentialsAbstract::DEVSTORE_ACCOUNT, string $accountKey = Zend_Service_WindowsAzure_Credentials_CredentialsAbstract::DEVSTORE_KEY, boolean $usePathStyleUri = false, <a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a> $retryPolicy = null)
+        
+                                            <p>Creates a new Zend<em>Service</em>WindowsAzure<em>Storage</em>Blob instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHttpClientChannel">setHttpClientChannel</a>(<a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>|string $adapterInstance = &#039;Zend_Http_Client_Adapter_Proxy&#039;)
+        
+                                            <p>Set the HTTP client channel to use</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_setHttpClientChannel">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpClientChannel">getHttpClientChannel</a>()
+        
+                                            <p>Retrieve HTTP client channel</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_getHttpClientChannel">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRetryPolicy">setRetryPolicy</a>(<a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a> $retryPolicy = null)
+        
+                                            <p>Set retry policy to use when making requests</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_setRetryPolicy">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setProxy">setProxy</a>(boolean $useProxy = false, string $proxyUrl = &#039;&#039;, int $proxyPort = 80, string $proxyCredentials = &#039;&#039;)
+        
+                                            <p>Set proxy</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_setProxy">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAccountName">getAccountName</a>()
+        
+                                            <p>Returns the Windows Azure account name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_getAccountName">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseUrl">getBaseUrl</a>()
+        
+                                            <p>Get base URL for creating requests</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_getBaseUrl">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCredentials">setCredentials</a>(<a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a> $credentials)
+        
+                                            <p>Set Zend<em>Service</em>WindowsAzure<em>Credentials</em>CredentialsAbstract instance</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_setCredentials">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCredentials">getCredentials</a>()
+        
+                                            <p>Get Zend<em>Service</em>WindowsAzure<em>Credentials</em>CredentialsAbstract instance</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_getCredentials">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isoDate">isoDate</a>(int $timestamp = null)
+        
+                                            <p>Generate ISO 8601 compliant date string in UTC time zone</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_isoDate">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_urlencode">urlencode</a>(string $value)
+        
+                                            <p>URL encode function</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_urlencode">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isValidMetadataName">isValidMetadataName</a>(string $metadataName = &#039;&#039;)
+        
+                                            <p>Is valid metadata name?</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_isValidMetadataName">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createQueryStringFromArray">createQueryStringFromArray</a>(array $queryString)
+        
+                                            <p>Builds a query string from an array of elements</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Service_WindowsAzure_Storage.html#method_createQueryStringFromArray">Zend_Service_WindowsAzure_Storage</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_blobExists">blobExists</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null)
+        
+                                            <p>Check if a blob exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_containerExists">containerExists</a>(string $containerName = &#039;&#039;)
+        
+                                            <p>Check if a container exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createContainer">createContainer</a>(string $containerName = &#039;&#039;, array $metadata = array())
+        
+                                            <p>Create container</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createContainerIfNotExists">createContainerIfNotExists</a>(string $containerName = &#039;&#039;, array $metadata = array())
+        
+                                            <p>Create container if it does not exist</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContainerAcl">getContainerAcl</a>(string $containerName = &#039;&#039;, bool $signedIdentifiers = false)
+        
+                                            <p>Get container ACL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setContainerAcl">setContainerAcl</a>(string $containerName = &#039;&#039;, bool $acl = self::ACL_PRIVATE, array $signedIdentifiers = array())
+        
+                                            <p>Set container ACL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_WindowsAzure_Storage_BlobContainer.html">Zend_Service_WindowsAzure_Storage_BlobContainer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContainer">getContainer</a>(string $containerName = &#039;&#039;)
+        
+                                            <p>Get container</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getContainerMetadata">getContainerMetadata</a>(string $containerName = &#039;&#039;)
+        
+                                            <p>Get container metadata</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setContainerMetadata">setContainerMetadata</a>(string $containerName = &#039;&#039;, array $metadata = array(), array $additionalHeaders = array())
+        
+                                            <p>Set container metadata</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteContainer">deleteContainer</a>(string $containerName = &#039;&#039;, array $additionalHeaders = array())
+        
+                                            <p>Delete container</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listContainers">listContainers</a>(string $prefix = null, int $maxResults = null, string $marker = null, string $include = null, int $currentResultCount)
+        
+                                            <p>List containers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putBlob">putBlob</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $localFileName = &#039;&#039;, array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Put blob</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putBlobData">putBlobData</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, mixed $data = &#039;&#039;, array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Put blob data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putLargeBlob">putLargeBlob</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $localFileName = &#039;&#039;, array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Put large blob (> 64 MB)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putBlock">putBlock</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $identifier = &#039;&#039;, array $contents = &#039;&#039;, string $leaseId = null)
+        
+                                            <p>Put large blob block</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putBlockList">putBlockList</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, array $blockList = array(), array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Put block list</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBlockList">getBlockList</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null, integer $type)
+        
+                                            <p>Get block list</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createPageBlob">createPageBlob</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, int $size, array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Create page blob</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putPage">putPage</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, int $startByteOffset, int $endByteOffset, mixed $contents = &#039;&#039;, string $writeMethod = self::PAGE_WRITE_UPDATE, string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Put page in page blob</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageRegions">getPageRegions</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, int $startByteOffset, int $endByteOffset, string $leaseId = null)
+        
+                                            <p>Put page in page blob</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_copyBlob">copyBlob</a>(string $sourceContainerName = &#039;&#039;, string $sourceBlobName = &#039;&#039;, string $destinationContainerName = &#039;&#039;, string $destinationBlobName = &#039;&#039;, array $metadata = array(), string $sourceSnapshotId = null, string $destinationLeaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Copy blob</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBlob">getBlob</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $localFileName = &#039;&#039;, string $snapshotId = null, string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Get blob</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBlobData">getBlobData</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Get blob data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_WindowsAzure_Storage_BlobInstance.html">Zend_Service_WindowsAzure_Storage_BlobInstance</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBlobInstance">getBlobInstance</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Get blob instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBlobMetadata">getBlobMetadata</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null)
+        
+                                            <p>Get blob metadata</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBlobMetadata">setBlobMetadata</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Set blob metadata</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBlobProperties">setBlobProperties</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Set blob properties</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_WindowsAzure_Storage_BlobInstance.html">Zend_Service_WindowsAzure_Storage_BlobInstance</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBlobProperties">getBlobProperties</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null)
+        
+                                            <p>Get blob properties</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteBlob">deleteBlob</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null, array $additionalHeaders = array())
+        
+                                            <p>Delete blob</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_snapshotBlob">snapshotBlob</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, array $metadata = array(), array $additionalHeaders = array())
+        
+                                            <p>Snapshot blob</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_WindowsAzure_Storage_LeaseInstance.html">Zend_Service_WindowsAzure_Storage_LeaseInstance</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_leaseBlob">leaseBlob</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $leaseAction = self::LEASE_ACQUIRE, string $leaseId = null)
+        
+                                            <p>Lease blob - See (http://msdn.microsoft.com/en-us/library/ee691972.aspx)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listBlobs">listBlobs</a>(string $containerName = &#039;&#039;, string $prefix = &#039;&#039;, string $delimiter = &#039;&#039;, int $maxResults = null, string $marker = null, string $include = null, int $currentResultCount)
+        
+                                            <p>List blobs</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generateSharedAccessUrl">generateSharedAccessUrl</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $resource = &#039;b&#039;, string $permissions = &#039;r&#039;, string $start = &#039;&#039;, string $expiry = &#039;&#039;, string $identifier = &#039;&#039;)
+        
+                                            <p>Generate shared access URL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerAsClient">registerAsClient</a>(string $name)
+        
+                                            <p>Register this object as stream wrapper client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unregisterAsClient">unregisterAsClient</a>(string $name)
+        
+                                            <p>Unregister this object as stream wrapper client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWrapperClient">getWrapperClient</a>(string $name)
+        
+                                            <p>Get wrapper client for stream type</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerStreamWrapper">registerStreamWrapper</a>(string $name = &#039;azure&#039;)
+        
+                                            <p>Register this object as stream wrapper</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unregisterStreamWrapper">unregisterStreamWrapper</a>(string $name = &#039;azure&#039;)
+        
+                                            <p>Unregister this object as stream wrapper</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createResourceName">createResourceName</a>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;)
+        
+                                            <p>Create resource name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isValidContainerName">isValidContainerName</a>(string $containerName = &#039;&#039;)
+        
+                                            <p>Is valid container name?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 141</div>
+        <code>                    
+    <strong>__construct</strong>(string $host = Zend_Service_WindowsAzure_Storage::URL_DEV_BLOB, string $accountName = Zend_Service_WindowsAzure_Credentials_CredentialsAbstract::DEVSTORE_ACCOUNT, string $accountKey = Zend_Service_WindowsAzure_Credentials_CredentialsAbstract::DEVSTORE_KEY, boolean $usePathStyleUri = false, <a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a> $retryPolicy = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates a new Zend<em>Service</em>WindowsAzure<em>Storage</em>Blob instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$host</td>
+                <td>Storage host name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accountName</td>
+                <td>Account name for Windows Azure</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accountKey</td>
+                <td>Account key for Windows Azure</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$usePathStyleUri</td>
+                <td>Use path-style URI's</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a></td>
+                <td>$retryPolicy</td>
+                <td>Retry policy to use when making requests</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHttpClientChannel">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_setHttpClientChannel">Zend_Service_WindowsAzure_Storage</a> at line         line 225</div>
+        <code>                    
+    <strong>setHttpClientChannel</strong>(<a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>|string $adapterInstance = &#039;Zend_Http_Client_Adapter_Proxy&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the HTTP client channel to use</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>|string</td>
+                <td>$adapterInstance</td>
+                <td>Adapter instance or adapter class name.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpClientChannel">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_getHttpClientChannel">Zend_Service_WindowsAzure_Storage</a> at line         line 235</div>
+        <code>                    <a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>
+    <strong>getHttpClientChannel</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve HTTP client channel</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRetryPolicy">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_setRetryPolicy">Zend_Service_WindowsAzure_Storage</a> at line         line 245</div>
+        <code>                    
+    <strong>setRetryPolicy</strong>(<a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a> $retryPolicy = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set retry policy to use when making requests</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a></td>
+                <td>$retryPolicy</td>
+                <td>Retry policy to use when making requests</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setProxy">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_setProxy">Zend_Service_WindowsAzure_Storage</a> at line         line 261</div>
+        <code>                    
+    <strong>setProxy</strong>(boolean $useProxy = false, string $proxyUrl = &#039;&#039;, int $proxyPort = 80, string $proxyCredentials = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set proxy</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$useProxy</td>
+                <td>Use proxy?</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$proxyUrl</td>
+                <td>Proxy URL</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$proxyPort</td>
+                <td>Proxy port</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$proxyCredentials</td>
+                <td>Proxy credentials</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAccountName">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_getAccountName">Zend_Service_WindowsAzure_Storage</a> at line         line 292</div>
+        <code>                    string
+    <strong>getAccountName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the Windows Azure account name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseUrl">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_getBaseUrl">Zend_Service_WindowsAzure_Storage</a> at line         line 302</div>
+        <code>                    string
+    <strong>getBaseUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get base URL for creating requests</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCredentials">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_setCredentials">Zend_Service_WindowsAzure_Storage</a> at line         line 316</div>
+        <code>                    
+    <strong>setCredentials</strong>(<a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a> $credentials)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Zend<em>Service</em>WindowsAzure<em>Credentials</em>CredentialsAbstract instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a></td>
+                <td>$credentials</td>
+                <td>Zend<em>Service</em>WindowsAzure<em>Credentials</em>CredentialsAbstract instance to use for request signing.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCredentials">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_getCredentials">Zend_Service_WindowsAzure_Storage</a> at line         line 329</div>
+        <code>                    <a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a>
+    <strong>getCredentials</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Zend<em>Service</em>WindowsAzure<em>Credentials</em>CredentialsAbstract instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isoDate">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_isoDate">Zend_Service_WindowsAzure_Storage</a> at line         line 510</div>
+        <code>                    string
+    <strong>isoDate</strong>(int $timestamp = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate ISO 8601 compliant date string in UTC time zone</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$timestamp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_urlencode">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_urlencode">Zend_Service_WindowsAzure_Storage</a> at line         line 530</div>
+        <code>        static            string
+    <strong>urlencode</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>URL encode function</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Value to encode</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Encoded value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isValidMetadataName">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_isValidMetadataName">Zend_Service_WindowsAzure_Storage</a> at line         line 541</div>
+        <code>        static            boolean
+    <strong>isValidMetadataName</strong>(string $metadataName = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is valid metadata name?</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$metadataName</td>
+                <td>Metadata name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createQueryStringFromArray">
+        <div class="location">in <a href="Zend_Service_WindowsAzure_Storage.html#method_createQueryStringFromArray">Zend_Service_WindowsAzure_Storage</a> at line         line 560</div>
+        <code>        static            string
+    <strong>createQueryStringFromArray</strong>(array $queryString)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Builds a query string from an array of elements</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$queryString</td>
+                <td>Array of elements</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Assembled query string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_blobExists">
+        <div class="location">at line         line 160</div>
+        <code>                    boolean
+    <strong>blobExists</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if a blob exists</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$snapshotId</td>
+                <td>Snapshot identifier</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_containerExists">
+        <div class="location">at line         line 191</div>
+        <code>                    boolean
+    <strong>containerExists</strong>(string $containerName = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if a container exists</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createContainer">
+        <div class="location">at line         line 221</div>
+        <code>                    object
+    <strong>createContainer</strong>(string $containerName = &#039;&#039;, array $metadata = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create container</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$metadata</td>
+                <td>Key/value pairs of meta data</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td>Container properties</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createContainerIfNotExists">
+        <div class="location">at line         line 263</div>
+        <code>                    
+    <strong>createContainerIfNotExists</strong>(string $containerName = &#039;&#039;, array $metadata = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create container if it does not exist</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$metadata</td>
+                <td>Key/value pairs of meta data</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContainerAcl">
+        <div class="location">at line         line 278</div>
+        <code>                    string
+    <strong>getContainerAcl</strong>(string $containerName = &#039;&#039;, bool $signedIdentifiers = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get container ACL</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$signedIdentifiers</td>
+                <td>Display only private/blob/container or display signed identifiers?</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Acl, to be compared with Zend<em>Service</em>WindowsAzure<em>Storage</em>Blob::ACL_*</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setContainerAcl">
+        <div class="location">at line         line 344</div>
+        <code>                    
+    <strong>setContainerAcl</strong>(string $containerName = &#039;&#039;, bool $acl = self::ACL_PRIVATE, array $signedIdentifiers = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set container ACL</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$acl</td>
+                <td>Zend<em>Service</em>WindowsAzure<em>Storage</em>Blob::ACL_*</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$signedIdentifiers</td>
+                <td>Signed identifiers</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContainer">
+        <div class="location">at line         line 400</div>
+        <code>                    <a href="Zend_Service_WindowsAzure_Storage_BlobContainer.html">Zend_Service_WindowsAzure_Storage_BlobContainer</a>
+    <strong>getContainer</strong>(string $containerName = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get container</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_WindowsAzure_Storage_BlobContainer.html">Zend_Service_WindowsAzure_Storage_BlobContainer</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContainerMetadata">
+        <div class="location">at line         line 437</div>
+        <code>                    array
+    <strong>getContainerMetadata</strong>(string $containerName = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get container metadata</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Key/value pairs of meta data</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setContainerMetadata">
+        <div class="location">at line         line 461</div>
+        <code>                    
+    <strong>setContainerMetadata</strong>(string $containerName = &#039;&#039;, array $metadata = array(), array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set container metadata</p>                    <p>Calling the Set Container Metadata operation overwrites all existing metadata that is associated with the container. It's not possible to modify an individual name/value pair.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$metadata</td>
+                <td>Key/value pairs of meta data</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteContainer">
+        <div class="location">at line         line 503</div>
+        <code>                    
+    <strong>deleteContainer</strong>(string $containerName = &#039;&#039;, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete container</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listContainers">
+        <div class="location">at line         line 539</div>
+        <code>                    array
+    <strong>listContainers</strong>(string $prefix = null, int $maxResults = null, string $marker = null, string $include = null, int $currentResultCount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List containers</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td>Optional. Filters the results to return only containers whose name begins with the specified prefix.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$maxResults</td>
+                <td>Optional. Specifies the maximum number of containers to return per call to Azure storage. This does NOT affect list size returned by this function. (maximum: 5000)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$marker</td>
+                <td>Optional string value that identifies the portion of the list to be returned with the next list operation.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$include</td>
+                <td>Optional. Include this parameter to specify that the container's metadata be returned as part of the response body. (allowed values: '', 'metadata')</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$currentResultCount</td>
+                <td>Current result count (internal use)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putBlob">
+        <div class="location">at line         line 604</div>
+        <code>                    object
+    <strong>putBlob</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $localFileName = &#039;&#039;, array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put blob</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$localFileName</td>
+                <td>Local file name to be uploaded</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$metadata</td>
+                <td>Key/value pairs of meta data</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td>Partial blob properties</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putBlobData">
+        <div class="location">at line         line 652</div>
+        <code>                    object
+    <strong>putBlobData</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, mixed $data = &#039;&#039;, array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put blob data</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td>Data to store</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$metadata</td>
+                <td>Key/value pairs of meta data</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td>Partial blob properties</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putLargeBlob">
+        <div class="location">at line         line 725</div>
+        <code>                    object
+    <strong>putLargeBlob</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $localFileName = &#039;&#039;, array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put large blob (> 64 MB)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$localFileName</td>
+                <td>Local file name to be uploaded</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$metadata</td>
+                <td>Key/value pairs of meta data</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td>Partial blob properties</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putBlock">
+        <div class="location">at line         line 809</div>
+        <code>                    
+    <strong>putBlock</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $identifier = &#039;&#039;, array $contents = &#039;&#039;, string $leaseId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put large blob block</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td>Block ID</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$contents</td>
+                <td>Contents of the block</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putBlockList">
+        <div class="location">at line         line 860</div>
+        <code>                    
+    <strong>putBlockList</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, array $blockList = array(), array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put block list</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$blockList</td>
+                <td>Array of block identifiers</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$metadata</td>
+                <td>Key/value pairs of meta data</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBlockList">
+        <div class="location">at line         line 931</div>
+        <code>                    array
+    <strong>getBlockList</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null, integer $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get block list</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$snapshotId</td>
+                <td>Snapshot identifier</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$type</td>
+                <td>Type of block list to retrieve. 0 = all, 1 = committed, 2 = uncommitted</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createPageBlob">
+        <div class="location">at line         line 1019</div>
+        <code>                    object
+    <strong>createPageBlob</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, int $size, array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create page blob</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td>Size of the page blob in bytes</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$metadata</td>
+                <td>Key/value pairs of meta data</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td>Partial blob properties</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putPage">
+        <div class="location">at line         line 1099</div>
+        <code>                    
+    <strong>putPage</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, int $startByteOffset, int $endByteOffset, mixed $contents = &#039;&#039;, string $writeMethod = self::PAGE_WRITE_UPDATE, string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put page in page blob</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$startByteOffset</td>
+                <td>Start byte offset</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$endByteOffset</td>
+                <td>End byte offset</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$contents</td>
+                <td>Page contents</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$writeMethod</td>
+                <td>Write method (Zend<em>Service</em>WindowsAzure<em>Storage</em>Blob::PAGE<em>WRITE</em>*)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageRegions">
+        <div class="location">at line         line 1172</div>
+        <code>                    array
+    <strong>getPageRegions</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, int $startByteOffset, int $endByteOffset, string $leaseId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put page in page blob</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$startByteOffset</td>
+                <td>Start byte offset</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$endByteOffset</td>
+                <td>End byte offset</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Array of page ranges</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copyBlob">
+        <div class="location">at line         line 1255</div>
+        <code>                    object
+    <strong>copyBlob</strong>(string $sourceContainerName = &#039;&#039;, string $sourceBlobName = &#039;&#039;, string $destinationContainerName = &#039;&#039;, string $destinationBlobName = &#039;&#039;, array $metadata = array(), string $sourceSnapshotId = null, string $destinationLeaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Copy blob</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sourceContainerName</td>
+                <td>Source container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sourceBlobName</td>
+                <td>Source blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$destinationContainerName</td>
+                <td>Destination container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$destinationBlobName</td>
+                <td>Destination blob name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$metadata</td>
+                <td>Key/value pairs of meta data</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sourceSnapshotId</td>
+                <td>Source snapshot identifier</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$destinationLeaseId</td>
+                <td>Destination lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd894037.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td>Partial blob properties</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBlob">
+        <div class="location">at line         line 1347</div>
+        <code>                    
+    <strong>getBlob</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $localFileName = &#039;&#039;, string $snapshotId = null, string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get blob</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$localFileName</td>
+                <td>Local file name to store downloaded blob</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$snapshotId</td>
+                <td>Snapshot identifier</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBlobData">
+        <div class="location">at line         line 1381</div>
+        <code>                    mixed
+    <strong>getBlobData</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get blob data</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$snapshotId</td>
+                <td>Snapshot identifier</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>Blob contents</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBlobInstance">
+        <div class="location">at line         line 1436</div>
+        <code>                    <a href="Zend_Service_WindowsAzure_Storage_BlobInstance.html">Zend_Service_WindowsAzure_Storage_BlobInstance</a>
+    <strong>getBlobInstance</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get blob instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$snapshotId</td>
+                <td>Snapshot identifier</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_WindowsAzure_Storage_BlobInstance.html">Zend_Service_WindowsAzure_Storage_BlobInstance</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBlobMetadata">
+        <div class="location">at line         line 1514</div>
+        <code>                    array
+    <strong>getBlobMetadata</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get blob metadata</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$snapshotId</td>
+                <td>Snapshot identifier</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>Key/value pairs of meta data</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBlobMetadata">
+        <div class="location">at line         line 1548</div>
+        <code>                    
+    <strong>setBlobMetadata</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, array $metadata = array(), string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set blob metadata</p>                    <p>Calling the Set Blob Metadata operation overwrites all existing metadata that is associated with the blob. It's not possible to modify an individual name/value pair.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$metadata</td>
+                <td>Key/value pairs of meta data</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBlobProperties">
+        <div class="location">at line         line 1601</div>
+        <code>                    
+    <strong>setBlobProperties</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set blob properties</p>                    <p>All available properties are listed at http://msdn.microsoft.com/en-us/library/ee691966.aspx and should be provided in the $additionalHeaders parameter.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBlobProperties">
+        <div class="location">at line         line 1655</div>
+        <code>                    <a href="Zend_Service_WindowsAzure_Storage_BlobInstance.html">Zend_Service_WindowsAzure_Storage_BlobInstance</a>
+    <strong>getBlobProperties</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get blob properties</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$snapshotId</td>
+                <td>Snapshot identifier</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_WindowsAzure_Storage_BlobInstance.html">Zend_Service_WindowsAzure_Storage_BlobInstance</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteBlob">
+        <div class="location">at line         line 1687</div>
+        <code>                    
+    <strong>deleteBlob</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $snapshotId = null, string $leaseId = null, array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete blob</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$snapshotId</td>
+                <td>Snapshot identifier</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_snapshotBlob">
+        <div class="location">at line         line 1743</div>
+        <code>                    string
+    <strong>snapshotBlob</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, array $metadata = array(), array $additionalHeaders = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Snapshot blob</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$metadata</td>
+                <td>Key/value pairs of meta data</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additionalHeaders</td>
+                <td>Additional headers. See http://msdn.microsoft.com/en-us/library/dd179371.aspx for more information.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Date/Time value representing the snapshot identifier.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_leaseBlob">
+        <div class="location">at line         line 1791</div>
+        <code>                    <a href="Zend_Service_WindowsAzure_Storage_LeaseInstance.html">Zend_Service_WindowsAzure_Storage_LeaseInstance</a>
+    <strong>leaseBlob</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $leaseAction = self::LEASE_ACQUIRE, string $leaseId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Lease blob - See (http://msdn.microsoft.com/en-us/library/ee691972.aspx)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseAction</td>
+                <td>Lease action (Zend<em>Service</em>WindowsAzure<em>Storage</em>Blob::LEASE_*)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$leaseId</td>
+                <td>Lease identifier, required to renew the lease or to release the lease.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_WindowsAzure_Storage_LeaseInstance.html">Zend_Service_WindowsAzure_Storage_LeaseInstance</a></td>
+            <td>Lease instance</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listBlobs">
+        <div class="location">at line         line 1850</div>
+        <code>                    array
+    <strong>listBlobs</strong>(string $containerName = &#039;&#039;, string $prefix = &#039;&#039;, string $delimiter = &#039;&#039;, int $maxResults = null, string $marker = null, string $include = null, int $currentResultCount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List blobs</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td>Optional. Filters the results to return only blobs whose name begins with the specified prefix.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$delimiter</td>
+                <td>Optional. Delimiter, i.e. '/', for specifying folder hierarchy</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$maxResults</td>
+                <td>Optional. Specifies the maximum number of blobs to return per call to Azure storage. This does NOT affect list size returned by this function. (maximum: 5000)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$marker</td>
+                <td>Optional string value that identifies the portion of the list to be returned with the next list operation.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$include</td>
+                <td>Optional. Specifies that the response should include one or more of the following subsets: '', 'metadata', 'snapshots', 'uncommittedblobs'). Multiple values can be added separated with a comma (,)</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$currentResultCount</td>
+                <td>Current result count (internal use)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Exception.html">Zend_Service_WindowsAzure_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateSharedAccessUrl">
+        <div class="location">at line         line 1970</div>
+        <code>                    string
+    <strong>generateSharedAccessUrl</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;, string $resource = &#039;b&#039;, string $permissions = &#039;r&#039;, string $start = &#039;&#039;, string $expiry = &#039;&#039;, string $identifier = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate shared access URL</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$resource</td>
+                <td>Signed resource - container (c) - blob (b)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$permissions</td>
+                <td>Signed permissions - read (r), write (w), delete (d) and list (l)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$start</td>
+                <td>The time at which the Shared Access Signature becomes valid.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$expiry</td>
+                <td>The time at which the Shared Access Signature becomes invalid.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td>Signed identifier</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerAsClient">
+        <div class="location">at line         line 2002</div>
+        <code>                    <a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a>
+    <strong>registerAsClient</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register this object as stream wrapper client</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Protocol name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unregisterAsClient">
+        <div class="location">at line         line 2014</div>
+        <code>                    <a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a>
+    <strong>unregisterAsClient</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unregister this object as stream wrapper client</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Protocol name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWrapperClient">
+        <div class="location">at line         line 2026</div>
+        <code>        static            <a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a>
+    <strong>getWrapperClient</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get wrapper client for stream type</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Protocol name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerStreamWrapper">
+        <div class="location">at line         line 2036</div>
+        <code>                    
+    <strong>registerStreamWrapper</strong>(string $name = &#039;azure&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register this object as stream wrapper</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Protocol name</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unregisterStreamWrapper">
+        <div class="location">at line         line 2048</div>
+        <code>                    <a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a>
+    <strong>unregisterStreamWrapper</strong>(string $name = &#039;azure&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unregister this object as stream wrapper</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Protocol name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_WindowsAzure_Storage_Blob.html">Zend_Service_WindowsAzure_Storage_Blob</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createResourceName">
+        <div class="location">at line         line 2061</div>
+        <code>        static            string
+    <strong>createResourceName</strong>(string $containerName = &#039;&#039;, string $blobName = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create resource name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$blobName</td>
+                <td>Blob name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isValidContainerName">
+        <div class="location">at line         line 2081</div>
+        <code>        static            boolean
+    <strong>isValidContainerName</strong>(string $containerName = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is valid container name?</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$containerName</td>
+                <td>Container name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

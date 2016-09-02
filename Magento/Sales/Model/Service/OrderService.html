@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Sales\Model\Service\OrderService | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Sales_Model_Service_OrderService" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../Magento/Sales.html">Sales</a></li>
+                                        <li><a href="../../../../Magento/Sales/Model.html">Model</a></li>
+                                        <li><a href="../../../../Magento/Sales/Model/Service.html">Service</a></li>
+    
+                <li>OrderService</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            OrderService
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>OrderService</strong>        implements
+        <a href="../../../../Magento/Sales/Api/OrderManagementInterface.html"><abbr title="Magento\Sales\Api\OrderManagementInterface">OrderManagementInterface</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class OrderService</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Magento/Sales/Api/OrderRepositoryInterface.html"><abbr title="Magento\Sales\Api\OrderRepositoryInterface">OrderRepositoryInterface</abbr></a> $orderRepository, <a href="../../../../Magento/Sales/Api/OrderStatusHistoryRepositoryInterface.html"><abbr title="Magento\Sales\Api\OrderStatusHistoryRepositoryInterface">OrderStatusHistoryRepositoryInterface</abbr></a> $historyRepository, <a href="../../../../Magento/Framework/Api/SearchCriteriaBuilder.html"><abbr title="Magento\Framework\Api\SearchCriteriaBuilder">SearchCriteriaBuilder</abbr></a> $criteriaBuilder, <a href="../../../../Magento/Framework/Api/FilterBuilder.html"><abbr title="Magento\Framework\Api\FilterBuilder">FilterBuilder</abbr></a> $filterBuilder, <a href="../../../../Magento/Sales/Model/OrderNotifier.html"><abbr title="Magento\Sales\Model\OrderNotifier">OrderNotifier</abbr></a> $notifier, <a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../../Magento/Sales/Model/Order/Email/Sender/OrderCommentSender.html"><abbr title="Magento\Sales\Model\Order\Email\Sender\OrderCommentSender">OrderCommentSender</abbr></a> $orderCommentSender)
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cancel">cancel</a>(int $id)
+        
+                                            <p>Order cancel</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Sales/Api/Data/OrderStatusHistorySearchResultInterface.html"><abbr title="Magento\Sales\Api\Data\OrderStatusHistorySearchResultInterface">OrderStatusHistorySearchResultInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCommentsList">getCommentsList</a>(int $id)
+        
+                                            <p>Returns list of comments attached to order</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addComment">addComment</a>(int $id, <a href="../../../../Magento/Sales/Api/Data/OrderStatusHistoryInterface.html"><abbr title="Magento\Sales\Api\Data\OrderStatusHistoryInterface">OrderStatusHistoryInterface</abbr></a> $statusHistory)
+        
+                                            <p>Add comment to order</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_notify">notify</a>(int $id)
+        
+                                            <p>Notify user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStatus">getStatus</a>(int $id)
+        
+                                            <p>Returns order status</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hold">hold</a>(int $id)
+        
+                                            <p>Order hold</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unHold">unHold</a>(int $id)
+        
+                                            <p>Order un hold</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_place">place</a>(<a href="../../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a> $order)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Sales/Model/Order.html"><abbr title="Magento\Sales\Model\Order">Order</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setState">setState</a>(<a href="../../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a> $order, string $state, string|bool $status = false, string $comment = &#039;&#039;, bool $isCustomerNotified = null, bool $shouldProtectState = true)
+        
+                                            <p>Order state setter.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 63</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../Magento/Sales/Api/OrderRepositoryInterface.html"><abbr title="Magento\Sales\Api\OrderRepositoryInterface">OrderRepositoryInterface</abbr></a> $orderRepository, <a href="../../../../Magento/Sales/Api/OrderStatusHistoryRepositoryInterface.html"><abbr title="Magento\Sales\Api\OrderStatusHistoryRepositoryInterface">OrderStatusHistoryRepositoryInterface</abbr></a> $historyRepository, <a href="../../../../Magento/Framework/Api/SearchCriteriaBuilder.html"><abbr title="Magento\Framework\Api\SearchCriteriaBuilder">SearchCriteriaBuilder</abbr></a> $criteriaBuilder, <a href="../../../../Magento/Framework/Api/FilterBuilder.html"><abbr title="Magento\Framework\Api\FilterBuilder">FilterBuilder</abbr></a> $filterBuilder, <a href="../../../../Magento/Sales/Model/OrderNotifier.html"><abbr title="Magento\Sales\Model\OrderNotifier">OrderNotifier</abbr></a> $notifier, <a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../../Magento/Sales/Model/Order/Email/Sender/OrderCommentSender.html"><abbr title="Magento\Sales\Model\Order\Email\Sender\OrderCommentSender">OrderCommentSender</abbr></a> $orderCommentSender)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Sales/Api/OrderRepositoryInterface.html"><abbr title="Magento\Sales\Api\OrderRepositoryInterface">OrderRepositoryInterface</abbr></a></td>
+                <td>$orderRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Sales/Api/OrderStatusHistoryRepositoryInterface.html"><abbr title="Magento\Sales\Api\OrderStatusHistoryRepositoryInterface">OrderStatusHistoryRepositoryInterface</abbr></a></td>
+                <td>$historyRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Api/SearchCriteriaBuilder.html"><abbr title="Magento\Framework\Api\SearchCriteriaBuilder">SearchCriteriaBuilder</abbr></a></td>
+                <td>$criteriaBuilder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Api/FilterBuilder.html"><abbr title="Magento\Framework\Api\FilterBuilder">FilterBuilder</abbr></a></td>
+                <td>$filterBuilder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Sales/Model/OrderNotifier.html"><abbr title="Magento\Sales\Model\OrderNotifier">OrderNotifier</abbr></a></td>
+                <td>$notifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a></td>
+                <td>$eventManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Sales/Model/Order/Email/Sender/OrderCommentSender.html"><abbr title="Magento\Sales\Model\Order\Email\Sender\OrderCommentSender">OrderCommentSender</abbr></a></td>
+                <td>$orderCommentSender</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancel">
+        <div class="location">at line         line 87</div>
+        <code>                    bool
+    <strong>cancel</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Order cancel</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>The order ID.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCommentsList">
+        <div class="location">at line         line 104</div>
+        <code>                    <a href="../../../../Magento/Sales/Api/Data/OrderStatusHistorySearchResultInterface.html"><abbr title="Magento\Sales\Api\Data\OrderStatusHistorySearchResultInterface">OrderStatusHistorySearchResultInterface</abbr></a>
+    <strong>getCommentsList</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns list of comments attached to order</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>The order ID.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Sales/Api/Data/OrderStatusHistorySearchResultInterface.html"><abbr title="Magento\Sales\Api\Data\OrderStatusHistorySearchResultInterface">OrderStatusHistorySearchResultInterface</abbr></a></td>
+            <td>Order status history search results interface.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addComment">
+        <div class="location">at line         line 120</div>
+        <code>                    bool
+    <strong>addComment</strong>(int $id, <a href="../../../../Magento/Sales/Api/Data/OrderStatusHistoryInterface.html"><abbr title="Magento\Sales\Api\Data\OrderStatusHistoryInterface">OrderStatusHistoryInterface</abbr></a> $statusHistory)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add comment to order</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>The order ID.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Sales/Api/Data/OrderStatusHistoryInterface.html"><abbr title="Magento\Sales\Api\Data\OrderStatusHistoryInterface">OrderStatusHistoryInterface</abbr></a></td>
+                <td>$statusHistory</td>
+                <td>Status history comment.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_notify">
+        <div class="location">at line         line 137</div>
+        <code>                    bool
+    <strong>notify</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Notify user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>The order ID.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatus">
+        <div class="location">at line         line 149</div>
+        <code>                    string
+    <strong>getStatus</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns order status</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>The order ID.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Order status.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hold">
+        <div class="location">at line         line 160</div>
+        <code>                    bool
+    <strong>hold</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Order hold</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>The order ID.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unHold">
+        <div class="location">at line         line 173</div>
+        <code>                    bool
+    <strong>unHold</strong>(int $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Order un hold</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td>The order ID.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_place">
+        <div class="location">at line         line 185</div>
+        <code>                    <a href="../../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a>
+    <strong>place</strong>(<a href="../../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a> $order)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a></td>
+                <td>$order</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setState">
+        <div class="location">at line         line 216</div>
+        <code>                    <a href="../../../../Magento/Sales/Model/Order.html"><abbr title="Magento\Sales\Model\Order">Order</abbr></a>
+    <strong>setState</strong>(<a href="../../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a> $order, string $state, string|bool $status = false, string $comment = &#039;&#039;, bool $isCustomerNotified = null, bool $shouldProtectState = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Order state setter.</p>                    <p>If status is specified, will add order status history with specified comment
+the setData() cannot be overridden because of compatibility issues with resource model
+By default allows to set any state. Can also update status to default or specified value
+Complete and closed states are encapsulated intentionally</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Sales/Api/Data/OrderInterface.html"><abbr title="Magento\Sales\Api\Data\OrderInterface">OrderInterface</abbr></a></td>
+                <td>$order</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$state</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|bool</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$comment</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isCustomerNotified</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$shouldProtectState</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Sales/Model/Order.html"><abbr title="Magento\Sales\Model\Order">Order</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Db_Profiler | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Db_Profiler" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Db_Profiler
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Db_Profiler</strong>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>CONNECT</td>
+                <td class="last">
+                    <p><em>A connection operation or selecting a database.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>QUERY</td>
+                <td class="last">
+                    <p><em>Any general database query that does not fit into the other constants.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INSERT</td>
+                <td class="last">
+                    <p><em>Adding new data to the database, such as SQL's INSERT.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UPDATE</td>
+                <td class="last">
+                    <p><em>Updating existing information in the database, such as SQL's UPDATE.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DELETE</td>
+                <td class="last">
+                    <p><em>An operation related to deleting data in the database,
+such as SQL's DELETE.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SELECT</td>
+                <td class="last">
+                    <p><em>Retrieving information from the database, such as SQL's SELECT.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TRANSACTION</td>
+                <td class="last">
+                    <p><em>Transactional operation, such as start transaction, commit, or rollback.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>STORED</td>
+                <td class="last">
+                    <p><em>Inform that a query is stored (in case of filtering)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IGNORED</td>
+                <td class="last">
+                    <p><em>Inform that a query is ignored (in case of filtering)</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(boolean $enabled = false)
+        
+                                            <p>Class constructor.  The profiler is disabled by default unless it is
+specifically enabled by passing in $enabled here or calling setEnabled().</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEnabled">setEnabled</a>(boolean $enable)
+        
+                                            <p>Enable or disable the profiler.  If $enable is false, the profiler
+is disabled and will not log any queries sent to it.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEnabled">getEnabled</a>()
+        
+                                            <p>Get the current state of enable.  If True is returned,
+the profiler is enabled.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFilterElapsedSecs">setFilterElapsedSecs</a>(integer $minimumSeconds = null)
+        
+                                            <p>Sets a minimum number of seconds for saving query profiles.  If this
+is set, only those queries whose elapsed time is equal or greater than
+$minimumSeconds will be saved.  To save all queries regardless of
+elapsed time, set $minimumSeconds to null.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilterElapsedSecs">getFilterElapsedSecs</a>()
+        
+                                            <p>Returns the minimum number of seconds for saving query profiles, or null if
+query profiles are saved regardless of elapsed time.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFilterQueryType">setFilterQueryType</a>(integer $queryTypes = null)
+        
+                                            <p>Sets the types of query profiles to save.  Set $queryType to one of
+the Zend<em>Db</em>Profiler::* constants to only save profiles for that type of
+query.  To save more than one type, logical OR them together.  To
+save all queries regardless of type, set $queryType to null.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilterQueryType">getFilterQueryType</a>()
+        
+                                            <p>Returns the types of query profiles saved, or null if queries are saved regardless
+of their types.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clear">clear</a>()
+        
+                                            <p>Clears the history of any past query profiles.  This is relentless
+and will even clear queries that were started and may not have
+been marked as ended.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_queryClone">queryClone</a>(<a href="Zend_Db_Profiler_Query.html">Zend_Db_Profiler_Query</a> $query)
+        
+                                            <p>Clone a profiler query</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_queryStart">queryStart</a>(string $queryText, integer $queryType = null)
+        
+                                            <p>Starts a query.  Creates a new query profile object (Zend<em>Db</em>Profiler_Query)
+and returns the "query profiler handle".  Run the query, then call
+queryEnd() and pass it this handle to make the query as ended and
+record the time.  If the profiler is not enabled, this takes no
+action and immediately returns null.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_queryEnd">queryEnd</a>(integer $queryId)
+        
+                                            <p>Ends a query. Pass it the handle that was returned by queryStart().</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Profiler_Query.html">Zend_Db_Profiler_Query</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQueryProfile">getQueryProfile</a>(integer $queryId)
+        
+                                            <p>Get a profile for a query.  Pass it the same handle that was returned
+by queryStart() and it will return a Zend<em>Db</em>Profiler_Query object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getQueryProfiles">getQueryProfiles</a>(integer $queryType = null, boolean $showUnfinished = false)
+        
+                                            <p>Get an array of query profiles (Zend<em>Db</em>Profiler<em>Query objects).  If $queryType
+is set to one of the Zend</em>Db_Profiler::* constants then only queries of that
+type will be returned.  Normally, queries that have not yet ended will
+not be returned unless $showUnfinished is set to True.  If no
+queries were found, False is returned. The returned array is indexed by the query
+profile handles.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTotalElapsedSecs">getTotalElapsedSecs</a>(integer $queryType = null)
+        
+                                            <p>Get the total elapsed time (in seconds) of all of the profiled queries.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTotalNumQueries">getTotalNumQueries</a>(integer $queryType = null)
+        
+                                            <p>Get the total number of queries that have been profiled.  Only queries that have ended will
+be counted.  If $queryType is set to one of the Zend<em>Db</em>Profiler::* constants, only queries of
+that type will be counted.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Db_Profiler_Query.html">Zend_Db_Profiler_Query</a>|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLastQueryProfile">getLastQueryProfile</a>()
+        
+                                            <p>Get the Zend<em>Db</em>Profiler_Query object for the last query that was run, regardless if it has
+ended or not.  If the query has not ended, its end time will be null.  If no queries have
+been profiled, false is returned.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 124</div>
+        <code>                    void
+    <strong>__construct</strong>(boolean $enabled = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Class constructor.  The profiler is disabled by default unless it is
+specifically enabled by passing in $enabled here or calling setEnabled().</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$enabled</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEnabled">
+        <div class="location">at line         line 136</div>
+        <code>                    <a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a>
+    <strong>setEnabled</strong>(boolean $enable)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enable or disable the profiler.  If $enable is false, the profiler
+is disabled and will not log any queries sent to it.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$enable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEnabled">
+        <div class="location">at line         line 149</div>
+        <code>                    boolean
+    <strong>getEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current state of enable.  If True is returned,
+the profiler is enabled.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFilterElapsedSecs">
+        <div class="location">at line         line 163</div>
+        <code>                    <a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a>
+    <strong>setFilterElapsedSecs</strong>(integer $minimumSeconds = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets a minimum number of seconds for saving query profiles.  If this
+is set, only those queries whose elapsed time is equal or greater than
+$minimumSeconds will be saved.  To save all queries regardless of
+elapsed time, set $minimumSeconds to null.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$minimumSeconds</td>
+                <td>OPTIONAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilterElapsedSecs">
+        <div class="location">at line         line 180</div>
+        <code>                    integer|null
+    <strong>getFilterElapsedSecs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the minimum number of seconds for saving query profiles, or null if
+query profiles are saved regardless of elapsed time.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFilterQueryType">
+        <div class="location">at line         line 194</div>
+        <code>                    <a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a>
+    <strong>setFilterQueryType</strong>(integer $queryTypes = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the types of query profiles to save.  Set $queryType to one of
+the Zend<em>Db</em>Profiler::* constants to only save profiles for that type of
+query.  To save more than one type, logical OR them together.  To
+save all queries regardless of type, set $queryType to null.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$queryTypes</td>
+                <td>OPTIONAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilterQueryType">
+        <div class="location">at line         line 208</div>
+        <code>                    integer|null
+    <strong>getFilterQueryType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the types of query profiles saved, or null if queries are saved regardless
+of their types.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Zend_Db_Profiler::setFilterQueryType()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clear">
+        <div class="location">at line         line 220</div>
+        <code>                    <a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a>
+    <strong>clear</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clears the history of any past query profiles.  This is relentless
+and will even clear queries that were started and may not have
+been marked as ended.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Profiler.html">Zend_Db_Profiler</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_queryClone">
+        <div class="location">at line         line 233</div>
+        <code>                    integer
+    <strong>queryClone</strong>(<a href="Zend_Db_Profiler_Query.html">Zend_Db_Profiler_Query</a> $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clone a profiler query</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Db_Profiler_Query.html">Zend_Db_Profiler_Query</a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td>or null</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_queryStart">
+        <div class="location">at line         line 253</div>
+        <code>                    integer|null
+    <strong>queryStart</strong>(string $queryText, integer $queryType = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Starts a query.  Creates a new query profile object (Zend<em>Db</em>Profiler_Query)
+and returns the "query profiler handle".  Run the query, then call
+queryEnd() and pass it this handle to make the query as ended and
+record the time.  If the profiler is not enabled, this takes no
+action and immediately returns null.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queryText</td>
+                <td>SQL statement</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$queryType</td>
+                <td>OPTIONAL Type of query, one of the Zend<em>Db</em>Profiler::* constants</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_queryEnd">
+        <div class="location">at line         line 299</div>
+        <code>                    string
+    <strong>queryEnd</strong>(integer $queryId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Ends a query. Pass it the handle that was returned by queryStart().</p>                    <p>This will mark the query as ended and save the time.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$queryId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Inform that a query is stored or ignored.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Db_Profiler_Exception.html">Zend_Db_Profiler_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueryProfile">
+        <div class="location">at line         line 358</div>
+        <code>                    <a href="Zend_Db_Profiler_Query.html">Zend_Db_Profiler_Query</a>
+    <strong>getQueryProfile</strong>(integer $queryId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a profile for a query.  Pass it the same handle that was returned
+by queryStart() and it will return a Zend<em>Db</em>Profiler_Query object.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$queryId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Profiler_Query.html">Zend_Db_Profiler_Query</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Db_Profiler_Exception.html">Zend_Db_Profiler_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueryProfiles">
+        <div class="location">at line         line 383</div>
+        <code>                    array|false
+    <strong>getQueryProfiles</strong>(integer $queryType = null, boolean $showUnfinished = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an array of query profiles (Zend<em>Db</em>Profiler<em>Query objects).  If $queryType
+is set to one of the Zend</em>Db_Profiler::* constants then only queries of that
+type will be returned.  Normally, queries that have not yet ended will
+not be returned unless $showUnfinished is set to True.  If no
+queries were found, False is returned. The returned array is indexed by the query
+profile handles.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$queryType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$showUnfinished</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTotalElapsedSecs">
+        <div class="location">at line         line 414</div>
+        <code>                    float
+    <strong>getTotalElapsedSecs</strong>(integer $queryType = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the total elapsed time (in seconds) of all of the profiled queries.</p>                    <p>Only queries that have ended will be counted.  If $queryType is set to
+one or more of the Zend<em>Db</em>Profiler::* constants, the elapsed time will be calculated
+only for queries of the given type(s).</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$queryType</td>
+                <td>OPTIONAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTotalNumQueries">
+        <div class="location">at line         line 438</div>
+        <code>                    integer
+    <strong>getTotalNumQueries</strong>(integer $queryType = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the total number of queries that have been profiled.  Only queries that have ended will
+be counted.  If $queryType is set to one of the Zend<em>Db</em>Profiler::* constants, only queries of
+that type will be counted.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$queryType</td>
+                <td>OPTIONAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastQueryProfile">
+        <div class="location">at line         line 461</div>
+        <code>                    <a href="Zend_Db_Profiler_Query.html">Zend_Db_Profiler_Query</a>|false
+    <strong>getLastQueryProfile</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Zend<em>Db</em>Profiler_Query object for the last query that was run, regardless if it has
+ended or not.  If the query has not ended, its end time will be null.  If no queries have
+been profiled, false is returned.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Db_Profiler_Query.html">Zend_Db_Profiler_Query</a>|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

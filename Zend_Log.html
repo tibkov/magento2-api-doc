@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Log | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Log" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Log
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Log</strong>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>EMERG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ALERT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CRIT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERR</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WARN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOTICE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INFO</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEBUG</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="Zend_Log_Writer_Abstract.html">Zend_Log_Writer_Abstract</a> $writer = null)
+        
+                                            <p>Class constructor.  Create a new logger</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Log.html">Zend_Log</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_factory">factory</a>(array|<a href="Zend_Config.html">Zend_Config</a> $config = array())
+        
+                                            <p>Factory to construct the logger and one or more writers
+based on the configuration array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+        
+                                            <p>Class destructor.  Shutdown log writers</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, string $params)
+        
+                                            <p>Undefined method handler allows a shortcut:
+  $log->priorityName('message')
+    instead of
+  $log->log('message', Zend<em>Log::PRIORITY</em>NAME)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_log">log</a>(string $message, integer $priority, mixed $extras = null)
+        
+                                            <p>Log a message at a priority</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addPriority">addPriority</a>(string $name, integer $priority)
+        
+                                            <p>Add a custom priority</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFilter">addFilter</a>(int|<a href="Zend_Config.html">Zend_Config</a>|array|<a href="Zend_Log_Filter_Interface.html">Zend_Log_Filter_Interface</a> $filter)
+        
+                                            <p>Add a filter that will be applied before all log writers.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Log.html">Zend_Log</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addWriter">addWriter</a>(mixed $writer)
+        
+                                            <p>Add a writer.  A writer is responsible for taking a log
+message and writing it out to storage.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Log.html">Zend_Log</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEventItem">setEventItem</a>(string $name, string $value)
+        
+                                            <p>Set an extra item to pass to the log writers.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Log.html">Zend_Log</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerErrorHandler">registerErrorHandler</a>()
+        
+                                            <p>Register Logging system as an error handler to log php errors
+Note: it still calls the original error handler if set<em>error</em>handler is able to return it.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_errorHandler">errorHandler</a>(int $errno, string $errstr, string $errfile, int $errline, array $errcontext)
+        
+                                            <p>Error Handler will convert error into log message, and then call the original error handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Log.html">Zend_Log</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTimestampFormat">setTimestampFormat</a>(string $format)
+        
+                                            <p>Set timestamp format for log entries.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTimestampFormat">getTimestampFormat</a>()
+        
+                                            <p>Get timestamp format used for log entries.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_emerg">emerg</a>(string  $message, $extras = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_alert">alert</a>(string  $message, $extras = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_crit">crit</a>(string  $message, $extras = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_err">err</a>(string  $message, $extras = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_warn">warn</a>(string  $message, $extras = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_notice">notice</a>(string  $message, $extras = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_info">info</a>(string  $message, $extras = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_debug">debug</a>(string  $message, $extras = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 119</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="Zend_Log_Writer_Abstract.html">Zend_Log_Writer_Abstract</a> $writer = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Class constructor.  Create a new logger</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Log_Writer_Abstract.html">Zend_Log_Writer_Abstract</a></td>
+                <td>$writer</td>
+                <td>default writer</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_factory">
+        <div class="location">at line         line 137</div>
+        <code>        static            <a href="Zend_Log.html">Zend_Log</a>
+    <strong>factory</strong>(array|<a href="Zend_Config.html">Zend_Config</a> $config = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory to construct the logger and one or more writers
+based on the configuration array</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|<a href="Zend_Config.html">Zend_Config</a></td>
+                <td>$config</td>
+                <td>Array or instance of Zend_Config</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Log.html">Zend_Log</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Log_Exception.html">Zend_Log_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">at line         line 362</div>
+        <code>                    void
+    <strong>__destruct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Class destructor.  Shutdown log writers</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">at line         line 381</div>
+        <code>                    void
+    <strong>__call</strong>(string $method, string $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Undefined method handler allows a shortcut:
+  $log->priorityName('message')
+    instead of
+  $log->log('message', Zend<em>Log::PRIORITY</em>NAME)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>priority name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$params</td>
+                <td>message to log</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Log_Exception.html">Zend_Log_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location">at line         line 416</div>
+        <code>                    void
+    <strong>log</strong>(string $message, integer $priority, mixed $extras = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Log a message at a priority</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>Message to log</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$priority</td>
+                <td>Priority of message</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$extras</td>
+                <td>Extra information to log in event</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Log_Exception.html">Zend_Log_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPriority">
+        <div class="location">at line         line 476</div>
+        <code>                    $this
+    <strong>addPriority</strong>(string $name, integer $priority)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a custom priority</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of priority</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$priority</td>
+                <td>Numeric priority</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Log_Exception.html">Zend_Log_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFilter">
+        <div class="location">at line         line 501</div>
+        <code>                    $this
+    <strong>addFilter</strong>(int|<a href="Zend_Config.html">Zend_Config</a>|array|<a href="Zend_Log_Filter_Interface.html">Zend_Log_Filter_Interface</a> $filter)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a filter that will be applied before all log writers.</p>                    <p>Before a message will be received by any of the writers, it
+must be accepted by all filters added with this method.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|<a href="Zend_Config.html">Zend_Config</a>|array|<a href="Zend_Log_Filter_Interface.html">Zend_Log_Filter_Interface</a></td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Log_Exception.html">Zend_Log_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addWriter">
+        <div class="location">at line         line 529</div>
+        <code>                    <a href="Zend_Log.html">Zend_Log</a>
+    <strong>addWriter</strong>(mixed $writer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a writer.  A writer is responsible for taking a log
+message and writing it out to storage.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$writer</td>
+                <td>Zend<em>Log</em>Writer_Abstract or Config array</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Log.html">Zend_Log</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Log_Exception.html">Zend_Log_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEventItem">
+        <div class="location">at line         line 555</div>
+        <code>                    <a href="Zend_Log.html">Zend_Log</a>
+    <strong>setEventItem</strong>(string $name, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set an extra item to pass to the log writers.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Name of the field</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Value of the field</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Log.html">Zend_Log</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerErrorHandler">
+        <div class="location">at line         line 576</div>
+        <code>                    <a href="Zend_Log.html">Zend_Log</a>
+    <strong>registerErrorHandler</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Register Logging system as an error handler to log php errors
+Note: it still calls the original error handler if set<em>error</em>handler is able to return it.</p>                    <p>Errors will be mapped as:
+  E<em>NOTICE, E</em>USER<em>NOTICE => NOTICE
+  E</em>WARNING, E<em>CORE</em>WARNING, E<em>USER</em>WARNING => WARN
+  E<em>ERROR, E</em>USER<em>ERROR, E</em>CORE<em>ERROR, E</em>RECOVERABLE<em>ERROR => ERR
+  E</em>DEPRECATED, E<em>STRICT, E</em>USER_DEPRECATED => DEBUG
+  (unknown/other) => INFO</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Log.html">Zend_Log</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_errorHandler">
+        <div class="location">at line         line 622</div>
+        <code>                    boolean
+    <strong>errorHandler</strong>(int $errno, string $errstr, string $errfile, int $errline, array $errcontext)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Error Handler will convert error into log message, and then call the original error handler</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$errno</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errstr</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errfile</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$errline</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$errcontext</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTimestampFormat">
+        <div class="location">at line         line 647</div>
+        <code>                    <a href="Zend_Log.html">Zend_Log</a>
+    <strong>setTimestampFormat</strong>(string $format)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set timestamp format for log entries.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Log.html">Zend_Log</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTimestampFormat">
+        <div class="location">at line         line 658</div>
+        <code>                    string
+    <strong>getTimestampFormat</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get timestamp format used for log entries.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_emerg">
+        <div class="location">at line         line 40</div>
+        <code>                    
+    <strong>emerg</strong>(string  $message, $extras = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$extras</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_alert">
+        <div class="location">at line         line 40</div>
+        <code>                    
+    <strong>alert</strong>(string  $message, $extras = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$extras</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_crit">
+        <div class="location">at line         line 40</div>
+        <code>                    
+    <strong>crit</strong>(string  $message, $extras = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$extras</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_err">
+        <div class="location">at line         line 40</div>
+        <code>                    
+    <strong>err</strong>(string  $message, $extras = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$extras</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_warn">
+        <div class="location">at line         line 40</div>
+        <code>                    
+    <strong>warn</strong>(string  $message, $extras = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$extras</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_notice">
+        <div class="location">at line         line 40</div>
+        <code>                    
+    <strong>notice</strong>(string  $message, $extras = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$extras</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_info">
+        <div class="location">at line         line 40</div>
+        <code>                    
+    <strong>info</strong>(string  $message, $extras = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$extras</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location">at line         line 40</div>
+        <code>                    
+    <strong>debug</strong>(string  $message, $extras = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$extras</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

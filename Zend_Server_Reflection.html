@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Server_Reflection | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Server_Reflection" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Server_Reflection
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Server_Reflection</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Reflection for determining method signatures to use with server classes</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Server_Reflection_Class.html">Zend_Server_Reflection_Class</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reflectClass">reflectClass</a>(string|object $class, null|array $argv = false, string $namespace = &#039;&#039;)
+        
+                                            <p>Perform class reflection to create dispatch signatures</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Server_Reflection_Function.html">Zend_Server_Reflection_Function</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reflectFunction">reflectFunction</a>(string $function, null|array $argv = false, string $namespace = &#039;&#039;)
+        
+                                            <p>Perform function reflection to create dispatch signatures</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_reflectClass">
+        <div class="location">at line         line 60</div>
+        <code>        static            <a href="Zend_Server_Reflection_Class.html">Zend_Server_Reflection_Class</a>
+    <strong>reflectClass</strong>(string|object $class, null|array $argv = false, string $namespace = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Perform class reflection to create dispatch signatures</p>                    <p>Creates a {@link Zend<em>Server</em>Reflection_Class} object for the class or
+object provided.</p>
+
+<p>If extra arguments should be passed to dispatchable methods, these may
+be provided as an array to $argv.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object</td>
+                <td>$class</td>
+                <td>Class name or object</td>
+            </tr>
+                    <tr>
+                <td>null|array</td>
+                <td>$argv</td>
+                <td>Optional arguments to be used during the method call</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>Optional namespace with which to prefix the
+method name (used for the signature key). Primarily to avoid collisions,
+also for XmlRpc namespacing</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Server_Reflection_Class.html">Zend_Server_Reflection_Class</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Server_Reflection_Exception.html">Zend_Server_Reflection_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reflectFunction">
+        <div class="location">at line         line 96</div>
+        <code>        static            <a href="Zend_Server_Reflection_Function.html">Zend_Server_Reflection_Function</a>
+    <strong>reflectFunction</strong>(string $function, null|array $argv = false, string $namespace = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Perform function reflection to create dispatch signatures</p>                    <p>Creates dispatch prototypes for a function. It returns a
+{@link Zend<em>Server</em>Reflection_Function} object.</p>
+
+<p>If extra arguments should be passed to the dispatchable function, these
+may be provided as an array to $argv.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$function</td>
+                <td>Function name</td>
+            </tr>
+                    <tr>
+                <td>null|array</td>
+                <td>$argv</td>
+                <td>Optional arguments to be used during the method call</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>Optional namespace with which to prefix the
+function name (used for the signature key). Primarily to avoid
+collisions, also for XmlRpc namespacing</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Server_Reflection_Function.html">Zend_Server_Reflection_Function</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Server_Reflection_Exception.html">Zend_Server_Reflection_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Directory\Helper\Data | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Directory_Helper_Data" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Directory.html">Directory</a></li>
+                                        <li><a href="../../../Magento/Directory/Helper.html">Helper</a></li>
+    
+                <li>Data</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Data
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Data</strong>        extends <a href="../../../Magento/Framework/App/Helper/AbstractHelper.html"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>OPTIONAL_ZIP_COUNTRIES_CONFIG_PATH</td>
+                <td class="last">
+                    <p><em>Config value that lists ISO2 country codes which have optional Zip/Postal pre-configured</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_STATES_REQUIRED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_DISPLAY_ALL_STATES</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_DEFAULT_COUNTRY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_DEFAULT_LOCALE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_DEFAULT_TIMEZONE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_TOP_COUNTRIES</td>
+                <td class="last">
+                    <p><em>Path to config value that contains codes of the most used countries.</em></p>
+                    <p>Such countries can be shown on the top of the country list.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_WEIGHT_UNIT</td>
+                <td class="last">
+                    <p><em>Path to config value that contains weight unit</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../Magento/Framework/App/Cache/Type/Config.html"><abbr title="Magento\Framework\App\Cache\Type\Config">Config</abbr></a> $configCacheType, <a href="../../../Magento/Directory/Model/ResourceModel/Country/Collection.html"><abbr title="Magento\Directory\Model\ResourceModel\Country\Collection">Collection</abbr></a> $countryCollection, <abbr title="Magento\Directory\Model\ResourceModel\Region\CollectionFactory">CollectionFactory</abbr> $regCollectionFactory, <a href="../../../Magento/Framework/Json/Helper/Data.html"><abbr title="Magento\Framework\Json\Helper\Data">Data</abbr></a> $jsonHelper, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <abbr title="Magento\Directory\Model\CurrencyFactory">CurrencyFactory</abbr> $currencyFactory)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isModuleOutputEnabled">isModuleOutputEnabled</a>(string $moduleName = null)
+        
+                                            <p>Check whether or not the module output is enabled in Configuration</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Directory/Model/ResourceModel/Region/Collection.html"><abbr title="Magento\Directory\Model\ResourceModel\Region\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRegionCollection">getRegionCollection</a>()
+        
+                                            <p>Retrieve region collection</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Directory/Model/ResourceModel/Country/Collection.html"><abbr title="Magento\Directory\Model\ResourceModel\Country\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCountryCollection">getCountryCollection</a>(null|int|string|<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a> $store = null)
+        
+                                            <p>Retrieve country collection</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRegionJson">getRegionJson</a>()
+        
+                                            <p>Retrieve regions data json</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_currencyConvert">currencyConvert</a>(float $amount, string $from, string $to = null)
+        
+                                            <p>Convert currency</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCountriesWithOptionalZip">getCountriesWithOptionalZip</a>(bool $asJson = false)
+        
+                                            <p>Return ISO2 country codes, which have optional Zip/Postal pre-configured</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isZipCodeOptional">isZipCodeOptional</a>(string $countryCode)
+        
+                                            <p>Check whether zip code is optional for specified country code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCountriesWithStatesRequired">getCountriesWithStatesRequired</a>(boolean $asJson = false)
+        
+                                            <p>Returns the list of countries, for which region is required</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isShowNonRequiredState">isShowNonRequiredState</a>()
+        
+                                            <p>Return, whether non-required state should be shown</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isRegionRequired">isRegionRequired</a>(string $countryId)
+        
+                                            <p>Returns flag, which indicates whether region is required for specified country</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseCurrencyCode">getBaseCurrencyCode</a>()
+        
+                                            <p>Retrieve application base currency code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultCountry">getDefaultCountry</a>(<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int $store = null)
+        
+                                            <p>Return default country code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRegionData">getRegionData</a>()
+        
+                                            <p>Retrieve regions data</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTopCountryCodes">getTopCountryCodes</a>()
+        
+                                            <p>Retrieve list of codes of the most used countries</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWeightUnit">getWeightUnit</a>()
+        
+                                            <p>Retrieve weight unit</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 119</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../Magento/Framework/App/Cache/Type/Config.html"><abbr title="Magento\Framework\App\Cache\Type\Config">Config</abbr></a> $configCacheType, <a href="../../../Magento/Directory/Model/ResourceModel/Country/Collection.html"><abbr title="Magento\Directory\Model\ResourceModel\Country\Collection">Collection</abbr></a> $countryCollection, <abbr title="Magento\Directory\Model\ResourceModel\Region\CollectionFactory">CollectionFactory</abbr> $regCollectionFactory, <a href="../../../Magento/Framework/Json/Helper/Data.html"><abbr title="Magento\Framework\Json\Helper\Data">Data</abbr></a> $jsonHelper, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <abbr title="Magento\Directory\Model\CurrencyFactory">CurrencyFactory</abbr> $currencyFactory)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a></td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Cache/Type/Config.html"><abbr title="Magento\Framework\App\Cache\Type\Config">Config</abbr></a></td>
+                <td>$configCacheType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Directory/Model/ResourceModel/Country/Collection.html"><abbr title="Magento\Directory\Model\ResourceModel\Country\Collection">Collection</abbr></a></td>
+                <td>$countryCollection</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Directory\Model\ResourceModel\Region\CollectionFactory">CollectionFactory</abbr></td>
+                <td>$regCollectionFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Json/Helper/Data.html"><abbr title="Magento\Framework\Json\Helper\Data">Data</abbr></a></td>
+                <td>$jsonHelper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Directory\Model\CurrencyFactory">CurrencyFactory</abbr></td>
+                <td>$currencyFactory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isModuleOutputEnabled">
+        <div class="location">in <a href="../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a> at line         line 130</div>
+        <code>                    boolean
+    <strong>isModuleOutputEnabled</strong>(string $moduleName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether or not the module output is enabled in Configuration</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$moduleName</td>
+                <td>Full module name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>use \Magento\Framework\Module\Manager::isOutputEnabled()</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRegionCollection">
+        <div class="location">at line         line 142</div>
+        <code>                    <a href="../../../Magento/Directory/Model/ResourceModel/Region/Collection.html"><abbr title="Magento\Directory\Model\ResourceModel\Region\Collection">Collection</abbr></a>
+    <strong>getRegionCollection</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve region collection</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Directory/Model/ResourceModel/Region/Collection.html"><abbr title="Magento\Directory\Model\ResourceModel\Region\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCountryCollection">
+        <div class="location">at line         line 157</div>
+        <code>                    <a href="../../../Magento/Directory/Model/ResourceModel/Country/Collection.html"><abbr title="Magento\Directory\Model\ResourceModel\Country\Collection">Collection</abbr></a>
+    <strong>getCountryCollection</strong>(null|int|string|<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a> $store = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve country collection</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>null|int|string|<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a></td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Directory/Model/ResourceModel/Country/Collection.html"><abbr title="Magento\Directory\Model\ResourceModel\Country\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRegionJson">
+        <div class="location">at line         line 170</div>
+        <code>                    string
+    <strong>getRegionJson</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve regions data json</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currencyConvert">
+        <div class="location">at line         line 200</div>
+        <code>                    float
+    <strong>currencyConvert</strong>(float $amount, string $from, string $to = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert currency</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$amount</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCountriesWithOptionalZip">
+        <div class="location">at line         line 218</div>
+        <code>                    array|string
+    <strong>getCountriesWithOptionalZip</strong>(bool $asJson = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return ISO2 country codes, which have optional Zip/Postal pre-configured</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$asJson</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isZipCodeOptional">
+        <div class="location">at line         line 241</div>
+        <code>                    boolean
+    <strong>isZipCodeOptional</strong>(string $countryCode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether zip code is optional for specified country code</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$countryCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCountriesWithStatesRequired">
+        <div class="location">at line         line 253</div>
+        <code>                    array
+    <strong>getCountriesWithStatesRequired</strong>(boolean $asJson = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the list of countries, for which region is required</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$asJson</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isShowNonRequiredState">
+        <div class="location">at line         line 273</div>
+        <code>                    bool
+    <strong>isShowNonRequiredState</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return, whether non-required state should be shown</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isRegionRequired">
+        <div class="location">at line         line 287</div>
+        <code>                    bool
+    <strong>isRegionRequired</strong>(string $countryId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns flag, which indicates whether region is required for specified country</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$countryId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseCurrencyCode">
+        <div class="location">at line         line 301</div>
+        <code>                    string
+    <strong>getBaseCurrencyCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve application base currency code</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultCountry">
+        <div class="location">at line         line 312</div>
+        <code>                    string
+    <strong>getDefaultCountry</strong>(<a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int $store = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return default country code</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a>|string|int</td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRegionData">
+        <div class="location">at line         line 326</div>
+        <code>                    array
+    <strong>getRegionData</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve regions data</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTopCountryCodes">
+        <div class="location">at line         line 358</div>
+        <code>                    array
+    <strong>getTopCountryCodes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve list of codes of the most used countries</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWeightUnit">
+        <div class="location">at line         line 372</div>
+        <code>                    string
+    <strong>getWeightUnit</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve weight unit</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

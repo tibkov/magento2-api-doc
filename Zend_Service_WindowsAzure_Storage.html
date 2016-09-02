@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Service_WindowsAzure_Storage | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Service_WindowsAzure_Storage" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Service_WindowsAzure_Storage
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Service_WindowsAzure_Storage</strong>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>URL_DEV_BLOB</td>
+                <td class="last">
+                    <p><em>Development storage URLS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>URL_DEV_QUEUE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>URL_DEV_TABLE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>URL_CLOUD_BLOB</td>
+                <td class="last">
+                    <p><em>Live storage URLS</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>URL_CLOUD_QUEUE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>URL_CLOUD_TABLE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_UNKNOWN</td>
+                <td class="last">
+                    <p><em>Resource types</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_CONTAINER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_BLOB</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_TABLE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_ENTITY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>RESOURCE_QUEUE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PREFIX_PROPERTIES</td>
+                <td class="last">
+                    <p><em>HTTP header prefixes</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PREFIX_METADATA</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PREFIX_STORAGE_HEADER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $host = self::URL_DEV_BLOB, string $accountName = Zend_Service_WindowsAzure_Credentials_CredentialsAbstract::DEVSTORE_ACCOUNT, string $accountKey = Zend_Service_WindowsAzure_Credentials_CredentialsAbstract::DEVSTORE_KEY, boolean $usePathStyleUri = false, <a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a> $retryPolicy = null)
+        
+                                            <p>Creates a new Zend<em>Service</em>WindowsAzure_Storage instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHttpClientChannel">setHttpClientChannel</a>(<a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>|string $adapterInstance = &#039;Zend_Http_Client_Adapter_Proxy&#039;)
+        
+                                            <p>Set the HTTP client channel to use</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpClientChannel">getHttpClientChannel</a>()
+        
+                                            <p>Retrieve HTTP client channel</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRetryPolicy">setRetryPolicy</a>(<a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a> $retryPolicy = null)
+        
+                                            <p>Set retry policy to use when making requests</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setProxy">setProxy</a>(boolean $useProxy = false, string $proxyUrl = &#039;&#039;, int $proxyPort = 80, string $proxyCredentials = &#039;&#039;)
+        
+                                            <p>Set proxy</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAccountName">getAccountName</a>()
+        
+                                            <p>Returns the Windows Azure account name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBaseUrl">getBaseUrl</a>()
+        
+                                            <p>Get base URL for creating requests</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCredentials">setCredentials</a>(<a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a> $credentials)
+        
+                                            <p>Set Zend<em>Service</em>WindowsAzure<em>Credentials</em>CredentialsAbstract instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCredentials">getCredentials</a>()
+        
+                                            <p>Get Zend<em>Service</em>WindowsAzure<em>Credentials</em>CredentialsAbstract instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isoDate">isoDate</a>(int $timestamp = null)
+        
+                                            <p>Generate ISO 8601 compliant date string in UTC time zone</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_urlencode">urlencode</a>(string $value)
+        
+                                            <p>URL encode function</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isValidMetadataName">isValidMetadataName</a>(string $metadataName = &#039;&#039;)
+        
+                                            <p>Is valid metadata name?</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createQueryStringFromArray">createQueryStringFromArray</a>(array $queryString)
+        
+                                            <p>Builds a query string from an array of elements</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 174</div>
+        <code>                    
+    <strong>__construct</strong>(string $host = self::URL_DEV_BLOB, string $accountName = Zend_Service_WindowsAzure_Credentials_CredentialsAbstract::DEVSTORE_ACCOUNT, string $accountKey = Zend_Service_WindowsAzure_Credentials_CredentialsAbstract::DEVSTORE_KEY, boolean $usePathStyleUri = false, <a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a> $retryPolicy = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates a new Zend<em>Service</em>WindowsAzure_Storage instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$host</td>
+                <td>Storage host name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accountName</td>
+                <td>Account name for Windows Azure</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accountKey</td>
+                <td>Account key for Windows Azure</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$usePathStyleUri</td>
+                <td>Use path-style URI's</td>
+            </tr>
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a></td>
+                <td>$retryPolicy</td>
+                <td>Retry policy to use when making requests</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHttpClientChannel">
+        <div class="location">at line         line 225</div>
+        <code>                    
+    <strong>setHttpClientChannel</strong>(<a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>|string $adapterInstance = &#039;Zend_Http_Client_Adapter_Proxy&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the HTTP client channel to use</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>|string</td>
+                <td>$adapterInstance</td>
+                <td>Adapter instance or adapter class name.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpClientChannel">
+        <div class="location">at line         line 235</div>
+        <code>                    <a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a>
+    <strong>getHttpClientChannel</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve HTTP client channel</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Http_Client_Adapter_Interface.html">Zend_Http_Client_Adapter_Interface</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRetryPolicy">
+        <div class="location">at line         line 245</div>
+        <code>                    
+    <strong>setRetryPolicy</strong>(<a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a> $retryPolicy = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set retry policy to use when making requests</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract.html">Zend_Service_WindowsAzure_RetryPolicy_RetryPolicyAbstract</a></td>
+                <td>$retryPolicy</td>
+                <td>Retry policy to use when making requests</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setProxy">
+        <div class="location">at line         line 261</div>
+        <code>                    
+    <strong>setProxy</strong>(boolean $useProxy = false, string $proxyUrl = &#039;&#039;, int $proxyPort = 80, string $proxyCredentials = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set proxy</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$useProxy</td>
+                <td>Use proxy?</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$proxyUrl</td>
+                <td>Proxy URL</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$proxyPort</td>
+                <td>Proxy port</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$proxyCredentials</td>
+                <td>Proxy credentials</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAccountName">
+        <div class="location">at line         line 292</div>
+        <code>                    string
+    <strong>getAccountName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the Windows Azure account name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBaseUrl">
+        <div class="location">at line         line 302</div>
+        <code>                    string
+    <strong>getBaseUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get base URL for creating requests</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCredentials">
+        <div class="location">at line         line 316</div>
+        <code>                    
+    <strong>setCredentials</strong>(<a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a> $credentials)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Zend<em>Service</em>WindowsAzure<em>Credentials</em>CredentialsAbstract instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a></td>
+                <td>$credentials</td>
+                <td>Zend<em>Service</em>WindowsAzure<em>Credentials</em>CredentialsAbstract instance to use for request signing.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCredentials">
+        <div class="location">at line         line 329</div>
+        <code>                    <a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a>
+    <strong>getCredentials</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Zend<em>Service</em>WindowsAzure<em>Credentials</em>CredentialsAbstract instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Service_WindowsAzure_Credentials_CredentialsAbstract.html">Zend_Service_WindowsAzure_Credentials_CredentialsAbstract</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isoDate">
+        <div class="location">at line         line 510</div>
+        <code>                    string
+    <strong>isoDate</strong>(int $timestamp = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate ISO 8601 compliant date string in UTC time zone</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$timestamp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_urlencode">
+        <div class="location">at line         line 530</div>
+        <code>        static            string
+    <strong>urlencode</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>URL encode function</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>Value to encode</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Encoded value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isValidMetadataName">
+        <div class="location">at line         line 541</div>
+        <code>        static            boolean
+    <strong>isValidMetadataName</strong>(string $metadataName = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is valid metadata name?</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$metadataName</td>
+                <td>Metadata name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createQueryStringFromArray">
+        <div class="location">at line         line 560</div>
+        <code>        static            string
+    <strong>createQueryStringFromArray</strong>(array $queryString)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Builds a query string from an array of elements</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$queryString</td>
+                <td>Array of elements</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Assembled query string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

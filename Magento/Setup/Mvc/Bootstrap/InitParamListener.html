@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Setup\Mvc\Bootstrap\InitParamListener | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Setup_Mvc_Bootstrap_InitParamListener" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../Magento/Setup.html">Setup</a></li>
+                                        <li><a href="../../../../Magento/Setup/Mvc.html">Mvc</a></li>
+                                        <li><a href="../../../../Magento/Setup/Mvc/Bootstrap.html">Bootstrap</a></li>
+    
+                <li>InitParamListener</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            InitParamListener
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>InitParamListener</strong>        implements
+        <abbr title="Zend\EventManager\ListenerAggregateInterface">ListenerAggregateInterface</abbr>, <abbr title="Zend\ServiceManager\FactoryInterface">FactoryInterface</abbr>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>A listener that injects relevant Magento initialization parameters and initializes Magento\Filesystem component.</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>BOOTSTRAP_PARAM</td>
+                <td class="last">
+                    <p><em>A CLI parameter for injecting bootstrap variables</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attach">attach</a>(<abbr title="Zend\EventManager\EventManagerInterface">EventManagerInterface</abbr> $events)
+        
+                                            <p>{@inheritdoc}</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_detach">detach</a>(<abbr title="Zend\EventManager\EventManagerInterface">EventManagerInterface</abbr> $events)
+        
+                                            <p>{@inheritdoc}</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onBootstrap">onBootstrap</a>(<abbr title="Zend\Mvc\MvcEvent">MvcEvent</abbr> $e)
+        
+                                            <p>An event subscriber that initializes DirectoryList and Filesystem objects in ZF application bootstrap</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_authPreDispatch">authPreDispatch</a>(<abbr title="Zend\Mvc\MvcEvent">MvcEvent</abbr> $event)
+        
+                                            <p>Check if user login</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createService">createService</a>(<abbr title="Zend\ServiceManager\ServiceLocatorInterface">ServiceLocatorInterface</abbr> $serviceLocator)
+        
+                                            <p>{@inheritdoc}</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/App/Filesystem/DirectoryList.html"><abbr title="Magento\Framework\App\Filesystem\DirectoryList">DirectoryList</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createDirectoryList">createDirectoryList</a>(array $initParams)
+        
+                                            <p>Initializes DirectoryList service</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createFilesystem">createFilesystem</a>(<a href="../../../../Magento/Framework/App/Filesystem/DirectoryList.html"><abbr title="Magento\Framework\App\Filesystem\DirectoryList">DirectoryList</abbr></a> $directoryList)
+        
+                                            <p>Initializes Filesystem service</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_attach">
+        <div class="location">at line         line 57</div>
+        <code>                    
+    <strong>attach</strong>(<abbr title="Zend\EventManager\EventManagerInterface">EventManagerInterface</abbr> $events)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>{@inheritdoc}</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Zend\EventManager\EventManagerInterface">EventManagerInterface</abbr></td>
+                <td>$events</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_detach">
+        <div class="location">at line         line 70</div>
+        <code>                    
+    <strong>detach</strong>(<abbr title="Zend\EventManager\EventManagerInterface">EventManagerInterface</abbr> $events)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>{@inheritdoc}</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Zend\EventManager\EventManagerInterface">EventManagerInterface</abbr></td>
+                <td>$events</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onBootstrap">
+        <div class="location">at line         line 85</div>
+        <code>                    void
+    <strong>onBootstrap</strong>(<abbr title="Zend\Mvc\MvcEvent">MvcEvent</abbr> $e)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>An event subscriber that initializes DirectoryList and Filesystem objects in ZF application bootstrap</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Zend\Mvc\MvcEvent">MvcEvent</abbr></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_authPreDispatch">
+        <div class="location">at line         line 108</div>
+        <code>                    bool
+    <strong>authPreDispatch</strong>(<abbr title="Zend\Mvc\MvcEvent">MvcEvent</abbr> $event)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check if user login</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Zend\Mvc\MvcEvent">MvcEvent</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createService">
+        <div class="location">at line         line 174</div>
+        <code>                    
+    <strong>createService</strong>(<abbr title="Zend\ServiceManager\ServiceLocatorInterface">ServiceLocatorInterface</abbr> $serviceLocator)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>{@inheritdoc}</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Zend\ServiceManager\ServiceLocatorInterface">ServiceLocatorInterface</abbr></td>
+                <td>$serviceLocator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createDirectoryList">
+        <div class="location">at line         line 236</div>
+        <code>                    <a href="../../../../Magento/Framework/App/Filesystem/DirectoryList.html"><abbr title="Magento\Framework\App\Filesystem\DirectoryList">DirectoryList</abbr></a>
+    <strong>createDirectoryList</strong>(array $initParams)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initializes DirectoryList service</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$initParams</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/App/Filesystem/DirectoryList.html"><abbr title="Magento\Framework\App\Filesystem\DirectoryList">DirectoryList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/LogicException">LogicException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createFilesystem">
+        <div class="location">at line         line 252</div>
+        <code>                    <a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a>
+    <strong>createFilesystem</strong>(<a href="../../../../Magento/Framework/App/Filesystem/DirectoryList.html"><abbr title="Magento\Framework\App\Filesystem\DirectoryList">DirectoryList</abbr></a> $directoryList)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initializes Filesystem service</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/Filesystem/DirectoryList.html"><abbr title="Magento\Framework\App\Filesystem\DirectoryList">DirectoryList</abbr></a></td>
+                <td>$directoryList</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Framework/Filesystem.html"><abbr title="Magento\Framework\Filesystem">Filesystem</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

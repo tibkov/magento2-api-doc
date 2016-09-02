@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Bundle\Model\Product\Price | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Bundle_Model_Product_Price" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../Magento/Bundle.html">Bundle</a></li>
+                                        <li><a href="../../../../Magento/Bundle/Model.html">Model</a></li>
+                                        <li><a href="../../../../Magento/Bundle/Model/Product.html">Product</a></li>
+    
+                <li>Price</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Price
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Price</strong>        extends <a href="../../../../Magento/Catalog/Model/Product/Type/Price.html"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Bundle Price Model</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>CACHE_TAG</td>
+                <td class="last">
+                    <p><em>Product price cache tag</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRICE_TYPE_FIXED</td>
+                <td class="last">
+                    <p><em>Fixed bundle price type</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRICE_TYPE_DYNAMIC</td>
+                <td class="last">
+                    <p><em>Dynamic bundle price type</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<abbr title="Magento\CatalogRule\Model\ResourceModel\RuleFactory">RuleFactory</abbr> $ruleFactory, <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../Magento/Framework/Stdlib/DateTime/TimezoneInterface.html"><abbr title="Magento\Framework\Stdlib\DateTime\TimezoneInterface">TimezoneInterface</abbr></a> $localeDate, <a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a> $customerSession, <a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../../Magento/Framework/Pricing/PriceCurrencyInterface.html"><abbr title="Magento\Framework\Pricing\PriceCurrencyInterface">PriceCurrencyInterface</abbr></a> $priceCurrency, <a href="../../../../Magento/Customer/Api/GroupManagementInterface.html"><abbr title="Magento\Customer\Api\GroupManagementInterface">GroupManagementInterface</abbr></a> $groupManagement, <abbr title="Magento\Catalog\Api\Data\ProductTierPriceInterfaceFactory">ProductTierPriceInterfaceFactory</abbr> $tierPriceFactory, <a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $config, <a href="../../../../Magento/Catalog/Helper/Data.html"><abbr title="Magento\Catalog\Helper\Data">Data</abbr></a> $catalogData)
+        
+                                            <p>Price constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrice">getPrice</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        
+                                            <p>Return product base price</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBasePrice">getBasePrice</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, float|null $qty = null)
+        
+                                            <p>Get base price with apply Group, Tier, Special prises</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_getBasePrice"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFinalPrice">getFinalPrice</a>(float|null $qty, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        
+                                            <p>Get product final price</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getChildFinalPrice">getChildFinalPrice</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, float $productQty, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $childProduct, float $childProductQty)
+        
+                                            <p>Returns final price of a child product</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTierPrice">getTierPrice</a>(float $qty, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        
+                                            <p>Get product tier price by qty</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Catalog/Api/Data/ProductTierPriceInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductTierPriceInterface">ProductTierPriceInterface</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTierPrices">getTierPrices</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        
+                                            <p>Gets list of product tier prices</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_getTierPrices"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Catalog\Model\Product\Type\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setTierPrices">setTierPrices</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, array $tierPrices = null)
+        
+                                            <p>Sets list of product tier prices</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_setTierPrices"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTierPriceCount">getTierPriceCount</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        
+                                            <p>Count how many tier prices we have for the product</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_getTierPriceCount"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFormatedTierPrice">getFormatedTierPrice</a>(float $qty, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        
+                                            <p>Get formatted by currency tier price</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_getFormatedTierPrice"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFormatedPrice">getFormatedPrice</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        
+                                            <p>Get formatted by currency product price</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_getFormatedPrice"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_calculatePrice">calculatePrice</a>(float $basePrice, float $specialPrice, string $specialPriceFrom, string $specialPriceTo, bool|float|null $rulePrice = false, mixed|null $wId = null, integer|null $gId = null, int|null $productId = null)
+        
+                                            <p>Calculate product price based on special price data and price rules</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_calculatePrice"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_calculateSpecialPrice">calculateSpecialPrice</a>(float $finalPrice, float $specialPrice, string $specialPriceFrom, string $specialPriceTo, int|string|<a href="../../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a> $store = null)
+        
+                                            <p>Calculate and apply special price</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isTierPriceFixed">isTierPriceFixed</a>()
+        
+                                            <p>Check is tier price value fixed or percent of original price</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_isTierPriceFixed"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIsPricesCalculatedByIndex">getIsPricesCalculatedByIndex</a>()
+        
+                                            <p>Is min/max prices have been calculated by index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTotalBundleItemsPrice">getTotalBundleItemsPrice</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, null|float $qty = null)
+        
+                                            <p>Get Total price  for Bundle items</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTotalPrices">getTotalPrices</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, string|null $which = null, bool|null $includeTax = null, bool $takeTierPrice = true)
+        
+                                            <p>Retrieve Price considering tier price</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Bundle/Model/ResourceModel/Option/Collection.html"><abbr title="Magento\Bundle\Model\ResourceModel\Option\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOptions">getOptions</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        
+                                            <p>Get Options with attached Selections collection</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSelectionPrice">getSelectionPrice</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $bundleProduct, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $selectionProduct, float|null $selectionQty = null, null|bool $multiplyQty = true)
+        
+                                            <p>Calculate price of selection</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSelectionPreFinalPrice">getSelectionPreFinalPrice</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $bundleProduct, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $selectionProduct, float $qty = null)
+        
+                                            <p>Calculate selection price for front view (with applied special of bundle)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSelectionFinalTotalPrice">getSelectionFinalTotalPrice</a>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $bundleProduct, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $selectionProduct, float $bundleQty, float $selectionQty, bool $multiplyQty = true, bool $takeTierPrice = true)
+        
+                                            <p>Calculate final price of selection
+with take into account tier price</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLowestPrice">getLowestPrice</a>(<abbr title="Magento\Bundle\Model\Product\/Magento/Catalog/Model/Product">/Magento/Catalog/Model/Product</abbr> $bundleProduct, float|string $price, int $bundleQty = 1)
+        
+                                            <p>Returns the lowest price after applying any applicable bundle discounts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 58</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Magento\CatalogRule\Model\ResourceModel\RuleFactory">RuleFactory</abbr> $ruleFactory, <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../Magento/Framework/Stdlib/DateTime/TimezoneInterface.html"><abbr title="Magento\Framework\Stdlib\DateTime\TimezoneInterface">TimezoneInterface</abbr></a> $localeDate, <a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a> $customerSession, <a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a> $eventManager, <a href="../../../../Magento/Framework/Pricing/PriceCurrencyInterface.html"><abbr title="Magento\Framework\Pricing\PriceCurrencyInterface">PriceCurrencyInterface</abbr></a> $priceCurrency, <a href="../../../../Magento/Customer/Api/GroupManagementInterface.html"><abbr title="Magento\Customer\Api\GroupManagementInterface">GroupManagementInterface</abbr></a> $groupManagement, <abbr title="Magento\Catalog\Api\Data\ProductTierPriceInterfaceFactory">ProductTierPriceInterfaceFactory</abbr> $tierPriceFactory, <a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a> $config, <a href="../../../../Magento/Catalog/Helper/Data.html"><abbr title="Magento\Catalog\Helper\Data">Data</abbr></a> $catalogData)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Price constructor.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Magento\CatalogRule\Model\ResourceModel\RuleFactory">RuleFactory</abbr></td>
+                <td>$ruleFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Stdlib/DateTime/TimezoneInterface.html"><abbr title="Magento\Framework\Stdlib\DateTime\TimezoneInterface">TimezoneInterface</abbr></a></td>
+                <td>$localeDate</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a></td>
+                <td>$customerSession</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Event/ManagerInterface.html"><abbr title="Magento\Framework\Event\ManagerInterface">ManagerInterface</abbr></a></td>
+                <td>$eventManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Pricing/PriceCurrencyInterface.html"><abbr title="Magento\Framework\Pricing\PriceCurrencyInterface">PriceCurrencyInterface</abbr></a></td>
+                <td>$priceCurrency</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Api/GroupManagementInterface.html"><abbr title="Magento\Customer\Api\GroupManagementInterface">GroupManagementInterface</abbr></a></td>
+                <td>$groupManagement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Catalog\Api\Data\ProductTierPriceInterfaceFactory">ProductTierPriceInterfaceFactory</abbr></td>
+                <td>$tierPriceFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/Config/ScopeConfigInterface.html"><abbr title="Magento\Framework\App\Config\ScopeConfigInterface">ScopeConfigInterface</abbr></a></td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Helper/Data.html"><abbr title="Magento\Catalog\Helper\Data">Data</abbr></a></td>
+                <td>$catalogData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrice">
+        <div class="location">at line         line 101</div>
+        <code>                    float
+    <strong>getPrice</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return product base price</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBasePrice">
+        <div class="location">in <a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_getBasePrice"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a> at line         line 138</div>
+        <code>                    float
+    <strong>getBasePrice</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, float|null $qty = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get base price with apply Group, Tier, Special prises</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float|null</td>
+                <td>$qty</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFinalPrice">
+        <div class="location">at line         line 172</div>
+        <code>                    float
+    <strong>getFinalPrice</strong>(float|null $qty, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get product final price</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float|null</td>
+                <td>$qty</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChildFinalPrice">
+        <div class="location">at line         line 200</div>
+        <code>                    float
+    <strong>getChildFinalPrice</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, float $productQty, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $childProduct, float $childProductQty)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns final price of a child product</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$productQty</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$childProduct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$childProductQty</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTierPrice">
+        <div class="location">at line         line 503</div>
+        <code>                    float|array
+    <strong>getTierPrice</strong>(float $qty, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get product tier price by qty</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$qty</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTierPrices">
+        <div class="location">in <a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_getTierPrices"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a> at line         line 351</div>
+        <code>                    <a href="../../../../Magento/Catalog/Api/Data/ProductTierPriceInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductTierPriceInterface">ProductTierPriceInterface</abbr></a>[]
+    <strong>getTierPrices</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets list of product tier prices</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Catalog/Api/Data/ProductTierPriceInterface.html"><abbr title="Magento\Catalog\Api\Data\ProductTierPriceInterface">ProductTierPriceInterface</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTierPrices">
+        <div class="location">in <a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_setTierPrices"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a> at line         line 378</div>
+        <code>                    <abbr title="Magento\Catalog\Model\Product\Type\$this">$this</abbr>
+    <strong>setTierPrices</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, array $tierPrices = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets list of product tier prices</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$tierPrices</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Catalog\Model\Product\Type\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTierPriceCount">
+        <div class="location">in <a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_getTierPriceCount"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a> at line         line 441</div>
+        <code>                    int
+    <strong>getTierPriceCount</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Count how many tier prices we have for the product</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormatedTierPrice">
+        <div class="location">in <a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_getFormatedTierPrice"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a> at line         line 454</div>
+        <code>                    array|float
+    <strong>getFormatedTierPrice</strong>(float $qty, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get formatted by currency tier price</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$qty</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormatedPrice">
+        <div class="location">in <a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_getFormatedPrice"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a> at line         line 476</div>
+        <code>                    array
+    <strong>getFormatedPrice</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get formatted by currency product price</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>|| float</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_calculatePrice">
+        <div class="location">in <a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_calculatePrice"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a> at line         line 523</div>
+        <code>                    float
+    <strong>calculatePrice</strong>(float $basePrice, float $specialPrice, string $specialPriceFrom, string $specialPriceTo, bool|float|null $rulePrice = false, mixed|null $wId = null, integer|null $gId = null, int|null $productId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate product price based on special price data and price rules</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$basePrice</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$specialPrice</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$specialPriceFrom</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$specialPriceTo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool|float|null</td>
+                <td>$rulePrice</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed|null</td>
+                <td>$wId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>integer|null</td>
+                <td>$gId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$productId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_calculateSpecialPrice">
+        <div class="location">at line         line 596</div>
+        <code>                    float
+    <strong>calculateSpecialPrice</strong>(float $finalPrice, float $specialPrice, string $specialPriceFrom, string $specialPriceTo, int|string|<a href="../../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a> $store = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate and apply special price</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float</td>
+                <td>$finalPrice</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$specialPrice</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$specialPriceFrom</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$specialPriceTo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|string|<a href="../../../../Magento/Store/Model/Store.html"><abbr title="Magento\Store\Model\Store">Store</abbr></a></td>
+                <td>$store</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isTierPriceFixed">
+        <div class="location">in <a href="../../../../Magento/Catalog/Model/Product/Type/Price.html#method_isTierPriceFixed"><abbr title="Magento\Catalog\Model\Product\Type\Price">Price</abbr></a> at line         line 595</div>
+        <code>                    bool
+    <strong>isTierPriceFixed</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check is tier price value fixed or percent of original price</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIsPricesCalculatedByIndex">
+        <div class="location">at line         line 90</div>
+        <code>                    bool
+    <strong>getIsPricesCalculatedByIndex</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is min/max prices have been calculated by index</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTotalBundleItemsPrice">
+        <div class="location">at line         line 117</div>
+        <code>                    float
+    <strong>getTotalBundleItemsPrice</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, null|float $qty = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Total price  for Bundle items</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>null|float</td>
+                <td>$qty</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTotalPrices">
+        <div class="location">at line         line 217</div>
+        <code>                    float|array
+    <strong>getTotalPrices</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product, string|null $which = null, bool|null $includeTax = null, bool $takeTierPrice = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Price considering tier price</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$which</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool|null</td>
+                <td>$includeTax</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$takeTierPrice</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">at line         line 371</div>
+        <code>                    <a href="../../../../Magento/Bundle/Model/ResourceModel/Option/Collection.html"><abbr title="Magento\Bundle\Model\ResourceModel\Option\Collection">Collection</abbr></a>
+    <strong>getOptions</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $product)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Options with attached Selections collection</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$product</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Bundle/Model/ResourceModel/Option/Collection.html"><abbr title="Magento\Bundle\Model\ResourceModel\Option\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSelectionPrice">
+        <div class="location">at line         line 396</div>
+        <code>                    float
+    <strong>getSelectionPrice</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $bundleProduct, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $selectionProduct, float|null $selectionQty = null, null|bool $multiplyQty = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate price of selection</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$bundleProduct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$selectionProduct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float|null</td>
+                <td>$selectionQty</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>null|bool</td>
+                <td>$multiplyQty</td>
+                <td>Whether to multiply selection's price by its quantity</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>\Magento\Bundle\Model\Product\Price::getSelectionFinalTotalPrice()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSelectionPreFinalPrice">
+        <div class="location">at line         line 409</div>
+        <code>                    float
+    <strong>getSelectionPreFinalPrice</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $bundleProduct, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $selectionProduct, float $qty = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate selection price for front view (with applied special of bundle)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$bundleProduct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$selectionProduct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$qty</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSelectionFinalTotalPrice">
+        <div class="location">at line         line 426</div>
+        <code>                    float
+    <strong>getSelectionFinalTotalPrice</strong>(<a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $bundleProduct, <a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $selectionProduct, float $bundleQty, float $selectionQty, bool $multiplyQty = true, bool $takeTierPrice = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate final price of selection
+with take into account tier price</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$bundleProduct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$selectionProduct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$bundleQty</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$selectionQty</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$multiplyQty</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$takeTierPrice</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLowestPrice">
+        <div class="location">at line         line 621</div>
+        <code>                    float
+    <strong>getLowestPrice</strong>(<abbr title="Magento\Bundle\Model\Product\/Magento/Catalog/Model/Product">/Magento/Catalog/Model/Product</abbr> $bundleProduct, float|string $price, int $bundleQty = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the lowest price after applying any applicable bundle discounts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Magento\Bundle\Model\Product\/Magento/Catalog/Model/Product">/Magento/Catalog/Model/Product</abbr></td>
+                <td>$bundleProduct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float|string</td>
+                <td>$price</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$bundleQty</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

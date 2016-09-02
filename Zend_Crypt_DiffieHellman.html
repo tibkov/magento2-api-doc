@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Crypt_DiffieHellman | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Crypt_DiffieHellman" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Crypt_DiffieHellman
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Crypt_DiffieHellman</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>PHP implementation of the Diffie-Hellman public key encryption algorithm.</p>            <p>Allows two unassociated parties to establish a joint shared secret key
+to be used in encrypting subsequent communications.</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>BINARY</td>
+                <td class="last">
+                    <p><em>Constants</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NUMBER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BTWOC</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_useOpenssl">
+                    static                                                            boolean
+                </td>
+                <td>$useOpenssl</td>
+                <td class="last">Static flag to select whether to use PHP5.3's openssl extension
+if available.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $prime, string $generator, string $privateKey = null, string $privateKeyType = self::NUMBER)
+        
+                                            <p>Constructor; if set construct the object using the parameter array to
+set values for Prime, Generator and Private.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generateKeys">generateKeys</a>()
+        
+                                            <p>Generate own public key. If a private number has not already been
+set, one will be generated at this stage.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPublicKey">setPublicKey</a>(string $number, string $type = self::NUMBER)
+        
+                                            <p>Setter for the value of the public number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPublicKey">getPublicKey</a>(string $type = self::NUMBER)
+        
+                                            <p>Returns own public key for communication to the second party to this
+transaction.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computeSecretKey">computeSecretKey</a>(string $publicKey, string $type = self::NUMBER, string $output = self::NUMBER)
+        
+                                            <p>Compute the shared secret key based on the public key received from the
+the second party to this transaction. This should agree to the secret
+key the second party computes on our own public key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSharedSecretKey">getSharedSecretKey</a>(string $type = self::NUMBER)
+        
+                                            <p>Return the computed shared secret key from the DiffieHellman transaction</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPrime">setPrime</a>(string $number)
+        
+                                            <p>Setter for the value of the prime number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrime">getPrime</a>()
+        
+                                            <p>Getter for the value of the prime number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setGenerator">setGenerator</a>(string $number)
+        
+                                            <p>Setter for the value of the generator number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGenerator">getGenerator</a>()
+        
+                                            <p>Getter for the value of the generator number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPrivateKey">setPrivateKey</a>(string $number, string $type = self::NUMBER)
+        
+                                            <p>Setter for the value of the private number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrivateKey">getPrivateKey</a>(string $type = self::NUMBER)
+        
+                                            <p>Getter for the value of the private number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasPrivateKey">hasPrivateKey</a>()
+        
+                                            <p>Check whether a private key currently exists.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBigIntegerMath">setBigIntegerMath</a>(string $extension = null)
+        
+                                            <p>Setter to pass an extension parameter which is used to create
+a specific BigInteger instance for a specific extension type.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 106</div>
+        <code>                    
+    <strong>__construct</strong>(string $prime, string $generator, string $privateKey = null, string $privateKeyType = self::NUMBER)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor; if set construct the object using the parameter array to
+set values for Prime, Generator and Private.</p>                    <p>If a Private Key is not set, one will be generated at random.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prime</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$generator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$privateKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$privateKeyType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateKeys">
+        <div class="location">at line         line 122</div>
+        <code>                    <a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a>
+    <strong>generateKeys</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generate own public key. If a private number has not already been
+set, one will be generated at this stage.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPublicKey">
+        <div class="location">at line         line 151</div>
+        <code>                    <a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a>
+    <strong>setPublicKey</strong>(string $number, string $type = self::NUMBER)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter for the value of the public number</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$number</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Crypt_DiffieHellman_Exception.html">Zend_Crypt_DiffieHellman_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPublicKey">
+        <div class="location">at line         line 172</div>
+        <code>                    string
+    <strong>getPublicKey</strong>(string $type = self::NUMBER)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns own public key for communication to the second party to this
+transaction.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Crypt_DiffieHellman_Exception.html">Zend_Crypt_DiffieHellman_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computeSecretKey">
+        <div class="location">at line         line 203</div>
+        <code>                    mixed
+    <strong>computeSecretKey</strong>(string $publicKey, string $type = self::NUMBER, string $output = self::NUMBER)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the shared secret key based on the public key received from the
+the second party to this transaction. This should agree to the secret
+key the second party computes on our own public key.</p>                    <p>Once in agreement, the key is known to only to both parties.
+By default, the function expects the public key to be in binary form
+which is the typical format when being transmitted.</p>
+
+<p>If you need the binary form of the shared secret key, call
+getSharedSecretKey() with the optional parameter for Binary output.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$publicKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$output</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Crypt_DiffieHellman_Exception.html">Zend_Crypt_DiffieHellman_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSharedSecretKey">
+        <div class="location">at line         line 227</div>
+        <code>                    string
+    <strong>getSharedSecretKey</strong>(string $type = self::NUMBER)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the computed shared secret key from the DiffieHellman transaction</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Crypt_DiffieHellman_Exception.html">Zend_Crypt_DiffieHellman_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPrime">
+        <div class="location">at line         line 248</div>
+        <code>                    <a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a>
+    <strong>setPrime</strong>(string $number)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter for the value of the prime number</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$number</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Crypt_DiffieHellman_Exception.html">Zend_Crypt_DiffieHellman_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrime">
+        <div class="location">at line         line 264</div>
+        <code>                    string
+    <strong>getPrime</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Getter for the value of the prime number</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Crypt_DiffieHellman_Exception.html">Zend_Crypt_DiffieHellman_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setGenerator">
+        <div class="location">at line         line 280</div>
+        <code>                    <a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a>
+    <strong>setGenerator</strong>(string $number)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter for the value of the generator number</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$number</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Crypt_DiffieHellman_Exception.html">Zend_Crypt_DiffieHellman_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGenerator">
+        <div class="location">at line         line 296</div>
+        <code>                    string
+    <strong>getGenerator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Getter for the value of the generator number</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Crypt_DiffieHellman_Exception.html">Zend_Crypt_DiffieHellman_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPrivateKey">
+        <div class="location">at line         line 313</div>
+        <code>                    <a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a>
+    <strong>setPrivateKey</strong>(string $number, string $type = self::NUMBER)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter for the value of the private number</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$number</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Crypt_DiffieHellman.html">Zend_Crypt_DiffieHellman</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Crypt_DiffieHellman_Exception.html">Zend_Crypt_DiffieHellman_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrivateKey">
+        <div class="location">at line         line 332</div>
+        <code>                    string
+    <strong>getPrivateKey</strong>(string $type = self::NUMBER)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Getter for the value of the private number</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasPrivateKey">
+        <div class="location">at line         line 350</div>
+        <code>                    boolean
+    <strong>hasPrivateKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether a private key currently exists.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBigIntegerMath">
+        <div class="location">at line         line 364</div>
+        <code>                    void
+    <strong>setBigIntegerMath</strong>(string $extension = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter to pass an extension parameter which is used to create
+a specific BigInteger instance for a specific extension type.</p>                    <p>Allows manual setting of the class in case of an extension
+problem or bug.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$extension</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

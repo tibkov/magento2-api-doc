@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Pdf_Font | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Pdf_Font" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Pdf_Font
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Pdf_Font</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Abstract factory class which vends {@link Zend<em>Pdf</em>Resource_Font} objects.</p>            <p>Font objects themselves are normally instantiated through the factory methods
+{@link fontWithName()} or {@link fontWithPath()}.</p>
+
+<p>This class is also the home for font-related constants because the name of
+the true base class ({@link Zend<em>Pdf</em>Resource_Font}) is not intuitive for the
+end user.</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>TYPE_UNKNOWN</td>
+                <td class="last">
+                    <p><em>Unknown font type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_STANDARD</td>
+                <td class="last">
+                    <p><em>One of the standard 14 PDF fonts.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_TYPE_1</td>
+                <td class="last">
+                    <p><em>A PostScript Type 1 font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_TRUETYPE</td>
+                <td class="last">
+                    <p><em>A TrueType font or an OpenType font containing TrueType outlines.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_TYPE_0</td>
+                <td class="last">
+                    <p><em>Type 0 composite font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_CIDFONT_TYPE_0</td>
+                <td class="last">
+                    <p><em>CID font containing a PostScript Type 1 font.</em></p>
+                    <p>These fonts are used only to construct Type 0 composite fonts and can't be used directly</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_CIDFONT_TYPE_2</td>
+                <td class="last">
+                    <p><em>CID font containing a TrueType font or an OpenType font containing TrueType outlines.</em></p>
+                    <p>These fonts are used only to construct Type 0 composite fonts and can't be used directly</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_COURIER</td>
+                <td class="last">
+                    <p><em>Name of the standard PDF font Courier.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_COURIER_BOLD</td>
+                <td class="last">
+                    <p><em>Name of the bold style of the standard PDF font Courier.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_COURIER_OBLIQUE</td>
+                <td class="last">
+                    <p><em>Name of the italic style of the standard PDF font Courier.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_COURIER_ITALIC</td>
+                <td class="last">
+                    <p><em>Convenience constant for a common misspelling of
+{@link FONT<em>COURIER</em>OBLIQUE}.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_COURIER_BOLD_OBLIQUE</td>
+                <td class="last">
+                    <p><em>Name of the bold and italic style of the standard PDF font Courier.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_COURIER_BOLD_ITALIC</td>
+                <td class="last">
+                    <p><em>Convenience constant for a common misspelling of
+{@link FONT<em>COURIER</em>BOLD_OBLIQUE}.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_HELVETICA</td>
+                <td class="last">
+                    <p><em>Name of the standard PDF font Helvetica.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_HELVETICA_BOLD</td>
+                <td class="last">
+                    <p><em>Name of the bold style of the standard PDF font Helvetica.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_HELVETICA_OBLIQUE</td>
+                <td class="last">
+                    <p><em>Name of the italic style of the standard PDF font Helvetica.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_HELVETICA_ITALIC</td>
+                <td class="last">
+                    <p><em>Convenience constant for a common misspelling of
+{@link FONT<em>HELVETICA</em>OBLIQUE}.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_HELVETICA_BOLD_OBLIQUE</td>
+                <td class="last">
+                    <p><em>Name of the bold and italic style of the standard PDF font Helvetica.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_HELVETICA_BOLD_ITALIC</td>
+                <td class="last">
+                    <p><em>Convenience constant for a common misspelling of
+{@link FONT<em>HELVETICA</em>BOLD_OBLIQUE}.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_SYMBOL</td>
+                <td class="last">
+                    <p><em>Name of the standard PDF font Symbol.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_TIMES_ROMAN</td>
+                <td class="last">
+                    <p><em>Name of the standard PDF font Times.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_TIMES</td>
+                <td class="last">
+                    <p><em>Convenience constant for a common misspelling of
+{@link FONT<em>TIMES</em>ROMAN}.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_TIMES_BOLD</td>
+                <td class="last">
+                    <p><em>Name of the bold style of the standard PDF font Times.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_TIMES_ITALIC</td>
+                <td class="last">
+                    <p><em>Name of the italic style of the standard PDF font Times.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_TIMES_BOLD_ITALIC</td>
+                <td class="last">
+                    <p><em>Name of the bold and italic style of the standard PDF font Times.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_ZAPFDINGBATS</td>
+                <td class="last">
+                    <p><em>Name of the standard PDF font Zapf Dingbats.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_COPYRIGHT</td>
+                <td class="last">
+                    <p><em>Full copyright notice for the font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_FAMILY</td>
+                <td class="last">
+                    <p><em>Font family name. Used to group similar styles of fonts together.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_STYLE</td>
+                <td class="last">
+                    <p><em>Font style within the font family. Examples: Regular, Italic, Bold, etc.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_ID</td>
+                <td class="last">
+                    <p><em>Unique font identifier.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_FULL</td>
+                <td class="last">
+                    <p><em>Full font name. Usually a combination of the {@link NAME<em>FAMILY} and
+{@link NAME</em>STYLE} strings.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_VERSION</td>
+                <td class="last">
+                    <p><em>Version number of the font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_POSTSCRIPT</td>
+                <td class="last">
+                    <p><em>PostScript name for the font. This is the name used to identify fonts
+internally and within the PDF file.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_TRADEMARK</td>
+                <td class="last">
+                    <p><em>Font trademark notice. This is distinct from the {@link NAME_COPYRIGHT}.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_MANUFACTURER</td>
+                <td class="last">
+                    <p><em>Name of the font manufacturer.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_DESIGNER</td>
+                <td class="last">
+                    <p><em>Name of the designer of the font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_DESCRIPTION</td>
+                <td class="last">
+                    <p><em>Description of the font. May contain revision information, usage
+recommendations, features, etc.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_VENDOR_URL</td>
+                <td class="last">
+                    <p><em>URL of the font vendor. Some fonts may contain a unique serial number
+embedded in this URL, which is used for licensing.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_DESIGNER_URL</td>
+                <td class="last">
+                    <p><em>URL of the font designer ({@link NAME_DESIGNER}).</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_LICENSE</td>
+                <td class="last">
+                    <p><em>Plain language licensing terms for the font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_LICENSE_URL</td>
+                <td class="last">
+                    <p><em>URL of more detailed licensing information for the font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_PREFERRED_FAMILY</td>
+                <td class="last">
+                    <p><em>Preferred font family. Used by some fonts to work around a Microsoft
+Windows limitation where only four fonts styles can share the same
+{@link NAME_FAMILY} value.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_PREFERRED_STYLE</td>
+                <td class="last">
+                    <p><em>Preferred font style. A more descriptive string than {@link NAME_STYLE}.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_SAMPLE_TEXT</td>
+                <td class="last">
+                    <p><em>Suggested text to use as a representative sample of the font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NAME_CID_NAME</td>
+                <td class="last">
+                    <p><em>PostScript CID findfont name.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WEIGHT_THIN</td>
+                <td class="last">
+                    <p><em>Thin font weight.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WEIGHT_EXTRA_LIGHT</td>
+                <td class="last">
+                    <p><em>Extra-light (Ultra-light) font weight.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WEIGHT_LIGHT</td>
+                <td class="last">
+                    <p><em>Light font weight.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WEIGHT_NORMAL</td>
+                <td class="last">
+                    <p><em>Normal (Regular) font weight.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WEIGHT_MEDIUM</td>
+                <td class="last">
+                    <p><em>Medium font weight.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WEIGHT_SEMI_BOLD</td>
+                <td class="last">
+                    <p><em>Semi-bold (Demi-bold) font weight.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WEIGHT_BOLD</td>
+                <td class="last">
+                    <p><em>Bold font weight.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WEIGHT_EXTRA_BOLD</td>
+                <td class="last">
+                    <p><em>Extra-bold (Ultra-bold) font weight.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WEIGHT_BLACK</td>
+                <td class="last">
+                    <p><em>Black (Heavy) font weight.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WIDTH_ULTRA_CONDENSED</td>
+                <td class="last">
+                    <p><em>Ultra-condensed font width. Typically 50% of normal.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WIDTH_EXTRA_CONDENSED</td>
+                <td class="last">
+                    <p><em>Extra-condensed font width. Typically 62.5% of normal.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WIDTH_CONDENSED</td>
+                <td class="last">
+                    <p><em>Condensed font width. Typically 75% of normal.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WIDTH_SEMI_CONDENSED</td>
+                <td class="last">
+                    <p><em>Semi-condensed font width. Typically 87.5% of normal.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WIDTH_NORMAL</td>
+                <td class="last">
+                    <p><em>Normal (Medium) font width.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WIDTH_SEMI_EXPANDED</td>
+                <td class="last">
+                    <p><em>Semi-expanded font width. Typically 112.5% of normal.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WIDTH_EXPANDED</td>
+                <td class="last">
+                    <p><em>Expanded font width. Typically 125% of normal.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WIDTH_EXTRA_EXPANDED</td>
+                <td class="last">
+                    <p><em>Extra-expanded font width. Typically 150% of normal.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WIDTH_ULTRA_EXPANDED</td>
+                <td class="last">
+                    <p><em>Ultra-expanded font width. Typically 200% of normal.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EMBED_DONT_EMBED</td>
+                <td class="last">
+                    <p><em>Do not embed the font in the PDF document.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EMBED_DONT_SUBSET</td>
+                <td class="last">
+                    <p><em>Embed, but do not subset the font in the PDF document.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EMBED_DONT_COMPRESS</td>
+                <td class="last">
+                    <p><em>Embed, but do not compress the font in the PDF document.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>EMBED_SUPPRESS_EMBED_EXCEPTION</td>
+                <td class="last">
+                    <p><em>Suppress the exception normally thrown if the font cannot be embedded
+due to its copyright bits being set.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Pdf_Resource_Font.html">Zend_Pdf_Resource_Font</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fontWithName">fontWithName</a>(string $name, integer $embeddingOptions)
+        
+                                            <p>Returns a {@link Zend<em>Pdf</em>Resource_Font} object by full name.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Pdf_Resource_Font.html">Zend_Pdf_Resource_Font</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fontWithPath">fontWithPath</a>(string $filePath, integer $embeddingOptions)
+        
+                                            <p>Returns a {@link Zend<em>Pdf</em>Resource_Font} object by file path.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_fontWithName">
+        <div class="location">at line         line 463</div>
+        <code>        static            <a href="Zend_Pdf_Resource_Font.html">Zend_Pdf_Resource_Font</a>
+    <strong>fontWithName</strong>(string $name, integer $embeddingOptions)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a {@link Zend<em>Pdf</em>Resource_Font} object by full name.</p>                    <p>This is the preferred method to obtain one of the standard 14 PDF fonts.</p>
+
+<p>The result of this method is cached, preventing unnecessary duplication
+of font objects. Repetitive calls for a font with the same name will
+return the same object.</p>
+
+<p>The $embeddingOptions parameter allows you to set certain flags related
+to font embedding. You may combine options by OR-ing them together. See
+the EMBED_ constants defined in {@link Zend<em>Pdf</em>Font} for the list of
+available options and their descriptions. Note that this value is only
+used when creating a font for the first time. If a font with the same
+name already exists, you will get that object and the options you specify
+here will be ignored. This is because fonts are only embedded within the
+PDF file once.</p>
+
+<p>If the font name supplied does not match the name of a previously
+instantiated object and it is not one of the 14 standard PDF fonts, an
+exception will be thrown.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Full PostScript name of font.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$embeddingOptions</td>
+                <td>(optional) Options for font embedding.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Pdf_Resource_Font.html">Zend_Pdf_Resource_Font</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fontWithPath">
+        <div class="location">at line         line 590</div>
+        <code>        static            <a href="Zend_Pdf_Resource_Font.html">Zend_Pdf_Resource_Font</a>
+    <strong>fontWithPath</strong>(string $filePath, integer $embeddingOptions)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a {@link Zend<em>Pdf</em>Resource_Font} object by file path.</p>                    <p>The result of this method is cached, preventing unnecessary duplication
+of font objects. Repetitive calls for the font with the same path will
+return the same object.</p>
+
+<p>The $embeddingOptions parameter allows you to set certain flags related
+to font embedding. You may combine options by OR-ing them together. See
+the EMBED_ constants defined in {@link Zend<em>Pdf</em>Font} for the list of
+available options and their descriptions. Note that this value is only
+used when creating a font for the first time. If a font with the same
+name already exists, you will get that object and the options you specify
+here will be ignored. This is because fonts are only embedded within the
+PDF file once.</p>
+
+<p>If the file path supplied does not match the path of a previously
+instantiated object or the font type cannot be determined, an exception
+will be thrown.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$filePath</td>
+                <td>Full path to the font file.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$embeddingOptions</td>
+                <td>(optional) Options for font embedding.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Pdf_Resource_Font.html">Zend_Pdf_Resource_Font</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Pdf_Exception.html">Zend_Pdf_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

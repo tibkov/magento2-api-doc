@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Paypal\Model\PayflowExpress\Checkout | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Paypal_Model_PayflowExpress_Checkout" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../Magento/Paypal.html">Paypal</a></li>
+                                        <li><a href="../../../../Magento/Paypal/Model.html">Model</a></li>
+                                        <li><a href="../../../../Magento/Paypal/Model/PayflowExpress.html">PayflowExpress</a></li>
+    
+                <li>Checkout</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Checkout
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Checkout</strong>        extends <a href="../../../../Magento/Paypal/Model/Express/Checkout.html"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Wrapper that performs Paypal Express and Checkout communication
+Use current Paypal Express method instance</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>PAL_CACHE_ID</td>
+                <td class="last">
+                    <p><em>Cache ID prefix for "pal" lookup</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_INFO_TRANSPORT_TOKEN</td>
+                <td class="last">
+                    <p><em>Keys for passthrough variables in sales/quote<em>payment and sales/order</em>payment
+Uses additional_information as storage</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_INFO_TRANSPORT_SHIPPING_OVERRIDDEN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_INFO_TRANSPORT_SHIPPING_METHOD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_INFO_TRANSPORT_PAYER_ID</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_INFO_TRANSPORT_REDIRECT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_INFO_TRANSPORT_BILLING_AGREEMENT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PAYMENT_INFO_BUTTON</td>
+                <td class="last">
+                    <p><em>Flag which says that was used PayPal Express Checkout button for checkout
+Uses additional_information as storage</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../Magento/Customer/Model/Url.html"><abbr title="Magento\Customer\Model\Url">Url</abbr></a> $customerUrl, <a href="../../../../Magento/Tax/Helper/Data.html"><abbr title="Magento\Tax\Helper\Data">Data</abbr></a> $taxData, <a href="../../../../Magento/Checkout/Helper/Data.html"><abbr title="Magento\Checkout\Helper\Data">Data</abbr></a> $checkoutData, <a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a> $customerSession, <a href="../../../../Magento/Framework/App/Cache/Type/Config.html"><abbr title="Magento\Framework\App\Cache\Type\Config">Config</abbr></a> $configCacheType, <a href="../../../../Magento/Framework/Locale/ResolverInterface.html"><abbr title="Magento\Framework\Locale\ResolverInterface">ResolverInterface</abbr></a> $localeResolver, <a href="../../../../Magento/Paypal/Model/Info.html"><abbr title="Magento\Paypal\Model\Info">Info</abbr></a> $paypalInfo, <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a> $coreUrl, <abbr title="Magento\Paypal\Model\CartFactory">CartFactory</abbr> $cartFactory, <abbr title="Magento\Checkout\Model\Type\OnepageFactory">OnepageFactory</abbr> $onepageFactory, <a href="../../../../Magento/Quote/Api/CartManagementInterface.html"><abbr title="Magento\Quote\Api\CartManagementInterface">CartManagementInterface</abbr></a> $quoteManagement, <abbr title="Magento\Paypal\Model\Billing\AgreementFactory">AgreementFactory</abbr> $agreementFactory, <a href="../../../../Magento/Paypal/Model/Api/Type/Factory.html"><abbr title="Magento\Paypal\Model\Api\Type\Factory">Factory</abbr></a> $apiTypeFactory, <a href="../../../../Magento/Framework/DataObject/Copy.html"><abbr title="Magento\Framework\DataObject\Copy">Copy</abbr></a> $objectCopyService, <a href="../../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a> $checkoutSession, <a href="../../../../Magento/Framework/Encryption/EncryptorInterface.html"><abbr title="Magento\Framework\Encryption\EncryptorInterface">EncryptorInterface</abbr></a> $encryptor, <a href="../../../../Magento/Framework/Message/ManagerInterface.html"><abbr title="Magento\Framework\Message\ManagerInterface">ManagerInterface</abbr></a> $messageManager, <a href="../../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository, <a href="../../../../Magento/Customer/Model/AccountManagement.html"><abbr title="Magento\Customer\Model\AccountManagement">AccountManagement</abbr></a> $accountManagement, <a href="../../../../Magento/Sales/Model/Order/Email/Sender/OrderSender.html"><abbr title="Magento\Sales\Model\Order\Email\Sender\OrderSender">OrderSender</abbr></a> $orderSender, <a href="../../../../Magento/Quote/Api/CartRepositoryInterface.html"><abbr title="Magento\Quote\Api\CartRepositoryInterface">CartRepositoryInterface</abbr></a> $quoteRepository, <a href="../../../../Magento/Quote/Model/Quote/TotalsCollector.html"><abbr title="Magento\Quote\Model\Quote\TotalsCollector">TotalsCollector</abbr></a> $totalsCollector, array $params = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method___construct"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCheckoutShortcutImageUrl">getCheckoutShortcutImageUrl</a>()
+        
+                                            <p>Checkout with PayPal image URL getter
+Spares API calls of getting "pal" variable, by putting it into cache per store view</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getCheckoutShortcutImageUrl"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\Express\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareGiropayUrls">prepareGiropayUrls</a>(string $successUrl, string $cancelUrl, string $pendingUrl)
+        
+                                            <p>Setter that enables giropay redirects flow</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_prepareGiropayUrls"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\Express\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setIsBillingAgreementRequested">setIsBillingAgreementRequested</a>(bool $flag)
+        
+                                            <p>Set create billing agreement flag</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_setIsBillingAgreementRequested"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\Express\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setIsBml">setIsBml</a>(bool $isBml)
+        
+                                            <p>Set flag that forces to use BillMeLater</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_setIsBml"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\Express\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCustomerData">setCustomerData</a>(<a href="../../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customerData)
+        
+                                            <p>Setter for customer</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_setCustomerData"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Paypal\Model\Express\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCustomerWithAddressChange">setCustomerWithAddressChange</a>(<a href="../../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customerData, <a href="../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a>|null $billingAddress = null, <a href="../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a>|null $shippingAddress = null)
+        
+                                            <p>Setter for customer with billing and shipping address changing ability</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_setCustomerWithAddressChange"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_start">start</a>(string $returnUrl, string $cancelUrl, bool|null $button = null)
+        
+                                            <p>Reserve order ID for specified quote and start checkout on PayPal</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_start"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_canSkipOrderReviewStep">canSkipOrderReviewStep</a>()
+        
+                                            <p>Check whether system can skip order review page before placing order</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_canSkipOrderReviewStep"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_returnFromPaypal">returnFromPaypal</a>(string $token)
+        
+                                            <p>Update quote when returned from PayPal
+rewrite billing address by paypal
+save old billing address for new customer
+export shipping address in case address absence</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_returnFromPaypal"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_prepareOrderReview">prepareOrderReview</a>(string|null $token = null)
+        
+                                            <p>Check whether order review has enough data to initialize</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_prepareOrderReview"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShippingOptionsCallbackResponse">getShippingOptionsCallbackResponse</a>(array $request)
+        
+                                            <p>Return callback response with shipping options</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getShippingOptionsCallbackResponse"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateShippingMethod">updateShippingMethod</a>(string $methodCode)
+        
+                                            <p>Set shipping method to quote, if needed</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_place">place</a>(string $token, string|null $shippingMethodCode = null)
+        
+                                            <p>Place the order when customer returned from PayPal until this moment all quote data must be valid.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_place"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRedirectUrl">getRedirectUrl</a>()
+        
+                                            <p>Determine whether redirect somewhere specifically is required</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getRedirectUrl"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Paypal/Model/Billing/Agreement.html"><abbr title="Magento\Paypal\Model\Billing\Agreement">Agreement</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBillingAgreement">getBillingAgreement</a>()
+        
+                                            <p>Get created billing agreement</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getBillingAgreement"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Sales/Model/Order.html"><abbr title="Magento\Sales\Model\Order">Order</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOrder">getOrder</a>()
+        
+                                            <p>Return order</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getOrder"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCheckoutMethod">getCheckoutMethod</a>()
+        
+                                            <p>Get checkout method</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getCheckoutMethod"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCustomerSession">getCustomerSession</a>()
+        
+                                            <p>Get customer session object</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getCustomerSession"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method___construct"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 300</div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../../../../Magento/Customer/Model/Url.html"><abbr title="Magento\Customer\Model\Url">Url</abbr></a> $customerUrl, <a href="../../../../Magento/Tax/Helper/Data.html"><abbr title="Magento\Tax\Helper\Data">Data</abbr></a> $taxData, <a href="../../../../Magento/Checkout/Helper/Data.html"><abbr title="Magento\Checkout\Helper\Data">Data</abbr></a> $checkoutData, <a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a> $customerSession, <a href="../../../../Magento/Framework/App/Cache/Type/Config.html"><abbr title="Magento\Framework\App\Cache\Type\Config">Config</abbr></a> $configCacheType, <a href="../../../../Magento/Framework/Locale/ResolverInterface.html"><abbr title="Magento\Framework\Locale\ResolverInterface">ResolverInterface</abbr></a> $localeResolver, <a href="../../../../Magento/Paypal/Model/Info.html"><abbr title="Magento\Paypal\Model\Info">Info</abbr></a> $paypalInfo, <a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a> $coreUrl, <abbr title="Magento\Paypal\Model\CartFactory">CartFactory</abbr> $cartFactory, <abbr title="Magento\Checkout\Model\Type\OnepageFactory">OnepageFactory</abbr> $onepageFactory, <a href="../../../../Magento/Quote/Api/CartManagementInterface.html"><abbr title="Magento\Quote\Api\CartManagementInterface">CartManagementInterface</abbr></a> $quoteManagement, <abbr title="Magento\Paypal\Model\Billing\AgreementFactory">AgreementFactory</abbr> $agreementFactory, <a href="../../../../Magento/Paypal/Model/Api/Type/Factory.html"><abbr title="Magento\Paypal\Model\Api\Type\Factory">Factory</abbr></a> $apiTypeFactory, <a href="../../../../Magento/Framework/DataObject/Copy.html"><abbr title="Magento\Framework\DataObject\Copy">Copy</abbr></a> $objectCopyService, <a href="../../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a> $checkoutSession, <a href="../../../../Magento/Framework/Encryption/EncryptorInterface.html"><abbr title="Magento\Framework\Encryption\EncryptorInterface">EncryptorInterface</abbr></a> $encryptor, <a href="../../../../Magento/Framework/Message/ManagerInterface.html"><abbr title="Magento\Framework\Message\ManagerInterface">ManagerInterface</abbr></a> $messageManager, <a href="../../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository, <a href="../../../../Magento/Customer/Model/AccountManagement.html"><abbr title="Magento\Customer\Model\AccountManagement">AccountManagement</abbr></a> $accountManagement, <a href="../../../../Magento/Sales/Model/Order/Email/Sender/OrderSender.html"><abbr title="Magento\Sales\Model\Order\Email\Sender\OrderSender">OrderSender</abbr></a> $orderSender, <a href="../../../../Magento/Quote/Api/CartRepositoryInterface.html"><abbr title="Magento\Quote\Api\CartRepositoryInterface">CartRepositoryInterface</abbr></a> $quoteRepository, <a href="../../../../Magento/Quote/Model/Quote/TotalsCollector.html"><abbr title="Magento\Quote\Model\Quote\TotalsCollector">TotalsCollector</abbr></a> $totalsCollector, array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Model/Url.html"><abbr title="Magento\Customer\Model\Url">Url</abbr></a></td>
+                <td>$customerUrl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Tax/Helper/Data.html"><abbr title="Magento\Tax\Helper\Data">Data</abbr></a></td>
+                <td>$taxData</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Checkout/Helper/Data.html"><abbr title="Magento\Checkout\Helper\Data">Data</abbr></a></td>
+                <td>$checkoutData</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a></td>
+                <td>$customerSession</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/App/Cache/Type/Config.html"><abbr title="Magento\Framework\App\Cache\Type\Config">Config</abbr></a></td>
+                <td>$configCacheType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Locale/ResolverInterface.html"><abbr title="Magento\Framework\Locale\ResolverInterface">ResolverInterface</abbr></a></td>
+                <td>$localeResolver</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Paypal/Model/Info.html"><abbr title="Magento\Paypal\Model\Info">Info</abbr></a></td>
+                <td>$paypalInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/UrlInterface.html"><abbr title="Magento\Framework\UrlInterface">UrlInterface</abbr></a></td>
+                <td>$coreUrl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Paypal\Model\CartFactory">CartFactory</abbr></td>
+                <td>$cartFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Checkout\Model\Type\OnepageFactory">OnepageFactory</abbr></td>
+                <td>$onepageFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Quote/Api/CartManagementInterface.html"><abbr title="Magento\Quote\Api\CartManagementInterface">CartManagementInterface</abbr></a></td>
+                <td>$quoteManagement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Paypal\Model\Billing\AgreementFactory">AgreementFactory</abbr></td>
+                <td>$agreementFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Paypal/Model/Api/Type/Factory.html"><abbr title="Magento\Paypal\Model\Api\Type\Factory">Factory</abbr></a></td>
+                <td>$apiTypeFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/DataObject/Copy.html"><abbr title="Magento\Framework\DataObject\Copy">Copy</abbr></a></td>
+                <td>$objectCopyService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Checkout/Model/Session.html"><abbr title="Magento\Checkout\Model\Session">Session</abbr></a></td>
+                <td>$checkoutSession</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Encryption/EncryptorInterface.html"><abbr title="Magento\Framework\Encryption\EncryptorInterface">EncryptorInterface</abbr></a></td>
+                <td>$encryptor</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Message/ManagerInterface.html"><abbr title="Magento\Framework\Message\ManagerInterface">ManagerInterface</abbr></a></td>
+                <td>$messageManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a></td>
+                <td>$customerRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Model/AccountManagement.html"><abbr title="Magento\Customer\Model\AccountManagement">AccountManagement</abbr></a></td>
+                <td>$accountManagement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Sales/Model/Order/Email/Sender/OrderSender.html"><abbr title="Magento\Sales\Model\Order\Email\Sender\OrderSender">OrderSender</abbr></a></td>
+                <td>$orderSender</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Quote/Api/CartRepositoryInterface.html"><abbr title="Magento\Quote\Api\CartRepositoryInterface">CartRepositoryInterface</abbr></a></td>
+                <td>$quoteRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Quote/Model/Quote/TotalsCollector.html"><abbr title="Magento\Quote\Model\Quote\TotalsCollector">TotalsCollector</abbr></a></td>
+                <td>$totalsCollector</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCheckoutShortcutImageUrl">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getCheckoutShortcutImageUrl"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 372</div>
+        <code>                    string
+    <strong>getCheckoutShortcutImageUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checkout with PayPal image URL getter
+Spares API calls of getting "pal" variable, by putting it into cache per store view</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareGiropayUrls">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_prepareGiropayUrls"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 410</div>
+        <code>                    <abbr title="Magento\Paypal\Model\Express\$this">$this</abbr>
+    <strong>prepareGiropayUrls</strong>(string $successUrl, string $cancelUrl, string $pendingUrl)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter that enables giropay redirects flow</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$successUrl</td>
+                <td><ul>
+<li>payment success result</li>
+</ul>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cancelUrl</td>
+                <td><ul>
+<li>payment cancellation result</li>
+</ul>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pendingUrl</td>
+                <td><ul>
+<li>pending payment result</li>
+</ul>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\Express\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIsBillingAgreementRequested">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_setIsBillingAgreementRequested"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 422</div>
+        <code>                    <abbr title="Magento\Paypal\Model\Express\$this">$this</abbr>
+    <strong>setIsBillingAgreementRequested</strong>(bool $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set create billing agreement flag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\Express\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIsBml">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_setIsBml"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 434</div>
+        <code>                    <abbr title="Magento\Paypal\Model\Express\$this">$this</abbr>
+    <strong>setIsBml</strong>(bool $isBml)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set flag that forces to use BillMeLater</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$isBml</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\Express\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCustomerData">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_setCustomerData"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 446</div>
+        <code>                    <abbr title="Magento\Paypal\Model\Express\$this">$this</abbr>
+    <strong>setCustomerData</strong>(<a href="../../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customerData)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter for customer</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+                <td>$customerData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\Express\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCustomerWithAddressChange">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_setCustomerWithAddressChange"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 461</div>
+        <code>                    <abbr title="Magento\Paypal\Model\Express\$this">$this</abbr>
+    <strong>setCustomerWithAddressChange</strong>(<a href="../../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customerData, <a href="../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a>|null $billingAddress = null, <a href="../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a>|null $shippingAddress = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setter for customer with billing and shipping address changing ability</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+                <td>$customerData</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a>|null</td>
+                <td>$billingAddress</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Magento/Quote/Model/Quote/Address.html"><abbr title="Magento\Quote\Model\Quote\Address">Address</abbr></a>|null</td>
+                <td>$shippingAddress</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Paypal\Model\Express\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_start">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_start"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 483</div>
+        <code>                    string
+    <strong>start</strong>(string $returnUrl, string $cancelUrl, bool|null $button = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reserve order ID for specified quote and start checkout on PayPal</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$returnUrl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cancelUrl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool|null</td>
+                <td>$button</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canSkipOrderReviewStep">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_canSkipOrderReviewStep"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 591</div>
+        <code>                    bool
+    <strong>canSkipOrderReviewStep</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether system can skip order review page before placing order</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_returnFromPaypal">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_returnFromPaypal"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 607</div>
+        <code>                    void
+    <strong>returnFromPaypal</strong>(string $token)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update quote when returned from PayPal
+rewrite billing address by paypal
+save old billing address for new customer
+export shipping address in case address absence</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareOrderReview">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_prepareOrderReview"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 690</div>
+        <code>                    void
+    <strong>prepareOrderReview</strong>(string|null $token = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether order review has enough data to initialize</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Magento/Framework/Exception/LocalizedException.html"><abbr title="Magento\Framework\Exception\LocalizedException">LocalizedException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShippingOptionsCallbackResponse">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getShippingOptionsCallbackResponse"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 714</div>
+        <code>                    string
+    <strong>getShippingOptionsCallbackResponse</strong>(array $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return callback response with shipping options</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateShippingMethod">
+        <div class="location">at line         line 34</div>
+        <code>                    void
+    <strong>updateShippingMethod</strong>(string $methodCode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set shipping method to quote, if needed</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$methodCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_place">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_place"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 780</div>
+        <code>                    void
+    <strong>place</strong>(string $token, string|null $shippingMethodCode = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Place the order when customer returned from PayPal until this moment all quote data must be valid.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$shippingMethodCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRedirectUrl">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getRedirectUrl"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 844</div>
+        <code>                    string
+    <strong>getRedirectUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determine whether redirect somewhere specifically is required</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBillingAgreement">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getBillingAgreement"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 854</div>
+        <code>                    <a href="../../../../Magento/Paypal/Model/Billing/Agreement.html"><abbr title="Magento\Paypal\Model\Billing\Agreement">Agreement</abbr></a>|null
+    <strong>getBillingAgreement</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get created billing agreement</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Paypal/Model/Billing/Agreement.html"><abbr title="Magento\Paypal\Model\Billing\Agreement">Agreement</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrder">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getOrder"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 864</div>
+        <code>                    <a href="../../../../Magento/Sales/Model/Order.html"><abbr title="Magento\Sales\Model\Order">Order</abbr></a>
+    <strong>getOrder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return order</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Sales/Model/Order.html"><abbr title="Magento\Sales\Model\Order">Order</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCheckoutMethod">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getCheckoutMethod"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 874</div>
+        <code>                    string
+    <strong>getCheckoutMethod</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get checkout method</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomerSession">
+        <div class="location">in <a href="../../../../Magento/Paypal/Model/Express/Checkout.html#method_getCustomerSession"><abbr title="Magento\Paypal\Model\Express\Checkout">Checkout</abbr></a> at line         line 1110</div>
+        <code>                    <a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a>
+    <strong>getCustomerSession</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get customer session object</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

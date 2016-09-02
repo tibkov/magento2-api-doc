@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Controller_Action_Helper_ViewRenderer | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Controller_Action_Helper_ViewRenderer" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Controller_Action_Helper_ViewRenderer
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Controller_Action_Helper_ViewRenderer</strong>        extends <a href="Zend_Controller_Action_Helper_Abstract.html">Zend_Controller_Action_Helper_Abstract</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>View script integration</p>            <p>Zend<em>Controller</em>Action<em>Helper</em>ViewRenderer provides transparent view
+integration for action controllers. It allows you to create a view object
+once, and populate it throughout all actions. Several global options may be
+set:</p>
+
+<ul>
+<li>noController: if set true, render() will not look for view scripts in
+subdirectories named after the controller</li>
+<li>viewSuffix: what view script filename suffix to use</li>
+</ul>
+
+<p>The helper autoinitializes the action controller view preDispatch(). It
+determines the path to the class file, and then determines the view base
+directory from there. It also uses the module name as a class prefix for
+helpers and views such that if your module name is 'Search', it will set the
+helper class prefix to 'Search<em>View</em>Helper' and the filter class prefix to ;
+'Search<em>View</em>Filter'.</p>
+
+<p>Usage:
+<code>
+// In your bootstrap:
+Zend<em>Controller</em>Action<em>HelperBroker::addHelper(new Zend</em>Controller<em>Action</em>Helper_ViewRenderer());</p>
+
+<p>// In your action controller methods:
+$viewHelper = $this->_helper->getHelper('view');</p>
+
+<p>// Don't use controller subdirectories
+$viewHelper->setNoController(true);</p>
+
+<p>// Specify a different script to render:
+$this->_helper->viewRenderer('form');</p>
+
+<p></code></p>        </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_view">
+                                                                                <a href="Zend_View_Interface.html">Zend_View_Interface</a>
+                </td>
+                <td>$view</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    Zend_Controller_ActionHelper_Abstract
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setActionController">setActionController</a>(<a href="Zend_Controller_Action.html">Zend_Controller_Action</a> $actionController = null)
+        
+                                            <p>setActionController()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_setActionController">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getActionController">getActionController</a>()
+        
+                                            <p>Retrieve current action controller</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_getActionController">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFrontController">getFrontController</a>()
+        
+                                            <p>Retrieve front controller instance</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_getFrontController">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>()
+        
+                                            <p>init - initialize view</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_preDispatch">preDispatch</a>()
+        
+                                            <p>Hook into action controller preDispatch() workflow</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_preDispatch">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_postDispatch">postDispatch</a>()
+        
+                                            <p>postDispatch - auto render a view</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequest">getRequest</a>()
+        
+                                            <p>getRequest() -</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_getRequest">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResponse">getResponse</a>()
+        
+                                            <p>getResponse() -</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_getResponse">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p>getName()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Controller_Action_Helper_Abstract.html#method_getName">Zend_Controller_Action_Helper_Abstract</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="Zend_View_Interface.html">Zend_View_Interface</a> $view = null, array $options = array())
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___clone">__clone</a>()
+        
+                                            <p>Clone - also make sure the view is cloned.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setView">setView</a>(<a href="Zend_View_Interface.html">Zend_View_Interface</a> $view)
+        
+                                            <p>Set the view object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModule">getModule</a>()
+        
+                                            <p>Get current module name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getModuleDirectory">getModuleDirectory</a>()
+        
+                                            <p>Get module directory</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Filter_Inflector.html">Zend_Filter_Inflector</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInflector">getInflector</a>()
+        
+                                            <p>Get inflector</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setInflector">setInflector</a>(<a href="Zend_Filter_Inflector.html">Zend_Filter_Inflector</a> $inflector, boolean $reference = false)
+        
+                                            <p>Set inflector</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initView">initView</a>(string $path = null, string $prefix = null, array $options = array())
+        
+                                            <p>Initialize the view object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setViewBasePathSpec">setViewBasePathSpec</a>(string $path)
+        
+                                            <p>Set view basePath specification</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getViewBasePathSpec">getViewBasePathSpec</a>()
+        
+                                            <p>Retrieve the current view basePath specification string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setViewScriptPathSpec">setViewScriptPathSpec</a>(string $path)
+        
+                                            <p>Set view script path specification</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getViewScriptPathSpec">getViewScriptPathSpec</a>()
+        
+                                            <p>Retrieve the current view script path specification string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setViewScriptPathNoControllerSpec">setViewScriptPathNoControllerSpec</a>(string $path)
+        
+                                            <p>Set view script path specification (no controller variant)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getViewScriptPathNoControllerSpec">getViewScriptPathNoControllerSpec</a>()
+        
+                                            <p>Retrieve the current view script path specification string (no controller variant)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getViewScript">getViewScript</a>(string $action = null, array $vars = array())
+        
+                                            <p>Get a view script based on an action and/or other variables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setNeverRender">setNeverRender</a>(boolean $flag = true)
+        
+                                            <p>Set the neverRender flag (i.e., globally dis/enable autorendering)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNeverRender">getNeverRender</a>()
+        
+                                            <p>Retrieve neverRender flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setNoRender">setNoRender</a>(boolean $flag = true)
+        
+                                            <p>Set the noRender flag (i.e., whether or not to autorender)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNoRender">getNoRender</a>()
+        
+                                            <p>Retrieve noRender flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setScriptAction">setScriptAction</a>(string $name)
+        
+                                            <p>Set the view script to use</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getScriptAction">getScriptAction</a>()
+        
+                                            <p>Retrieve view script name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setResponseSegment">setResponseSegment</a>(string $name)
+        
+                                            <p>Set the response segment name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResponseSegment">getResponseSegment</a>()
+        
+                                            <p>Retrieve named response segment name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setNoController">setNoController</a>(boolean $flag = true)
+        
+                                            <p>Set the noController flag (i.e., whether or not to render into controller subdirectories)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNoController">getNoController</a>()
+        
+                                            <p>Retrieve noController flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setNeverController">setNeverController</a>(boolean $flag = true)
+        
+                                            <p>Set the neverController flag (i.e., whether or not to render into controller subdirectories)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNeverController">getNeverController</a>()
+        
+                                            <p>Retrieve neverController flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setViewSuffix">setViewSuffix</a>(string $suffix)
+        
+                                            <p>Set view script suffix</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getViewSuffix">getViewSuffix</a>()
+        
+                                            <p>Get view script suffix</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRender">setRender</a>(string $action = null, string $name = null, boolean $noController = null)
+        
+                                            <p>Set options for rendering a view script</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderScript">renderScript</a>(string $script, string $name = null)
+        
+                                            <p>Render a view script (optionally to a named response segment)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>(string $action = null, string $name = null, boolean $noController = null)
+        
+                                            <p>Render a view based on path specifications</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renderBySpec">renderBySpec</a>(string $action = null, array $vars = array(), string $name = null)
+        
+                                            <p>Render a script based on specification variables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_direct">direct</a>(string $action = null, string $name = null, boolean $noController = null)
+        
+                                            <p>Use this helper as a method; proxies to setRender()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_setActionController">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_setActionController">Zend_Controller_Action_Helper_Abstract</a> at line         line 55</div>
+        <code>                    Zend_Controller_ActionHelper_Abstract
+    <strong>setActionController</strong>(<a href="Zend_Controller_Action.html">Zend_Controller_Action</a> $actionController = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>setActionController()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action.html">Zend_Controller_Action</a></td>
+                <td>$actionController</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>Zend_Controller_ActionHelper_Abstract</td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getActionController">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_getActionController">Zend_Controller_Action_Helper_Abstract</a> at line         line 66</div>
+        <code>                    <a href="Zend_Controller_Action.html">Zend_Controller_Action</a>
+    <strong>getActionController</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve current action controller</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action.html">Zend_Controller_Action</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFrontController">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_getFrontController">Zend_Controller_Action_Helper_Abstract</a> at line         line 76</div>
+        <code>                    <a href="Zend_Controller_Front.html">Zend_Controller_Front</a>
+    <strong>getFrontController</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve front controller instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Front.html">Zend_Controller_Front</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location">at line         line 510</div>
+        <code>                    void
+    <strong>init</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>init - initialize view</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preDispatch">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_preDispatch">Zend_Controller_Action_Helper_Abstract</a> at line         line 95</div>
+        <code>                    void
+    <strong>preDispatch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Hook into action controller preDispatch() workflow</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_postDispatch">
+        <div class="location">at line         line 969</div>
+        <code>                    void
+    <strong>postDispatch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>postDispatch - auto render a view</p>                    <p>Only autorenders if:
+- _noRender is false
+- action controller is present
+- request has not been re-dispatched (i.e., _forward() has not been called)
+- response is not a redirect</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_getRequest">Zend_Controller_Action_Helper_Abstract</a> at line         line 113</div>
+        <code>                    <a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a>
+    <strong>getRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>getRequest() -</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Request_Abstract.html">Zend_Controller_Request_Abstract</a></td>
+            <td>$request</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponse">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_getResponse">Zend_Controller_Action_Helper_Abstract</a> at line         line 128</div>
+        <code>                    <a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a>
+    <strong>getResponse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>getResponse() -</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Response_Abstract.html">Zend_Controller_Response_Abstract</a></td>
+            <td>$response</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">in <a href="Zend_Controller_Action_Helper_Abstract.html#method_getName">Zend_Controller_Action_Helper_Abstract</a> at line         line 143</div>
+        <code>                    string
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>getName()</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 182</div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="Zend_View_Interface.html">Zend_View_Interface</a> $view = null, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                    <p>Optionally set view object and options.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_View_Interface.html">Zend_View_Interface</a></td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___clone">
+        <div class="location">at line         line 198</div>
+        <code>                    void
+    <strong>__clone</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clone - also make sure the view is cloned.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setView">
+        <div class="location">at line         line 212</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setView</strong>(<a href="Zend_View_Interface.html">Zend_View_Interface</a> $view)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the view object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_View_Interface.html">Zend_View_Interface</a></td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModule">
+        <div class="location">at line         line 223</div>
+        <code>                    string
+    <strong>getModule</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get current module name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getModuleDirectory">
+        <div class="location">at line         line 240</div>
+        <code>                    string
+    <strong>getModuleDirectory</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get module directory</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInflector">
+        <div class="location">at line         line 260</div>
+        <code>                    <a href="Zend_Filter_Inflector.html">Zend_Filter_Inflector</a>
+    <strong>getInflector</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get inflector</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Filter_Inflector.html">Zend_Filter_Inflector</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setInflector">
+        <div class="location">at line         line 299</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setInflector</strong>(<a href="Zend_Filter_Inflector.html">Zend_Filter_Inflector</a> $inflector, boolean $reference = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set inflector</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Filter_Inflector.html">Zend_Filter_Inflector</a></td>
+                <td>$inflector</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$reference</td>
+                <td>Whether the moduleDir, target, and suffix should be set as references to ViewRenderer properties</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initView">
+        <div class="location">at line         line 452</div>
+        <code>                    void
+    <strong>initView</strong>(string $path = null, string $prefix = null, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize the view object</p>                    <p>$options may contain the following keys:
+- neverRender - flag dis/enabling postDispatch() autorender (affects all subsequent calls)
+- noController - flag indicating whether or not to look for view scripts in subdirectories named after the controller
+- noRender - flag indicating whether or not to autorender postDispatch()
+- responseSegment - which named response segment to render a view script to
+- scriptAction - what action script to render
+- viewBasePathSpec - specification to use for determining view base path
+- viewScriptPathSpec - specification to use for determining view script paths
+- viewScriptPathNoControllerSpec - specification to use for determining view script paths when noController flag is set
+- viewSuffix - what view script filename suffix to use</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Controller_Action_Exception.html">Zend_Controller_Action_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setViewBasePathSpec">
+        <div class="location">at line         line 531</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setViewBasePathSpec</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set view basePath specification</p>                    <p>Specification can contain one or more of the following:
+- :moduleDir - current module directory
+- :controller - name of current controller in the request
+- :action - name of current action in the request
+- :module - name of current module in the request</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getViewBasePathSpec">
+        <div class="location">at line         line 542</div>
+        <code>                    string
+    <strong>getViewBasePathSpec</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the current view basePath specification string</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setViewScriptPathSpec">
+        <div class="location">at line         line 559</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setViewScriptPathSpec</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set view script path specification</p>                    <p>Specification can contain one or more of the following:
+- :moduleDir - current module directory
+- :controller - name of current controller in the request
+- :action - name of current action in the request
+- :module - name of current module in the request</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getViewScriptPathSpec">
+        <div class="location">at line         line 570</div>
+        <code>                    string
+    <strong>getViewScriptPathSpec</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the current view script path specification string</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setViewScriptPathNoControllerSpec">
+        <div class="location">at line         line 589</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setViewScriptPathNoControllerSpec</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set view script path specification (no controller variant)</p>                    <p>Specification can contain one or more of the following:
+- :moduleDir - current module directory
+- :controller - name of current controller in the request
+- :action - name of current action in the request
+- :module - name of current module in the request</p>
+
+<p>:controller will likely be ignored in this variant.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getViewScriptPathNoControllerSpec">
+        <div class="location">at line         line 600</div>
+        <code>                    string
+    <strong>getViewScriptPathNoControllerSpec</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the current view script path specification string (no controller variant)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getViewScript">
+        <div class="location">at line         line 617</div>
+        <code>                    string
+    <strong>getViewScript</strong>(string $action = null, array $vars = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a view script based on an action and/or other variables</p>                    <p>Uses values found in current request if no values passed in $vars.</p>
+
+<p>If {@link $<em>noController} is set, uses {@link $</em>viewScriptPathNoControllerSpec};
+otherwise, uses {@link $_viewScriptPathSpec}.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$vars</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setNeverRender">
+        <div class="location">at line         line 648</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setNeverRender</strong>(boolean $flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the neverRender flag (i.e., globally dis/enable autorendering)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNeverRender">
+        <div class="location">at line         line 659</div>
+        <code>                    boolean
+    <strong>getNeverRender</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve neverRender flag value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setNoRender">
+        <div class="location">at line         line 670</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setNoRender</strong>(boolean $flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the noRender flag (i.e., whether or not to autorender)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNoRender">
+        <div class="location">at line         line 681</div>
+        <code>                    boolean
+    <strong>getNoRender</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve noRender flag value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setScriptAction">
+        <div class="location">at line         line 692</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setScriptAction</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the view script to use</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getScriptAction">
+        <div class="location">at line         line 703</div>
+        <code>                    string
+    <strong>getScriptAction</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve view script name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setResponseSegment">
+        <div class="location">at line         line 714</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setResponseSegment</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the response segment name</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResponseSegment">
+        <div class="location">at line         line 730</div>
+        <code>                    string
+    <strong>getResponseSegment</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve named response segment name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setNoController">
+        <div class="location">at line         line 741</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setNoController</strong>(boolean $flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the noController flag (i.e., whether or not to render into controller subdirectories)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNoController">
+        <div class="location">at line         line 752</div>
+        <code>                    boolean
+    <strong>getNoController</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve noController flag value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setNeverController">
+        <div class="location">at line         line 763</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setNeverController</strong>(boolean $flag = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the neverController flag (i.e., whether or not to render into controller subdirectories)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>boolean</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNeverController">
+        <div class="location">at line         line 774</div>
+        <code>                    boolean
+    <strong>getNeverController</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve neverController flag value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setViewSuffix">
+        <div class="location">at line         line 785</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setViewSuffix</strong>(string $suffix)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set view script suffix</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$suffix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getViewSuffix">
+        <div class="location">at line         line 796</div>
+        <code>                    string
+    <strong>getViewSuffix</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get view script suffix</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRender">
+        <div class="location">at line         line 809</div>
+        <code>                    <a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a>
+    <strong>setRender</strong>(string $action = null, string $name = null, boolean $noController = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set options for rendering a view script</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td>View script to render</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>Response named segment to render to</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$noController</td>
+                <td>Whether or not to render within a subdirectory named after the controller</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Controller_Action_Helper_ViewRenderer.html">Zend_Controller_Action_Helper_ViewRenderer</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderScript">
+        <div class="location">at line         line 905</div>
+        <code>                    void
+    <strong>renderScript</strong>(string $script, string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render a view script (optionally to a named response segment)</p>                    <p>Sets the noRender flag to true when called.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$script</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">at line         line 929</div>
+        <code>                    void
+    <strong>render</strong>(string $action = null, string $name = null, boolean $noController = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render a view based on path specifications</p>                    <p>Renders a view based on the view script path specifications.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$noController</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renderBySpec">
+        <div class="location">at line         line 947</div>
+        <code>                    void
+    <strong>renderBySpec</strong>(string $action = null, array $vars = array(), string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Render a script based on specification variables</p>                    <p>Pass an action, and one or more specification variables (view script suffix)
+to determine the view script path, and render that script.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$vars</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_direct">
+        <div class="location">at line         line 1000</div>
+        <code>                    void
+    <strong>direct</strong>(string $action = null, string $name = null, boolean $noController = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Use this helper as a method; proxies to setRender()</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$noController</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

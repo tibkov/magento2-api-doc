@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Tax\Test\Unit\Pricing\Render\AdjustmentTest | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../../css/sami.css">
+        <script src="../../../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../../../js/typeahead.min.js"></script>
+        <script src="../../../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Tax_Test_Unit_Pricing_Render_AdjustmentTest" data-root-path="../../../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../../../../Magento/Tax.html">Tax</a></li>
+                                        <li><a href="../../../../../../Magento/Tax/Test.html">Test</a></li>
+                                        <li><a href="../../../../../../Magento/Tax/Test/Unit.html">Unit</a></li>
+                                        <li><a href="../../../../../../Magento/Tax/Test/Unit/Pricing.html">Pricing</a></li>
+                                        <li><a href="../../../../../../Magento/Tax/Test/Unit/Pricing/Render.html">Render</a></li>
+    
+                <li>AdjustmentTest</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            AdjustmentTest
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>AdjustmentTest</strong>        extends PHPUnit_Framework_TestCase
+</p>
+
+        
+    
+
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetAdjustmentCode">testGetAdjustmentCode</a>()
+        
+                                            <p>Test for method getAdjustmentCode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetDefaultExclusions">testGetDefaultExclusions</a>()
+        
+                                            <p>Test for method getDefaultExclusions</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testDisplayBothPrices">testDisplayBothPrices</a>()
+        
+                                            <p>Test for method displayBothPrices</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetDisplayAmountExclTax">testGetDisplayAmountExclTax</a>()
+        
+                                            <p>Test for method getDisplayAmountExclTax</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetDisplayAmount">testGetDisplayAmount</a>(bool $includeContainer)
+        
+                                            <p>Test for method getDisplayAmount</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDisplayAmountDataProvider">getDisplayAmountDataProvider</a>()
+        
+                                            <p>Data provider for testGetDisplayAmount</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testBuildIdWithPrefix">testBuildIdWithPrefix</a>(string $prefix, null|<abbr title="Magento\Tax\Test\Unit\Pricing\Render\false">false</abbr>|int $saleableId, null|<abbr title="Magento\Tax\Test\Unit\Pricing\Render\false">false</abbr>|string $suffix, string $expectedResult)
+        
+                                            <p>Test for method buildIdWithPrefix</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildIdWithPrefixDataProvider">buildIdWithPrefixDataProvider</a>()
+        
+                                            <p>data provider for testBuildIdWithPrefix</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testDisplayPriceIncludingTax">testDisplayPriceIncludingTax</a>()
+        
+                                            <p>test for method displayPriceIncludingTax</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testDisplayPriceExcludingTax">testDisplayPriceExcludingTax</a>()
+        
+                                            <p>test for method displayPriceExcludingTax</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetHtmlExcluding">testGetHtmlExcluding</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_testGetHtmlBoth">testGetHtmlBoth</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_testGetAdjustmentCode">
+        <div class="location">at line         line 89</div>
+        <code>                    
+    <strong>testGetAdjustmentCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test for method getAdjustmentCode</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetDefaultExclusions">
+        <div class="location">at line         line 97</div>
+        <code>                    
+    <strong>testGetDefaultExclusions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test for method getDefaultExclusions</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testDisplayBothPrices">
+        <div class="location">at line         line 107</div>
+        <code>                    
+    <strong>testDisplayBothPrices</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test for method displayBothPrices</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetDisplayAmountExclTax">
+        <div class="location">at line         line 119</div>
+        <code>                    
+    <strong>testGetDisplayAmountExclTax</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test for method getDisplayAmountExclTax</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetDisplayAmount">
+        <div class="location">at line         line 160</div>
+        <code>                    
+    <strong>testGetDisplayAmount</strong>(bool $includeContainer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test for method getDisplayAmount</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$includeContainer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDisplayAmountDataProvider">
+        <div class="location">at line         line 200</div>
+        <code>                    array
+    <strong>getDisplayAmountDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Data provider for testGetDisplayAmount</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testBuildIdWithPrefix">
+        <div class="location">at line         line 214</div>
+        <code>                    
+    <strong>testBuildIdWithPrefix</strong>(string $prefix, null|<abbr title="Magento\Tax\Test\Unit\Pricing\Render\false">false</abbr>|int $saleableId, null|<abbr title="Magento\Tax\Test\Unit\Pricing\Render\false">false</abbr>|string $suffix, string $expectedResult)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test for method buildIdWithPrefix</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>null|<abbr title="Magento\Tax\Test\Unit\Pricing\Render\false">false</abbr>|int</td>
+                <td>$saleableId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>null|<abbr title="Magento\Tax\Test\Unit\Pricing\Render\false">false</abbr>|string</td>
+                <td>$suffix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$expectedResult</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildIdWithPrefixDataProvider">
+        <div class="location">at line         line 247</div>
+        <code>                    array
+    <strong>buildIdWithPrefixDataProvider</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>data provider for testBuildIdWithPrefix</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testDisplayPriceIncludingTax">
+        <div class="location">at line         line 261</div>
+        <code>                    
+    <strong>testDisplayPriceIncludingTax</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>test for method displayPriceIncludingTax</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testDisplayPriceExcludingTax">
+        <div class="location">at line         line 277</div>
+        <code>                    
+    <strong>testDisplayPriceExcludingTax</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>test for method displayPriceExcludingTax</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetHtmlExcluding">
+        <div class="location">at line         line 290</div>
+        <code>                    
+    <strong>testGetHtmlExcluding</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testGetHtmlBoth">
+        <div class="location">at line         line 319</div>
+        <code>                    
+    <strong>testGetHtmlBoth</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

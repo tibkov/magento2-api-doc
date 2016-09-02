@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Console_Getopt | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Console_Getopt" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Console_Getopt
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Console_Getopt</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Zend<em>Console</em>Getopt is a class to parse options for command-line
+applications.</p>            <p>Terminology:
+Argument: an element of the argv array.  This may be part of an option,
+  or it may be a non-option command-line argument.
+Flag: the letter or word set off by a '-' or '--'.  Example: in '--output filename',
+  '--output' is the flag.
+Parameter: the additional argument that is associated with the option.
+  Example: in '--output filename', the 'filename' is the parameter.
+Option: the combination of a flag and its parameter, if any.
+  Example: in '--output filename', the whole thing is the option.</p>
+
+<p>The following features are supported:</p>
+
+<ul>
+<li>Short flags like '-a'.  Short flags are preceded by a single
+dash.  Short flags may be clustered e.g. '-abc', which is the
+same as '-a' '-b' '-c'.</li>
+<li>Long flags like '--verbose'.  Long flags are preceded by a
+double dash.  Long flags may not be clustered.</li>
+<li>Options may have a parameter, e.g. '--output filename'.</li>
+<li>Parameters for long flags may also be set off with an equals sign,
+e.g. '--output=filename'.</li>
+<li>Parameters for long flags may be checked as string, word, or integer.</li>
+<li>Automatic generation of a helpful usage message.</li>
+<li>Signal end of options with '--'; subsequent arguments are treated
+as non-option arguments, even if they begin with '-'.</li>
+<li>Raise exception Zend<em>Console</em>Getopt_Exception in several cases
+when invalid flags or parameters are given.  Usage message is
+returned in the exception object.</li>
+</ul>
+
+<p>The format for specifying options uses a PHP associative array.
+The key is has the format of a list of pipe-separated flag names,
+followed by an optional '=' to indicate a required parameter or
+'-' to indicate an optional parameter.  Following that, the type
+of parameter may be specified as 's' for string, 'w' for word,
+or 'i' for integer.</p>
+
+<p>Examples:
+- 'user|username|u=s'  this means '--user' or '--username' or '-u'
+  are synonyms, and the option requires a string parameter.
+- 'p=i'  this means '-p' requires an integer parameter.  No synonyms.
+- 'verbose|v-i'  this means '--verbose' or '-v' are synonyms, and
+  they take an optional integer parameter.
+- 'help|h'  this means '--help' or '-h' are synonyms, and
+  they take no parameter.</p>
+
+<p>The values in the associative array are strings that are used as
+brief descriptions of the options when printing a usage message.</p>
+
+<p>The simpler format for specifying options used by PHP's getopt()
+function is also supported.  This is similar to GNU getopt and shell
+getopt format.</p>
+
+<p>Example:  'abc:' means options '-a', '-b', and '-c'
+are legal, and the latter requires a string parameter.</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>MODE_ZEND</td>
+                <td class="last">
+                    <p><em>The options for a given application can be in multiple formats.</em></p>
+                    <p>modeGnu is for traditional 'ab:c:' style getopt format.
+modeZend is for a more structured format.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODE_GNU</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARAM_REQUIRED</td>
+                <td class="last">
+                    <p><em>Constant tokens for various symbols used in the mode_zend
+rule format.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARAM_OPTIONAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_STRING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_WORD</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_INTEGER</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONFIG_RULEMODE</td>
+                <td class="last">
+                    <p><em>These are constants for optional behavior of this class.</em></p>
+                    <p>ruleMode is either 'zend' or 'gnu' or a user-defined mode.
+dashDash is true if '--' signifies the end of command-line options.
+ignoreCase is true if '--opt' and '--OPT' are implicitly synonyms.
+parseAll is true if all options on the command line should be parsed, regardless of
+whether an argument appears before them.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONFIG_DASHDASH</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONFIG_IGNORECASE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONFIG_PARSEALL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $rules, array $argv = null, array $getoptConfig = array())
+        
+                                            <p>The constructor takes one to three parameters.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $key)
+        
+                                            <p>Return the state of the option seen on the command line of the
+current application invocation.  This function returns true, or the
+parameter to the option, if any.  If the option was not given,
+this function returns null.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___isset">__isset</a>(string $key)
+        
+                                            <p>Test whether a given option has been seen.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___set">__set</a>(string $key, string $value)
+        
+                                            <p>Set the value for a given option.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Return the current set of options and parameters seen as a string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___unset">__unset</a>(string $key)
+        
+                                            <p>Unset an option.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addArguments">addArguments</a>(array $argv)
+        
+                                            <p>Define additional command-line arguments.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setArguments">setArguments</a>(array $argv)
+        
+                                            <p>Define full set of command-line arguments.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOptions">setOptions</a>(array $getoptConfig)
+        
+                                            <p>Define multiple configuration options from an associative array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOption">setOption</a>(string $configKey, string $configValue)
+        
+                                            <p>Define one configuration option as a key/value pair.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRules">addRules</a>(array $rules)
+        
+                                            <p>Define additional option rules.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toString">toString</a>()
+        
+                                            <p>Return the current set of options and parameters seen as a string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toArray">toArray</a>()
+        
+                                            <p>Return the current set of options and parameters seen
+as an array of canonical options and parameters.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toJson">toJson</a>()
+        
+                                            <p>Return the current set of options and parameters seen in Json format.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toXml">toXml</a>()
+        
+                                            <p>Return the current set of options and parameters seen in XML format.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOptions">getOptions</a>()
+        
+                                            <p>Return a list of options that have been seen in the current argv.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOption">getOption</a>(string $flag)
+        
+                                            <p>Return the state of the option seen on the command line of the
+current application invocation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRemainingArgs">getRemainingArgs</a>()
+        
+                                            <p>Return the arguments from the command-line following all options found.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUsageMessage">getUsageMessage</a>()
+        
+                                            <p>Return a useful option reference, formatted for display in an
+error message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAliases">setAliases</a>(array $aliasMap)
+        
+                                            <p>Define aliases for options.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHelp">setHelp</a>(array $helpMap)
+        
+                                            <p>Define help messages for options.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parse">parse</a>()
+        
+                                            <p>Parse command-line arguments and find both long and short
+options.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkRequiredArguments">checkRequiredArguments</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 242</div>
+        <code>                    void
+    <strong>__construct</strong>(array $rules, array $argv = null, array $getoptConfig = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The constructor takes one to three parameters.</p>                    <p>The first parameter is $rules, which may be a string for
+gnu-style format, or a structured array for Zend-style format.</p>
+
+<p>The second parameter is $argv, and it is optional.  If not
+specified, $argv is inferred from the global argv.</p>
+
+<p>The third parameter is an array of configuration parameters
+to control the behavior of this instance of Getopt; it is optional.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$rules</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$argv</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$getoptConfig</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">at line         line 280</div>
+        <code>                    string
+    <strong>__get</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the state of the option seen on the command line of the
+current application invocation.  This function returns true, or the
+parameter to the option, if any.  If the option was not given,
+this function returns null.</p>                    <p>The magic __get method works in the context of naming the option
+as a virtual member of this class.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">at line         line 291</div>
+        <code>                    boolean
+    <strong>__isset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test whether a given option has been seen.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___set">
+        <div class="location">at line         line 308</div>
+        <code>                    void
+    <strong>__set</strong>(string $key, string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the value for a given option.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at line         line 322</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the current set of options and parameters seen as a string.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___unset">
+        <div class="location">at line         line 333</div>
+        <code>                    void
+    <strong>__unset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unset an option.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addArguments">
+        <div class="location">at line         line 350</div>
+        <code>                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+    <strong>addArguments</strong>(array $argv)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define additional command-line arguments.</p>                    <p>These are appended to those defined when the constructor was called.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$argv</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Console_Getopt_Exception.html">Zend_Console_Getopt_Exception</a></td>
+                <td>When not given an array as parameter</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setArguments">
+        <div class="location">at line         line 370</div>
+        <code>                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+    <strong>setArguments</strong>(array $argv)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define full set of command-line arguments.</p>                    <p>These replace any currently defined.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$argv</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Console_Getopt_Exception.html">Zend_Console_Getopt_Exception</a></td>
+                <td>When not given an array as parameter</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOptions">
+        <div class="location">at line         line 390</div>
+        <code>                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+    <strong>setOptions</strong>(array $getoptConfig)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define multiple configuration options from an associative array.</p>                    <p>These are not program options, but properties to configure
+the behavior of Zend<em>Console</em>Getopt.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$getoptConfig</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOption">
+        <div class="location">at line         line 409</div>
+        <code>                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+    <strong>setOption</strong>(string $configKey, string $configValue)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define one configuration option as a key/value pair.</p>                    <p>These are not program options, but properties to configure
+the behavior of Zend<em>Console</em>Getopt.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$configKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$configValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRules">
+        <div class="location">at line         line 424</div>
+        <code>                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+    <strong>addRules</strong>(array $rules)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define additional option rules.</p>                    <p>These are appended to the rules defined when the constructor was called.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$rules</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toString">
+        <div class="location">at line         line 455</div>
+        <code>                    string
+    <strong>toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the current set of options and parameters seen as a string.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location">at line         line 474</div>
+        <code>                    array
+    <strong>toArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the current set of options and parameters seen
+as an array of canonical options and parameters.</p>                    <p>Clusters have been expanded, and option aliases
+have been mapped to their primary option names.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toJson">
+        <div class="location">at line         line 492</div>
+        <code>                    string
+    <strong>toJson</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the current set of options and parameters seen in Json format.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toXml">
+        <div class="location">at line         line 519</div>
+        <code>                    string
+    <strong>toXml</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the current set of options and parameters seen in XML format.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOptions">
+        <div class="location">at line         line 542</div>
+        <code>                    array
+    <strong>getOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a list of options that have been seen in the current argv.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOption">
+        <div class="location">at line         line 558</div>
+        <code>                    mixed
+    <strong>getOption</strong>(string $flag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the state of the option seen on the command line of the
+current application invocation.</p>                    <p>This function returns true, or the parameter value to the option, if any.
+If the option was not given, this function returns null.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$flag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRemainingArgs">
+        <div class="location">at line         line 578</div>
+        <code>                    array
+    <strong>getRemainingArgs</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the arguments from the command-line following all options found.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUsageMessage">
+        <div class="location">at line         line 593</div>
+        <code>                    string
+    <strong>getUsageMessage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a useful option reference, formatted for display in an
+error message.</p>                    <p>Note that this usage information is provided in most Exceptions
+generated by this class.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAliases">
+        <div class="location">at line         line 644</div>
+        <code>                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+    <strong>setAliases</strong>(array $aliasMap)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define aliases for options.</p>                    <p>The parameter $aliasMap is an associative array
+mapping option name (short or long) to an alias.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$aliasMap</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Console_Getopt_Exception.html">Zend_Console_Getopt_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHelp">
+        <div class="location">at line         line 677</div>
+        <code>                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>
+    <strong>setHelp</strong>(array $helpMap)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define help messages for options.</p>                    <p>The parameter $help_map is an associative array
+mapping option name (short or long) to the help string.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$helpMap</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a></td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parse">
+        <div class="location">at line         line 699</div>
+        <code>                    <a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>|null
+    <strong>parse</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Parse command-line arguments and find both long and short
+options.</p>                    <p>Also find option parameters, and remaining arguments after
+all options have been parsed.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Console_Getopt.html">Zend_Console_Getopt</a>|null</td>
+            <td>Provides a fluent interface</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkRequiredArguments">
+        <div class="location">at line         line 737</div>
+        <code>                    
+    <strong>checkRequiredArguments</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Console_Getopt_Exception.html">Zend_Console_Getopt_Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

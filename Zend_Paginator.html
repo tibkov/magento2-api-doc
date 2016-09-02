@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Paginator | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Paginator" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Paginator
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Paginator</strong>        implements
+        <a target="_blank" href="http://php.net/Countable">Countable</a>, <a target="_blank" href="http://php.net/IteratorAggregate">IteratorAggregate</a>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>INTERNAL_ADAPTER</td>
+                <td class="last">
+                    <p><em>Specifies that the factory should try to detect the proper adapter type first</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CACHE_TAG_PREFIX</td>
+                <td class="last">
+                    <p><em>The cache tag prefix used to namespace Paginator results in the cache</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addAdapterPrefixPath">addAdapterPrefixPath</a>(string $prefix, string $path)
+        
+                                            <p>Adds an adapter prefix path to the plugin loader.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addAdapterPrefixPaths">addAdapterPrefixPaths</a>(array $prefixPaths)
+        
+                                            <p>Adds an array of adapter prefix paths to the plugin
+loader.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addScrollingStylePrefixPath">addScrollingStylePrefixPath</a>(string $prefix, string $path)
+        
+                                            <p>Adds a scrolling style prefix path to the plugin loader.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addScrollingStylePrefixPaths">addScrollingStylePrefixPaths</a>(array $prefixPaths)
+        
+                                            <p>Adds an array of scrolling style prefix paths to the plugin
+loader.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Paginator.html">Zend_Paginator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_factory">factory</a>(mixed $data, string $adapter = self::INTERNAL_ADAPTER, array $prefixPaths = null)
+        
+                                            <p>Factory.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAdapterLoader">getAdapterLoader</a>()
+        
+                                            <p>Returns the adapter loader.  If it doesn't exist it's created.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setConfig">setConfig</a>(<a href="Zend_Config.html">Zend_Config</a> $config)
+        
+                                            <p>Set a global config</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultScrollingStyle">getDefaultScrollingStyle</a>()
+        
+                                            <p>Returns the default scrolling style.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultItemCountPerPage">getDefaultItemCountPerPage</a>()
+        
+                                            <p>Get the default item count per page</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultItemCountPerPage">setDefaultItemCountPerPage</a>(int $count)
+        
+                                            <p>Set the default item count per page</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultPageRange">getDefaultPageRange</a>()
+        
+                                            <p>Get the default page range</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultPageRange">setDefaultPageRange</a>(int $count)
+        
+                                            <p>Set the default page range</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCache">setCache</a>(<a href="Zend_Cache_Core.html">Zend_Cache_Core</a> $cache)
+        
+                                            <p>Sets a cache object</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDefaultScrollingStyle">setDefaultScrollingStyle</a>(string $scrollingStyle = &#039;Sliding&#039;)
+        
+                                            <p>Sets the default scrolling style.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getScrollingStyleLoader">getScrollingStyleLoader</a>()
+        
+                                            <p>Returns the scrolling style loader.  If it doesn't exist it's
+created.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="Zend_Paginator_Adapter_Interface.html">Zend_Paginator_Adapter_Interface</a>|<a href="Zend_Paginator_AdapterAggregate.html">Zend_Paginator_AdapterAggregate</a> $adapter)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>Serializes the object as a string.  Proxies to {@link render()}.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCacheEnabled">setCacheEnabled</a>(bool $enable)
+        
+                                            <p>Enables/Disables the cache for this instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>()
+        
+                                            <p>Returns the number of pages.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTotalItemCount">getTotalItemCount</a>()
+        
+                                            <p>Returns the total number of items available.  Uses cache if caching is enabled.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clearPageItemCache">clearPageItemCache</a>(int $pageNumber = null)
+        
+                                            <p>Clear the page item cache.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAbsoluteItemNumber">getAbsoluteItemNumber</a>(integer $relativeItemNumber, integer $pageNumber = null)
+        
+                                            <p>Returns the absolute item number for the specified item.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Paginator_Adapter_Interface.html">Zend_Paginator_Adapter_Interface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAdapter">getAdapter</a>()
+        
+                                            <p>Returns the adapter.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCurrentItemCount">getCurrentItemCount</a>()
+        
+                                            <p>Returns the number of items for the current page.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/Traversable">Traversable</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCurrentItems">getCurrentItems</a>()
+        
+                                            <p>Returns the items for the current page.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCurrentPageNumber">getCurrentPageNumber</a>()
+        
+                                            <p>Returns the current page number.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCurrentPageNumber">setCurrentPageNumber</a>(integer $pageNumber)
+        
+                                            <p>Sets the current page number.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Filter_Interface.html">Zend_Filter_Interface</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilter">getFilter</a>()
+        
+                                            <p>Get the filter</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFilter">setFilter</a>(<a href="Zend_Filter_Interface.html">Zend_Filter_Interface</a> $filter)
+        
+                                            <p>Set a filter chain</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getItem">getItem</a>(integer $itemNumber, integer $pageNumber = null)
+        
+                                            <p>Returns an item from a page.  The current page is used if there's no
+page sepcified.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getItemCountPerPage">getItemCountPerPage</a>()
+        
+                                            <p>Returns the number of items per page.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setItemCountPerPage">setItemCountPerPage</a>(integer $itemCountPerPage = -1)
+        
+                                            <p>Sets the number of items per page.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getItemCount">getItemCount</a>(mixed $items)
+        
+                                            <p>Returns the number of items in a collection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/Traversable">Traversable</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getItemsByPage">getItemsByPage</a>($pageNumber)
+        
+                                            <p>Returns the items for a given page.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" href="http://php.net/Traversable">Traversable</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIterator">getIterator</a>()
+        
+                                            <p>Returns a foreach-compatible iterator.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageRange">getPageRange</a>()
+        
+                                            <p>Returns the page range (see property declaration above).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPageRange">setPageRange</a>(integer $pageRange)
+        
+                                            <p>Sets the page range (see property declaration above).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPages">getPages</a>(string $scrollingStyle = null)
+        
+                                            <p>Returns the page collection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPagesInRange">getPagesInRange</a>(integer $lowerBound, integer $upperBound)
+        
+                                            <p>Returns a subset of pages within a given range.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPageItemCache">getPageItemCache</a>()
+        
+                                            <p>Returns the page item cache.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_View_Interface.html">Zend_View_Interface</a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getView">getView</a>()
+        
+                                            <p>Retrieves the view instance.  If none registered, attempts to pull f
+rom ViewRenderer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setView">setView</a>(<a href="Zend_View_Interface.html">Zend_View_Interface</a> $view = null)
+        
+                                            <p>Sets the view object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizeItemNumber">normalizeItemNumber</a>(integer $itemNumber)
+        
+                                            <p>Brings the item number in range of the page.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    integer
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_normalizePageNumber">normalizePageNumber</a>(integer $pageNumber)
+        
+                                            <p>Brings the page number in range of the paginator.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_render">render</a>(<a href="Zend_View_Interface.html">Zend_View_Interface</a> $view = null)
+        
+                                            <p>Renders the paginator.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toJson">toJson</a>()
+        
+                                            <p>Returns the items of the current page as JSON.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_addAdapterPrefixPath">
+        <div class="location">at line         line 188</div>
+        <code>        static            
+    <strong>addAdapterPrefixPath</strong>(string $prefix, string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds an adapter prefix path to the plugin loader.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addAdapterPrefixPaths">
+        <div class="location">at line         line 206</div>
+        <code>        static            
+    <strong>addAdapterPrefixPaths</strong>(array $prefixPaths)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds an array of adapter prefix paths to the plugin
+loader.</p>                    <p><code>
+$prefixPaths = array(
+    'My<em>Paginator</em>Adapter'   => 'My/Paginator/Adapter/',
+    'Your<em>Paginator</em>Adapter' => 'Your/Paginator/Adapter/'
+);
+</code></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$prefixPaths</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addScrollingStylePrefixPath">
+        <div class="location">at line         line 228</div>
+        <code>        static            
+    <strong>addScrollingStylePrefixPath</strong>(string $prefix, string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds a scrolling style prefix path to the plugin loader.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addScrollingStylePrefixPaths">
+        <div class="location">at line         line 246</div>
+        <code>        static            
+    <strong>addScrollingStylePrefixPaths</strong>(array $prefixPaths)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds an array of scrolling style prefix paths to the plugin
+loader.</p>                    <p><code>
+$prefixPaths = array(
+    'My<em>Paginator</em>ScrollingStyle'   => 'My/Paginator/ScrollingStyle/',
+    'Your<em>Paginator</em>ScrollingStyle' => 'Your/Paginator/ScrollingStyle/'
+);
+</code></p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$prefixPaths</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_factory">
+        <div class="location">at line         line 270</div>
+        <code>        static            <a href="Zend_Paginator.html">Zend_Paginator</a>
+    <strong>factory</strong>(mixed $data, string $adapter = self::INTERNAL_ADAPTER, array $prefixPaths = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Factory.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$adapter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$prefixPaths</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Paginator.html">Zend_Paginator</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdapterLoader">
+        <div class="location">at line         line 318</div>
+        <code>        static            <a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a>
+    <strong>getAdapterLoader</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the adapter loader.  If it doesn't exist it's created.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConfig">
+        <div class="location">at line         line 334</div>
+        <code>        static            
+    <strong>setConfig</strong>(<a href="Zend_Config.html">Zend_Config</a> $config)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a global config</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Config.html">Zend_Config</a></td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultScrollingStyle">
+        <div class="location">at line         line 362</div>
+        <code>        static            string
+    <strong>getDefaultScrollingStyle</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the default scrolling style.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultItemCountPerPage">
+        <div class="location">at line         line 372</div>
+        <code>        static            int
+    <strong>getDefaultItemCountPerPage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default item count per page</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultItemCountPerPage">
+        <div class="location">at line         line 382</div>
+        <code>        static            
+    <strong>setDefaultItemCountPerPage</strong>(int $count)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default item count per page</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultPageRange">
+        <div class="location">at line         line 392</div>
+        <code>        static            int
+    <strong>getDefaultPageRange</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the default page range</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultPageRange">
+        <div class="location">at line         line 402</div>
+        <code>        static            
+    <strong>setDefaultPageRange</strong>(int $count)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the default page range</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCache">
+        <div class="location">at line         line 412</div>
+        <code>        static            
+    <strong>setCache</strong>(<a href="Zend_Cache_Core.html">Zend_Cache_Core</a> $cache)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets a cache object</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Cache_Core.html">Zend_Cache_Core</a></td>
+                <td>$cache</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDefaultScrollingStyle">
+        <div class="location">at line         line 422</div>
+        <code>        static            
+    <strong>setDefaultScrollingStyle</strong>(string $scrollingStyle = &#039;Sliding&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the default scrolling style.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$scrollingStyle</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getScrollingStyleLoader">
+        <div class="location">at line         line 433</div>
+        <code>        static            <a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a>
+    <strong>getScrollingStyleLoader</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the scrolling style loader.  If it doesn't exist it's
+created.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Loader_PluginLoader.html">Zend_Loader_PluginLoader</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 449</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="Zend_Paginator_Adapter_Interface.html">Zend_Paginator_Adapter_Interface</a>|<a href="Zend_Paginator_AdapterAggregate.html">Zend_Paginator_AdapterAggregate</a> $adapter)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Paginator_Adapter_Interface.html">Zend_Paginator_Adapter_Interface</a>|<a href="Zend_Paginator_AdapterAggregate.html">Zend_Paginator_AdapterAggregate</a></td>
+                <td>$adapter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at line         line 488</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Serializes the object as a string.  Proxies to {@link render()}.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCacheEnabled">
+        <div class="location">at line         line 506</div>
+        <code>                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+    <strong>setCacheEnabled</strong>(bool $enable)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enables/Disables the cache for this instance</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$enable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Paginator.html">Zend_Paginator</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">at line         line 517</div>
+        <code>                    integer
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the number of pages.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTotalItemCount">
+        <div class="location">at line         line 531</div>
+        <code>                    integer
+    <strong>getTotalItemCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the total number of items available.  Uses cache if caching is enabled.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearPageItemCache">
+        <div class="location">at line         line 555</div>
+        <code>                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+    <strong>clearPageItemCache</strong>(int $pageNumber = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clear the page item cache.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$pageNumber</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Paginator.html">Zend_Paginator</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAbsoluteItemNumber">
+        <div class="location">at line         line 581</div>
+        <code>                    integer
+    <strong>getAbsoluteItemNumber</strong>(integer $relativeItemNumber, integer $pageNumber = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the absolute item number for the specified item.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$relativeItemNumber</td>
+                <td>Relative item number</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$pageNumber</td>
+                <td>Page number</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAdapter">
+        <div class="location">at line         line 599</div>
+        <code>                    <a href="Zend_Paginator_Adapter_Interface.html">Zend_Paginator_Adapter_Interface</a>
+    <strong>getAdapter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the adapter.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Paginator_Adapter_Interface.html">Zend_Paginator_Adapter_Interface</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurrentItemCount">
+        <div class="location">at line         line 609</div>
+        <code>                    integer
+    <strong>getCurrentItemCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the number of items for the current page.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurrentItems">
+        <div class="location">at line         line 623</div>
+        <code>                    <a target="_blank" href="http://php.net/Traversable">Traversable</a>
+    <strong>getCurrentItems</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the items for the current page.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurrentPageNumber">
+        <div class="location">at line         line 637</div>
+        <code>                    integer
+    <strong>getCurrentPageNumber</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the current page number.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCurrentPageNumber">
+        <div class="location">at line         line 648</div>
+        <code>                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+    <strong>setCurrentPageNumber</strong>(integer $pageNumber)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the current page number.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$pageNumber</td>
+                <td>Page number</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Paginator.html">Zend_Paginator</a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilter">
+        <div class="location">at line         line 662</div>
+        <code>                    <a href="Zend_Filter_Interface.html">Zend_Filter_Interface</a>
+    <strong>getFilter</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the filter</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Filter_Interface.html">Zend_Filter_Interface</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFilter">
+        <div class="location">at line         line 673</div>
+        <code>                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+    <strong>setFilter</strong>(<a href="Zend_Filter_Interface.html">Zend_Filter_Interface</a> $filter)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a filter chain</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_Filter_Interface.html">Zend_Filter_Interface</a></td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Paginator.html">Zend_Paginator</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItem">
+        <div class="location">at line         line 688</div>
+        <code>                    mixed
+    <strong>getItem</strong>(integer $itemNumber, integer $pageNumber = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an item from a page.  The current page is used if there's no
+page sepcified.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$itemNumber</td>
+                <td>Item number (1 to itemCountPerPage)</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$pageNumber</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemCountPerPage">
+        <div class="location">at line         line 732</div>
+        <code>                    integer
+    <strong>getItemCountPerPage</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the number of items per page.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setItemCountPerPage">
+        <div class="location">at line         line 747</div>
+        <code>                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+    <strong>setItemCountPerPage</strong>(integer $itemCountPerPage = -1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the number of items per page.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$itemCountPerPage</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Paginator.html">Zend_Paginator</a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemCount">
+        <div class="location">at line         line 766</div>
+        <code>                    integer
+    <strong>getItemCount</strong>(mixed $items)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the number of items in a collection.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$items</td>
+                <td>Items</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemsByPage">
+        <div class="location">at line         line 784</div>
+        <code>                    <a target="_blank" href="http://php.net/Traversable">Traversable</a>
+    <strong>getItemsByPage</strong>($pageNumber)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the items for a given page.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$pageNumber</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIterator">
+        <div class="location">at line         line 821</div>
+        <code>                    <a target="_blank" href="http://php.net/Traversable">Traversable</a>
+    <strong>getIterator</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a foreach-compatible iterator.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/Traversable">Traversable</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageRange">
+        <div class="location">at line         line 831</div>
+        <code>                    integer
+    <strong>getPageRange</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the page range (see property declaration above).</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPageRange">
+        <div class="location">at line         line 846</div>
+        <code>                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+    <strong>setPageRange</strong>(integer $pageRange)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the page range (see property declaration above).</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$pageRange</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Paginator.html">Zend_Paginator</a></td>
+            <td>$this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPages">
+        <div class="location">at line         line 859</div>
+        <code>                    array
+    <strong>getPages</strong>(string $scrollingStyle = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the page collection.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$scrollingStyle</td>
+                <td>Scrolling style</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPagesInRange">
+        <div class="location">at line         line 875</div>
+        <code>                    array
+    <strong>getPagesInRange</strong>(integer $lowerBound, integer $upperBound)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a subset of pages within a given range.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$lowerBound</td>
+                <td>Lower bound of the range</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$upperBound</td>
+                <td>Upper bound of the range</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPageItemCache">
+        <div class="location">at line         line 894</div>
+        <code>                    array
+    <strong>getPageItemCache</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the page item cache.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getView">
+        <div class="location">at line         line 913</div>
+        <code>                    <a href="Zend_View_Interface.html">Zend_View_Interface</a>|null
+    <strong>getView</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieves the view instance.  If none registered, attempts to pull f
+rom ViewRenderer.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_View_Interface.html">Zend_View_Interface</a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setView">
+        <div class="location">at line         line 937</div>
+        <code>                    <a href="Zend_Paginator.html">Zend_Paginator</a>
+    <strong>setView</strong>(<a href="Zend_View_Interface.html">Zend_View_Interface</a> $view = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the view object.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_View_Interface.html">Zend_View_Interface</a></td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Paginator.html">Zend_Paginator</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizeItemNumber">
+        <div class="location">at line         line 950</div>
+        <code>                    integer
+    <strong>normalizeItemNumber</strong>(integer $itemNumber)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Brings the item number in range of the page.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$itemNumber</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_normalizePageNumber">
+        <div class="location">at line         line 971</div>
+        <code>                    integer
+    <strong>normalizePageNumber</strong>(integer $pageNumber)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Brings the page number in range of the paginator.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>integer</td>
+                <td>$pageNumber</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>integer</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location">at line         line 994</div>
+        <code>                    string
+    <strong>render</strong>(<a href="Zend_View_Interface.html">Zend_View_Interface</a> $view = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Renders the paginator.</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Zend_View_Interface.html">Zend_View_Interface</a></td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toJson">
+        <div class="location">at line         line 1010</div>
+        <code>                    string
+    <strong>toJson</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the items of the current page as JSON.</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Feed_Builder | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Feed_Builder" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Feed_Builder
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Feed_Builder</strong>        implements
+        <a href="Zend_Feed_Builder_Interface.html">Zend_Feed_Builder_Interface</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>A simple implementation of Zend<em>Feed</em>Builder_Interface.</p>            <p>Users are encouraged to make their own classes to implement Zend<em>Feed</em>Builder_Interface</p>        </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $data)
+        
+                                            <p>Constructor. The $data array must conform to the following format:
+<code>
+ array(
+ 'title'       => 'title of the feed', //required
+ 'link'        => 'canonical url to the feed', //required
+ 'lastUpdate'  => 'timestamp of the update date', // optional
+ 'published'   => 'timestamp of the publication date', //optional
+ 'charset'     => 'charset', // required
+ 'description' => 'short description of the feed', //optional
+ 'author'      => 'author/publisher of the feed', //optional
+ 'email'       => 'email of the author', //optional
+ 'webmaster'   => 'email address for person responsible for technical issues' // optional, ignored if atom is used
+ 'copyright'   => 'copyright notice', //optional
+ 'image'       => 'url to image', //optional
+ 'generator'   => 'generator', // optional
+ 'language'    => 'language the feed is written in', // optional
+ 'ttl'         => 'how long in minutes a feed can be cached before refreshing', // optional, ignored if atom is used
+ 'rating'      => 'The PICS rating for the channel.', // optional, ignored if atom is used
+ 'cloud'       => array(
+                   'domain'            => 'domain of the cloud, e.g. rpc.sys.com' // required
+                   'port'              => 'port to connect to' // optional, default to 80
+                   'path'              => 'path of the cloud, e.g. /RPC2 //required
+                   'registerProcedure' => 'procedure to call, e.g. myCloud.rssPleaseNotify' // required
+                   'protocol'          => 'protocol to use, e.g. soap or xml-rpc' // required
+                   ), a cloud to be notified of updates // optional, ignored if atom is used
+ 'textInput'   => array(
+                   'title'       => 'the label of the Submit button in the text input area' // required,
+                   'description' => 'explains the text input area' // required
+                   'name'        => 'the name of the text object in the text input area' // required
+                   'link'        => 'the URL of the CGI script that processes text input requests' // required
+                   ) // a text input box that can be displayed with the feed // optional, ignored if atom is used
+ 'skipHours'   => array(
+                   'hour in 24 format', // e.g 13 (1pm)
+                   // up to 24 rows whose value is a number between 0 and 23
+                   ) // Hint telling aggregators which hours they can skip // optional, ignored if atom is used
+ 'skipDays '   => array(
+                   'a day to skip', // e.g Monday
+                   // up to 7 rows whose value is a Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday
+                   ) // Hint telling aggregators which days they can skip // optional, ignored if atom is used
+ 'itunes'      => array(
+                   'author'       => 'Artist column' // optional, default to the main author value
+                   'owner'        => array(
+                                       'name' => 'name of the owner' // optional, default to main author value
+                                       'email' => 'email of the owner' // optional, default to main email value
+                                       ) // Owner of the podcast // optional
+                   'image'        => 'album/podcast art' // optional, default to the main image value
+                   'subtitle'     => 'short description' // optional, default to the main description value
+                   'summary'      => 'longer description' // optional, default to the main description value
+                   'block'        => 'Prevent an episode from appearing (yes|no)' // optional
+                   'category'     => array(
+                                     array('main' => 'main category', // required
+                                           'sub'  => 'sub category' // optional
+                                       ),
+                                       // up to 3 rows
+                                       ) // 'Category column and in iTunes Music Store Browse' // required
+                   'explicit'     => 'parental advisory graphic (yes|no|clean)' // optional
+                   'keywords'     => 'a comma separated list of 12 keywords maximum' // optional
+                   'new-feed-url' => 'used to inform iTunes of new feed URL location' // optional
+                   ) // Itunes extension data // optional, ignored if atom is used
+ 'entries'     => array(
+                  array(
+                   'title'        => 'title of the feed entry', //required
+                   'link'         => 'url to a feed entry', //required
+                   'description'  => 'short version of a feed entry', // only text, no html, required
+                   'guid'         => 'id of the article, if not given link value will used', //optional
+                   'content'      => 'long version', // can contain html, optional
+                   'lastUpdate'   => 'timestamp of the publication date', // optional
+                   'comments'     => 'comments page of the feed entry', // optional
+                   'commentRss'   => 'the feed url of the associated comments', // optional
+                   'source'       => array(
+                                       'title' => 'title of the original source' // required,
+                                       'url' => 'url of the original source' // required
+                                          ) // original source of the feed entry // optional
+                   'category'     => array(
+                                     array(
+                                       'term' => 'first category label' // required,
+                                       'scheme' => 'url that identifies a categorization scheme' // optional
+                                           ),
+                                     array(
+                                        //data for the second category and so on
+                                          )
+                                       ) // list of the attached categories // optional
+                   'enclosure'    => array(
+                                     array(
+                                       'url' => 'url of the linked enclosure' // required
+                                       'type' => 'mime type of the enclosure' // optional
+                                       'length' => 'length of the linked content in octets' // optional
+                                          ),
+                                     array(
+                                        //data for the second enclosure and so on
+                                          )
+                                       ) // list of the enclosures of the feed entry // optional
+                  ),
+                  array(
+                  //data for the second entry and so on
+                  )
+                )
+);
+</code></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Zend_Feed_Builder_Header.html">Zend_Feed_Builder_Header</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHeader">getHeader</a>()
+        
+                                            <p>Returns an instance of Zend<em>Feed</em>Builder_Header
+describing the header of the feed</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEntries">getEntries</a>()
+        
+                                            <p>Returns an array of Zend<em>Feed</em>Builder_Entry instances
+describing the entries of the feed</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 177</div>
+        <code>                    void
+    <strong>__construct</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor. The $data array must conform to the following format:
+<code>
+ array(
+ 'title'       => 'title of the feed', //required
+ 'link'        => 'canonical url to the feed', //required
+ 'lastUpdate'  => 'timestamp of the update date', // optional
+ 'published'   => 'timestamp of the publication date', //optional
+ 'charset'     => 'charset', // required
+ 'description' => 'short description of the feed', //optional
+ 'author'      => 'author/publisher of the feed', //optional
+ 'email'       => 'email of the author', //optional
+ 'webmaster'   => 'email address for person responsible for technical issues' // optional, ignored if atom is used
+ 'copyright'   => 'copyright notice', //optional
+ 'image'       => 'url to image', //optional
+ 'generator'   => 'generator', // optional
+ 'language'    => 'language the feed is written in', // optional
+ 'ttl'         => 'how long in minutes a feed can be cached before refreshing', // optional, ignored if atom is used
+ 'rating'      => 'The PICS rating for the channel.', // optional, ignored if atom is used
+ 'cloud'       => array(
+                   'domain'            => 'domain of the cloud, e.g. rpc.sys.com' // required
+                   'port'              => 'port to connect to' // optional, default to 80
+                   'path'              => 'path of the cloud, e.g. /RPC2 //required
+                   'registerProcedure' => 'procedure to call, e.g. myCloud.rssPleaseNotify' // required
+                   'protocol'          => 'protocol to use, e.g. soap or xml-rpc' // required
+                   ), a cloud to be notified of updates // optional, ignored if atom is used
+ 'textInput'   => array(
+                   'title'       => 'the label of the Submit button in the text input area' // required,
+                   'description' => 'explains the text input area' // required
+                   'name'        => 'the name of the text object in the text input area' // required
+                   'link'        => 'the URL of the CGI script that processes text input requests' // required
+                   ) // a text input box that can be displayed with the feed // optional, ignored if atom is used
+ 'skipHours'   => array(
+                   'hour in 24 format', // e.g 13 (1pm)
+                   // up to 24 rows whose value is a number between 0 and 23
+                   ) // Hint telling aggregators which hours they can skip // optional, ignored if atom is used
+ 'skipDays '   => array(
+                   'a day to skip', // e.g Monday
+                   // up to 7 rows whose value is a Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday
+                   ) // Hint telling aggregators which days they can skip // optional, ignored if atom is used
+ 'itunes'      => array(
+                   'author'       => 'Artist column' // optional, default to the main author value
+                   'owner'        => array(
+                                       'name' => 'name of the owner' // optional, default to main author value
+                                       'email' => 'email of the owner' // optional, default to main email value
+                                       ) // Owner of the podcast // optional
+                   'image'        => 'album/podcast art' // optional, default to the main image value
+                   'subtitle'     => 'short description' // optional, default to the main description value
+                   'summary'      => 'longer description' // optional, default to the main description value
+                   'block'        => 'Prevent an episode from appearing (yes|no)' // optional
+                   'category'     => array(
+                                     array('main' => 'main category', // required
+                                           'sub'  => 'sub category' // optional
+                                       ),
+                                       // up to 3 rows
+                                       ) // 'Category column and in iTunes Music Store Browse' // required
+                   'explicit'     => 'parental advisory graphic (yes|no|clean)' // optional
+                   'keywords'     => 'a comma separated list of 12 keywords maximum' // optional
+                   'new-feed-url' => 'used to inform iTunes of new feed URL location' // optional
+                   ) // Itunes extension data // optional, ignored if atom is used
+ 'entries'     => array(
+                  array(
+                   'title'        => 'title of the feed entry', //required
+                   'link'         => 'url to a feed entry', //required
+                   'description'  => 'short version of a feed entry', // only text, no html, required
+                   'guid'         => 'id of the article, if not given link value will used', //optional
+                   'content'      => 'long version', // can contain html, optional
+                   'lastUpdate'   => 'timestamp of the publication date', // optional
+                   'comments'     => 'comments page of the feed entry', // optional
+                   'commentRss'   => 'the feed url of the associated comments', // optional
+                   'source'       => array(
+                                       'title' => 'title of the original source' // required,
+                                       'url' => 'url of the original source' // required
+                                          ) // original source of the feed entry // optional
+                   'category'     => array(
+                                     array(
+                                       'term' => 'first category label' // required,
+                                       'scheme' => 'url that identifies a categorization scheme' // optional
+                                           ),
+                                     array(
+                                        //data for the second category and so on
+                                          )
+                                       ) // list of the attached categories // optional
+                   'enclosure'    => array(
+                                     array(
+                                       'url' => 'url of the linked enclosure' // required
+                                       'type' => 'mime type of the enclosure' // optional
+                                       'length' => 'length of the linked content in octets' // optional
+                                          ),
+                                     array(
+                                        //data for the second enclosure and so on
+                                          )
+                                       ) // list of the enclosures of the feed entry // optional
+                  ),
+                  array(
+                  //data for the second entry and so on
+                  )
+                )
+);
+</code></p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHeader">
+        <div class="location">at line         line 192</div>
+        <code>                    <a href="Zend_Feed_Builder_Header.html">Zend_Feed_Builder_Header</a>
+    <strong>getHeader</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an instance of Zend<em>Feed</em>Builder_Header
+describing the header of the feed</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Zend_Feed_Builder_Header.html">Zend_Feed_Builder_Header</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEntries">
+        <div class="location">at line         line 203</div>
+        <code>                    array
+    <strong>getEntries</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an array of Zend<em>Feed</em>Builder_Entry instances
+describing the entries of the feed</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>of Zend<em>Feed</em>Builder_Entry</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

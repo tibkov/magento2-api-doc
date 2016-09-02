@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Zend_Pdf_Exception | API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Zend_Pdf_Exception" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Zend_Pdf_Exception
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Zend_Pdf_Exception</strong>        extends <a href="Zend_Exception.html">Zend_Exception</a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Exception class for Zend_Pdf.</p>            <p>If you expect a certain type of exception to be caught and handled by the
+caller, create a constant for it here and include it in the object being
+thrown. Example:</p>
+
+<p>throw new Zend<em>Pdf</em>Exception('foo() is not yet implemented',
+                               Zend<em>Pdf</em>Exception::NOT_IMPLEMENTED);</p>
+
+<p>This allows the caller to determine the specific type of exception that was
+thrown without resorting to parsing the descriptive text.</p>
+
+<p>IMPORTANT: Do not rely on numeric values of the constants! They are grouped
+sequentially below for organizational purposes only. The numbers may come to
+mean something in the future, but they are subject to renumbering at any
+time. ALWAYS use the symbolic constant names, which are guaranteed never to
+change, in logical checks! You have been warned.</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>NOT_IMPLEMENTED</td>
+                <td class="last">
+                    <p><em>The feature or option is planned but has not yet been implemented. It
+should be available in a future revision of the framework.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DEPRECATED</td>
+                <td class="last">
+                    <p><em>The feature or option has been deprecated and will be removed in a future
+revision of the framework. The descriptive text accompanying this
+exception should explain how to use the replacement features or options.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TOO_FEW_PARAMETERS</td>
+                <td class="last">
+                    <p><em>Not enough paramaters were supplied to the method.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_PARAMETER_TYPE</td>
+                <td class="last">
+                    <p><em>A parameter was of the wrong data type.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_PARAMETER_VALUE</td>
+                <td class="last">
+                    <p><em>A parameter contained an unusable value.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARAMETER_VALUE_OUT_OF_RANGE</td>
+                <td class="last">
+                    <p><em>A parameter value was not within the expected range.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_METHOD_SIGNATURE</td>
+                <td class="last">
+                    <p><em>The method that has multiple signatures could not understand the
+number and/or types of parameters.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INDEX_OUT_OF_RANGE</td>
+                <td class="last">
+                    <p><em>An array or string index was out of range.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_FILE_PATH</td>
+                <td class="last">
+                    <p><em>The file path was unusable or invalid.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_READABLE</td>
+                <td class="last">
+                    <p><em>The file is not readable by the current user.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>NOT_WRITEABLE</td>
+                <td class="last">
+                    <p><em>The file is not writeable by the current user.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FILE_NOT_OPEN</td>
+                <td class="last">
+                    <p><em>The file resource has been closed unexpectedly.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CANT_OPEN_FILE</td>
+                <td class="last">
+                    <p><em>An error was encountered while attempting to open the file.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CANT_GET_FILE_POSITION</td>
+                <td class="last">
+                    <p><em>An error was encountered while attempting to obtain the current file
+position.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CANT_SET_FILE_POSITION</td>
+                <td class="last">
+                    <p><em>An error was encountered while attempting to set a new file position.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MOVE_BEFORE_START_OF_FILE</td>
+                <td class="last">
+                    <p><em>An attempt was made to move the current file position before the start
+of the file.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MOVE_BEYOND_END_OF_FILE</td>
+                <td class="last">
+                    <p><em>An attempt was made to move the current file position beyond the end of
+the file.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CANT_GET_FILE_SIZE</td>
+                <td class="last">
+                    <p><em>An error was encountered while attempting to obtain the file size.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERROR_DURING_READ</td>
+                <td class="last">
+                    <p><em>An error was encountered while attempting to read data from the file.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ERROR_DURING_WRITE</td>
+                <td class="last">
+                    <p><em>An error was encountered while attempting to write data to the file.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INVALID_PAGE_SIZE</td>
+                <td class="last">
+                    <p><em>An incompatible page size was specified for a buffered read operation.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INSUFFICIENT_DATA</td>
+                <td class="last">
+                    <p><em>There is insufficient data to fulfill the read request.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_DATA_SOURCE</td>
+                <td class="last">
+                    <p><em>The file parser data source object was invalid or improperly initialized.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INVALID_BYTE_ORDER</td>
+                <td class="last">
+                    <p><em>An unknown byte order was specified.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INVALID_INTEGER_SIZE</td>
+                <td class="last">
+                    <p><em>An invalid integer size was specified.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_FIXED_POINT_SIZE</td>
+                <td class="last">
+                    <p><em>An invalid fixed-point number size was specified.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CANT_READ_STRING</td>
+                <td class="last">
+                    <p><em>The string cannot be read.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PARSED_OUT_OF_ORDER</td>
+                <td class="last">
+                    <p><em>This file type must be parsed in a specific order and a parsing method
+was called out-of-turn.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WRONG_FONT_TYPE</td>
+                <td class="last">
+                    <p><em>The font file type is incorrect.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_TABLE_COUNT</td>
+                <td class="last">
+                    <p><em>The number of tables contained in the font is outside the expected range.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>REQUIRED_TABLE_NOT_FOUND</td>
+                <td class="last">
+                    <p><em>A required table was not present in the font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DONT_UNDERSTAND_TABLE_VERSION</td>
+                <td class="last">
+                    <p><em>The parser does not understand this version of this table in the font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_MAGIC_NUMBER</td>
+                <td class="last">
+                    <p><em>The magic number in the font file is incorrect.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CANT_FIND_GOOD_CMAP</td>
+                <td class="last">
+                    <p><em>Could not locate a usable character map for this font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CMAP_TYPE_UNSUPPORTED</td>
+                <td class="last">
+                    <p><em>The character map type is currently unsupported.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CMAP_UNKNOWN_TYPE</td>
+                <td class="last">
+                    <p><em>The type of the character map is not understood.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CMAP_TABLE_DATA_TOO_SMALL</td>
+                <td class="last">
+                    <p><em>The character map table data is too small.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CMAP_WRONG_TABLE_TYPE</td>
+                <td class="last">
+                    <p><em>The character map table data is for a different type of table.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CMAP_WRONG_TABLE_LENGTH</td>
+                <td class="last">
+                    <p><em>The character map table data contains in incorrect length.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CMAP_NOT_LANGUAGE_INDEPENDENT</td>
+                <td class="last">
+                    <p><em>This character map table is language-dependent. Character maps must be
+language-independent.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CMAP_FINAL_OFFSET_NOT_LENGTH</td>
+                <td class="last">
+                    <p><em>The final byte offset when reading the character map table data does not
+match the reported length of the table.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CMAP_WRONG_ENTRY_COUNT</td>
+                <td class="last">
+                    <p><em>The character map subtable entry count does not match the expected value.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GLYPH_OUT_OF_RANGE</td>
+                <td class="last">
+                    <p><em>The specified glyph number is out of range for this font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FONT_CANT_BE_EMBEDDED</td>
+                <td class="last">
+                    <p><em>This font program has copyright bits set which prevent it from being
+embedded in the PDF file. You must specify the no-embed option to use
+this font.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_FONT_NAME</td>
+                <td class="last">
+                    <p><em>The font name did not match any previously instantiated font and is not
+one of the standard 14 PDF fonts.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CANT_DETERMINE_FONT_TYPE</td>
+                <td class="last">
+                    <p><em>The factory method could not determine the type of the font file.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>BAD_ATTRIBUTE_VALUE</td>
+                <td class="last">
+                    <p><em>The specified attribute value for the text object cannot be used.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CANT_DETERMINE_IMAGE_TYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WRONG_IMAGE_TYPE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNSUPPORTED_IMAGE_ENCODING_OPTIONS</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>IMAGE_FILE_CORRUPT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $msg = &#039;&#039;, int $code, <a target="_blank" href="http://php.net/Exception">Exception</a> $previous = null)
+        
+                                            <p>Construct the exception</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Exception.html#method___construct">Zend_Exception</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $method, array $args)
+        
+                                            <p>Overloading</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Exception.html#method___call">Zend_Exception</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>String representation of the exception</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Zend_Exception.html#method___toString">Zend_Exception</a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="Zend_Exception.html#method___construct">Zend_Exception</a> at line         line 43</div>
+        <code>                    void
+    <strong>__construct</strong>(string $msg = &#039;&#039;, int $code, <a target="_blank" href="http://php.net/Exception">Exception</a> $previous = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Construct the exception</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td>$previous</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="Zend_Exception.html#method___call">Zend_Exception</a> at line         line 62</div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Overloading</p>                    <p>For PHP &lt; 5.3.0, provides access to the getPrevious() method.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">in <a href="Zend_Exception.html#method___toString">Zend_Exception</a> at line         line 75</div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>String representation of the exception</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

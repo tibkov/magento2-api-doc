@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Magento\Wishlist\Helper\Rss | API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Magento_Wishlist_Helper_Rss" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../../Magento.html">Magento</a></li>
+                                        <li><a href="../../../Magento/Wishlist.html">Wishlist</a></li>
+                                        <li><a href="../../../Magento/Wishlist/Helper.html">Helper</a></li>
+    
+                <li>Rss</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Rss
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Rss</strong>        extends <a href="../../../Magento/Wishlist/Helper/Data.html"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a>
+</p>
+
+        
+    
+
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>XML_PATH_WISHLIST_LINK_USE_QTY</td>
+                <td class="last">
+                    <p><em>Config key 'Display Wishlist Summary'</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XML_PATH_CATALOGINVENTORY_SHOW_OUT_OF_STOCK</td>
+                <td class="last">
+                    <p><em>Config key 'Display Out of Stock Products'</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../Magento/Framework/Registry.html"><abbr title="Magento\Framework\Registry">Registry</abbr></a> $coreRegistry, <a href="../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a> $customerSession, <abbr title="Magento\Wishlist\Model\WishlistFactory">WishlistFactory</abbr> $wishlistFactory, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Framework/Data/Helper/PostHelper.html"><abbr title="Magento\Framework\Data\Helper\PostHelper">PostHelper</abbr></a> $postDataHelper, <a href="../../../Magento/Customer/Helper/View.html"><abbr title="Magento\Customer\Helper\View">View</abbr></a> $customerViewHelper, <a href="../../../Magento/Wishlist/Controller/WishlistProviderInterface.html"><abbr title="Magento\Wishlist\Controller\WishlistProviderInterface">WishlistProviderInterface</abbr></a> $wishlistProvider, <a href="../../../Magento/Catalog/Api/ProductRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductRepositoryInterface">ProductRepositoryInterface</abbr></a> $productRepository, <abbr title="Magento\Customer\Api\Data\CustomerInterfaceFactory">CustomerInterfaceFactory</abbr> $customerFactory, <a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    boolean
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isModuleOutputEnabled">isModuleOutputEnabled</a>(string $moduleName = null)
+        
+                                            <p>Check whether or not the module output is enabled in Configuration</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setCustomer">setCustomer</a>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer)
+        
+                                            <p>Set current customer</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_setCustomer"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCustomer">getCustomer</a>()
+        
+                                            <p>Retrieve Customer instance</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Wishlist/Model/Wishlist.html"><abbr title="Magento\Wishlist\Model\Wishlist">Wishlist</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWishlist">getWishlist</a>()
+        
+                                            <p>Retrieve Wishlist model</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getItemCount">getItemCount</a>()
+        
+                                            <p>Retrieve wishlist item count (include config settings)
+Used in top link menu only</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getItemCount"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Wishlist/Model/ResourceModel/Item/Collection.html"><abbr title="Magento\Wishlist\Model\ResourceModel\Item\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWishlistItemCollection">getWishlistItemCollection</a>()
+        
+                                            <p>Retrieve wishlist items collection</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getWishlistItemCollection"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRemoveParams">getRemoveParams</a>(<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item, bool $addReferer = false)
+        
+                                            <p>Retrieve params for removing item from wishlist</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getRemoveParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getConfigureUrl">getConfigureUrl</a>(<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item)
+        
+                                            <p>Retrieve URL for configuring item from wishlist</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getConfigureUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAddParams">getAddParams</a>(<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item, array $params = array())
+        
+                                            <p>Retrieve params for adding product to wishlist</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getAddParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMoveFromCartParams">getMoveFromCartParams</a>(int $itemId)
+        
+                                            <p>Retrieve params for adding product to wishlist</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getMoveFromCartParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|<abbr title="Magento\Wishlist\Helper\false">false</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUpdateParams">getUpdateParams</a>(<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item)
+        
+                                            <p>Retrieve params for updating product in wishlist</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getUpdateParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAddToCartUrl">getAddToCartUrl</a>(string|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item)
+        
+                                            <p>Retrieve params for adding item to shopping cart</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getAddToCartUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAddToCartParams">getAddToCartParams</a>(string|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item, bool $addReferer = false)
+        
+                                            <p>Retrieve URL for adding item to shopping cart</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getAddToCartParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addRefererToParams">addRefererToParams</a>(array $params)
+        
+                                            <p>Add UENC referer to params</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_addRefererToParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSharedAddToCartUrl">getSharedAddToCartUrl</a>(string|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item)
+        
+                                            <p>Retrieve URL for adding item to shopping cart from shared wishlist</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getSharedAddToCartUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSharedAddAllToCartUrl">getSharedAddAllToCartUrl</a>()
+        
+                                            <p>Retrieve URL for adding All items to shopping cart from shared wishlist</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getSharedAddAllToCartUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getListUrl">getListUrl</a>(int $wishlistId = null)
+        
+                                            <p>Retrieve customer wishlist url</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getListUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAllow">isAllow</a>()
+        
+                                            <p>Check is allow wishlist module</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_isAllow"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isAllowInCart">isAllowInCart</a>()
+        
+                                            <p>Check is allow wishlist action in shopping cart</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_isAllowInCart"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCustomerName">getCustomerName</a>()
+        
+                                            <p>Retrieve customer name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getCustomerName"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRssUrl">getRssUrl</a>(int|string|null $wishlistId = null)
+        
+                                            <p>Retrieve RSS URL</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getRssUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/Phrase.html"><abbr title="Magento\Framework\Phrase">Phrase</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_defaultCommentString">defaultCommentString</a>()
+        
+                                            <p>Retrieve default empty comment message</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_defaultCommentString"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Magento/Framework/Phrase.html"><abbr title="Magento\Framework\Phrase">Phrase</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDefaultWishlistName">getDefaultWishlistName</a>()
+        
+                                            <p>Retrieve default empty comment message</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getDefaultWishlistName"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Magento\Wishlist\Helper\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_calculate">calculate</a>()
+        
+                                            <p>Calculate count of wishlist items and put value to customer session.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_calculate"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isDisplayQty">isDisplayQty</a>()
+        
+                                            <p>Should display item quantities in my wishlist link</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_isDisplayQty"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProductUrl">getProductUrl</a>(<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a>|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $item, array $additional = array())
+        
+                                            <p>Retrieve URL to item Product</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Magento/Wishlist/Helper/Data.html#method_getProductUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isRssAllow">isRssAllow</a>()
+        
+                                            <p>Is allow RSS</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 43</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a> $context, <a href="../../../Magento/Framework/Registry.html"><abbr title="Magento\Framework\Registry">Registry</abbr></a> $coreRegistry, <a href="../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a> $customerSession, <abbr title="Magento\Wishlist\Model\WishlistFactory">WishlistFactory</abbr> $wishlistFactory, <a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a> $storeManager, <a href="../../../Magento/Framework/Data/Helper/PostHelper.html"><abbr title="Magento\Framework\Data\Helper\PostHelper">PostHelper</abbr></a> $postDataHelper, <a href="../../../Magento/Customer/Helper/View.html"><abbr title="Magento\Customer\Helper\View">View</abbr></a> $customerViewHelper, <a href="../../../Magento/Wishlist/Controller/WishlistProviderInterface.html"><abbr title="Magento\Wishlist\Controller\WishlistProviderInterface">WishlistProviderInterface</abbr></a> $wishlistProvider, <a href="../../../Magento/Catalog/Api/ProductRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductRepositoryInterface">ProductRepositoryInterface</abbr></a> $productRepository, <abbr title="Magento\Customer\Api\Data\CustomerInterfaceFactory">CustomerInterfaceFactory</abbr> $customerFactory, <a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a> $customerRepository)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Framework/App/Helper/Context.html"><abbr title="Magento\Framework\App\Helper\Context">Context</abbr></a></td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Registry.html"><abbr title="Magento\Framework\Registry">Registry</abbr></a></td>
+                <td>$coreRegistry</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Model/Session.html"><abbr title="Magento\Customer\Model\Session">Session</abbr></a></td>
+                <td>$customerSession</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Wishlist\Model\WishlistFactory">WishlistFactory</abbr></td>
+                <td>$wishlistFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Store/Model/StoreManagerInterface.html"><abbr title="Magento\Store\Model\StoreManagerInterface">StoreManagerInterface</abbr></a></td>
+                <td>$storeManager</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Framework/Data/Helper/PostHelper.html"><abbr title="Magento\Framework\Data\Helper\PostHelper">PostHelper</abbr></a></td>
+                <td>$postDataHelper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Helper/View.html"><abbr title="Magento\Customer\Helper\View">View</abbr></a></td>
+                <td>$customerViewHelper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Wishlist/Controller/WishlistProviderInterface.html"><abbr title="Magento\Wishlist\Controller\WishlistProviderInterface">WishlistProviderInterface</abbr></a></td>
+                <td>$wishlistProvider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Api/ProductRepositoryInterface.html"><abbr title="Magento\Catalog\Api\ProductRepositoryInterface">ProductRepositoryInterface</abbr></a></td>
+                <td>$productRepository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Magento\Customer\Api\Data\CustomerInterfaceFactory">CustomerInterfaceFactory</abbr></td>
+                <td>$customerFactory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/CustomerRepositoryInterface.html"><abbr title="Magento\Customer\Api\CustomerRepositoryInterface">CustomerRepositoryInterface</abbr></a></td>
+                <td>$customerRepository</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isModuleOutputEnabled">
+        <div class="location">in <a href="../../../Magento/Framework/App/Helper/AbstractHelper.html#method_isModuleOutputEnabled"><abbr title="Magento\Framework\App\Helper\AbstractHelper">AbstractHelper</abbr></a> at line         line 130</div>
+        <code>                    boolean
+    <strong>isModuleOutputEnabled</strong>(string $moduleName = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check whether or not the module output is enabled in Configuration</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$moduleName</td>
+                <td>Full module name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>boolean</td>
+            <td>use \Magento\Framework\Module\Manager::isOutputEnabled()</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setCustomer">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_setCustomer"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 158</div>
+        <code>                    void
+    <strong>setCustomer</strong>(<a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a> $customer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set current customer</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a></td>
+                <td>$customer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomer">
+        <div class="location">at line         line 99</div>
+        <code>                    <a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>|null
+    <strong>getCustomer</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Customer instance</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Customer/Api/Data/CustomerInterface.html"><abbr title="Magento\Customer\Api\Data\CustomerInterface">CustomerInterface</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWishlist">
+        <div class="location">at line         line 77</div>
+        <code>                    <a href="../../../Magento/Wishlist/Model/Wishlist.html"><abbr title="Magento\Wishlist\Model\Wishlist">Wishlist</abbr></a>
+    <strong>getWishlist</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve Wishlist model</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Wishlist/Model/Wishlist.html"><abbr title="Magento\Wishlist\Model\Wishlist">Wishlist</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getItemCount">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getItemCount"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 199</div>
+        <code>                    int
+    <strong>getItemCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve wishlist item count (include config settings)
+Used in top link menu only</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWishlistItemCollection">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getWishlistItemCollection"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 238</div>
+        <code>                    <a href="../../../Magento/Wishlist/Model/ResourceModel/Item/Collection.html"><abbr title="Magento\Wishlist\Model\ResourceModel\Item\Collection">Collection</abbr></a>
+    <strong>getWishlistItemCollection</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve wishlist items collection</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Wishlist/Model/ResourceModel/Item/Collection.html"><abbr title="Magento\Wishlist\Model\ResourceModel\Item\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRemoveParams">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getRemoveParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 280</div>
+        <code>                    string
+    <strong>getRemoveParams</strong>(<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item, bool $addReferer = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve params for removing item from wishlist</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$addReferer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfigureUrl">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getConfigureUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 296</div>
+        <code>                    string
+    <strong>getConfigureUrl</strong>(<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve URL for configuring item from wishlist</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAddParams">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getAddParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 314</div>
+        <code>                    string
+    <strong>getAddParams</strong>(<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item, array $params = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve params for adding product to wishlist</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMoveFromCartParams">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getMoveFromCartParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 339</div>
+        <code>                    string
+    <strong>getMoveFromCartParams</strong>(int $itemId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve params for adding product to wishlist</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$itemId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpdateParams">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getUpdateParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 353</div>
+        <code>                    string|<abbr title="Magento\Wishlist\Helper\false">false</abbr>
+    <strong>getUpdateParams</strong>(<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve params for updating product in wishlist</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|<abbr title="Magento\Wishlist\Helper\false">false</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAddToCartUrl">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getAddToCartUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 380</div>
+        <code>                    string
+    <strong>getAddToCartUrl</strong>(string|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve params for adding item to shopping cart</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAddToCartParams">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getAddToCartParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 392</div>
+        <code>                    string
+    <strong>getAddToCartParams</strong>(string|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item, bool $addReferer = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve URL for adding item to shopping cart</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$addReferer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addRefererToParams">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_addRefererToParams"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 410</div>
+        <code>                    array
+    <strong>addRefererToParams</strong>(array $params)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add UENC referer to params</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSharedAddToCartUrl">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getSharedAddToCartUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 423</div>
+        <code>                    string
+    <strong>getSharedAddToCartUrl</strong>(string|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a> $item)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve URL for adding item to shopping cart from shared wishlist</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a>|<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSharedAddAllToCartUrl">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getSharedAddAllToCartUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 436</div>
+        <code>                    string
+    <strong>getSharedAddAllToCartUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve URL for adding All items to shopping cart from shared wishlist</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getListUrl">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getListUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 458</div>
+        <code>                    string
+    <strong>getListUrl</strong>(int $wishlistId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve customer wishlist url</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$wishlistId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAllow">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_isAllow"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 472</div>
+        <code>                    bool
+    <strong>isAllow</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check is allow wishlist module</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAllowInCart">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_isAllowInCart"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 489</div>
+        <code>                    bool
+    <strong>isAllowInCart</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Check is allow wishlist action in shopping cart</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCustomerName">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getCustomerName"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 499</div>
+        <code>                    string|void
+    <strong>getCustomerName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve customer name</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRssUrl">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getRssUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 512</div>
+        <code>                    string
+    <strong>getRssUrl</strong>(int|string|null $wishlistId = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve RSS URL</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|string|null</td>
+                <td>$wishlistId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_defaultCommentString">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_defaultCommentString"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 530</div>
+        <code>                    <a href="../../../Magento/Framework/Phrase.html"><abbr title="Magento\Framework\Phrase">Phrase</abbr></a>
+    <strong>defaultCommentString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve default empty comment message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/Phrase.html"><abbr title="Magento\Framework\Phrase">Phrase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultWishlistName">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getDefaultWishlistName"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 540</div>
+        <code>                    <a href="../../../Magento/Framework/Phrase.html"><abbr title="Magento\Framework\Phrase">Phrase</abbr></a>
+    <strong>getDefaultWishlistName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve default empty comment message</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Magento/Framework/Phrase.html"><abbr title="Magento\Framework\Phrase">Phrase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_calculate">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_calculate"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 552</div>
+        <code>                    <abbr title="Magento\Wishlist\Helper\$this">$this</abbr>
+    <strong>calculate</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate count of wishlist items and put value to customer session.</p>                    <p>Method called after wishlist modifications and trigger 'wishlist<em>items</em>renewed' event.
+Depends from configuration.</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Magento\Wishlist\Helper\$this">$this</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDisplayQty">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_isDisplayQty"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 589</div>
+        <code>                    bool
+    <strong>isDisplayQty</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Should display item quantities in my wishlist link</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProductUrl">
+        <div class="location">in <a href="../../../Magento/Wishlist/Helper/Data.html#method_getProductUrl"><abbr title="Magento\Wishlist\Helper\Data">Data</abbr></a> at line         line 604</div>
+        <code>                    string
+    <strong>getProductUrl</strong>(<a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a>|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a> $item, array $additional = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve URL to item Product</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Magento/Wishlist/Model/Item.html"><abbr title="Magento\Wishlist\Model\Item">Item</abbr></a>|<a href="../../../Magento/Catalog/Model/Product.html"><abbr title="Magento\Catalog\Model\Product">Product</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$additional</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isRssAllow">
+        <div class="location">at line         line 120</div>
+        <code>                    bool
+    <strong>isRssAllow</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Is allow RSS</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
